@@ -2,9 +2,7 @@
 What is this
 -------------
 
-This is a collection of the DEFAULT plaintext files of interest from various Xbox games. It is not a list of ALL games with plaintext files of interest, nor is it a list of ALL plaintext files that could be modified to do cool things.
-
-A separate repository will be maintained to track actual tested or recommended changes.
+This is a collection of the DEFAULT plaintext files of interest from various Xbox games. It is not a list of ALL games with plaintext files of interest, nor is it a list of ALL plaintext files that could be modified to do interesting things.
 
 -------------
 Why did I do it
@@ -46,3 +44,9 @@ Content Layout
 		Modification of these files does not require a modified console.
 		You just need a way to transfer the files to the system such as using a USB->Xbox controller port adapter and using a Flash drive as your memory card and copying them to the system.
 			**Some files can run from memory card while others must be installed to the HDD
+
+\TWEAKS\
+	Description: Will contain various catagories of tweaks for various games
+
+\TWEAKS\Networking\
+	Description: Contains list of modifications intended to increase network performance.
