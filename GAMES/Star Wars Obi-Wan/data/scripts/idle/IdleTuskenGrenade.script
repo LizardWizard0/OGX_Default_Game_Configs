@@ -1,0 +1,11 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+AddGesture me ShakeHead 2
+AddGesture me GunUp 4
+AddGesture me TurnHeadRight 4
+AddGesture me GunUp 4
+AddGesture me TurnHeadLeft 4
+ 
+
+WaitUntilFinishedGesture me

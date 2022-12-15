@@ -1,0 +1,50 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Child FadeUp
+	
+//CreateActor "fun_noise_chair.dsc" "Noisemaker" "RFP_chair"
+//CreateActor "aat.dsc" "TankYou" "tank"
+
+Script "Wake Rodian Up"
+{
+	Actor Thug A_Rodian-Blaster_01
+	Sleep Thug
+	WaitUntilDamaged Thug
+	WakeUp Thug
+}
+
+Script "Water height"
+{
+	ChangeRegionHeight test_water -3 2
+	ChangeRegionHeight test_water 3 2
+	Loop
+}
+
+Script "Water height2"
+{
+	ChangeRegionHeight region_zuber_MTT 3
+	Pause 2
+	ChangeRegionHeight region_zuber_MTT -3
+	Pause 2
+	Loop
+}
+
+Script "Test refpos sound"
+{
+	PlayAudioCueAndWait saber.aud Selected tank
+	Pause 10
+	Loop
+}	
+/*
+Script "Region sound volume"
+{
+	SetRegionSoundVolume region_zuber_MTT -100 2
+	SayLine Obi "Mute"
+	Pause 2
+	SetRegionSoundVolume region_zuber_MTT 0 2
+	SayLine Obi "Full volume"
+	Pause 2
+	Loop
+}
+*/	

@@ -1,0 +1,1169 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+SetDefaultSurface 02_mtt_ramp.sur
+SkyDomeOff
+FadeUp
+LoadDlg Qui-Gon.dlg
+
+
+////////////////
+//  PDA Info  //
+////////////////
+
+MissionTitle "/Mission16Title/Stowaway"
+MissionObjective 1 "Disrupt communications to the Droid Control Ship by destroying the communications conduits."
+MissionObjective 2 "Power down the atmospheric turbine engines."
+
+SetTimeToBeat 4 15
+SetForceUsesNeeded 20
+SetExplorationNum 2
+
+LockDoor A_02_d_bay2_03
+
+///////////////////
+//  ObiJumpHelp  //
+///////////////////
+
+Script "ObiJumpHelp01"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway01_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway01_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp02"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway02_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway02_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp03"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway04_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway04_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp04"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway05_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway05_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp05"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway06_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway06_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp06"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway07_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway07_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp07"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway08_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway08_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp08"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway09_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway09_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp09"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway11_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway11_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp10"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway12_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway12_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp11"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway14_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway14_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp12"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway15_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway15_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp13"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway16_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway16_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp14"
+{
+	WaitUntilEnteredRegion Obi rgn_hallway13_amb
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_hallway13_amb
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+Script "ObiJumpHelp15"
+{
+	WaitUntilEnteredRegion Obi rgn_fuse2boot_open2
+	ConsoleCommand "ObiJumpHelp 1"
+	WaitUntilExitedRegion Obi rgn_fuse2boot_open2
+	ConsoleCommand "ObiJumpHelp 0"
+	Loop
+}
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_03.wav Suspense
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+AddMusic l03_m_intro1.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_battle_13_lp.wav  m_battle_13_win.wav  m_battle_13_lose.wav
+AddBattleLoop  m_battle_14_lp.wav  m_battle_14_win.wav  m_battle_14_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+///////////////////////
+// Save/Load Points  //
+///////////////////////
+
+
+Script "Save Point0" 1
+{
+	WaitUntilEnteredRegion Obi rgn_comm_wakeup
+	SetStartPosition 0
+	RemoveGroup 1
+	Save
+}
+
+
+Script "Save Point1" 2
+{
+	WaitUntilEnteredRegion Obi rgn_hallway01_amb
+	SetStartPosition 1
+	RemoveGroup 12
+	RemoveGroup 2
+	Save
+}
+
+Script "Save Point2" 3
+{
+	Actor Button1 A_02_TurbineButton_01
+	Actor Button2 A_02_TurbineButton_02
+	Child WaitUntilNudgedBy Button1 Obi
+	Child WaitUntilNudgedBy Button2 Obi
+	WaitForAll
+	SetStartPosition 2
+	RemoveGroup 3
+	Save
+}
+
+Script "Save Point3" 4
+{
+	WaitUntilEnteredRegion Obi savepoint3
+	RemoveGroup 11
+	SetStartPosition 3
+	RemoveGroup 4
+	Save
+}
+
+Script "Save Point4" 5
+{
+	WaitUntilEnteredRegion Obi savepoint4
+	SetStartPosition 4
+	// LockDoor A_3-4_airlock_dr_02
+	RemoveGroup 5
+	Save
+}
+
+Script "SavePoint5" 6
+{
+	WaitUntilEnteredRegion Obi rgn_MTTBay_amb01
+	SetStartPosition 5
+	RemoveGroup 6
+	Save
+}
+
+Script "Save Point6" 7 //in case player makes it down to globe secret and dies
+{
+	WaitUntilEnteredRegion Obi rgn_Hallway_Diamnd
+	SetStartPosition 2
+	UnlockDoor A_02_d_turbnAlock_04
+	RemoveGroup 7
+}
+
+
+
+////////////////////
+//Opening Cutscene//
+////////////////////
+
+Script "Opening Cutscene" 32
+{
+	Crouch Obi
+	BeginCutScene
+	Int exitedEarly 1
+	
+	TakeControlOf A_BAD_infantry_02
+	UnEquipWeapon A_BAD_infantry_02
+	InvincibilityOn A_BAD_infantry_02
+	TakeControlOf A_BAD_Pilot_05
+	UnEquipWeapon A_BAD_Pilot_05
+	InvincibilityOn A_BAD_Pilot_05
+	TakeControlOf A_BAD_Pilot_06
+	UnEquipWeapon A_BAD_Pilot_06
+	InvincibilityOn A_BAD_Pilot_06
+
+	FadeUp
+	PlayFlourish m_suspense_12.wav
+
+		ChildScript "Commander Droid Pacing"
+		{
+			Pause 1.0
+			LookAtAndWait A_BAD_infantry_02 A_02_cm_pipe_01
+			Pause 1.0
+			WalkToNodeAndWait A_BAD_infantry_02 goto_command01
+			LookAtAndWait A_BAD_infantry_02 A_BAD_Pilot_05
+			Pause 2.0
+			PlayGesture A_BAD_infantry_02 PointForward
+			PlayGesture A_BAD_infantry_02 PointRight
+			LookAtAndWait A_BAD_infantry_02 A_BAD_Pilot_06
+			Pause 1.0
+			LookAtAndWait A_BAD_infantry_02 A_02_cm_pipe_02
+			Pause 1.0
+			WalkToNodeAndWait A_BAD_infantry_02 goto_command02
+			Pause 1.0
+			PlayGesture A_BAD_infantry_02 PointForward
+			PlayGesture A_BAD_infantry_02 PointLeft
+			LookAtAndWait A_BAD_infantry_02 A_BAD_Pilot_05
+			Pause 1.0
+			WalkToNodeAndWait A_BAD_infantry_02 goto_command01
+			Pause 2.0
+			Loop
+		}
+
+	PlayGesture A_BAD_Pilot_05 Typing 60.00
+	Pause 1.0
+	Playgesture A_BAD_Pilot_06 Typing 60.00
+
+	CommunicatorMessageAndWait "/Qui-Gon_395/Are you on board, Obi-Wan?"  Qui-Gon.dlg
+	Child SayLineNonPositional Obi "/Obi-Wan_396/Yes, Master.  I think I’m above the Communication Room."
+
+	CameraLookAt A_BAD_Pilot_05 2.5 1 1
+	MoveCameraAndWait comm1 4.5 2 2
+	Child CommunicatorMessageAndWait "/Qui-Gon_1245/Excellent observation, Obi-Wan.  Well done!" Qui-Gon.dlg
+	MoveCameraAndWait comm2 4.0 2 2
+	PlayGesture A_BAD_Pilot_05 Typing 60.00
+
+	CameraFixed comm3 
+	CameraLookAt A_BAD_Pilot_06 2.5 1 1
+	Child CommunicatorMessageAndWait "/Qui-Gon_397/Good. Disable their communications so they cannot contact the invasion fleet." Qui-Gon.dlg
+	MoveCameraAndWait comm4 4.5 2 2
+	MoveCameraAndWait comm1 4.5 2 2
+
+	SayLineNonPositional Obi "/Obi-Wan_398/Understood, Master."
+
+	DisableAudioFades
+	FadeDownAndWait 1
+	Set exitedEarly 0
+
+	PreEndCutScene
+	
+	FadeDown	0
+
+	EndCutScene
+
+	if (= exitedEarly 1)
+	{
+		StopMusic  // Stop intro music
+	}
+
+	StartMusicManager
+
+	FadeUp
+	EnableAudioFades
+
+	RemoveGroup 32
+	Save
+}
+
+
+Script "AlternateOpening"
+{
+	if (IsGroupRemoved 32)
+	{
+		StartMusicManager
+	}
+}
+
+
+///////////////////////////
+//  Exploration Markers  //
+///////////////////////////
+
+Function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 26)
+call PowerupRemoval (A_powerupexplorationmarker_02, 30)
+call PowerupRemoval (A_powerupexplorationmarker_03, 28)
+
+///////////////////////
+//Communications Room//
+///////////////////////
+
+Actor BADCO A_Battledroid-Commander_01
+
+Script "Wake up them droids" 31
+{
+
+		LightAttached Screen1 A_02_CommPanel01_01 10 green
+		LightAttached Screen2 A_02_CommPanel02_01 10 green		
+
+		ChildScript "Commander Droid Pacing"
+		{
+			Pause 1.0
+			LookAtAndWait A_BAD_infantry_02 A_02_cm_pipe_01
+			Pause 2.0
+			LookAtAndWait A_BAD_infantry_02 A_02_cm_pipe_02
+			Pause 1.0
+			WalkToNodeAndWait A_BAD_infantry_02 goto_command01
+			LookAtAndWait A_BAD_infantry_02 A_BAD_Pilot_05
+			Pause 2.0
+			LookAtAndWait A_BAD_infantry_02 A_BAD_Pilot_06
+			PlayGesture A_BAD_infantry_02 PointForward
+			Pause 1.0
+			WalkToNodeAndWait A_BAD_infantry_02 goto_command02
+			Pause 1.0
+			LookAtAndWait A_BAD_infantry_02 A_BAD_Pilot_05
+			PlayGesture A_BAD_infantry_02 PointForward
+			Pause 1.0
+			WalkToNodeAndWait A_BAD_infantry_02 goto_command01
+			Pause 2.0
+			Loop
+		}
+
+		ChildScript	"Wake up Commander Droid"
+		{
+			Actor CmdrDroid A_BAD_infantry_02 
+			TakeControlOf CmdrDroid
+			WaitUntilEnteredRegion Obi rgn_comm_wakeup
+			InvincibilityOff A_BAD_infantry_02
+			ReturnControlTo CmdrDroid
+			ForceTargetAndAttack A_BAD_infantry_02 Obi
+		}
+
+		ChildScript "Wake up Infant1"
+		{
+			Actor Infant08 A_BAD_Infantry_08
+			TakeControlOf Infant08
+			WaitUntilEnteredRegion Obi rgn_comm_wakeup
+			ReturnControlTo Infant08
+			ForceTargetAndAttack Infant08 Obi
+		}
+	
+		ChildScript	"Wake up Infant2"
+		{
+			Actor Infant09 A_BAD_Infantry_07
+			TakeControlOf Infant09
+			WaitUntilEnteredRegion Obi rgn_comm_wakeup
+			ReturnControlTo Infant09
+			ForceTargetAndAttack Infant09 Obi
+		}
+	
+		ChildScript "Wake up Infant4"
+		{
+			Actor Infant10 A_BAD_infantry_54
+			TakeControlOf Infant10
+			WaitUntilEnteredRegion Obi rgn_comm_wakeup
+			ReturnControlTo Infant10
+			ForceTargetAndAttack Infant10 Obi
+		}
+
+		ChildScript	"Wake up pilot1"
+		{
+			Actor Pilot1 A_BAD_Pilot_05 
+			TakeControlOf Pilot1
+			PlayGesture Pilot1 typing 999.00
+			WaitUntilEnteredRegion Obi rgn_comm_wakeup
+			ActivateSwitch A_01_contrl_sphere_01
+			InvincibilityOff Pilot1
+			LookAtAndWait Pilot1 Obi
+ 			Pause 1.0
+			EquipWeapon Pilot1
+			PlayGesture Pilot1 PointForward 3.0
+			ReturnControlTo Pilot1
+			ForceTargetAndAttack Pilot1 Obi
+		}
+	
+		ChildScript "Wake up pilot2"
+		{
+			Actor Pilot2 A_BAD_Pilot_06
+			TakeControlOf Pilot2
+			PlayGesture Pilot2 typing 999.00
+			WaitUntilEnteredRegion Obi rgn_comm_wakeup
+			Pause 1.0
+			ActivateSwitch A_01_contrl_sphere_02
+			InvincibilityOff Pilot2
+			LookAtAndWait Pilot2 Obi
+ 			Pause 1.5
+			EquipWeapon Pilot2
+			PlayGesture Pilot2 PointForward 3.0
+			ReturnControlTo Pilot2
+			ForceTargetAndAttack Pilot2 Obi
+		}
+		/*
+		ChildScript "Switch1Failsafe"
+		{
+			WaitUntilNudgedBy A_01_contrl_sphere_01 Obi
+			Endscript "Wake up pilot1"
+			ReturnControlTo A_BAD_Pilot_05
+		}
+
+		ChildScript "Switch2Failsafe"
+		{
+			WaitUntilNudgedBy A_01_contrl_sphere_02 Obi
+			Endscript "Wake up pilot2"
+			ReturnControlTo A_BAD_Pilot_06
+		}
+		*/
+		WaitForAll
+}
+
+
+
+
+
+
+////////////////////
+//Comm Room Escape//
+////////////////////
+
+InvincibilityOn A_02_cm_pipe_01
+InvincibilityOn A_02_cm_pipe_02
+
+Script "Get out of the commroom" 27
+{
+	ChildScript "nudge1"
+	{
+		WaitUntilNudgedBy A_01_contrl_sphere_01 Obi
+		Pause 3.5
+		InvincibilityOff A_02_cm_pipe_01
+	}
+
+	ChildScript "nudge2"
+	{	
+		WaitUntilNudgedBy A_01_contrl_sphere_02 Obi
+		Pause 3.5
+		InvincibilityOff A_02_cm_pipe_02
+	}
+
+	ChildScript "killpipe1"
+	{
+		WaitUntilKilled A_02_cm_pipe_01 
+		Child LockDoor A_02_CommUnit01_01
+		Child LockDoor A_02_CommPanel01_01
+		LightFlicker Screen1 18
+		Pause 2.0
+		LightOff Screen1
+	}
+
+	ChildScript "killpipe2"
+	{
+		WaitUntilKilled A_02_cm_pipe_02 
+		Child LockDoor A_02_CommUnit02_01
+		Child LockDoor A_02_CommPanel02_01
+		LightFlicker Screen2 25
+		Pause 1.5
+		LightOff Screen2
+	}
+
+	WaitForAll
+	MissionObjectiveAchieved 1
+
+	Pause 0.5
+
+	CommunicatorMessageAndWait "/Qui-Gon_399/Excellent work, Obi-Wan.  You should now go and find the main engines and destroy them." Qui-Gon.dlg
+	CommunicatorOff
+	
+	DisembodiedVoice bad.dlg "/BattledroidInfantry_413/Deploy squad 8313 to the communications room immediately.  Investigate disruption."
+	Pause 1.0
+
+	UnlockDoor A_02_d_turbnAlock_02
+	TriggerUberGenAndWait  A_z_BAD-Infantry_17 Infant_01
+	TriggerUberGenAndWait  A_z_BAD-Infantry_18 Infant_02
+	TriggerUberGenAndWait  A_z_BAD-Infantry_19 Infant_03
+	TriggerUberGenAndWait  A_z_BAD-Infantry_20 Infant_04
+	TakePartialControlOf Infant_01
+	TakePartialControlOf Infant_02
+	TakePartialControlOf Infant_03
+	TakePartialControlOf Infant_04
+	Child RunToNode Infant_01 goto_comm_01
+	Child RunToNode Infant_02 goto_comm_02
+	Child RunToNode Infant_03 goto_comm_03
+	Child RunToNode Infant_04 goto_comm_04
+	WaitForAll
+
+	Child WaitUntilKilled Infant_01
+	Child WaitUntilKilled Infant_02
+	Child WaitUntilKilled Infant_03
+	Child WaitUntilKilled Infant_04
+
+	WaitUntilEnteredRegion Obi comm_d_trig_02
+	CommunicatorMessageAndWait "/Qui-Gon_401/Contact me when you when you get to the battle tank storage bays." Qui-Gon.dlg
+	SayLineNonPositional Obi "/Obi-Wan_402/Yes, Master.  I'll get there as soon as I am able."
+	CommunicatorOff
+
+	AddPatrolState A_Battledroid-Infantry_05
+	AddPatrolState A_Battledroid-Infantry_12
+	
+	RemoveGroup 27
+	Save
+}
+
+///////////////////
+//  EBL Control  //
+///////////////////
+
+Function "Ebcorr sounds" (Actor door)
+{
+	ActivateAsIfBySwitch door
+	PlayAudioCue door Startup
+	CreateAudioCue snd1 door Running
+	WaitUntilDoorClosed door
+	StopAudioCue snd1
+	PlayAudioCue door Arrived 
+}
+
+
+Script "EBL02"
+{
+	WaitUntilExitedRegion Obi zap
+
+	Script "EBL Doors"
+	{
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr02
+		call "Ebcorr sounds" A_02_d_ebcorr_01
+		ActivateAsIFBySwitch A_FF_fed_large_01
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr01
+		call "Ebcorr sounds" A_02_d_ebcorr_02
+		ActivateAsIfBySwitch A_FF_fed_large_02
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr03
+		call "Ebcorr sounds" A_02_d_ebcorr_06
+		ActivateAsIfBySwitch A_FF_fed_large_03
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr04
+		call "Ebcorr sounds" A_02_d_ebcorr_04
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr04
+		call "Ebcorr sounds" A_02_d_ebcorr_04
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr03
+		call "Ebcorr sounds" A_02_d_ebcorr_06
+		ActivateAsIfBySwitch A_FF_fed_large_03
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr01
+		call "Ebcorr sounds" A_02_d_ebcorr_02
+		ActivateAsIfBySwitch A_FF_fed_large_02
+
+		WaitUntilEnteredRegion A_02_powerbeam02_01 rgn_trig_d_ebcorr02
+		call "Ebcorr sounds" A_02_d_ebcorr_01
+		ActivateAsIFBySwitch A_FF_fed_large_01
+		Loop
+	}
+}
+
+//////////////////
+//  SecretDoor  //
+//////////////////
+
+/*
+Script "SecretDoor"
+{
+	Actor Welder A_Battledroid-Welder_01
+	AddWorkEvent Welder worknode None
+		
+	WaitUntilKilled Welder
+	Actor PK4 A_PK-4_01
+	TakeControlOf PK4
+	WalkToNodeAndWait PK4 worknode
+
+	WaitUntilArrived PK4 worknode
+	AddWorkNode PK4 worknode
+	Pause 5.0
+	
+	UnlockDoor A_02_hall_main_MvDoor_06
+}
+*/
+
+
+////////////////////////////////////
+//Battledroids in cargo bay ambush//
+////////////////////////////////////
+
+Script "I've got a bad feeling about this..."
+{
+	Actor UGBAD-I_13 A_z_Battledroid-Infantry_13 
+	Actor UGBAD-I_09 A_z_Battledroid-Infantry_09 
+	Actor UGBAD-I_08 A_z_Battledroid-Infantry_08 
+	Actor UGBAD-S_11 A_z_Battledroid-Security_11 
+	Actor UGBAD-S_09 A_z_Battledroid-Security_09 
+	Actor UGBAD-S_10 A_z_Battledroid-Security_10 
+	Actor UGBAD-HW_01 A_z_Battledroid-HeavyWeapon_01
+	Actor UGBAD-HW_02 A_z_Battledroid-HeavyWeapon_02 
+	Actor UGBAD-HW_03 A_z_Battledroid-HeavyWeapon_03 
+
+	Actor BAD-I_13
+	Actor BAD-I_09
+	Actor BAD-I_08
+	Actor BAD-S_11
+	Actor BAD-S_09
+	Actor BAD-S_10
+	Actor BAD-HW_01
+	Actor BAD-HW_02
+	Actor BAD-HW_03
+
+	WaitUntilEnteredRegion Obi rgn_badfeeling
+	ActivateAsIfBySwitch A_02_d_bay2_06
+	TakeControlOf Bad-I_13
+	TakeControlOf Bad-I_09
+	TakeControlOf Bad-I_08
+	TakeControlOf Bad-S_11
+	TakeControlOf Bad-S_09
+	TakeControlOf Bad-S_10
+	TakeControlOf Bad-HW_01
+	TakeControlOf Bad-HW_02
+	TakeControlOf Bad-HW_03
+	DisembodiedVoice Bad.dlg "/BattledroidInfantry_1046/Don't let him get away."
+	Pause 1.5
+	
+	RunToNodeAndWait BAD-I_13 goto_cargo_BAD_01
+	ReturnControlTo BAD-I_13 
+	RunToNodeAndWait BAD-I_09 goto_cargo_BAD_02
+	ReturnControlTo BAD-I_09 
+	RunToNodeAndWait BAD-I_08 goto_cargo_BAD_03
+	ReturnControlTo BAD-I_08 
+	RunToNodeAndWait BAD-S_11 goto_cargo_BAD_04
+	ReturnControlTo BAD-S_11 
+	RunToNodeAndWait BAD-S_09 goto_cargo_BAD_05
+	ReturnControlTo BAD-S_09 
+	RunToNodeAndWait BAD-S_10 goto_cargo_BAD_06
+	ReturnControlTo BAD-S_10 
+	RunToNodeAndWait BAD-HW_01 goto_cargo_BAD_07
+	ReturnControlTo BAD-HW_01 
+	RunToNodeAndWait BAD-HW_02 goto_cargo_BAD_08
+	ReturnControlTo BAD-HW_02 
+	RunToNodeAndWait BAD-HW_03 goto_cargo_BAD_09
+	ReturnControlTo BAD-HW_03 
+}
+
+///////////////////////////////////////////// 
+//AAT Bay Communication between Qui and Obi//
+/////////////////////////////////////////////
+
+Script "AAT Radio Conversation"
+{
+	WaitUntilEnteredRegion Obi hall_d_trig_03
+	SayLineNonPositional Obi "/Obi-Wan_403.1/Master, I've reached the AAT Bays.  There are more Battledroids here!"
+	CommunicatorMessageAndWait "/Qui-Gon_409/Acknowledged!  Get through them as best you can.  We must get to the Turbine Center or the Main Control Room!" Qui-Gon.dlg
+	SayLineNonPositional Obi "/Obi-Wan_428/Yes, Master."
+	CommunicatorOff
+}
+
+//////////////////////////////
+//  AAT Damage Replacement  //
+//////////////////////////////
+
+Int FuelPumpBlown 0
+
+Function "AATDamage" (actor FuelPump, actor AAT)
+{
+	WaitUntilKilled FuelPump
+    	Kill AAT
+	Set FuelPumpBlown 1
+}
+
+Call AATDamage (A_02_aat_fuelpump_05, A_AAT_static_01)
+Call AATDamage (A_02_aat_fuelpump_01, A_AAT_static_02)
+Call AATDamage (A_02_aat_fuelpump_02, A_AAT_static_03)
+Call AATDamage (A_02_aat_fuelpump_06, A_AAT_static_04)
+Call AATDamage (A_02_aat_fuelpump_07, A_AAT_static_05)
+Call AATDamage (A_02_aat_fuelpump_09, A_AAT_static_06)
+Call AATDamage (A_02_aat_fuelpump_12, A_AAT_static_07)
+Call AATDamage (A_02_aat_fuelpump_03, A_AAT_static_08)
+Call AATDamage (A_02_aat_fuelpump_04, A_AAT_static_09)
+Call AATDamage (A_02_aat_fuelpump_08, A_AAT_static_11)
+Call AATDamage (A_02_aat_fuelpump_10, A_AAT_static_12)
+Call AATDamage (A_02_aat_fuelpump_11, A_AAT_static_13)
+
+/////////////////////////////////////
+//Engine Room Shut Down EASY Puzzle//
+/////////////////////////////////////
+
+CreateAudioCue Drone1 l03_4.aud PointSoundLoop_09 turbine1
+CreateAudioCue Drone2 l03_4.aud PointSoundLoop_09 turbine2
+CreateAudioCue Whine1 l03_4.aud PointSoundLoop_10 turbine1
+CreateAudioCue Whine2 l03_4.aud PointSoundLoop_10 turbine2
+SetTextureState A_02_turbine_ctrl_L_02 0
+SetTextureState A_02_turbine_ctrl_R_01 0
+float maxWhineVol1 -100
+float maxWhineVol2 -100
+
+Script "SkydomeTurbineRoom"
+{
+	SetVolume Drone1 -80 0.1
+	SetVolume Drone2 -80 0.1
+	SetVolume Whine1 -80 0.1
+	SetVolume Whine2 -80 0.1
+	WaitUntilEnteredRegion Obi rgn_TrubineRoom_amb01
+	SkyDomeOn
+	SetVolume Drone1 0 0.1
+	SetVolume Drone2 0 0.1
+	PrintFloat maxWhineVol1
+	PrintFloat maxWhineVol2
+	SetVolume Whine1 maxWhineVol1 0.1
+	SetVolume Whine2 maxWhineVol2 0.1
+	WaitUntilExitedRegion Obi rgn_TrubineRoom_amb01
+	SkyDomeOff
+	Loop
+}
+
+
+Script "Buttons, buttons, buttons!" 29
+{
+	Actor Button1 A_02_TurbineButton_01
+	Actor Button2 A_02_TurbineButton_02
+	Actor BADCO A_Battledroid-Commander_01
+
+
+	ChildScript "Turbine1"
+	{
+		WaitUntilNudgedBy Button1 Obi
+		SetTextureState A_02_turbine_ctrl_L_02 1
+		set maxWhineVol1 0
+		SetVolume Whine1 0 1
+	}
+
+	ChildScript "Turbine2"
+	{
+		WaitUntilNudgedBy Button2 Obi
+		SetTextureState A_02_turbine_ctrl_R_01 1
+		set maxWhineVol2 0
+		SetVolume Whine2 0 1
+	}
+
+	WaitUntilEnteredRegion Obi turb_d_clear_02
+	CommunicatorMessageAndWait "/Qui-Gon_406/That’s the Main Control Room.  From there, you can access the Turbine Center, and shut down the engines." Qui-Gon.dlg
+	Child SayLineNonPositional Obi "/Obi-Wan_405/I see it."
+	CommunicatorOff
+
+	WaitForAll
+	
+	SetVolume Drone1 -100 0.1
+	SetVolume Drone2 -100 0.1
+	SetVolume Whine1 -100 0.1
+	SetVolume Whine2 -100 0.1
+	
+	PlayAudioCue l03_4.aud PointSoundOneshot_02 turbine3
+	
+	ChildScript "stopturbine sounds"
+	{
+		Pause 0.1
+		StopAudioCue Drone1
+		StopAudioCue Drone2
+		StopAudioCue Whine1
+		StopAudioCue Whine2
+	}
+
+
+	SayLineNonPositional Obi "/Obi-Wan_410/Master, I shut down the engines!"
+	MissionObjectiveAchieved 2
+	Pause 1.0	
+
+	CommunicatorOff
+	DisembodiedVoiceAndWait Bad.dlg "/BattledroidInfantry_414/Warning!  Turbine engines have been powered down.  Turbine Control... Come in!"
+	Pause 2.0
+	DisembodiedVoiceAndWait Bad.dlg "/BattledroidInfantry_416/Battledroid Sentry 8557, investigate Turbine Control malfunction and report in."
+	Pause 1.0
+	TriggerUberGenAndWait A_z_BAD-heavyweap_01 BAD_Heavy_Turb
+	UnlockDoor A_02_d_turbnAlock_04
+	OpenDoor A_02_d_turbnAlock_04
+	WaitUntilExitedRegion BAD_Heavy_Turb turb_d_clear_03
+	Sayline BAD_Heavy_Turb "/BattledroidInfantry_1019/Halt!"
+	Sayline BAD_Heavy_Turb "/BattledroidInfantry_1026/You are under arrest!"
+}
+
+Script "Globe"
+{
+	CreateAudioCue snd_holo A_02_NabooHolo_01 Running 
+	
+	ChildScript "Globe Nudge 1"
+	{
+		CreateAudioCue snd_but1 02_ctl_ctr_scrn.aud Running scrn1
+		WaitUntilNudgedBy A_3-4_ctrl_src_button_01 Obi 
+		StopAudioCue snd_but1
+		PlayAudioCue 02_ctl_ctr_scrn.aud Arrived scrn1
+		LockDoor A_02_ctl_ctr_scrn_02
+	}
+
+	ChildScript "Globe Nudge 2"
+	{
+		CreateAudioCue snd_but2 02_ctl_ctr_scrn.aud Running scrn2 
+		WaitUntilNudgedBy A_3-4_ctrl_src_button_02 Obi 
+		StopAudioCue snd_but2 
+		PlayAudioCue 02_ctl_ctr_scrn.aud Arrived scrn2
+		LockDoor A_02_ctl_ctr_scrn_01
+	}
+
+	ChildScript "Globe Nudge 3"
+	{
+		CreateAudioCue snd_but3 02_ctl_ctr_scrn.aud Running scrn3 
+		WaitUntilNudgedBy A_3-4_ctrl_src_button_03 Obi
+		StopAudioCue snd_but3 
+		PlayAudioCue 02_ctl_ctr_scrn.aud Arrived scrn3
+		LockDoor A_02_ctl_ctr_scrn_04
+	}
+
+	ChildScript "Globe Nudge 4"
+	{
+		CreateAudioCue snd_but4 02_ctl_ctr_scrn.aud Running scrn4 
+		WaitUntilNudgedBy A_3-4_ctrl_src_button_04 Obi
+		StopAudioCue snd_but4 
+		PlayAudioCue 02_ctl_ctr_scrn.aud Arrived scrn4
+		LockDoor A_02_ctl_ctr_scrn_03
+	}
+	WaitForAll
+
+	StopAudioCue snd_holo 
+	PlayAudioCue A_02_NabooHolo_01 Arrived
+	RemoveActor A_02_NabooHolo_01
+}
+
+
+
+//////////////////////////////////////////////////
+//STAP Room Bomb Bay Door Battledroid Smack Down//
+//////////////////////////////////////////////////
+
+CreateAudioCue doorsound l03_4.aud PointSoundLoop_08 outsidesound
+Script "Bomb bay door sounds"
+{
+	SetVolume doorsound -80 1
+	WaitUntilNudged A_3-4_consl_center_01
+	SetVolume doorsound 0 1
+	Pause 7.66
+	Loop
+}
+
+Script "Left arm"
+{
+	WaitUntilNudged A_3-4_consl_left_01
+	PlayAudioCue 02_d_stap_deploy.aud Startup arm1
+	Pause 7
+	PlayAudioCue 02_d_stap_deploy.aud Startup arm1
+}
+
+Script "Right arm"
+{
+	WaitUntilNudged A_3-4_consl_right_01
+	PlayAudioCue 02_d_stap_deploy.aud Startup arm2
+	Pause 7
+	PlayAudioCue 02_d_stap_deploy.aud Startup arm2
+}
+
+Script "Turbine SkyDomeOn-Off01"
+{
+	WaitUntilEnteredRegion Obi rgn_STAPRomm_amb
+	SkyDomeOn
+	WaitUntilExitedRegion Obi rgn_STAPRomm_amb
+	SkyDomeOff
+	Loop
+}
+
+Script "Bombs away, baby"
+{
+	WaitUntilEnteredRegion Obi rgn_trig_STAPDeploy
+	DisembodiedVoice Bad.dlg "/BattledroidInfantry_417/Alert!  Intruder is located in STAP Deployment Bay 8313."
+//	LockDoor A_02_hall_main_MvDoor_02
+//	LockDoor A_02_hall_main_MvDoor_01
+	Pause 6.0
+	DisembodiedVoice Bad.dlg "/BattledroidInfantry_418/Seal and lock accessways into STAP Deployment BAY 8313."
+	Pause 6.0
+	DisembodiedVoice Bad.dlg "/BattledroidInfantry_419/Squad 8252, intercept and destroy intruder."
+	Pause 5.0
+	OpenDoor A_02_d_turbnAlock_07
+
+	//First set 'o BADs that fall through bomb bay doors
+	Actor BAD1 A_z_BAD-Infantry_01
+	Actor BAD2 A_z_BAD-Infantry_02
+	Actor BAD3 A_z_BAD-Infantry_03
+
+	TakePartialControlOf BAD1
+	TakePartialControlOf BAD2
+	TakePartialControlOf BAD3
+
+	Child RunToNodeAndWait BAD1 goto_droid_left01
+	Child RunToNodeAndWait BAD1 goto_droid_left02
+	Child RunToNodeAndWait BAD1 goto_droid_left03
+
+	Child RunToNodeAndWait BAD2 goto_droid_right01
+	Child RunToNodeAndWait BAD2 goto_droid_right02
+	Child RunToNodeAndWait BAD2 goto_droid_right03
+
+	Child RunToNodeAndWait BAD3 goto_droid_center01
+	Child RunToNodeAndWait BAD3 goto_droid_center02
+	
+	//Second set o' BADs that go around bomb bay doors
+	Actor BAD5 A_z_BAD-Infantry_05
+	Actor BAD6 A_z_BAD-Infantry_06
+	Actor BAD7 A_z_BAD-Infantry_07
+
+	Pause 2.0
+
+	TakePartialControlOf BAD5
+	TakePartialControlOf BAD6
+	TakePartialControlOf BAD7
+
+	Child RunToNodeAndWait BAD5 goto_droid_left01
+	Child RunToNodeAndWait BAD5 goto_droid_left02
+	Child RunToNodeAndWait BAD5 goto_droid_left03
+
+	Child RunToNodeAndWait BAD6 goto_droid_right01
+	Child RunToNodeAndWait BAD6 goto_droid_right02
+	Child RunToNodeAndWait BAD6 goto_droid_right03
+
+	Child RunToNodeAndWait BAD7 goto_droid_center01
+	Child RunToNodeAndWait BAD7 goto_droid_center02
+
+	//Third set o' BADs that go around bomb bay doors
+	Actor BAD9 A_z_BAD-Infantry_09
+	Actor BAD10 A_z_BAD-Infantry_10
+	Actor BAD11 A_z_BAD-Infantry_11
+
+	Pause 2.0
+
+	TakePartialControlOf BAD9
+	TakePartialControlOf BAD10
+	TakePartialControlOf BAD11
+
+	Child RunToNodeAndWait BAD9 goto_droid_left01
+	Child RunToNodeAndWait BAD9 goto_droid_left02
+	Child RunToNodeAndWait BAD9 goto_droid_left03
+
+	Child RunToNodeAndWait BAD10 goto_droid_right01
+	Child RunToNodeAndWait BAD10 goto_droid_right02
+	Child RunToNodeAndWait BAD10 goto_droid_right03
+
+	Child RunToNodeAndWait BAD11 goto_droid_center01
+	Child RunToNodeAndWait BAD11 goto_droid_center02
+
+
+	//Fourth set o' BADs that go around bomb bay doors
+	Actor BAD13 A_z_BAD-Infantry_13
+	Actor BAD14 A_z_BAD-Infantry_14
+	Actor BAD15 A_z_BAD-Infantry_15
+
+	Pause 2.0
+
+	TakePartialControlOf BAD13	
+	TakePartialControlOf BAD14
+	TakePartialControlOf BAD15
+
+	Child RunToNodeAndWait BAD13 goto_droid_left01
+	Child RunToNodeAndWait BAD13 goto_droid_left02
+	Child RunToNodeAndWait BAD13 goto_droid_left03
+
+	Child RunToNodeAndWait BAD14 goto_droid_right01
+	Child RunToNodeAndWait BAD14 goto_droid_right02
+	Child RunToNodeAndWait BAD14 goto_droid_right03
+
+	Child RunToNodeAndWait BAD15 goto_droid_center01
+	Child RunToNodeAndWait BAD15 goto_droid_center02
+
+	Child WaitUntilKilled BAD1
+	Child WaitUntilKilled BAD2
+	Child WaitUntilKilled BAD3
+	Child WaitUntilKilled BAD5
+	Child WaitUntilKilled BAD6
+	Child WaitUntilKilled BAD7
+	Child WaitUntilKilled BAD9
+	Child WaitUntilKilled BAD10
+	Child WaitUntilKilled BAD11
+	Child WaitUntilKilled BAD13
+	Child WaitUntilKilled BAD14
+	Child WaitUntilKilled BAD15
+//	UnLockDoor A_02_hall_main_MvDoor_01
+//	UnLockDoor A_02_hall_main_MvDoor_02
+}
+
+/////////////////////////////////
+//Saber-Droids make an entrance//
+/////////////////////////////////
+
+Script "Saber-Droid Delight"
+{
+	UnLockDoor A_3-4_airlock_dr_02
+	UnLockDoor A_3-4_airlock_dr_03
+	TakePartialControlOf A_assassindroid-sword_01
+	SetMissionCritical A_assassindroid-sword_01
+	// WaitUntilEnteredRegion Obi end_door_clear2
+	// WaitUntilDoorClosed A_3-4_airlock_dr_02
+	
+	WaitUntilEnteredRegion Obi end_door_sadroid
+	CloseDoor A_3-4_airlock_dr_01
+	UnLockDoor A_3-4_airlock_dr_01
+	
+	OpenDoor A_3-4_airlock_dr_04
+	EnemyHealthMeter A_assassindroid-sword_01
+
+	StopMusicManager
+	PlayBattleLoop  m_saberArena_03_lp.wav  cut_3_4extro_m.wav  m_saberArena_03_lose.wav
+
+	Child WalkToNode A_assassindroid-sword_01 end_center
+	ForceTargetAndAttack A_assassindroid-sword_01 Obi
+}
+
+
+Script "Ending Cutscene"
+{	
+	WaitUntilKilled A_assassindroid-sword_01
+
+	FadeDown
+	UnEquipWeapon Obi
+	Pause 2.0
+	BeginCutScene
+	FadeUp
+
+	PlayMusic Victory  // *** Should this play as soon as the droid is killed?
+
+	CameraTrack end Obi
+	TakeControlOf Obi
+	WalkToNodeAndWait Obi end_center
+	CameraOrbit ObiWan 8.5 3.2 30.0 180 true
+	CommunicatorMessageAndWait "/Qui-Gon_473/Obi-Wan, is everything okay?" Qui-Gon.dlg
+	SayLineNonPositional Obi "/Obi-Wan_420/Master!  I've just encountered some kind of assassin droid, armed with a new weapon, a cortosis sword."
+	Pause 1.0
+	CommunicatorMessageAndWait "/Qui-Gon_421/Cortosis?!" Qui-Gon.dlg
+	SayLineNonPositional Obi "/Obi-Wan_422/Yes, Master.  Do you think there’s a connection to the Jin’ha?"
+	CommunicatorMessageAndWait "/Qui-Gon_423/Hmmm…We’ll discuss it later, Padawan.  For now, get to safety.  Good work." Qui-Gon.dlg
+	SayLineNonPositional Obi "/Obi-Wan_428/Yes, Master."
+	CommunicatorOff
+
+	FadeDownAndWait
+
+	PreEndCutscene
+	FadeDown 0
+	EndCutScene
+
+	NextLevel L03_6a
+}
+
+Script "Dont go outside"
+{
+	WaitUntilEnteredRegion Obi rgn_STAP_wind
+	ConsoleCommand "do Kill Obi"
+	ConsoleCommand "popcameraman"
+	Pause 0.1
+	ConsoleCommand "popcameraman"
+}
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+//
+//  GROUP NUMBERS
+//
+//  Script "Opening Cutscene" 32
+//  call PowerupRemoval (A_powerupexplorationmarker_01, 31)
+//  call PowerupRemoval (A_powerupexplorationmarker_02, 30)
+//  Script "Buttons, buttons, buttons!" 29
+//  call PowerupRemoval (A_powerupexplorationmarker_03, 28)
+// 
+//
+//
+//
+//
+//
+//
+//
+//

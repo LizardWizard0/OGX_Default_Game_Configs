@@ -1,0 +1,18 @@
+AddBattleLoop  m_saberArena_01_lp.wav  m_saberArena_01_end.wav  m_saberArena_01_lose.wav
+
+actor jedi A_duelmacewindu_01
+Teleport jedi dude
+
+ForceTarget jedi obi
+FadeUpAndWait
+PlayMusic BattleLoop
+
+ConsoleCommand "r_maxshadows 2"
+ConsoleCommand "lockontoggle 1"
+ConsoleCommand "rumble_on 0"
+ConsoleCommand "disable_rumble 1"
+
+CastShadows jedi true
+
+InvincibilityOn jedi
+InvincibilityOn Obi

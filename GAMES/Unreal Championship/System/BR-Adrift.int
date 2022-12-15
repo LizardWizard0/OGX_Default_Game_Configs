@@ -1,0 +1,69 @@
+[LevelInfo0]
+Title="Adrift"
+
+[LevelSummary]
+Title="Adrift"
+
+[ZoneInfo0]
+LocationName="Red Lower Hallway"
+
+[ZoneInfo1]
+LocationName="Blue Lower Hallway"
+
+[ZoneInfo10]
+LocationName="Blue Upper Hallway"
+
+[ZoneInfo11]
+LocationName="Blue Upper Hallway"
+
+[ZoneInfo12]
+LocationName="Blue Upper Hallway"
+
+[ZoneInfo13]
+LocationName="Blue Lower Hallway"
+
+[ZoneInfo15]
+LocationName="Red Bomb Room"
+
+[ZoneInfo16]
+LocationName="Red Lower Hallway"
+
+[ZoneInfo17]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo18]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo19]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo20]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo21]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo22]
+LocationName="Red Lower Entrance"
+
+[ZoneInfo3]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo4]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo5]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo6]
+LocationName="Blue Lower Entrance"
+
+[ZoneInfo7]
+LocationName="Outside"
+
+[ZoneInfo8]
+LocationName="Blue Upper Hallway"
+
+[ZoneInfo9]
+LocationName="Blue Upper Hallway"
+

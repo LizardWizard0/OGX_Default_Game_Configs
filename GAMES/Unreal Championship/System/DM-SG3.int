@@ -1,0 +1,18 @@
+[LevelSummary]
+Title="Untitled"
+
+[ZoneInfo21]
+LocationName="Team Recognition Area"
+
+[ZoneInfo22]
+LocationName="Team Recognition Area"
+
+[xTutorialInfo3]
+Seq[2].Text="The last thing the Guide will teach you is how to identify your teammates and your enemies while in combat."
+Seq[3].Text="Notice your HUD is shaded red, indicating you are on the red team. "
+Seq[5].Text="The player to your left is your teammate.  "
+Seq[6].Text="This is delineated by the red team lights over their shoulders and by the red team icon floating over their head."
+Seq[9].Text="The two players across from you are on the blue team, and therefore your enemies.  "
+Seq[10].Text="Now, as your final task, help your teammate finish off the players on the blue team!"
+Seq[18].Text="Congratulations!  You have completed the Survival Guide!  It is time to give you a team and enter the tournament."
+

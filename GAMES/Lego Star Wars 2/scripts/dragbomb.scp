@@ -1,0 +1,8 @@
+state Base {
+	Conditions {
+	}
+	Actions {
+		DontUseShadowTerrain
+		DontPush
+	}
+}

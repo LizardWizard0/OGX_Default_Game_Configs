@@ -1,0 +1,472 @@
+<?
+	Character list
+	Defines character names and attributes
+?>
+
+<gamedata>
+
+	<?--------------- Characters ----------------?>
+
+	<character>
+	    <id>1000</id>
+		<name>Crow</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1001</id>
+		<name>DMX</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1002</id>
+		<name>Ludacris</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1003</id>
+		<name>Blaze</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1004</id>
+		<name>Sticky</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1005</id>
+		<name>Doc</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1006</id>
+		<name>Magic</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1007</id>
+		<name>L.L. Cool J.</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1008</id>
+		<name>Xzibit</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1009</id>
+		<name>NORE</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1010</id>
+		<name>David Banner</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1011</id>
+		<name>Crack</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1012</id>
+		<name>Bonecrusher</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1013</id>
+		<name>Capone</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1014</id>
+		<name>Sean Paul</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1015</id>
+		<name>Ghostface Killah</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1016</id>
+		<name>Scarface</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1017</id>
+		<name>Trejo</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1018</id>
+		<name>WC</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1019</id>
+		<name>Memphis Bleek</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1020</id>
+		<name>Flava Flav</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1021</id>
+		<name>Freeway</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1022</id>
+		<name>Bubba Sparxx</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1023</id>
+		<name>Kurupt</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1024</id>
+		<name>Mack 10</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1025</id>
+		<name>Joe Budden</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1026</id>
+		<name>Prodigy</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1027</id>
+		<name>Havoc</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1028</id>
+		<name>Lil Flip</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1029</id>
+		<name>Crazy Legs</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1030</id>
+		<name>Comp</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1031</id>
+		<name>Fam Lay</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1032</id>
+		<name>Elephant Man</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1033</id>
+		<name>Bless</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1034</id>
+		<name>Chris Lighty</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1035</id>
+		<name>Lil Kim</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1036</id>
+		<name>Carmen Electra</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1037</id>
+		<name>Shawna</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1038</id>
+		<name>Cindy Johnson</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1039</id>
+		<name>Pity Girl</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1040</id>
+		<name>D-Mob</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1041</id>
+		<name>Manny</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1042</id>
+		<name>Nyne</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1043</id>
+		<name>Trick</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1044</id>
+		<name>Bo</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1045</id>
+		<name>Dan G</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1046</id>
+		<name>Baxter</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1047</id>
+		<name>Stingray</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1048</id>
+		<name>Cruz</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1049</id>
+		<name>Checho</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1050</id>
+		<name>Widowmaker</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1051</id>
+		<name>Rome</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1052</id>
+		<name>Solo</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1053</id>
+		<name>House</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1054</id>
+		<name>Pockets</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1055</id>
+		<name>Snowman</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1056</id>
+		<name>Chiang</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1057</id>
+		<name>Masa</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1058</id>
+		<name>Skull</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1059</id>
+		<name>Baby Chris</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1060</id>
+		<name>OPEN 1</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1061</id>
+		<name>OPEN 2</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1062</id>
+		<name>OPEN 3</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1063</id>
+		<name>OPEN 4</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1064</id>
+		<name>OPEN 5</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1065</id>
+		<name>OPEN 6</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1066</id>
+		<name>OPEN 7</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1067</id>
+		<name>OPEN 8</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1068</id>
+		<name>Hero-Street Fighting</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1069</id>
+		<name>Hero-Martial Arts</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1070</id>
+		<name>Hero-Submissions</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1071</id>
+		<name>Hero-Wrestling</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	<character>
+	    <id>1072</id>
+		<name>Hero-Kickboxing</name>
+		<strength>50</strength>
+		<agility>50</agility>
+	</character>
+	
+	<?--------------- Venues ----------------?>
+
+	<venue>
+	    <id>2000</id>
+	    <name>Venue #0</name>
+	</venue>
+	<venue>
+	    <id>2001</id>
+	    <name>Venue #1</name>
+	</venue>
+	<venue>
+	    <id>2002</id>
+	    <name>Venue #2</name>
+	</venue>
+	<venue>
+	    <id>2003</id>
+	    <name>Venue #3</name>
+	</venue>
+	<venue>
+	    <id>2004</id>
+	    <name>Venue #4</name>
+	</venue>
+
+</gamedata>

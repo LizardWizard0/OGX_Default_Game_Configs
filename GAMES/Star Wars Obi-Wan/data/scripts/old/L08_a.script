@@ -1,0 +1,459 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+// All of these little scripts will run concurrently, but notice
+// how they usually begin with WaitUntil__ calls.  That means
+// that they won't really trigger until certain things happen.
+
+
+Script OpeningText 
+{
+	FadeUp
+	Pause 2.0
+	Display "/08TEMPIntro/" 5.0    // This message is defined in TextMessages.dlg
+	Pause 5.0
+	Display "/08TEMPIntro/2" 5.0
+}
+
+
+
+Script OpeningRescue 
+{
+	Actor Man "A_Civ_Male3_Theed_04"
+	Actor Droid1 "A_BAD_Security_01"
+	Actor Droid2 "A_BAD_Security_02"
+	
+	TakeControlOf Man
+
+	WaitUntilKilled Droid1
+	WaitUntilKilled Droid2
+	
+	PlayFlourish "m_objective_01.wav"
+	
+	SayLine Man "/CivilianTheedMan3_270/Thanks."
+	RunToNodeAndWait Man "good_hiding"
+   Crouch Man
+}
+
+
+
+Script HotelLadyDialog 
+{
+	Actor Woman "A_Civ_Female2_Theed_01"
+	
+	WaitUntilEnteredRegion ObiWan  "I_love_purvis"
+	
+	SayLine Woman "/CivilianTheedWoman4_333.1/Jedi!  Come here!" 
+	WaitUntilNudged Woman
+	SayLine ObiWan  "/Obi-WanKenobi_402/I'm here to help.  What do you need me to do?"
+	
+	Script 
+	{
+		SayLine Woman "/CivilianTheedWoman4_333.11/there's a group"
+		SayLine Woman "/CivilianTheedWoman4_333.12/as far as I can tell"
+			
+		WaitUntilNudged Woman
+		SayLine Obi "/Obi-WanKenobi_339/What else do you know?"
+		SayLine Woman "/CivilianTheedWoman4_332/Those droids are ruthless.  They shoot their prisoners if anyone tries to interfere."
+		
+		WaitUntilNudged Woman
+		SayLine Obi "/Obi-WanKenobi_54/What else can you tell me?"
+		SayLine Woman "/CivilianTheedWoman4_333/Maybe you could sneak up on them."
+		
+		WaitUntilNudged Woman
+		SayLine Obi "/Obi-WanKenobi_341.13/"
+		SayLine Woman "/CivilianTheedWoman4_329/I've told you the whole story."
+	
+		WaitUntilNudged Woman
+		SayLine Obi "/Obi-WanKenobi_54/What else can you tell me?"
+		
+		Loop 
+	}
+}
+
+
+
+Script OldPrisonerDialog 
+{
+	Actor Droid "A_BAD_infantry_21"
+	Actor Man "A_Civ_Male4_Theed_01"
+
+	WaitUntilEnteredRegion ObiWan  "I_love_purvis"
+	
+	ChildScript PrisonerFreed 
+	{
+		SayLine Man "/CivilianTheedMan2_252/What is the meaning of this?!!" 
+		SayLine Droid "/BattleDroidInfantry6_1/Put your hands up!"
+		SayLine Droid "/BattleDroidInfantry6_50/You're not authorized to be in this area."
+		Pause 5.0
+
+		SayLine Man "/CivilianTheedMan2_261/Please leave me alone."
+		SayLine Droid "/BattleDroidInfantry5_53/Do what you're told."
+		SayLine Droid "/BattleDroidInfantry6_35/We have orders to shoot our prisoners."
+		Pause 5.0
+
+		SayLine Man "/CivilianTheedMan2_434/I'm too old for this kind of thing."
+		SayLine Droid "/BattleDroidInfantry5_33/You are now prisoner of the Trade Federation."
+		Pause 5.0
+		
+		Loop 
+	}
+
+	WaitUntilKilled Droid
+	EndScript PrisonerFreed
+	
+	PlayFlourish "m_objective_01.wav"
+	
+	Pause 1.5f
+	//RunToNodeAndWait "Man" "Insert correct node name here" true
+	SayLine Man "/CivilianTheedMan2_251/Thank you."
+	SayLine Man "/CivilianTheedMan2_258/You have our respect and admiration Jedi."
+}
+
+
+
+Script BridgeWalkers 
+{
+	Actor Woman "A_Civ_Female1_Theed_C_01"
+	Actor Droid "A_BAD_generic_01"
+	
+	TakeControlOf Woman
+	TakeControlOf Droid
+	
+	WaitUntilEnteredRegion ObiWan  "camera01C_01"
+	
+	PlayFlourish "m_sighting_02.wav"
+	
+	Child WalkToNodeAndWait Woman "bridge_goto"
+	Child WalkToNodeAndWait Droid "bridge_goto"
+	WaitForAll 
+	
+	ReturnControlTo Woman
+	ReturnControlTo Droid
+}
+
+
+
+Script BridgeEscape 
+{
+	Actor Woman "A_Civ_Female1_Theed_C_01"
+	Actor Man1 "A_Civ_Male1_Theed_01"
+	Actor Man2 "A_Civ_Male2_Theed_01"
+	
+	Actor Droid1 "A_BAD_generic_01"
+	Actor Droid2 "A_BAD_generic_02"
+	Actor Droid3 "A_BAD_generic_03"
+	
+	WaitUntilKilled Droid1
+	WaitUntilKilled Droid2
+	WaitUntilKilled Droid3
+	
+	BeginScript BridgeLadyNudges
+	BeginScript NudgesBridgeGuy_01
+	BeginScript NudgesBridgeGuy_02
+	
+	PlayFlourish "m_objective_01.wav"
+
+	Script 
+	{
+		TakeControlOf Woman
+		RunToNodeAndWait Woman "bridge_hide_01"
+		LookAt Woman ObiWan 
+	}
+
+	Script 
+	{
+		TakeControlOf Man1
+		RunToNodeAndWait Man1 "bridge_hide_01"
+		LookAt Man1 ObiWan 
+	}
+
+	Script 
+	{
+		TakeControlOf Man2
+		RunToNodeAndWait Man2 "bridge_hide_02"
+		LookAt Man2 ObiWan 
+	}
+}
+
+
+
+StoreScript BridgeLadyNudges
+{
+	Actor Woman "A_Civ_Female1_Theed_C_01"
+	Actor Man1 "A_Civ_Male1_Theed_01"
+	Actor Man2 "A_Civ_Male2_Theed_01"
+
+	ChildScript HappyLady 
+	{
+		SayLineWhenNudged Woman "/CivilianTheedWoman3_288/Have you seen the shock troops?  They landed over the river."
+		SayLine Woman "/CivilianTheedWoman3_289/It must be the Trade Federation."
+		SayLine Woman "/CivilianTheedWoman3_290/I've heard there's been a blockade."
+		SayLine Woman "/CivilianTheedWoman3_291/What did we ever do to THEM?"
+	
+      Script HappyLady_loop 
+		{
+			SayLineWhenNudged Woman "/CivilianTheedWoman3_299/I cannot go with you sir."
+			Loop 
+		}
+	}
+
+	WaitUntilKilled Man1
+	WaitUntilKilled Man2
+	EndScript HappyLady	
+	EndScript HappyLady_loop	
+
+	SayLineWhenNudged Woman "/CivilianTheedWoman3_286/That was careless.  You let those people die."
+}
+
+
+
+StoreScript NudgesBridgeGuy_01
+{
+	Actor Woman "A_Civ_Female1_Theed_C_01"
+	Actor Man1 "A_Civ_Male1_Theed_01"
+	Actor Man2 "A_Civ_Male2_Theed_01"
+
+	ChildScript HappyMan1 
+	{
+		SayLineWhenNudged Man1 "/CivilianTheedMan1_240/At last the Jedi have to come to rescue us."
+		SayLineWhenNudged Man1 "/CivilianTheedMan1_239/You showed them a thing or two."
+		SayLineWhenNudged Man1 "/CivilianTheedMan1_488/The generator has been overrun by those droids."
+		SayLine Man1 "/CivilianTheedMan1_489/Power is out across most of the city."
+		SayLine Man1 "/CivilianTheedMan1_487/We're hiding here."
+        
+		Script HappyMan1_loop
+		{
+			SayLineWhenNudged Man1 "CivilianTheedMan1_245/I've told you all I know."
+			Loop 
+		}
+	}
+
+	WaitUntilKilled Woman
+	WaitUntilKilled Man2
+	EndScript HappyMan1	
+	EndScript HappyMan1_loop	
+
+	SayLineWhenNudged Man1 "/CivilianTheedMan1_229/You should be more careful.  Those people died because of you."
+	SayLineWhenNudged Man1 "/CivilianTheedMan1_244/You're no Jedi!  You're evil!"
+}
+
+
+
+StoreScript NudgesBridgeGuy_02
+{
+	Actor Man2 "A_Civ_Male2_Theed_01"
+	
+	SayLineWhenNudged Man2 "/CivilianTheedMan2_257/You saved our lives..."
+	SayLineWhenNudged Man2 "/CivilianTheedMan2_251/Thank you."
+	SayLineWhenNudged Man2 "/CivilianTheedMan2_258/You have our respect and admiration Jedi."
+        
+	Script 
+	{
+		SayLineWhenNudged Man2 "/CivilianTheedMan2_251/Thank you."
+		Loop 
+	}
+}
+
+
+
+Actor Quigon "A_Qui_Gon_follow_01"
+
+
+Script FreedQuigon 
+{
+	Actor Officer "A_Soldier_Officer_03"
+	Actor Guard "A_Soldier_Guard_02"
+	Actor forcefield_box_01 "A_08_forcefield_box_01"
+	
+	InvincibilityOn Quigon
+	
+	WaitUntilNudged forcefield_box_01
+	SayLine Guard "/Naboo_Officer_395/Thanks for the assist Jedi.  They had us pretty well surrounded."
+	
+	Script 
+	{
+		TakeControlOf Officer
+		RunToNodeAndWait Officer "blasters"
+		//AddInventoryItem Officer Rifle_Naboo  ***
+		Hide "A_equip_rifle_naboo01"
+		ReturnControlTo Officer
+	}
+	
+	Script 
+	{
+		TakeControlOf Guard
+		RunToNodeAndWait Guard "blasters"
+		//AddInventoryItem Guard Rifle_Naboo  ***
+		Hide "A_equip_rifle_naboo02"
+		ReturnControlTo Guard
+	}
+	
+	TakeControlOf Quigon
+	LookAt Quigon ObiWan 
+	
+	Display "/08TEMPQuiGon/" 5.0
+	Pause 5.0
+	SayLine Quigon "/Qui-GonJinn_1119.61/Good to see you again Obi-Wan!  Excellent work."
+	SayLine Quigon "/Qui-GonJinn_1175/You make your Master very proud Obi-Wan."
+
+	RunToNodeAndWait Quigon "saber"
+	AddInventoryItem Quigon EquipObiSaber.dsc  // *** Is this right?
+	Hide "A_equip_saber_qui_01"
+	ReturnControlTo Quigon
+	SayLine Quigon "/Qui-GonJinn_1191.13/The lightsaber is the TRUE weapon of a Jedi."
+
+	// If FFBox03 has been nudged it will end this script and check FFbox04
+	Event "Check FFBox03"
+									
+	BeginScript QuigonNudgesFFBox03
+}
+
+
+
+StoreScript QuigonNudgesFFBox03
+{
+	Actor FFBox03 "A_08_forcefield_box_03"
+	
+	ChildScript NudgeBox3
+	{
+		ChildScript CancelIfNudged
+		{
+			WaitUntilNudged FFBox3
+			EndScript NudgeBox3
+		}
+		
+		RunToNodeAndWait Quigon "forcefield_box_03"
+		Nudge Quigon FFBox03
+	}
+
+	WaitForScriptToEnd NudgeBox3
+
+	// If FFBox04 has been nudged it will end this script and ReturnControlTo Qui-Gon
+	Event "Check FFBox04"
+	BeginScript QuigonNudgesFFBox04
+}
+
+
+StoreScript QuigonNudgesFFBox04
+{
+	Actor FFBox04 "A_08_forcefield_box_04"
+	
+	ChildScript NudgeBox4
+	{
+		ChildScript CancelIfNudged
+		{
+			WaitUntilNudged FFBox04
+			EndScript NudgeBox4
+		}
+	
+		RunToNodeAndWait Quigon "forcefield_box_04"
+		Nudge Quigon FFBox04
+	}
+
+	WaitForScriptToEnd NudgeBox4
+
+	ReturnControlTo Quigon
+}
+
+
+
+Script RunawayMale
+{
+	Actor Man "A_Civ_Male1_Theed_02" 
+
+	TakeControlOf Man
+	
+	Child	WaitUntilEnteredRegion ObiWan "f_cower_trig_01"
+	Child	WaitUntilEnteredRegion ObiWan "f_cower_trig_02"
+
+	WaitForAny   // Wait for Obi to enter either region
+
+	RunToNode Man "hide_Male1"
+}
+
+
+
+Script Convo14
+{
+	Actor Man "A_Civ_Male2_Theed_02"
+	Actor Woman "A_Civ_Female1_Theed_04" 
+
+	WaitUntilEnteredRegion ObiWan "convo_14"
+
+	TakeControlOf Man
+	TakeControlOf Woman
+	
+	SayLine Man "/CivilianTheedMan2_434/" 
+	SayLine Woman "/CivilianTheedWoman1_435/isn't much time" 
+	SayLine Man "/CivilianTheedMan2_436/" 
+	SayLine Woman "/CivilianTheedWoman1_437/hurry" 
+	SayLine Man "/CivilianTheedMan2_438/too old for this"
+	
+	Script 
+	{
+		SayLineWhenNudged Woman "/CivilianTheedWoman1_299/"
+		SayLineWhenNudged Woman "/CivilianTheedWoman1_305/"
+		ReturnControlTo Woman
+	}
+
+	Script 
+	{
+		SayLineWhenNudged Man "/CivilianTheedMan2_258/respect"
+		SayLineWhenNudged Man "/CivilianTheedMan2_253/take this"
+		// AddInventoryItem ObiWan Bacta ***
+		SayLineWhenNudged Man "/CivilianTheedMan2_254/all I have"
+		SayLineWhenNudged Man "/CivilianTheedMan2_255/cannot go"
+		SayLineWhenNudged Man "/CivilianTheedMan2_261/leave me alone"
+		ReturnControlTo Man
+	}
+}
+
+
+
+Script WoundedGuy_01
+{
+	Actor Man "A_Civ_Male2_Theed_03" 
+
+//	WaitUntilKilled Droid
+   TakeControlOf Man
+   Crouch Man
+    
+	SayLine Man "/CivilianTheedMan2_250/Jedi come here." 
+	WaitUntilNear Obi Man 4.0  // Wait until Obi is within 4 meters
+	SayLine Man "/CivilianTheedMan2_249/I'm hurt . . . please help me." 
+}
+
+
+
+Script CapturedLady 
+{
+	Actor Droid "A_BAD_infantry_28"
+	Actor Woman "A_Civ_Female1_Theed_01"
+
+	TakeControlOf Woman
+
+	Child	WaitUntilEnteredRegion ObiWan "chase_me_01_trig"
+	Child	WaitUntilEnteredRegion ObiWan "convo_12"
+	Child WaitUntilEnteredRegion ObiWan "backawayslowly_01"
+	
+	WaitForAny   // Wait for Obi to any of the three regions
+
+   ChildScript DialogLoop
+	{
+		SayLine Woman "/CivilianTheedWoman3_305/Leave me be."
+		SayLine Woman "/CivilianTheedWoman3_307/I've told you all I know." 
+		PauseRandom 5 10
+
+		Loop 
+	}
+
+	WaitUntilKilled Droid
+	EndScript DialogLoop
+    
+	Pause 1.5
+	SayLine Woman "/CivilianTheedWoman3_302/I have long wanted to meet a Jedi Knight." 
+	SayLineWhenNudged Woman "/CivilianTheedWoman3_292/Have you heard news of the Queen?" 
+	ReturnControlTo Woman
+}

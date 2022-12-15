@@ -1,0 +1,3192 @@
+<null>
+
+yes
+no
+ok
+on
+off
+YES
+NO
+OK
+ON
+OFF
+retry
+cancel
+CONTINUE
+EASY
+MEDIUM
+HARD
+<unlocked>
+<locked>
+HINT
+LOADING...
+ARE YOU SURE?
+mc_no_card
+mc_no_card_continue
+Your Xbox doesn't have enough free blocks to save games.
+Your Xbox doesn't have enough free blocks to save games.Continue without saving?
+Checking hard disk.
+Check failed!
+Check failed!  Do you wish to continue without saving?
+Loading game. 
+Load successful.
+Unable to load save.
+No TRUE CRIME: STREETS OF LA savefound.Would you like to create a new save?
+Creating save game. Do notdisconnect any controllers, or touch the power button.
+Creation successful.
+Creation failed!
+Creation failed!Do you wish to continuewithout saving?
+mc_wrong_version
+Saving game.Please donít turn off your Xbox console.
+Your game was saved successfully.
+Save failed.
+Unable to save game.Do you wish to continue without saving?
+Saving game.Please donít turn off your Xbox console.
+Your game was saved successfully.
+Save failed.
+mc_unformatted
+mc_formatted_required
+mc_confirm_format
+mc_formatting
+mc_format_ok
+mc_format_cancel
+mc_format_failed
+mc_format_failed_continue
+Auto-saving game.Please donít turn off your Xbox console.
+mc_autosave_disabled
+The save is damaged. This save gameneeds to be deleted.Would you like to create a new save?
+mc_uncorrupted_required
+No TRUE CRIME: STREETS OF LA save gamefound.
+mc_autosave_reconfirm
+CONTINUE
+DELETE
+mc_format
+RETRY
+EXIT TO Xbox DASHBOARD
+Are you sure you want to exit to the dashboard?
+main menu
+new game
+resume game
+resume game
+save game
+options
+enter name
+select file
+SELECT SAVE LOCATION
+MEMORY CARD
+MEMORY
+MEMORY CARD SLOT 1
+SLOT 2
+HD
+SAVE
+NEW SAVE
+All games used in TRUE CRIME: STREETS OF LAsave file. To create a new game you will have to overwrite an existing TRUE CRIME: STREETS OF LA saved game.
+all games used
+Saved game exists!Are you sure you wish to overwrite this save file?
+Would you like to save game data(autosave will be enabled)?
+Autosave successful.
+Autosave failed and has been disabled!Use the save game option to manuallysave your game and re-enable autosave.
+Continue without saving?
+CURRENT EPISODE:
+CURRENT MISSION:
+REWARD POINTS:
+GOOD/BAD COP:
+UPGRADES EARNED:
+<empty>
+UNSAVED
+MCS_ERROR
+MCS_NO_FUNC
+MCS_READ_FAILED
+MCS_WRITE_FAILED
+MCS_FORMAT_FAILED
+MCS_NO_CARD
+MCS_WRONG_DEVICE
+MCS_NEW_FORMATTED
+MCS_NEW_UNFORMATTED
+MCS_NO_SPACE
+MCS_UNFORMATTED
+MCS_NO_FILE
+MCS_NOT_OPEN
+MCS_OPEN_LIMIT
+MCS_FILE_DAMAGED
+MCS_NOT_READABLE
+MCS_NOT_WRITABLE
+MCS_BAD_DIR
+SMCS_NO_SAVE_FILE
+SMCS_SAVE_FILE_REQUIRED
+SMCS_SAVE_FAILED
+SMCS_LOAD_FAILED
+SMCS_FORMAT_FAILED
+SMCS_WRONG_VERSION
+SMCS_CORRUPTED
+select game
+CHECKING
+INSERT CARD
+select episode
+next episode
+REQUIRES %s %s SOLVED
+EPISODE
+EPISODES
+episode solved
+episode unsolved
+episode locked
+play episode
+GOOD COP
+BAD COP
+REQUIRES %s STATUS
+COMPLETION: %.0f%%
+REQUIRES ALL PRIMARY EPISODES SOLVED AT 100%
+select mission
+mission solved
+mission unsolved
+REQUIRES MISSION %c SOLVED
+REQUIRES EPISODE %s MISSION %c SOLVED
+PLAY ALT INTRO
+PLAY ALT INTRO 1
+PLAY ALT INTRO 2
+PLAY ALT ENDING
+DOGG PATROL
+SOLVE STREET CRIMES
+special mission
+summary
+REPLAY DOGG PATROL
+RANKING: %c
+"LAP POODLE"
+"STRAY"
+"JUNKYARD DOG"
+"CRIME HOUND"
+"BOSS DOG"
+"TOP DOGG"
+POINTS BALANCE
+GOOD/BAD DOGG
+%d OF %d DOGG BONES!
+DOGG PATROL UNLOCKED!
+select patrol area
+mission failed
+replay mission
+mission outcome
+summary
+FINALE VICTORY
+COMPLETION
+(COMPLETE)
+(INCOMPLETE)
+(EPISODE UNSOLVED)
+(EPISODE SOLVED)
+(BAD COP)
+(GOOD COP)
+(BONUS CRUISIN' NOT EARNED)
+(BONUS CRUISIN' EARNED)
+GOOD/BAD COP
+CONTINUE TO BONUS CRUISIN' (STORY INTERMISSION)
+CONTINUE TO CRIME PATROL (STORY INTERMISSION)
+REPLAY EPISODE
+CONTINUE STORY
+BEST ENDING (%d of 3)
+POOR ENDING (%d of 3)
+AVERAGE ENDING (%d of 3)
+congratulations -- solved!
+congratulations -- all endings solved!
+ending episode unsolved
+(PERFECT COMPLETION)
+(INCOMPLETE)
+PLAY BONUS MOVIE
+BONUS MOVIE
+options
+MENU
+SETTINGS
+DIFFICULTY
+easy difficulty
+medium difficulty
+hard difficulty
+CONTROLS
+AUDIO
+DISPLAY
+LANGUAGE
+CREDITS
+DEBUG OPTIONS
+ENGLISH
+FRAN«AIS
+DEUTSCH
+ITALIANO
+ESPA—OL
+BUTTON LAYOUT
+controls
+CONFIGURATION
+VIBRATION
+INVERSE AIM
+DEFAULT
+DEFAULT CONTROLS
+PRESET 1
+PRESET 2
+CUSTOMIZE
+customize controls
+vibration off
+vibration on
+inverse aim off
+inverse aim on
+preset 1
+preset 2
+custom preset
+ALSO ASSIGNED TO
+replace
+add
+customize
+move/steer
+look/target
+kick
+punch
+jump
+grapple
+fire (on foot)
+reload
+commandeer
+gas
+rear view
+handbrake
+fire (driving)
+brake/reverse
+take cover
+block
+rear view
+car camera
+horn
+siren
+gun mode
+center camera
+combat mode
+on-foot mode
+UNASSIGNED
+<unassigned>
+¢ 
+• 
+directional pad up
+directional pad down
+directional pad left
+directional pad right
+£
+£ click
+§
+§ click
+Ä
+Ç
+É
+Å
+¶
+ß
+pull
+pull
+move
+move
+move
+move
+move
+press
+move
+press
+press
+press
+press
+press
+press
+press
+Pull
+Pull
+Move
+Move
+Move
+Move
+Move
+Press
+Move
+Press
+Press
+Press
+Press
+Press
+Press
+Press
+Please reconnect the controller and press START to continue.
+There's a problem with the disc you're using.It may be dirty or damaged.
+audio
+OUTPUT MODE
+STEREO
+stereo output
+MONO
+mono output
+MUTE
+output muted
+DOLBY PRO LOGIC II
+dolby pro logic ii output
+VOLUME MIX
+MUSIC
+SFX
+VOICE
+CINEMATICS
+RADIO DISPATCHER
+radio dispatcher on
+radio dispatcher off
+SOUNDTRACK
+customize soundtrack
+default soundtrack
+customize tracks
+cruising tracks
+fast action tracks
+slow action tracks
+CRUISING
+FAST ACTION
+SLOW ACTION
+TRACK LIST
+074(Not Just) Knee Deep|Funkadelic
+0556 in the Morning|Ice T
+038Backseat|Pomona City Rydaz
+003Bitch A$$ Ni--az|GOON Squad (Mano, Cavie, N-M-E)
+004Breath on Um|Pomona City Rydaz
+007Consequences|Lil Eazy E
+008Crimies|Goon Squad
+081Dance Wit Me|Snoop Dogg
+010Dangerous|Dr. Stank
+054Doing It Big|Young Billionaires (Mista Bo & T- Bone)
+014Drinks in the Air|"Hollywood"
+067Flashlight|Parliament
+016Flow|Sly Boogy
+057For the Love of $|Bone Thugs 'N' Harmony
+051G'z Movin'|BIG TRAY DEEE
+062Goon Squad|Goon Squad
+022Hollywood|Hollywood feat. Bizzy Bone
+023I'll Do Anything|Damizza Feat. N.U.N.E.
+024In and Out|E-40
+025In Da Streetz|Dee Dimes, Bishop, B12, Lil Eazy E, Caviar
+061Is It Gonna Be Alright|Brown Liquer
+048Legends|Boo Yaa Tribe
+053Let's Get it Poppin'|Bishop feat. Trek Life & Bokey Loc
+029Lights Out|Westside Connection feat. Nocturnal
+030Live and Learn|Ha Loco "Pomona City Rydaz"
+018Murda Murda|Mano, Cavie, Kontroversy, B-12
+032Play Like We Do|Casino Mafia feat. Baby S
+033Please Believe Lights Out|RBX and Mr. Tan feat. S. Class
+035Ring King|Mausberg (RIP)
+037Royal Blunt|Goon Squad (Mano, CornBread, Cavie, Mobo-Ced)
+040Somebody Steal The Show|Shade Sheist
+015T.R.U.E|Pomona City Rydaz feat. BIG TRAY DEEE
+065The Formula|DOC
+073Thuggish Ruggish Bone|Bone Thugs 'N' Harmony
+083True Crimes|Bishop
+039War|NONSTOP feat. Manishflatz
+082What you wanna do|Warren G feat. RBX
+026Yu Who|Kam
+
+063Bruises|Unloco
+017Fu-k With Us|BIG TRAY DEEE, Threat, Short Khop and Kokain
+071Let me Know|Grade 8
+031Mo Money|Styliztik Feat. Dirty Rat
+064Not Like You|Systematic
+078Peace Sells|Megadeth
+066Poem|Taproot
+068RAIN WILL FALL|I Mother Earth
+009Soo Woo|Reservoir Dogs
+079Symphony of Destruction|Megadeth
+041Terrorist Threat|WestSide Connection (Ice Cube, Mac 10 & WC)
+042Tha Truth|Bad Azz, E- White And NONSTOP
+059THE SNOW|AudioBullys
+046Thug the club|South Central Cartel Feat. Tha Flock
+047True Crime|KAM feat. Cavie and Above The Law
+050Watch Out Now!|Chyneezy feat. Ms.Toi and Sylk-E-Fyne
+
+076Afro Man|Plastino Mosh
+001Angry|Suga Free
+002Ass 'N Titties|Da KneckBones (S. Class & Black Chill)
+005Cali Folks|Styliztik
+006Compton|Cavie
+027Do Time - True Crime|Pomona City Rydaz
+052Don't Blame Me|Pimpin' Young
+013Don't U Feel Like a Mark|Jay O Felony
+012Don't Fight the Pimpin'|Suga Free
+011Flik Wit You|Snoop Dogg
+060Foe Life|MAC 10
+019Gotta Get Away|Lil 1/2 Dead, Showtime
+021Hey Baby|N.U.N.E
+056Im Yo Pusher|Ice T
+077It's Funky ENUFF|DOC
+069Lap Dance|NERD
+045Let Me See Sump-thin' (Thug Night)|Jay O Felony
+080LEVITATE|I Mother Earth
+028Life|Coolio
+072Minerva|Deftones
+034Pop a Bottle|"Hollywood"
+070Rockstar|NERD
+036Roll With Me|Young Billionaires (Mista Bo & T- Bone)
+075St. Tropez Is Not Far|Plastino Mosh
+043They don't know|Dee Dimes Feat. Bigg Swoop
+020This is how we live in LA (Heeey)|Lil 1/2 Dead, Showtime, Kontroversy and Quik-2 Mac
+049Uh Oh|Young Billionaires Feat. "Hollywood"
+044We Don't Stop|Soul Star
+
+display
+RESOLUTION
+STANDARD
+standard resolution
+PROGRESSIVE SCAN
+progressive scan resolution
+720p
+720p resolution
+WIDESCREEN
+widescreen on
+widescreen off
+RADAR TYPE
+FIXED
+fixed radar
+ROTARY
+rotary radar
+SUBTITLES
+subtitles on
+subtitles off
+DEBUG
+HUD
+RETICLE
+NIGHT
+INVINCIBLE
+PROGRESSIVE
+SHELL DEBUG MODE
+UNLOCK ALL
+PRINT MEMORY LAYOUT
+AUTOSPAWN
+pause
+paused
+player stats
+CITY MAP
+OPTIONS
+EXIT
+objectives
+SOLVE STREET CRIMES (OPTIONAL)
+exit to main menu - any progress since the last save will be lost
+MISSION
+accept selection  Ä
+accept selection  Äback  Ç
+accept selection  Äcontinue without saving  Éback  Ç
+back  Ç
+~G %g to draw weapon, then ~g %g again to fire.
+Use the %B to switch targets.  
+When your ammo is low, ~h  %h to reload.  Reloading manually is quicker than auto-reload.
+~I %i to enter/exit a vehicle.~S ò to honk the horn.~T ô to use the siren. (Available in Nick's car and cars with sirens only).
+Steer with the %A. Use %j to accelerate and %n to brake.
+~L the %L to use the emergency brake for tighter turns, at the expense of speed.
+~C %c to kick, %d to punch, and %e to jump kick.
+To block, ~a the %A away from the enemy, or hold down %p.
+~F %f to grapple and throw.
+When your opponent is stunned, enter different combos (%c %d %e) to perform a finishing combo move.
+Pay attention to your opponent's stance.† When the opponent is in a low stance, strike high using punches or jump kicks.† Use low kicks when your opponent is in a high stance.
+Be sure to visit 24/7 Dojos and Bonus Combat Trials to unlock more powerful finishing combos and grapples.
+To take cover, hold %o. ~G %g to pop out and fire.
+To avoid being shot, ~e %e to roll, or ~e and hold %e to dive in slow-mo.
+~G and hold %g to enter precision targeting mode.  Use the %A to move the reticule and ~g %g again to fire.  
+You cannot move while precision targeting.  To exit precision targeting, ~h %h.
+To pick up a dropped firearm,  stand over it and ~f %f. You can carry two weapons at a time.
+~F %f to grab a nearby enemy and use them as Human Shield .
+Hold %o to take cover.
+Remain hidden from view or your enemies will notice you! 
+~D %d to perform a stun attack (Good Cop), %f to perform a deadly attack (Bad Cop).
+~G %g to fire your tranquilizer gun. This weapon has limited range and ammo, so use it sparingly.
+You may explore the city and solve Street Crimes (red dots on radar) to earn extra Reward Points.
+~F %f to frisk pedestrians for contraband.
+Each 100 Reward Points earns you a new badge, which gains access to 24/7 facilities (cyan icons).
+Street Crimes are optional -- you may proceed to the next mission at any time by driving to the destination (green dot on radar).
+When approaching a crime scene, you can encourage criminals to surrender by showing your badge or firing a warning shot.
+To flash your badge, press £ click + %d.
+To scare tougher criminals by  firing into the air, press £ click + %g.
+To arrest defeated criminals, stand near them and press £ click + %f.
+Your actions affect your fate. Use neutralizing shots, non-lethal takedowns, and perform other good deeds to earn a Good Cop rating and progress to the Best Ending.
+Harming innocents or officers will cause Civil Unrest in addition to affecting your†Good Cop/Bad Cop rating.† The citizens and police will eventually come after you!
+When chasing down a perp, ~c %c to slide tackle, %f to dive tackle, or %d to clothesline tackle.
+In the city, you can instantly switch Nick to different control modes by using ò = Fighting, ô = Shooting, or ö = Normal (holster guns).
+TRIAD VIOLENCE
+MEAN STREETS
+INTERNATIONAL TIES
+RUSSIAN FACE-OFF
+THE RESCUE
+HOUSE OF WU
+FINDING ROCKY
+RETRIBUTION
+CON GIRLS
+HIGH-RISE TERROR
+RAMPAGE
+BLOOD MONEY
+I
+II
+III
+IV
+V
+VI
+VII
+VIII
+IV
+V
+VI
+VII
+1
+2
+3
+4
+5
+6
+7
+8
+9
+X
+1(ALT)
+2(ALT)
+3(ALT)
+4(ALT)
+5(ALT)
+6(ALT)
+7(ALT)
+8(ALT)
+9(ALT)
+INTRO MOVIE
+SHOOTING PRACTICE
+RUSHING TO EOD
+DRIVING FOR CHOW
+TRIAD MUSCLE
+FINALE: ROSIE TROUBLE
+BONUS CRUISIN'
+CRIME PATROL
+Bonus Locations
+CRUISING FOR LEADS
+DOJO ATTACKER
+RED LANTERN RUSH
+BAR BRAWL
+THE ARSONIST
+CHASING TRIAD THUG
+DRIVING TO JIMMY'S
+SNEAKING IN
+JIMMY'S AMBUSH
+FINALE: SNIPER ASSASSIN
+BONUS CRUISIN'
+CRIME PATROL
+OFF TO CHONG'S
+TAILING CHONG'S LIMO
+A STAKEOUT GONE BAD
+DRIVING TO SPA
+RUSSKIE TROUBLE
+SPA INFILTRATION
+SHOWER ROOM ANTICS
+FINALE: THE ACCOMPLICE
+BONUS CRUISIN'
+CRIME PATROL
+EN ROUTE TO AUTOSHOP
+GREASE MONKEYS
+CHASING FRANCIS
+OFF TO THE GULAG
+ANOTHER WAY IN
+DISCO INFERNO
+ALLEY BRAWL
+CARY IN TROUBLE
+FINALE: VANDAL WRATH
+BONUS CRUISIN'
+CRIME PATROL
+TAILING SUSPECT COP
+BUM ENCOUNTER
+MEETING RAFFERTY
+THE PEKING DUCK 
+BUTCHER SHOP RUSH
+ON THE CHOPPING BLOCK
+SLAUGHTERHOUSE
+FINALE: THE GREAT ESCAPE
+BONUS CRUISIN'
+CRIME PATROL
+OFF TO WU'S PLACE 
+UP THE FOOD CHAIN
+KITCHEN INSPECTION
+TUNNEL VISION
+SEEKING ANCIENT WU
+INNER DEMONS
+DIE DIE MY CONCUBINE
+FINALE: NIGHTMARE
+BONUS CRUISIN'
+CRIME PATROL
+IN THE DRIVER'S SEAT
+PRESSING RAFFERTY
+ON RAFFERTY'S TAIL
+FBI GOONS
+ESCAPING THE FEDS
+RAFFERTY'S DATE
+EAVESDROPPING 
+FINALE: FATHER'S KILLER
+BONUS CRUISIN'
+CRIME PATROL
+THE GIRLFRIEND ANGLE
+BACK TO THE GULAG
+CHOPPER AMBUSH
+ROCKY'S TRAP
+DRIVING TO AIRPORT
+HANGAR SHOWDOWN
+JETTING AWAY
+FINALE: PUPPET MASTER
+ENDING MOVIE
+STRIP CLUB DETOUR
+CAT FIGHT
+CRUISING FOR LOLA
+LOLA RUSH
+THE DRIVING TEST
+POLICE GETAWAY
+FIVE LAPS
+BUSTING LOLA
+FINALE: SNIPER REDUX
+BONUS CRUISIN'
+CRIME PATROL
+THE AIRPORT LEAD
+CHASING ASSASSINS
+A RACE DOWNTOWN
+BANK STANDOFF
+GOING UP
+LOBBY FIREFIGHT
+HOSTAGE CRISIS
+FINALE: BAD POLITICS
+ENDING MOVIE
+REVENGE RUSH
+ROCKY'S GETAWAY
+GULAG GOONS
+THE BODYGUARD
+WU'S TURN
+PAYBACK
+OFF TO THE AIRPORT
+FINALE: ROCKY'S LOOT
+BONUS CRUISIN'
+CRIME PATROL
+RACE TO ROCKY'S LAIR
+KINKS IN THE PATH
+FREAK SHOW
+ROSIE'S RANSOM
+ESCAPING MASTERSON
+CHINATOWN SHOWDOWN
+FINALE: LAST STAND
+ENDING MOVIE
+COMBAT TRAINING
+FIRING RANGE
+DRIVING COURSE
+COMBAT TRIAL
+GUN COURSE
+STREET RACE
+24/7 TRAINING MISSION
+BONUS MISSION
+IMPOUND GARAGE
+SPEND 1 SHIELD TO ENTER?
+PRACTICE FOR FREE?
+UPGRADE #%d %s
+DRIVE TO DESTINATION
+DESTROY 10 TARGETS
+RACE TO CHIEF'S OFFICE
+DRIVE TO RESTAURANT
+FIGHT TRIAD THUG
+SHOOT TRIAD THUG
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+DRIVE TO DESTINATION
+FIGHT ATTACKER
+RACE TO BAR
+FIGHT FENG
+CHASE FENG
+CHASE FENG
+DRIVE TO WAREHOUSE
+Dynasty Imports
+SNEAK INTO WAREHOUSE
+SHOOT JIMMY'S CREW
+SHOOT SNIPER
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+DRIVE TO CHONG'S RESIDENCE
+TAIL CHONG'S LIMO
+ESCAPE ATTACKERS
+DRIVE TO RUSSIAN SPA
+FIGHT RUSSIAN GOONS
+SNEAK INTO RUSSIAN SPA
+FIGHT BATHERS
+SHOOT SPA CREW
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+DRIVE TO AUTO SHOP
+FIGHT BIKERS
+CHASE FRANCIS
+DRIVE TO DANCE CLUB
+SNEAK INTO DANCE CLUB
+SHOOT BOUNCERS
+FIGHT BOUNCERS
+RACE TO CARY'S DOJO
+FIGHT VANDALS
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+TAIL SUSPICIOUS COP
+FIGHT WINOS
+DRIVE TO MEETING
+DRIVE TO BUTCHER SHOP
+RACE TO BUTCHER SHOP
+FIGHT TRIAD BUTCHERS
+SHOOT TRIAD BUTCHERS
+ESCAPE FROM TRIAD GOONS
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+DRIVE TO DESTINATION
+SNEAK INTO RESTAURANT
+FIGHT COOKS
+REACH SEWER EXIT
+LOCATE ANCIENT WU
+SHOOT WU'S DEMONS
+FIGHT WU'S CONCUBINES
+SHOOT WU'S DRAGON
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+DRIVE TO DESTINATION
+FIGHT BARKEEP
+TAIL RAFFERTY
+FIGHT FBI AGENTS
+ESCAPE FROM FEDS
+TAIL RAFFERTY
+SNEAK INTO WAREHOUSE
+SHOOT ROCKY'S POSSE
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+TAIL ROCKY'S GIRLFRIEND
+RACE TO THE GULAG
+ESCAPE HELICOPTER
+FIGHT ROCKY'S GOONS
+DRIVE TO AIRPORT
+SHOOT COMMANDOS
+SHOOT ROCKY'S JET
+FIGHT GENERAL KIM
+DRIVE TO STRIP CLUB
+FIGHT STRIPPERS
+DRIVE TO LOLA MEETING
+RACE TO MEET LOLA
+RACE TO DESTINATION
+ESCAPE POLICE
+BEAT LOLA IN FIVE LAPS
+FIGHT LOLA
+SHOOT SNIPER
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+DRIVE TO AIRPORT
+CHASE ASSASSINS
+RACE DOWNTOWN
+REACH BANK ENTRY
+REACH VIP OFFICE
+SHOOT TERRORISTS
+REACH VIP OFFICE
+FIGHT GENERAL KIM
+RACE TO THE GULAG
+CHASE ROCKY
+FIGHT ROCKY'S GOONS
+FIGHT MISHA
+DRIVE TO WU'S PLACE
+SHOOT WU'S CREW
+DRIVE TO AIRPORT
+ESCAPE WITH MONEY TRUCK
+DRIVE TO BONUS DESTINATION
+SOLVE %d CRIMES
+RACE TO MEET ROCKY
+SNEAK INTO ROCKY'S MANSION
+FIGHT S&M FREAKS
+DRIVE TO RETRIEVE TRUCK
+ESCAPE MASTERSON
+SHOOT COMMANDOS
+FIGHT ROCKY
+COP STATS
+reward points:
+STARTING BALANCE
+POINTS EARNED
+24-7 VISITS
+POINTS CHARGED
+good/bad cop:
+GOOD DEEDS
+BAD DEEDS
+initiative:
+CRIME ALERTS
+CRIMES PURSUED
+success rate:
+PERPS ENGAGED
+PERPS APPREHENDED
+CRIMES RESOLVED
+cop instinct:
+CITIZENS INSPECTED
+CITIZENS GUILTY
+CITIZENS INNOCENT
+DRIVING STATS
+cars unlocked:
+'66 CLASSIC CAR
+'69 MUSCLE CAR 
+'01 ROADSTER CAR
+'03 SPORTS CAR
+maneuvers unlocked:
+PEEL-OUT|HOLD ^j + ^n, RELEASE ^n
+RAPID STOP|é or è or ë + ^nx2, HOLD ^n
+P.I.T. MANEUVER|RAM REAR CAR CORNER
+DOWNSHIFT|ë + ^jx2
+90∞ TURN|é or è + ^j + ^l
+FWD SWITCHBLADE|é or è + ^lx2
+BACK SWITCHBLADE|é or è + ^lx2
+TWO WHEELS|é, è, é, ^jx2
+NITRO BOOST|ê + ^jx3
+recklessness:
+CITIZENS RUN OVER
+VEHICLES TOTALED
+OBJECTS DESTROYED
+RED LIGHTS RUN
+FREQUENCY
+master driver:
+MANEUVERS PERFORMED
+driving log:
+TOTAL DRIVING TIME
+MILES DRIVEN
+AVERAGE SPEED
+MAXIMUM AIR TIME
+MAXIMUM JUMP DISTANCE
+GUNPLAY STATS
+guns unlocked:
+.38 Revolver
+.41 Revolver
+.45 Pistol
+.50 Pistol
+upgrades unlocked:
+DUAL-TARGET AIM
+AIM ASSISTANCE
+FAST RELOAD
+FAST AIM SPEED
+LASER SIGHT
+FLASH LIGHT
+SCOPE
+TOP ACCURACY
+HOLLOW POINT
+accuracy:
+BULLETS FIRED
+BULLETS HIT
+loose cannon:
+PERPS SHOT
+CITIZENS SHOT
+precision shots:
+PRECISION SHOTS FIRED
+LIMB HITS
+TIRE HITS
+HEAD HITS
+GAS TANK HITS
+COMBAT STATS
+grapples unlocked:
+STANDARD GRAPPLES
+WHIRLWIND THROW GRAPPLE|^f, ^d, ^e
+ARM BUSTER GRAPPLE|^f, ^d, ^c
+DIRTY BOXER GRAPPLE|^f, ^c, ^d
+attacks unlocked:
+RUNNING ATTACKS|RUN + ^c OR ^d OR ^e
+BACK ATTACKS|AWAY + ^c OR ^d OR ^e
+GROUND ATTACKS|^c OR ^d OR ^e
+COMBO TIGER SWEEP|^c, ^e, ^c
+COMBO TIGER CLAW|^d, ^c, ^e
+COMBO LEAPING TIGER|^e, ^d, ^c
+COMBO DRAGON KICK|^c, ^e, ^c, ^e
+COMBO DRAGON FIST|^d, ^c, ^e, ^d
+COMBO FLYING DRAGON|^e, ^d, ^c, ^e
+whup-ass rating:
+VICTORIES
+DEFEATS
+strategy:
+ATTACKS PERFORMED
+ATTACKS CONNECTED
+HITS RECEIVED
+HITS BLOCKED
+combat log:
+KICKS PERFORMED
+PUNCHES PERFORMED
+JUMP-KICKS PERFORMED
+COMBOS PERFORMED
+GRAPPLES PERFORMED
+per min
+OBJECTIVE
+WELCOME TO
+VICTIM KILLED!
+PRISONER KILLED!
+POLICEMAN KILLED!
+?????
+PRECISE SHOT!
+HEALTH RESTORED!
+POINTS REQUIRED TO RESTORE HEALTH!
+POINTS REQUIRED TO REPAIR!
+VEHICLE REPAIRED!
+HEAD SHOT!
+CASUALTY!
+NEUTRALIZING SHOT!
+ONE SHIELD REQUIRED TO ENTER!
+TOO CLOSE!
+FALLING BEHIND!
+%d LAP TO GO...
+%d LAPS TO GO...
+RESOLVE %d STREET CRIMES
+CRIME PATROL
+Failed to achieve100% episode completion.
+Perfectepisode completion.
+DRIVE TO DESTINATIONOF YOUR CHOICE FOR ABONUS UPGRADE...
+BONUS CRUISIN'
+Capture %s.
+SUSPECT ESCAPING - PURSUE NOW!
+RECORD DISTANCE SHOT: %.2f m
+LONG DISTANCE SHOT: %.2f m
+MAX JUMP DISTANCE: %.2f m
+MAX AIR TIME:†%.2f sec
+%s EARNED!
+%s NOT EARNED...
+INTERMISSION
+N/A
+Mission Objective Unknown
+Suspect arrested
+Suspect defeated
+Both suspects arrested
+Both suspects defeated
+One suspect defeatedOne suspect arrested
+All %d suspects arrested
+All %d suspects defeated
+One suspect arrested
+%d suspects arrested
+One suspect defeated
+%d suspects defeated
+One suspect escaped
+%d suspects escaped
+Suspect escaped
+Both suspects escaped
+All %d suspects escaped
+Victim freed
+%d victims freed
+Victim killed
+%d victims killed
+Cop killed
+%d cops killed
+SUSPECT VEHICLE STOPPED
+FOUND ILLEGAL DRUGS
+FOUND ILLEGAL WEAPON
+CIVIL UNREST CRITICAL
+CRIME ALERT!
+CRIME FULLY RESOLVED
+CRIME RESOLVED PARTIALLY
+CRIME UNRESOLVED
+
+
+Locate Fugitive Mugger...
+Locate Parole Violator...
+Arrest the Fugitive!
+Arrest the Parole Violator!
+Bust the Fugitive!
+Bust the Parole Violator!
+
+
+Locate Robbery Suspect...
+Investigate Murderer Sighting...
+Arrest the Robbery Suspect!
+Arrest the Murder Suspect!
+Bust the Robbery Suspect!
+Bust the Murder Suspect!
+
+
+Locate Rape Suspect...
+Locate Sexual Assailant...
+Arrest the Rapist!
+Get the Sexual Assailant!
+Bust the Rapist!
+Bust the Pervert!
+
+
+Investigate Mugging Report...
+Locate Mugging Suspect...
+Arrest the Mugger!
+Arrest the Mugger!
+Bust the Mugger!
+Bust the Mugger!
+
+
+Locate Armed Mugger...
+Locate Armed Mugger...
+Arrest the Armed Mugger!
+Arrest the Armed Mugger!
+Bust the Armed Mugger!
+Bust the Armed Mugger!
+
+
+Chase the Mugger!
+Chase the Mugger!
+Get the Mugger!
+Stop the Mugger!
+Bust the Mugger!
+Bust the Mugger!
+
+
+Locate Car Thief...
+Locate Car Thief...
+Arrest the Car Thief!
+Arrest the Auto Thief!
+Bust the Car Thief!
+Bust the Auto Thief!
+
+
+Stop the Carjacker!
+Stop the Carjacker!
+Arrest the Carjacker!
+Arrest the Carjacker!
+Bust the Carjacker!
+Bust the Carjacker!
+
+
+Stop the Carjacker!
+Stop the Carjacker!
+Arrest the Carjacker!
+Arrest the Carjacker!
+Bust the Carjacker!
+Bust the Carjacker!
+
+
+Locate Hostage Situation...
+Locate Hostage Situation...
+Defuse Hostage Situation!
+Defuse Hostage Situation!
+Take Out The Hostage Taker!
+Take Out The Hostage Taker!
+
+
+
+Get the Drug Dealer!
+Get the Drug Dealer!
+Get the Drug Dealer!
+Bust the Drug Dealer!
+Jail the Drug Dealer!
+
+
+Arrest the Hooker!
+Arrest the Hooker!
+Arrest the Hooker!
+Arrest the Hooker!
+Arrest the Hooker!
+Arrest the Hooker!
+
+
+Locate Fighting Couple...
+Locate Fighting Couple...
+Defuse Domestic Disturbance!
+Defuse Domestic Disturbance!
+Stop the Brawling Couple!
+Stop the Brawling Couple!
+
+
+Locate Armed Fugitives
+Locate Armed Fugitives
+Arrest Armed Fugitives!
+Arrest Armed Fugitives!
+Bust Armed Fugitives!
+Bust Armed Fugitives!
+
+
+Locate Mugger Gang...
+Locate Mugger Gang...
+Arrest Mugger Gang!
+Arrest Mugger Gang!
+Bust Mugger Gang!
+Bust Mugger Gang!
+
+
+
+Arrest the Mugger Gang!
+Arrest the Mugger Gang!
+Arrest the Mugger Gang!
+Bust the Muggers!
+Bust the Muggers!
+
+
+Locate Officers in Need...
+Locate Officers in Need...
+Assist Officers in Fight!
+Assist Officers in Fight!
+Help Cops in Brawl!
+Help Cops in Brawl!
+
+
+Find Reported Disturbance...
+Find Reported Disturbance...
+Break Up the Fight!
+Break Up the Fight!
+Bust the Brawlers!
+Bust the Brawlers!
+
+
+Locate Looters...
+Locate Looters...
+Arrest the Looters!
+Stop the Looters!
+Bust the Looters!
+Bust the Looters!
+
+
+Investigate Riot Reports...
+Investigate Riot Reports...
+Stop the Riot!
+Arrest the Rioters!
+Bust the Rioters!
+Bust the Rioters!
+
+
+Locate Cops Under Attack...
+Locate Cops Taking Fire...
+Assist Officers in Shootout!
+Help Cops Under Fire!
+Save the Hapless Rookies!
+Waste the Cop Killers!
+
+
+
+Locate Gang Shootout...
+Stop Street Shootout!
+Arrest Gang Bangers!
+Deal With Gang Bangers!
+Bust Gang Shooters!
+
+
+Investigate Robbery Report...
+Locate Robbery in Progress...
+Arrest the Robbery Crew!
+Jail the Robbery Crew!
+Bust Robbery Crew!
+Put Robbers Out of Business!
+
+
+Locate Reckless Driver!
+Locate Hit-and-Run Suspect...
+Arrest the Reckless Driver!
+Stop Hit-and-Run Driver!
+Bust the Crazy Driver!
+Bust the Hit-and-Run!
+
+
+Investigate DUI Report...
+Locate Joyrider...
+Arrest Drunk Driver!
+Arrest Joyrider!
+Bust Drunk Driver!
+Bust Joyrider!
+
+
+Locate Stolen Car...
+Locate Stolen Car...
+Recover Stolen Car!
+Recover Stolen Car!
+Bust the Car Thief!
+Bust the Auto Thief!
+
+
+Locate Crime Car...
+Locate Getaway Car...
+Apprehend Fugitive Driver!
+Apprehend Fugitive Driver!
+Bust the Criminal Driver!
+Stop the Criminal Driver!
+
+
+Locate Drive-By Shooting...
+Locate Drive-By Shooting...
+Arrest Drive-By Shooters!
+Arrest Drive-By Shooters!
+Bust Drive-By Perps!
+Waste Drive-By Bangers!
+
+
+Watch Out!
+Watch Out!
+Watch Out!
+Watch Out!
+Defeat Drive-By Shooters!
+Return Fire!
+
+
+Locate Drug Dealer...
+Locate Arms Dealer...
+Follow and Arrest Drug Dealer...
+Follow and Arrest Arms Dealer...
+Follow and Bust Drug Dealer...
+Follow and Bust Arms Dealer...
+
+
+Arrest Dealer and Buyers!
+Arrest Dealer and Buyers!
+Arrest Dealer and Buyers!
+Arrest Dealer and Buyers!
+Bust Dealer and Buyers!
+Bust Dealer and Buyers!
+
+
+Locate Drunk Drivers...
+Locate Joyriding Punks...
+Apprehend Drunk Drivers!
+Apprehend Reckless Joyriders!
+Bust Drunken Fools!
+Bust Reckless Joyriders!
+
+
+Locate Stolen Vehicle...
+Locate Stolen Vehicle...
+Apprehend Car Thieves!
+Apprehend Car Thieves!
+Bust the Car Thieves!
+Bust the Auto Thieves!
+
+
+Locate Getaway Car...
+Locate Getaway Car...
+Apprehend Getaway Suspects!
+Apprehend Getaway Suspects!
+Bust Runaway Criminals!
+Bust Runaway Criminals!
+
+
+
+...
+Watch Out! Ambush!
+Watch Out! Ambush!
+Watch Out! Ambush!
+Watch Out! Ambush!
+
+
+Locate Burglar...
+Locate Burglar...
+Arrest Burglar!
+Arrest Burglar!
+Bust Burglar!
+Bust Burglar!
+
+
+Arrest Aggressive Beggar.
+Arrest Aggressive Beggar.
+Arrest Aggressive Beggar.
+Arrest Aggressive Beggar.
+Bust Aggressive Beggar.
+Bust Aggressive Beggar.
+
+
+Stop the Thief!
+Stop the Thief!
+Stop the Thief!
+Stop the Thief!
+Bust the Thief!
+Bust the Thief!
+
+
+Stop the Street Fight!
+Stop the Street Fight!
+Stop the Street Fight!
+Stop the Street Fight!
+Stop the Street Fight!
+Stop the Street Fight!
+
+
+Arrest Drug Dealer!
+Arrest Drug Dealer!
+Arrest the Drug Dealer!
+Jail the Drug Dealer!
+Bust the Poison Pusher!
+Bust the Scum Pusher!
+
+
+Arrest Hooker!
+Arrest Hooker!
+Arrest the Hooker!
+Arrest the Hooker!
+Bust the Hooker!
+Bust the Hooker!
+
+
+Locate Illegal Street Race...
+Locate Illegal Street Race...
+Stop Illegal Street Race!
+Stop Illegal Street Race!
+Bust Street Racers!
+Bust Street Racers!
+
+
+Locate Kidnapping Scene...
+Locate Kidnapping Scene...
+Stop the Kidnappers!
+Rescue Senator Mickey!
+Bust Mickey's Kidnappers!
+Bust Mickey's Kidnappers!
+
+
+Locate Basketball Riot...
+Locate Basketball Riot...
+Arrest Rioting Sports Fans!
+Arrest Rioting Sports Fans!
+Bust Basketball Rioters!
+Bust Basketball Rioters!
+
+
+Locate Unruly Fans...
+Locate Unruly Fans...
+Apprehend Unruly Fans!
+Apprehend Unruly Fans!
+Bust Leo's Rabid Fans!
+Bust Leo's Violent Fans!
+
+
+Locate Sylvio Steele...
+Locate Sylvio Steele...
+Assist Sylvio Steele!
+Assist Sylvio Steele!
+Bust Steele's Assailants!
+Bust Steele's Assailants!
+
+
+Locate Hugh Bratt!
+Locate Hugh Bratt!
+Arrest Hugh Bratt and Companion!
+Arrest Hugh Bratt and Companion!
+Bust Bratt and the Hooker!
+Bust Bratt and the Hooker!
+
+
+Locate Rapper Shootout...
+Locate Rapper Shootout...
+Stop Rapper Shootout!
+Break Up Rapper Shootout!
+Bust the Violent Rappers!
+End the Rapper Shootout!
+
+
+Locate Anti-Game Protest...
+Locate Anti-Game Protest...
+Break Up Violent Protest!
+Stop Violent Anti-Gamers!
+Bust Anti-Game Protesters!
+Stop Violent Anti-Gamers!
+
+
+Locate Motorcycle Jewel Thieves...
+Locate Motorcycle Jewel Thieves...
+Arrest Motorcycle Jewel Thieves!
+Arrest Motorcycle Jewel Thieves!
+Bust Biker Chicks!
+Bust Biker Chicks!
+
+
+Locate Vandals...
+Locate Troublemakers...
+Arrest the Vandals!
+Arrest the Troublemakers!
+Bust the Frat Boys!
+Bust the Frat Boys!
+
+
+Locate Murdering Brothers...
+Locate Murdering Brothers...
+Arrest Murdering Brothers!
+Arrest Murdering Brothers!
+Get the Killer Brothers!
+Get the Killer Brothers!
+
+
+Locate Football Star...
+Locate Football Star...
+Arrest Football Star!
+Arrest Football Star!
+Get Peach Simpson!
+Get Peach Simpson!
+
+
+Locate Magazine Robbers...
+Locate Magazine Robbers...
+Arrest Magazine Robbers!
+Arrest Magazine Robbers!
+Bust the Smut Robbers!
+Bust the Smut Robbers!
+
+
+Locate Extortionists...
+Locate Extortionists...
+Arrest Extortionists!
+Arrest Extortionists!
+Bust Extortionists!
+Bust Extortionists!
+
+
+Locate Extasy Dealers...
+Locate Extasy Dealers...
+Apprehend Extasy Dealers!
+Apprehend Extasy Dealers!
+Get the Drug Pushers!
+Get the Drug Pushers!
+
+
+Locate Armored Car...
+Locate Armored Car...
+Apprehend Armored Car Hijackers!
+Apprehend Armored Car Hijackers!
+Bust Armored Car Hijackers!
+Bust Armored Car Hijackers!
+
+
+Locate Celebrity Shoplifter...
+Locate Celebrity Shoplifter...
+Arrest Celebrity Crook!
+Arrest Celebrity Crook!
+Bust Ms. Rider & Posse!
+Bust Ms. Rider & Posse!
+
+
+Locate Film Thief...
+Locate Film Thief...
+Recover Stolen Film Footage!
+Recover Stolen Film Footage!
+Bust the Film Thief!
+Bust the Film Thief!
+
+
+Locate Reality Show Studio...
+Locate Reality Show Studio...
+Defuse Contestant Dispute!
+Defuse Contestant Dispute!
+Bust the Dreamers!
+Bust the Dreamers!
+
+
+Locate Robbery...
+Locate Robbery...
+Stop Robbery!
+Stop Robbery!
+Bust the Robbers!
+Bust the Robbers!
+
+
+Locate Riot Scene...
+Locate Riot Scene...
+Stop the Riot!
+Stop the Riot!
+Bust the Rioters!
+Bust the Rioters!
+
+
+Locate Flaming Eddie...
+Locate Flaming Eddie...
+Arrest Flaming Eddie!
+Arrest Flaming Eddie!
+Bust the Pyromaniac!
+Bust the Pyromaniac!
+
+
+Locate Film Shoot...
+Locate Film Shoot...
+Arrest the Raging Director!
+Arrest the Raging Director!
+Bust the Egomaniac!
+Bust the Egomaniac!
+
+
+Locate Stolen Game Truck...
+Locate Stolen Game Truck...
+Recover Stolen Truck!
+Recover Stolen Truck!
+Bust the Video Game Thief!
+Bust the Video Game Thief!
+
+
+Locate Stolen Ambulance...
+Locate Stolen Ambulance...
+Apprehend Psychopath!
+Apprehend Psychopath!
+Jail the BloodSucker!
+Get the Vampire Freak!
+
+
+Locate Girlfriend Fight...
+Locate Girlfriend Brawl...
+Arrest Brawling Girlfriends!
+Break Up the Fight!
+Bust up the Cat-Fight!
+Bust up the Cat-Fight!
+
+
+Locate Stocks Brawl...
+Locate Fighting Stock Brokers...
+Arrest Brawling Brokers!
+Apprehend Brawling Brokers!
+Bust Violent Brokers!
+Bust Violent Brokers!
+
+
+Locate Ms. Cherry's SUV...
+Locate Ms. Cherry's SUV...
+Apprehend Ms. Cherry!
+Apprehend Ms. Cherry!
+Bust Reckless Actress!
+Bust Reckless Actress!
+
+
+Locate Bum Brawl...
+Locate Bum Brawl...
+Defuse Bum Fight!
+Defuse Bum Fight!
+Bust the Vermin!
+Bust the Vermin!
+
+
+Locate Disgruntled Postman...
+Locate Disgruntled Postman...
+Arrest Disgruntled Postman!
+Arrest Disgruntled Postman!
+Get the Crazed Postman!
+Get the Crazed Postman!
+
+
+Locate Pimp'n Hookers...
+Locate Pimp'n Hookers...
+Break Up Pimp-Ho-Down!
+Break Up Pimp-Ho Brawl!
+Bust JJ and His Hookers!
+Bust JJ and His Hookers!
+
+
+Locate Illegal Film Shoot...
+Locate Illegal Film Shoot...
+Stop Illegal Film Shoot!
+End Illicit Production!
+Bust the Porno Perps!
+Bust the Porno Perps!
+
+
+Locate Westside Ripper...
+Locate Westside Ripper...
+Arrest the Westside Ripper!
+Arrest the Westside Ripper!
+Get the Westside Ripper!
+Get the Westside Ripper!
+
+
+Locate Flavio Rossi...
+Locate Flavio Rossi...
+Arrest Mr. Rossi!
+Arrest Mr. Rossi!
+Bust the Mental Rossi!
+Bust the Mental Rossi!
+
+
+Locate Robbery In Progress...
+Locate Robbery In Progress...
+Arrest the Surgeon's Crew!
+End the Bank Robbery!
+Bust the Surgeon's Crew!
+Jail the Surgeon's Crew!
+
+
+Locate Stolen Movie Car...
+Locate Stolen Movie Car...
+Recover Lorraine!
+Recover Lorraine!
+Bust the Car Thief!
+Bust the Car Thief!
+
+
+Locate Kidnapped Starlet...
+Locate Kidnapped Starlet...
+Rescue Kidnapped Starlet!
+Rescue Kidnapped Starlet!
+Get the Crazed Manager!
+Get the Crazed Manager!
+
+
+Locate Mr. Sideburn...
+Locate Deranged Hair Dresser...
+Arrest Mr. Sideburn!
+Arrest Deranged Hair Dresser!
+Bust the Rabid Barber!
+Bust The Celeb Barber!
+
+
+Locate Dueling Chefs...
+Locate Dueling Chefs...
+Arrest the Dueling Chefs!
+Arrest Violent Sushi Chefs!
+Bust the Crazy Chefs!
+Bust the Fish Cooks!
+
+
+Locate Stolen Ambulance...
+Locate Stolen Ambulance...
+Recover Stolen Ambulance!
+Recover Stolen Ambulance!
+Get the Ambulance!
+Get the Ambulance!
+
+
+Locate Illegal Rooster Fight...
+Locate Illegal Rooster Fight...
+Arrest CockFight Gamblers!
+Arrest CockFight Gamblers!
+Bust the Rooster Wranglers!
+Bust the Rooster Gamblers!
+
+
+Locate Hijacked Prison Bus...
+Locate Hijacked Prison Bus...
+Apprehend Convicts!
+Apprehend Convicts!
+Get the Murderers!
+Get the Murderers!
+
+
+Locate Ransom Thief...
+Locate Ransom Thief...
+Apprehend Mr. Seagull!
+Apprehend Mr. Seagull!
+Bust the Action Star!
+Bust the Action Star!
+
+
+Investigate Corpse Report...
+Locate Suspicious Vehicle...
+Recover the Trunked Corpse!
+Stop the Suspect's Car!
+Bust the Murder Suspect!
+Bust the Murder Suspect!
+
+
+Locate Abductor's Vehicle...
+Locate Abductor's Vehicle...
+Save the Beauty Queen!
+Arrest the Abductor!
+Stop the Abductor!
+Bust Catarino Amor!
+
+
+Locate Diseased Hooker...
+Locate VD Debbie...
+Arrest VD Debbie!
+Apprehend Diseased Hooker!
+Quarantine the Disease Carrier!
+Jail the Sickly Hooker!
+
+
+Locate OnRun Corp. Execs...
+Locate OnRun Corp. Execs...
+Arrest Crooked OnRun Execs!
+Arrest Crooked OnRun Execs!
+Bust the Corporate Crooks!
+Bust the Corporate Crooks!
+
+
+Locate Dueling Assassins...
+Locate Dueling Assassins...
+Neutralize Dueling Assassins!
+Neutralize Dueling Assassins!
+Take Out Contract Killers!
+Take Out Contract Killers!
+
+
+Locate the Bandit...
+Locate the Bandit...
+Arrest the Bandit!
+Arrest the Bandit!
+Bust the Speed Freak!
+Bust the Speed Freak!
+
+
+Locate Hijacked Metro Bus...
+Locate Hijacked Metro Bus...
+Stop Hijacked Metro Bus!
+Stop Hijacked Metro Bus!
+Bust the Bus Hijacker!
+Bust the Bus Hijacker!
+
+
+Locate Hooker Turf War...
+Locate Hooker Turf War...
+Stop Hooker War!
+Stop Hooker War!
+End the Hooker Shootout!
+Bust the Banging Hookers!
+
+
+Locate Mr. Miguel...
+Locate Disturbed Pop Star...
+Arrest Disturbed Pop Star!
+Arrest Jaco Miguel!
+Disarm the Buttocks Freak!
+Bust the Buttocks Freak!
+
+
+Locate Karkowski Triplets...
+Locate FBI's Most-Wanted...
+Arrest FBI's Most-Wanted!
+Arrest the Karkowskis!
+Bust Domestic Terrorists!
+End the Karkowski Terror!
+
+
+Locate the X-Fury Gang...
+Locate the X-Fury Gang...
+Stop the Highway Heist!
+Arrest the X-Fury Gang!
+End the Highway Robbery!
+Bust the Highway Robbers!
+
+
+Locate Prison Bus Under Fire...
+Locate Prison Bus Under Fire...
+Stop Jail-Break Gang!
+Stop Bus Attackers!
+Get the Bus Attackers!
+Get the Bus Attackers!
+
+
+Locate Kidnappers' Vehicle...
+Locate Kidnappers' Vehicle...
+Rescue Patty Durst!
+Rescue Kidnapped Heiress!
+Bust Hurst's Kidnappers!
+Bust the Kidnappers!
+
+
+Locate Mob Hit Man...
+Locate Mob Hit Man...
+Stop D.D. Mortensen!
+Neutralize Mob Hitman!
+Put Out the Dead Eye! 
+End Mortensen's Career!
+
+
+Locate Hungry Hector...
+Locate Hungry Hector...
+Arrest Cannibal Hector!
+Arrest Hector the Murderer!
+Jail the Cannibal!
+Bust the Killer!
+
+
+Locate DEA Agents...
+Locate DEA Agents...
+Assist DEA Agents!
+Assist DEA Agents!
+Wipe Out the Drug Dealers!
+Wipe Out the Drug Dealers!
+
+
+Locate Agent's Phone...
+Locate Agent's Phone...
+Retrieve Agent's Phone!
+Retrieve Agent's Phone!
+Bust Phone Thieves!
+Bust Phone Thieves!
+
+
+Locate Movie Script Thief...
+Locate Movie Script Thief...
+Recover Jorg's Phone!
+Recover Director's Phone!
+Bust the Script Thief!
+Bust the Slime!
+
+
+Locate Jay DeLeno's Car...
+Locate Jay DeLeno's Car...
+Recover Jay DeLeno's Car!
+Recover Jay DeLeno's Car!
+Bust Jay's Carjacker!
+Bust Jay's Carjacker!
+
+
+Locate Counterfeit Truck...
+Locate Counterfeit Truck...
+Arrest Sportswear Counterfeiter!
+Arrest Sportswear Counterfeiter!
+Bust Sportswear Counterfeiter!
+Bust Sportswear Counterfeiter!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+It's the Punk From the Bistro!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Feng Is Back For Revenge!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Rocky's Goons Are Back!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Big Chong Wants Payback!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Francis Wants Revenge!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Vandal Punks!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Stripper!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Defeat the Angry Domme!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Beware! Angry Pimps'n Ho's!
+Watch Out! Punks with Guns!
+Watch Out! Punks with Guns!
+Watch Out! Punks with Guns!
+Watch Out! Punks with Guns!
+Watch Out! Punks with Guns!
+Watch Out! Punks with Guns!
+Escaped Street Punks.
+Escaped Street Punks.
+Watch Out! Vengeful Gangstas!
+Watch Out! Vengeful Gangstas!
+Watch Out! Vengeful Gangstas!
+Watch Out! Vengeful Gangstas!
+Defeated Drive-By Gangstas.
+Defeated Drive-By Gangstas.
+Escaped Drive-By Gangstas.
+Escaped Drive-By Gangstas.
+Watch Out! Vengeful Ruffians!
+Watch Out! Vengeful Ruffians!
+Watch Out! Vengeful Ruffians!
+Watch Out! Vengeful Ruffians!
+Defeated Vengeful Ruffians.
+Defeated Vengeful Ruffians.
+Escaped Vengeful Ruffians
+Escaped Vengeful Ruffians
+Watch Out! Vengeful Mobsters!
+Watch Out! Vengeful Mobsters!
+Watch Out! Vengeful Mobsters!
+Watch Out! Vengeful Mobsters!
+Defeated Vengeful Mobsters.
+Defeated Vengeful Mobsters.
+Escaped Vengeful Mobsters.
+Escaped Vengeful Mobsters.
+Police Patrol! Escape the Cops!
+Police Patrol! Escape the Cops!
+Police Patrol! Escape the Cops!
+Police Patrol! Escape the Cops!
+Defeated Cop Patrol. 
+Defeated Cop Patrol. 
+Escaped Police Patrol. 
+Escaped Police Patrol. 
+It's the SWAT! You're Screwed!
+It's the SWAT! You're Screwed!
+It's the SWAT! You're Screwed!
+It's the SWAT! You're Screwed!
+Defeated the SWAT! 
+Defeated the SWAT! 
+Escaped the SWAT.
+Escaped the SWAT.
+firing range
+UPGRADE #%d
+TARGETS DESTROYED
+NEUTRALIZING SHOTS
+HEAD SHOTS
+CIVILIAN TARGETS
+HITS
+MISSES
+ACCURACY
+upgrade earned
+upgrade unearned
+well done
+failed
+DUAL-TARGET AIM
+PROVIDES ABILITY TO AUTO-AIMAT TWO TARGETS AT ONCERETICLE HIGHLIGHTS THE PRIMARY TARGETOTHER NEARBY TARGETS ARE FIRED UPON WHEN POSSIBLE
+DESTROY 8 TARGETSAVOID CIVILIAN TARGETS (3)
+AIM ASSISTANCE
+ALLOWS TARGETING OF VITALPOINTS DURING PRECISION AIMRETICLE TURNS GREEN WHEN NEUTRALIZING POINT TARGETEDRETICLE TURNS RED WHEN LETHAL POINT TARGETEDTO PRECISION AIM, HOLD DOWN %G
+ACHIEVE 7 NEUTRALIZING SHOTSAVOID CIVILIAN TARGETS (2)
+FAST RELOAD
+INCREASES RELOAD SPEED
+DESTROY OR NEUTRALIZE 10 TARGETSAVOID CIVILIAN TARGETS (1)AVOID HEAD SHOTS
+FAST AIM SPEED
+INCREASES RETICLE SPEEDIMPROVES AIM FOR MOVING TARGETS
+DESTROY OR NEUTRALIZE 12 TARGETSAVOID CIVILIAN TARGETSAVOID HEAD SHOTS
+LASER SIGHT
+ENGAGES TRACKING LASERBEAM DURING PRECISION AIMWHILE PRECISION AIMING, USE %A TO SELECT DESIRED VITAL POINTPULL AWAY FROM CURRENT TARGET TO ENTER FREE-AIM
+ACHIEVE 10 NEUTRALIZING SHOTSAVOID CIVILIAN TARGETSAVOID HEAD SHOTS
+FLASH LIGHT
+ILLUMINATES VICINITY IN DARK ENVIRONMENTSMAY BLIND ENEMY DURING PRECISION AIM  
+DESTROY OR NEUTRALIZE 10 TARGETSAVOID CIVILIAN TARGETSAVOID HEAD SHOTS
+SCOPE
+PROVIDES 2x ZOOM LEVEL DURING PRECISION AIM
+PERFORM 10 HEAD SHOTSAVOID CIVILIAN TARGETS
+TOP ACCURACY
+REDUCES AIM ERROR
+DESTROY OR NEUTRALIZE 12 TARGETSACHIEVE 50% ACCURACYAVOID HEAD SHOTS AND CIVILIAN TARGETS
+HOLLOW POINT AMMO
+INCREASES BULLET DAMAGE FACTOR
+DESTROY OR NEUTRALIZE 15 TARGETSAVOID CIVILIAN TARGETSAVOID HEAD SHOTS
+combat training
+ATTACK #%d
+attack earned
+attack unearned
+RETRY FOR 1 SHIELD?
+PRACTICE AGAIN FOR FREE?
+TOTAL
+SESSION SURVIVED
+ATTACKS
+EFFICIENCY
+RUNNING KICK
+RUNNING PUNCH
+RUNNING JUMP KICK
+BACK KICK
+BACK PUNCH
+BACK JUMP-KICK
+SUPER STOMP
+ELBOW DROP
+SLAMMING FLIP
+TIGER SWEEP
+TIGER CLAW
+LEAPING TIGER
+DRAGON KICK
+DRAGON FIST
+FLYING DRAGON
+RUNNING ATTACKS
+RUN TOWARD OPPONENT,THEN PRESS:  %c FOR RUNNING KICK  %d FOR RUNNING PUNCH  %e FOR RUNNING JUMP KICK
+PERFORM 12 RUNNING ATTACKSSURVIVE SESSION
+BACK ATTACKS
+WHEN OPPONENT IS BEHIND YOU, USE:  %c FOR BACK KICK  %d FOR BACK PUNCH  %e FOR BACK JUMP KICK
+PERFORM 12 BACK ATTACKSSURVIVE SESSION
+GROUND ATTACKS
+WHEN OPPONENT IS KNOCKEDDOWN, ~a %A TOWARD OPPONENT AND~c:  %c FOR SUPER STOMP  %d FOR ELBOW DROP  %e FOR SLAMMING FLIP
+PERFORM 12 GROUND ATTACKSSURVIVE SESSION
+COMBO: TIGER SWEEP
+WHEN OPPONENT IS DAZED, ENTER BUTTON COMBO:  %c, %e, %c
+PERFORM 5 TIGER SWEEP COMBOSSURVIVE SESSION
+COMBO: TIGER CLAW
+WHEN OPPONENT IS DAZED, ENTER BUTTON COMBO:  %d, %c, %e
+PERFORM 5 TIGER CLAW COMBOSSURVIVE SESSION
+COMBO: LEAPING TIGER
+WHEN OPPONENT IS DAZED, ENTER BUTTON COMBO:  %e, %d, %c
+PERFORM 5 LEAPING TIGER COMBOSSURVIVE SESSION
+COMBO: DRAGON KICK
+WHEN OPPONENT IS DAZED, ENTER BUTTON COMBO:  %c, %e, %c, %e
+PERFORM 6 DRAGON KICK COMBOSSURVIVE SESSION
+COMBO: DRAGON FIST
+WHEN OPPONENT IS DAZED, ENTER BUTTON COMBO:  %d, %c, %e, %d
+PERFORM 6 DRAGON FIST COMBOSSURVIVE SESSION
+COMBO: FLYING DRAGON
+WHEN OPPONENT IS DAZED, ENTER BUTTON COMBO:  %e, %d, %c, %e
+PERFORM 6 FLYING DRAGON COMBOSSURVIVE SESSION
+driving course
+MANEUVER #%d
+maneuver earned
+maneuver unearned
+COURSE TIME
+TOTAL
+BARRELS BUSTED
+BARRIERS BUSTED
+PEDESTRIANS HIT
+PEEL-OUT
+WHILE STOPPED,~j %j + %nTHEN RELEASE %nPEEL-OUT ALLOWS THE CARTO TURN IN PLACE,AND TO TAKE OFF QUICKLYFROM A STOP
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 PEEL-OUT
+RAPID STOP
+WHILE MOVING FORWARD, ~a %A LEFT OR RIGHT OR BACK, AND DOUBLE-TAP AND HOLD %nTURNING LEFT OR RIGHT CREATES A BARRIERRAPID STOP ALLOWS BLOCKING OF PURSUIT SUBJECTS
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 RAPID STOP
+P.I.T. MANEUVER
+HIT ESCAPING CAR FROM THE REAR SIDE, AT ABOUT 45 DEGREES, TO CAUSE IT TO SPIN OUTP.I.T. (PRECISION IMMOBILIZATION TECHNIQUE) CAN DISABLE A CAR WITHOUT DESTROYING IT
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)USE P.I.T. TO DISABLE DRONE CAR
+DOWNSHIFT BOOST
+WHILE MOVING FORWARD, ~A %ADOWN + DOUBLE-TAP %jSHIFTING TO A LOWER GEAR PROVIDES MOMENTARY BURSTOF ACCELERATION
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 DOWNSHIFT BOOST
+90∞ TURN
+~J %j + %l AND TURN IN DESIRED DIRECTIONALLOWS NEGOTIATION OF TIGHT TURNS  BY SLIDING CAR INTO TURN
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 90∞ TURN
+FWD SWITCHBLADE
+WHILE MOVING FORWARD, DOUBLE-TAP %l AND TURN IN DESIRED DIRECTIONALLOWS QUICK TURNAROUND TO FACE PURSUING ENEMIES OR SUDDEN DIRECTION CHANGE
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 FWD SWITCHBLADE
+BACK SWITCHBLADE
+WHILE MOVING BACKWARD, DOUBLE-TAP %lAND TURN IN DESIRED DIRECTIONALLOWS A CAR IN REVERSE TO RAPIDLY TURN ITSELF AROUND
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 BACK SWITCHBLADE
+TWO WHEELS
+QUICKLY ~A %ALEFT, RIGHT, LEFT, THEN DOUBLE-TAP %j TO GET UPON LEFT WHEELSQUICKLY ~A %ARIGHT, LEFT, RIGHT, THEN DOUBLE-TAP %j TO GET UPON RIGHT WHEELS
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 TWO-WHEEL 
+NITRO BOOST
+WHILE MOVING FORWARD AT HIGH SPEED, ~A%A UP + TRIPLE-TAP %jNITROUS OXIDE INJECTION PROVIDES MOMENTARY TOPSPEED
+BEAT THE CLOCK TO THE FINISH LINEAVOID OBSTACLES (3)PERFORM AT LEAST 1 NITRO BOOST
+gun course
+gun earned
+gun unearned
+NEW WEAPON #1
+.40 REVOLVERS
+SPECS:   8 BULLET CAPACITY   4 SHOTS PER SECONDSURVIVE GUN COURSE TO OBTAIN WEAPON
+REACH END OF COURSE
+END OF COURSE REACHED
+FAILED TO REACH END OF COURSE
+NEW WEAPON #2
+.45 PISTOLS
+SPECS:   10 BULLET CAPACITY    5 SHOTS PER SECONDSURVIVE GUN COURSE TO OBTAIN WEAPON
+REACH END OF COURSE
+END OF COURSE REACHED
+FAILED TO REACH END OF COURSE
+NEW WEAPON #3
+.50 PISTOLS
+SPECS:   12 BULLET CAPACITY    6 SHOTS PER SECONDSURVIVE GUN COURSE TO OBTAIN WEAPON
+REACH END OF COURSE
+END OF COURSE REACHED
+FAILED TO REACH END OF COURSE
+combat trial
+grapple earned
+grapple unearned
+NEW GRAPPLE #1
+WHIRLWIND THROW
+TEST YOUR SKILL AGAINSTKUNG-FU MASTER CHOP TAOTO GAIN HIS SIGNATURE GRAPPLE MOVE!
+DEFEAT ALL OPPONENTS
+ALL OPPONENTS DEFEATEDTO PERFORM NEW GRAPPLE,APPROACH OPPONENT,THEN:      %f, %d, %e
+DEFEATED IN COMBAT
+NEW GRAPPLE #2
+ARM BUSTER
+TEST YOUR SKILL AGAINSTWRESTLING CHAMP MR. NICETO GAIN HIS SIGNATUREGRAPPLE MOVE!
+DEFEAT ALL OPPONENTS
+ALL OPPONENTS DEFEATEDTO PERFORM NEW GRAPPLE,APPROACH OPPONENT,THEN:      %f, %d, %c
+DEFEATED IN COMBAT
+NEW GRAPPLE #3
+DIRTY BOXER
+TEST YOUR SKILL AGAINSTBOXING CHAMP DIRTYMORALES TO GAIN HIS SIGNATURE GRAPPLEMOVE!
+DEFEAT ALL OPPONENTS
+ALL OPPONENTS DEFEATEDTO PERFORM NEW GRAPPLE,APPROACH OPPONENT,THEN :      %f, %c, %d
+DEFEATED IN COMBAT
+street race
+new car earned
+new car unearned
+NEW CAR #1
+'69 MUSCLE CAR
+SPECS   0 TO 60: 7 seconds   TOP SPEED: 140 mph   HORSEPOWER: 350 hpBEAT CURRENT CHAMPTO OBTAIN CAR
+WIN STREET RACE
+STREET RACE WON
+STREET RACE LOST
+NEW CAR #2
+'01 ROADSTER CAR
+SPECS   0 TO 60: 4 seconds   TOP SPEED: 177 mph   HORSEPOWER: 450 hpBEAT CURRENT CHAMPTO OBTAIN CAR
+WIN STREET RACE
+STREET RACE WON
+STREET RACE LOST
+NEW CAR #3
+'03 SPORTS CAR
+SPECS   0 TO 60: 4.5 seconds   TOP SPEED: 180 mph   HORSEPOWER: 400 hpBEAT CURRENT CHAMPTO OBTAIN CAR
+WIN STREET RACE
+STREET RACE WON
+STREET RACE LOST
+*Conceived, Designed andDeveloped by
+LUXOFLUX
+
+Programming / Technology
+Cary Hara
+Adrian Stephens
+Jeff Lander
+Zach Baker
+Adam Morawiec
+Bob Schade
+Johan Kˆhler
+
+Game Design
+Peter Morawiec
+Richard Yeh
+&
+City Design 
+Micah Linton
+Daksh Sahni
+Rick Ruiz
+
+Art
+Chris Otcasek
+Nick Marks
+Kent Draeger
+Lia Tijong
+Irina Polishchuk
+Gabe Garrison
+Dan Bickell
+&
+Art ProductionSupervision
+Dan Padilla
+
+In-Game Animation
+Jim Sedota
+&
+Cinematic Direction
+Aaron James Erimez
+&
+Cinematics
+Denis Trofimov
+Duane Stinnet
+Jim Sedota
+
+Original Concept / Screenplay
+Peter Morawiec
+Micah Linton
+
+Producer
+Bryant "El Busto" Bustamante 
+
+Additional Programming
+Matt Whiting
+Carl-Henrik Skårstedt 
+Denis Trofimov
+&
+Additional Art
+Joby Rome Otero
+Adam Yeager
+Khang Pham
+Edvard Toth
+Andrew Marquis
+Troy Paradise
+
+Additional City Design
+Chris Senn
+&
+Additional Animation
+Justin Rasch
+Craig Harris
+&
+Additional Sound Design
+Brian Tuey
+
+Production Testers
+Art Usher
+Lip Ho
+
+Special Thanks
+Luxoflux Team Panda
+Jeremy Engleman
+Jacob Weinstein
+Erick Pangilinan
+Noel Lim
+Jun Reyes
+&
+Extra-Extra Special Thanks
+Our Families & Friends
+
+%CAST
+RUSSELL WONG ...... Nick Kang
+CHRISTOPHER WALKEN ...... George
+GARY OLDMAN ...... Rocky, FBI Agent Masterson
+MICHAEL MADSEN ...... Rafferty, Additional Voice
+MICHELLE RODRIGUEZ ...... Rosie
+CCH POUNDER ...... Chief
+RON PERLMAN ...... Misha, Additional Voice
+MAKO ...... General Kim
+JAMES HONG ...... Ancient Wu, Additional Voice
+KEONE YOUNG ...... Big Chong, Jimmy Fu, Additional Voices
+RYUN YU ...... Cary Kang
+GREY DELISLE ...... Jill, Lola, Additional Voices
+VERNEE JOHNSON-WATSON ...... Dispatcher
+YUJI OKUMOTO ...... Additional Voices
+KEVIN M. RICHARDSON ...... Additional Voices
+ANDRE SOGLIUZZO ...... Additional Voices
+DARAN NORRIS ...... Additional Voices
+DEBI MAE WEST ...... Additional Voices
+MICHAEL GOUGH ...... Additional Voices
+NICK JAMESON ...... Additional Voices
+EDWARD YIN ...... Additional Voices
+GREG CIPES ...... Additional Voices
+MARGARET TANG ...... Additional Voices
+VANESSA MARSHALL ...... Additional Voices
+GENE BAHNG ...... Additional Voices
+JOSH PASKOWTIZ ...... Additional Voices
+NIK FROST ...... Additional Voices
+
+Casting and Voice Direction
+Margaret Tang (WOMB MUSIC)
+
+Voice Over Recording/Engineering/Editing/Voice FX Design
+Rik W. Schaffer (WOMB MUSIC)
+
+Cinematic Script Writers
+Marc Goff
+Richie Porter
+Yael Swerdlow
+
+POST PRODUCTION SOUND
+The Audio Group
+
+Supervising Sound Designer
+Tim Gedemer
+
+Co-Supervisor
+Bryan "The Kyler" Jerden
+
+Sound Effects Editors
+Tom Brewer
+Harry Snodgrass
+
+Cinematic re-recording mixer
+Gordon D. Hookailo
+
+In-Game Sound Design
+Paul Menichini
+
+Audio Consultant 
+Charles Deenen
+
+Additional Sound Design
+Christian Sayler
+
+Cinematic Music Composer
+Sean Murray
+
+Vehicle Modeling
+Conte Digital
+
+Additional Art Services
+Creat Studio
+Treanor Brothers Animation
+New Pencil, Inc.
+
+ADDITIONAL PROGRAMMINGEXAKT Entertainment, Inc.
+Paul Ashdown
+Eran Rich
+Todd Stewart
+
+Treyarch
+Dimiter "Malkia" Stanev
+
+MOTION CAPTURE
+Giant Studios, Inc.
+
+Mo Cap Talent
+Aaron Erimez
+Jay Gordon
+Justin Rasch
+Kasey Goivea
+Kelly Stark
+Kirk Pynchon
+Timothy Santos
+Will Leong
+Peter Morawiec
+
+ACTIVISION PRODUCTION
+
+Executive Producer
+Chris Archer
+
+Senior Producer
+Brian Clarke
+
+Producer
+Gene Bahng
+
+Production Coordinators
+Peter Muravez
+Joseph Shackelford
+
+Production Tester
+Steve PeÒate
+
+VP, North American Studios
+Murali Tegulapalle
+
+Exec. VP, Worldwide Studios
+Lawrence Goldberg
+
+QUALITY ASSURANCE
+
+Project Lead
+Evan Button
+
+Senior Project Lead
+Jason Potter
+
+QA Manager
+Joe Favazza
+
+Senior Floor Leads
+Tim Toledo
+James Lara
+
+Floor Leads
+Alex Ortiz
+Edward Vernon
+Garrett Oshiro
+Anthony Griffin
+
+Test Team
+David Lara
+Brian Crowder
+Robert Alvarez
+Andrew Miller
+Jason Naglic
+Patrick Thomson
+Jeff Trattner
+Danielle Pino
+Sassoun Sarhadian
+Alon Asherson
+Lester Zapata
+Kevin Dandridge
+Phil Bailey
+Jesse Dyer
+Douglas Lyons
+Dena Fitzgerald
+Peter McKernan
+Aaron Smith
+
+NIGHT SHIFT
+
+Project Lead
+Mike Wesby
+
+Manager
+Adam Hartsfield
+
+Floor Lead
+Dave Hansen
+
+Testers
+Alex Cortez
+Brian Keppler
+Chad Makings
+Colin Tistaert
+Dan Macdonald
+George Walker
+Jason Lewis
+Kenneth Ruiz
+Kyong Park
+Mike Greening
+Mike Manzano
+Phil Lawless
+Ryan Ruff
+David Wilkinson
+Elvir Caranay
+Steve Penate
+Bobak Kohan
+
+GRAVEYARD
+
+Project Lead
+Paul Williams
+
+Manager
+Jason Levine
+
+Testers
+Jesse Oveson
+Dustin Trimble
+Jonathan Shipley
+Rehmat Qadir
+Jimmy Nguyen
+Jorga Houy
+
+Manager, Technical Requirements Group
+Marilena Rixford
+
+Lead, Technical Requirements Group
+SiÙn Rodriguez y Gibson
+
+Testers, Technical Requirements Group
+Aaron Camacho
+Robert Lara
+Marc Villanueva
+Taylor Livingston
+
+Manager, Customer Support
+Bob McPherson
+
+Customer Support Leads
+Gary Bolduc - Phone Support
+Michael Hill - Email Support
+Rob Lim - Information and Escalation Support
+
+CS/QA Special Thanks
+Jim Summers
+Jason Wong
+Marilena Rixford
+Tim Vanlaw
+Glenn Vistante
+Matt McClure
+John Rosser
+Nadine Theuzillot
+Ed Clune
+Indra Gunawan
+Marco Scataglini
+Todd Komesu
+Willie Bolton
+Chad Siedhoff
+Jennifer Vitiello
+Nick Favazza
+Mike Rixford
+Tyler Rivers
+
+20/20 Labs
+Anthony "TNAX" Broadnax
+David Cornelius
+Lawrence "Warpkill" Durham
+Martin "Moose" George
+John Hall
+Tim Knappenberger
+Michael LeFevers
+Rob (HoundCat) Mamede
+Gabe Michalski
+Jeff Michalski
+Yoshio Nakamura
+Andre Thibodeaux
+
+
+MARKETINGGlobal Brand Manager
+Jeff Kaltrieder
+
+Associate Brand Manager
+Byron Beede
+
+Director, Global Brand Mgmt.
+Will Kassoy
+
+VP, Global Brand Mgmt.
+Lisa Gaudio
+
+Exec. VP, Global Publishing& Brand Mgmt.
+Kathy Vrabeck
+
+Director, Market Research
+Chris Langlois
+
+Public Relations Mgr.,Corporate Communication
+Michelle Nino
+
+VP, Public Relations
+Maryanne Lataif
+
+Creative Services VP,Creative Services & Operations
+Denise Walsh
+
+Marketing Creative Director
+Matthew Stainner
+
+Creative Services Manager
+Jill Barry
+
+Assistant Mgr., Creative Services
+Shelby Yates
+
+LEGALSenior Counsel
+Greg Deutsch
+
+Legal Administrative Assistant
+Danielle Kim
+
+Special Thanks
+Christian "X-MAN" Astillero
+Brent "Terminal" Boylen
+Blaine "Mech Respect" Christine
+Neven "Hotness" Dravinski
+Nick "You did what?" Falzon
+Ken "Sticky" Fox
+Jay "MoCap" Gordon
+Eric "Hardcore" Grossman
+Chris "Quickclaw" Hewish
+Todd "Q" Jefferson
+Casey "Sea wall" Keefe
+Andre "Jo Jo Dancer" Kinnebrew
+Brian "The Cheat" Pass
+Matt "I've got the" Powers
+Ryan "Cusses loudly" Rucinski
+Marc "Go Dodgers!" Turndorf
+Juan "Lt. Pistolas" Valdes
+Trey "Outoftowna" Watkins
+Chris "Mai-Tai" Hepburn
+Kenny "Percussion" Ramirez
+Nancy "Just Nancy" Matson
+
+MUSIC
+
+Music Supervision
+Bright Riley & DeMonica Plummer for MULODICX Music/ M.A.S.
+Snoop Dogg (The Character) Appears Courtesy of: Snoop Dogg 
+Productions & Vybe Squad Ent.
+
+Original Soundtrack
+Executive Producers
+Bright Riley & Bigg Swoop
+
+Co- Executive Producer
+Chris Archer/ Activision
+
+Executive Production Supervisor(s)
+Suamana (Bigg Swoop) Brown
+
+Production Supervisors
+Christian Salyer/ SND ELEMENTS & K. (Caviar) Cross
+
+Administration Director
+DeMonica Plummer
+
+Project Coordinator(s) 
+Leon Lee, Keysha Abdelkator, Shama Davis, 
+Donte Ballard & Paul Holt
+
+Executive Thanks
+Bigg Snoop Dogg, Shante' Broadus, 
+Black Tone, Paul Ring, Mac10, J. Urie, 
+Paragon Management, Jeff Turner,
+Baby Ree Productions, Good Game
+Entertainment, Mattias & Christian Lehman, 
+Tommy St. Julian, Nani & Kanani Riley, 
+Andrew Drayton and Peanut Ellis.
+
+ORIGINAL SOUNDTRACK
+
+We Don't Stop
+Performed By: Soul Star
+Produced By: Bigg Swoop for VSQ
+Soul Star appears courtesy of: Vybe Squad Entertainment
+(K. Riley, S Brown, P. Riley, A. Weisner)
+My Damn Music (ascap) 
+
+Live and Learn 
+Performed By: Ha Loco "Pomona City Rydaz"
+Produced By: Unrestricted Music & R. Feemster
+Unrestricted Music (ascap)
+
+Compton 
+Performed By: Cavie
+Produced By: Caviar for Ft. Knox Productions
+
+Play Like We Do
+Performed By: Casino Mafia feat. Baby S.
+Produced By: Baby S.
+
+Ring King 
+Performed By: Mausberg (RIP)
+Produced By: DJ Quick for Euphonic
+Courtesy of Laneway Records
+Q Baby Music (ascap) Laneway Music (ascap)
+Special Thanks to Black Tone
+
+Let Me See Sump-thin' (Thug Night) 
+Performed By: Jay O Felony
+Produced By: Da Neckbones
+Jay O Felony appears courtesy of: 
+Loco EntertainmEntertainment
+Published by: Windswept Publishing, 
+Bullet Loco Music Publishing (ascap)
+Chilled Out music (ascap) His Hyms Music (sesac)
+
+Thug the club
+Performed By: South Central Cartel Feat. Tha Flock
+Produced By: Big Prodeje for 
+GangstaMade/ Hooded Out Entertainment 
+
+Watch out now!
+Performed By: Chyneezy feat. Ms.Toi and Sylk-E-Fyne 
+Produced By: Da Neckbones
+Published by: Windswept Publishing, 
+Toy's World Music Publishing (ascap), 
+Crystal Piece Music Publishing (ascap), 
+Chilled Out Music publishing (ascap), 
+His Hyms Music (sesac)
+
+Don't fight the Pimpin'
+Performed By: Suga Free
+Produced By: DJ Quik
+Courtesy of Laneway Records/ 
+Bungalo Records/ Universal (UMVD)
+Sample Interpellation: Don't fight the feeling (Kevin Mc Cord) 
+Published By: Universal Duchess Music Corp/ Perks Music (BMI)
+Laneway music (ascap) Q baby Music (ascap)
+Special Thanks to Black Tone
+
+Mo Money 
+Performed By: Styliztik Feat. Dirty Rat
+Produced By: Tian for SND ELEMENTS
+4 Tian Music (BMI)
+
+Cali Folks
+Performed By: Styliztik 
+Produced By: Tian for SND ELEMENTS
+4 Tian Music (BMI)
+
+Don't U Feel Like a Mark 
+Performed By: Jay O Felony
+Produced By: Bigg Swoop For VSQ
+My Damn Music (ascap) Bullet Loco Music Publishing (ascap)
+
+Dance Wit Me
+Performed By: Big Snoop Dogg
+Produced By: Gold Fingaz
+Courtesy of: Doggy Style Records
+
+True Crimes
+Performed By: Bishop
+Produced By: Big Swoop for VSQ
+
+What you wanna do
+Performed By: Warren G. Feat. RBX
+Produced By: Warren G
+
+Terrorist Threat 
+Performed By: WestSide Connection (Ice Cube, Mac 10 & WC)
+Produced By: Big Tank
+Westside appears courtesy of: 
+HooBangin' Records/ Priority/ Capitol Records
+Big Tank appears courtesy of: 1X/ Good Game Entertainment
+
+Hey Baby
+Performed By: N.U.N.E 
+Produced By: Bear for Baby Ree Productions
+N.U.N.E. appears courtesy of: Baby Ree Productions
+Baby Ree Toonz (BMI)  P Y O Publishing (ASCAP)
+
+Dangerous 
+Performed By: Dr. Stank
+Produced By: Damizza for Baby Ree Productions
+Baby Ree Toonz (BMI)  
+
+Crimies 
+Performed By: Goon Squad 
+Produced By: Caviar for Ft. Knoxx Productions  
+
+Angry
+Performed By: Suga Free
+Produced By: DJ Quik
+Suga free appears courtesy of Laneway Records
+Laneway Music (ascap) Q baby music (ascap)
+Special Thanks to Black Tone & Euphonic
+
+Pop a Bottle
+Performed By: "Hollywood" Feat. Tad Baddlez & Ill Gates
+Produced By: Bigg Swoop & B.Husslyn
+My Damn Music (ascap) I.B. Husslyn Music (ascap)
+
+True Crime 
+Performed By: KAM feat. Cavie and Above The Law
+Produced by: Caviar and OverDose for Ft. Knoxx Productions 
+
+I'll Do Anything
+Performed By: Damizza Feat. N.U.N.E.
+Produced by Damizza for Baby Ree Productions
+Baby Ree Toonz (BMI)  P Y O Publishing (ASCAP)
+
+Turn Them Lights out
+Performed By: Chicco & Cool Wadda 
+Produced By: Da Neckbones
+Published By: Windswept Publishing, 
+Shut Eye Music Publishing (ascap), Monocc Music Pub. 
+(ascap) Kadosha Pub. (ascap) Wadda Music Publishing (ascap)
+
+Tha Truth
+Performed By: Bad Azz, E- White And NONSTOP
+Produced By: Caviar & OverDose
+for Ft. Knoxx Productions
+
+Flow
+Performed By: Sly Boogy
+Produced By: King Tech.
+Sway & Tech's  BOLO Entertainment
+
+Bitch a$$ Nióaz
+Performed By: GOON Squad (Mano, Cavie, N-M-E)
+Background Vocals By: Hollywood
+Produced By: Bigg Swoop for VSQ
+My damn Music (ascap) Caviar Music (ascap)
+
+Fu-k With Us
+Performed By: BIG TRAY DEEE, Threat, Short Khop and Kokain
+Produced By: Caviar & OverDose for Ft. Knoxx Productions
+Additional Production: Bigg Swoop For V S Q
+
+Drinks in the air 
+Performed By: "Hollywood"
+(Unique, Janelle and Bigg Swoop)
+Produced By: Bigg Swoop for VSQ
+"Hollywood" appears courtesy of: Vybe Squad Entertainment
+
+They don't know 
+Performed By: Dee Dimes Feat. Bigg Swoop
+Produced By: Bigg Swoop for VSQ
+My Damn Music (ascap) Donte T. Ballard Music (ascap)
+Bigg Swoop appears courtesy of: Vybe Squad Entertainment
+
+Life 
+Performed By: Coolio
+Background Vocals By: Hollywood
+Produced By: Bigg Swoop for VSQ
+"Hollywood" appears courtesy of: Vybe Squad Entertainment
+
+Roll With Me
+Performed By: Young Billionaires (Mista Bo & T- Bone)
+Feat. Unique/Hollywood
+Produced By: Bigg Swoop for VSQ 
+(Mayno Cavie, Bigg, Swoop)
+Young Billionaires & Hollywood appears
+courtesy of: Vybe Squad Entertainment
+
+This is how we live in LA (Heeey)
+Performed By: Lil Ω Dead, Showtime,
+Kontroversy and Quik-2 Mac
+Produced By: Bigg Swoop for VSQ
+Lil 1/2 Dead & Showtime Appears courtesy of: Ω Time Entertainment
+
+Gotta Get Away
+Performed By: Lil Ω Dead, Showtime
+Produced By: Bigg Swoop for VSQ
+Lil 1/2 Dead & Showtime Appears courtesy of: Ω Time Entertainment
+
+Uh-Oh
+Performed By: Young Billionaires Feat. "Hollywood" 
+Produced By: Bigg Swoop for VSQ 
+Young Billionaires & Hollywood appear courtesy of: 
+Vybe Squad Entertainment
+(DVD, D. Ballard, B. husslyn, S. brown)
+
+Somebody Steal The Show
+Performed By: Shade Sheist
+Produced By: Damizza for Baby Ree Productions
+Shade Shiest appears courtesy of: Baby Ree Productions
+N With The Words Music (ASCAP) Baby Ree Toonz (BMI)  
+
+T.R.U.E
+Performed By: Pomona City Rydaz feat. BIG TRAY DEEE
+Produced By: Mike Smooth
+
+Flick Wit You
+Performed By: Snoop Dogg
+Produced By: Joseph Leimberg
+Courtesy of: Doggy Style Records
+
+Consequences
+Performed By: Lil Eazy E
+Produced By: Caviar for Ft Knoxx Production
+
+Breath On Um 
+Performed By: Pomona City Rydaz
+Produced By: Bigg Swoop for VSQ
+
+Ass & Titties
+Performed By: S. Class & Black Chill
+Produced By: Da Kneckbones
+
+Murda Murda
+Performed By: Mano, Cavie, Kontroversy, B-12 
+Produced By: Bigg Swoop For VSQ
+
+Hollywood
+Performed By: Hollywood 
+(Unique, Janelle, Bigg Swoop)
+Produced By: Bigg Swoop For VSQ
+
+Please Believe Lights Out 
+Performed By: RBX and Mr. Tan feat. S. Class
+Produced By: Da Neckbones
+
+Do Time - True Crime
+Performed By: Pomona City Rydaz
+Produced By: Big Swoop for VSQ
+
+In And Out 
+Performed By: E- 40 
+Produced By: Caviar and OverDose for Ft. Knoxx Productions
+Background Vocals: Lavidi
+
+In Da Streetz 
+Performed By: Dee Dimes, Bishop, B-12, Caviar, Lil Eazy E
+Produced By: Bigg Swoop
+
+Yu Who 
+Performed By: Kam
+Produced By: Jinx 
+
+Lights Out 
+Performed By: Westside Connection feat. Nocturnal
+Produced By: Damizza for Baby Ree Productions
+
+Royal Blunt 
+Performed By: Goon Squad (Mano, CornBread, Cavie, Mobo-Ced)
+Produced By: Big Swoop for VSQ
+
+Back Seat Driver
+Performed By: Pomona City Rydaz
+Produced By: T.Bone & Kokane 
+
+War
+Performed By: NONSTOP feat. Manishflatz
+Produced By: NONSTOP
+
+G'z Movin'
+Performed By: BIG TRAY DEEE
+Produced By: KMG from Above the law
+Chorus By: Pomona City Rydaz
+
+Doing It Big
+Performed By: Young Billionaires (Mista Bo & T- Bone)
+Produced By: Bigg Swoop For VSQ
+
+Let's Get it Poppin'
+Performed By: Bishop feat. Trek Life & Bokey Loc 
+Intro by: Fuzzy
+Produced By: Diverse for Vatiquinn Entertainment
+
+Is It Gonna Be Alright
+Performed By: Brown Liquer
+Vocals By: RockStar & Bigg Swoop
+Produced By: Bigg Swoop & RockStar for VSQ
+
+Goon Squad
+Performed By: Goon Squad
+Produced By: Bigg Swoop for. VSQ & Caviar For Ft. Knoxx Productions 
+
+Don't Blame Me
+Performed By: Pimpin' Young
+Produced By: Pimpin' Young, Kokane/ Co-Produced T- Bone
+
+Legends
+Performed By: Boo Yaa Tribe
+Produced By: Battlecat for Sarinjay Entertainment
+
+Soo Woo
+Performed By: Resevoir Dogs
+Produced By: I-Funk Productions
+
+
+LICENSED MUSIC
+
+6 'n the morning
+( Tracy Marrow, Charles Glenn)
+(C) 1987 Colgems-EMI Music, Inc. and Rhyme Syndicate Music
+All rights controlled and administered 
+by Colgems-EMI Music, Inc. and Rhyme Syndicate Music
+All rights reserved. †International 
+copyright secured. †Used by permission.
+
+Performed by Ice-T
+Courtesy of Sire Records
+By arrangement with Warner Strategic Marketing Inc.
+(P) 1987 Sire Records
+
+I'm Your Pusher
+(Curtis Mayfield, Tracy Marrow, Charles Glenn)
+(C) 1988 Colgems-EMI Music, Inc., Rhyme 
+Syndicate Music and Warner-Tamerlane 
+Publishing Corp. (BMI). Samples 
+THE PUSHER MAN by Curtis 
+Mayfield ñ Warner Bros. Music
+All rights reserved. †International 
+copyright secured. †Used by permission.
+
+Performed by Ice-T
+Courtesy of Sire Records
+By arrangement with Warner Strategic Marketing Inc.
+(P) 1987 Sire Records
+
+For Tha Love Of $
+(S. Howse, B. McCane, C. Scruggs, 
+A. Henderson, S. Howse, E. Wright, M. Green, A. Carraby, Y. Smith)
+(C)WB Music Corp. (ASCAP), 
+Constructive Points Music  (ASCAP),
+Ruthless Attack Muzick (ASCAP),  
+Songs Of Universal, Inc. (BMI),  
+D.J. Yella Muzick (BMI) & DOLLARZ N SENSE MUZICK (BMI)
+All rights on behalf of Constructive Points Music
+Administered by WB Music Corp.
+All rights reserved. Used by permission.
+
+Performed by Bone Thugs N Harmony
+Courtesy of Ruthless Records
+
+Peace Sells
+(Dave Mustaine)
+(C) 1986 Dave Mustaine Music and Theory Music
+All rights for Dave Mustaine Music 
+controlled and administered by EMI Blackwood Music. (BMI)
+All rights reserved. †International 
+copyright secured. †Used by permission.
+
+Performed by Megadeth
+Courtesy of Capitol Records
+Under License from EMI Film & Television Music
+
+Symphony of Destruction
+ (Dave Mustaine)
+(C) 1992 Dave Mustaine Music and Theory Music
+All rights for Mustaine Music controlled 
+and administered by EMI Blackwood Music. (BMI)
+All rights reserved. †International 
+copyright secured. †Used by permission.
+
+Performed by Megadeth
+Courtesy of Capitol Records
+Under License from EMI Film & Television Music
+
+Bruises
+(J. Duenas, V. Escareno, P. Navarrette, M. Serrano)
+Published by Unloco Music (ASCAP). 
+All rights reserved. Used by permission.
+
+Performed by Unloco 
+Courtesy of Maverick Recording Company
+By arrangement with Warner Strategic Marketing Inc.
+(P) 2001 Maverick Recording Company
+www.unloco.com
+
+Not Like You
+(T. Narducci, A. Ruppell)
+Published by 2003 Big Music for Little People/
+Corporatejerkoffmoney (ASCAP). 
+All rights reserved. Used by permission
+
+Performed by Systematic
+Courtesy of Elektra Entertainment Group
+By arrangement with Warner Strategic Marketing Inc.
+(P) 2002 Elektra Entertainment Group
+www.systematic1.com
+
+The Formula
+( Marvin Gaye, James Nyx & Tracy Curry )
+(C) 1990 Jobete Music Co., Inc. and Dollarz 'n' Sense Muzick
+All rights for Jobete Music Co., Inc. 
+controlled and administered by EMI April Music, Inc. (ASCAP)
+All rights reserved. †International copyright secured.
+Used by permission.
+
+Performed by The D.O.C
+Courtesy of Elektra Entertainment Group
+By arrangement with Warner Strategic Marketing Inc.
+(P) 1989 Atlantic Recording Corp.
+
+Poem
+(M. DeWolf, P. Lipscomb, J. Montagne, S. Richards)
+Universal Polygram International Publishing/
+Taproot Publishing (ASCAP)
+
+Performed by Taproot
+Courtesy of Atlantic Recording Group
+By arrangement with Warner Strategic Marketing Inc.
+(P) 2000 Atlantic Recording Corp.
+www.taprootmusic.com
+
+Flashlight
+(W. Collins, G. Clinton Jr., B. Worrell)
+Universal Songs of Polygram International/
+Rubber Band Music (BMI), Bridgeport Music Inc. (BMI)
+
+Performed by Parliament
+Courtesy of The Island Def Jam Music Group
+Under license from Universal Music Enterprises
+
+Minerva
+(Camilo ëChino' Moreno, Stephan Carpenter, Chi Cheng,
+Abran Cunningham, Frank Delgado)
+(C)2003 WB Music Corp. (ASCAP) and My Rib Is Broke (ASCAP)
+All rights on behalf of My Rib is Broke (ASCAP)
+Administered by WB Music Corp. (ASCAP)
+All rights reserved. Used by permission.
+
+Performed by The Deftones
+Courtesy of Maverick Recording Company
+By arrangement with Warner Strategic Marketing Inc.
+(P) 2003 Maverick Recording Company
+
+(Not Just) Knee Deep
+(G. Clinton III, Philippe Wynn)
+Published by Bridgeport Music Inc. (BMI)
+All rights reserved. Used by permission.
+
+Performed by Funkadelic
+Courtesy of Funk Mob Music
+Under license from Funk Mob Music, LLC
+
+Thuggish Ruggish Bone
+(B. McCane, C. Scruggs, A. Henderson, 
+S. Howse, T. Middleton, K. McCloud)
+Ruthless Attack Muzick (ASCAP), Dollarz N Sense 
+Muzick, Keenu Songs (BMI) Black Hole West Publishing (BMI)
+All rights reserved. Used by permission
+
+Performed by Bone Thugs N Harmony
+Courtesy of Ruthless Records
+
+Saint Tropez is Not Far
+(Alejandro Rosso Gonzales and Juan Jose Gonzales Reyes)  
+(c) 2000 EMI April Music Inc. and P. Mosh Publishing                         
+All rights controlled and administered 
+by EMI April Music Inc. (ASCAP)
+All rights reserved. International copyright secured.
+Used by permission.   
+
+Performed by Plastina Mosh 
+Courtesy of†Astralwerks
+Under License from EMI Film & Television Music
+
+It's Funky Enuff
+(Leon F. Sylvers III, Tracy Curry)
+All rights reserved. Used by permission
+
+Performed by The D.O.C
+Courtesy of Elektra Entertainment Group
+By Arrangement With Warner Strategic Marketing Inc.
+(P) 1989 Atlantic Recording Corp.
+
+Afroman
+( Alejandro Rosso Gonzales & Juan Jose Gonzales Reyes )                   
+(c) 1999 EMI April Music Inc, P. Mosh Publishing                          
+All rights for P. Mosh Publishing controlled and administered by          
+EMI April Music Inc. (ASCAP)                                               
+All rights reserved. International copyright secured.
+Used by permission.
+
+Performed by Plastina Mosh
+Courtesy of Capitol Records
+Under license from EMI Film & Television Music
+
+Rock Star
+(Pharrell Williams & Chad Hugo)
+(C) 2002 EMI Blackwood Music, Inc., Waters of 
+Nazareth, EMI April Music, Inc., Chase Chad Music 
+All rights for Waters of Nazareth controlled and 
+administered by EMI Blackwood Music, Inc (BMI)
+All rights for Chase Chad Music controlled and 
+administered by EMI April Music, Inc. (ASCAP)
+All rights reserved. International copyright secured. 
+Used by permission.
+
+Performed by N.E.R.D. 
+Courtesy of Virgin Records
+Under License from EMI Film & Television Music
+
+Lapdance
+(Pharrell Williams, Chad Hugo, Malice from Clipse )                         
+(c) 2002 EMI Blackwood Music Inc., Waters of
+Nazareth, EMI April Music Inc., Chase Chad Music
+GEMARC. All rights for Waters of Nazareth 
+controlled and administered by              
+EMI Blackwood Music Inc. (BMI)                                                 
+All Rights for Chase Chad Music and 
+GEMARC controlled and administered        
+by EMI April Music Inc. (ASCAP)                                                
+All Rights Reserved. International 
+Copyright Secured. Used By Permission.  
+
+Performed by N.E.R.D.
+Courtesy of Virgin Records
+Under License from EMI Film & Television Music
+
+Let Me Know
+(R. Tooker, D. Tooker)
+Bloodyknucks Music, administered by 
+Abba-Cadaver Music (ASCAP)
+
+Performed by Grade 8
+Courtesy of Lava Records LLC
+By arrangement with Warner Strategic 
+Marketing Inc.
+(P) 2003 Lava Records LLC
+www.grade8music.com
+
+Foe Life
+(O. Jackson, D. Rolison)
+(C) 1997 WB Music Corp. (ASCAP), 
+Gangsta Boogie Music (ASCAP) and Real N Ruff Muzik (NS)
+All rights on behalf of itself and Gangsta Boogie Music. 
+Administered by WB Music Corp. All rights reserved. Used by permission.
+
+Performed by Mack 10
+Courtesy of Priority Records
+Under License from EMI Film & Television Music
+
+Levitate
+(Edwin Ghazal, Franz Masini, Andrew 
+Koshowski and Christopher Koshowski)
+(c) 1993 EMI April Music Inc. and Purpleberries Music
+All rights controlled and administered by 
+EMI April Music Inc. (ASCAP)      
+All rights reserved. International copyright secured.
+Used by permission.
+
+Performed by I†Mother Earth
+Courtesy of†Capitol Records
+Under license from EMI Film & Television Music
+
+Rain Will Fall
+(Edwin Ghazal, Franz Masini, Andrew Koshowski,
+and Christopher Koshowski)
+(c) 1993 EMI April Music Inc. and Purpleberries Music
+All rights controlled and administered by 
+EMI April Music Inc. (ASCAP)      
+All rights reserved. International copyright secured.
+Used by permission.
+
+Performed by I Mother Earth
+Courtesy of†Capitol Records
+Under license from EMI Film & Television Music
+
+The Snow
+( Simon Franks, Tom Dinsdale and Barry De Vorzon)                             
+(c) 2001 EMI Music Publishing Ltd. and 
+EMI Gold Horizon Music Corp.           
+All rights for EMI Music Publishing Ltd. controlled and 
+administered in the U.S. and Canada by EMI Blackwood Music Inc. (BMI)                             
+Contains elements of "S.W.A.T. Theme" (De Vorzon) (c) 1975                
+EMI Gold Horizon Music Corp.                                              
+All rights reserved. International copyright secured.
+Used by permission.
+
+Performed by AudioBullys
+Courtesy of Astralwerks
+Under License from EMI Film & Television Music
+
+Extra Special Thanks
+Monica Loya
+Jennifer Archer
+Mia Pearlman
+Dana Coffey
+Kim Regan
+The "Ampersand"
+Cottage Cheese
+Matt and Mike Chapman
+at
+Homestarrunner.com
+
+THANKS FOR PLAYING!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LAST STRING

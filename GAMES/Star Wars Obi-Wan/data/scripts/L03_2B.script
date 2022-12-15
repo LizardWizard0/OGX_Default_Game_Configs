@@ -1,0 +1,2143 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Actor  Qui A_Qui-Gon_01
+
+SetMissionCritical Qui
+
+ConsoleCommand "loadlightmaps 0"
+
+// Stage 1
+Actor Infantry41         A_Battledroid-Infantry_41
+Actor Infantry42         A_Battledroid-Infantry_42
+Actor Infantry43         A_Battledroid-Infantry_43
+Actor Infantry44         A_Battledroid-Infantry_44
+Actor Infantry45         A_Battledroid-Infantry_45
+Actor Infantry46         A_Battledroid-Infantry_46
+// Stage 2
+Actor Infantry47         A_Battledroid-Infantry_47
+Actor Infantry48         A_Battledroid-Infantry_48
+Actor Infantry49         A_Battledroid-Infantry_49
+Actor Infantry50         A_Battledroid-Infantry_50
+Actor Infantry51         A_Battledroid-Infantry_51
+Actor Commander04        A_Battledroid-Commander_04
+// Stage 3
+Actor Security21         A_Battledroid-Security_21
+Actor Security22         A_Battledroid-Security_22
+Actor Security23         A_Battledroid-Security_23
+Actor Security24         A_Battledroid-Security_24
+Actor Security25         A_Battledroid-Security_25
+Actor Security26         A_Battledroid-Security_26
+// Stage 4
+Actor Security27         A_Battledroid-Security_27
+Actor Security28         A_Battledroid-Security_28
+Actor Security29         A_Battledroid-Security_29
+Actor Security30         A_Battledroid-Security_30
+Actor Security31         A_Battledroid-Security_31
+Actor Commander05        A_Battledroid-Commander_05
+// Stage 5
+Actor Infantry52         A_Battledroid-Infantry_52
+Actor Infantry53         A_Battledroid-Infantry_53
+Actor Infantry54         A_Battledroid-Infantry_54
+Actor Kamikaze12         A_Battledroid-Kamikaze_12
+Actor Kamikaze13         A_Battledroid-Kamikaze_13
+Actor Kamikaze14         A_Battledroid-Kamikaze_14
+// Stage 6
+Actor Infantry55         A_Battledroid-Infantry_55
+Actor Infantry56         A_Battledroid-Infantry_56
+Actor Infantry57         A_Battledroid-Infantry_57
+Actor Security32         A_Battledroid-Security_32
+Actor Security33         A_Battledroid-Security_33
+Actor Commander06        A_Battledroid-Commander_06
+// Stage 7
+Actor Security34         A_Battledroid-Security_34
+Actor Security35         A_Battledroid-Security_35
+Actor Security36         A_Battledroid-Security_36
+Actor Kamikaze15         A_Battledroid-Kamikaze_15
+Actor Kamikaze16         A_Battledroid-Kamikaze_16
+Actor Kamikaze17         A_Battledroid-Kamikaze_17
+// Stage 8
+Actor Infantry58         A_Battledroid-Infantry_58
+Actor Infantry59         A_Battledroid-Infantry_59
+Actor Security37         A_Battledroid-Security_37
+Actor Security38         A_Battledroid-Security_38
+Actor Commander07        A_Battledroid-Commander_07
+Actor Commander08        A_Battledroid-Commander_08
+// Stage 9
+Actor Security39         A_Battledroid-Security_39
+Actor Security40         A_Battledroid-Security_40
+Actor Commander09        A_Battledroid-Commander_09
+Actor Kamikaze18         A_Battledroid-Kamikaze_18
+Actor Kamikaze19         A_Battledroid-Kamikaze_19
+Actor Kamikaze20         A_Battledroid-Kamikaze_20   
+
+// Ambush Area BAD Generators
+Actor Ubergen01        A_z_ubergen_01
+Actor Ubergen02        A_z_ubergen_02
+Actor Ubergen03        A_z_ubergen_03
+Actor Ubergen04        A_z_ubergen_04
+Actor Ubergen05        A_z_ubergen_05
+Actor Ubergen06        A_z_ubergen_06
+Actor Ubergen07        A_z_ubergen_07
+Actor Ubergen08        A_z_ubergen_08
+Actor Ubergen09        A_z_ubergen_09
+Actor Ubergen10        A_z_ubergen_10
+Actor Ubergen11        A_z_ubergen_11
+Actor Ubergen12        A_z_ubergen_12
+Actor Ubergen13        A_z_ubergen_13
+Actor Ubergen14        A_z_ubergen_14
+Actor Ubergen15        A_z_ubergen_15
+Actor Ubergen16        A_z_ubergen_16
+
+Node   Qui-GotoNode               
+
+Int    BeginAmbush                0
+Int    BADs-Alive-Hall01          0
+Int    BADs-Alive-Hall02          0
+Int    BADs-Alive-Hall03          0 
+Int    BADs-Alive-Hall04          0
+Int    BADs-Arrived-Hall01        0
+Int    BADs-Arrived-Hall02        0
+Int    BADs-Arrived-Hall03        0
+Int    BADs-Arrived-Hall04        0
+
+Int    BADSource-DoorLocked01     1
+Int    BADSource-DoorLocked02     1
+Int    BADSource-DoorLocked03     1
+Int    BADSource-Bridge           0    
+Int    InitialBADsAlive-Bridge    8
+Int    CurBADsAlive-Bridge        0
+
+Int    BeginMission               0
+Int    StartQuiGonFollow          0
+Int    MissionCompleted           0
+
+Int    SkipToBridge               0
+Int    TestQuiGon                 0
+
+AudioCue GasJetSnd01
+AudioCue GasJetSnd02
+AudioCue GasJetSnd03
+AudioCue QuiCuttingDoorSnd
+
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense1.wav Suspense
+AddMusic m_suspense_03.wav Suspense
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_10.wav Battle
+AddMusic m_battle_11.wav Battle
+
+AddBattleLoop  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakePartialControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+         Child WaitUntilNear Guy Obi 5.0
+         Child WaitUntilNear Guy Qui 5.0
+         WaitForAny
+         ReturnControlTo Guy
+         EndFunction "Run"
+    }
+    
+    RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "Activate" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime)
+{   
+    Pause PauseTime
+    
+    Teleport Guy StartSpot
+	TakePartialControlOf Guy
+
+    Childscript "Activate Interrupted"
+    {
+         Child WaitUntilNear Guy Obi 5.0
+         Child WaitUntilNear Guy Qui 5.0
+         WaitForAny
+         ReturnControlTo Guy
+         EndFunction "Activate"
+    }
+  
+	RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "GenerateAmbushBADs" (Actor Uber, Node GotoNode1, Node GotoNode2, Float PauseTime, Int HallNum)
+{
+    Actor Guy
+    
+    
+    Pause PauseTime
+    
+    TriggerUberGenAndWait Uber Guy
+    InvincibilityOn Guy
+
+    Childscript "Track Ambush BAD"
+    {
+        If (= HallNum 1)
+        {
+            Increment BADs-Alive-Hall01 1
+            WaitUntilKilled Guy
+            Decrement BADs-Alive-Hall01 1
+            EndFunction "GenerateAmbushBADs"
+        }
+        If (= HallNum 2)
+        {
+            Increment BADs-Alive-Hall02 1
+            WaitUntilKilled Guy
+            Decrement BADs-Alive-Hall02 1
+            EndFunction "GenerateAmbushBADs"
+        }
+        If (= HallNum 3)
+        {
+            Increment BADs-Alive-Hall03 1
+            WaitUntilKilled Guy
+            Decrement BADs-Alive-Hall03 1
+            EndFunction "GenerateAmbushBADs"
+        }
+        If (= HallNum 4)
+        {
+            Increment BADs-Alive-Hall04 1
+            WaitUntilKilled Guy
+            Decrement BADs-Alive-Hall04 1
+            EndFunction "GenerateAmbushBADs"
+        }
+    }  
+            
+    TakeControlOf Guy
+    RunToNodeAndWait Guy GotoNode1
+    
+    If (= HallNum 1)
+    {
+        Increment BADs-Arrived-Hall01 1
+        WaitUntilDoorOpen A_FF_fed_small_01
+    }
+    If (= HallNum 2)
+    {
+        Increment BADs-Arrived-Hall02 1
+        WaitUntilDoorOpen A_FF_fed_small_03
+    }
+    If (= HallNum 3)
+    {
+        Increment BADs-Arrived-Hall03 1
+        WaitUntilDoorOpen A_FF_fed_small_05
+    }
+    If (= HallNum 4)
+    {
+        Increment BADs-Arrived-Hall04 1
+        WaitUntilDoorOpen A_FF_fed_small_07
+    }
+
+    Call "Run" (Guy, GotoNode2, 0.0)    
+    InvincibilityOff Guy    
+    WaitForAll
+}
+
+Script "Ambush Area-Hall01"
+{
+    WaitUntilEqual BeginAmbush 1
+        
+    ActivateAsIfBySwitch A_FF_fed_small_01            
+        
+    Call "GenerateAmbushBADs" (Ubergen01, Ambush-Spot01, Ambush-FinalSpot01, 1.0, 1)
+    Call "GenerateAmbushBADs" (Ubergen02, Ambush-Spot02, Ambush-FinalSpot02, 0.0, 1)
+    Call "GenerateAmbushBADs" (Ubergen03, Ambush-Spot03, Ambush-FinalSpot03, 0.0, 1)
+    Call "GenerateAmbushBADs" (Ubergen04, Ambush-Spot04, Ambush-FinalSpot04, 1.0, 1)
+    
+    Pause 1.0
+
+//    WaitUntilEqual BADs-Alive-Hall01 BADs-Arrived-Hall01        
+    WaitUntilEqual BADs-Arrived-Hall01 4
+    Set BADs-Arrived-Hall01 0
+    
+    Pause 0.5
+    
+    ActivateAsIfBySwitch A_FF_fed_small_02
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_01
+    
+    WaitUntilDoorOpen A_FF_fed_small_01
+    
+    WaitUntilEqual BADs-Alive-Hall01 0
+    
+    WaitUntilAllCharactersExitedRegion Ambush_FF_Clear_01
+    
+    ActivateAsIfBySwitch A_FF_fed_small_01
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_02
+
+//    Loop    
+}
+
+Script "Ambush Area-Hall02"
+{
+    WaitUntilEqual BeginAmbush 1
+        
+    ActivateAsIfBySwitch A_FF_fed_small_03            
+        
+    Call "GenerateAmbushBADs" (Ubergen05, Ambush-Spot09, Ambush-FinalSpot05, 1.0, 2)
+    Call "GenerateAmbushBADs" (Ubergen06, Ambush-Spot10, Ambush-FinalSpot06, 0.0, 2)
+    Call "GenerateAmbushBADs" (Ubergen07, Ambush-Spot11, Ambush-FinalSpot07, 0.0, 2)
+    Call "GenerateAmbushBADs" (Ubergen08, Ambush-Spot12, Ambush-FinalSpot08, 1.0, 2)
+
+    Pause 1.0
+    
+//    WaitUntilEqual BADs-Alive-Hall02 BADs-Arrived-Hall02
+    WaitUntilEqual BADs-Arrived-Hall02 4
+    Set BADs-Arrived-Hall02 0
+    
+    Pause 0.5
+    
+    ActivateAsIfBySwitch A_FF_fed_small_04
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_03
+    
+    WaitUntilDoorOpen A_FF_fed_small_03
+    
+    WaitUntilEqual BADs-Alive-Hall02 0
+    
+    WaitUntilAllCharactersExitedRegion Ambush_FF_Clear_02
+    
+    ActivateAsIfBySwitch A_FF_fed_small_03
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_04
+
+//    Loop    
+}
+
+Script "Ambush Area-Hall03"
+{
+    WaitUntilEqual BeginAmbush 1
+        
+    ActivateAsIfBySwitch A_FF_fed_small_05            
+        
+    Call "GenerateAmbushBADs" (Ubergen09, Ambush-Spot17, Ambush-FinalSpot09, 1.0, 3)
+    Call "GenerateAmbushBADs" (Ubergen10, Ambush-Spot18, Ambush-FinalSpot10, 0.0, 3)
+    Call "GenerateAmbushBADs" (Ubergen11, Ambush-Spot19, Ambush-FinalSpot11, 0.0, 3)
+    Call "GenerateAmbushBADs" (Ubergen12, Ambush-Spot20, Ambush-FinalSpot12, 1.0, 3)
+
+    Pause 1.0
+        
+//    WaitUntilEqual BADs-Alive-Hall03 BADs-Arrived-Hall03
+    WaitUntilEqual BADs-Arrived-Hall03 4
+    Set BADs-Arrived-Hall03 0
+    
+    Pause 0.5
+    
+    ActivateAsIfBySwitch A_FF_fed_small_06
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_05
+
+    WaitUntilDoorOpen A_FF_fed_small_05
+    
+    WaitUntilEqual BADs-Alive-Hall03 0
+    
+    WaitUntilAllCharactersExitedRegion Ambush_FF_Clear_03
+    
+    ActivateAsIfBySwitch A_FF_fed_small_05
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_06
+
+//    Loop    
+}
+
+Script "Ambush Area-Hall04"
+{
+    WaitUntilEqual BeginAmbush 1
+        
+    ActivateAsIfBySwitch A_FF_fed_small_07            
+        
+    Call "GenerateAmbushBADs" (Ubergen13, Ambush-Spot25, Ambush-FinalSpot13, 1.0, 4)
+    Call "GenerateAmbushBADs" (Ubergen14, Ambush-Spot26, Ambush-FinalSpot14, 0.0, 4)
+    Call "GenerateAmbushBADs" (Ubergen15, Ambush-Spot27, Ambush-FinalSpot15, 0.0, 4)
+    Call "GenerateAmbushBADs" (Ubergen16, Ambush-Spot28, Ambush-FinalSpot16, 1.0, 4)
+
+    Pause 1.0
+    
+//    WaitUntilEqual BADs-Alive-Hall04 BADs-Arrived-Hall04
+    WaitUntilEqual BADs-Arrived-Hall04 4
+    Set BADs-Arrived-Hall04 0
+    
+    Pause 0.5
+    
+    ActivateAsIfBySwitch A_FF_fed_small_08
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_07
+
+    WaitUntilDoorOpen A_FF_fed_small_07
+    
+    WaitUntilEqual BADs-Alive-Hall04 0
+    
+    WaitUntilAllCharactersExitedRegion Ambush_FF_Clear_04
+    
+    ActivateAsIfBySwitch A_FF_fed_small_07
+    Pause 0.5
+    ActivateAsIfBySwitch A_FF_fed_small_08
+
+//    Loop    
+}
+
+Function "RunToRandomNode" (Actor Runner, Node GotoNode1, Node GotoNode2, Node Gotonode3, Node Gotonode4)
+{
+    Node DestinationNode
+    
+
+	RandomInt RandomNode 1 4
+
+	if (= RandomNode 1)
+	{
+		Set DestinationNode GotoNode1
+	}
+	if (= RandomNode 2)
+	{
+		Set DestinationNode GotoNode2
+	}
+	if (= RandomNode 3)
+	{
+		Set DestinationNode GotoNode3
+	}
+	if (= RandomNode 4)
+	{
+		Set DestinationNode GotoNode4
+	}
+
+	TakePartialControlOf Runner
+	RunToNodeAndWait Runner DestinationNode
+}
+
+Function "CreateExplosion" (Refpos ExplosionSpot)
+{
+    PlayAudioCue grenade_explosion.aud SpriteEffect
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+    CreateParticleGen firegrenadeSmoke.gen FGS ExplosionSpot
+    CreateParticleGen firegrenade.gen FG ExplosionSpot
+    Pause 0.25
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+    Pause 0.5
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+    Pause 0.75
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot    
+}
+
+Function "PowerUpRemoval" (Actor PowerUp, Int PowerUpGroup)
+{
+    WaitUntilRemoved PowerUp
+    RemoveGroup PowerUpGroup
+//    Save
+}
+
+Function "CheckBridgeRegions" (Int Stage)
+{
+    If (IsInRegion Obi BAD_Source_01_Rgn)
+    {
+        Call "SetBridgeBADStage" (1, Stage)
+    }
+    
+    If (IsInRegion Obi BAD_Source_02_Rgn)
+    {
+        Call "SetBridgeBADStage" (2, Stage)
+    }
+
+    If (IsInRegion Obi BAD_Source_03_Rgn)
+    {
+        Call "SetBridgeBADStage" (3, Stage)    
+    }
+    
+    If (IsNotInRegion Obi BAD_Source_01_Rgn)
+    {
+        If (IsNotInRegion Obi BAD_Source_02_Rgn)
+        {
+            If (IsNotInRegion Obi BAD_Source_03_Rgn)
+            {
+                Call "SetBridgeBADStage" (0, Stage)
+            }
+        }
+    }
+}
+
+Function "SetBridgeBADStage" (Int RegionOccupied, Int Stage)
+{
+    Refpos StartSpot01
+    Refpos StartSpot02
+    Refpos StartSpot03
+    Refpos StartSpot04
+    Refpos StartSpot05
+    Refpos StartSpot06
+    Node   GotoNode01
+    Node   GotoNode02
+    Node   GotoNode03
+    Node   GotoNode04
+    Node   GotoNode05
+    Node   GotoNode06
+
+
+	// Select a random source for BADs
+	RandomInt BADSource 1 3
+
+	// Check if Obi is near the selected BAD source generators
+	While (= BADSource RegionOccupied)
+	{
+		RandomInt BADSource 1 3
+          If (= BADSource BADSource-Bridge)
+          {
+              Set BADSource RegionOccupied
+          }
+	}
+
+    Set BADSource-Bridge BADSource
+
+	if (= BADSource 1)
+	{
+        Set StartSpot01 BADSource01-Spot01
+        Set StartSpot02 BADSource01-Spot02
+        Set StartSpot03 BADSource01-Spot03
+        Set StartSpot04 BADSource01-Spot04
+        Set StartSpot05 BADSource01-Spot05
+        Set StartSpot06 BADSource01-Spot06
+        Set GotoNode01 BADSource01-Spot01
+        Set GotoNode02 BADSource01-Spot02
+        Set GotoNode03 BADSource01-Spot03
+        Set GotoNode04 BADSource01-Spot04
+        Set GotoNode05 BADSource01-Spot05
+        Set GotoNode06 BADSource01-Spot06
+    }
+	if (= BADSource 2)
+	{
+        Set StartSpot01 BADSource02-Spot01
+        Set StartSpot02 BADSource02-Spot02
+        Set StartSpot03 BADSource02-Spot03
+        Set StartSpot04 BADSource02-Spot04
+        Set StartSpot05 BADSource02-Spot05
+        Set StartSpot06 BADSource02-Spot06
+        Set GotoNode01 BADSource02-Spot01
+        Set GotoNode02 BADSource02-Spot02
+        Set GotoNode03 BADSource02-Spot03
+        Set GotoNode04 BADSource02-Spot04
+        Set GotoNode05 BADSource02-Spot05
+        Set GotoNode06 BADSource02-Spot06
+    }
+	if (= BADSource 3)
+	{
+        Set StartSpot01 BADSource03-Spot01
+        Set StartSpot02 BADSource03-Spot02
+        Set StartSpot03 BADSource03-Spot03
+        Set StartSpot04 BADSource03-Spot04
+        Set StartSpot05 BADSource03-Spot05
+        Set StartSpot06 BADSource03-Spot06
+        Set GotoNode01 BADSource03-Spot01
+        Set GotoNode02 BADSource03-Spot02
+        Set GotoNode03 BADSource03-Spot03
+        Set GotoNode04 BADSource03-Spot04
+        Set GotoNode05 BADSource03-Spot05
+        Set GotoNode06 BADSource03-Spot06
+    }
+    
+    if (= Stage 1)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+                                
+        Call "CreateBridgeBAD" (Infantry41, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry42, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry43, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Infantry44, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Infantry45, StartSpot05, GotoNode05, 0.0)
+//        Call "CreateBridgeBAD" (Infantry46, StartSpot06, GotoNode06, 0.0)
+
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+    }
+    if (= Stage 2)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5            
+        
+        Call "CreateBridgeBAD" (Infantry47, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry48, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry49, StartSpot03, GotoNode03, 0.0)
+//        Call "CreateBridgeBAD" (Infantry50, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Infantry51, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander04, StartSpot06, GotoNode06, 0.0)
+        
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5
+        CallAndWait "CheckBridgeBADDoor" (BADSource)        
+    }
+    if (= Stage 3)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+            
+        Call "CreateBridgeBAD" (Security21, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security22, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security23, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Security24, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Security25, StartSpot05, GotoNode05, 0.0)
+//        Call "CreateBridgeBAD" (Security26, StartSpot06, GotoNode06, 0.0)
+
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5        
+        CallAndWait "CheckBridgeBADDoor" (BADSource)        
+    }
+    if (= Stage 4)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+            
+        Call "CreateBridgeBAD" (Security27, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security28, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security29, StartSpot03, GotoNode03, 0.0)
+//        Call "CreateBridgeBAD" (Security30, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Security31, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander05, StartSpot06, GotoNode06, 0.0)
+        
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5        
+        CallAndWait "CheckBridgeBADDoor" (BADSource)           
+    }
+    if (= Stage 5)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+            
+        Call "CreateBridgeBAD" (Infantry52, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry53, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry54, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze12, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Kamikaze13, StartSpot05, GotoNode05, 0.0)
+//        Call "CreateBridgeBAD" (Kamikaze14, StartSpot06, GotoNode06, 0.0)
+
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5        
+        CallAndWait "CheckBridgeBADDoor" (BADSource)        
+    }
+    if (= Stage 6)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5                    
+    
+        Call "CreateBridgeBAD" (Infantry55, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry56, StartSpot02, GotoNode02, 0.0)
+//        Call "CreateBridgeBAD" (Infantry57, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Security32, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Security33, StartSpot05, GotoNode05, 0.0)
+//        Call "CreateBridgeBAD" (Commander06, StartSpot06, GotoNode06, 0.0)
+
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5        
+        CallAndWait "CheckBridgeBADDoor" (BADSource)        
+    }
+    if (= Stage 7)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+            
+        Call "CreateBridgeBAD" (Security34, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security35, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security36, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze15, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Kamikaze16, StartSpot05, GotoNode05, 0.0)
+//        Call "CreateBridgeBAD" (Kamikaze17, StartSpot06, GotoNode06, 0.0)
+
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5        
+        CallAndWait "CheckBridgeBADDoor" (BADSource)        
+    }
+    if (= Stage 8)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+            
+        Call "CreateBridgeBAD" (Infantry58, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry59, StartSpot02, GotoNode02, 0.0)
+//        Call "CreateBridgeBAD" (Security37, StartSpot03, GotoNode03, 0.0)
+//        Call "CreateBridgeBAD" (Security38, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Commander07, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander08, StartSpot06, GotoNode06, 0.0)
+        
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5         
+        CallAndWait "CheckBridgeBADDoor" (BADSource)               
+    }
+    if (= Stage 9)
+    {
+        CallAndWait "CheckBridgeBADDoor" (BADSource)
+        Pause 0.5        
+            
+        Call "CreateBridgeBAD" (Security39, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security40, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Commander09, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze18, StartSpot04, GotoNode04, 0.0)
+//        Call "CreateBridgeBAD" (Kamikaze19, StartSpot05, GotoNode05, 0.0)
+//        Call "CreateBridgeBAD" (Kamikaze20, StartSpot06, GotoNode06, 0.0)
+
+        Call "UnlockBADSource" (BADSource)
+        Pause 0.5        
+        CallAndWait "CheckBridgeBADDoor" (BADSource)        
+    }
+}
+
+Function "CheckBridgeBADDoor" (Int BADSource)
+{
+    If (= BADSource 1)
+    {
+        While (= BADSource-DoorLocked01 0)
+        {
+            Child WaitUntilAllCharactersExitedRegion BAD_Source_01_Rgn
+            Child WaitUntilAllCharactersExitedRegion blastdoor_92_clear
+            WaitForAll
+        
+            CloseDoor A_01_d_blastdoor_92
+            WaitUntilDoorClosed A_01_d_blastdoor_92
+        
+            If (NoCharactersInRegion BAD_Source_01_Rgn)
+            {
+                LockDoor A_01_d_blastdoor_92
+                // Display "Door 1 Locked" 1.0
+                Set BADSource-DoorLocked01 1
+//            EndFunction "CheckBridgeBADDoor"
+            }
+        }
+    }
+
+    If (= BADSource 2)
+    {
+        While (= BADSource-DoorLocked02 0)
+        {
+            Child WaitUntilAllCharactersExitedRegion BAD_Source_02_Rgn
+            Child WaitUntilAllCharactersExitedRegion blastdoor_93_clear
+            WaitForAll
+        
+            CloseDoor A_01_d_blastdoor_93
+            WaitUntilDoorClosed A_01_d_blastdoor_93
+        
+            If (NoCharactersInRegion BAD_Source_02_Rgn)
+            {
+                LockDoor A_01_d_blastdoor_93
+                // Display "Door 2 Locked" 1.0     
+                Set BADSource-DoorLocked02 1
+//            EndFunction "CheckBridgeBADDoor"
+            }
+        }
+    }
+
+    If (= BADSource 3)
+    {
+        While (= BADSource-DoorLocked03 0)
+        {
+            Child WaitUntilAllCharactersExitedRegion BAD_Source_03_Rgn
+            Child WaitUntilAllCharactersExitedRegion blastdoor_94_clear
+            WaitForAll
+        
+            CloseDoor A_01_d_blastdoor_94
+            WaitUntilDoorClosed A_01_d_blastdoor_94
+        
+            If (NoCharactersInRegion BAD_Source_03_Rgn)
+            {
+                LockDoor A_01_d_blastdoor_94
+                // Display "Door 3 Locked" 1.0      
+                Set BADSource-DoorLocked03 1
+//            EndFunction "CheckBridgeBADDoor"
+            }
+        }
+    }
+                
+//    Loop
+}
+
+Function "UnlockBADSource" (Int BADSource)
+{
+    If (= BADSource 1)
+    {
+        UnlockDoor A_01_d_blastdoor_92
+        // Display "Door 1 Unlocked" 1.0
+        Set BADSource-DoorLocked01 0
+    }
+    If (= BADSource 2)
+    {
+        UnlockDoor A_01_d_blastdoor_93
+        // Display "Door 2 Unlocked" 1.0        
+        Set BADSource-DoorLocked02 0        
+    }
+    If (= BADSource 3)
+    {
+        UnlockDoor A_01_d_blastdoor_94    
+        // Display "Door 3 Unlocked" 1.0        
+        Set BADSource-DoorLocked03 0        
+    }
+}
+
+Function "CreateBridgeBAD" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime)
+{
+    Call "Activate" (Guy, StartSpot, GotoNode, PauseTime)
+    Call "TrackBridgeBAD" (Guy)
+}
+
+Function "TrackBridgeBAD" (Actor Guy)
+{
+    Increment CurBADsAlive-Bridge 1
+    WaitUntilKilled Guy
+    Decrement CurBADsAlive-Bridge 1
+}
+
+Function "Qui Return To Door"
+{
+    Float ObiDistance
+    
+    StopActions Qui
+
+    RunToNodeAndWait Qui Qui_Cutting_Door
+/*
+    DistanceBetweenActorAndRefpos Obi Qui_Cutting_Door ObiDistance    
+    If (< ObiDistance 0.75)
+    {
+        Teleport Obi Obi-Moved
+    }
+*/
+    WaitUntilFarFromRefpos Obi Qui_Cutting_Door 0.75
+
+    Teleport Qui Qui_Cutting_Door    
+    LookAtAndWait Qui A_01_d_conf_01
+        
+    EquipWeapon Qui
+    
+    Call "Qui Cutting Door Sound"
+    PlayAnimationLooping Qui human_braceweapon-quiopenlock.anim 1.0 0.0
+        
+    Pause 0.5
+    ParticleGenOn DC
+}        
+
+Function "Qui Cutting Door Sound"
+{
+    PlayAudioCueAndWait qui-gon_door.aud Startup Cutting_Door_Effect
+    CreateAudioCue QuiCuttingDoorSnd qui-gon_door.aud Running Cutting_Door_Effect
+}
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene" 32
+{
+	BeginCutScene
+	FadeUpAndWait
+
+    PreEndCutscene
+    FadeUp 0.0
+    Set Qui-GotoNode Qui_Cutting_Door
+    Set BeginMission 1
+    StartMusicManager
+	EndCutScene
+
+    SetStartPosition 0
+    RemoveGroup 32
+    Save
+                
+    If (= SkipToBridge 1)
+    {
+        Teleport Qui Qui-BridgeStart
+        Teleport Obi Obi-BridgeStart
+    }    
+}
+
+Script "Opening Cutscene 2" 31
+{
+    If (IsGroupRemoved 32)
+    {
+        Set BeginMission 0
+        Set StartQuiGonFollow 0
+        StartMusicManager
+        FadeUpAndWait
+        Set BeginMission 1
+    }
+}
+
+Script "Closing Cutscene"
+{
+    Actor Destroyer01        A_DestroyerDroid_01
+    Actor Destroyer02        A_DestroyerDroid_02    
+
+
+    WaitUntilEqual MissionCompleted 1
+
+    EndScript "Qui-Gon Run Speed"
+    SetRunForwardSpeed Qui 6.6
+    
+    RemoveActor A_PowerupFullHealth_03
+    RemoveActor A_PowerupUnlimitedForce_03
+    RemoveActor A_PowerupHealth_15
+    RemoveActor A_PowerupHealth_16    
+
+	Pause 2	 
+	EquipWeapon Qui
+    DisableEquipment Obi
+    
+    InvincibilityOn Obi
+    InvincibilityOn Qui
+    
+    TakeControlOf Destroyer01
+    TakeControlOf Destroyer02
+    TakeControlOf Obi
+    
+    StopActions Obi
+    
+//    Teleport Destroyer01 BADSource02-Spot04
+//    Teleport Destroyer02 BADSource02-Spot06
+    Teleport Destroyer01 Destroyer1Start
+    Teleport Destroyer02 Destroyer2Start
+    Teleport Obi Obi-EndSpot01
+    
+    BeginCutscene
+    
+    StopMusicManager
+    PlayFlourish cut_3_2bextro_m.wav
+    
+	CameraFixed endshot0        // Shot 1
+
+    RunToNodeAndWait Obi ObiSpot1
+    LookAtAndWait Obi A_01_d_blastdoor_93
+    StopActions Obi
+    
+    ChildScript
+	{
+	    RunToNodeAndWait Destroyer01 Destroyer1Spot1
+	    DedRollOff Destroyer01
+	}
+    ChildScript
+	{
+	    RunToNodeAndWait Destroyer02 Destroyer2Spot1
+	    DedRollOff Destroyer02
+	}
+//    WaitForAll
+
+    Pause 1.0
+
+	CameraFixed endshot1          // Shot 2
+    Pause 4.5
+    
+	CameraFixed bogan1            // Shot 3
+    SayLineNonPositional Obi "/Obi-Wan_389/Master! Destroyers!"
+
+    // Qui Gon stop cutting door
+    ParticleGenOff DC
+    StopAnimation Qui
+    StopAudioCue QuiCuttingDoorSnd 
+    UnEquipWeapon Qui    
+    
+    RunToNodeAndWait Qui QuiSpot1
+//    LookAtAndWait Qui A_01_d_blastdoor_93
+    LookAtAndWait Qui Destroyer01
+    LookAtAndWait Obi Destroyer02
+//    StopActions Qui
+    Pause 0.5
+    EnableEquipment Obi
+//    EquipWeapon Obi
+    EquipWeapon Qui
+    Pause 1.0
+    
+	DedRollOff Destroyer01
+	DedRollOff Destroyer02
+
+    StopActions Destroyer01
+    StopActions Destroyer02
+        
+    Teleport Destroyer01 Destroyer1Spot1
+    Teleport Destroyer02 Destroyer2Spot1
+                                                                        
+    CameraFixed endshot2        // Shot 4
+
+    Child LookAtAndWait Destroyer01 A_01_d_conf_01
+    Child LookAtAndWait Destroyer02 A_01_d_conf_01
+    WaitForAll
+
+    StopActions Destroyer01
+    StopActions Destroyer02    
+
+    ForceTarget Destroyer01 Qui
+    ForceTarget Destroyer02 Obi
+            
+    Pause 0.5
+    
+    Childscript "Destroyers Firing"
+    {
+        FireAt Destroyer01 Qui
+        Pause 0.1
+        FireAt Destroyer02 Obi
+        Pause 0.1
+        
+        Loop
+    }
+    
+    Pause 1.5
+    
+    CameraFixed endshot3        // Shot 5
+    Pause 1.0
+
+	CameraFixed endshot0        // Shot 6
+    SetSFXVolume -10 0
+    SayLineNonPositional Obi "/Obi-Wan_390/They have shield generators!"
+    Pause 0 1
+
+    CameraFixed endshot4        // Shot 7 
+    SetSFXVolume 0 0
+    Pause 1.5
+
+	CameraFixed endshot0        // Shot 8
+    SetSFXVolume -10 0
+    SayLineNonPositionalAndContinue Qui "/Qui-Gon_391/It's a standoff! Let's go!"
+    Pause 1.5
+
+    CameraFixed endshot3        // Shot 9
+    SetSFXVolume 0 0    
+    EndScript "Destroyers Firing"
+    
+    Childscript "Destroyers Firing 2"
+    {
+        FireAt Destroyer01 A_01_d_conf_01
+        Pause 0.1
+        FireAt Destroyer02 A_01_d_conf_01
+        Pause 0.1
+        Loop
+    }
+    
+    StopActions Obi    
+    StopActions Qui
+    
+    RunToNode Obi ObiSpot2
+    RunToNode Qui QuiSpot2
+
+    Pause 1.0
+    //Qui and Obi Run to right; big explosion
+    Call "CreateExplosion" (Bridge-Explosion01)
+
+    Pause 0.5
+    
+    EndScript "Destroyers Firing 2"            
+
+    StopFiringAt Destroyer01
+    StopFiringAt Destroyer02
+        
+    CameraFixed endshot4            // Shot 10
+            
+    Pause 1.0
+
+    DisableDEDRoll Destroyer01
+    DisableDEDRoll Destroyer02
+    
+	ChildScript
+	{
+	    WalkToNode Destroyer01 QuiSpot1
+	    WalkToNode Destroyer02 ObiSpot1
+	}
+
+    Pause 2.5
+    
+    RunToNode Obi ObiSpot3
+    RunToNode Qui QuiSpot3
+    Pause 1.0
+    
+    CameraFixed endshot5            // Shot 11
+    SetSFXVolume -10 0
+        
+	ChildScript
+	{
+	    Pause 3
+	    WalkToNode Destroyer01 ObiSpot3
+	    WalkToNode Destroyer02 QuiSpot3
+    }
+				    
+    SayLineNonPositional Qui "/Qui-Gon_392/We've got to warn the Naboo and contact Chancelor Velorum."
+    SayLineNonPositional Obi "/Obi-Wan_393/The main hangar is this way.  Let's split up."
+//    SayLine Qui "Stow aboard separate ships and meet down on the planet."
+
+    Pause 0.5
+      
+//    Child UnEquipWeapon Obi
+    Child DisableEquipment Obi
+    Child UnEquipWeapon Qui
+    WaitForAll
+    
+    Pause 1.0
+        
+    UnlockDoor A_01_d_tube2_32
+    OpenDoor A_01_d_tube2_32
+    
+    RunToNode Qui QuiSpot4
+    RunToNode Obi ObiSpot4
+    
+    Pause 1.0
+    
+    FadeDownAndWait 
+
+    PreEndCutscene
+    FadeDown 0.0
+    Set BeginMission 0
+    EndCutscene
+    
+    NextLevel L03_4
+}
+
+Script "Obi-Wan Death Cleanup"
+{
+    ContinueWhenPlayerDies
+    
+    WaitUntilKilled Obi
+    AiAudioOff Qui
+    
+//    Set BeginMission 0
+//    Set StartQuiGonFollow 0
+//    Save
+}
+
+Script  "Qui Gon Killed - Mission Failed"
+{
+    MakeResurrectable Qui
+
+    WaitUntilKilled Qui
+    
+    ParticleGenOff DC    
+//    StopAnimation Qui
+        
+    BeginCutScene
+    
+    CameraOrbit Qui 3.0 4.0 10.0 0.0 1
+    
+	Pause 1.0    
+    
+	CommunicatorOn
+	CommunicatorMessageAndWait "You have allowed Qui Gon to be killed.  You have much to learn, Padawan."
+	CommunicatorMessageAndWait "Game Over."
+
+    Pause 3.0
+
+    FadeDownAndWait
+
+    PreEndCutscene
+    FadeDown 0.0
+    EndCutScene
+
+    FailMission    
+}
+
+Script "Level Transistion To L03_2A"
+{
+/*
+    WaitUntilEnteredRegion Obi L03_2A_Trig
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    LookAt Obi A_01_d_conf_04    
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    
+    PreEndCutscene
+    FadeDown 0.0
+    Set BeginMission 0
+    EndCutscene
+    
+    Save
+    
+    NextPart L03_2A
+*/
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Set Far Clip"
+{
+    SetFarClip 350 0
+}
+
+Script "Load DLG Files"
+{
+    LoadDLG bad.dlg
+}
+
+Script "Set Pain Region Values"
+{
+    SetPainRegion Hangar02_Pain_Rgn 9999.0
+    
+    WaitUntilEnteredRegion Qui Hangar02_Pain_Rgn
+    InvincibilityOff Qui
+}
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 01_HLa_floor.sur
+}
+
+Script "Lock Doors"
+{
+    LockDoor A_01_d_conf_04
+    LockDoor A_01_d_conf_03
+    LockDoor A_3-2_fabdoor_02
+    LockDoor A_3-2_fabdoor_03 
+
+    LockDoor A_01_d_blastdoor_54
+    LockDoor A_01_d_blastdoor_55
+    
+    LockDoor A_01_d_blastdoor_92
+    LockDoor A_01_d_blastdoor_93
+    LockDoor A_01_d_blastdoor_94
+}
+
+Script "Lock Elevators"
+{
+    LockDoor A_3-2_elevator_03
+    LockDoor A_3-2_elevator_04
+}
+
+Script "Exploration Markers"
+{
+    Call PowerUpRemoval (A_powerupexplorationmarker_01, 21)
+    Call PowerUpRemoval (A_powerupexplorationmarker_02, 22)
+    Call PowerUpRemoval (A_powerupexplorationmarker_03, 23)    
+}
+
+Script "Initialize Qui-Gon"
+{
+    If (IsGroupRemoved 32)
+    {
+    If (= StartPosition 0)
+    {
+        Set Qui-GotoNode Qui_Cutting_Door
+    }
+    If (= StartPosition 4)
+    {
+        Teleport Qui Qui-StartSpot01
+        Set Qui-GotoNode Qui_Cutting_Door
+    }
+    If (= StartPosition 6)
+    {
+        Teleport Qui Qui-StartSpot02
+        Set Qui-GotoNode Qui_Cutting_Door
+    }
+    If (= StartPosition 11)
+    {
+        Teleport Qui Qui-StartSpot03
+        Set Qui-GotoNode Qui_Cutting_Door
+    }
+    If (= StartPosition 14)
+    {
+        Teleport Qui Qui-BridgeStart
+        Set Qui-GotoNode Qui_Cutting_Door
+    }
+    }
+}
+
+Script "Set Qui-Gon Defaults"
+{
+    InvincibilityOn Qui
+    SetRunForwardSpeed Qui 6.6
+    SetMaxAttackers Qui 3
+}
+
+Script "Qui-Gon Follows"
+{
+    WaitUntilEqual StartQuiGonFollow 1
+    
+    TakePartialControlOf Qui 0.35 False
+    SetFollowPlayer Qui
+
+    RunToNode Qui Qui-GotoNode
+}
+
+Script "Qui-Gon Waits"
+{
+    Int PlayCue            0
+    
+    
+    WaitUntilEqual StartQuiGonFollow 1
+
+    While (= StartQuiGonFollow 1)
+    {
+	    WaitUntilStateActivated Qui Puppet
+        Pause 0.2
+	    WaitUntilStateShutDown Qui Puppet
+
+	    WaitUntilStateActivated Qui FollowPlayer
+        Set PlayCue 1
+        
+        Script "Qui Gon Cues"
+        {
+//            Display "Qui Gon Cues Start" 1.0
+            WaitUntilEqual PlayCue 1
+    
+            While (= PlayCue 1)
+            {
+    	      PlayAudioCue Qui "FollowMe" 30.0 //don't play follow cue more than every 30 seconds
+                PlayGesture Qui AttractAttention
+                Pause 10.0
+            }
+        }
+        
+        Pause 0.2        
+        WaitUntilStateShutDown Qui FollowPlayer
+        Set PlayCue 0
+        EndScript "Qui Gon Cues"
+//        Display "Qui Gon Cues End" 1.0        
+    }
+}
+
+Script "Qui-Gon Run Speed"
+{
+    WaitUntilFar Obi Qui 50.0
+    SetRunForwardSpeed Qui 13.2
+//    Display "Force Run!" 1.0
+
+    WaitUntilNear Obi Qui 30.0
+    SetRunForwardSpeed Qui 6.6
+//    Display "Normal Run" 1.0
+
+    Loop
+}
+
+Script "Reset Forcefields"
+{
+    ActivateAsIfBySwitch A_FF_fed_small_01
+    ActivateAsIfBySwitch A_FF_fed_small_02
+    ActivateAsIfBySwitch A_FF_fed_small_03
+    ActivateAsIfBySwitch A_FF_fed_small_04
+    ActivateAsIfBySwitch A_FF_fed_small_05
+    ActivateAsIfBySwitch A_FF_fed_small_06
+    ActivateAsIfBySwitch A_FF_fed_small_07
+    ActivateAsIfBySwitch A_FF_fed_small_08
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//-------------------------- Start Positions --------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Start Position-Factory" 1
+{
+    WaitUntilEnteredRegion Obi Start-Factory
+    RemoveGroup 1
+    SetStartPosition 4
+    Save
+}
+
+Script "Start Position-Ambush" 2
+{
+    WaitUntilEnteredRegion Obi Start-Ambush
+    RemoveGroup 2
+    SetStartPosition 6
+    Save
+}
+
+Script "Start Position-Vent Exit" 3
+{
+    WaitUntilEnteredRegion Obi Vent_Exit
+    RemoveGroup 3
+    SetStartPosition 11
+    Save
+}
+
+Script "Start Position-Near Bridge" 4
+{
+    WaitUntilEnteredRegion Obi NearCommandBridge
+    RemoveGroup 4
+    SetStartPosition 14
+    Save
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambient ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "PK4s 01"
+{
+    Actor PK4_01        A_pk-4_01
+    Actor PK4_02        A_pk-4_02
+    
+    SetPatrolTypes PK4_01 1
+    SetPatrolTypes PK4_02 1
+    SetPatrolAttentionSpan PK4_01 300.0
+    SetPatrolAttentionSpan PK4_02 300.0
+    AddPatrolState PK4_01    
+    AddPatrolState PK4_02
+}
+
+Script "PKs Not Harmed By Gas"
+{
+    Actor PK4_01        A_pk-4_01
+    Actor PK4_02        A_pk-4_02
+
+    ChildScript "PK4_01-Gas Jet 01"
+    {
+        WaitUntilEnteredRegion PK4_01 PK4_Gas_Rgn_01
+        InvincibilityOn PK4_01
+        WaitUntilExitedRegion PK4_01 PK4_Gas_Rgn_01
+        InvincibilityOff PK4_01
+        Loop
+    }
+    ChildScript "PK4_01-Gas Jet 02"
+    {
+        WaitUntilEnteredRegion PK4_01 PK4_Gas_Rgn_02
+        InvincibilityOn PK4_01
+        WaitUntilExitedRegion PK4_01 PK4_Gas_Rgn_02
+        InvincibilityOff PK4_01
+        Loop
+    }
+    ChildScript "PK4_01-Gas Jet 03"
+    {
+        WaitUntilEnteredRegion PK4_01 PK4_Gas_Rgn_03
+        InvincibilityOn PK4_01
+        WaitUntilExitedRegion PK4_01 PK4_Gas_Rgn_03
+        InvincibilityOff PK4_01
+        Loop
+    }
+    ChildScript "PK4_02-Gas Jet 01"
+    {
+        WaitUntilEnteredRegion PK4_02 PK4_Gas_Rgn_01
+        InvincibilityOn PK4_02
+        WaitUntilExitedRegion PK4_02 PK4_Gas_Rgn_01
+        InvincibilityOff PK4_02
+        Loop
+    }
+    ChildScript "PK4_02-Gas Jet 02"
+    {
+        WaitUntilEnteredRegion PK4_02 PK4_Gas_Rgn_02
+        InvincibilityOn PK4_02
+        WaitUntilExitedRegion PK4_02 PK4_Gas_Rgn_02
+        InvincibilityOff PK4_02
+        Loop
+    }
+    ChildScript "PK4_02-Gas Jet 03"
+    {
+        WaitUntilEnteredRegion PK4_02 PK4_Gas_Rgn_03
+        InvincibilityOn PK4_02
+        WaitUntilExitedRegion PK4_02 PK4_Gas_Rgn_03
+        InvincibilityOff PK4_02
+        Loop
+    }
+}
+
+Script "Nemoidians 01"
+{
+}
+
+Script "Vent Show 01"
+{
+    Actor Commander11        A_Battledroid-Commander_11
+    Actor Infantry68         A_Battledroid-Infantry_68
+    Actor Infantry69         A_Battledroid-Infantry_69
+    Actor Infantry70         A_Battledroid-Infantry_70
+    
+    
+    TakeControlOf Commander11
+    TakeControlOf Infantry68
+    TakeControlOf Infantry69
+    TakeControlOf Infantry70
+
+    WaitUntilEnteredRegion Obi VentShow01_Rgn
+
+    Child WalkToNodeAndWait Commander11 VS1-Spot01
+    Child WalkToNodeAndWait Infantry69 VS1-Spot02
+    Pause 0.5
+    Child WalkToNodeAndWait Infantry70 VS1-Spot03
+    Child WalkToNodeAndWait Infantry68 VS1-Spot04
+    WaitForAll
+
+    Sayline Commander11 "/BattleDroidInfantry6_5/Report in." PalmUpRight
+    
+    Sayline Infantry69 "/BattledroidInfantry_666/Security breach in Section 32!"
+
+    Sayline Commander11 "/BattledroidInfantry_1033/Be on your guard."
+    Sayline Commander11 "/BattledroidInfantry_667/Send reinforcements to Sector 6-B!"
+    Sayline Commander11 "/BattleDroidInfantry1_61/The viceroy must not be discovered."
+    Sayline Commander11 "/BattledroidInfantry_1088/Continue with your patrol." PointForward
+
+    Sayline Infantry69 "/BattleDroidInfantry6_7/Roger-roger."
+    
+    Child WalkToNodeAndWait Commander11 VS1-Spot05
+    Child WalkToNodeAndWait Infantry69 VS1-Spot06
+    Pause 0.5
+    Child WalkToNodeAndWait Infantry70 VS1-Spot07
+    Child WalkToNodeAndWait Infantry68 VS1-Spot08
+    WaitForAll
+    
+    RemoveActor Commander11
+    RemoveActor Infantry68
+    RemoveActor Infantry69
+    RemoveActor Infantry70        
+}
+
+Script "Vent Show 02"
+{
+    Actor Infantry71         A_Battledroid-Infantry_71
+    Actor Infantry72         A_Battledroid-Infantry_72
+    
+
+    TakeControlOf Infantry71
+    TakeControlOf Infantry72
+    
+    WaitUntilEnteredRegion Obi VentShow02_Rgn
+    
+    Child WalkToNodeAndWait Infantry71 VS2-Spot01
+    Child WalkToNodeAndWait Infantry72 VS2-Spot02    
+    WaitForAll
+    
+    Sayline Infantry71 "/BattledroidInfantry_1030/Activate the sensors." PointForward
+    Sayline Infantry71 "/BattledroidInfantry_646/We've received reports of an intruder in this Sector.  Be on the alert."
+    Sayline Infantry71 "/BattleDroidInfantry1_62/They're heading to the main bridge!"
+
+    Sayline Infantry72 "/CommandDroid_146/All shipboard Battle Droids are now at Alert Status 1."
+    Sayline Infantry72 "/CommandDroid_139/Terminate the Jedi on sight."
+
+    Child RunToNodeAndWait Infantry72 VS2-Spot04  
+    Pause 0.5
+    Child RunToNodeAndWait Infantry71 VS2-Spot03
+    WaitForAll
+    
+    RemoveActor Infantry71
+    RemoveActor Infantry72    
+}
+
+Script "Gas Jet 01"
+{
+    ParticleGenOn A_L03_2_Dioxin_Gas_01
+    SetPainRegion Gas_Rgn_01 100.0    
+    PlayAudioCue 3_2_steamvent_hiss.aud Startup GasJet01
+    Pause 1.0
+    CreateAudioCue GasJetSnd01 3_2_steamvent_hiss.aud Running GasJet01
+//    Timer OnTime
+//    WaitUntilGreaterThan OnTime 10.0
+    Pause 10.0
+    
+    ParticleGenOff A_L03_2_Dioxin_Gas_01
+    SetPainRegion Gas_Rgn_01 0.0    
+    StopAudioCue GasJetSnd01
+    PlayAudioCue 3_2_steamvent_hiss.aud Arrived GasJet01
+    Pause 1.0
+//    Timer OffTime
+//    WaitUntilGreaterThan OffTime 3.0
+    Pause 3.0
+    
+    Loop
+}
+
+Script "Gas Jet 02"
+{
+    ParticleGenOn A_L03_2_Dioxin_Gas_02
+    SetPainRegion Gas_Rgn_02 100.0    
+    PlayAudioCue 3_2_steamvent_hiss.aud Startup GasJet02
+    Pause 1.0
+    CreateAudioCue GasJetSnd02 3_2_steamvent_hiss.aud Running GasJet02
+//    Timer OnTime
+//    WaitUntilGreaterThan OnTime 5.0
+    Pause 5.0
+    
+    ParticleGenOff A_L03_2_Dioxin_Gas_02
+    SetPainRegion Gas_Rgn_02 0.0    
+    StopAudioCue GasJetSnd02
+    PlayAudioCue 3_2_steamvent_hiss.aud Arrived GasJet02
+    Pause 1.0
+//    Timer OffTime        
+//    WaitUntilGreaterThan OffTime 1.5
+    Pause 1.5
+    
+    Loop
+}
+
+Script "Gas Jet 03"
+{
+    ParticleGenOn A_L03_2_Dioxin_Gas_03
+    SetPainRegion Gas_Rgn_03 100.0    
+    PlayAudioCue 3_2_steamvent_hiss.aud Startup GasJet03
+    Pause 1.0
+    CreateAudioCue GasJetSnd03 3_2_steamvent_hiss.aud Running GasJet03
+//    Timer OnTime
+//    WaitUntilGreaterThan OnTime 2.5
+    Pause 2.5
+    
+    ParticleGenOff A_L03_2_Dioxin_Gas_03
+    SetPainRegion Gas_Rgn_03 0.0    
+    StopAudioCue GasJetSnd03
+    PlayAudioCue 3_2_steamvent_hiss.aud Arrived GasJet03
+    Pause 1.0
+//    Timer OffTime
+//    WaitUntilGreaterThan OffTime 0.75
+    Pause 0.75
+
+    Loop
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambushes ------------------------------//
+//////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Patrols ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Conveyor Belt Room-Patrol 01"
+{
+    Actor Security01        A_Battledroid-Security_01
+    Actor Security02        A_Battledroid-Security_02
+    
+    SetPatrolTypes Security01 1
+    SetPatrolTypes Security02 2        
+    SetPatrolAttentionSpan Security01 300.0
+    SetPatrolAttentionSpan Security02 300.0
+    AddPatrolState Security01    
+    AddPatrolState Security02
+}
+
+Script "Conveyor Belt Room-Patrol 02"
+{
+    Actor Security41        A_Battledroid-Security_41
+    Actor Security42        A_Battledroid-Security_42
+    
+    SetPatrolTypes Security41 1
+    SetPatrolTypes Security42 2        
+    SetPatrolAttentionSpan Security41 300.0
+    SetPatrolAttentionSpan Security42 300.0
+    AddPatrolState Security41    
+    AddPatrolState Security42
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Specific Encounters ------------------------------//
+/////////////////////////////////////////////////////////////////////////////////////
+
+Script "Qui-Gon Instructions 01"
+{
+    WaitUntilEqual BeginMission 1
+    
+    TakeControlOf Qui
+    LookAtAndWait Qui Obi
+    
+    SayLineNonPositional Qui "/Qui-Gon_1211/Obiwan, let's go!"        
+    SayLineNonPositional Qui "/Qui-Gon_1191.09/The Force will guide us."
+    
+    StopActions Qui    
+    
+    Set StartQuiGonFollow 1
+}
+
+Script "Cargo Bay Area"
+{
+    Float QuiDistance
+
+
+    WaitUntilEnteredRegion Qui Cargo_Bay_Area
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {
+        StopActions Qui
+        Child LookAtAndWait Qui Obi
+    
+        SaylineNonPositional Qui "/Qui-Gon_1327/We are now in a cargo loading and storage area."
+        SaylineNonPositional Qui "/Qui-Gon_1328/There must be a way out.  It won't be long before they determine our location."
+
+        StopActions Qui
+        RunToNode Qui Qui-GotoNode
+    }
+}
+
+Script "Factory 01"
+{
+    Float QuiDistance
+
+
+    WaitUntilEnteredRegion Qui Factory_Entrance
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {
+        StopActions Qui
+        Child LookAtAndWait Qui Obi
+        
+        SaylineNonPositional Qui "/Qui-Gon_1317/We must be in the battledroid factory.  It looks like it's in full production."
+        SaylineNonPositional Qui "/Qui-Gon_1318/The Trade Federation must be up to something."
+    
+        StopActions Qui
+        RunToNode Qui Qui-GotoNode
+    }
+}
+
+Script "Factory 02"
+{
+}
+
+Script "Forcefield Trap" 3
+{
+    Int PeopleInRegion 0
+
+
+    ChildScript "Track Qui Location"
+    {
+        WaitUntilEnteredRegion Qui Ambush_Area
+        Increment PeopleInRegion 1
+        WaitUntilExitedRegion Qui Ambush_Area
+        Decrement PeopleInRegion 1
+        Loop
+    }
+    
+    ChildScript "Track Obi Location"
+    {
+        WaitUntilEnteredRegion Obi Ambush_Area
+        Increment PeopleInRegion 1
+        WaitUntilExitedRegion Obi Ambush_Area
+        Decrement PeopleInRegion 1
+        Loop
+    }
+    
+    WaitUntilEqual PeopleInRegion 2
+    
+    Set BeginAmbush 1
+
+    StopActions Qui
+
+    TakeControlOf Qui
+    RunToNodeAndWait Qui AA-Qui-Spot01
+    LookAtAndWait Qui Obi
+
+    SaylineNonPositional Qui "/Qui-Gon_1116/It's an ambush!  They're surrounding us with forcefields!"
+    
+    ChildScript "Qui Shocked"
+    {
+        RandomInt QuiResponse 1 2
+        
+        If (= QuiResponse 1)
+        {    
+//            SaylineNonPositional Qui "/Qui-Gon_1117/We can't last against all of these battledroids."
+            SaylineNonPositional Qui "/Qui-Gon_1118/Quickly, Obiwan!  We need to find an alternate way out of these halls!"
+        }
+        Else
+        {
+            SaylineNonPositional Qui "/Qui-Gon_1118/Quickly, Obiwan!  We need to find an alternate way out of these halls!"
+        }    
+        
+        Pause 30.0
+        
+        Loop
+    }
+    
+    ReturnControlTo Qui
+        
+//    WaitUntilSees Obi A_01_HLa_grate_01 20.0
+    WaitUntilNearNode Obi Force_Jump_Up 2.0
+    EndScript "Qui Shocked"
+    
+    StopTalking Qui
+    
+    TakeControlOf Qui
+    LookAtAndWait Qui Obi
+    SaylineNonPositional Qui "/Qui-Gon_1119/That's it! Great thinking, Padawan!"
+    SaylineNonPositional Qui "/Qui-Gon_1120/Quickly! Get into the ventalation system."    
+    SaylineNonPositional Qui "/Qui-Gon_1121/We should be able to reach the command bridge faster by climbing up the air ducts."
+    StopActions Qui
+    
+    RunToNodeAndWait Qui Vent_Hatch
+    
+    DisableState Qui Investigate
+//    DisableState Qui Attack    
+
+    LookAtAndWait Qui Obi
+    
+    ChildScript "Qui Waiting In Vent"
+    {
+        Sayline Qui "/Qui-Gon_1316/Obiwan, over here!" AttractAttention
+        
+        Pause 30.0
+        Loop
+    }
+    
+    WaitUntilNear Obi Qui 3.0
+    EndScript "Qui Waiting In Vent"
+    StopTalking Qui
+    
+    ReturnControlTo Qui
+
+    StopActions Qui
+
+    TakePartialControlOf Qui 0.35 False
+    Set Qui-GotoNode Qui_Cutting_Door
+    RunToNode Qui Qui-GotoNode
+}
+
+Script " Forcefield Fix" 3
+{
+    If (IsNotInRegion Obi Vent_Start_Rgn)
+    {
+        WaitUntilEnteredRegion Obi Vent_Start_Rgn
+    
+        EndScript "Forcefield Trap"
+    
+        StopActions Qui
+    
+        TakePartialControlOf Qui 0.35 False
+        Set Qui-GotoNode Qui_Cutting_Door
+        RunToNode Qui Qui-GotoNode
+    }
+ 
+    Pause 1.0
+                      
+    Loop
+}
+
+Script "Vent Shaft" 3
+{
+    Float QuiDistance
+
+
+    WaitUntilEnteredRegion Qui Vent_Shaft
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {
+        StopActions Qui
+        Child LookAtAndWait Qui Obi
+    
+        SaylineNonPositional Qui "/Qui-Gon_1321/Obiwan, we can travel up to the next level by riding the updraft of this air stream."
+        SaylineNonPositional Qui "/Qui-Gon_1322/Jump in!"
+    
+        StopActions Qui
+        RunToNode Qui Qui-GotoNode
+    }
+}
+
+Script "Enable Qui Investigate In Vents"
+{
+    WaitUntilEnteredRegion Qui Vent01_Out_Rgn
+    
+    EnableState Qui Investigate
+//    EnableState Qui Attack    
+}
+
+Script "Dioxin Gas Jets" 3
+{
+    WaitUntilEnteredRegion Qui Gas_Jet_Area
+
+    Pause 1.0
+
+    SaylineNonPositional Qui "/Qui-Gon_1323/Those mechanisms on the sides of this conduit filter toxic gases from the propulsion systems." PointForward
+    SaylineNonPositional Qui "/Qui-Gon_1324/Watch out, the gas can be leathal."
+//    SaylineNonPositional Qui "/Qui-Gon_1325/Obiwan, we need to find a way to disable those mechanisms emitting the gas so we can pass through safely."
+}
+
+Script "Disable Qui-Gon Before Gas Jets" 3
+{
+    If (IsNotInRegion Qui Gas_Jet_Area)
+    {
+        WaitUntilEnteredRegion Qui Gas_Jet_Area
+
+        StopActions Qui
+
+        TakeControlOf Qui
+        RunToNodeAndWait Qui Qui-DioxinGas
+        LookAtAndWait Qui Obi
+        ReturnControlTo Qui
+    
+        DisableState Qui FollowPlayer
+    }
+    
+    Pause 1.0
+    
+    Loop
+}
+
+Script "Enable Qui-Gon After Gas Jets" 3
+{
+    WaitUntilEnteredRegion Obi Vents_Enable_Qui
+
+    EnableState Qui FollowPlayer
+    
+    StopActions Qui
+    
+    TakePartialControlOf Qui 0.35 False
+    RunToNode Qui Qui-GotoNode
+    
+    Loop
+}
+
+Script "Vent Exit" 3
+{
+    Float QuiDistance
+
+
+    WaitUntilEnteredRegion Qui Vent_Exit
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {
+        StopActions Qui
+        Child LookAtAndWait Qui Obi
+        
+        SaylineNonPositional Qui "/Qui-Gon_1326/Obiwan, here is the way out of these conduits."
+    
+        StopActions Qui
+        RunToNode Qui Qui-GotoNode
+    }
+}
+
+Script "Hangar Bay 02"
+{
+    Float QuiDistance
+
+
+    WaitUntilEnteredRegion Qui Hangar_Bridge
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {
+        StopActions Qui
+        Child LookAtAndWait Qui Obi
+    
+        SaylineNonPositional Qui "/Qui-Gon_1330/The Trade Federation is readying their droid army. We must warn the Naboo."
+
+        StopActions Qui
+        RunToNode Qui Qui-GotoNode
+    }
+}
+Script "Observation Room"
+{
+    Float QuiDistance
+        
+    
+    WaitUntilEnteredRegion Qui tube2_19_trig
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {    
+        SaylineNonPositional Qui "/Qui-Gon_1329/This is the observation deck, Obiwan.  We must be near the bridge."
+    }
+}
+
+Script "Arrival At Command Bridge"
+{
+    Float QuiDistance
+        
+    
+    WaitUntilEnteredRegion Qui NearCommandBridge
+    DistanceBetweenActors Obi Qui QuiDistance
+    
+    If (< QuiDistance 20.0)
+    {
+        StopActions Qui
+        Child LookAtAndWait Qui Obi
+    
+        SayLineNonPositional Qui "/Qui-Gon_1331/The command bridge is just up ahead, Obiwan."
+        SayLineNonPositional Qui "/Qui-Gon_1332/First, we must dispose of all those security droids guarding the door."
+        SayLineNonPositional Qui "/Qui-Gon_1333/Then, we will get some answers from our Nemoidian friends."    
+
+        StopActions Qui
+        RunToNode Qui Qui-GotoNode
+    }
+}
+
+Script "Command Bridge Security"
+{
+    Actor Security06    A_Battledroid-Security_06
+    Actor Security07    A_Battledroid-Security_07
+    Actor Security08    A_Battledroid-Security_08
+    Actor Security09    A_Battledroid-Security_09
+    Actor Security10    A_Battledroid-Security_10
+    Actor Security11    A_Battledroid-Security_11
+    Actor Security12    A_Battledroid-Security_12
+    Actor Security13    A_Battledroid-Security_13
+
+
+    Child WaitUntilKilled Security06
+    Child WaitUntilKilled Security07
+    Child WaitUntilKilled Security08
+    Child WaitUntilKilled Security09
+    Child WaitUntilKilled Security10
+    Child WaitUntilKilled Security11
+    Child WaitUntilKilled Security12
+    Child WaitUntilKilled Security13
+    WaitForAll
+    
+    Set InitialBADsAlive-Bridge 0
+}
+
+Script "Command Bridge Final Encounter"
+{
+    CreateParticleGen quigon_doorCut.gen DC Cutting_Door_Effect
+    
+    Pause 1.0
+    
+    ParticleGenOff DC
+
+    WaitUntilEqual InitialBADsAlive-Bridge 0
+
+    TakeControlOf Qui
+    LookAtAndWait Qui Obi
+    SayLineNonPositional Qui "/Qui-Gon_1122/Obiwan, cover me while I cut through the bridge door!"
+
+    CallAndWait "Qui Return To Door"
+
+    ChildScript "Qui Damaged"
+    {
+        WaitUntilDamaged Qui
+        AddHitPoints Qui 1000
+        
+        StopAnimation Qui
+        
+        StopAudioCue QuiCuttingDoorSnd        
+        PlayAudioCue qui-gon_door.aud Arrived Cutting_Door_Effect
+
+        ParticleGenOff DC
+        UnequipWeapon Qui
+        
+        
+        StopTalking Qui        
+        
+        RandomInt QuiResponse 1 2
+        
+        If (= QuiResponse 1)
+        {    
+            SaylineNonPositionalAndContinue Qui "/Qui-Gon_1132/Obi-Wan, I need your help over here!"
+        }
+        Else
+        {
+            SaylineNonPositionalAndContinue Qui "/Qui-Gon_1134/Help me here, Obi wan!"
+        }
+        
+        CallAndWait "Qui Return To Door"
+
+        Loop
+    }    
+    
+    ChildScript "Qui Moved"
+    {
+        WaitUntilFarFromRefpos Qui Qui_Cutting_Door 1.0
+        
+        StopAnimation Qui
+
+        StopAudioCue QuiCuttingDoorSnd        
+        PlayAudioCue qui-gon_door.aud Arrived Cutting_Door_Effect
+
+        ParticleGenOff DC
+        UnequipWeapon Qui
+        
+        CallAndWait "Qui Return To Door"
+
+        Loop
+    }
+    
+    InvincibilityOn Qui
+    
+    If (= SkipToBridge 0)
+    {
+//        Timer BridgeTimer
+
+//        WaitUntilGreaterThan BridgeTimer 0.0
+        WaitUntilLessThan CurBADsAlive-Bridge 4
+        Call "CheckBridgeRegions" (1)
+        PauseRandom 2.0 5.0
+//        WaitUntilGreaterThan BridgeTimer 15.0
+        Call "CheckBridgeRegions" (2)
+        PauseRandom 2.0 5.0        
+//        WaitUntilGreaterThan BridgeTimer 30.0
+        WaitUntilLessThan CurBADsAlive-Bridge 4
+        Call "CheckBridgeRegions" (3)
+        SayLineNonPositionalAndContinue Qui "/Qui-Gon_1123/They've closed the blast doors.  This may take a little longer."
+        PauseRandom 2.0 5.0
+//        WaitUntilGreaterThan BridgeTimer 45.0
+        Call "CheckBridgeRegions" (4)
+//        WaitUntilGreaterThan BridgeTimer 60.0
+        WaitUntilLessThan CurBADsAlive-Bridge 4
+        Call "CheckBridgeRegions" (5)
+        PauseRandom 2.0 5.0        
+//        WaitUntilGreaterThan BridgeTimer 75.0
+        Call "CheckBridgeRegions" (6)
+        SayLineNonPositionalAndContinue Qui "/Qui-Gon_1124/It's working. The blast doors are melting away."
+    
+//        WaitUntilGreaterThan BridgeTimer 90.0
+        WaitUntilLessThan CurBADsAlive-Bridge 4
+        Call "CheckBridgeRegions" (7)
+        PauseRandom 2.0 5.0        
+//        WaitUntilGreaterThan BridgeTimer 105.0
+        Call "CheckBridgeRegions" (8)
+        PauseRandom 2.0 5.0        
+//        WaitUntilGreaterThan BridgeTimer 120.0
+        Call "CheckBridgeRegions" (9)
+        PauseRandom 2.0 5.0        
+        SayLineNonPositionalAndContinue Qui "/Qui-Gon_1125/Almost through...  Just hold them off for a few more seconds..."
+
+        WaitUntilEqual CurBADsAlive-Bridge 0
+    
+        Pause 3.0
+    }
+    
+    MissionObjectiveAchieved 1    
+    Increment MissionCompleted 1
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Random Encounters ------------------------------//
+///////////////////////////////////////////////////////////////////////////////////
+
+
+//-------------------- Cheats --------------------//
+
+Script "Test Qui"
+{
+    // Test Qui Gon navigation of critical path
+    If (= TestQuiGon 1)
+    {
+        WaitUntilNudged Qui
+	    TakeControlOf Qui
+        RunToNodeAndWait Qui Qui_Cutting_Door
+	    ReturnControlTo Qui
+    }
+}

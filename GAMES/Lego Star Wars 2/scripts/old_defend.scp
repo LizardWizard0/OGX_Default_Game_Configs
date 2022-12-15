@@ -1,0 +1,47 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto StartFight
+	}
+	Actions {
+		GoToOrigin
+	}
+}
+
+state StartFight {
+	Conditions {
+		if GotLocator == 1 goto HideAway
+		if PreviousResult == 0 goto Fight
+	}
+	Actions {
+	}
+}
+
+state Fight {
+	Conditions {
+		if OpponentToOrigin > 6.0 and
+		if OriginRange > 4.5 goto Defend
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}
+
+state HideAway {
+	Conditions {
+		if OpponentRange < 2 goto Fight
+	}
+	Actions {
+		GoToLocator "0.2"
+		EngageOpponent "static" "firerange 4"
+	}
+}
+
+state Defend {
+	Conditions {
+		if OpponentToOrigin < 6 goto Fight
+		if OriginRange < 4.5 goto Fight
+	}
+	Actions {
+		EngageOpponent "static" "firerange 3"
+	}
+}

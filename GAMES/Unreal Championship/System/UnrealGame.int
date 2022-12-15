@@ -1,0 +1,87 @@
+[Public]
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=UnrealGame.MutBigHead)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=UnrealGame.MutLowGrav)
+
+[CTFGame]
+GameName="Capture the Flag"
+
+[CTFHUDMessage]
+YouHaveFlagString="You have the flag, return to base!"
+EnemyHasFlagString="The enemy has your flag, recover it!"
+OvertimeString="Sudden Death Overtime!!!"
+
+[CTFMessage]
+ReturnBlue="returned the blue flag!"
+ReturnRed="returned the red flag!"
+ReturnedBlue="The blue flag was returned!"
+ReturnedRed="The red flag was returned!"
+CaptureBlue="captured the blue flag! The red team scores!"
+CaptureRed="captured the red flag! The blue team scores!"
+DroppedBlue="dropped the blue flag!"
+DroppedRed="dropped the red flag!"
+HasBlue="took the blue flag!"
+HasRed="took the red flag!"
+
+[DeathMatch]
+GameName="DeathMatch"
+
+[GameObjective]
+DestructionMessage="Objective Disabled!"
+LocationPrefix="Near"
+
+[HintManager]
+Hints[0].Text="The objective of Capture the Flag is to capture the enemy flag and return it to your base."
+Hints[1].Text="This is the enemy flag. Touch the flag to grab it."
+Hints[2].Text="You have the flag. Now return it to your base."
+Hints[3].Text="An enemy player has taken your flag. Kill him and touch your flag to return it to your base."
+Hints[4].Text="You can't score with the enemy flag unless your flag has been returned."
+Hints[5].Text="Your flag has been returned. Touch it while carrying the enemy flag to score."
+Hints[6].Text="This is your flag. The opposing team will try to steal it. Defend it with your life."
+Hints[7].Text="The HUD indicates the status of team flags."
+Hints[8].Text="This icon indicates that your team has the enemy flag."
+Hints[9].Text="This icon indicates that the enemy team has your flag."
+Hints[10].Text="Your teammate has taken the enemy flag."
+Hints[12].Text="The objective of Bombing Run is to get the bomb through the enemy goal portal."
+Hints[13].Text="This can be done by throwing the bomb, or jumping through while carrying it."
+Hints[14].Text="Grab the bomb to begin your run."
+Hints[15].Text="You have the bomb. Notice that your weapon has been replaced."
+Hints[16].Text="To throw the bomb, press the primary fire button. To target a teammate for a pass, press the alternate fire button."
+Hints[17].Text="Once a goal has been scored, the bomb will re-spawn at center field."
+Hints[18].Text="This is your goal. The enemy will try to score on you here."
+Hints[19].Text="This is the enemy goal. Shoot the bomb through it to score 3 points. Run through it to score 7 points."
+Hints[20].Text="The objective of Double Domination is for your team to secure and hold both domination points for 10 seconds."
+Hints[21].Text="This is a Domination point. Touch it to claim it for your team."
+Hints[22].Text="Good, you have claimed this Domination point. Protect it from opposing players."
+Hints[23].Text="Each Domination point is represented by an icon on your HUD."
+Hints[24].Text="This is the icon for Point Alpha."
+Hints[25].Text="This is the icon for Point Bravo."
+Hints[27].Text="Once a team has achieved Domination, points Alpha and Bravo are rendered temporarily inactive while they recharge."
+Hints[28].Text="Your team controls this Domination point. Prevent the enemy from taking it."
+Hints[29].Text="The enemy controls this Domination point. Touch it to claim it for your team."
+Hints[30].Text="The enemy team has taken a Domination point. Attempt to take it back as soon as possible."
+Hints[31].Text="The objective of Team Deathmatch is for your team to score more total kills than your opponent."
+Hints[32].Text="Notice the red lights above this player's shoulders. This indicates they are your teammate. Try not to shoot your teamates."
+Hints[33].Text="Notice the blue lights above this player's shoulders.  This indicates they are on the opposing team.  Kill them to make your team's total Frag count increase."
+Hints[34].Text="The color of the HUD indicates which team you are on."
+
+[KeyPickup]
+PickupMessage="You picked up a Key."
+
+[MutBigHead]
+FriendlyName="BigHead"
+Description="Are your elite fighting skills giving you a swelled head? Now your opponents can see it in-game."
+
+[MutLowGrav]
+FriendlyName="LowGrav"
+Description="One small step for combat, one giant leap for mankind."
+
+[SquadAI]
+SupportString="SUPPORTING"
+DefendString="DEFENDING"
+AttackString="ATTACKING"
+HoldString="HOLDING"
+FreelanceString="FREELANCE"
+
+[TeamGame]
+GameName="Team Deathmatch"
+

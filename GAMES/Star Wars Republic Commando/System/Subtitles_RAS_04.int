@@ -1,0 +1,588 @@
+
+[Subtitles_RAS_04]
+
+SubtitleSound[2928]="CA1R4500"
+SubtitleText[2928]="Clone Advisor 1: I've got an idea."
+
+SubtitleSound[2929]="D07R4500"
+SubtitleText[2929]="Delta 07: Good riddance to bad lizards."
+
+SubtitleSound[2930]="CA1R4501"
+SubtitleText[2930]="Clone Advisor 1: Delta, the Separatists could be here any minute--"
+
+SubtitleSound[2931]="D62R4500"
+SubtitleText[2931]="Delta 62: You don't say."
+
+SubtitleSound[2932]="CA1R4502"
+SubtitleText[2932]="Clone Advisor 1: I'm sending out a distress signal.  We can't wait for help from Coruscant."
+
+SubtitleSound[2933]="CA1R4503"
+SubtitleText[2933]="Clone Advisor 1: Get to the next hangar and set up a defense.  Move! "
+
+SubtitleSound[2934]="D40R4500"
+SubtitleText[2934]="Delta 40: Sir, over here.  We can take a shortcut through the maintenance tunnels!"
+
+SubtitleSound[2935]="CA1R4504"
+SubtitleText[2935]="Clone Advisor 1: Calling any Republic ships near the Corbantis system.  This is an emergency."
+
+SubtitleSound[2936]="CA1R4505"
+SubtitleText[2936]="Clone Advisor 1: Any Republic contacts near the Corbantis system, please respond."
+
+SubtitleSound[2937]="D38R4500"
+SubtitleText[2937]="Delta 38: I think we're on our own…."
+
+SubtitleSound[2938]="CPTR4500"
+SubtitleText[2938]="Captain Talbot: This is Captain Talbot of the RAS Cruiser Arrestor.  Who am I speaking to?"
+
+SubtitleSound[2939]="CA1R4506"
+SubtitleText[2939]="Clone Advisor 1: This is Delta Squadron Advisor 01/425.  Separatist forces are attempting to capture our ship."
+
+SubtitleSound[2940]="CPTR4501"
+SubtitleText[2940]="Captain Talbot: Understood, help is on the way."
+
+SubtitleSound[2941]="CA1R4507"
+SubtitleText[2941]="Clone Advisor 1: I'm sending you our coordinates."
+
+SubtitleSound[2942]="CA1R4508"
+SubtitleText[2942]="Clone Advisor 1: Three-eight, the droid dispensers will be setting down in seconds"
+
+SubtitleSound[2943]="D62R4501"
+SubtitleText[2943]="Delta 62: Just enough  time to prepare a nice welcome."
+
+SubtitleSound[2944]="D38R4501"
+SubtitleText[2944]="Delta 38: Maybe we can get to this turret…"
+
+SubtitleSound[2945]="D40R4501"
+SubtitleText[2945]="Delta 40: Dispenser is down. Droids are deploying!"
+
+SubtitleSound[2946]="D07R4501"
+SubtitleText[2946]="Delta 07: Blast!  There's another one bringing up the rear!"
+
+SubtitleSound[2947]="CA1R4509"
+SubtitleText[2947]="Clone Advisor 1: Three-eight, I've discovered a vulnerability in the hangar forcefield"
+
+SubtitleSound[2948]="CA1R4510"
+SubtitleText[2948]="Clone Advisor 1: The regulator on the left side of the hangar controls the power flow."
+
+SubtitleSound[2949]="CA1R4511"
+SubtitleText[2949]="Clone Advisor 1: Disable it with a demolition charge and you'll seal off the hangar for good."
+
+SubtitleSound[2950]="CA1R4512"
+SubtitleText[2950]="Clone Advisor 1: Excellent work, squad."
+
+SubtitleSound[2951]="CA1R4513"
+SubtitleText[2951]="Clone Advisor 1: Now take care of any remaining dispensers and move on to the next hangar."
+
+SubtitleSound[2952]="CA1R4514"
+SubtitleText[2952]="Clone Advisor 1: You're coming up on the next hangar."
+
+SubtitleSound[2953]="CA1R4515"
+SubtitleText[2953]="Clone Advisor 1: Scans reveal one droid dispenser already deployed."
+
+SubtitleSound[2954]="D62R4502"
+SubtitleText[2954]="Delta 62: Got a straggler.  He's runnin' for help."
+
+SubtitleSound[2955]="D07R4502"
+SubtitleText[2955]="Delta 07: Help this…"
+
+SubtitleSound[2956]="D40R4502"
+SubtitleText[2956]="Delta 40: Blast, there's already another one on the way."
+
+SubtitleSound[2957]="D38R4502"
+SubtitleText[2957]="Delta 38: We've gotta get down to that forcefield regulator."
+
+SubtitleSound[2958]="CA1R4516"
+SubtitleText[2958]="Clone Advisor 1: The faster you can disable it, the fewer droids you'll have to deal with. "
+
+SubtitleSound[2959]="CA1R4517"
+SubtitleText[2959]="Clone Advisor 1: The regulator is on the far side of the hangar."
+
+SubtitleSound[2960]="CA1R4518"
+SubtitleText[2960]="Clone Advisor 1: Same drill as before.  Get over there and take it out."
+
+SubtitleSound[2961]="CA1R4519"
+SubtitleText[2961]="Clone Advisor 1: Alert!  Sensors detect another launch!"
+
+SubtitleSound[2962]="D07R4503"
+SubtitleText[2962]="Delta 07: You think that speeder still works?"
+
+SubtitleSound[2963]="D62R4503"
+SubtitleText[2963]="Delta 62: I'm not gettin on it… that model's a deathtrap."
+
+SubtitleSound[2964]="D38R4503"
+SubtitleText[2964]="Delta 38: See what you can do with it."
+
+SubtitleSound[2965]="D07R4508"
+SubtitleText[2965]="Delta 07: Useless hunk of junk…"
+
+SubtitleSound[2966]="D40R4508"
+SubtitleText[2966]="Delta 40: Nothing happened…"
+
+SubtitleSound[2967]="D62R4510"
+SubtitleText[2967]="Delta 62: Told you it was a clunker…"
+
+SubtitleSound[2968]="D07R4509"
+SubtitleText[2968]="Delta 07: Droideka dispenser!  It's headed for the upper level!"
+
+SubtitleSound[2969]="D40R4509"
+SubtitleText[2969]="Delta 40: Droideka dispenser!  It's headed for the upper level!"
+
+SubtitleSound[2970]="D62R4511"
+SubtitleText[2970]="Delta 62: Droideka-dropper, headed for the upper level!"
+
+SubtitleSound[2971]="D38R4504"
+SubtitleText[2971]="Delta 38: That's two-for-two, squad.  Let's move on to the last hangar."
+
+SubtitleSound[2972]="CA1R4520"
+SubtitleText[2972]="Clone Advisor 1: Be advised, Delta, the droids are fully deployed in the final hangar…"
+
+SubtitleSound[2973]="CA1R4521"
+SubtitleText[2973]="Clone Advisor 1: … and they're spreading throughout the ship."
+
+SubtitleSound[2974]="CA1R4522"
+SubtitleText[2974]="Clone Advisor 1: I'm scanning system logs for any leftover ordnance you can bring into service."
+
+SubtitleSound[2975]="CA1R4558"
+SubtitleText[2975]="Clone Advisor 1: Don't let yourself get caught in a vise."
+
+SubtitleSound[2976]="D40R4503"
+SubtitleText[2976]="Delta 40: Droidekas.  They haven't spotted us."
+
+SubtitleSound[2977]="D38R4505"
+SubtitleText[2977]="Delta 38: They'll be back.  Let's get ready."
+
+SubtitleSound[2978]="D07R4504"
+SubtitleText[2978]="Delta 07: We're getting close.  I can feel it."
+
+SubtitleSound[2979]="D40R4504"
+SubtitleText[2979]="Delta 40: Cover here is awful!"
+
+SubtitleSound[2980]="D38R4506"
+SubtitleText[2980]="Delta 38: Move away from that droideka.  Head to the rear of the hangar!"
+
+SubtitleSound[2981]="CA1R4523"
+SubtitleText[2981]="Clone Advisor 1: Deltas, I've found some ordnance, but I can't override the lift control."
+
+SubtitleSound[2982]="CA1R4524"
+SubtitleText[2982]="Clone Advisor 1: Take over that terminal and free it up."
+
+SubtitleSound[2983]="CA1R4525"
+SubtitleText[2983]="Clone Advisor 1: Ordnance is on its way.  Hop on board and wrap things up, three-eight."
+
+SubtitleSound[2984]="D62R4504"
+SubtitleText[2984]="Delta 62: "Ordance"… that's a bloody walker!"
+
+SubtitleSound[2985]="D38R4507"
+SubtitleText[2985]="Delta 38: That's it!  Assault Ship is secure."
+
+SubtitleSound[2986]="CA1R4526"
+SubtitleText[2986]="Clone Advisor 1: They're recalling their dispensers."
+
+SubtitleSound[2987]="D62R4505"
+SubtitleText[2987]="Delta 62: Retreating?  That's not very droid-like."
+
+SubtitleSound[2988]="D07R4510"
+SubtitleText[2988]="Delta 07: What the-?"
+
+SubtitleSound[2989]="D40R4510"
+SubtitleText[2989]="Delta 40: What the-?"
+
+SubtitleSound[2990]="D62R4512"
+SubtitleText[2990]="Delta 62: What now?"
+
+SubtitleSound[2991]="D40R4505"
+SubtitleText[2991]="Delta 40: They're scuttling us!"
+
+SubtitleSound[2992]="D38R4508"
+SubtitleText[2992]="Delta 38: Where's that cruiser?"
+
+SubtitleSound[2993]="CA1R4527"
+SubtitleText[2993]="Clone Advisor 1: We can't wait for Talbot.  We'll have fight back!"
+
+SubtitleSound[2994]="CA1R4528"
+SubtitleText[2994]="Clone Advisor 1: Squad, move to the rear of the hangar and get on that lift."
+
+SubtitleSound[2995]="CA1R4529"
+SubtitleText[2995]="Clone Advisor 1: Hang on, I'm lowering the lift.  "
+
+SubtitleSound[2996]="CA1R4530"
+SubtitleText[2996]="Clone Advisor 1: Go down that maintenance tunnel.  It leads to your next objective."
+
+SubtitleSound[2997]="D62R4506"
+SubtitleText[2997]="Delta 62: Plan on letting us know what it is any time soon?"
+
+SubtitleSound[2998]="CA1R4531"
+SubtitleText[2998]="Clone Advisor 1: This may not work, but it's our only shot."
+
+SubtitleSound[2999]="CA1R4532"
+SubtitleText[2999]="Clone Advisor 1: This tunnel will get you near the ship's defense systems."
+
+SubtitleSound[3000]="BD1R4500"
+SubtitleText[3000]="Battle Droid 1: Analyzing control system…."
+
+SubtitleSound[3001]="D62R4507"
+SubtitleText[3001]="Delta 62: I recognize this… a turret control panel."
+
+SubtitleSound[3002]="D07R4505"
+SubtitleText[3002]="Delta 07: I bet those scumbags are trying to turn 'em against us."
+
+SubtitleSound[3003]="CA1R4533"
+SubtitleText[3003]="Clone Advisor 1: This room coordinates ship defenses.  "
+
+SubtitleSound[3004]="CA1R4534"
+SubtitleText[3004]="Clone Advisor 1: You'll need to slice into all three computers to link the ship turrets into dumb-fire mode."
+
+SubtitleSound[3005]="CA1R4535"
+SubtitleText[3005]="Clone Advisor 1: Not as effective as manned gunnery, but it's all we've got."
+
+SubtitleSound[3006]="CA1R4536"
+SubtitleText[3006]="Clone Advisor 1: Sensors detect numerous enemies headed your way."
+
+SubtitleSound[3007]="CA1R4537"
+SubtitleText[3007]="Clone Advisor 1: I recommend simultaneous slices to speed things up."
+
+SubtitleSound[3008]="CPTR4502"
+SubtitleText[3008]="Captain Talbot: This is Captain Talbot.  We're moving into position."
+
+SubtitleSound[3009]="CPTR4503"
+SubtitleText[3009]="Captain Talbot: What's wrong with your guns, Delta?"
+
+SubtitleSound[3010]="CA1R4538"
+SubtitleText[3010]="Clone Advisor 1: We're working on the problem now."
+
+SubtitleSound[3011]="CPTR4504"
+SubtitleText[3011]="Captain Talbot: Opening fire on the Separatists.  They appear willing to stand their ground."
+
+SubtitleSound[3012]="CPTR4505"
+SubtitleText[3012]="Captain Talbot: Delta Advisor, if we don't get some help here, we're going to have to break off.  What's your status?"
+
+SubtitleSound[3013]="CA1R4539"
+SubtitleText[3013]="Clone Advisor 1: We're working on it, Captain."
+
+SubtitleSound[3014]="D38R4509"
+SubtitleText[3014]="Delta 38: Guns online!  Opening fire!"
+
+SubtitleSound[3015]="CPTR4506"
+SubtitleText[3015]="Captain Talbot: Enemy shields buckling.  They're finished."
+
+SubtitleSound[3016]="CA1R4540"
+SubtitleText[3016]="Clone Advisor 1: Victory is ours, Deltas."
+
+SubtitleSound[3017]="D38R4510"
+SubtitleText[3017]="Delta 38: Thanks for the assistance, Captain."
+
+SubtitleSound[3018]="CPTR4507"
+SubtitleText[3018]="Captain Talbot: Glad to be of service, Delta Squad."
+
+SubtitleSound[3019]="D07R4506"
+SubtitleText[3019]="Delta 07: NO one steals a ship from the Republic while we're around."
+
+SubtitleSound[3020]="D38R4511"
+SubtitleText[3020]="Delta 38: What've we got here?"
+
+SubtitleSound[3021]="CA1R4541"
+SubtitleText[3021]="Clone Advisor 1: Thirty eight, slice that terminal to give me control of the overhead rail."
+
+SubtitleSound[3022]="CA1R4542"
+SubtitleText[3022]="Clone Advisor 1: Sit tight.  I'm fetching a skyhawk from maintenance."
+
+SubtitleSound[3023]="CA1R4543"
+SubtitleText[3023]="Clone Advisor 1: Here it comes, thirty eight.  Do your worst."
+
+SubtitleSound[3024]="D40R4506"
+SubtitleText[3024]="Delta 40: 2nd dispenser is down.  Prepare for Super Battle droids!"
+
+SubtitleSound[3025]="D38R4512"
+SubtitleText[3025]="Delta 38: Put a demo charge on that regulator."
+
+SubtitleSound[3026]="CA1R4544"
+SubtitleText[3026]="Clone Advisor 1: Another droid dispenser is trying to get through!"
+
+SubtitleSound[3027]="D07R4511"
+SubtitleText[3027]="Delta 07: Eat plasma, clanker!"
+
+SubtitleSound[3028]="D40R4511"
+SubtitleText[3028]="Delta 40: They won't fall for that twice."
+
+SubtitleSound[3029]="D62R4513"
+SubtitleText[3029]="Delta 62: What a depressingly stupid droid."
+
+SubtitleSound[3030]="D38R4513"
+SubtitleText[3030]="Delta 38: Clear that debris, Delta."
+
+SubtitleSound[3031]="D38R4514"
+SubtitleText[3031]="Delta 38: Work fast.  We'll watch your back."
+
+SubtitleSound[3032]="D38R4515"
+SubtitleText[3032]="Delta 38: Cover that doorway.  Don't let 'em surround us."
+
+SubtitleSound[3033]="D38R4516"
+SubtitleText[3033]="Delta 38: Try to wake that speeder up."
+
+SubtitleSound[3034]="D07R4507"
+SubtitleText[3034]="Delta 07: Why won't these droids just die already?"
+
+SubtitleSound[3035]="CA1R4545"
+SubtitleText[3035]="Clone Advisor 1: Work quickly, squad.  That last dispenser is re-routing."
+
+SubtitleSound[3036]="D40R4507"
+SubtitleText[3036]="Delta 40: They're coming back.  Positions, sir?"
+
+SubtitleSound[3037]="D62R4508"
+SubtitleText[3037]="Delta 62: They've set off a blaze near the regulator.  I'm not gettin' near it."
+
+SubtitleSound[3038]="CA1R4546"
+SubtitleText[3038]="Clone Advisor 1: Delta 38, take up defensive positions a the rear of the hangar.  "
+
+SubtitleSound[3039]="CA1R4547"
+SubtitleText[3039]="Clone Advisor 1: I've tracked down some gear that'll help you out…"
+
+SubtitleSound[3040]="CA1R4548"
+SubtitleText[3040]="Clone Advisor 1: … but I can't override the lift controls."
+
+SubtitleSound[3041]="CA1R4549"
+SubtitleText[3041]="Clone Advisor 1: There should be a terminal nearby.  "
+
+SubtitleSound[3042]="CA1R4550"
+SubtitleText[3042]="Clone Advisor 1: Get a slicer on it to bring up the lift."
+
+SubtitleSound[3043]="CA1R4551"
+SubtitleText[3043]="Clone Advisor 1: Lift is en route.  Hold position until it arrives."
+
+SubtitleSound[3044]="CA1R4552"
+SubtitleText[3044]="Clone Advisor 1: Heavy gear is arriving, thirty eight."
+
+SubtitleSound[3045]="D62R4509"
+SubtitleText[3045]="Delta 62: This beast'll take out that regulator with one shot."
+
+SubtitleSound[3046]="CA1R4553"
+SubtitleText[3046]="Clone Advisor 1: Enter that maintenance tunnel, Deltas."
+
+SubtitleSound[3047]="CA1R4554"
+SubtitleText[3047]="Clone Advisor 1: This tunnel leads to one of the ship turbolasers."
+
+SubtitleSound[3048]="CA1R4555"
+SubtitleText[3048]="Clone Advisor 1: This is the command center for one of the turbolasers."
+
+SubtitleSound[3049]="CA1R4556"
+SubtitleText[3049]="Clone Advisor 1: Get slicing, Delta.  I'll keep you covered."
+
+SubtitleSound[3050]="CA1R4557"
+SubtitleText[3050]="Clone Advisor 1: Hold your position, squad.  This won't take long."
+
+SubtitleSound[3051]="CA1R4559"
+SubtitleText[3051]="Clone Advisor 1: Droids from the next hangar are entering the area.  Finish up and get out of there, thirty-eight.  "
+
+SubtitleSound[3052]="CA1R4560"
+SubtitleText[3052]="Clone Advisor 1: I'm opening up access to the maintenance tunnels."
+
+SubtitleSound[3053]="D40R4512"
+SubtitleText[3053]="Delta 40: What's wrong with the force field?"
+
+SubtitleSound[3054]="D07R4512"
+SubtitleText[3054]="Delta 07: Sir, over here."
+
+SubtitleSound[3055]="D07R4513"
+SubtitleText[3055]="Delta 07: I think ...I see it.  A Trade Federation Battleship."
+
+SubtitleSound[3056]="D38R4517"
+SubtitleText[3056]="Delta 38: O-kay squad, what've got to work with?"
+
+SubtitleSound[3057]="D62R4514"
+SubtitleText[3057]="Delta 62: We can lay some traps, clear up a few sight lines…"
+
+SubtitleSound[3058]="D62R4516"
+SubtitleText[3058]="Delta 62: Not even you can see into hyperspace, Sev."
+
+SubtitleSound[3059]="D07R4514"
+SubtitleText[3059]="Delta 07: No, it's on the edge of the system.  Take a look…"
+
+SubtitleSound[3060]="D38R4518"
+SubtitleText[3060]="Delta 38: They could land anywhere.  Let's spread the pain around."
+
+SubtitleSound[3061]="D40R4513"
+SubtitleText[3061]="Delta 40: We can't leave, sir!  The jobs not done."
+
+SubtitleSound[3062]="D62R4517"
+SubtitleText[3062]="Delta 62: Oh blast…"
+
+SubtitleSound[3063]="D38R4520"
+SubtitleText[3063]="Delta 38: This will be a challenge."
+
+SubtitleSound[3064]="D40R4514"
+SubtitleText[3064]="Delta 40: Watch out, sir.  That force field is unstable."
+
+SubtitleSound[3065]="D62R4515"
+SubtitleText[3065]="Delta 62: Done!  Forcefield… seriously... messed up.  Sir."
+
+SubtitleSound[3066]="D38R4519"
+SubtitleText[3066]="Delta 38: This hangar is sealed.  Let's move on to the next one."
+
+SubtitleSound[3067]="D40R4515"
+SubtitleText[3067]="Delta 40: Hard to believe this is our old ship."
+
+SubtitleSound[3068]="D62R4518"
+SubtitleText[3068]="Delta 62: This place is falling apart."
+
+SubtitleSound[3069]="D07R4515"
+SubtitleText[3069]="Delta 07: Sir, more dispensers heading to the other hangars."
+
+SubtitleSound[3070]="CA1R4561"
+SubtitleText[3070]="Clone Advisor 1: Delta Lead, you're not finished.  Get back to the hangar!"
+
+SubtitleSound[3071]="D40R4516"
+SubtitleText[3071]="Delta 40: Sir, come back.  We're not done here."
+
+SubtitleSound[3072]="D62R4519"
+SubtitleText[3072]="Delta 62: Blasted uglies!  Stinkin' up my ship!"
+
+SubtitleSound[3073]="D62R4520"
+SubtitleText[3073]="Delta 62: The situation is getting seriously out of hand!"
+
+SubtitleSound[3074]="D38R4521"
+SubtitleText[3074]="Delta 38: Advance to the next hangar and set up a defense.  Move!"
+
+SubtitleSound[3075]="D62R4521"
+SubtitleText[3075]="Delta 62: Why don't we just fly out of here?"
+
+SubtitleSound[3076]="D38R4522"
+SubtitleText[3076]="Delta 38: The ship's engines are in bad shape.  We'll need a repair team to get it back to Coruscant."
+
+SubtitleSound[3077]="CA1R4562"
+SubtitleText[3077]="Clone Advisor 1: Alert!  Trade Fed vessel deploying another dispenser!"
+
+SubtitleSound[3078]="D62R4522"
+SubtitleText[3078]="Delta 62: No help for you…"
+
+SubtitleSound[3079]="D07R4516"
+SubtitleText[3079]="Delta 07: No escape, scalie!"
+
+SubtitleSound[3080]="D38R4523"
+SubtitleText[3080]="Delta 38: Let's take the direct approach"
+
+SubtitleSound[3081]="D62R4523"
+SubtitleText[3081]="Delta 62: How many kills do I rack for droid dispensers?"
+
+SubtitleSound[3082]="D07R4517"
+SubtitleText[3082]="Delta 07: Only one, Scorch.  The sleepers don't count."
+
+SubtitleSound[3083]="D62R4524"
+SubtitleText[3083]="Delta 62: Why not?  They're hostiles… just sleeping hostiles..."
+
+SubtitleSound[3084]="D40R4517"
+SubtitleText[3084]="Delta 40: Hold on…"
+
+SubtitleSound[3085]="CA1R4563"
+SubtitleText[3085]="Clone Advisor 1: Delta Lead, do not engage those dispensers directly!"
+
+SubtitleSound[3086]="D38R4524"
+SubtitleText[3086]="Delta 38: No heroics!  Everyone stick to cover!"
+
+SubtitleSound[3087]="D38R4525"
+SubtitleText[3087]="Delta 38: Move toward that cargo bay in the back!"
+
+SubtitleSound[3088]="D07R4518"
+SubtitleText[3088]="Delta 07: Okay, we're here, Boss.  Now what?"
+
+SubtitleSound[3089]="D62R4525"
+SubtitleText[3089]="Delta 62: I know you're having fun up there, but…"
+
+SubtitleSound[3090]="D62R4526"
+SubtitleText[3090]="Delta 62: … don’t forget to take out the regulator, sir?"
+
+SubtitleSound[3091]="D07R4519"
+SubtitleText[3091]="Delta 07: Gunnery station twelve B."
+
+SubtitleSound[3092]="D07R4520"
+SubtitleText[3092]="Delta 07: I logged a few hours here, back in the day."
+
+SubtitleSound[3093]="D07R4521"
+SubtitleText[3093]="Delta 07: Sir, another Assault Ship in view!"
+
+SubtitleSound[3094]="D40R4518"
+SubtitleText[3094]="Delta 40: What's happening??"
+
+SubtitleSound[3095]="D38R4526"
+SubtitleText[3095]="Delta 38: It's the battleship.  Their droid control systems are down!"
+
+SubtitleSound[3096]="D07R4522"
+SubtitleText[3096]="Delta 07: Someone shot something important!"
+
+SubtitleSound[3097]="D62R4527"
+SubtitleText[3097]="Delta 62: Look at that.  It's beeeautiful…"
+
+SubtitleSound[3098]="D62R4528"
+SubtitleText[3098]="Delta 62: Let's rename this ship the RAS Lucky Bantha!"
+
+SubtitleSound[3099]="D07R4523"
+SubtitleText[3099]="Delta 07: A little help with these droidekas, sir?"
+
+SubtitleSound[3100]="CA1R4564"
+SubtitleText[3100]="Clone Advisor 1: You'll have to slice all three terminals. "
+
+SubtitleSound[3101]="CA1R4565"
+SubtitleText[3101]="Clone Advisor 1: That will focus all the ship turrets onto the largest enemy target."
+
+SubtitleSound[3102]="D40R4519"
+SubtitleText[3102]="Delta 40: Unmanned gunnery against a battle cruiser?"
+
+SubtitleSound[3103]="D38R4527"
+SubtitleText[3103]="Delta 38: We can give 'em a black eye, at least."
+
+SubtitleSound[3104]="D62R4529"
+SubtitleText[3104]="Delta 62: We'll make 'em regret they day they blew up Delta Squad!"
+
+SubtitleSound[3105]="CA1R4566"
+SubtitleText[3105]="Clone Advisor 1: Delta Lead!  Get back to the control room, now!"
+
+SubtitleSound[3106]="D62R4530"
+SubtitleText[3106]="Delta 62: Boss, we can't do it ourselves!  "
+
+SubtitleSound[3107]="D40R4520"
+SubtitleText[3107]="Delta 40: Sorry sir, we did our best…"
+
+SubtitleSound[3108]="D40R4521"
+SubtitleText[3108]="Delta 40: Now THAT was satisfying."
+
+SubtitleSound[3109]="CA1R4567"
+SubtitleText[3109]="Clone Advisor 1: Calling all Republic vessels near the Corbantis system.  This is an emergency."
+
+SubtitleSound[3110]="CA1R4568"
+SubtitleText[3110]="Clone Advisor 1: Any Republic forces near the Corbantis system, respond immediately!"
+
+SubtitleSound[3111]="RSCR4001"
+SubtitleText[3111]="RAS Ship Computer: Hull integrity compromised."
+
+SubtitleSound[3112]="RSCR4002"
+SubtitleText[3112]="RAS Ship Computer: Hull integrity at 75%"
+
+SubtitleSound[3113]="RSCR4003"
+SubtitleText[3113]="RAS Ship Computer: Hull integrity at 50%"
+
+SubtitleSound[3114]="RSCR4004"
+SubtitleText[3114]="RAS Ship Computer: Hull integrity at 25%"
+
+SubtitleSound[3115]="RSCR4005"
+SubtitleText[3115]="RAS Ship Computer: Navigational systems… failing."
+
+SubtitleSound[3116]="RSCR4006"
+SubtitleText[3116]="RAS Ship Computer: Life-support systems… failing."
+
+SubtitleSound[3117]="RSCR4007"
+SubtitleText[3117]="RAS Ship Computer: Atmospheric compensators… failing."
+
+SubtitleSound[3118]="D62R4531"
+SubtitleText[3118]="Delta 62: Would someone shut that computer up??"
+
+SubtitleSound[3119]="RSCR4008"
+SubtitleText[3119]="RAS Ship Computer: Reactor control systems… failing."
+
+SubtitleSound[3120]="RSCR4011"
+SubtitleText[3120]="RAS Ship Computer: Engines offline."
+
+SubtitleSound[3121]="RSCR4012"
+SubtitleText[3121]="RAS Ship Computer: Shields offline."
+
+SubtitleSound[3122]="CA1R4569"
+SubtitleText[3122]="Clone Advisor 1: Accessing…it leads to a landing bay."
+

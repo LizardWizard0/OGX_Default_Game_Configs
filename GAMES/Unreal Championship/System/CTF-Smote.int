@@ -1,0 +1,99 @@
+[LevelInfo0]
+Title="Grim Smote"
+
+[LevelSummary]
+Title="Grim Smote"
+
+[Volume0]
+LocationName="Blue Fortifications"
+
+[Volume1]
+LocationName="Red Fortifications"
+
+[Volume3]
+LocationName="Fissure Bridge"
+
+[ZoneInfo0]
+LocationName="Red Antechamber"
+
+[ZoneInfo1]
+LocationName="Outside"
+
+[ZoneInfo10]
+LocationName="Red Cellar"
+
+[ZoneInfo11]
+LocationName="Red Cellar Entrance"
+
+[ZoneInfo12]
+LocationName="Blue Antechamber"
+
+[ZoneInfo13]
+LocationName="Blue Antechamber"
+
+[ZoneInfo14]
+LocationName="Blue Antechamber"
+
+[ZoneInfo15]
+LocationName="Blue Flag Room"
+
+[ZoneInfo16]
+LocationName="Blue Flag Room"
+
+[ZoneInfo17]
+LocationName="Blue Cellar"
+
+[ZoneInfo18]
+LocationName="Blue Cellar"
+
+[ZoneInfo19]
+LocationName="Blue Cellar"
+
+[ZoneInfo2]
+LocationName="Red Antechamber"
+
+[ZoneInfo20]
+LocationName="Blue Cellar Entrance"
+
+[ZoneInfo21]
+LocationName="Blue Tower"
+
+[ZoneInfo22]
+LocationName="Blue Upper Hallway"
+
+[ZoneInfo23]
+LocationName="Outside"
+
+[ZoneInfo24]
+LocationName="Outside"
+
+[ZoneInfo26]
+LocationName="Outside"
+
+[ZoneInfo27]
+LocationName="Outside"
+
+[ZoneInfo28]
+LocationName="Outside"
+
+[ZoneInfo3]
+LocationName="Red Antechamber"
+
+[ZoneInfo4]
+LocationName="Red Flag Room"
+
+[ZoneInfo5]
+LocationName="Red Flag Room"
+
+[ZoneInfo6]
+LocationName="Red Tower"
+
+[ZoneInfo7]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo8]
+LocationName="Red Cellar"
+
+[ZoneInfo9]
+LocationName="Red Cellar"
+

@@ -1,0 +1,65 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+
+Script "Opening Dialog"
+{
+	WaitUntilEnteredRegion ObiWan "Trigger_QuiGon_WingtipSaylines"
+
+	//Quigon is on Obi's communicator, so we want sound to originate at Obi's location, 
+	//so we have Obi say Quigon's line (still uses Quigon's voice obviously).
+
+	SayLine ObiWan "/Qui-GonJinn_189/Obi-Wan, we must destroy the repulsor field coils." 
+	SayLine ObiWan "/Qui-GonJinn_190/Destroying the coils will force the ships to land OUTSIDE the invasion zone."
+	SayLine ObiWan "/Qui-GonJinn_191/If we can make these two ships land away from their designated landing zones, it should slow down the invasion force."
+	SayLine ObiWan "/Qui-GonJinn_192/More importantly, we'll have fewer Trade Federation enemies to face."
+	SayLine ObiWan "/Obi-WanKenobi_54.27/Yes, Master."
+}
+
+
+Script "Electric Discharge Dialog"
+{
+	WaitUntilEnteredRegion ObiWan "rgn_electric_discharge"
+	SayLine ObiWan "/Obi-WanKenobi_186.21/The repulsor coils are heating up!  Things could get a bit toasty in here."
+	Event "Electric Sounds"
+   SayLine ObiWan "/Qui-GonJinn_187/Get out of the wingtip area!"
+	SayLine ObiWan "/Obi-WanKenobi_186.02/Acknowledged!"
+}
+
+
+
+Script "Wingend Dialog"
+{
+	WaitUntilEnteredRegion ObiWan "Voiceline_trigger_Wingend"
+	SayLine ObiWan "/Obi-WanKenobi_186.01/Master!  I've made it out!"
+   SayLine ObiWan "/Qui-GonJinn_199.01/Well done."
+	SayLine ObiWan "/Obi-WanKenobi_185/Master, I'm at a loss.  How do we damage the repulsorlift generators?"
+	SayLine ObiWan "/Qui-GonJinn_1191.1/The Force will present us with a solution."
+	SayLine ObiWan "/Obi-WanKenobi_54.27/Yes, Master."
+}
+
+
+Script RGNComm_01
+{
+	WaitUntilEnteredRegion ObiWan "rgn_BAD_gen_comm01"
+	SayLine "A_BAD_infantry_54" "/BattleDroidInfantry1_205/Step away from the console, Jedi."
+}
+
+
+Script RGNComm_02
+{
+	WaitUntilEnteredRegion ObiWan "rgn_BAD_gen_comm02"
+	SayLine "A_BAD_infantry_54" "/BattleDroidInfantry1_206/Move away from the control console."
+}
+
+
+
+Script "Opening Slashable Pipe"
+{
+	//WaitUntilKilled "A_02_pipe_dstry_engybg_01"
+	//WaitUntilKilled "A_02_pipe_dstry_top_01"
+
+	WaitUntilKilled "A_02_pipe_destroy_01"
+   Hide "A_02_pipe_destroy_01"
+}

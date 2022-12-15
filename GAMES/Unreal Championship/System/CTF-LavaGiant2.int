@@ -1,0 +1,105 @@
+[LavaVolume0]
+LocationName="Lava"
+
+[LavaVolume1]
+LocationName="Lava"
+
+[LavaVolume10]
+LocationName="Lava"
+
+[LavaVolume11]
+LocationName="Lava"
+
+[LavaVolume12]
+LocationName="Lava"
+
+[LavaVolume13]
+LocationName="Lava"
+
+[LavaVolume14]
+LocationName="Lava"
+
+[LavaVolume15]
+LocationName="Lava"
+
+[LavaVolume16]
+LocationName="Lava"
+
+[LavaVolume17]
+LocationName="Lava"
+
+[LavaVolume2]
+LocationName="Lava"
+
+[LavaVolume3]
+LocationName="Lava"
+
+[LavaVolume4]
+LocationName="Lava"
+
+[LavaVolume5]
+LocationName="Lava"
+
+[LavaVolume6]
+LocationName="Lava"
+
+[LavaVolume7]
+LocationName="Lava"
+
+[LavaVolume8]
+LocationName="Lava"
+
+[LavaVolume9]
+LocationName="Lava"
+
+[LevelInfo0]
+Title="Lava Giant 2"
+
+[LevelSummary]
+Title="Lava Giant 2"
+
+[Volume0]
+LocationName="Red Flag Base"
+
+[Volume1]
+LocationName="Blue Flag Base"
+
+[Volume2]
+LocationName="Little Rock"
+
+[Volume3]
+LocationName="Top Ridge"
+
+[Volume4]
+LocationName="Red Lower Area"
+
+[Volume5]
+LocationName="Blue Lower Area"
+
+[ZoneInfo0]
+LocationName="Outside"
+
+[ZoneInfo1]
+LocationName="U - Damage Room"
+
+[ZoneInfo10]
+LocationName="Red Flag Base"
+
+[ZoneInfo3]
+LocationName="Upper Passage"
+
+[ZoneInfo4]
+LocationName="Rocket Launcher Room"
+
+[ZoneInfo6]
+LocationName="Shield Hallway"
+
+[ZoneInfo7]
+LocationName="Blue Flag Base"
+
+[ZoneInfo8]
+LocationName="Blue Flag Base"
+
+[ZoneInfo9]
+LocationName="Red Flag Base"
+

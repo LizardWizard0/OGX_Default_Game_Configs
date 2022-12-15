@@ -1,0 +1,121 @@
+<!-- NPC Ranged weapons only.  See Ed Davis or Ed Kay if you don't understand what this file does. -->
+
+<WeaponAndDamageData> <!-- Root tag, DO NOT CHANGE OR REMOVE -->
+     
+	<Weapons>
+	
+		<!-- 	
+		RangeNPC 	Base max range when weapon used by NPC 
+		Ammo		Ammo per clip
+		Damage		Base damage per projectile (NB. this is only used if IOT file doesn't exist)
+		NumProjectiles	Number of projectiles fired per shot 
+		-->
+		<!-- 
+		<RumbleLowFreq> - frequency of low freq motor, 0 - 65535
+		RumbleHighFreq - frequency of high freq motor, 0 - 65535
+		RumbleDuration - time in sec, typically about 0.1
+		--> 
+		<Revolver>
+			<RangeNPC>1400.0</RangeNPC>			<!-- original: 1500.0 --> 
+			<Ammo>6</Ammo>
+			<Damage>32.0</Damage>
+			<NumProjectiles>1</NumProjectiles>
+			<RumbleLowFreq>65535</RumbleLowFreq>
+			<RumbleHighFreq>65535</RumbleHighFreq>
+			<RumbleDuration>0.094</RumbleDuration>
+			<MuzzleFlashScale>0.8</MuzzleFlashScale>
+			<MuzzleFlashBloomIntensity>255</MuzzleFlashBloomIntensity>
+		</Revolver>
+
+		<Colt1911>
+			<RangeNPC>1400.0</RangeNPC>			<!-- original: 1500.0 --> 
+			<Ammo>9</Ammo>
+			<Damage>20.0</Damage>
+			<NumProjectiles>1</NumProjectiles>
+			<RumbleLowFreq>40000</RumbleLowFreq>
+			<RumbleHighFreq>65535</RumbleHighFreq>
+			<RumbleDuration>0.075</RumbleDuration>
+			<MuzzleFlashScale>0.8</MuzzleFlashScale>
+			<MuzzleFlashBloomIntensity>255</MuzzleFlashBloomIntensity>
+		</Colt1911>
+
+		<Shotgun>
+			<RangeNPC>2000.0</RangeNPC>			<!-- original: 3500.0 --> 
+			<Ammo>2</Ammo>
+			<Damage>20.0</Damage>
+			<NumProjectiles>8</NumProjectiles>
+			<RumbleLowFreq>65535</RumbleLowFreq>
+			<RumbleHighFreq>20000</RumbleHighFreq>
+			<RumbleDuration>0.4</RumbleDuration>
+			<MuzzleFlashScale>2.3</MuzzleFlashScale>
+			<MuzzleFlashBloomIntensity>128</MuzzleFlashBloomIntensity>
+		</Shotgun>
+
+		<Rifle>
+			<RangeNPC>6000.0</RangeNPC>			<!-- original: 11000.0 --> 
+			<Ammo>5</Ammo>
+			<Damage>80.0</Damage>
+			<NumProjectiles>1</NumProjectiles>
+			<RumbleLowFreq>45000</RumbleLowFreq>
+			<RumbleHighFreq>65535</RumbleHighFreq>
+			<RumbleDuration>0.2</RumbleDuration>
+			<MuzzleFlashScale>1.5</MuzzleFlashScale>
+			<MuzzleFlashBloomIntensity>255</MuzzleFlashBloomIntensity>
+		</Rifle>
+
+		<Thompson>
+			<RangeNPC>2000.0</RangeNPC>			<!-- original: 2000.0 --> 
+			<Ammo>50</Ammo>
+			<Damage>8.0</Damage>
+			<NumProjectiles>1</NumProjectiles>
+			<RumbleLowFreq>65535</RumbleLowFreq>
+			<RumbleHighFreq>40000</RumbleHighFreq>
+			<RumbleDuration>0.073</RumbleDuration>
+			<MuzzleFlashScale>2.0</MuzzleFlashScale>
+			<MuzzleFlashBloomIntensity>100</MuzzleFlashBloomIntensity>
+		</Thompson>
+
+		<Staff>
+			<RangeNPC>5000.0</RangeNPC>			<!-- original: 5000.0 --> 
+			<!-- No Ammo tag as the staff doesn't use ammo -->
+			<Damage>40.0</Damage>
+			<NumProjectiles>1</NumProjectiles>
+			<RumbleLowFreq>40000</RumbleLowFreq>
+			<RumbleHighFreq>40000</RumbleHighFreq>
+			<RumbleDuration>0.04</RumbleDuration>
+		</Staff>
+
+	</Weapons>
+
+		 
+	<DamageModifiers>
+	
+	<!-- Damage multipliers for different body parts when hit by ranged weapons.
+		 Defaults indicate the hard coded value used if tags are missing from this xml.
+		 1.0 is 100% damage from damage vs range IOT for weapon used,
+		 therefore 4.0 = 400%, 0.3 = 30% etc. -->
+		 
+		<Head>4.0</Head>		<!-- Default 4.0 -->
+		<Torso>1.0</Torso>		<!-- Default 1.0 -->
+		<LeftArm>0.6</LeftArm>		<!-- Default 0.3 -->
+		<RightArm>0.6</RightArm>	<!-- Default 0.3 -->
+		<LeftLeg>0.4</LeftLeg>		<!-- Default 0.3 -->
+		<RightLeg>0.4</RightLeg>	<!-- Default 0.3 -->
+		
+	</DamageModifiers>
+	
+	<DamageModifiersMelee>	
+		<!-- Damage multipliers for different body parts when hit by melee weapons. -->
+		 
+		<Head>1.0</Head>
+		<Torso>1.0</Torso>
+		<LeftArm>0.9</LeftArm>
+		<RightArm>0.9</RightArm>
+		<LeftLeg>0.5</LeftLeg>
+		<RightLeg>0.5</RightLeg>
+
+		<ModifierAttackerNotInViewMem>3.0</ModifierAttackerNotInViewMem>
+
+	</DamageModifiersMelee>
+
+</WeaponAndDamageData>

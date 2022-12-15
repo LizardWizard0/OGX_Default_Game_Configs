@@ -1,0 +1,1123 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+/////////////
+//  MUSIC  //
+/////////////
+
+AddMusic m_suspense_04.wav Suspense 
+AddMusic m_tension_09.wav Tension
+AddMusic m_battle_07.wav Battle
+
+SetMusicInterval Suspense 20 30
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 1 3
+
+SetMusicResetInterval 2
+
+//StartMusicManager
+
+MissionTitle "The Wonderful Scriptent"
+
+MissionObjective 1 "Find the Nudger"
+MissionObjective 2 "Nudge him"
+MissionObjective 3 "Enjoy the fireworks"
+
+Script Objectives
+{
+	WaitUntilNear Obi Nudger 2
+	MissionObjectiveAchieved 1
+
+	WaitUntilNudged Nudger
+	MissionObjectiveAchieved 2
+
+	WaitUntilNudged Nudgee
+	MissionObjectiveFailed 3  // No one could enjoy that
+}
+
+
+CreateParticleGen quigon_doorCut.gen "particle_gen" "A_RFP_Gen"
+Script particle
+{
+	Pause 5
+	ParticleGenOff particle_gen
+	Pause 5
+	ParticleGenOn particle_gen
+	Loop
+}
+
+
+
+
+Script script1 1
+{
+	WaitUntilNudged Nudgee
+	RemoveGroup 1
+	SayLine Obi "Yippee"
+	Save
+}
+
+StoreScript "Impulse everyone"
+{
+	ImpulseToRefPos Obi A_RFP_Gen
+	ImpulseToRefPos Flourisher A_RFP_Gen
+	ImpulseToRefPos Fader A_RFP_Gen
+	ImpulseToRefPos Nudgee A_RFP_Gen
+	ImpulseToRefPos Nudger A_RFP_Gen
+	ImpulseToRefPos NudgedTalker A_RFP_Gen
+	ImpulseToRefPos Looker A_RFP_Gen
+	ImpulseToRefPos AnimatedGuy A_RFP_Gen
+	ImpulseToRefPos Vanishee A_RFP_Gen
+	
+	Pause 0.5
+	
+	ImpulseToRefPos Some_Dude01 A_RFP_Gen
+	ImpulseToRefPos Some_Dude02 A_RFP_Gen
+	ImpulseToRefPos Cutscener A_RFP_Gen
+	ImpulseToRefPos Displayer A_RFP_Gen
+	ImpulseToRefPos Vanisher A_RFP_Gen
+	
+	Pause 0.5
+	
+	ImpulseToRefPos Runner A_RFP_Gen
+	ImpulseToRefPos ArmsTaker A_RFP_Gen
+	ImpulseToRefPos Teleporter A_RFP_Gen
+	ImpulseToRefPos Follower A_RFP_Gen
+	ImpulseToRefPos Sleepy A_RFP_Gen
+	
+	Pause 2.0
+	
+	Loop
+}
+
+
+
+
+Actor Firer Some_Dude01
+Actor Lookee Some_Dude02
+
+/*
+script
+{
+	pause 1
+
+	begincutscene
+	cameraplayer Runner
+}
+
+Script
+{
+	waituntildamaged obi
+	begincutscene
+	forcepushcharacter obi
+}
+*/
+
+script
+{
+	waituntilforcepushedcharacter obi
+	sayline obi "I pushed him!"
+}
+
+
+CreateActor Naboo-Resistance2.dsc SlowMoe RP_SlowMoe
+
+Script "Tests"
+{
+	//begincutscene 
+
+	//camerafixed A_RFP_Gen_Cam
+
+	//BinocularsOn
+	//Zoom 0
+	//JitterOn
+	
+	//AddInventoryItem Obi PowerupSniperRifle.dsc
+
+	//playflourish l05_4_cs_01.wav
+
+
+	FadeUpAndWait 1.0
+
+
+	//ZoomAndWait .5 1
+	//BinocularsOff
+	//EndCutscene
+
+
+	/*
+
+	// COMMUNICATOR TEST
+
+	BeginCutScene
+	CommunicatorOn
+	//LoadDLG "ResistanceLeader.dlg"
+
+	//CommunicatorMessage "I toured around the world from London to the Bay, it's Hammer, go Hammer, M.C. Hammer, yo Hammer, and the rest can go and play.  Yeah boy, U Can't touch this."
+	//CommunicatorMessage "You've got four battle droids converging on your position.  Better get to the dropship - Perhaps there's something in there that can help you..."
+
+	CommunicatorMessageAndWait "/ResistanceLeader_31/Great job freeing those Pilots, Jedi."
+	CommunicatorMessageAndWait "/ResistanceLeader_32/We have one more job for you."
+	CommunicatorMessageAndWait "/ResistanceLeader_33/There is a large turbolaser in a park on the south side of the Hangar."
+//	CommunicatorMessageAndWait "/ResistanceLeader_34/It has been decimating our starfighters."
+	CommunicatorMessageAndWait "/ResistanceLeader_35/The pilots are not going to be able to make it out of the Hangar safely until that gun is eliminated."
+	CommunicatorMessageAndWait "/ResistanceLeader_36/Take the demo charges and find that gun."
+//	CommunicatorMessageAndWait "/ResistanceLeader_37/Our operatives have placed a beacon on the gun so you should be able to use your tracking device to locate it."
+//	CommunicatorMessageAndWait "/ResistanceLeader_38/Remember, it’s imperative that the gun is out of commission by the time the pilots reach the Hangar."
+	CommunicatorMessageAndWait "/ResistanceLeader_39/Good luck."
+	CommunicatorOff
+	EndCutScene
+
+	*/
+
+
+
+	/*
+
+	// VOLUME TEST
+
+	SayLine Obi "Playing sound"
+	PlaySoundLooping m_saberArena_01_lp.wav
+	Pause 5
+	SayLine Obi "Decreasing volume"
+	SoundVolume m_saberArena_01_lp.wav 0 5
+	Pause 5
+	SayLine Obi "Increasing volume"
+	SoundVolume m_saberArena_01_lp.wav 1 5
+	Pause 5
+	SayLine Obi "Done"
+	*/
+
+
+	/*
+	// DOOR OPENING TEST	
+	Actor door A_08_door1imp_01
+
+	SayLine Obi "Opening door!"
+	OpenDoor door
+	Pause 0.1
+
+	CloseDoor door
+
+	Pause 2.0
+	CloseDoorAndWait door
+
+	Pause 0.5
+
+	OpenDoor door
+	Pause 0.1
+	if (IsOpening door)
+	{
+		WaitUntilDoorOpen door
+		CloseDoor door
+	}
+	else
+	{
+		CloseDoor door
+	}
+	
+	//WaitUntilDoorOpen A_08_door1imp_01
+	SayLine Obi "Hey, the door opened!"
+	*/
+
+	/*
+	PlayAnimationLooping ObiWan human_push-cycle.anim 1.5 //human_bracepistol-idle.anim
+
+	Pause 10.0
+	StopAnimation ObiWan
+	*/
+	
+	/*
+	// GESTURE TEST
+	Actor Gesturer Obi
+
+	SayLine Obi "PointLeft"
+	PlayGestureAndWait Gesturer "PointLeft"
+	SayLine Obi "PointForward"
+	PlayGestureAndWait Gesturer "PointForward"
+	SayLine Obi "PointRight"
+	PlayGestureAndWait Gesturer "PointRight"   *** Doesn't point right
+	SayLine Obi "PalmUpLeft"
+	PlayGestureAndWait Gesturer "PalmUpLeft"
+	SayLine Obi "PalmUpRight"
+	PlayGestureAndWait Gesturer "PalmUpRight"
+	SayLine Obi "PalmUpBoth"
+	PlayGestureAndWait Gesturer "PalmUpBoth"
+	SayLine Obi "HandsOnHips"
+	PlayGestureAndWait Gesturer "HandsOnHips"
+	SayLine Obi "AttractAttention"
+	PlayGestureAndWait Gesturer "AttractAttention"
+	SayLine Obi "PushButton"
+	PlayGestureAndWait Gesturer "PushButton"
+	SayLine Obi "PullLever"
+	PlayGestureAndWait Gesturer "PullLever"
+	SayLine Obi "Talk"
+	PlayGestureAndWait Gesturer "Talk"
+	SayLine Obi "Think"
+	PlayGestureAndWait Gesturer "Think"
+	SayLine Obi "Typing"
+	PlayGestureAndWait Gesturer "Typing"   *** Doesn't work
+	SayLine Obi "TypingThink"
+	PlayGestureAndWait Gesturer "TypingThink"   *** Doesn't work
+
+	SayLine Obi "ScratchHead"
+	PlayGestureAndWait Gesturer "ScratchHead"
+	SayLine Obi "TurnHeadLeft"
+	PlayGestureAndWait Gesturer "TurnHeadLeft"
+	SayLine Obi "TurnHeadRight"
+	PlayGestureAndWait Gesturer "TurnHeadRight"
+	SayLine Obi "Captured"
+	PlayGestureAndWait Gesturer "Captured"
+	SayLine Obi "Panic"
+	PlayGestureAndWait Gesturer "Panic"
+	SayLine Obi "Manipulate"
+	PlayGestureAndWait Gesturer "Manipulate"   *** Doesn't work
+
+	SayLine Obi "ShakeHead"
+	PlayGestureAndWait Gesturer "ShakeHead"
+	SayLine Obi "Talk2"
+	PlayGestureAndWait Gesturer "Talk2"   *** Doesn't seem to do anything
+
+	SayLine Obi "Surrender"
+	PlayGestureAndWait Gesturer "Surrender"
+	SayLine Obi "CapturedKneel"
+	PlayGestureAndWait Gesturer "CapturedKneel"
+	SayLine Obi "PushBox"
+	PlayGestureAndWait Gesturer "PushBox"
+
+	SayLine Obi "Done"
+	*/
+
+
+	//CameraLookAtAndWait Nudger 6
+	//sayline obi done
+
+	/*
+	// Panning test
+
+	sayline obi "looking at Nudger"
+	cameralookatandwait Nudger 5
+
+	sayline obi "panning down"
+	pandownandwait 45 2
+	sayline obi "panning right"
+	panrightandwait 45 2
+	sayline obi "panning up"
+	panupandwait 45 2
+	sayline obi "panning left"
+	panleftandwait 45 2
+	sayline obi done
+	*/
+
+	/*
+	// MoveCamera test
+
+	sayline obi "moving up"
+	movecameraupandwait 10 2
+	sayline obi "moving down"
+	movecameradownandwait 10 2
+	sayline obi "moving left"
+	movecameraleftandwait 10 2
+	sayline obi "moving right"
+	movecamerarightandwait 10 2
+	sayline obi "moving forward"
+	movecameraforwardandwait 10 2
+	sayline obi "moving backward"
+	movecamerabackwardandwait 10 2
+	sayline obi done
+	*/
+
+
+	/*
+	Sayline Obi "zooming in"
+	zoomandwait 1 6 2 2
+	pause 1.0
+
+	sayline Obi "zooming out"
+	zoomandwait 0 6 3 3
+	pause 1.0
+	*/
+
+	//binocularsoff
+	//cameraoff
+	//endcutscene
+
+
+
+	/*
+	// MOVING OBJECT TEST
+
+	pause 3.0
+
+	sayline obi "moving left"
+	moveobjectleftandwait c 5 1 0.2
+
+	sayline obi "moving right"
+	moveobjectrightandwait c 5 2 0.4
+
+	sayline obi "moving forward"
+	moveobjectforwardandwait c 5 3 0.6
+
+	sayline obi "moving backward"
+	moveobjectbackwardandwait c 5 4 0.8
+
+	sayline obi "moving up"
+	moveobjectupandwait c 5 5 1.0
+
+	sayline obi "moving down"
+	moveobjectdownandwait c 5 6 1.2
+
+	sayline obi "moving and rotating object"
+	moveandrotateobjectandwait c temp 6 2
+
+	sayline obi "moving object without rotation"
+	moveobjectandwait c A_RFP_Gen 3 1
+
+	sayline obi "rotating object without moving it"
+	rotateobject c A_RFP_Gen 2
+
+
+	// Rotating Object
+	sayline obi "rotating left"
+	rotateobjectleftandwait c 90 1 0.4
+
+	sayline obi "rotating right"
+	rotateobjectrightandwait c 90 2 0.6
+
+	sayline obi "rotating up"
+	rotateobjectupandwait c 90 3 1.0
+
+	sayline obi "rotating down"
+	rotateobjectdownandwait c 90 4 1.2
+
+	sayline obi done
+	*/
+}
+
+
+/*
+Script "EndWhileLoop Test"
+{
+	while (isnotinregion Firer region_01)
+	{
+		if (isnotinregion ObiWan region_01)
+		{
+			println "okay"
+			pause 0.5
+		}
+		else
+		{
+			endwhileloop
+		}
+	}
+	println "done"
+}
+*/
+
+/*
+//FUNCTION TEST
+
+Function "Run to stairs" (Actor man, Node dest)
+{
+	TakeControlOf man
+	RunToNodeAndWait man dest
+	Println "arrived"
+}
+
+Call "Run to stairs" (Nudgee, stairs_3)
+Call "Run to stairs" (Nudger, stairs_4)
+
+
+
+//////////////////////
+//  Pushing crates  //
+//////////////////////
+
+Function "PushCrate" (Actor Thug, Actor Crate, Node From, Node To)
+{
+	TakeControlOf Thug 0.3
+	WalkToNodeAndWait Thug From
+	Push Thug Crate
+
+	ChildScript "Keep Playing animation"
+	{
+		PlayAnimationAndPause Thug human_push-cycle.anim
+		Loop
+	}
+
+	Child WalkToNodeAndWait Thug To
+	Child WaitUntilRegainedControl Thug
+	Child WaitUntilDamaged Thug
+	Child WaitUntilDamaged Crate
+	WaitForAny
+
+	StopPushing Thug Crate
+	ReturnControlTo Thug
+}
+
+
+// Just fill in the blanks with the appropriate thug name, crate name, start node, and end node
+Call PushCrate Looker c crate1 crate2
+*/
+
+
+
+
+
+// ***************************************************
+
+
+
+
+Script "Opening Text"
+{
+	//CreateParticleGen "15_CrashSmoke.GEN" "particle_gen" "A_RFP_Gen"
+	//Display "/DARREN01/" 3.0
+}
+
+
+Script "AnimatedGuy's Dialog"
+{
+	WaitUntilNear AnimatedGuy Obi 3.0 
+	SayLine AnimatedGuy "I'm animated!  I'm currently playing 'human_push-cycle.anim.'" 
+	WaitUntilFar AnimatedGuy Obi 3.0 
+	
+	Loop
+}
+	
+Script "AnimatedGuy's Nudge Dialog"
+{
+	SayLineWhenNudged AnimatedGuy "Please tell him to stop looking at me." 
+	Loop
+}
+    
+Script "AnimatedGuy's Script"
+{
+	TakeControlOf AnimatedGuy 
+
+	PlayAnimationGoalAndWait AnimatedGuy "human_push-cycle.anim" 
+	
+	Loop
+}
+
+StoreScript "ArmsTaker's Dialog After Gun"
+{
+	WaitUntilFar ArmsTaker Obi 3.0 
+	WaitUntilNear ArmsTaker Obi 3.0 
+	SayLine ArmsTaker "Thanks for the firearm." 
+	
+	Loop
+}
+
+Script "ArmsTaker's Script"
+{
+	TakeControlOf ArmsTaker
+	UnEquipWeapon ArmsTaker
+	
+	ChildScript
+	{
+		WaitUntilNear ArmsTaker Obi 3.0 
+		SayLine ArmsTaker "Psst!  Hey Slim!  Nudge me to give me a gun!  Hurry!" 
+		WaitUntilFar ArmsTaker Obi 3.0 
+		
+		Loop
+	}
+	
+	SayLineWhenNudged ArmsTaker "Hey thanks!  Now it's time to take out the trash!" 
+	AddInventoryItem ArmsTaker EquipBADBlaster.dsc  // *** Is this right?  Used to be Rifle_Naboo 
+	EquipWeapon ArmsTaker
+}
+
+
+// /* Temporarily commented out because Jar Jar's DSC is gone, so the Croucher cannot be created
+Script "Kill Croucher"
+{
+	WaitUntilNudged ArmsTaker
+//	ForceTarget ArmsTaker Croucher
+//	ForceState ArmsTaker "Attack" 
+	Follow ArmsTaker Croucher 3
+	Pause 5
+	ChildScript "Firing"
+	{
+		FireAt ArmsTaker Croucher
+		Loop
+	}
+		
+	SetTeam Croucher 8
+	EndScript "Croucher's Dialog"
+	SayLine Croucher "Oh nooooo!!!  Meesa gonna die!" 
+	InvincibilityOff Croucher 
+	WaitUntilKilled Croucher
+	EndScript "Firing"
+	StopActions ArmsTaker
+	EndScript "Croucher's Script"
+	BeginScript "ArmsTaker's Dialog After Gun" 
+	WalkToNodeAndWait ArmsTaker NodeArmsTaker
+	LookAtAndWait ArmsTaker Runner
+	ReturnControlTo ArmsTaker 
+}
+
+Script "Croucher's Death Epilogue"
+{
+	WaitUntilKilled Croucher 
+	SayLine AnimatedGuy "Yay!" 
+	SayLine Follower "Alright!" 
+	SayLine Cutscener "Hooray!" 
+	SayLine Looker "Yes!" 
+	SayLine Nudger "Awesome!" 
+	SayLine Nudgee "Way to go!" 
+	SayLine NudgedTalker "Excellent!" 
+
+   EndScript "Sleepy Guy" 
+	WakeUp Sleepy 
+	Script
+	{
+		WaitUntilNear Sleepy Obi 3.0 
+		SayLine Sleepy "I just... I just can't sleep now that Croucher is gone.  *SNIFF*" 
+		WaitUntilFar Sleepy Obi 3.0 
+		Loop
+	}
+}
+
+Script "Croucher's Dialog"
+{
+	WaitUntilNear Croucher Obi 3.0 
+	SayLine Croucher "Watch as I CROUCH and STAND, Obi." 
+	WaitUntilFar Croucher Obi 3.0 
+	
+	Loop
+}
+
+Script "Croucher's Script"
+{
+	TakeControlOf Croucher 
+
+	Crouch Croucher 
+	Pause 1.5 
+	Stand Croucher 
+	Pause 1.5 
+	
+	Loop
+}
+
+
+
+Script "Cutscener's Dialog"
+{
+	WaitUntilNear Cutscener Obi 3.0 
+	SayLine Cutscener "Nudge me for a cutscene." 
+	WaitUntilFar Cutscener Obi 3.0 
+	
+	Loop
+}
+
+Script "Cutscener's Script"
+{
+	TakeControlOf Cutscener 
+	LookAt Cutscener Obi 
+	WaitUntilNudged Cutscener 
+
+	BeginCutscene
+
+	CameraTrack "A_RFP_Gen_Cam" Obi
+
+	SayLineAndContinue Cutscener "Calisthenics!  And one and two and..." 
+	Pause 0.2 
+	Crouch Cutscener 
+	Crouch Obi 
+	Pause 0.5 
+	Stand Cutscener 
+	Stand Obi 
+	Pause 0.5 
+
+	MoveCamera CutSceneCamera 5.0
+
+	Crouch Cutscener 
+	Crouch Obi 
+	Pause 0.5 
+	Stand Cutscener 
+	Stand Obi 
+	Pause 0.5 
+	Crouch Cutscener 
+	Crouch Obi 
+	Pause 0.5 
+	Stand Cutscener 
+	Stand Obi 
+	Pause 0.5 
+	SayLine Cutscener "Brilliant acting job!  You were amazing!" 
+
+	CameraOff
+
+	SayLine Obi "Thanks but I'll keep my day job."
+	EndCutscene 
+
+	Loop
+}
+
+Script "Displayer's Dialog"
+{
+	WaitUntilNear Displayer Obi 3.0 
+	SayLine Displayer "Nudge me and I'll DISPLAY that neat opening text again." 
+	WaitUntilFar Displayer Obi 3.0 
+		
+	Loop
+}
+
+Script "Displayer's Script With Text"
+{
+	TakeControlOf Displayer 
+	
+	WaitUntilNudged Displayer 
+	PauseScript "Displayer's Dialog" 
+	Display "/DARREN01/"
+	
+	ChildScript
+	{
+		WaitUntilNear Displayer Obi 3.0 
+		SayLine Displayer "Nudge me again and I'll hide that annoying text." 
+		WaitUntilFar Displayer Obi 3.0 
+		
+		Loop
+	}
+	
+	WaitUntilNudged Displayer 
+	ResetScript "Displayer's Dialog" 
+	DisplayOff
+
+	Loop
+}
+/*
+Script "Door Unlocking"
+{
+	Actor Door A_08_door1imp_01
+	Actor Switch A_08_door_switch02_lockperm_01
+	Actor Man
+	TriggerUbergenAndWait A_z_UberGen_05 Man
+	
+	SetDoorToHalfCycle Door
+	LockDoor Door
+	TakeControlOf Man 
+		
+	Child WaitUntilNudged Door 
+	Child WaitUntilNudged Switch
+	WaitForAny 
+	SayLine Man "Hey, hold on!"
+	Follow Man Door 2.0
+	WaitUntilNear Man Door 2.0
+	StopActions Man
+	SayLine Man "Here, let me unlock that for you." 
+	UnlockDoor Door
+	Nudge Man Switch
+	Follow Man Obi 1.0
+	WaitUntilNear Man Obi 2.0
+	StopActions Man
+	SayLine Man "You can go in now." 
+	RunToNodeAndWait Man "stairs_3"
+	LookAt Man Obi 
+}
+*/
+Script "Fader's Dialog"
+{
+	WaitUntilNear Fader Obi 3.0 
+	SayLine Fader "Nudge me and I'll fade the screen in and out." 
+	WaitUntilFar Fader Obi 3.0 
+		
+	Loop
+}
+
+Script "Testing Pausing Pause"
+{
+	WaitUntilNudged Sleepy
+	SayLine Sleepy "Pausing Fader's Script"
+	PauseScript "Fader's Script"
+	WaitUntilNudged Sleepy
+	SayLine Fader "Thanks for unpausing me, sheesh."
+	ContinueScript "Fader's Script"
+	Loop
+}
+
+Script "Fader's Script"
+{
+	TakeControlOf Fader 
+		
+	WaitUntilNudged Fader
+	SayLine Fader "I'll fade down in 10 seconds, longer if you nudge Sleepy."
+	SayLine Fader "Nudging Sleepy un/pauses my script."
+	Pause 10
+	FadeDownAndWait 1.0 
+//	Pause 1.0 
+	FadeUpAndWait 1.0 
+	SayLine Fader "Can you believe it actually worked?"
+	
+	Loop
+}
+
+Script "Firer's Dialog"
+{
+	WaitUntilNear Firer Obi 2.0 
+	SayLine Firer "Nudge me so I can shoot this guy!  I'm in a really foul mood." 
+	WaitUntilFar Firer Obi 2.0 
+		
+	Loop
+}
+
+Script "Firer's Script"
+{
+	WaitUntilNudged Firer
+	SetDeadOnAimFraction Firer 1.0										  
+	FireAt Firer Lookee
+	FireAt Firer Obi 
+	
+	Loop
+}
+
+Script "Firer's Setup"
+{
+	TakeControlOf Firer 
+		
+	AddInventoryItem Firer EquipBADBlaster.dsc  // *** Is this right?  Used to be Rifle_Naboo 
+	EquipWeapon Firer
+}
+
+Script "Flourisher's Dialog"
+{
+	WaitUntilNear Flourisher Obi 2.0 
+	SayLine Flourisher "Nudge me and I'll play a little something I call Flourish." 
+	WaitUntilFar Flourisher Obi 2.0 
+		
+	Loop
+}
+
+Script "Flourisher's Script"
+{
+	TakeControlOf Flourisher 
+		
+	WaitUntilNudged Flourisher 
+	PlayFlourish "m_objective_01.wav"
+	
+	Loop
+}
+
+Script "Follower's Dialog"
+{
+	WaitUntilNear Follower Obi 2.0 
+	SayLine Follower "Nudge me and I'll follow you, Obi." 
+	WaitUntilFar Follower Obi 2.0 
+		
+	Loop
+}
+
+Script "Follower's Script"
+{
+	TakeControlOf Follower 
+	
+	SayLineWhenNudged Follower "Yay!  I'm following you!  Thank you." 
+	Follow Follower Obi 2.0 
+	PauseScript "Follower's Dialog" 
+	SayLineWhenNudged Follower "Fine.  Nudge me again when you want me to tag along.  Jerk." 
+	StopActions Follower 
+	WaitUntilFar Follower Obi 2.0 
+	ResetScript "Follower's Dialog" 
+		
+	Loop
+}
+
+Script "Lookee's Dialog"
+{
+	WaitUntilSees Obi Lookee 3.0
+	SayLine Lookee "Take a picture, it'll last longer." 
+	WaitUntilFar Lookee Obi 3.0 
+	
+	Loop
+}
+
+Script "Looker's Dialog"
+{
+	WaitUntilNear Looker Obi 3.0 
+	SayLine Looker "I'm alternating between looking at that animated (pushing) guy and you, Obi." 
+	WaitUntilFar Looker Obi 3.0 
+	
+	Loop
+}
+
+Script "Looker's Script"
+{
+	TakeControlOf Looker 
+	
+	LookAt Looker AnimatedGuy 
+	Pause 1.5
+	LookAt Looker Obi 
+	Pause 1.5 
+    
+	Loop
+}
+
+Script "NudgedTalker's Dialog"
+{
+	WaitUntilNear NudgedTalker Obi 3.0 
+	SayLine NudgedTalker "I'll say something when you nudge me." 
+	WaitUntilFar NudgedTalker Obi 3.0 
+	
+	Loop
+}
+
+Script "NudgedTalker's Script"
+{
+	TakeControlOf NudgedTalker 
+	
+	SayLineWhenNudged NudgedTalker "I'm saying this because you nudged me.  Yup that's about it." 
+	
+	Loop
+}
+
+Script "Nudgee's Script"
+{
+	TakeControlOf Nudgee 
+	
+	LookAt Nudgee Obi 
+	WaitUntilFinishedTurning Nudgee 
+	PauseScript "Nudgee's Script" //To be continued... elsewhere...
+	WaitUntilNudged Nudgee 
+	Crouch Nudgee 
+	Pause 0.05
+	Stand Nudgee 
+	LookAt Nudgee Nudger 
+	WaitUntilFinishedTurning Nudgee 
+	SayLine Nudgee "Hey!  That tickles!" 
+
+	Loop
+}
+
+Script "Nudger's Dialog"
+{
+	WaitUntilNear Nudger Obi 3.0 
+	SayLine Nudger "Nudge me and I'll nudge Nudgee." 
+	WaitUntilFar Nudger Obi 3.0 
+		
+	Loop
+}
+
+Script "Nudger's Script"
+{
+	TakeControlOf Nudger 
+	
+	LookAt Nudger Obi 
+	SayLineWhenNudged Nudger "Now to prove it's really me nudging him back off a ways." 
+	WaitUntilFar Nudger Obi 3.0 
+	LookAtAndWait Nudger Nudgee 
+	ContinueScript "Nudgee's Script" 
+	Nudge Nudger Nudgee 
+	WaitUntilSaidLine Nudgee "Hey!  That tickles!" 
+
+	Loop
+}
+
+Script "Obi's Undoing"
+{
+    Child WaitUntilKilled Cutscener  
+    Child WaitUntilKilled Flourisher  
+    Child WaitUntilKilled Follower  
+    Child WaitUntilKilled AnimatedGuy  
+    Child WaitUntilKilled Looker  
+    Child WaitUntilKilled Nudger  
+    Child WaitUntilKilled Nudgee  
+    Child WaitUntilKilled NudgedTalker  
+    Child WaitUntilKilled ArmsTaker  
+    Child WaitUntilKilled Teleporter  
+
+	WaitForAny
+
+	ReturnControlTo Cutscener  
+	ReturnControlTo Flourisher  
+	ReturnControlTo Follower  
+	ReturnControlTo AnimatedGuy  
+	ReturnControlTo Looker  
+	ReturnControlTo Nudger  
+	ReturnControlTo Nudgee  
+	ReturnControlTo NudgedTalker  
+	ReturnControlTo ArmsTaker  
+	ReturnControlTo Teleporter  
+
+	Print "Attack Obi!!" 
+	SetTeam Obi 12 
+}
+
+Script "Panaka's Script"
+{
+	Actor Panaka
+	WaitUntilEnteredRegion Obi "region_01" 
+	TriggerUbergenAndWait A_z_UberGen_01 Panaka
+	Pause 1.0
+	TakeControlOf Panaka
+	
+	ChildScript "Panaka yells"
+	{
+		WaitUntilNear Panaka Obi 3
+		SayLine Panaka "AIIIIIEEEEEEEEE!!!"
+		PauseRandom 1 2
+		SayLine Panaka "I must save the queen!"
+		PauseRandom 2 3
+		
+		Loop
+	}
+
+	ChildScript
+	{
+		RunToNodeAndWait Panaka "Panaka_Hide"
+		WaitUntilEnteredRegion Obi "region_01" 
+		GotoStart Panaka 2
+		
+		Loop
+	}
+	
+	WaitForAbsolutelyAll
+}
+/*
+Script "Region Script"
+{
+	WaitUntilEnteredRegion Obi "region_01" 
+	SayLine Obi "Entered region 'region_01.'" 
+	WaitUntilExitedRegion Obi "region_01" 
+	SayLine Obi "Exited region 'region_01.'" 	
+
+	Loop
+}
+*/
+Script "Runner's Dialog"
+{
+	WaitUntilNear Runner Obi 3.0 
+	SayLine Runner "Mmm cardiovascular exercise.  Good for the heart!" 
+	WaitUntilFar Runner Obi 3.0 
+	
+	Loop
+}
+
+Script "Runner's Script"
+{
+	TakeControlOf Runner 
+	
+	RunToNodeAndWait Runner "stairs_1" 
+	RunToNodeAndWait Runner "stairs_2" 
+	RunToNodeAndWait Runner "stairs_3" 
+	WalkToNodeAndWait Runner "stairs_4"  //Needs to rest after climbing those stairs
+	RunToNodeAndWait Runner "stairs_5" 
+	RunToNodeAndWait Runner "stairs_6" 
+	RunToNodeAndWait Runner "stairs_7" 
+	RunToNodeAndWait Runner "stairs_8" 
+	
+	Loop
+}
+
+Script "Sleepy Guy"
+{
+	TakeControlOf Sleepy 
+	
+	WaitUntilNear Sleepy Obi 3.0 
+	SayLine Sleepy "What?!  You woke me up.  Walk away so I can go back to sleep." 
+	WakeUp Sleepy 
+	WaitUntilFar Sleepy Obi 3.0 
+	SayLine Sleepy "Thanks.  Zzzzzzz..." 
+	Sleep Sleepy 
+
+	Loop
+}
+
+Script "SlowMoe's Dialog"
+{
+	WaitUntilNear SlowMoe Obi 3.0 
+	SayLine SlowMoe "Nudge me and I'll slow you down (temporarily)!" 
+	WaitUntilFar SlowMoe Obi 3.0 
+		
+	Loop
+}
+
+Script "SlowMoe's Script"
+{
+	TakeControlOf SlowMoe 
+	
+	WaitUntilNudged SlowMoe
+	SayLineAndContinue SlowMoe "Do.. you.... feel......... slower!?!" 
+	SetGameSpeed 0.1 1
+	Pause 4.0
+	SetGameSpeed 1.0 1
+		
+	Loop
+}
+
+Script "Teleporter's Dialog"
+{
+	WaitUntilNear Teleporter Obi 3.0 
+	SayLine Teleporter "Nudge me and I'll teleport!" 
+	WaitUntilFar Teleporter Obi 3.0 
+		
+	Loop
+}
+
+Script "Teleporter's Script"
+{
+	TakeControlOf Teleporter 
+	
+	SayLineWhenNudged Teleporter "Wheeee!!!" 
+	GotoStart Teleporter 1 
+//	RunToNodeAndWait Teleporter "RunToNode" 
+//	SayLine Teleporter "I should be running." 
+	SayLineWhenNudged Teleporter "Woo-hoo!!!" 
+	GotoStart Teleporter 0 
+		
+	Loop
+}
+
+Script "Vanishee's Dialog"
+{
+	WaitUntilNear Vanishee Obi 3.0 
+	SayLine Vanishee "Do NOT nudge me."
+	WaitUntilFar Vanishee Obi 3.0 
+	
+	Loop
+}
+
+Script "Vanishee's Script"
+{
+	WaitUntilNudged Vanishee
+	ChildScript
+	{ 
+		WaitUntilFar Vanishee Obi 3.0 
+		ResetScript "Vanishee's Script"
+	}
+	SayLine Vanishee "I SAID, 'Do not nudge me!'"
+	WaitUntilNudged Vanishee
+	SayLine Vanishee "What, are you a tester?  I'm warning you, stop nudging me."
+	WaitUntilNudged Vanishee
+	SayLine Vanishee "This is your final warning.  I beg you not to nudge me again."
+	WaitUntilNudged Vanishee
+	SayLine Vanishee "You asked for it!  <casting> BLACK HOLE!"
+	GotoStart Obi 0 
+	BeginScript "Impulse everyone"
+}
+
+Script "Vanisher's Dialog"
+{
+	WaitUntilNear Vanisher Obi 3.0 
+	SayLine Vanisher "Nudge me and I'll HIDE that guy behind the tree for two seconds!" 
+	WaitUntilFar Vanisher Obi 3.0 
+		
+	Loop
+}
+
+Script "Vanisher's Script"
+{
+	TakeControlOf Vanisher 
+	TakeControlOf Vanishee 
+	
+	WaitUntilNudged Vanisher 
+	Hide Vanishee 
+	SayLineAndContinue Vanisher "You can't see him!!" 
+	Pause 2.0 
+	Show Vanishee 
+	SayLine Vanisher "Whoop there he is!  Cool huh?" 
+
+	Loop
+}
+
+

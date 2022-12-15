@@ -1,0 +1,54 @@
+AddInventoryItem Obi equiptuskengrenade.dsc
+AddInventoryItem Obi equipiongrenade.dsc
+AddInventoryItem Obi equipbadgrenadecon.dsc
+AddInventoryItem Obi equipbadsniper.dsc
+
+//ConsoleCommand "makeentity powerupinvulnerable.dsc pu"
+//ConsoleCommand "makeentity powerupunlimitedforce.dsc pu"
+
+
+FadeUpAndWait 
+
+
+/*
+AudioCue sound
+
+Script "Create"
+{
+	Println "Creating sound"
+	CreateAudioCueAndWait sound ui.aud MenuMusic
+}
+
+Script "Destroy"
+{
+	Pause 3
+	Println "Stopping sound"
+	StopAudioCue sound
+}
+*/
+
+
+/*
+BeginCutScene
+BinocularsOn
+ZoomAndWait .2 3 1 1
+Pause 1
+ZoomAndWait .75 3 1 1
+Pause 2
+EndCutScene
+	*/
+
+
+/*
+Script
+{
+	Pause 5
+	BeginCutScene
+	Pause 5
+	EndCutScene
+	Loop
+}
+*/
+
+
+	

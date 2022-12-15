@@ -1,0 +1,42 @@
+[LevelInfo0]
+Title="Osiris 2"
+
+[LevelSummary]
+Title="Osiris 2"
+
+[ZoneInfo0]
+LocationName="Underground Temple"
+
+[ZoneInfo1]
+LocationName="Upper Hallways"
+
+[ZoneInfo10]
+LocationName="Flak Cannon Room"
+
+[ZoneInfo11]
+LocationName="Lower Hallway"
+
+[ZoneInfo2]
+LocationName="Upper Hallways"
+
+[ZoneInfo3]
+LocationName="Main Courtyard"
+
+[ZoneInfo4]
+LocationName="Lightning Gun Room"
+
+[ZoneInfo5]
+LocationName="Upper Hallways"
+
+[ZoneInfo6]
+LocationName="Upper Hallways"
+
+[ZoneInfo7]
+LocationName="Lower Hallway"
+
+[ZoneInfo8]
+LocationName="Shock Rifle Room"
+
+[ZoneInfo9]
+LocationName="Tomb Room"
+

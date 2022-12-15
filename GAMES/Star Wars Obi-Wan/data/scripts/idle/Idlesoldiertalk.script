@@ -1,0 +1,15 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+PauseRandom .01 2
+
+AddGesture me PointForward 3
+AddGesture me HandsOnHips 4
+AddGesture me none 2
+AddGesture me PalmUpBoth 3
+AddGesture me HandsOnHips 4
+AddGesture me none 2
+
+WaitUntilFinishedGesture me
+
+

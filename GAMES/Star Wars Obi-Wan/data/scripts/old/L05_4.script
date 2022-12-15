@@ -1,0 +1,1331 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+SetDefaultSurface 08_13fnttop.sur
+
+///////////////////
+/// BEGIN MUSIC ///
+///////////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_06.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_11.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+
+/////////////////
+/// END MUSIC ///
+/////////////////
+
+Function SetStartPosition (Region r, Int n)
+{
+	WaitUntilEnteredRegion Obi r
+	set StartPosition n
+}
+
+/*
+Script "Set_Respawn_Points"
+{
+	set StartPosition 0
+	Call SetStartPosition RGN_Start01 1
+	Call SetStartPosition RGN_Start02 2
+	Call SetStartPosition RGN_Start03 3
+	Call SetStartPosition RGN_Start04 4
+	Call SetStartPosition RGN_Start05 5
+	Call SetStartPosition RGN_Start06 6
+	Call SetStartPosition RGN_Start07 7
+	Call SetStartPosition RGN_Start08 8
+	Call SetStartPosition RGN_Start09 9
+}
+*/
+
+Script "Opening Music"
+{
+	Pause 0.5
+	PlayMusic Suspense 15 40  // Play a new suspense cue every 20 to 40 seconds
+}
+
+/////////////////////
+///BEGIN FUNCTIONS///
+/////////////////////
+
+/// PARTICLE GENERATOR FUNCTIONS ///
+
+function "GenBirds" (actor Birdie, refpos gen_birdie)
+{
+    waituntilnearrefpos obi gen_birdie 0.5
+    CreateParticleGen birds.gen Birdie gen_birdie
+    pause 3.0
+    loop
+}
+
+/// OBI FUNCTIONS ///
+
+Function "Say Line When Obi Enters Region" (Actor BAD, String line, Region rgn)
+{
+	WaitUntilEnteredRegion Obi rgn
+	SayLine BAD line
+}
+
+/// ENEMY FUNCTIONS ///
+
+function "RuntoNodePartial" (actor RoadRunner, node goto_RoadRunner)
+{
+    takepartialcontrolof RoadRunner
+    runtonodeandwait RoadRunner goto_RoadRunner
+}
+
+function "EnterRGNandRuntoNodePartial" (actor Kaneda, node goto_Kaneda, region RGN_Kaneda)
+{
+    waituntilenteredregion Obi RGN_Kaneda
+    takepartialcontrolof Kaneda
+    runtonodeandwait Kaneda goto_Kaneda        
+}
+
+function "EnterRGNandRunToandPatrol" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	waituntilenteredregion obi RGN_Camby
+	takepartialcontrolof Camby
+	runtonodeandwait Camby goto_Camby
+	addpatrolstate Camby
+}
+
+function "AmbushObi" (actor Ares, node goto_Ares, int AresPatrol)
+{
+    setpatroltypes Ares AresPatrol
+    waituntilnear Ares Obi 30.0
+    Takepartialcontrolof Ares
+    runtonodeandwait Ares goto_Ares
+    forcetarget Ares Obi
+}
+
+function "Electrofried" (Actor FriedEggs, region WaterRGN)
+{
+	waituntilenteredregion FriedEggs WaterRgn
+	takecontrolof FriedEggs
+	pause 2.0
+	removeactor FriedEggs
+}
+
+function "BeamMeUp" (actor drSpock, refpos refpos_drSpock, region RGN_drSpock)
+{
+    waituntilenteredregion obi RGN_drSpock
+    teleport drSpock refpos_drSpock
+}
+
+/// UBERGEN FUNCTIONS ///
+
+function "GenerateAndPatrol" (Actor UG_Euclid)
+{
+	actor euclid
+	WaitUntilGenerated UG_Euclid Euclid
+	AddPatrolState Euclid
+}
+
+function "GenerateAndSetPatrol" (Actor UG_Tetsuo, Int x)
+{
+	actor Tetsuo
+	WaitUntilGenerated UG_Tetsuo Tetsuo
+	SetPatrolTypes Tetsuo x
+}
+
+function "RunToNodeAndPatrol" (Actor UG_Jubei, Node RunForrestRun3)
+{
+	actor Jubei
+	WaitUntilGenerated UG_Jubei Jubei
+	TakePartialControlOf Jubei
+	RunToNode Jubei RunForrestRun3
+	WaitUntilArrived Jubei RunForrestRun3
+	ReturnControlTo Jubei
+	AddPatrolState Jubei
+}
+
+function "RunToNodeBADdie" (Actor UG_BADdie, Node RunForrestRun1)
+{
+	Actor BADdie
+	WaitUntilGenerated UG_BADdie BADdie
+	TakePartialControlOf BADdie
+	RunToNode BADdie RunForrestRun1
+	WaitUntilArrived BADdie RunForrestRun1
+	ReturnControlTo BADdie
+}
+
+function "TriggerAndRunTo" (Actor UberGenName4, Node RunForrestRun2)
+{
+	Actor BADdie
+	TriggerUberGenAndWait UberGenName4 BADdie
+	TakePartialControlOf BADdie
+	RunToNode BADdie RunForrestRun2
+	WaitUntilArrived BADdie RunForrestRun2
+	ReturnControlTo BADdie
+}
+
+function "OnOffForceTarget" (Actor GrimReaper, Region KillObiBox)
+{
+	WaitUntilEnteredRegion Obi KillObiBox
+	TakePartialControlOF GrimReaper
+	ForceTarget GrimReaper Obi
+	WaitUntilExitedRegion Obi KillObiBox
+	ReturnControlTo GrimReaper
+	ForceTargetOff GrimReaper Obi
+}
+
+///////////////////
+///END FUNCTIONS///
+///////////////////
+
+///////////////////
+///GLOBAL ACTORS///
+///////////////////
+
+Actor Commander A_Battledroid-Commander_01
+Actor Naboo_Start A_Naboo-Resistance1_01
+Actor Captive01 A_Naboo_Prisoner_02
+Actor Door1 A_09_D_lock_A_04
+Actor Zone56k_Naboo01 A_Naboo-Resistance1_02
+Actor Zone56k_Naboo02 A_Naboo-Resistance2_03
+
+////////////////
+///BEGIN MAIN///
+////////////////
+
+//////////////////////////////
+/// BEGIN OPENING MESSAGES ///
+//////////////////////////////
+
+FadeUp
+
+script "BirdGenerators"
+{
+    child call GenBirds (Bird01, gen_birds01)
+    child call GenBirds (Bird02, gen_birds02)
+    waitforall
+}
+
+/*
+script "GenBird01"
+{
+    waituntilnear obi gen_birds02 0.5
+    CreateParticleGen birds.gen Birdie gen_birds02
+    pause 2.0
+    loop
+}
+*/
+
+Script "Opening_Messages"
+{
+	Pause 0.5
+	BeginCutScene
+	playflourish l05_4_cs_01.wav
+	loaddlg Asha.dlg
+
+    childscript "Communicate"
+    {
+        CommunicatorOn
+        CommunicatorMessageAndWait "/Asha_634/All right, we've got our pilots back, but they can't take off unless we destroy the Federation turbolaser guarding the hangar."
+        CommunicatorMessageAndWait "/Obi-Wan_635/I'll take care of it.  Where's it located?"
+        CommunicatorMessageAndWait "/Asha_636/Somewhere south of the hangar.  Good luck, Obi-Wan."
+        CommunicatorMessageAndWait "/Obi-Wan_637/Thanks."
+        CommunicatorOff
+    }
+    
+    childscript "ObiMoonWalk"
+    {
+        //pause 1.0
+        walktonodeandwait obi goto_obi_start
+        lookatandwait obi A_08_fount_head01_05
+    }
+    
+    camerafixed flycam_start
+    pause 2.0
+    movecameraandwait flycam_01 1.5
+    movecameraandwait flycam_02 1.5
+    movecameraandwait flycam_03 1.5
+    movecameraandwait flycam_04 1.5
+    movecameraandwait flycam_05 1.5
+    movecameraandwait flycam_end 1.5
+    
+/*
+	CommunicatorMessageAndWait "/ResistanceLeader_31/Great job freeing those Pilots, Jedi." ResistanceLeader.dlg
+	CommunicatorMessageAndWait "/ResistanceLeader_32/We have one more job for you." ResistanceLeader.dlg
+	CommunicatorMessageAndWait "/ResistanceLeader_33/There is a large turbolaser in a park on the south side of the Hangar." ResistanceLeader.dlg
+//	CommunicatorMessageAndWait "/ResistanceLeader_34/It has been decimating our starfighters." ResistanceLeader.dlg
+	CommunicatorMessageAndWait "/ResistanceLeader_35/The pilots are not going to be able to make it out of the Hangar safely until that gun is eliminated." ResistanceLeader.dlg
+	CommunicatorMessageAndWait "/ResistanceLeader_36/Take the demo charges and find that gun." ResistanceLeader.dlg
+//	CommunicatorMessageAndWait "/ResistanceLeader_37/Our operatives have placed a beacon on the gun so you should be able to use your tracking device to locate it." ResistanceLeader.dlg
+//	CommunicatorMessageAndWait "/ResistanceLeader_38/Remember, it’s imperative that the gun is out of commission by the time the pilots reach the Hangar." ResistanceLeader.dlg
+	CommunicatorMessageAndWait "/ResistanceLeader_39/Good luck." ResistanceLeader.dlg
+*/
+    waitforall
+	EndCutScene
+}
+
+////////////////////////////
+/// END OPENING MESSAGES ///
+////////////////////////////
+
+///////////////////////////////
+/// BEGIN OPENING COURTYARD ///
+///////////////////////////////
+
+script "Prelude_To_Opening_Courtyard"
+{
+	TakeControlOf Naboo_Start
+    waituntildooropen A_09_D_Theed_59
+	LookAt Naboo_Start Obi
+	playflourish l05_4_cs_02.wav
+	Sayline Naboo_Start "/male1_669/Jedi, are we ever glad to see you."
+	walktonodeandwait Naboo_Start goto_naboo_start
+	lookat Naboo_Start Captive01
+	Sayline Naboo_Start "/male1_641/The droids are closing in on Resistance fighters all over the city. You've gotta help save them."
+	stopactions Naboo_Start
+	waituntilenteredregion Obi AUD_runway_01
+	walktonodeandwait Naboo_start goto_naboo_start_fight
+	ReturnControlTo Naboo_Start
+	setteam Naboo_Start 5
+
+	waitforall
+}
+
+script "Hostage1"
+{
+	Actor Commander1 A_Battledroid-Commander_04
+	Actor Captor1 A_BAD_infantry_36
+
+	SetHostageSituation Captive01 Captor1 Commander1
+	SetHostageAlertDistance Commander1 8.0
+	SetHostageAlertDistance Captor1 8.0
+
+	setpatroltypes Commander1 2
+}
+
+setpatroltypes A_BAD_infantry_39 3
+setpatroltypes A_BAD_infantry_37 1
+
+Script "Opening_Courtyard"
+{
+
+	Actor BAD25 A_BAD_infantry_25
+	Actor BAD26 A_BAD_infantry_26
+	Actor BAD38 A_BAD_infantry_38
+
+	SetDoorToHalfCycle Door1
+	UnlockDoor Door1
+
+	TakeControlOf A_BAD_Sniper_Jungle_01
+
+	SetSniperAttackFlag BAD38
+
+	ChildScript "BeforeTheySeeObi_01"
+	{
+		// This makes this entire script get interrupted any time any of these BADs are alerted
+		Interruptable "BeforeTheySeeObi_01" BAD38
+
+		TakeControlOf Commander
+
+		WaitUntilEnteredRegion Obi RGN_BAD_Comm01
+		PlayMusic Tension 10 30
+
+		ChildScript "Commander works at console"
+		{
+			WalkToNodeAndWait Commander ND_BAD_Comm01 
+			LookAtAndWait Commander A_5-3_alarm_01
+			PlayGesture Commander Typing 10000  // Do it until I tell you to stop
+		}		
+
+		ChildScript "Force Field Guys"
+		{
+			TakePartialControlOf BAD38
+			WalkToNode BAD38 ND_BAD_38
+			Pause 0.5
+			PlayGesture Commander Typing 7.0
+			Pause 7.5
+			walktonodeandwait BAD38 ND_BAD_24B
+			WalkToNodeAndWait BAD38 ND_BAD_38B
+
+			LookAt Commander BAD38
+			PlayGesture Commander None // Stop Typing
+			LookAtAndWait BAD38 Commander
+			
+			SayLine BAD38 "/BattleDroidInfantry1_215.1/All systems nominal."
+			walktonodeandwait BAD38 ND_BAD_24B
+			WalkToNode BAD38 ND_BAD_38
+			Pause 0.5
+			LookAtAndWait Commander A_5-3_alarm_01
+			PlayGesture Commander Typing 10000  // Do it until I tell you to stop
+		}
+
+		waituntilnear Obi Commander 20.0
+	}
+
+	WaitForScriptToEnd "BeforeTheySeeObi_01"
+
+	PlayGesture Commander None  // Stop working at the console
+
+	TakeControlOf BAD38
+
+	LookAt BAD38 Obi
+	LookAt Commander Obi
+
+	SayLine Commander "/CommandDroid_642/Stop, intruder."
+
+	ReturnControlTo BAD38
+	returncontrolto A_BAD_Sniper_Jungle_01
+
+	ChildScript "Call_in_Reinforcements"
+	{
+        sayLineAndContinue Commander "/CommandDroid_643/This is a restricted area!"
+        Runtonodeandwait Commander goto_alert01		
+        LookAt Commander A_5-3_alarm_01
+
+		Pause 2.0
+		PlayGesture Commander Typing
+		SayLine Commander "/CommandDroid_644/Security breach in Section 32!"
+
+		ReturnControlTo Commander
+		Pause 1.0
+
+		if (isopen Door1)
+		{
+			Child TakePartialControlOf BAD25 0.3
+			Child TakePartialControlOf BAD26 0.3
+			WaitForAll
+
+			RunToNode BAD25 ND_BAD_25
+			RunToNode BAD26 ND_BAD_26
+		}
+		else
+		{	
+			UnlockDoor Door1
+			Nudge Commander Door1  // What if it's already open? ***
+			LockDoor Door1
+
+			Child TakePartialControlOf BAD25 0.3
+			Child TakePartialControlOf BAD26 0.3
+			WaitForAll
+
+			RunToNode BAD25 ND_BAD_25
+			RunToNode BAD26 ND_BAD_26
+		}
+	}
+
+	WaitUntilKilled Commander
+}
+
+/////////////////////////////
+/// END OPENING COURTYARD ///
+/////////////////////////////
+
+//////////////////////////////////
+/// BEGIN FORCEFIELD ENCOUNTER ///
+//////////////////////////////////
+
+script "FirstRadar"
+{
+    actor Radar01 A_09_fed_radar_06
+    waituntilnear obi Radar01 10.0
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Asha_638/Take out the satellite dishes and disrupt their communications."
+    CommunicatorMessageAndWait "/Asha_639/This will help disorganize the droid defenses."
+    CommunicatorMessageAndWait "/Asha_640/The droids are very tough when their communications are intact."
+    CommunicatorOff
+}
+
+function "WalktoAndPatrol" (actor Sleuth, region RGN_Sleuth, node goto_Sleuth, int patrol_Sleuth)
+{
+    waituntilenteredregion Sleuth RGN_Sleuth
+    takepartialcontrolof Sleuth
+    walktonodeandwait Sleuth goto_Sleuth
+    setpatroltypes Sleuth patrol_Sleugh
+}
+
+call WalktoAndPatrol (A_Battledroid-Security_15, RGN_BAD47, ND_BAD50, 2)
+call WalktoAndPatrol (A_Battledroid-Security_04, RGN_BAD47, ND_BAD51, 2)
+
+function "PatrolUntilAlerted" (Actor Octavius, Int PatrolZone, Node goto_Octavius)
+{
+	setpatroltypes Octavius PatrolZone
+	waituntilnudged A_5-5_ff_generator_02
+	takepartialcontrolof Octavius
+	sayline Octavius "/CommandDroid_645/Intruder.  Open access way!" 
+	runtonode Octavius goto_Octavius
+}
+
+call PatrolUntilAlerted (A_Battledroid-Security_03, 1, ND_BAD_47)
+call PatrolUntilAlerted (A_Battledroid-Security_02, 3, ND_BAD_47)
+
+script "Hostage2"
+{
+	Actor Commander2 A_Battledroid-Commander_03
+	Actor Captor2 A_BaronDroid_01
+    Actor Captive2 A_Naboo_Prisoner_01
+
+	SetHostageSituation Captive2 Captor2 Commander2
+	SetHostageAlertDistance Commander2 8.0
+	SetHostageAlertDistance Captor2 8.0
+	SetHostageFollowCmdrDistance Captive2 2.0
+
+	waituntilenteredregion obi RGN_BAD20
+
+    takepartialcontrolof Commander2
+	walktonodeandwait Commander2 goto_escort02_checkpoint01
+	walktonodeandwait Commander2 goto_escort02_checkpoint02
+	walktonodeandwait Commander2 goto_escort02_checkpoint03
+	
+	if (isopen A_ForceField_01)
+	{
+		walktonodeandwait Commander2 goto_escort01_checkpoint01
+		walktonodeandwait Commander2 goto_escort01_checkpoint02
+		walktonode Commander2 goto_09_DS_Z56_41
+		waituntilarrived Commander2 goto_09_DS_Z56_41
+
+		if (isopen Door1)
+		{
+			walktonode Commander2 goto_opening_escort_end
+		}
+		else
+		{
+			nudge Commander2 A_09_D_lock_A_04
+			walktonode Commander2 goto_opening_escort_end
+		}
+	}
+	else
+	{
+		lookat Commander2 Captor2
+		sayline Commander2 "/CommandDroid_646/We’ve received reports of an intruder in this Sector. Be on the alert." 
+		setpatroltypes Commander2 1
+	}
+
+	waituntilkilled Captor2
+}
+
+setpatroltypes A_BaronDroid_02 3
+
+setpatroltypes A_Battledroid-Infantry_15 2
+setpatroltypes A_Battledroid-Infantry_14 3
+setpatroltypes A_Battledroid-Infantry_25 3
+setpatroltypes A_Battledroid-Infantry_24 1
+setpatroltypes A_Battledroid-Infantry_23 1
+setpatroltypes A_Battledroid-Infantry_06 2
+setpatroltypes A_Battledroid-Infantry_13 2
+
+////////////////////////////////
+/// END FORCEFIELD ENCOUNTER ///
+////////////////////////////////
+
+//////////////////////////////
+/// BEGIN RESISTANCE FIGHT ///
+//////////////////////////////
+
+script "Zone56k_Naboo01_Encounter"
+{
+	Actor BAD03 A_Battledroid-Infantry_03
+	Actor BAD04 A_Battledroid-Infantry_04
+
+	invincibilityon BAD03
+	invincibilityon BAD04
+	invincibilityon Zone56k_Naboo01
+	invincibilityon Zone56k_Naboo02
+
+	TakeControlOf Zone56k_Naboo01
+	TakeControlOf Zone56k_Naboo02
+	TakeControlOf BAD03
+	TakeControlOf BAD04
+
+	SetSniperAttackFlag Zone56k_Naboo01
+	SetSniperAttackFlag Zone56k_Naboo02
+
+	takepartialcontrolof A_Battledroid-Infantry_17
+	takepartialcontrolof A_Battledroid-Infantry_18
+
+	WaitUntilDoorOpen A_09_D_Z58b_01
+
+	playflourish m_fed_sighting_02.wav
+
+	childscript "RunTo_01"
+	{
+		takecontrolof A_Battledroid-Infantry_16
+		runtonode A_Battledroid-Infantry_16 ND_Zone56K_BADs
+		child waituntilnear A_Battledroid-Infantry_16 Obi 6.0
+		child waituntilnear A_Battledroid-Infantry_16 Zone56k_Naboo01 6.0
+		child waituntilnear A_Battledroid-Infantry_16 Zone56k_Naboo02 6.0
+		waitforany
+		returncontrolto A_Battledroid-Infantry_16
+	}
+
+	childscript "RunTo_02"
+	{
+		takecontrolof A_Battledroid-Infantry_17
+		runtonode A_Battledroid-Infantry_17 ND_Zone56K_BADs
+		child waituntilnear A_Battledroid-Infantry_17 Obi 6.0
+		child waituntilnear A_Battledroid-Infantry_17 Zone56k_Naboo01 6.0
+		child waituntilnear A_Battledroid-Infantry_17 Zone56k_Naboo02 6.0
+		waitforany
+		returncontrolto A_Battledroid-Infantry_17
+	}
+
+	childscript "RunTo_03"
+	{
+		takecontrolof A_Battledroid-Infantry_18
+		runtonode A_Battledroid-Infantry_18 ND_Zone56K_BADs
+		child waituntilnear A_Battledroid-Infantry_18 Obi 6.0
+		child waituntilnear A_Battledroid-Infantry_18 Zone56k_Naboo01 6.0
+		child waituntilnear A_Battledroid-Infantry_18 Zone56k_Naboo02 6.0
+		waitforany
+		returncontrolto A_Battledroid-Infantry_18
+	}
+
+	childscript "ObiSeesTheFight"
+	{
+		waituntilsees Obi BAD03 50.0 30.0
+		invincibilityoff BAD03
+		invincibilityoff BAD04
+		invincibilityoff Zone56k_Naboo01
+		invincibilityoff Zone56k_Naboo02
+/*
+		script "STAPflyby"
+		{
+			triggerubergen A_UG_Zone56_STAP01
+			triggerubergenandwait A_UG_Zone56_STAP02 STAP01
+		}
+*/
+	}
+
+	script "FireAtBADs_01"
+	{
+		FireAt Zone56k_Naboo01 BAD03
+		pauserandom 0.25 1.0
+		crouch Zone56k_Naboo01
+		pause 0.5
+		stand Zone56k_Naboo01
+		FireAt Zone56k_Naboo01 BAD04
+		pauserandom 0.25 0.5
+		loop
+	}
+
+	script "FireAtBADs_02"
+	{
+		FireAt Zone56k_Naboo02 BAD04 0.6
+		pauserandom 0.25 1.0
+		FireAt Zone56k_Naboo02 BAD03 0.6
+		pauserandom 0.25 0.75
+		loop
+	}
+
+	script "BAD03_Attack"
+	{
+		FireAt BAD03 Zone56k_Naboo01 0
+		pauserandom 0.25 1.0
+		FireAt BAD03 Zone56k_Naboo02 0
+		pauserandom 0.25 0.75
+		loop
+	}
+
+	script "BAD04_Attack"
+	{
+		FireAt BAD04 Zone56k_Naboo02 0
+		pauserandom 0.25 1.0
+		FireAt BAD04 Zone56k_Naboo01 0
+		pauserandom 0.25 0.75
+		loop
+	}
+
+	childscript "Resistance_WakeUp"
+	{
+		child waituntilkilled BAD03
+		child waituntilkilled BAD04
+		waitforall
+		endscript "FireAtBADs_01"
+		returncontrolto Zone56k_naboo01
+		endscript "FireAtBADs_02"
+		returncontrolto Zone56k_naboo02
+
+		childscript "Thanks1"
+		{
+			waituntilnear Obi Zone56k_Naboo01 6.0
+			sayline Zone56k_naboo01 "/ResistanceFighter1_130/Thanks Jedi"
+		}
+
+		childscript "Thanks2"
+		{
+			waituntilnear Obi Zone56k_Naboo02 6.0
+			sayline Zone56k_naboo02 "/genericfemale_327/Leave me alone."
+			sayline Zone56k_naboo02 "/genericfemale_429/I'm hurt, but not too bad."
+		}
+
+	}
+
+	script "Wake_Up"
+	{
+		child waituntilnear Obi BAD03 4.0
+		child waituntilnear Obi BAD04 4.0
+		waitforany
+		returncontrolto BAD03
+		returncontrolto BAD04
+	}
+
+	waitforall
+}
+
+script "RadarDish_BAD"
+{
+	actor BAD112
+	waituntilnear Obi A_AAT_static_01 35.0
+	triggerubergenandwait A_UG_BAD112 BAD112
+	addworknode BAD112 ND_BAD112_Work1
+	addworknode BAD112 ND_BAD112_Work2
+	addworknode BAD112 ND_BAD112_Work3
+}
+
+////////////////////////////
+/// END RESISTANCE FIGHT ///
+////////////////////////////
+
+/////////////////////////////////////////
+/// BEGIN FIRST SECRET AREA ENCOUNTER ///
+/////////////////////////////////////////
+
+///CREATE STEALTH ZONES FOR OBI///
+
+script "First_Secret_Area"
+{
+	actor BAD103
+	actor Civilian01
+	actor Civilian02
+	actor Zone56P2_BAD01
+	actor Zone56P2_BAD02
+
+	child WaitUntilGenerated A_UG_Zone56P2_BAD01 Zone56P2_BAD01
+	child WaitUntilGenerated A_UG_Zone56P2_BAD02 Zone56P2_BAD02
+	child waituntilgenerated A_UG_Zone56_Civilian01 Civilian01
+	child waituntilgenerated A_UG_Zone56_Civilian02 Civilian02
+	waitforall
+
+	invincibilityon Civilian01
+	invincibilityon Civilian02
+	
+	setteam Civilian01 0
+	setteam Civilian02 0
+
+	TakeControlOf Civilian01
+	TakeControlOf Civilian02
+
+	unequipweapon Civilian01
+	unequipweapon Civilian02
+
+	TakeControlOf Zone56P2_BAD01
+	TakeControlOf Zone56P2_BAD02
+
+	waituntildooropen A_09_D_Theed_01
+
+	script "KneelLoop1"
+	{
+		playgesture Civilian01 CapturedKneel 1.0
+		loop
+	}
+
+	script "KneelLoop2"
+	{
+		playgesture Civilian02 CapturedKneel 1.0
+		loop
+	}
+
+	childscript "Release_Captive1"
+	{
+		waituntilkilled Zone56P2_BAD01
+		endscript "KneelLoop1"
+		playgesture Civilian01 none
+		returncontrolto Civilian01
+		setteam Civilian01 5
+		invincibilityoff Civilian01
+		waituntilsees Obi Civilian01 7.0
+		sayline Civilian01 "/ResistanceFighter1_130/Thanks Jedi"
+	}
+
+	childscript "Release_Captive2"
+	{
+		waituntilkilled Zone56P2_BAD01
+		endscript "KneelLoop2"
+		playgesture Civilian02 none
+		returncontrolto Civilian02
+		setteam Civilian02 5
+		invincibilityoff Civilian02
+		waituntilsees Obi Civilian02 7.0
+		sayline Civilian02 "/ResistanceFighter1_130/Thanks Jedi"
+	}
+
+	childscript "Obi_Enters_Civilian_Room"
+	{
+		waituntilEnteredRegion Obi RGN_killcivilians01
+		saylineandcontinue Zone56P2_BAD02 "/CommandDroid_159/Here comes the Jedi, Shoot the prisoner !"
+		lookat Zone56P2_BAD02 Civilian02
+
+		setteam Civilian01 5
+		setteam Civilian02 5
+		invincibilityoff Civilian01
+		invincibilityoff Civilian02
+
+		ReturnControlTo Zone56P2_BAD01
+		ReturnControlTo Zone56P2_BAD02
+	}
+
+	waituntilenteredregion Obi RGN_trig_Zone56P
+
+	childscript "BAD18_attack"
+	{
+		actor BAD18
+		triggerubergenandwait A_UG_BAD18 BAD18
+		takecontrolof BAD18
+		runtonode BAD18 goto_Zone56P_BADs_01
+		waituntilnear BAD18 Obi 3.0
+		returncontrolto BAD18
+	}
+
+	childscript "BAD19_attack"
+	{
+		actor BAD19
+		triggerubergenandwait A_UG_BAD19 BAD19
+		takecontrolof BAD19
+		runtonode BAD19 goto_Zone56P_BADs_02
+		waituntilnear BAD19 Obi 3.0
+		returncontrolto BAD19
+	}
+
+	childscript "BAD104_attack"
+	{
+		actor BAD104
+		triggerubergenandwait A_UG_BAD104 BAD104
+		takecontrolof BAD104
+		runtonode BAD104 goto_Zone56P_execution
+		waituntilnear BAD104 Obi 3.0
+		returncontrolto BAD104
+	}
+
+	triggerubergenandwait A_UG_BAD103 BAD103
+	takecontrolof BAD103
+	runtonode BAD103 goto_Zone56P_execution
+
+	sayline BAD103 "/CommandDroid_159/Here comes the Jedi, Shoot the prisoner !"
+	waituntilarrived BAD103 goto_Zone56P_execution
+	Sayline BAD103 "/BattleDroidInfantry5_93/Open Fire!" 
+	ReturnControlTo BAD103
+
+	setteam Civilian01 5
+	setteam Civilian02 5
+	invincibilityoff Civilian01
+	invincibilityoff Civilian02
+
+	ReturnControlTo Zone56P2_BAD01
+	ReturnControlTo Zone56P2_BAD02
+
+}
+
+///////////////////////////////////////
+/// END FIRST SECRET AREA ENCOUNTER ///
+///////////////////////////////////////
+
+script "Hostage4"
+{
+    Actor Captive4 A_Naboo-Resistance2_02
+	Actor Captor4 A_Battledroid-Infantry_21
+	Actor Commander4 A_Battledroid-Security_01
+
+	SetHostageSituation Captive4 Captor4 Commander4
+	SetHostageAlertDistance Commander4 8.0
+	SetHostageAlertDistance Captor4 8.0
+
+	setpatroltypes Commander4 3
+	setpatroltypes A_Battledroid-Infantry_01 1
+	setpatroltypes A_Battledroid-Infantry_02 1
+}
+
+/// RADAR DISH PATROL BADS ///
+
+script "Radar2BADs"
+{
+    childscript "Patrol24" 
+    {
+        callandwait beammeup (A_Battledroid-Security_24, rpos_01, RGN_BAD110)
+        setpatroltypes A_Battledroid-Security_24 1
+    }
+    
+    childscript "Patrol25" 
+    {
+        callandwait beammeup (A_Battledroid-Security_25, rpos_02, RGN_BAD110)
+        setpatroltypes A_Battledroid-Security_25 1
+    }
+    waitforall
+}
+
+/// BEFORE BARRICADE ///
+
+addpatrolstate A_Battledroid-Infantry_12
+addpatrolstate A_Battledroid-Infantry_05
+
+/////////////////////
+//  Jedi Intruder  //
+/////////////////////
+
+Script "Jedi_Intruder"
+{
+	Actor Commander A_Battledroid-Security_05
+	Actor Door A_09_D_lock_A_45
+
+	TakeControlOf Commander
+	waituntilenteredregion obi RGN_BAD14
+
+	PlayGesture Commander PointForward
+	sayline Commander "/BattleDroidInfantry5_93/Open Fire!"
+
+//	forcetargetandattack A_Battledroid-Infantry_08 obi
+//	forcetargetandattack A_Battledroid-Infantry_09 obi
+//	forcetargetandattack A_Battledroid-Infantry_10 obi
+//	forcetargetandattack A_Battledroid-Infantry_11 obi
+
+	Script "Call in reinforcements"
+	{
+        SayLineandcontinue Commander "/BattleDroidInfantry1_66.17/Security breach in Section 32!"
+        RunToNodeAndWait Commander ND_BAD96
+        LookAt Commander A_5-3_alarm_02
+        Pause 2.0
+        PlayGesture Commander Typing
+        SayLine Commander "/CommandDroid_62/Send reinforcements to Sector 6-B!"
+        
+        ReturnControlTo Commander
+        SetDoorToHalfCycle Door
+        UnlockDoor Door
+        
+        child call RuntonodePartial (A_Battledroid-Security_32, ND_BAD07)
+        child call RuntonodePartial (A_Battledroid-Security_33, ND_BAD08)
+        child call RuntonodePartial (A_BaronDroid_03, ND_BAD10)
+        
+        Nudge Commander Door
+        waitforall
+	}
+}
+
+script "AirlockBADs"
+{
+    waituntilenteredregion obi RGN_trig_AirlockBADs
+    child call RuntoNodePartial (A_Battledroid-Security_16, ND_BAD06)
+    child call RuntoNodePartial (A_Battledroid-Security_17, ND_BAD03)
+    child call RuntoNodePartial (A_Battledroid-Security_18, ND_BAD05)
+    waitforall
+}
+
+/// INTERLUDE ///
+
+/////////////////////////////////////////////////
+//  Naboo Resistance pinned behind the crates  //
+/////////////////////////////////////////////////
+
+Script "Naboo resistance pinned behind crates"
+{
+	Actor Naboo1 A_Naboo-Resistance3_02
+	Actor Naboo2 A_Naboo-Resistance2_01
+	Actor CannonDroid A_BAD_cannon_03
+	Actor Cannon A_equip_cannon_05
+
+	setteam Naboo1 0
+	setteam Naboo2 0
+
+	ChildScript "Play Flourish"
+	{
+		WaitUntilEnteredRegion Obi RGN_Flourish03
+		setteam Naboo1 5
+		setteam Naboo2 5
+		PlayFlourish m_battle_07.wav
+	}
+
+	ChildScript "Crouching Resistance Guy"
+	{
+		TakeControlOf Naboo1
+		LookAtAndWait Naboo1 CannonDroid
+		Crouch Naboo1
+	}
+
+	ChildScript "Sniping Resistance Guy"
+	{
+		ForceTargetAndAttack Naboo2 CannonDroid  // Maybe should attack something else?
+		SetDeadOnAimFraction Naboo2 0   // He should never hit the CannonDroid
+		SetSniperAttackFlag Naboo2  // I presume this will make him look at the droid and crouch
+		//TakeControlOf Naboo2
+		//LookAtAndWait Naboo2 CannonDroid
+		//Crouch Naboo2
+	}
+
+	WaitUntilEnteredRegion ObiWan RGN_BAD43
+	
+	Actor Crate1 A_5-4_crate02_02
+	Actor Crate2 A_5-4_crate02_01
+
+	InvincibilityOn Crate1
+	InvincibilityOn Crate2
+
+	ChildScript "Cannon targets crates"
+	{
+		ForceTarget CannonDroid Crate1
+		PauseRandom 2.0 4.0
+		TakeControlOf CannonDroid  // prevents cannon from shooting wherever he wants
+		PauseRandom 0.5 1.5
+		ReturnControlTo CannonDroid
+		ForceTarget CannonDroid Crate2
+		PauseRandom 2.0 4.0
+		TakeControlOf CannonDroid
+		PauseRandom 0.5 1.5
+		ReturnControlTo CannonDroid
+		Loop
+	}
+
+	int numTimes 1
+
+	ChildScript "Cannon targets Obi"
+	{
+		WaitUntilEnteredRegion Obi RGN_KillObi
+		PauseScript "Cannon targets crates"
+		ReturnControlTo CannonDroid
+		ForceTarget CannonDroid Obi
+
+		ChildScript "Cannon stops targeting Obi"
+		{
+			WaitUntilExitedRegion Obi RGN_KillObi
+			ForceTargetOff CannonDroid
+			TakeControlOf CannonDroid
+			ContinueScript "Cannon targets crates"
+		}
+
+		if (= numTimes 1)  // Only want this conversation to happen the first time
+		{
+			ForceTargetAndAttackOff Naboo2
+			TakeControlOf Naboo2
+			Crouch Naboo2
+
+			LookAt Naboo2 Obi
+			// SayLine Naboo2 "/ResistanceFighter2_83/I wouldn't go that way if I were you."
+			LookAt Naboo2 CannonDroid
+
+			ReturnControlTo Naboo2
+			ForceTargetAndAttack Naboo2 CannonDroid  // *** Maybe should target something else?
+
+			Pause 3.0
+			SayLine Naboo1 "/male2_668/If only we could get around behind it."
+			Increment numTimes 1
+		}
+
+		WaitForAll  // Wait for the cannon to stop targeting Obi
+		Loop
+	}
+
+	ChildScript "Opening Conversation"
+	{
+		WaitUntilNear Obi Naboo1 10
+		LookAtAndWait Naboo1 Obi
+		SayLine Naboo1 "/male2_669/Jedi, are we ever glad to see you!"
+		SayLine Naboo1 "/male2_672/We're having a little trouble with that repeater cannon.  It's got us pinned down."
+		LookAt Naboo1 CannonDroid
+		//Pause 3.0
+		// *** Grenadier doesn't have a TAI file!
+		//SayLine Naboo2 "/ResistanceFighter2_82/That grenadier is making a real nuisance of himself!"
+	}
+
+	WaitUntilKilled CannonDroid
+	ForceTargetAndAttackOff Naboo2
+	BeginScript "Resistance thanks Obi"
+
+	// End the script here so that the childscripts automatically get ended
+}
+
+
+StoreScript "Resistance thanks Obi"
+{
+	Actor Naboo1 A_Naboo-Resistance1_01
+	Actor Naboo2 A_Naboo-Resistance2_01
+
+	PlayFlourish m_victory_04.wav
+
+	ChildScript
+	{
+		TakeControlOf Naboo1
+		Stand Naboo1
+		LookAt Naboo1 Obi
+		//WalkToNodeAndWait Naboo1 ND_Resistance1  *** GETS STUCK AT THE CRATE
+	}
+	
+	ChildScript
+	{
+		TakeControlOf Naboo2
+		Stand Naboo2
+		LookAt Naboo2 Obi
+		//WalkToNodeAndWait Naboo2 ND_Resistance2  *** GETS STUCK AT THE CRATE
+	}
+
+	WaitForAll
+
+	WaitUntilNear Obi Naboo2 4
+	SayLine Naboo2 "/female1_673/Thanks!  We’ll stay here and hold this position."
+}
+
+script "BADunit01"
+{
+    waituntilenteredregion obi RGN_BAD11
+    child call RuntonodePartial (A_Battledroid-Infantry_19, ND_BAD11)
+    child call RuntonodePartial (A_Battledroid-Infantry_26, ND_BAD12)
+    child call RuntonodePartial (A_Battledroid-Kamikaze_01, ND_BAD13)
+    waitforall
+}
+
+script "BADunit02"
+{
+    waituntilenteredregion obi RGN_BAD54
+    child call RuntonodePartial (A_Battledroid-Infantry_30, ND_BAD54)
+    child call RuntonodePartial (A_Battledroid-Infantry_31, ND_BAD55)
+    waitforall
+}
+
+script "BADunit03"
+{
+    waituntilenteredregion obi RGN_BAD81
+    child call RuntonodePartial (A_Battledroid-Infantry_27, ND_BAD81)
+    child call RuntonodePartial (A_Battledroid-Infantry_28, ND_BAD82)
+    child call RuntonodePartial (A_Battledroid-Infantry_29, ND_BAD83)
+    waitforall
+}
+
+/*
+
+script "Zone55H_Civilian01_Encounter"
+{
+	actor Zone55H_Civilian01
+	waituntilgenerated A_UG_Zone55H_Civilian01 Zone55H_Civilian01
+	invincibilityon Zone55H_Civilian01
+
+	childscript "If_Obi_Wanders_Again"	///CHECKS TO SEE IF OBI IS NEARBY///
+	{
+		waituntilfar Zone55H_Civilian01 Obi 5.0
+		pausescript "Zone55H_Civilian01_Encounter"
+		sayline Zone55H_Civilian01 "Hey where do you think you're going?"
+		waituntilnear Zone55H_Civilian01 Obi 5.0
+		sayline Zone55H_Civilian01 "Ok.  Now that you've come to your senses, I'll continue."
+		continuescript "Zone55H_Civilian01_Encounter"
+		loop
+	}
+
+	TakeControlOf Zone55H_Civilian01
+	walktonode Zone55H_Civilian01 goto_see_starfighter01
+	sayline Zone55H_Civilian01 "Come with me.  Let me show you what's happening in the air."
+	waituntilarrived Zone55H_Civilian01 goto_see_starfighter01
+//	triggerubergenandwait A_UG_Starfighter01 StarFighter01
+//	triggerubergenandwait A_UG_Naboofighter01 NabooFighter01
+}
+
+*/
+
+/////////////////////////////
+/// BEGIN FINAL COURTYARD ///
+/////////////////////////////
+
+addpatrolstate A_BAD_infantry_02
+addpatrolstate A_BAD_infantry_03
+addpatrolstate A_BAD_infantry_33
+
+script "DED1_Encounter"
+{
+	Actor DED1 A_DestroyerDroid_01
+
+	takepartialcontrolof DED1
+	waituntildooropen A_09_D_Theed_121
+	//triggerubergen A_UG_Zone57_STAP01
+	runtonodeandwait DED1 goto_DED1
+}
+
+script "DED2_Encounter"
+{
+	Actor DED2 A_DestroyerDroid_02
+
+	takepartialcontrolof DED2
+	waituntilenteredregion obi RGN_DED2
+	runtonodeandwait DED2 goto_DED2
+}
+
+
+function "RGN_BAD115_TriggerRun" (Actor Usagi, Node goto_usagi)
+{
+	waituntilenteredregion usagi RGN_BAD115
+	takepartialcontrolof usagi
+	runtonode usagi goto_usagi
+}
+
+child callandwait RGN_BAD115_TriggerRun (A_Battledroid-Security_11, ND_BAD70)
+child callandwait RGN_BAD115_TriggerRun (A_Battledroid-Security_12, ND_BAD72)
+child callandwait RGN_BAD115_TriggerRun (A_Battledroid-Security_13, ND_BAD71)
+child callandwait RGN_BAD115_TriggerRun (A_Battledroid-Security_14, ND_BAD73)
+
+
+///////////////////////////
+/// END FINAL COURTYARD ///
+///////////////////////////
+
+
+///////////////////////////////////////
+//  Say Line When Obi Enters Region  //
+///////////////////////////////////////
+
+////////////////
+//  UberGens  //
+////////////////
+
+Call GenerateAndPatrol (A_UG_BAD75)
+Call GenerateAndPatrol (A_UG_BAD76)
+
+Script "Cannon 06 gets killed"
+{
+	WaitUntilKilled A_BAD_cannon_06
+
+	if (IsInRegion Obi RGN_SnipeCannon01)
+	{
+		TriggerUberGen A_UG_BAD77
+		TriggerUberGen A_UG_BAD78
+		TriggerUberGen A_UG_BAD79
+		TriggerUberGen A_UG_BAD80
+	}
+}
+
+/*
+
+Script "UberGens triggered by one of three different regions"
+{
+	Child WaitUntilEnteredRegion Obi RGN_BAD84A
+	Child WaitUntilEnteredRegion Obi RGN_BAD84B
+	Child WaitUntilEnteredRegion Obi RGN_BAD84C
+	WaitForAny
+	TriggerUberGen A_UG_BAD84
+	TriggerUberGen A_UG_BAD85
+	TriggerUberGen A_UG_BAD86
+}
+
+*/
+
+///////////////
+//  The Gun  //
+///////////////
+
+
+Actor BigGun A_5-4_turbolaser1_01
+InvincibilityOn BigGun
+
+
+/*
+Script "Fire Big Gun"
+{
+	WaitUntilEnteredRegion Obi ???
+	FireBlasterBolt BigGun RedBolt.PJL  // Name of the node to emit the bolt from 
+}
+*/
+
+
+
+Script "Blow Up Gun" 
+{
+	Actor SensitiveGunSpot01 A_5-4_turbolaser_leg_01
+	Actor SensitiveGunSpot02 A_5-4_turbolaser_leg_r_01
+	Actor Gun A_5-4_turbolaser1_01
+
+	int numLongBeeps 4
+	int numMediumBeeps 6
+	int numShortBeeps 8
+
+	float longBeepTime 1.0
+	float mediumBeepTime 0.5
+	float shortBeepTime 0.25
+
+    childscript "StrikeOne"
+    {	
+        WaitUntilDamagedBy SensitiveGunSpot01 Obi
+        Hide SensitiveGunSpot01
+    }
+    
+    childscript "StrikeTwo"
+    {	
+        WaitUntilDamagedBy SensitiveGunSpot02 Obi
+        Hide SensitiveGunSpot02
+    }
+    
+    waitforall
+
+	BeginCutScene
+
+    childscript "CameraAction"
+    {
+        camerafixed flycamend_01
+        pause 2.0
+        movecameraandwait flycamend_02 1.5
+        movecameraandwait flycamend_03 1.5
+        movecameraandwait flycamend_04 1.5
+        movecameraandwait flycamend_05 1.5
+        cameraoff
+    }
+    
+    child runtonodeandwait obi goto_obi_end
+
+	while (> numLongBeeps 0)
+	{
+		PlayFlourish overheatBeep_01.wav
+		Pause longBeepTime
+		Decrement numLongBeeps 1
+	}
+
+	while (> numMediumBeeps 0)
+	{
+		PlayFlourish overheatBeep_01.wav
+		Pause mediumBeepTime
+		Decrement numMediumBeeps 1
+	}
+
+	while (> numShortBeeps 0)
+	{
+		PlayFlourish overheatBeep_01.wav
+		Pause shortBeepTime
+		Decrement numShortBeeps 1
+	}
+	
+	Pause 0.25
+	InvincibilityOff BigGun
+
+	childscript "BigGunBoom"
+    {
+        Kill BigGun
+        RemoveActor BigGun
+    }
+    
+	childscript "SensitiveGunSpot01Boom"
+    {
+        Kill A_5-4_turbolaser_leg_r_dam_01
+        RemoveActor A_5-4_turbolaser_leg_r_dam_01
+    }
+    
+ 	childscript "SensitiveGunSpot02Boom"
+    {
+        Kill A_5-4_turbolaser_leg_dam_01
+        RemoveActor A_5-4_turbolaser_leg_dam_01
+    }
+   
+	PlayFlourish aaGun_explo_01.wav
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Asha_674/Great job, Jedi!" ResistanceLeader.dlg
+	CommunicatorMessageAndWait "/Asha_675/The Turbo Laser just disappeared from our screens.  It's been destroyed." ResistanceLeader.dlg
+	CommunicatorOff
+
+	Pause 0.5
+	FadeDownAndWait
+	EndCutScene
+    NextLevel L05_5
+}

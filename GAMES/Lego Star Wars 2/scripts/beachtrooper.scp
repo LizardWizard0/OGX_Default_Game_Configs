@@ -1,0 +1,52 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto WaitBeforeReacting
+	}
+	Actions {
+		SetMaxViewHeight "2"
+		SetMinViewHeight "-2"
+		DontPush
+		OverrideAnimation "from=idle" "to=Jacuzzi"
+		Idle "1"
+		AnimTimeRandom
+	}
+}
+
+state WaitBeforeReacting {
+	Conditions {
+	}
+	Actions {
+		Idle "mintime=2" "maxtime=4"
+		OverrideAnimation "reset"
+		DontPush "false"
+		Idle "1"
+		SetState "Attack"
+	}
+}
+
+state Attack {
+	ReferenceScript {
+		Script=Attack
+		Source=Global
+		ReturnState=Attack
+		Conditions {
+		}
+	}
+	Conditions {
+		if GotOpponent == 0 goto WaitBeforeJacuzziing
+	}
+	Actions {	
+	}
+}
+
+state WaitBeforeJacuzziing {
+	Conditions {
+		if GotOpponent == 1 goto Attack
+	}
+	Actions {	
+		KeepWeaponOut "FALSE"
+		Idle "mintime=2" "maxtime=4"
+		GoToOrigin "mintime=3" "maxtime=5"
+		SetState "Base"
+	}
+}

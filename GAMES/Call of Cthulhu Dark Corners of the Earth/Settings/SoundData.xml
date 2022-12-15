@@ -1,0 +1,68 @@
+<SoundData>
+	
+	<SoundCues>
+		<SoundCue01>
+			<Name>1</Name>
+			<Type>0</Type>
+			<AIType>0</AIType>
+ 			<SoundID>
+				<Variation01>0</Variation01>
+				<Variation02>1</Variation02>
+				<Variation03>2</Variation03>
+			</SoundID>
+		</SoundCue01>
+	
+		<SoundCue02>
+			<Name>2</Name>
+			<Type>0</Type>
+			<AIType>0</AIType>
+ 			<SoundID>
+				<Variation01>0</Variation01>
+			</SoundID>
+		</SoundCue02>
+
+		<SoundCue03>
+			<Name>3</Name>
+			<Type>0</Type>
+			<AIType>0</AIType>
+ 			<SoundID>
+				<Variation01>0</Variation01>
+			</SoundID>
+		</SoundCue03>
+	
+	</SoundCues>
+
+	<Sounds>
+		<Sound01>
+			<Name>..\sound\01039.wav</Name>
+			<MaxRange>5000.0</MaxRange>
+			<MinRange>10.0</MinRange>
+			<Volume>1.0</Volume>
+			<NumLoops>0</NumLoops>
+			<Pitch>44100</Pitch>
+			<Streaming>0</Streaming>
+		</Sound01>		
+		
+		<Sound02>
+			<Name>..\sound\01039.wav</Name>
+			<MaxRange>5000.0</MaxRange>
+			<MinRange>10.0</MinRange>
+			<Volume>1.0</Volume>
+			<NumLoops>0</NumLoops>
+			<Pitch>22050</Pitch>
+			<Streaming>0</Streaming>
+		</Sound02>
+
+		<Sound03>
+			<Name>..\sound\04040.wav</Name>
+			<MaxRange>500000.0</MaxRange>
+			<MinRange>1000.0</MinRange>
+			<Volume>1.0</Volume>
+			<NumLoops>0</NumLoops>
+			<Pitch>44100</Pitch>
+			<Streaming>0</Streaming>
+		</Sound03>
+	</Sounds>
+
+
+</SoundData>

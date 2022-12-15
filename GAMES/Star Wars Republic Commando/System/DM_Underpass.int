@@ -1,0 +1,81 @@
+[BowcasterPickupMP0]
+PickupMessage="Wookiee Bowcaster"
+
+[BowcasterPickupMP1]
+PickupMessage="Wookiee Bowcaster"
+
+[BowcasterPickupMP2]
+PickupMessage="Wookiee Bowcaster"
+
+[BowcasterPickupMP3]
+PickupMessage="Wookiee Bowcaster"
+
+[ConcussionRiflePickupMP0]
+PickupMessage="LJ-50 Concussion Rifle"
+
+[ConcussionRiflePickupMP1]
+PickupMessage="LJ-50 Concussion Rifle"
+
+[DC15PickupMP3]
+PickupMessage="DC15s Side Arm Blaster"
+
+[DC17mAntiArmorWeaponPickupMP0]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mBlasterWeaponPickupMP3]
+PickupMessage="DC-17m Blaster"
+
+[DC17mSniperWeaponPickupMP0]
+PickupMessage="DC-17m Sniper Attachment"
+
+[DC17mSniperWeaponPickupMP1]
+PickupMessage="DC-17m Sniper Attachment"
+
+[LevelInfo0]
+Title="KACHIRHO"
+
+[LevelSummary]
+Title="KACHIRHO"
+
+[PickupHealth0]
+PickupMessage="Bacta tank"
+
+[PickupHealth1]
+PickupMessage="Bacta tank"
+
+[PickupHealth2]
+PickupMessage="Bacta tank"
+
+[PickupHealth4]
+PickupMessage="Bacta tank"
+
+[RocketLauncherPickupMP0]
+PickupMessage="Wookiee Homing Rocket Launcher"
+
+[RocketLauncherPickupMP1]
+PickupMessage="Wookiee Homing Rocket Launcher"
+
+[SMGPickupMP3]
+PickupMessage="Trandoshan Mercenary SMG"
+
+[ShotgunPickupMP0]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP1]
+PickupMessage="ACP Array Gun"
+
+[ThermalDetonatorMultiPlay11]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay12]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay13]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay14]
+PickupMessage="Thermal Detonators"
+
+[TrandoshanRifleMPPickup1]
+PickupMessage="LS-150 Heavy ACP Repeater Gun"
+

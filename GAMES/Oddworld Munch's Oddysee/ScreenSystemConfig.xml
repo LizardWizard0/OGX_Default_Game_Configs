@@ -1,0 +1,10 @@
+<config
+        mainui="..\menus\start\levelselect.xml"
+        pauseui="..\menus\pause\pause.xml"
+        mainscreen1="mainscreen"
+        mainscreen2="mainscreen_nodemo"
+		pause="true"
+		attract="mainscreen"
+        attractdelay="60"
+/>
+

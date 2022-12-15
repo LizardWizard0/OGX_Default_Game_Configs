@@ -1,0 +1,111 @@
+[ACTION_ShowPrompt0]
+PromptText="PRESS @ TO ACTIVATE LIFT"
+
+[BowcasterPickupMP0]
+PickupMessage="Wookiee Bowcaster"
+
+[BowcasterPickupMP1]
+PickupMessage="Wookiee Bowcaster"
+
+[DC15PickupMP0]
+PickupMessage="DC15s Side Arm Blaster"
+
+[DC15PickupMP1]
+PickupMessage="DC15s Side Arm Blaster"
+
+[DC17mAntiArmorWeaponPickupMP0]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mAntiArmorWeaponPickupMP1]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mBlasterWeaponPickupMP0]
+PickupMessage="DC-17m Blaster"
+
+[DC17mSniperWeaponPickupMP2]
+PickupMessage="DC-17m Sniper Attachment"
+
+[LevelInfo0]
+Title="GHOSTSHIP"
+
+[LevelSummary]
+Title="GHOSTSHIP"
+
+[PickupHealth0]
+PickupMessage="Bacta tank"
+
+[PickupHealth1]
+PickupMessage="Bacta tank"
+
+[PickupHealth10]
+PickupMessage="Bacta tank"
+
+[PickupHealth11]
+PickupMessage="Bacta tank"
+
+[PickupHealth2]
+PickupMessage="Bacta tank"
+
+[PickupHealth3]
+PickupMessage="Bacta tank"
+
+[PickupHealth6]
+PickupMessage="Bacta tank"
+
+[PickupHealth7]
+PickupMessage="Bacta tank"
+
+[PickupHealth8]
+PickupMessage="Bacta tank"
+
+[PickupHealth9]
+PickupMessage="Bacta tank"
+
+[SMGPickupMP0]
+PickupMessage="Trandoshan Mercenary SMG"
+
+[ShotgunPickupMP0]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP3]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP4]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP5]
+PickupMessage="ACP Array Gun"
+
+[ThermalDetonatorMultiPlay0]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay1]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay2]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay3]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay4]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay5]
+PickupMessage="Thermal Detonators"
+
+[TrandoshanRifleMPPickup0]
+PickupMessage="LS-150 Heavy ACP Repeater Gun"
+
+[Trigger18]
+Message="Lift in 3 seconds"
+
+[Trigger33]
+Message="Lift in 3 seconds"
+
+[Trigger41]
+Message="Lift in 3 seconds"
+
+[Trigger5]
+Message="Lift in 3 seconds"
+

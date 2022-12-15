@@ -1,0 +1,48 @@
+[LevelInfo0]
+Title="Orbital 2"
+
+[LevelSummary]
+Title="Orbital2"
+
+[ZoneInfo10]
+LocationName="Middle Room"
+
+[ZoneInfo15]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo17]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo19]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo20]
+LocationName="Red Flag Room"
+
+[ZoneInfo21]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo22]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo23]
+LocationName="Blue Flag Room"
+
+[ZoneInfo24]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo25]
+LocationName="Blue Lower Entrance"
+
+[ZoneInfo26]
+LocationName="Blue Upper Hallway"
+
+[ZoneInfo27]
+LocationName="Red Lower Entrance"
+
+[ZoneInfo28]
+LocationName="Red Upper Hallway"
+
+[ZoneInfo4]
+LocationName="Middle Room"
+

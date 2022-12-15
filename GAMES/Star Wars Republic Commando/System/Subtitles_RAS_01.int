@@ -1,0 +1,456 @@
+
+[Subtitles_RAS_01]
+
+SubtitleSound[2928]="D40R1011"
+SubtitleText[2928]="Delta 40: I read you, sir."
+
+SubtitleSound[2929]="RSCR1033"
+SubtitleText[2929]="RAS Ship Computer: Security bulkhead doors opened in section A."
+
+SubtitleSound[2930]="RSCR1035"
+SubtitleText[2930]="RAS Ship Computer: This is a restricted area. Automated security systems online."
+
+SubtitleSound[2931]="RSCR1040"
+SubtitleText[2931]="RAS Ship Computer: Computer Core Control Online."
+
+SubtitleSound[2932]="RSCR1041"
+SubtitleText[2932]="RAS Ship Computer: Accessing…"
+
+SubtitleSound[2933]="RSCR1042"
+SubtitleText[2933]="RAS Ship Computer: Access granted."
+
+SubtitleSound[2934]="RSCR1043"
+SubtitleText[2934]="RAS Ship Computer: Downloading central command data."
+
+SubtitleSound[2935]="RSCR1044"
+SubtitleText[2935]="RAS Ship Computer: Download complete."
+
+SubtitleSound[2936]="D40R1053"
+SubtitleText[2936]="Delta 40: Delta four-o at rendezvous point."
+
+SubtitleSound[2937]="D40R1054"
+SubtitleText[2937]="Delta 40: The junction door controls are jammed."
+
+SubtitleSound[2938]="D40R1055"
+SubtitleText[2938]="Delta 40: Running a bypass now."
+
+SubtitleSound[2939]="D40R1056"
+SubtitleText[2939]="Delta 40: Sir, hold your position."
+
+SubtitleSound[2940]="D40R1060"
+SubtitleText[2940]="Delta 40: Bypass complete.  Door opening."
+
+SubtitleSound[2941]="D40R1061"
+SubtitleText[2941]="Delta 40: Hold them off for a few more seconds."
+
+SubtitleSound[2942]="D40R1062"
+SubtitleText[2942]="Delta 40: Almost there."
+
+SubtitleSound[2943]="D40R1063"
+SubtitleText[2943]="Delta 40: Sir, I got your back!"
+
+SubtitleSound[2944]="D38R1559"
+SubtitleText[2944]="Delta 38: Blasted nuisance!"
+
+SubtitleSound[2945]="D38R1560"
+SubtitleText[2945]="Delta 38: Hey, you there!  Stop!"
+
+SubtitleSound[2946]="D38R1561"
+SubtitleText[2946]="Delta 38: That was no clone."
+
+SubtitleSound[2947]="CA1R1500"
+SubtitleText[2947]="Clone Advisor 1: Three-Eight, each member of Delta Squad has been sent to one of the four Data Cores, to retrieve critical information."
+
+SubtitleSound[2948]="CA1R1501"
+SubtitleText[2948]="Clone Advisor 1: Your primary objective is to retrieve the Flight Recorder Data from the Aft Data Core, then rendezvous with the squad for exfil."
+
+SubtitleSound[2949]="CA1R1502"
+SubtitleText[2949]="Clone Advisor 1: As Squad Leader, you may also be called upon to assist your squadmates with their orders."
+
+SubtitleSound[2950]="CA1R1503"
+SubtitleText[2950]="Clone Advisor 1: Oh-Seven is tasked with retrieving the sensor logs from the Starboard Data Core.  "
+
+SubtitleSound[2951]="CA1R1504"
+SubtitleText[2951]="Clone Advisor 1: Delta Forty will hit the Port Core, for the<static>manifests, and <static>"
+
+SubtitleSound[2952]="D38R1500"
+SubtitleText[2952]="Delta 38: Deltas, I've lost contact with command.  Can any of you get through?"
+
+SubtitleSound[2953]="D07R1500"
+SubtitleText[2953]="Delta 07: No signal here, sir.  Seven out."
+
+SubtitleSound[2954]="D40R1500"
+SubtitleText[2954]="Delta 40: That's a negative, Squad Leader.  Four-Oh out."
+
+SubtitleSound[2955]="D62R1500"
+SubtitleText[2955]="Delta 62: It's all white noise on my end, boss.  Six-Two  out."
+
+SubtitleSound[2956]="D07R1501"
+SubtitleText[2956]="Delta 07: What do you think happened to him?"
+
+SubtitleSound[2957]="D40R1501"
+SubtitleText[2957]="Delta 40: That's not important, right, sir?"
+
+SubtitleSound[2958]="D38R1501"
+SubtitleText[2958]="Delta 38: Right, Forty.  If the Advisor can reestablish coms, he will.  In the meantime, we've got some data to retrieve.  Move out, Delta."
+
+SubtitleSound[2959]="D38R1502"
+SubtitleText[2959]="Delta 38: Mynocks in the torpedo bay. Our ship thieves could stand to learn something about Republic discipline."
+
+SubtitleSound[2960]="D38R1503"
+SubtitleText[2960]="Delta 38: Deltas, report in.  Any signs of life?"
+
+SubtitleSound[2961]="D07R1502"
+SubtitleText[2961]="Delta 07: Seven here.  I've got nothing."
+
+SubtitleSound[2962]="D40R1502"
+SubtitleText[2962]="Delta 40: This is Delta Four-oh.  No life signs yet."
+
+SubtitleSound[2963]="D62R1501"
+SubtitleText[2963]="Delta 62: Six-Two reporting.  Nothing but Mynocks, sir.  It's disgraceful."
+
+SubtitleSound[2964]="D38R1504"
+SubtitleText[2964]="Delta 38: If vermin keep eating through the power conduits, this ship won't be worth it's weight in scrap."
+
+SubtitleSound[2965]="D62R1502"
+SubtitleText[2965]="Delta 62: Uhm this is Six-two.  I'm getting some  interference on my visor.  "
+
+SubtitleSound[2966]="D62R1503"
+SubtitleText[2966]="Delta 62: Wait, now it's gone.  Strange."
+
+SubtitleSound[2967]="D62R1504"
+SubtitleText[2967]="Delta 62: Six-two again.  I'm getting that static again.  Stronger this time ... can hardly see.  "
+
+SubtitleSound[2968]="D62R1505"
+SubtitleText[2968]="Delta 62: What's that?!  AAAUGH!!"
+
+SubtitleSound[2969]="D38R1505"
+SubtitleText[2969]="Delta 38: Six-two!  Delta Six-two, can you hear me?!  Report."
+
+SubtitleSound[2970]="D62R1506"
+SubtitleText[2970]="Delta 62: Get off of me, you frelling bag of bolts!"
+
+SubtitleSound[2971]="D38R1506"
+SubtitleText[2971]="Delta 38:  Six-two!"
+
+SubtitleSound[2972]="D38R1507"
+SubtitleText[2972]="Delta 38: Deltas, I've lost Six-two.  Are either of you close enough to monitor his status?  Report."
+
+SubtitleSound[2973]="D07R1503"
+SubtitleText[2973]="Delta 07: Negative, sir."
+
+SubtitleSound[2974]="D40R1503"
+SubtitleText[2974]="Delta 40: No Deltas on my scope either, sir."
+
+SubtitleSound[2975]="D38R1562"
+SubtitleText[2975]="Delta 38: Those things tried to drill my head!"
+
+SubtitleSound[2976]="D38R1508"
+SubtitleText[2976]="Delta 38: Deltas, I think I just found out what happened to Six-two.  "
+
+SubtitleSound[2977]="D38R1509"
+SubtitleText[2977]="Delta 38: Some kind of Scavenger droid.  Keep your eyes out for static!"
+
+SubtitleSound[2978]="CT1R1500"
+SubtitleText[2978]="Clone Trooper 1: Hey!  You're a commando!  Thank goodness!"
+
+SubtitleSound[2979]="D38R1510"
+SubtitleText[2979]="Delta 38: What happened here?"
+
+SubtitleSound[2980]="CT1R1501"
+SubtitleText[2980]="Clone Trooper 1:  I'm not sure.  I was, uh, scanning the maintenance corridors when I heard blaster fire."
+
+SubtitleSound[2981]="CT1R1502"
+SubtitleText[2981]="Clone Trooper 1: By the time I got to where the noise was, everyone was dead."
+
+SubtitleSound[2982]="D38R1511"
+SubtitleText[2982]="Delta 38: So you came to the torpedo bay to hide."
+
+SubtitleSound[2983]="CT1R1503"
+SubtitleText[2983]="Clone Trooper 1: No sir!  I was going to try to, uh, launch a torpedo, and alert the Republic!"
+
+SubtitleSound[2984]="D38R1512"
+SubtitleText[2984]="Delta 38: Look out!"
+
+SubtitleSound[2985]="CT1R1504"
+SubtitleText[2985]="Clone Trooper 1: But you're here now, so no need for that, eh?  Thanks for the resc--ACK!"
+
+SubtitleSound[2986]="D38R1513"
+SubtitleText[2986]="Delta 38: What a waste of good genes."
+
+SubtitleSound[2987]="D38R1514"
+SubtitleText[2987]="Delta 38: We've got some trooper casualties here, Deltas.  "
+
+SubtitleSound[2988]="D38R1515"
+SubtitleText[2988]="Delta 38: From the looks of things, there's something worse than droids on this ship."
+
+SubtitleSound[2989]="D38R1516"
+SubtitleText[2989]="Delta 38: Whoever stole this ship has done some redecorating, Deltas."
+
+SubtitleSound[2990]="D38R1517"
+SubtitleText[2990]="Delta 38: The Aft Data Core access hall is blocked by debris."
+
+SubtitleSound[2991]="D07R1504"
+SubtitleText[2991]="Delta 07: Hope you feel like a good crawl, sir.  The only way around that area is through the Droid Access Conduits."
+
+SubtitleSound[2992]="D38R1518"
+SubtitleText[2992]="Delta 38: Lovely."
+
+SubtitleSound[2993]="D07R1505"
+SubtitleText[2993]="Delta 07: You might have to slice your way in."
+
+SubtitleSound[2994]="D38R1519"
+SubtitleText[2994]="Delta 38: Just have to override the access restrictions ..."
+
+SubtitleSound[2995]="D38R1520"
+SubtitleText[2995]="Delta 38: Got it!"
+
+SubtitleSound[2996]="D07R1506"
+SubtitleText[2996]="Delta 07: The conduits should emerge somewhere near the Starboard Data Core ... right by me."
+
+SubtitleSound[2997]="D38R1521"
+SubtitleText[2997]="Delta 38: OK, stay put.  We'll rendezvous at the core."
+
+SubtitleSound[2998]="D07R1507"
+SubtitleText[2998]="Delta 07: There you are, sir.  We're close enough to monitor each others' status."
+
+SubtitleSound[2999]="D38R1522"
+SubtitleText[2999]="Delta 38: What's your position, Seven?"
+
+SubtitleSound[3000]="D07R1508"
+SubtitleText[3000]="Delta 07: I'm in the starboard Data Core.  Should be a viewport near you."
+
+SubtitleSound[3001]="D38R1523"
+SubtitleText[3001]="Delta 38: Ah, there you are."
+
+SubtitleSound[3002]="D07R1509"
+SubtitleText[3002]="Delta 07: Give me a minute, and I'll join you.  Just have to slice this core for the sensor logs."
+
+SubtitleSound[3003]="D07R1510"
+SubtitleText[3003]="Delta 07: That did it!  Now I'll ... hold on, got some static here."
+
+SubtitleSound[3004]="D38R1524"
+SubtitleText[3004]="Delta 38: Seven!  Look out!"
+
+SubtitleSound[3005]="D38R1564"
+SubtitleText[3005]="Delta 38: Sev!  Look out!  Incoming!"
+
+SubtitleSound[3006]="D38R1565"
+SubtitleText[3006]="Delta 38: Sev!  Sev!  Can you read me?  Blast!"
+
+SubtitleSound[3007]="D07R1511"
+SubtitleText[3007]="Delta 07: Ahhh!  Mmmmffff!!"
+
+SubtitleSound[3008]="D38R1525"
+SubtitleText[3008]="Delta 38: Forty, Six-two!  Come in!  Be on the lookout for armed hostiles!"
+
+SubtitleSound[3009]="D38R1526"
+SubtitleText[3009]="Delta 38: I think we've got Trandoshans!"
+
+SubtitleSound[3010]="D38R1527"
+SubtitleText[3010]="Delta 38: They've taken down Seven!"
+
+SubtitleSound[3011]="D38R1528"
+SubtitleText[3011]="Delta 38: Delta Squad, come in!"
+
+SubtitleSound[3012]="D40R1504"
+SubtitleText[3012]="Delta 40: <static>ger, Three-eight!<static>Forty<static>an eye out<static>eet you at the rendezv<static>"
+
+SubtitleSound[3013]="D38R1529"
+SubtitleText[3013]="Delta 38: Looks like I'll have to use the Access Conduits to get to the Starboard Data Core."
+
+SubtitleSound[3014]="D38R1531"
+SubtitleText[3014]="Delta 38: Shotguns?"
+
+SubtitleSound[3015]="D38R1532"
+SubtitleText[3015]="Delta 38: I didn't think anyone used projectile weapons anymore."
+
+SubtitleSound[3016]="D38R1566"
+SubtitleText[3016]="Delta 38: Let’s see how you handle a commando, lardball!"
+
+SubtitleSound[3017]="D38R1533"
+SubtitleText[3017]="Delta 38: Way to go, little guy."
+
+SubtitleSound[3018]="D38R1534"
+SubtitleText[3018]="Delta 38: Laugh while you can, lizard breath."
+
+SubtitleSound[3019]="D38R1535"
+SubtitleText[3019]="Delta 38: Just a quick slice ..."
+
+SubtitleSound[3020]="D38R1536"
+SubtitleText[3020]="Delta 38: Sensor logs retrieved.  "
+
+SubtitleSound[3021]="D38R1674"
+SubtitleText[3021]="Delta 38: Looks like we have records of everything that’s happened since the ship went offline."
+
+SubtitleSound[3022]="D38R1675"
+SubtitleText[3022]="Delta 38: Here's something odd…"
+
+SubtitleSound[3023]="D38R1676"
+SubtitleText[3023]="Delta 38: A data file… but it's not a Republic code.  Better bring this back to Command."
+
+SubtitleSound[3024]="D38R1558"
+SubtitleText[3024]="Delta 38: It’s … completely wrecked!  How could they have done this much damage so quickly?"
+
+SubtitleSound[3025]="D38R1677"
+SubtitleText[3025]="Delta 38: It’s hard to tell with all the mess, but I think this should connect with the Aft Data Core access hall."
+
+SubtitleSound[3026]="D38R1537"
+SubtitleText[3026]="Delta 38: This should connect with the Aft Data Core access hall."
+
+SubtitleSound[3027]="CT1R1505"
+SubtitleText[3027]="Clone Trooper 1: Go go go!"
+
+SubtitleSound[3028]="D38R1538"
+SubtitleText[3028]="Delta 38: Better not let him take over the turrets."
+
+SubtitleSound[3029]="CT2R1500"
+SubtitleText[3029]="Clone Trooper 2: Ah, one of the deluxe models.  Come to save us with your 'superior' training?"
+
+SubtitleSound[3030]="D38R1539"
+SubtitleText[3030]="Delta 38: This 'deluxe model' is the only thing standing between you and a bloody death, so you'd best be showing some respect, trooper."
+
+SubtitleSound[3031]="CT2R1501"
+SubtitleText[3031]="Clone Trooper 2: Yes sir!  What are your orders, sir?"
+
+SubtitleSound[3032]="D38R1540"
+SubtitleText[3032]="Delta 38: Hold the line.  Kill any lizards you see.  I'm going to get to the bottom of this."
+
+SubtitleSound[3033]="CT2R1502"
+SubtitleText[3033]="Clone Trooper 2: Will do, Sir!"
+
+SubtitleSound[3034]="D38R1542"
+SubtitleText[3034]="Delta 38: Deltas!  Kill the ones with the knives first!"
+
+SubtitleSound[3035]="D38R1543"
+SubtitleText[3035]="Delta 38: Delta Squad, come in!  Are you receiving?"
+
+SubtitleSound[3036]="D38R1544"
+SubtitleText[3036]="Delta 38: Where do you think you're going?"
+
+SubtitleSound[3037]="D38R1545"
+SubtitleText[3037]="Delta 38: Found some friends, eh?"
+
+SubtitleSound[3038]="D38R1546"
+SubtitleText[3038]="Delta 38: That's right, run!"
+
+SubtitleSound[3039]="D38R1547"
+SubtitleText[3039]="Delta 38: Not good."
+
+SubtitleSound[3040]="D38R1548"
+SubtitleText[3040]="Delta 38: Hope I can still find the flight recorder data in that mess."
+
+SubtitleSound[3041]="D38R1549"
+SubtitleText[3041]="Delta 38: It's working.  Barely."
+
+SubtitleSound[3042]="D38R1550"
+SubtitleText[3042]="Delta 38: Whew, just in time.  "
+
+SubtitleSound[3043]="D38R1691"
+SubtitleText[3043]="Delta 38: I hope this flight recorder data gives us a clue as to how these stupid lizards took over a Republic assault ship!"
+
+SubtitleSound[3044]="D38R1551"
+SubtitleText[3044]="Delta 38: Deltas!  If you can read me, I'm headed for the rendezvous point."
+
+SubtitleSound[3045]="D38R1552"
+SubtitleText[3045]="Delta 38: Deltas?"
+
+SubtitleSound[3046]="D38R1692"
+SubtitleText[3046]="Delta 38: Delta Squad, do you read me, over?  "
+
+SubtitleSound[3047]="D38R1693"
+SubtitleText[3047]="Delta 38: Fixer… Sev… Scorch…. C'mon guys…"
+
+SubtitleSound[3048]="D38R1563"
+SubtitleText[3048]="Delta 38: More droids for the scrap heap!"
+
+SubtitleSound[3049]="D38R1553"
+SubtitleText[3049]="Delta 38: That’s a lot of lizards!  Not much cover here."
+
+SubtitleSound[3050]="D38R1554"
+SubtitleText[3050]="Delta 38: Ha!  Those lizards are too fat to fit in the Droid Access Shaft!  They’d never catch me in there!"
+
+SubtitleSound[3051]="D38R1667"
+SubtitleText[3051]="Delta 38: Running low on ammo …"
+
+SubtitleSound[3052]="D38R1668"
+SubtitleText[3052]="Delta 38: This is getting hairy!"
+
+SubtitleSound[3053]="D38R1555"
+SubtitleText[3053]="Delta 38: I'm going to need more ammunition if there are more where these came from."
+
+SubtitleSound[3054]="D38R1669"
+SubtitleText[3054]="Delta 38: I see you, scumbag.  You can't hide from a commando."
+
+SubtitleSound[3055]="D38R1670"
+SubtitleText[3055]="Delta 38: You lizards need to learn that I'm a lot scarier than you are!"
+
+SubtitleSound[3056]="D38R1671"
+SubtitleText[3056]="Delta 38: Never try to scare a commando."
+
+SubtitleSound[3057]="D38R1672"
+SubtitleText[3057]="Delta 38: Hmm.  An energy weapon that looks like a slug-thrower.  Didn’t think lizards were that nostalgic."
+
+SubtitleSound[3058]="D38R1556"
+SubtitleText[3058]="Delta 38: Delta!  They’re using mines!  Remember:  Only motion sets them off."
+
+SubtitleSound[3059]="D38R1557"
+SubtitleText[3059]="Delta 38: We’ll need to crouch underneath their sensor cones, to advance close enough to disarm them"
+
+SubtitleSound[3060]="D38R1673"
+SubtitleText[3060]="Delta 38: I wish Fixer were here.  This is his specialty."
+
+SubtitleSound[3061]="CT4R1001"
+SubtitleText[3061]="Clone Trooper 4: Fall back!"
+
+SubtitleSound[3062]="CT5R1001"
+SubtitleText[3062]="Clone Trooper 5: Yes sir!"
+
+SubtitleSound[3063]="D07R1512"
+SubtitleText[3063]="Delta 07: Sir!  Delta squad, Three-Eight is down, and I can’t get to him!  Is anyone receiving?"
+
+SubtitleSound[3064]="CT3R1002"
+SubtitleText[3064]="Clone Trooper 3: Nooo!!"
+
+SubtitleSound[3065]="D38R1678"
+SubtitleText[3065]="Delta 38: The defensive turrets are active!"
+
+SubtitleSound[3066]="D38R1679"
+SubtitleText[3066]="Delta 38: At least they’re on our side, for now."
+
+SubtitleSound[3067]="D38R1680"
+SubtitleText[3067]="Delta 38: If the lizards know how to slice the control console, this could fall apart in a hurry!"
+
+SubtitleSound[3068]="D38R1681"
+SubtitleText[3068]="Delta 38: Excellent work, trooper!  Keep this area secure!"
+
+SubtitleSound[3069]="D38R1682"
+SubtitleText[3069]="Delta 38: It’s too bad only commandos get bacta processing implants."
+
+SubtitleSound[3070]="D38R1683"
+SubtitleText[3070]="Delta 38: I could use the help!"
+
+SubtitleSound[3071]="D38R1684"
+SubtitleText[3071]="Delta 38: This turret control console is still active!  Republic engineering at its finest."
+
+SubtitleSound[3072]="D38R1685"
+SubtitleText[3072]="Delta 38: Let’s see if the Trandoshans can take the heat as well as I can."
+
+SubtitleSound[3073]="D38R1686"
+SubtitleText[3073]="Delta 38: The second set of turrets is inactive."
+
+SubtitleSound[3074]="D38R1687"
+SubtitleText[3074]="Delta 38: I’ll bet I can use them to cover my back."
+
+SubtitleSound[3075]="D38R1688"
+SubtitleText[3075]="Delta 38: Come on, you fat ugly fierfeks!  Come get me!"
+
+SubtitleSound[3076]="D38R1689"
+SubtitleText[3076]="Delta 38: The blasted things are everywhere!"
+
+SubtitleSound[3077]="D38R1690"
+SubtitleText[3077]="Delta 38: Once I slice into this data core, I'll be able to round up the squad."
+
+SubtitleSound[3078]="D38R1694"
+SubtitleText[3078]="Delta 38: Fixer, keep scanning for Six-Two.  I don't want to become a three-man squad."
+

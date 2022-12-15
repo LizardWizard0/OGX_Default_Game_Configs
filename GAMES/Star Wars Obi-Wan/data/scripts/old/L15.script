@@ -1,0 +1,270 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+Actor Palpatine A_Palpatine_01
+Actor Valorum A_Valorum_01
+Actor Queen	A_Queen_Travel_01
+
+
+FadeUp
+
+Script "Palpatine Dialogue" 
+{
+	Actor QuiGon A_Qui_Gon_02  // This Qui-Gon is specific to the opening dialogue
+
+	TakeControlOf Palpatine
+	TakeControlOf Valorum
+	TakeControlOf Queen
+	TakeControlOf QuiGon
+
+	// I want them to all walk at the same time so I use the ChildScript version
+	Child WalkToNodeAndWait Palpatine "Palp_Goto"
+	Child WalkToNodeAndWait Valorum "Valorum_Goto"
+	Child WalkToNodeAndWait Queen "Amidala_Goto"
+	Child WalkToNodeAndWait QuiGon "Qui_Goto"
+	WaitForAll 
+
+	LookAt Palpatine Queen
+	LookAt Queen Palpatine
+
+	SayLine Palpatine "/SenatorPalpatine_1980/It is a great gift..."
+	Pause 0.25
+
+	LookAt Valorum Queen
+	LookAt Queen Valorum
+	SayLine Valorum "/SupremeChancellorValorum_1981/Welcome..."
+	SayLine Queen "/QueenAmidala_1982/I am grateful..."
+	Pause 0.25
+
+	LookAt Queen Palpatine
+	SayLine Palpatine "/SenatorPalpatine_1983/There is a question of procedure..."
+	Pause 0.5
+
+	LookAt QuiGon Valorum
+	LookAt Valorum QuiGon
+	SayLine QuiGon "/Qui-GonJinn_1994/Chancellor Valorum I must speak with the Jedi Council..."
+
+	Pause 0.5
+	SayLine Valorum "/SupremeChancellorValorum_1995/Do what you must..."
+	
+	// Stop Looking at each other
+	StopActions Queen
+	StopActions Valorum
+	StopActions Palpatine
+	Pause 0.5
+
+	LookAt QuiGon ObiWan
+	SayLine QuiGon "/Qui-GonJinn_1998/Come Obi-Wan.  Let's get moving."
+	SayLine ObiWan "/Obi-WanKenobi_54.27/Yes Master."
+
+	WalkToNode Palpatine "Palp_Bus_Goto"
+	WalkToNode Valorum "Valorum_Bus_Goto"
+	WalkToNode Queen "Amidala_Bus_Goto"
+
+	RunToNodeAndWait QuiGon "Qui_Taxi_Goto"
+	WaitUntilEnteredRegion ObiWan "rgn_obi_taxi"
+
+	//BeginCutScene
+	//FadeDown 2.0
+
+	//BeginScript "Taxi Ride"    We're supposed to go to the taxi ride here but it doesn't work
+	BeginScript "Rodian Dialogue"   // So instead we skip straight to the Rodian Dialogue
+}
+
+
+
+StoreScript "Taxi Ride"
+{
+	Actor taxi
+	TriggerUberGenAndWait A_z_15_taxi_follow taxi
+
+	// The UberGen triggers a spline-based entity, but we need a character to say lines
+	// We will attach a dummy character to the taxi to do this later.
+
+	// This doesn't work yet
+	// CameraFollow taxi  // Make the camera follow the taxi
+
+	FadeUp 2.0
+
+	SayLine taxi "/Qui-GonJinn_2000/Take us to the Jedi Council please."
+	SayLine taxi "/TaxiDroid_2001/Of course."
+
+	FadeDown 2.0
+	Pause 1.0
+	FadeUp 2.0
+
+	SayLine taxi "/TaxiDroid_2002/You'll notice the Twin Towers..."
+	SayLine taxi "/TaxiDroid_2003/The newest addition..."
+	SayLine taxi "/TaxiDroid_2004/Oh dear.  An alternate..."
+	SayLine taxi "/TaxiDroid_2005/We won't be seeing..."
+
+	// Now we need a sound effect of the droid and the ship malfunctioning and the 
+	// ship should look like it's flying erratically.
+
+	SayLine taxi "/Qui-GonJinn_2014/There's something seriously wrong..."
+	SayLine taxi "/Qui-GonJinn_2015/The manual over-ride doesn't work!"
+	SayLine taxi "/Qui-GonJinn_2016/Hang on Obi-Wan!"
+
+	FadeDown 2.0
+	//CameraOff	 // Remove the taxi camera
+}
+
+
+
+
+Actor Rodian A_Rodian_Tat_01
+Actor	QuiGon A_Qui_Gon_01     // This is the real Qui-Gon!
+
+
+StoreScript "Rodian Dialogue"
+{
+	//EndCutScene
+
+	TakeControlOf QuiGon
+	TakeControlOf Rodian
+
+	Teleport ObiWan 1
+	//FadeUp 2.0
+
+	LookAt Rodian ObiWan
+	LookAt QuiGon Rodian
+
+	SayLine Rodian "/Rodian_1735/Hey Jedi!  BOO!  Ha ha ha!"
+	SayLine Rodian "/Rodian_1737/Nice landing.  Heh."
+
+	LookAt QuiGon ObiWan
+	Pause 1.0
+	SayLine QuiGon "/Qui-GonJinn_2017/I believe our craft..."
+	SayLine ObiWan "/Obi-WanKenobi_54.27/Yes Master."
+
+	LookAt QuiGon Rodian
+	SayLine Rodian "/Rodian_1736/Hey Jedi you’re a long way..."
+
+	LookAt QuiGon ObiWan
+	Pause 1.0
+	SayLine QuiGon "/Qui-GonJinn_2068/I get the feeling we’re being watched."
+	SayLine QuiGon "/Qui-GonJinn_2067/We must be extremely cautious."
+
+	StopActions QuiGon  // Stop looking at ObiWan
+	ReturnControlTo QuiGon
+}
+
+
+
+
+/*
+
+The Old L15.cpp
+
+#include "L15.h"
+
+
+
+void L15::ExecuteCallback( CDataBase& params )
+{
+	CLevelScript::ExecuteCallback(params);
+	int type = (int)params["type"];
+	LAssert( type );
+
+	switch( type )
+	{
+	case server_LoadComplete:
+		{
+			mScriptCallback = new L15_ScriptCallback();
+			break;
+		}
+	case server_SetPlayerMode:
+		{
+			CScript::RunScriptFile("L15.script", mScriptCallback);
+			new EntityRegionMonitor(FindPlayerEntity()->GetRefName()); // *** Temporary
+			break;
+		}
+	}
+}
+
+
+
+
+///////////////////////////////
+//  Level 15 Script Callback  //
+///////////////////////////////
+
+
+void L15_ScriptCallback::ExecuteCallback(CDataBase &params) 
+{
+	LString event = (LString)params["event"];
+
+	// if (event == ...
+}
+
+
+
+ Stuff that has yet to be incorporated into the script (mostly animation vectors)
+
+	Palpatine Dialogue
+
+	// The queen's posse
+	const int numInPosse = 8;
+	CEntity* posse[numInPosse] = { FindEntity("A_Panaka_Tat_01"),
+											 FindEntity("A_Handmaid_Sache_01"),
+											 FindEntity("A_Handmaid_Rabe_01"),
+											 FindEntity("A_Handmaid_Eirte_01"),
+											 FindEntity("A_Handmaid_Vane_01"),
+											 FindEntity("A_Anakin_01"),
+											 FindEntity("A_Jar_Jar_01"),
+											 FindEntity("A_R2_Tat_01") };
+
+	for (int i = 0; i < numInPosse; i++) {
+		//Follow(posse[i], Queen, 3);  //*** I don't want them following for now
+	}
+
+
+	LVector<LString>* animVec1 = new LVector<LString>;
+	animVec1->push_back("human_loiter-gestureboth.anim");
+	animVec1->push_back("human_loiter-idle.anim");
+	animVec1->push_back("human_loiter-pointfwd.anim");
+	SayLine(Palpatine, "SenatorPalpatine_1980", animVec1, true); // "It is a great gift..."
+
+	LVector<LString>* animVec2 = new LVector<LString>;
+	animVec2->push_back("human_loiter-gestureboth.anim");
+	animVec2->push_back("human_loiter-idle.anim");
+	animVec2->push_back("human_loiter-gesturecrossarms.anim");
+	animVec2->push_back("human_loiter-idle.anim");
+	SayLine(Valorum, "SupremeChancellorValorum_1981", animVec2, true); // "Welcome..."
+
+	SayLine(Palpatine, "SenatorPalpatine_1983", "human_loiter-gesturecrossarms.anim", false);  // "There is a question..."
+
+	LVector<LString>* animVec3 = new LVector<LString>;
+	animVec3->push_back("human_loiter-gesturecrossarms.anim");
+	animVec3->push_back("human_loiter-idle.anim");
+	animVec3->push_back("human_loiter-gestureright.anim");
+	animVec3->push_back("human_loiter-idle.anim");
+	SayLine(QuiGon, "Qui-GonJinn_1994", animVec3, false);  // "Chancellor Valorum, I must..."
+
+	SayLine(Valorum, "SupremeChancellorValorum_1995", "human_loiter-gestureleft.anim", false);  // "Do what you must..."
+
+	SayLine(QuiGon, "Qui-GonJinn_1998", "human_loiter-pointfwd.anim", false);	 // "Come, Obi-Wan.  Let's get moving."
+
+ 
+	
+	Taxi Ride
+
+	// The realTaxi is the entity generated by the uberGenerator
+	CEntity* realTaxi = (CEntity*) params["pEntity"];
+	if (!realTaxi) return;
+
+	// We are going to attach a dummy character to act as the taxi for
+	// conversation purposes.  We'll refer to the dummy character as taxi
+	CEntity* taxi = Attach( realTaxi->mpNode, "15_dummyChar.dsc", 
+									CVector(0, 0, 0), realTaxi->mpNode->Rotation() );
+	Hide(taxi);
+	SetFollowCamera(taxi);  // Make the camera follow the taxi
+
+
+
+	Rodian Dialogue
+
+	SayLine(QuiGon, "Qui-GonJinn_2017", "human_loiter-gestureleft.anim", false); // "I believe our craft...."
+	SayLine(QuiGon, "Qui-GonJinn_2068", "human_loiter-gesturecrossarms.anim", false); // "I get the feeling we’re being watched."
+*/

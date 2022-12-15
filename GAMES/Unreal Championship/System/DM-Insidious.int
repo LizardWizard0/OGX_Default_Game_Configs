@@ -1,0 +1,47 @@
+[LevelInfo0]
+Title="Insidious"
+LevelEnterText="DM-Insidious"
+
+[LevelSummary]
+Title="Insidious"
+LevelEnterText="DM-Insidious"
+
+[ZoneInfo0]
+LocationName="Bio Rifle Hallway"
+
+[ZoneInfo1]
+LocationName="Bio Rifle Hallway"
+
+[ZoneInfo10]
+LocationName="Lower Hallway"
+
+[ZoneInfo11]
+LocationName="Flak Cannon Hallway"
+
+[ZoneInfo12]
+LocationName="Upper Hallway"
+
+[ZoneInfo13]
+LocationName="Cloning Tanks"
+
+[ZoneInfo2]
+LocationName="Cloning Tanks"
+
+[ZoneInfo3]
+LocationName="Cloning Tanks"
+
+[ZoneInfo4]
+LocationName="Lower Hallway"
+
+[ZoneInfo6]
+LocationName="Upper Hallway"
+
+[ZoneInfo7]
+LocationName="Flak Cannon Hallway"
+
+[ZoneInfo8]
+LocationName="Wall Tanks"
+
+[ZoneInfo9]
+LocationName="Fan Room"
+

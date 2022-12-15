@@ -1,0 +1,17 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+PauseRandom .01 1.5
+
+
+//PlayAudioCue me Idle
+AddGesture me pointleft 4
+AddGesture me None 2
+WaitUntilFinishedGesture me
+//PlayAudioCue me Idle
+AddGesture me Taunt
+AddGesture me GunUp 6
+AddGesture me None 2
+WaitUntilFinishedGesture me
+
+

@@ -1,0 +1,7 @@
+state Base {
+	Conditions {
+	}
+	Actions {
+		EngageOpponent "static" "firerange=5" "fireinterval=0.25"
+	}
+}

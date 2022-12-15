@@ -1,0 +1,66 @@
+state Base {
+	Conditions {
+		if BeenSpawned == 1 goto ApproachPlayer	
+		if AlwaysTrue == 1 goto IdleGotNoOpponent
+
+		if CanHearRadio == 1 goto Dance
+	}
+	Actions {
+		OverrideAnimation "reset"
+		CanDefend "TRUE"
+		SetSide "baddy"
+	}
+}
+
+state IdleGotNoOpponent {
+	Conditions {
+		if GotOpponent == 1 goto Fight
+
+		if PartyUnderCover == 0 and
+		if EitherPlayerInTriggerArea == 1.0 goto ApproachPlayer
+		
+		if CanHearRadio == 1 goto Dance
+	}
+	Actions {
+		GoToOrigin "waittime=10"
+	}
+}
+
+state ApproachPlayer {
+	Conditions {
+		if GotOpponent == 1 goto Fight
+		
+		if Timer > 10 and
+		if GotOpponent == 0 goto IdleGotNoOpponent
+		
+		if CanHearRadio == 1 goto Dance
+	}
+	Actions {
+		ResetTimer
+		FollowPlayer "run"
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto IdleGotNoOpponent
+		
+		if CanHearRadio == 1 goto Dance
+	}
+	Actions {
+		AttackOpponent "range 0.25"
+	}
+}
+
+//DANCE
+state Dance {
+	Conditions {
+		if CanHearRadio == 0 goto Base
+	}
+	Actions {
+		OverrideAnimation "from=idle" "to=dance"
+		CanDefend "FALSE"
+		SetSide "neutral"
+		FaceCamera
+	}
+}

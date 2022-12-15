@@ -1,0 +1,61 @@
+[LevelSummary]
+Title="Untitled"
+
+[ZoneInfo11]
+LocationName="General Navigation Area"
+
+[ZoneInfo12]
+LocationName="Jump and Double Jump Area"
+
+[ZoneInfo13]
+LocationName="Jump and Double Jump Area"
+
+[ZoneInfo14]
+LocationName="Assault Rifle Area"
+
+[ZoneInfo15]
+LocationName="Shock Rifle Area"
+
+[ZoneInfo16]
+LocationName="Shock Rifle Area"
+
+[xTutorialInfo0]
+Seq[2].Text="Another important feature of arena navigation is your ability to Jump, and Double Jump. "
+Seq[3].Text="Move forward and press the 'jump' button or click the left thumbstick to jump onto the ledge in front of you."
+Seq[4].Text="To get to the next platform in front of you, you will have to do a Double Jump."
+Seq[5].Text="Move forward and jump, then when you are close to the highest point in your jump, jump again and your player will get an extra boost of height, or Double Jump."
+Seq[11].Text="Excellent.  Now move through the door to the next Survival Guide section."
+
+[xTutorialInfo1]
+Seq[1].Text="Welcome to the Unreal Championship Survival Guide."
+Seq[2].Text="You have been chosen to captain your team in the Tournament, and this course is designed to ensure you have the necessary skills to do so."
+Seq[3].Text="Upon completion of this guide you will be given control of your team and it will be up to you to either win the Tournament and your freedom or die in the attempt."
+Seq[4].Text="If at any time during this guide you feel you have no more need of assistance, hit the START button and select 'END TUTORIAL' and you shall enter the Tournament with no more delay."
+Seq[5].Text="Now let's begin."
+Seq[6].Text="The most essential skill for participating in the tournament is the ability to navigate the combat arenas."
+Seq[7].Text="Therefore we will start your training by teaching you to look around the training arena by moving the right thumbstick on your controller. "
+Seq[8].Text="Find and hold your focus on the monitor with the '1' on it."
+Seq[9].Text="Now find and hold your focus on the monitor with the '2' on it."
+Seq[11].Text="Good.  Would you like your vertical look direction inverted at this time?"
+Seq[12].Text="After the tutorial, you may customize your controls to your liking in the SETTINGS menu under INPUT."
+Seq[13].Text="Movement around the arena is accomplished by using the left thumbstick or directional pad. "
+Seq[14].Text="Try using the left thumbstick or directional pad to navigate the training arena."
+Seq[16].Text="Good.  A doorway under the number '2' monitor has opened.  When you feel comfortable with movement and looking around, travel through it to continue to the next section of the Survival Guide."
+
+[xTutorialInfo2]
+Seq[2].Text="The weapon in front of you here is the Shock Rifle.  Walk over it to pick it up."
+Seq[5].Text="You may switch back to the Assault Rifle by pressing the 'previous weapon' button. Try that now."
+Seq[6].Text="Excellent, now switch back to the Shock Rifle by pressing the 'next weapon' button and I will give you some instruction on the use of the combo."
+Seq[7].Text="A few of the weapons in Unreal Championship have an extra function that uses a combination of alt-fire and primary fire functions."
+Seq[8].Text="The Shock Rifle is one of those 'combo' weapons.  Hitting an alt-fire Shock ball with a primary fire shot will cause the alt-fire ball to explode with a devastating explosion.  "
+Seq[9].Text="Destroy the glowing generator behind the pane of glass to open the door to the next Survival Guide area."
+
+[xTutorialInfo3]
+Seq[2].Text="The Assault Rifle is the weapon sitting on the ground in front of you.  This is one of the default weapons that will be given to you each time you are respawned during the tournament. "
+Seq[3].Text="Walk over it to pick it up."
+Seq[4].Text="Each weapon has a Primary fire and an Alternate fire with a different function."
+Seq[5].Text="For this particular weapon, the primary fire shoots bullets and the secondary fire lobs grenades."
+Seq[6].Text="The longer you press and hold the alternate fire of this weapon, the farther the grenade will shoot."
+Seq[7].Text="Shoot and destroy the number '1' monitor with the primary fire, and destroy the number '2' monitor by lobbing a grenade over the glass."
+Seq[9].Text="Good.  A door to the next area of the guide is now open."
+

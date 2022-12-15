@@ -1,0 +1,110 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 and
+		if GotBlaster == 1 goto BlasterAlert
+
+		if GotOpponent == 1 and
+		if GotBlaster == 0 goto NonBlasterAlert
+	}
+	Actions {
+		KeepWeaponOut "FALSE"	
+		FollowPlayer "0.75"
+	}
+}
+
+state NonBlasterAlert {
+	Conditions {
+		if GotOpponent == 0 goto Base 
+		if PlayerRange < 3.5 goto NonBlasterWait
+	}
+	Actions {	
+		FollowPlayer "0.75"
+	}
+}
+
+state NonBlasterWait {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if PlayerRange > 3.5 goto NonBlasterAlert
+		if OpponentRange < 1.5 goto NonBlasterRetreat
+	}
+	Actions {	
+		Idle
+	}
+}
+
+state NonBlasterRetreat {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if PlayerRange > 3.5 goto NonBlasterAlert
+		if OpponentRange > 2 goto NonBlasterWait
+	}
+	Actions {	
+		RetreatFromOpponent "3"
+	}
+}
+
+state BlasterAlert {
+	Conditions {
+		if GotOpponent == 0 goto Base
+
+		if OpponentIsAThreat == 1 and
+		if PlayerRange < 2.5 goto BlasterDefend
+
+		if OpponentIsAThreat == 0 and
+		if PlayerRange < 2.5 goto BlasterFaceOpponent
+
+		if BeenHit == 1 goto BlasterAttack
+	}
+	Actions {	
+		KeepWeaponOut
+		FollowPlayer "1.5"
+	}
+}
+
+state BlasterFaceOpponent {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if PlayerRange > 2.5 goto BlasterAlert
+		if OpponentIsAThreat == 1 goto BlasterDefend
+		if OpponentRange < 1.5 goto BlasterDefend
+
+		if BeenHit == 1 goto BlasterAttack
+	}
+	Actions {	
+		FaceOpponent
+	}
+}
+
+state BlasterDefend {
+	Conditions {
+		if GotOpponent == 0 goto Base
+
+		if OpponentIsAThreat == 0 and
+		if OpponentRange > 2.5 goto BlasterAlert
+
+		if OpponentIsAThreat == 0 and
+		if OpponentRange > 1.5 goto BlasterFaceOpponent
+
+		if PlayerRange > 2.5 goto BlasterAlert
+	}
+	Actions {	
+		EngageOpponent "minrange=1" "firerange 999999"
+		;EngageOpponent "minrange=1" "firerange 3.5"
+	}
+}
+
+state BlasterAttack {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if OpponentIsAThreat == 1 and
+		if PlayerRange < 2.5 goto BlasterDefend
+
+		if Timer > 5 goto BlasterAlert
+	}
+	Actions {	
+		ResetTimer
+		EngageOpponent "minrange=1" "firerange 999999"
+		;EngageOpponent "minrange=1" "firerange 3.5"
+	}
+}

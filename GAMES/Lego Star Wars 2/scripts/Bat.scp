@@ -1,0 +1,77 @@
+//Bat
+state Base {
+	Conditions {
+		if AlwaysTrue == 1 goto Init
+	}
+	Actions {
+	}
+}
+
+state Init {
+	Conditions {
+		if BeenSpawned == 1 goto Spawned_FollowPlayer
+		if AlwaysTrue == 1 goto Idle
+	}
+	Actions {
+		CanSeeBehind
+		SetMaxViewHeight "999"
+		SetMinViewHeight "-999.0"
+		SetViewDistance "1"
+		BreakFormation
+		IgnoreWallSplines
+		;SetState "Idle"
+	}
+}
+
+state Spawned_FollowPlayer {
+	Conditions {
+		if GotOpponent == 1 goto Attack
+	}
+	Actions {
+		SetGravityHeight "reset"
+		FollowPlayer "ignore_radius" "can_go_off_path"
+	}
+}
+
+state Idle {
+	Conditions {
+		if GotOpponent == 1 goto Attack
+	}
+	Actions {
+		SetGravityHeight "min=0.3" "max=0.8"
+		SetCircleDirection "Random"
+		Circle "0.25"
+	}
+}
+
+state Attack {
+	Conditions {
+		if GotOpponent == 0 goto Idle
+		if CollidingWithOpponent == 1 goto HitOpponent
+	}
+	Actions {
+		SetGravityHeight "reset"
+		FollowOpponent "ignore_radius" "can_go_off_path"
+	}
+}
+
+state HitOpponent {
+	Conditions {
+	}
+	Actions {
+		TakeDamage "opponent"		
+		SetState "Circle"
+	}
+}
+
+state Circle {
+	Conditions {
+		if GotOpponent == 0 goto Idle
+		if Timer > 2 goto Attack
+	}
+	Actions {
+		ResetTimer "mintime=0" "maxtime=1"
+		SetCircleDirection "Reverse"
+		CircleOpponent "0.5" "can_go_off_path"
+	}
+}

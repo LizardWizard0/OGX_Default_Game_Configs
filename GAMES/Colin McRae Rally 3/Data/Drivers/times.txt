@@ -1,0 +1,967 @@
+
+__Times.txt - CMR3 driver time data______________________________________
+
+
+Note - All data in this file must be lowercase, JML
+
+______________________________________________________________Times.txt__
+
+
+
+
+
+
+
+__Ability Factors - how much can be added for specified components_______
+
+__MAX PERCENT OF CONTROL TIME ADDED TO TIMES BASED ON DRIVER ABILITY____________
+
+driverability_normal 0.3
+driverability_hard 0.2
+driverability_veryhard 0.15
+
+__MAX PERCENT OF CONTROL TIME ADDED TO TIMES BASED ON COUNTRY ABILITY PER DRIVER_
+
+stageability_normal  0.3
+stageability_hard  0.2
+stageability_veryhard  0.15
+
+________________________________________________________Ability Factors__
+
+
+
+
+__Difficulty Scales - used to scale time depending on difficulty level___
+
+diff_normal 1.03
+diff_hard   0.99
+diff_vhard  0.96
+
+
+
+
+
+diff_scale - put comments after numbers and don't add lines
+
+1.041531366
+1.031864708
+1.035255518
+1.021000914
+1.048840459
+1.048583782
+1.048980554
+1.046596019
+1.051247557
+1.041891559
+1.005322426
+1.044470238
+1.051066105
+1.025990136
+1.004295471
+1.034531541
+1.00578913
+1.018926864
+
+
+
+______________________________________________________Difficulty Scales__
+
+
+
+
+
+
+
+__Track Times____________________________________________________________
+
+
+__SWEDEN_________________________________________________________________
+
+swe11
+
+split1	00:44.7
+split2	01:37.2
+split3	02:16.0
+total	02:51.4
+
+swe12
+
+split1	00:39.5
+split2	01:24.4
+split3	02:12.9
+total	02:35.8
+
+swe13
+
+split1	00:39.7
+split2	01:12.4
+split3	01:46.9
+total	02:18.3
+
+swe14
+
+split1	00:39.2
+split2	01:24.6
+split3	02:02.5
+total	02:42.5
+
+swe15
+
+split1	00:43.0
+split2	01:36.2
+split3	02:31.6
+total	03:13.1
+
+swe16
+
+split1	00:48.7
+split2	01:34.9
+split3	02:21.0
+total	03:06.6
+
+swe1sss
+
+split1	00:51.8
+total	01:37.0
+
+swe21
+
+split1	00:39.2
+split2	01:23.2
+split3	02:04.8
+total	02:43.0
+
+swe22
+
+split1	00:42.5
+split2	01:36.2
+split3	02:34.0
+total	03:14.7
+
+swe23
+
+split1	00:45.6
+split2	01:29.1
+split3	02:14.5
+total	03:00.5
+
+swe24
+
+split1	00:42.6
+split2	01:33.7
+split3	02:15.2
+total	02:50.6
+
+swe25
+
+split1	00:39.1
+split2	01:23.0
+split3	02:09.6
+total	02:32.8
+
+swe26
+
+split1	00:44.1
+split2	01:14.9
+split3	01:49.3
+total	02:23.2
+
+swe2sss
+
+split1	00:46.4
+total	01:26.4
+
+swe31
+
+split1	00:44.3
+split2	01:33.0
+split3	02:13.4
+total	02:51.4
+
+swe32
+
+split1	00:38.4
+split2	01:17.9
+split3	02:02.3
+total	02:25.8
+
+swe33
+
+split1	00:41.3
+split2	01:11.3
+split3	01:45.7
+total	02:20.0
+
+swe34
+
+split1	00:39.7
+split2	01:25.1
+split3	02:00.7
+total	02:38.2
+
+swe35
+
+split1	00:39.8
+split2	01:33.8
+split3	02:32.7
+total	03:14.2
+
+swe36
+
+split1	00:50.2
+split2	01:35.9
+split3	02:25.9
+total	03:08.5
+
+swe3sss
+
+split1	00:47.7
+total	01:31.4
+
+_________________________________________________________________SWEDEN__
+
+__USA_________________________________________________________________
+
+
+
+usa11
+
+split1	00:31.4
+split2	01:09.3
+split3	01:49.7
+total	02:27.5
+
+usa12
+
+split1	01:03.8
+split2	01:53.2
+split3	02:32.7
+total	02:59.7
+
+usa13
+
+split1	00:51.1
+split2	01:42.5
+split3	02:19.6
+total	03:12.2
+
+
+
+usa14
+
+split1	00:42.2
+split2	01:31.1
+split3	02:21.2
+total	03:06.7
+
+usa15
+
+split1	01:05.6
+split2	01:54.7
+split3	02:42.5
+total	03:33.2
+
+usa16
+
+split1	00:44.8
+split2	01:19.7
+split3	01:59.5
+total	02:47.4
+
+
+usa1sss
+
+split1	00:48.7
+total	01:33.0
+
+usa21
+
+split1	00:40.8
+split2	01:27.9
+split3	02:15.6
+total	02:59.7
+
+usa22
+
+split1	01:01.8
+split2	01:51.4
+split3	02:38.3
+total	03:29.5
+
+usa23
+
+split1	00:43.2
+split2	01:15.3
+split3	01:54.4
+total	02:42.0
+
+usa24
+
+split1	00:29.1
+split2	01:04.6
+split3	01:44.2
+total	02:21.1
+
+usa25
+
+split1	00:59.5
+split2	01:47.9
+split3	02:26.1
+total	02:52.4
+
+usa26
+
+split1	00:49.3
+split2	01:38.3
+split3	02:13.4
+total	03:03.8
+
+usa2sss
+
+split1	00:48.1
+total	01:31.6
+_________________________________________________________________USA__
+
+__SPAIN_________________________________________________________________
+
+
+spa11
+
+split1 00:41.6
+split2 01:16.8
+split3 01:54.7
+total  02:24.9
+
+spa12
+
+split1	00:26.2
+split2	01:20.7
+split3	01:52.2
+total	02:12.2
+
+spa13
+
+split1	00:35.4
+split2	01:02.9
+split3	01:33.7
+total	02:01.0
+
+spa14
+
+split1	00:44.0
+split2	01:21.6
+split3	02:07.6
+total	02:51.9
+
+spa15
+
+split1	00:41.4
+split2	01:15.5
+split3	01:56.6
+total	02:38.3
+
+spa16
+
+split1	00:40.7
+split2	01:21.7
+split3	02:07.0
+total	02:47.0
+
+
+spa1sss
+
+split1	01:10.1
+total	02:16.3
+
+spa21
+
+split1 00:40.5
+split2 01:14.1
+split3 01:56.2
+total  02:38.6
+
+spa22
+
+split1	00:39.8
+split2	01:10.7
+split3	01:51.8
+total	02:31.1
+
+spa23
+
+split1	00:39.4
+split2	01:19.0
+split3	02:01.1
+total	02:41.1
+
+spa24
+
+split1	00:39.7
+split2	01:15.0
+split3	01:55.3
+total	02:26.6
+
+spa25
+
+split1	00:27.0
+split2	01:18.0
+split3	01:47.9
+total	02:07.7
+
+spa26
+
+split1	00:33.4
+split2	00:59.8
+split3	01:30.6
+total	01:57.9
+
+spa2sss
+
+split1	01:05.2
+total	02:12.3
+
+spa31
+
+split1 00:40.0
+split2 01:13.2
+split3 01:56.1
+total  02:40.4
+
+spa32
+
+split1	00:40.2
+split2	01:11.4
+split3	01:50.6
+total	02:28.9
+
+spa33
+
+split1	00:37.7
+split2	01:16.0
+split3	01:58.5
+total	02:39.0
+
+spa34
+
+split1	00:37.9
+split2	01:11.6
+split3	01:49.8
+total	02:18.9
+
+spa35
+
+split1	00:25.7
+split2	01:19.0
+split3	01:49.6
+total	02:08.0
+
+spa36
+
+split1	00:33.4
+split2	00:59.8
+split3	01:29.8
+total	01:55.6
+
+spa3sss
+
+split1	01:01.8
+total	02:01.7
+
+_________________________________________________________________SPAIN__
+
+__JAPAN_________________________________________________________________
+
+
+
+jap11
+
+split1	00:47.2
+split2	01:34.1
+split3	02:29.7
+total	03:29.7
+
+jap12
+
+split1	00:50.2
+split2	01:39.8
+split3	02:24.9
+total	03:15.0
+
+jap13
+
+split1	00:52.0
+split2	01:46.5
+split3	02:36.9
+total	03:16.4
+
+jap14
+
+split1	01:08.3
+split2	02:07.1
+split3	03:09.2
+total	03:50.1
+
+jap15
+
+split1	00:46.8
+split2	01:30.0
+split3	02:14.3
+total	03:07.5
+
+jap16
+
+split1	01:01.5
+split2	01:47.6
+split3	02:24.5
+total	03:05.9
+
+jap1sss
+
+split1	00:43.0
+total	01:22.4
+
+jap21
+
+split1	01:05.8
+split2	02:04.2
+split3	03:03.1
+total	03:42.1
+
+jap22
+
+split1	00:45.7
+split2	01:27.8
+split3	02:10.2
+total	03:03.4
+
+jap23
+
+split1	00:58.9
+split2	01:42.4
+split3	02:17.8
+total	02:55.9
+
+jap24
+
+split1	00:46.6
+split2	01:33.2
+split3	02:25.6
+total	03:23.0
+
+jap25
+
+split1	00:50.1
+split2	01:39.8
+split3	02:23.9
+total	03:11.2
+
+jap26
+
+split1	00:51.8
+split2	01:48.0
+split3	02:35.4
+total	03:17.7
+
+jap2sss
+
+split1	00:42.5
+total	01:20.4
+
+jap31
+
+split1	00:48.8
+split2	01:50.2
+split3	02:50.9
+total	03:32.7
+
+jap32
+
+split1	00:45.2
+split2	01:29.3
+split3	02:14.9
+total	03:08.8
+
+jap33
+
+split1	00:56.2
+split2	01:43.6
+split3	02:22.0
+total	03:06.1
+
+jap34
+
+split1	00:46.3
+split2	01:33.6
+split3	02:22.1
+total	03:22.4
+
+jap35
+
+split1	00:50.6
+split2	01:40.8
+split3	02:25.9
+total	03:11.2
+
+jap36
+
+split1	00:51.5
+split2	01:45.4
+split3	02:36.8
+total	03:17.5
+
+jap3sss
+
+split1	00:43.7
+total	01:23.4
+
+_________________________________________________________________JAPAN__
+
+__FINLAND_________________________________________________________________
+
+fin11
+
+split1	00:42.0
+split2	01:25.9
+split3	01:56.2
+total	02:31.4
+
+fin12
+
+split1	00:45.5
+split2	01:30.1
+split3	02:13.3
+total	03:05.7
+
+fin13
+
+split1	00:37.9
+split2	01:16.7
+split3	02:04.5
+total	02:40.4
+
+fin14
+
+split1	00:59.3
+split2	02:14.3
+split3	03:27.3
+total	04:28.0
+
+fin15
+
+split1	00:51.8
+split2	01:51.0
+split3	02:45.0
+total	03:52.0
+
+fin16
+
+split1	01:00.5
+split2	01:59.3
+split3	02:52.6
+total	03:52.1
+
+
+
+fin1sss
+
+split1	00:49.7
+total	01:35.7
+
+fin21
+
+split1	00:56.3
+split2	02:06.5
+split3	03:18.9
+total	04:18.1
+
+fin22
+
+split1	00:50.0
+split2	01:50.2
+split3	02:43.0
+total	03:51.9
+
+fin23
+
+split1	00:55.5
+split2	01:53.9
+split3	02:46.3
+total	03:46.2
+
+fin24
+
+split1	00:40.7
+split2	01:21.7
+split3	01:59.9
+total	02:34.3
+
+fin25
+
+split1	00:45.2
+split2	01:26.3
+split3	02:09.8
+total	03:00.7
+
+fin26
+
+split1	00:37.4
+split2	01:13.7
+split3	01:59.8
+total	02:36.1
+
+fin2sss
+
+split1	00:45.7
+total	01:28.2
+
+fin31
+
+split1	01:01.3
+split2	02:19.0
+split3	03:34.6
+total	04:37.5
+
+fin32
+
+split1	00:52.6
+split2	01:57.4
+split3	02:51.8
+total	04:03.9
+
+fin33
+
+split1	01:00.0
+split2	01:57.9
+split3	02:55.4
+total	03:52.4
+
+fin34
+
+split1	00:40.8
+split2	01:24.0
+split3	02:04.4
+total	02:37.9
+
+fin35
+
+split1	00:45.4
+split2	01:27.7
+split3	02:11.6
+total	03:04.3
+
+fin36
+
+split1	00:43.4
+split2	01:21.5
+split3	02:11.1
+total	02:51.7
+
+fin3sss
+
+split1	00:47.8
+total	01:34.0
+_________________________________________________________________FINLAND__
+
+
+__UK_________________________________________________________________
+
+uk21
+
+split1	01:00.4
+split2	01:49.9
+split3	02:37.2
+total	03:05.3
+
+uk22
+
+split1	00:46.8
+split2	01:44.5
+split3	02:38.1
+total	03:19.4
+
+uk23
+
+split1	00:41.6
+split2	01:21.5
+split3	02:07.6
+total	02:36.2
+
+uk24
+
+split1	00:45.2
+split2	01:37.0
+split3	02:27.6
+total	03:20.0
+
+uk25
+
+split1	00:37.2
+split2	01:12.5
+split3	01:58.0
+total	02:38.5
+
+uk26
+
+split1	00:53.7
+split2	01:46.6
+split3	02:44.0
+total	03:31.2
+
+uk2sss
+
+split1	00:47.9
+total	01:31.2
+
+uk31
+
+split1	00:45.8
+split2	01:37.5
+split3	02:28.1
+total	03:18.3
+
+uk32
+
+split1	00:34.7
+split2	01:10.1
+split3	01:52.5
+total	02:32.3
+
+uk33
+
+split1	00:52.2
+split2	01:35.3
+split3	02:31.1
+total	03:19.7
+
+uk34
+
+split1	01:02.4
+split2	01:52.8
+split3	02:38.9
+total	03:10.7
+
+uk35
+
+split1	00:47.4
+split2	01:44.2
+split3	02:37.0
+total	03:18.8
+
+uk36
+
+split1	00:40.3
+split2	01:22.6
+split3	02:03.7
+total	02:31.2
+
+uk3sss
+
+split1	00:45.9
+total	01:33.8
+_________________________________________________________________UK__
+
+__AUS_________________________________________________________________
+
+aus11
+
+split1	00:37.9
+split2	01:11.6
+split3	01:51.6
+total	02:30.7
+
+aus12
+
+split1	00:50.8
+split2	01:39.6
+split3	02:36.9
+total	03:34.5
+
+aus13
+
+split1	00:37.3
+split2	01:24.7
+split3	02:08.0
+total	02:41.2
+
+aus14
+
+split1	00:51.5
+split2	01:37.3
+split3	02:31.5
+total	03:10.0
+
+aus15
+
+split1	00:43.3
+split2	01:38.1
+split3	02:26.4
+total	03:17.9
+
+aus16
+
+split1	00:53.5
+split2	01:45.8
+split3	02:34.1
+total	03:19.2
+
+aus1sss
+
+split1	01:03.8
+total	02:04.9
+
+
+_________________________________________________________________AUS__
+
+__GRE_________________________________________________________________
+
+gre31
+
+
+split1	00:46.7
+split2	01:44.7
+split3	02:42.4
+total	03:36.7
+
+gre32
+
+split1	00:43.8
+split2	01:30.8
+split3	02:11.3
+total	02:56.5
+
+gre33
+
+split1	00:51.5
+split2	01:36.6
+split3	02:26.8
+total	03:06.7
+
+gre34
+
+split1	00:52.1
+split2	01:35.7
+split3	02:14.7
+total	03:00.6
+
+gre35
+
+split1	00:42.3
+split2	01:39.1
+split3	02:32.4
+total	03:22.8
+
+gre36
+
+split1	01:08.5
+split2	02:04.4
+split3	02:59.9
+total	03:54.3
+
+gre3sss
+
+split1	00:45.7
+total	01:34.5
+
+_________________________________________________________________GRE__
+
+____________________________________________________________Track Times__

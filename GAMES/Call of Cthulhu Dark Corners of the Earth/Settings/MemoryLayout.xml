@@ -1,0 +1,1556 @@
+<MemoryLayout>
+
+	<!-- The memory settings specified for the module in the default section will be used for -->
+	<!-- each module that is not specified per level -->
+
+	<!-- ======================================= TESTOPOLIS ======================================= -->
+
+	<TESTOPOLIS>
+	
+		<Renderer>
+			<Heap>3.0</Heap>
+			<Physical>13.1</Physical>
+		</Renderer>
+
+		<Bank>
+			<Heap>0.5</Heap>
+			<Physical>0.738</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>15.0</Heap> <!-- Do not reduce this please, Ed D -->
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.8</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>1.0</Heap>
+			<Physical>0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+	
+	</TESTOPOLIS>
+
+
+	<!-- ======================================= MISC01_CITY_OF_DREAMS_01 ======================================= -->
+	<MISC01_CITY_OF_DREAMS_01>
+
+		<Renderer>
+			<Heap>4.0</Heap>
+			<Physical>4.0</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>5.0</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Physical>10.2</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>1.0</Heap>
+			<Physical>1.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.0</Heap>
+			<Physical>1.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.7</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</MISC01_CITY_OF_DREAMS_01>
+
+	<!-- ======================================= MISC01_CITY_OF_DREAMS_02 ======================================= -->
+	<MISC01_CITY_OF_DREAMS_02>
+	
+		<Renderer>
+			<Heap>1.0</Heap>		 
+			<Physical>3.5</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>0.8</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Physical>18.0</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>0.8</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+		
+		<CoreTech>
+			<Heap>1.52</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+
+	</MISC01_CITY_OF_DREAMS_02>
+
+	<!-- ======================================= MISC01_CITY_OF_DREAMS_03 ======================================= -->
+	<MISC01_CITY_OF_DREAMS_03>
+	
+		<Renderer>
+			<Heap>0.5</Heap>
+			<Physical>5.0</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Physical>13.565</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>2.6</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.5</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>2.5</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+		
+		<Scripting>
+			<Heap>0.5</Heap>
+		</Scripting>
+
+
+	</MISC01_CITY_OF_DREAMS_03>
+
+	<!-- ======================================= MISC02_JACKS_OFFICE_CUTSCENE ======================================= -->
+	<MISC02_JACKS_OFFICE_CUTSCENE>
+	
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>4.4</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Physical>9.5</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>5.3</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>5.0</Heap>
+			<Physical>5.0</Physical>
+		</Dobs>
+		
+		<CoreTech>
+			<Heap>0.52</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+
+	</MISC02_JACKS_OFFICE_CUTSCENE>
+	<!-- ======================================= MISC03_ASYLUM_CUTSCENE ======================================= -->
+	
+	<MISC03_ASYLUM_CUTSCENE>
+	
+		<Renderer>
+			<Heap>4.0</Heap>
+			<Physical>10.0</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>8.0</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Physical>8.0</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>8.0</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+	</MISC03_ASYLUM_CUTSCENE>
+
+
+	<!-- ======================================= MISC03_ASYLUM_CUTSCENE_FEDS ======================================= -->
+	<MISC03_ASYLUM_CUTSCENE_FEDS>
+	
+		<Renderer>
+			<Heap>0.5</Heap>
+			<Physical>8.2</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Physical>5.7</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>2.4</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.85</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</MISC03_ASYLUM_CUTSCENE_FEDS>
+	<!-- ======================================= 01_HOUSE ======================================= -->
+
+	<01_HOUSE>
+	
+		<Renderer>
+			<Heap>0.85</Heap>
+			<Physical>7.14</Physical>
+		</Renderer>
+
+	
+		<Bank>
+			<Physical>13.3</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>7.9</Heap>
+			<!--<Physical>0.0</Physical>-->
+		</Animator>
+
+		<Game>
+			<Heap>0.865</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>2.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>0.85</Heap>
+			<Physical>0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<!--<Heap>4.9</Heap>-->
+			<Heap>2.43</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		
+	</01_HOUSE>
+	
+	<02_STREETS_ONE_PT1>
+	
+		<Scripting>
+			<Heap>1.05</Heap>
+		</Scripting>
+	
+		<CoreTech>
+			<Heap>0.3</Heap>
+		</CoreTech>
+	
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>8.2</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>0.85</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		  <Bank>
+             <Heap>0.1</Heap>
+             <Physical>18.9</Physical>
+         </Bank>
+
+		<Animator>
+			<Heap>8.0</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.77</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.75</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.6</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+	</02_STREETS_ONE_PT1>
+
+	<02_STREETS_ONE_PT2>
+	
+		<Scripting>
+			<Heap>1.05</Heap>
+		</Scripting>
+	
+		<CoreTech>
+			<Heap>0.35</Heap>
+		</CoreTech>
+		
+		<Renderer>
+			<Heap>1.2</Heap>
+			<Physical>7.9</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>11.85</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>8.8</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.82</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.32</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</02_STREETS_ONE_PT2>
+
+	<02_STREETS_ONE_PT3>
+	
+		<Scripting>
+			<Heap>1.05</Heap>
+		</Scripting>
+	
+		<CoreTech>
+			<Heap>0.2</Heap>
+		</CoreTech>
+		
+		<Renderer>
+			<Heap>1.2</Heap>
+			<Physical>7.9</Physical>
+		</Renderer>
+		
+		<Physics>
+			<Heap>0.8</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>16.5</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>7.5</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.836</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.32</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</02_STREETS_ONE_PT3>
+
+	<!-- ======================================= 03_STREETS_TWO======================================= -->
+
+	<03_STREETS_TWO_PT1>
+	
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>6.3</Physical>	<!-- <Physical>5.85</Physical> -->
+		</Renderer>
+				
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>17.36</Physical>
+		</Bank>
+
+		<coreTech>
+			<Heap>1.7</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>1.5</Heap>		<!-- 1.4   -->
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<AI>
+			<Heap>0.3</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+		
+		<Scripting>
+			<Heap>1.6</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+		
+		<MoveAI>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>6.5</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>2.45</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Dobs>
+			<Heap>2.9</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</03_STREETS_TWO_PT1>
+
+	<03_STREETS_TWO_PT2>
+	
+		<Renderer>
+			<Heap>3.0</Heap>
+			<Physical>7.5</Physical>	<!-- 8.0 with full 5 variants -->
+		</Renderer>
+				
+		<Bank>
+			<Heap>0.5</Heap>
+			<Physical>18.1</Physical>	<!-- 17.0 using streaming -->
+		</Bank>
+
+		<coreTech>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>1.3</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<AI>
+			<Heap>0.3</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+		
+		<Scripting>
+			<Heap>1.3</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+		
+		<MoveAI>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>6.4</Heap>		<!--  5.74   pre 13/4/05  -->
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>9.85</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Dobs>
+			<Heap>1.98</Heap>		<!--  may only need 1.94 if not real time editing -->
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</03_STREETS_TWO_PT2>
+	
+	<03_STREETS_TWO_PT3>
+	
+		<Renderer>
+			<Heap>1.5</Heap>
+			<Physical>6.2</Physical>
+		</Renderer>
+				
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>16.82</Physical>	<!-- 16.8 -->
+		</Bank>
+
+		<coreTech>
+			<Heap>1.2</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>1.2</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<AI>
+			<Heap>0.3</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+		
+		<Scripting>
+			<Heap>1.6</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+		
+		<MoveAI>
+			<Heap>1.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>6.05</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>2.65</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Dobs>
+			<Heap>2.1</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</03_STREETS_TWO_PT3>
+	
+	<!-- ======================================= 04_JAIL_BREAK ======================================= -->
+
+	<04_JAIL_BREAK>
+	
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>8.25</Physical>
+		</Renderer>
+				
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>12.165</Physical>
+		</Bank>
+	
+		<CoreTech>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<AI>
+			<Heap>0.3</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+		
+		<Scripting>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+		
+		<MoveAI>
+			<Heap>0.5</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>8.0</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>2.32</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Dobs>
+			<Heap>1.8</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</04_JAIL_BREAK>
+
+
+	<!-- ======================================= 05_STREETS_THREE ======================================= -->
+
+	<05_STREETS_THREE_PT1>
+
+		<CoreTech>
+			<Heap>2.05</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>2.4</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.7</Heap>
+			<Physical>15.8</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>0.8</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>6.0</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.3</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.1</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>1.2</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>10.4</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+	</05_STREETS_THREE_PT1>
+
+
+	<05_STREETS_THREE_PT2>
+
+		<CoreTech>
+			<Heap>1.8</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>1.9</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.2</Heap>
+			<Physical>12.8</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>9.3</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.2</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.1</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.9</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>9.4</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>1.2</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</05_STREETS_THREE_PT2>
+
+
+	<!-- ======================================= 06_REFINERY ======================================= -->
+
+	<06_REFINERY_PT1>
+
+		<CoreTech>
+			<Heap>2.4</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>1.9</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>13.4</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>0.9</Heap>
+			<Physical>7.7</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.6</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>6.8</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>1.6</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</06_REFINERY_PT1>
+
+	<06_REFINERY_PT2>
+
+		<CoreTech>
+			<Heap>2.02</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>2.5</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>19.7</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>1.1</Heap>
+			<Physical>5.0</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>8.0</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>2.3</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</06_REFINERY_PT2>
+
+	<06_REFINERY_PT3>
+
+		<CoreTech>
+			<Heap>2.1</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>2.8</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.2</Heap>
+			<Physical>15.5</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>1.8</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>2.0</Heap>
+			<Physical>7.4</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>9.5</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>3.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</06_REFINERY_PT3>
+	
+	<06_REFINERY_PT4>
+
+		<CoreTech>
+			<Heap>1.1</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>2.1</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>14.2</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>1.5</Heap>
+			<Physical>6.2</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.4</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>7.5</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>3.3</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</06_REFINERY_PT4>
+
+	<06_REFINERY_PT5>
+
+		<CoreTech>
+			<Heap>1.8</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>2.7</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.1</Heap>
+			<!-- Pre Load -->
+			<!--<Physical>19.6</Physical>-->
+			<!-- Streaming -->
+			<Physical>17.4</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>0.9</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>1.9</Heap>
+			<Physical>6.4</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.5</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.9</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>7.9</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>2.4</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</06_REFINERY_PT5>
+	
+	<!-- ======================================= 06_REFINERY_EXPLOSION ======================================= -->
+
+	<06_REFINERY_EXPLOSION>
+
+		<CoreTech>
+			<Heap>1.32</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		<Physics>
+			<Heap>0.6</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>6.0</Physical>
+		</Bank>
+
+		<Game>
+			<Heap>0.5</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Renderer>
+			<Heap>0.3</Heap>
+			<Physical>3.4</Physical>
+		</Renderer>
+
+		<AI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+
+		<Scripting>
+			<Heap>1.35</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.1</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Animator>
+			<Heap>2.6</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Dobs>
+			<Heap>0.4</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+
+	</06_REFINERY_EXPLOSION>
+
+
+	<!-- ======================================= 07_ESOTERIC_ORDER======================================= -->
+
+	<07_ESOTERIC_ORDER_PT1>
+	
+		<Renderer>
+			<Heap>1.1</Heap>
+			<Physical>9.3</Physical>
+		</Renderer>
+		
+		<Bank>
+			<Physical>7.7</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>8.5</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.44</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Scripting>
+			<Heap>1.13</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.6</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.9</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>2.1</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<Heap>1.65</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		
+	</07_ESOTERIC_ORDER_PT1>
+
+	<07_ESOTERIC_ORDER_PT2>
+	
+		<Renderer>
+			<Heap>0.99</Heap>
+			<Physical>7.1</Physical>
+		</Renderer>
+		
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>14.7</Physical>
+		</Bank>
+
+		<Animator>
+			<Heap>7.7</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.89</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Scripting>
+			<Heap>1.13</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+
+		<MoveAI>
+			<Heap>0.6</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>2.85</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>2.3</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<Heap>2.72</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+		
+	</07_ESOTERIC_ORDER_PT2>
+	
+	
+	<!-- ======================================= 08_BOAT ======================================= -->
+	<08_BOAT>
+		<Renderer>
+			<Heap>1.2</Heap>
+			<Physical>10.6</Physical>	<!-- 10.5 unrestricted textures -->
+		</Renderer>
+
+		<Bank>
+			<Physical>9.2</Physical>	<!--  -->
+		</Bank>
+
+		<Animator>
+			<Heap>9.5</Heap>		<!-- 9.5 before static -->
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>0.95</Heap>			<!--  0.825  -->
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.7</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>2.5</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>1.4</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<Heap>3.23</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+		
+	</08_BOAT>
+
+	
+	<!-- ======================================= 09_REEF ======================================= -->
+	<09_REEF>
+
+		<Renderer>                         
+			<Heap>1.4</Heap>           
+			<Physical>7.5</Physical>   
+		</Renderer>
+		
+		<Physics>
+			<Heap>3.3</Heap>           
+			<Physical>0.0</Physical>   
+		</Physics>
+		
+		<Bank>
+			<Physical>9.9</Physical>   <!-- 11.9 -->
+		</Bank>
+
+		<Animator>
+			<Heap>1.6</Heap>           
+			<Physical>0.0</Physical>  
+		</Animator>
+
+		<Game>
+			<Heap>3.0</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>0.3</Heap>           
+			<Physical>0.0</Physical>
+		</MoveAI>
+
+		<Dobs>
+			<Heap>1.8</Heap>            
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<CoreTech>
+			<Heap>2.1</Heap>             
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+	</09_REEF>
+	
+	<!-- ======================================= 10_AIR_FILLED_TUNNELS_PT1 ======================================= -->
+
+	<10_AIR_FILLED_TUNNELS_PT1>
+	
+		<Renderer>
+			<Heap>1.1</Heap>
+			<Physical>9.6</Physical>
+		</Renderer>
+
+		<Bank>
+			<Heap>0.1</Heap>
+			<Physical>10.7</Physical>	<!-- used to be 11.7, reduced to try to fix direct x mem crash -->
+		</Bank>
+
+		<Animator>
+			<Heap>6.8</Heap>	<!-- dynamic: 6.5  -->
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.1</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<MoveAI>
+			<Heap>1.06</Heap>		<!-- 0.85 pre 12/4/05  -->
+			<Physical>0.0</Physical>
+		</MoveAI> 
+
+		<Dobs>
+			<Heap>2.86</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>3.65</Heap>
+			<Physical>0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<Heap>2.9</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+
+	</10_AIR_FILLED_TUNNELS_PT1>
+
+	<!-- ======================================= 10_AIR_FILLED_TUNNELS_PT2 ======================================= -->
+
+	<10_AIR_FILLED_TUNNELS_PT2>
+	
+		<Renderer>
+			<Heap>1.0</Heap>
+			<Physical>8.6</Physical>	<!-- 8.2 -->
+		</Renderer>
+
+		<Bank>
+			<Physical>10.3</Physical>	<!-- 9.4 -->
+		</Bank>
+
+		<Animator>
+			<Heap>5.5</Heap>		<!-- dynamic: 5.5,   static 7.0 -->
+			<Physical>0.0</Physical>
+		</Animator>
+
+		<Game>
+			<Heap>1.65</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+
+		<Scripting>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+		
+		<MoveAI>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI> 
+
+		<Dobs>
+			<Heap>2.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+
+		<Physics>
+			<Heap>5.5</Heap>
+			<Physical>0</Physical>
+		</Physics>
+		
+		<CoreTech>
+			<Heap>2.25</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+				
+	</10_AIR_FILLED_TUNNELS_PT2>
+	
+	<!-- ======================================= DEFAULT ======================================= -->
+
+	<DEFAULT>
+		<Renderer>
+			<Heap>3.0</Heap>
+			<Physical>10.0</Physical>
+		</Renderer>
+		
+		<Bank>
+			<Heap>0.5</Heap>
+			<Physical>10.0</Physical>
+		</Bank>
+		
+		<CoreTech>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</CoreTech>
+		
+		<AI>
+			<Heap>0.5</Heap>
+			<Physical>0.0</Physical>
+		</AI>
+		
+		<Walkabout>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</Walkabout>
+		
+		<StateMachine>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</StateMachine>
+		
+		<Scripting>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</Scripting>
+		
+		<MoveAI>
+			<Heap>1.0</Heap>
+			<Physical>0.0</Physical>
+		</MoveAI>
+		
+		<Physics>
+			<Heap>9.0</Heap>
+			<Physical>0.0</Physical>
+		</Physics>
+		
+		<Sound>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</Sound>
+		
+		<Animator>
+			<Heap>20.0</Heap>
+			<Physical>0.0</Physical>
+		</Animator>
+		
+		<Dobs>
+			<Heap>4.0</Heap>
+			<Physical>0.0</Physical>
+		</Dobs>
+		
+		<Game>
+			<Heap>2.0</Heap>
+			<Physical>0.0</Physical>
+		</Game>
+		
+		<Input>
+			<Heap>0</Heap>
+			<Physical>0</Physical>
+		</Input>
+		
+		<Particles>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</Particles>
+		
+		<Effects>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</Effects>
+		
+		<Debug>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</Debug>
+		
+		<DynamicObjects>
+			<Heap>0.0</Heap>
+			<Physical>0.0</Physical>
+		</DynamicObjects>
+
+	</DEFAULT>
+
+</MemoryLayout>
+

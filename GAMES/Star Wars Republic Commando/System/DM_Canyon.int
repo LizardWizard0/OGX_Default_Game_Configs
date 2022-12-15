@@ -1,0 +1,54 @@
+[BowcasterPickupMP0]
+PickupMessage="Wookiee Bowcaster"
+
+[DC15PickupMP1]
+PickupMessage="DC15s Side Arm Blaster"
+
+[DC17mAntiArmorWeaponPickupMP0]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mBlasterWeaponPickupMP0]
+PickupMessage="DC-17m Blaster"
+
+[DC17mSniperWeaponPickupMP0]
+PickupMessage="DC-17m Sniper Attachment"
+
+[LevelInfo11]
+Title="GUNSHIP"
+
+[LevelSummary]
+Title="GUNSHIP"
+
+[PickupHealth1]
+PickupMessage="Bacta tank"
+
+[PickupHealth2]
+PickupMessage="Bacta tank"
+
+[PickupHealth3]
+PickupMessage="Bacta tank"
+
+[PickupHealth5]
+PickupMessage="Bacta tank"
+
+[RocketLauncherPickupMP0]
+PickupMessage="Wookiee Homing Rocket Launcher"
+
+[SMGPickupMP0]
+PickupMessage="Trandoshan Mercenary SMG"
+
+[ShotgunPickupMP0]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP1]
+PickupMessage="ACP Array Gun"
+
+[ThermalDetonatorMultiPlay0]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay1]
+PickupMessage="Thermal Detonators"
+
+[TrandoshanRifleMPPickup0]
+PickupMessage="LS-150 Heavy ACP Repeater Gun"
+

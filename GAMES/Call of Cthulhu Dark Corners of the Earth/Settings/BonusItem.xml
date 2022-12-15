@@ -1,0 +1,66 @@
+<BonusItems>
+
+	<Item>
+		<ItemIndex>0</ItemIndex>
+		<ItemName>.45 ACP Clip</ItemName>
+		<Contents>
+			<AMMO_1911>8</AMMO_1911>
+		</Contents>
+	</Item>
+	
+	<Item>
+		<ItemIndex>1</ItemIndex>
+		<ItemName>.45 LR Clip</ItemName>
+		<Contents>
+			<SAA_AMMO>12</SAA_AMMO>
+		</Contents>
+	</Item>
+
+	<Item>
+		<ItemIndex>2</ItemIndex>
+		<ItemName>12-guage shotgun shells</ItemName>
+		<Contents>
+			<SHOTGUN_AMMO>6</SHOTGUN_AMMO>
+		</Contents>
+	</Item>
+
+	<Item>
+		<ItemIndex>3</ItemIndex>
+		<ItemName>.30.06 Cartridges</ItemName>
+		<Contents>
+			<RIFLE_AMMO>10</RIFLE_AMMO>
+		</Contents>
+	</Item>
+
+	<Item>
+		<ItemIndex>4</ItemIndex>
+		<ItemName>.45 ACP M1921 Thompson Clip</ItemName>
+		<Contents>
+			<TOMMY_AMMO>50</TOMMY_AMMO>
+		</Contents>
+	</Item>
+
+	<Item>
+		<ItemIndex>5</ItemIndex>
+		<ItemName>Super Ammo Stash</ItemName>
+		<Contents>
+			<AMMO_1911>8</AMMO_1911>
+			<SAA_AMMO>6</SAA_AMMO>
+			<SHOTGUN_AMMO>2</SHOTGUN_AMMO>
+			<RIFLE_AMMO>5</RIFLE_AMMO>
+			<TOMMY_AMMO>50</TOMMY_AMMO>
+		</Contents>
+	</Item>
+
+	<Item>
+		<ItemIndex>6</ItemIndex>
+		<ItemName>Medical Kit</ItemName>
+		<Contents>
+			<BANDAGES>2</BANDAGES>
+			<SUTURE>1</SUTURE>
+			<SPLINT>1</SPLINT>
+			<ANTIDOTE>1</ANTIDOTE>
+		</Contents>
+	</Item>
+
+</BonusItems>

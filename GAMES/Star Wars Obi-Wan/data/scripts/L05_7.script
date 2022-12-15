@@ -1,0 +1,386 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+SetVampireMode A_l05_7_Pit_01
+SetVampireRegion end_reg
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 09_mz_mrbl_d.sur
+}
+
+
+MissionTitle "/Mission26Title/ Darth Maul"
+MissionObjective 1 "/Mission26Objective1/ Defeat the Sith Lord"
+SetExplorationNum 2
+SetForceUsesNeeded 8
+SetTimeToBeat 2 45
+//LoadDLG  darthmaul.dlg//
+
+FadeUp
+SetPainRegion kill_rreg 9999
+actor maul A_darthmaul_01
+SetMissionCritical maul 
+actor qui A_qui-gon_01
+AIAudioOff  qui 
+HitPointTracker mhp maul
+MakeResurrectable qui
+SetHitPoints qui 500
+MakeResurrectable maul
+
+ConsoleCommand "r_maxshadows 2"
+CastShadows maul true
+
+/*
+script "givemachance"
+{
+WaitUntilForcePushedCharacter maul
+pause .5
+TakeControlOf maul
+pause .75
+ReturnControlTo maul
+loop
+}
+*/
+
+
+PlayBattleLoop  m_maul.wav  cut_5_7extro_m.wav  m_maul_lose.wav
+
+Script "VictoryMusic"
+{
+	WaitUntilKilled maul
+	PlayMusic Victory
+}
+
+
+function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+/// EXPLORATION MARKER COUNT ///
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 2)
+call PowerupRemoval (A_powerupexplorationmarker_02, 3)
+
+
+script "die_in_view_qui" 1
+{
+WaitUntilEnteredRegion qui quidie
+InvincibilityOff qui
+WaitUntilExitedRegion qui quidie
+InvincibilityOn qui
+loop
+}
+
+
+script "mainthing"
+{
+
+    script "killmylandlord" 1
+    {
+    InvincibilityOn maul
+    ForceTargetAndAttack maul qui
+    ForceTargetAndAttack qui maul
+    WaitUntilKilled qui
+    SayLine2D maul "/Darth_Maul_2409/ All too easy"
+    ForceTargetAndAttackOff maul
+    pause 1.5
+    sayline obi "/Obi-Wan_1118.1/ Master! No!!"
+    pause 3
+    TakeControlOf maul
+    LookAt maul obi
+    RunToNodeAndWait maul taunt
+    LookAt maul obi
+    PlayAnimationAndWait maul dmx_bstaff1-idlespin.anim
+    pause 1
+    PlayAnimationAndWait maul dmx_bstaff2-idle.anim
+    removegroup 1
+    setstartposition 2
+    save
+    }
+    
+    
+    
+
+
+WaitForScriptToEnd "killmylandlord"
+    if (IsGroupRemoved 1)
+    {
+    //CreateActor qui-gon.dsc dedqui o1//
+    MakeResurrectable qui
+    //Kill qui//
+    DeductHitPoints qui 2000
+    }
+
+EndScript "die_in_view_qui"
+EnemyHealthMeter maul 
+SayLine2D maul "/Darth_Maul_2410/ I hope you are more challenge than your Master. I'm somewhat disappointed in him."
+InvincibilityOff maul
+OpenDoor A_forcefield_01
+    
+pause .5
+TakeControlOf maul
+RunToNodeAndWait maul fight1
+pause .5
+ReturnControlTo Maul
+ForceTarget maul obi
+ClearAIBoundary Maul
+
+script "doublehealth"
+{
+WaitUntilLessThan mhp 201
+breakweapon maul
+InvincibilityOn maul
+TakeControlOf maul
+SayLine2DAndContinue maul "/Darth_Maul_2412/ You'll have to do better than that."
+PlayAnimationAndWait maul human_block-takehit4.anim
+ReturnControlTo maul
+InvincibilityOff maul
+
+EnemyHealthMeterDarthMaul maul
+
+sethitpoints maul 1000
+pause 2
+SayLine2DAndContinue maul "/Darth_Maul_2508/ Feel the power of the dark side."
+}
+
+    script "setHP"
+    {
+    WaitUntilEnteredRegion maul end_reg
+    ReturnControlTo maul
+    InvincibilityOff maul
+    WaitUntilDamagedBy maul obi
+    }
+
+WaitUntilKilled maul
+
+    script "killmaul1"
+    {
+        if (IsInRegion maul chop1)
+        {
+        NoDeathAnimation maul
+        BeginCutScene
+        SetVampireMode A_l05_7_Upper_wall_01
+        EquipWeapon obi
+        CameraAttachedTrackHead maul maul 0 1.5 1.5  /// values were 0 3 1 ///
+        InvincibilityOn maul
+        PlayAnimationandwait maul dmx_brace-mauldeath.anim 1 0
+        SetGameSpeed .5
+        stopactions obi
+        CameraFixed c1
+        Teleport Obi o1
+        removeactor Maul
+        CreateActor darthmaul_cut.dsc dedmaul m1
+        InvincibilityOn dedmaul 
+        SetVampireMode dedmaul
+        TakeControlOf dedmaul
+        PlayAnimation Obi human_brace-obikillmaul.anim
+		ChildScript
+		{
+			Pause 1.5
+         PlayAudioCue force.aud ForcePushed
+		}
+		PlayAnimationandwait dedmaul dmx_brace-mauldeathcut1.anim 1 0
+        CameraOff
+        Teleport dedmaul fall
+        SetGameSpeed .25
+        CameraFixed fallcam
+        PlayAnimation dedmaul dmx_brace-mauldeathcut2.anim 1 0
+        WaitUntilEnteredRegion dedmaul sound_shaft
+        pause 3
+        //WaitUntilExitedRegion dedmaul sound_shaft//
+		  FadeDownAndWait
+        PreEndCutscene
+        EndCutScene
+        setgamespeed 1
+        NextLevel  cut_hg
+        }
+    }
+    
+    script "killmaul2"
+    {
+        if (IsInRegion maul chop2)
+        {
+        NoDeathAnimation maul
+        BeginCutScene
+        SetVampireMode A_l05_7_Upper_wall_01
+        EquipWeapon obi
+        CameraAttachedTrackHead maul maul 0 1.5 1.5  /// values were 0 3 1 ///
+        InvincibilityOn maul
+        PlayAnimationandwait maul dmx_brace-mauldeath.anim 1 0
+        SetGameSpeed .5
+        stopactions obi
+        CameraFixed c2
+        Teleport Obi o2
+        removeactor Maul
+        CreateActor darthmaul_cut.dsc dedmaul m2
+        InvincibilityOn dedmaul 
+        SetVampireMode dedmaul
+        TakeControlOf dedmaul
+        PlayAnimation Obi human_brace-obikillmaul.anim
+		ChildScript
+		{
+			Pause 1.5
+         PlayAudioCue force.aud ForcePushed
+		}
+        PlayAnimationandwait dedmaul dmx_brace-mauldeathcut1.anim 1 0
+        CameraOff
+        SetGameSpeed .25
+        Teleport dedmaul fall
+        CameraFixed fallcam
+        PlayAnimation dedmaul dmx_brace-mauldeathcut2.anim 1 0
+        WaitUntilEnteredRegion dedmaul sound_shaft
+        pause 3
+        //WaitUntilExitedRegion dedmaul sound_shaft//
+		  FadeDownAndWait
+        PreEndCutscene
+        EndCutScene
+        setgamespeed 1
+        NextLevel  cut_hg
+        }
+    }
+
+    script "killmaul3"
+    {
+        if (IsInRegion maul chop3)
+        {
+        NoDeathAnimation maul
+        BeginCutScene
+        SetVampireMode A_l05_7_Upper_wall_01
+        EquipWeapon obi
+        CameraAttachedTrackHead maul maul 0 1.5 1.5  /// values were 0 3 1 ///
+        InvincibilityOn maul
+        PlayAnimationandwait maul dmx_brace-mauldeath.anim 1 0
+        SetGameSpeed .5
+        stopactions obi
+        CameraFixed c3
+        Teleport Obi o3
+        removeactor Maul
+        CreateActor darthmaul_cut.dsc dedmaul m3
+        InvincibilityOn dedmaul 
+        SetVampireMode dedmaul
+        TakeControlOf dedmaul
+        PlayAnimation Obi human_brace-obikillmaul.anim
+		ChildScript
+		{
+			Pause 1.5
+         PlayAudioCue force.aud ForcePushed
+		}
+        PlayAnimationandwait dedmaul dmx_brace-mauldeathcut1.anim 1 0
+        CameraOff
+        SetGameSpeed .25
+        Teleport dedmaul fall
+        CameraFixed fallcam
+        PlayAnimation dedmaul dmx_brace-mauldeathcut2.anim 1 0
+        WaitUntilEnteredRegion dedmaul sound_shaft
+        pause 3
+        //WaitUntilExitedRegion dedmaul sound_shaft//
+		  FadeDownAndWait
+        PreEndCutscene
+        EndCutScene
+        setgamespeed 1
+        NextLevel  cut_hg
+        }
+    }
+
+    script "killmaul4"
+    {
+        if (IsInRegion maul chop4)
+        {
+        NoDeathAnimation maul
+        BeginCutScene
+        SetVampireMode A_l05_7_Upper_wall_01
+        EquipWeapon obi
+        CameraAttachedTrackHead maul maul 0 1.5 1.5  /// values were 0 3 1 ///
+        InvincibilityOn maul
+        PlayAnimationandwait maul dmx_brace-mauldeath.anim 1 0
+        SetGameSpeed .5
+        stopactions obi
+        CameraFixed c4
+        Teleport Obi o4
+        removeactor Maul
+        CreateActor darthmaul_cut.dsc dedmaul m4
+        InvincibilityOn dedmaul 
+        SetVampireMode dedmaul
+        TakeControlOf dedmaul
+        PlayAnimation Obi human_brace-obikillmaul.anim
+		ChildScript
+		{
+			Pause 1.5
+         PlayAudioCue force.aud ForcePushed
+		}
+        PlayAnimationandwait dedmaul dmx_brace-mauldeathcut1.anim 1 0
+        CameraOff
+        Teleport dedmaul fall
+        SetGameSpeed .25
+        CameraFixed fallcam
+        PlayAnimation dedmaul dmx_brace-mauldeathcut2.anim 1 0
+        WaitUntilEnteredRegion dedmaul sound_shaft
+        pause 3
+       // WaitUntilExitedRegion dedmaul sound_shaft//
+		 FadeDownAndWait
+        PreEndCutscene
+        EndCutScene
+        setgamespeed 1
+        NextLevel  cut_hg
+        }
+    }
+
+    script "killmaulup"
+    {
+        if (IsInRegion maul nocut)
+        {
+        NoDeathAnimation maul
+        BeginCutScene
+        SetVampireMode A_l05_7_Upper_wall_01
+        EquipWeapon obi
+        CameraAttachedTrackHead maul maul 0 1.5 1.5  /// values were 0 3 1 ///
+        InvincibilityOn maul
+        PlayAnimationandwait maul dmx_brace-mauldeath.anim 1 0
+		  FadeDownAndWait
+        PreEndCutscene
+        EndCutScene
+        setgamespeed 1
+        NextLevel  cut_hg
+        }
+    }
+
+
+MissionObjectiveAchieved 1
+
+ }
+
+/// put the following script  LAST!!!///
+pause 1
+script "push_off"
+{
+WaitUntilNear maul obi 1.5
+    childscript "cancel"
+    {
+    WaitUntilNear maul obi 1.5
+    WaitUntilFar maul obi 3
+    ReturnControlTo maul
+    ResetScript "push_off"
+    }
+    childscript "dedmaul"
+    {
+    waituntilkilled maul
+    endscript "push_off"
+    }
+PauseRandom 1 3
+forcepushcharacter maul
+//endscript "cancel"//
+//TakeControlOf maul//
+//PlayAnimation maul dmx_bstaff1-idlespin.anim//
+pause .5
+//ReturnControlTo maul//
+loop
+}
+
+
+
+
+
+

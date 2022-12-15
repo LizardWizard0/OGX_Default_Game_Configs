@@ -1,0 +1,1039 @@
+<Category>
+	<Entry>
+		<ID>0</ID>
+		<EntryName>6217</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.1				       -->
+		<!-- Podium sermon picked up in house	       -->
+		<!-- 28.nov.2oo4                               -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6250</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6251</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6252</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6253</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>1</ID>
+		<EntryName>6218</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.2				       -->
+		<!-- Cultist diary picked up in house	       -->
+		<!-- 28.nov.2oo4                               -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6254</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6255</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6256</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6257</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6258</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6259</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6260</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6261</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6262</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6263</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6264</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>2</ID>
+		<EntryName>6219</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.3				       -->
+		<!-- News clipping on evil cult		       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6635</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6636</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6637</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6638</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6639</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6640</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6641</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6642</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6643</Content>
+				</Text>
+			</Page>
+			<Page>	
+				<Text>
+					<ID>1</ID>
+					<Content>6644</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6645</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6646</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6647</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6648</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6698</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6649</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6650</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6699</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6651</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6700</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6652</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6701</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6653</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6702</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>3</ID>
+		<EntryName>6220</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.4				       -->
+		<!-- Escape paper 1 picked up in Streets 1     -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6654</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6655</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6656</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6657</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6703</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6658</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>4</ID>
+		<EntryName>6221</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.5				       -->
+		<!-- Diary of Brian Burnham		       -->
+		<!-- 12.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6659</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6660</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6704</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6661</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6705</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>5</ID>
+		<EntryName>6222</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.6				       -->
+		<!-- Final issue of the Innsmouth Courier      -->
+		<!-- 12.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6666</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6667</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6706</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6668</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6707</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6669</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>6</ID>
+		<EntryName>6223</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.7				       -->
+		<!-- Escape papers 2 picked up on Streets 1    -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6670</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6671</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6672</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6673</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6674</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>7</ID>
+		<EntryName>6224</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.8				       -->
+		<!-- Diary of Thomas Waite		       -->
+		<!-- 22.aug.2oo5 .:mSg:.                       -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6675</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6676</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6677</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6678</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6679</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6826</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6827</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6680</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6681</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6682</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>8</ID>
+		<EntryName>6225</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.9				       -->
+		<!-- Ramona colouring in book		       -->
+		<!-- 28.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6818</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6819</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6820</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>9</ID>
+		<EntryName>6226</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.10				       -->
+		<!-- Message on photo of Brian and Ruth	       -->
+		<!-- 12.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+				<!--removed --->
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>10</ID>
+		<EntryName>6227</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.11				       -->
+		<!-- Gilman's post mortem black book	       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6683</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6708</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6684</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6685</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6686</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6687</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>11</ID>
+		<EntryName>6228</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.12				       -->
+		<!-- Diary of curch minister		       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6688</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6689</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6690</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6691</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6692</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6693</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6694</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6709</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6695</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6696</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6697</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>12</ID>
+		<EntryName>6229</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.13				       -->
+		<!-- Riddle on back of postcard		       -->
+		<!-- 28.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6821</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6710</Content>
+				</Text>
+				<Text>
+					<ID>0</ID>
+					<Content>6711</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6822</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>13</ID>
+		<EntryName>6230</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.14				       -->
+		<!-- Registry of birth,deaths,marriages        -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6712</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6713</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6714</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6715</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6716</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6717</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>14</ID>
+		<EntryName>6231</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.15				       -->
+		<!-- Captain Obed's Ship Logs		       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+
+				<!-- March 6th, 1823 -->
+
+				<Text>
+					<ID>0</ID>
+					<Content>6730</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6718</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6719</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6720</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6721</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6722</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6723</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6724</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6725</Content>
+				</Text>
+			</Page>
+
+			<Page>
+				<!-- June 4th, 1838 -->
+
+				<Text>
+					<ID>0</ID>
+					<Content>6731</Content>
+				</Text>
+				<Text>
+					<ID>0</ID>
+					<Content>6726</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6727</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6728</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6729</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6734</Content>
+				</Text>
+			</Page>
+			<Page>
+				<!-- August 18th, 1838 -->
+
+				<Text>
+					<ID>0</ID>
+					<Content>6732</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6735</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6736</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6737</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6738</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6739</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6740</Content>
+				</Text>
+
+				<Text>
+					<ID>1</ID>
+					<Content>6741</Content>
+				</Text>
+
+			</Page>
+			<Page>
+				<!-- July 23rd, 1846 -->
+
+				<Text>
+					<ID>1</ID>
+					<Content>6733</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6742</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6743</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6744</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6745</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6746</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6747</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>15</ID>
+		<EntryName>6232</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.16				       -->
+		<!-- Letter to Sebastian Marsh		       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6766</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6767</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6768</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6769</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6770</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6771</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6772</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6773</Content>
+				</Text>
+				<Text>
+					<ID>4</ID>
+					<Content>6774</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>16</ID>
+		<EntryName>6233</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.17				       -->
+		<!-- Diary of Robert Marsh		       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6775</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6776</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6777</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>3</ID>
+					<Content>6778</Content>
+				</Text>
+				<Text>
+					<ID>4</ID>
+					<Content>6779</Content>
+				</Text>
+				<Text>
+					<ID>0</ID>
+					<Content>6780</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6781</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6782</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6783</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>17</ID>
+		<EntryName>6234</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.18				       -->
+		<!-- Diary of Sailor			       -->
+		<!-- 22.aug.2oo5 .:mSg:.                       -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6784</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6785</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6786</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6787</Content>
+				</Text>
+
+				<Text>
+					<ID>0</ID>
+					<Content>6788</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+
+	<Entry>
+		<ID>18</ID>
+		<EntryName>6235</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 2.19				       -->
+		<!-- Esther Marsh Lab Notes		       -->
+		<!-- 13.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6799</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6800</Content>
+				</Text>
+				<Text>
+					<ID>0</ID>
+					<Content>6801</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6802</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+</Category>

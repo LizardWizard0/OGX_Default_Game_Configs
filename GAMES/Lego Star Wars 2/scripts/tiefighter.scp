@@ -1,0 +1,61 @@
+state Base {
+	Conditions {
+		if AlwaysTrue == 1 goto Init
+	}
+	Actions {
+	}
+}
+
+state Init {
+	Conditions {
+	}
+	Actions {
+		CanSeeBehind
+		SetMaxViewHeight "999"
+		SetMinViewHeight "-999.0"
+		SetViewDistance "50"
+		BreakFormation
+		IgnoreWallSplines
+		SetState "Approach"
+	}
+}
+
+state Approach {
+	Conditions {
+		if GotOpponent == 1 goto Attack
+	}
+	Actions {
+		FollowPlayer
+	}
+}
+
+state Attack {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+		if OpponentRange < 15 goto Retreat
+	}
+	Actions {
+		EngageOpponent "goalrange 5" "firerange 30" "fireinterval 0.5"
+	}
+}
+
+state Retreat {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+		if OpponentRange > 30 goto Attack
+		if OnPath == 0 goto Retreat2
+	}
+	Actions {
+		MoveForward "min_turn=30" "max_turn=60" "rand_turn_dir"
+	}
+}
+
+state Retreat2 {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+		if OpponentRange > 30 goto Attack
+	}
+	Actions {
+		RetreatFromOpponent "50"
+	}
+}

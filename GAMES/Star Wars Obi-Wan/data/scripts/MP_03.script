@@ -1,0 +1,285 @@
+actor bob
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 09_mz_mrbl_d.sur
+}
+
+script "makepowerup"
+{
+pause 1
+PauseRandom 1 10
+RandomInt dice2 1 5  
+PrintInt dice2
+
+    if (= dice2 1)
+        {
+                RandomInt dice1 1 9
+                PrintInt dice1
+                 if (= dice1 1)
+                {
+                CreateActor mp_poweruphealth.dsc bob pu1
+                }
+                   
+                 if (= dice1 2)
+                {
+                CreateActor poweruphealth.dsc bob pu1
+                }
+         
+                 if (= dice1 3)
+                {
+                CreateActor poweruphealth.dsc bob pu1
+                }
+
+                if (= dice1 4)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu1
+                }
+
+                if (= dice1 5)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu1
+                }
+        
+                if (= dice1 6)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu1
+                }
+         
+                if (= dice1 7)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu1
+                }
+        
+                if (= dice1 8)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu1
+                }
+           
+                if (= dice1 9)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu1
+                }
+        }
+
+    if (= dice2 2)
+        {
+                RandomInt dice1 1 9
+                PrintInt dice1
+                 if (= dice1 1)
+                {
+                CreateActor mp_poweruphealth.dsc bob pu2
+                }
+                   
+                 if (= dice1 2)
+                {
+                CreateActor poweruphealth.dsc bob pu2
+                }
+         
+                 if (= dice1 3)
+                {
+                CreateActor poweruphealth.dsc bob pu2
+                }
+
+                if (= dice1 4)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu2
+                }
+
+                if (= dice1 5)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu2
+                }
+        
+                if (= dice1 6)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu2
+                }
+         
+                if (= dice1 7)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu2
+                }
+        
+                if (= dice1 8)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu2
+                }
+           
+                if (= dice1 9)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu2
+                }
+        }
+
+        if (= dice2 3)
+        {
+                RandomInt dice1 1 9
+                PrintInt dice1
+                 if (= dice1 1)
+                {
+                CreateActor mp_poweruphealth.dsc bob pu3
+                }
+                   
+                 if (= dice1 2)
+                {
+                CreateActor poweruphealth.dsc bob pu3
+                }
+         
+                 if (= dice1 3)
+                {
+                CreateActor poweruphealth.dsc bob pu3
+                }
+
+                if (= dice1 4)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu3
+                }
+
+                if (= dice1 5)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu3
+                }
+        
+                if (= dice1 6)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu3
+                }
+         
+                if (= dice1 7)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu3
+                }
+        
+                if (= dice1 8)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu3
+                }
+           
+                if (= dice1 9)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu3
+                }
+        }
+        
+    if (= dice2 4)
+        {
+                RandomInt dice1 1 9
+                PrintInt dice1
+                 if (= dice1 1)
+                {
+                CreateActor mp_poweruphealth.dsc bob pu4
+                }
+                   
+                 if (= dice1 2)
+                {
+                CreateActor poweruphealth.dsc bob pu4
+                }
+         
+                 if (= dice1 3)
+                {
+                CreateActor poweruphealth.dsc bob pu4
+                }
+
+                if (= dice1 4)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu4
+                }
+
+                if (= dice1 5)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu4
+                }
+        
+                if (= dice1 6)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu4
+                }
+         
+                if (= dice1 7)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu4
+                }
+        
+                if (= dice1 8)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu4
+                }
+           
+                if (= dice1 9)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu4
+                }
+        }
+        
+    if (= dice2 5)
+        {
+                RandomInt dice1 1 9
+                PrintInt dice1
+                 if (= dice1 1)
+                {
+                CreateActor poweruphealth.dsc bob pu5
+                }
+                   
+                 if (= dice1 2)
+                {
+                CreateActor poweruphealth.dsc bob pu5
+                }
+         
+                 if (= dice1 3)
+                {
+                CreateActor poweruphealth.dsc bob pu5
+                }
+
+                if (= dice1 4)
+                {
+                CreateActor mp_poweruphealth.dsc bob pu5
+                }
+
+                if (= dice1 5)
+                {
+                CreateActor powerupfullhealth.dsc bob pu5
+                }
+        
+                if (= dice1 6)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu5
+                }
+         
+                if (= dice1 7)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu5
+                }
+        
+                if (= dice1 8)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu5
+                }
+           
+                if (= dice1 9)
+                {
+                CreateActor mp_powerupunlimitedforce.dsc bob pu5
+                }
+        }
+
+WaitUntilRemoved bob
+loop
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

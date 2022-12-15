@@ -1,0 +1,17 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto Fight
+	}
+	Actions {
+		FollowPath "Walk"
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto Base
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange=3"
+	}
+}

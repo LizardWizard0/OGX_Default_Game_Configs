@@ -1,0 +1,150 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+MissionObjective 1 "/Mission13Objective1/Defeat Plo Koon."
+MissionTitle "/Mission13Title/Saber Arena"
+SetExplorationNum 1
+SetForceUsesNeeded 6
+SetTimeToBeat 50
+SetDefaultSurface 09_mz_mrbl_d.sur
+
+
+CreateActor powerupexplorationmarker.dsc bob pu
+
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+actor jedi A_DuelPloKoon_01				// SA_03 which comes after SA_07
+	
+// actor jedi A_dueltrainingrobot_01	// SA_01
+// actor jedi A_dueldepabilaba_01		// SA_05
+// actor jedi A_DuelSaeseeTiin_01		// SA_02
+// actor jedi A_DuelKiAdiMundi_01		// SA_06 which comes after SA_02
+// actor jedi A_DuelAdiGallia_01		// SA_07
+// actor jedi A_DuelEethKoth_01			// SA_08 which is after SA_03
+// actor jedi A_duelmacewindu_01		// SA_04 which is after SA_08
+
+// Be sure to set: unlimited_respawn 0
+
+DisableDeathMessages
+MakeResurrectable jedi
+
+Teleport jedi dude
+LoadDLG Qui-Gon.dlg
+
+
+script "Start_Cutscene" 1
+{
+	TakeControlOf jedi
+	UnEquipWeapon jedi
+
+	WaitForAll
+	
+	BeginCutScene
+	FadeUpAndWait
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_375/You did well in fighting the Jin’ha Obi-Wan. My old friend, Master Plo Koon has agreed to train with you.  He’s an expert swordsman, but a hard task master. You would do well to improve your saber skills quickly." Qui-Gon.dlg
+	CommunicatorOff
+
+	WalkToNode jedi start_1
+	WaitUntilDoorOpen A_SA-Door_01
+	Pause 0.5
+
+	SayLineNonPositional jedi "/PloKoon_376/Learn, Padawan. Your blade may someday save your life..." // trainingrobot.dlg //
+
+	WaitUntilArrived jedi start_1	
+	Pause 1
+
+	PreEndCutScene
+	StopTalking jedi
+	Teleport jedi bogan1	
+	EndCutScene
+		FadeUp
+
+    LockDoor A_SA-Door_01
+	PlayMusic BattleLoop
+	EnemyHealthMeter jedi
+	EquipWeapon	jedi
+	Pause 0.5
+	ReturnControlTo jedi
+	ForceTarget jedi obi
+
+	RemoveGroup 1
+	Save
+}
+
+script "The_Fight"
+{
+ConsoleCommand "r_maxshadows 2"
+CastShadows jedi true
+
+	if (IsGroupRemoved 1)
+	{
+		BeginCutScene
+		FadeUp
+		TakeControlOf jedi
+		WalkToNode jedi start_1
+		WaitUntilArrived jedi start_1
+		PreEndCutScene
+		Teleport jedi bogan1	
+		EndCutScene
+		FadeUp
+		SetHitPointRatio obi 1	
+		
+		PlayMusic BattleLoop
+		EnemyHealthMeter jedi
+		EquipWeapon	jedi
+		Pause 0.5
+		ReturnControlTo jedi
+		ForceTarget jedi obi
+	}
+}
+
+script "Obi_Loses"
+{
+	ContinueWhenPlayerDies  // Make sure this script is not automatically ended when the player dies
+
+	WaitUntilKilled Obi
+	Pause 3
+
+	SayLineNonPositional jedi "/Plokoon_783/A valiant effort, Padawan."		// PloKoon.dlg
+	Pause 0 5
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_1108/Plo-Koon can teach You Padawan, Try again" Qui-Gon.dlg
+	CommunicatorOff
+
+	Pause 0 5
+
+	DisplayMessagePlayerDied
+}
+
+script "Obi_Wins"
+{
+	WaitUntilKilled jedi 
+	PlayMusic Victory
+	Pause 3
+	BeginCutScene
+	
+	LookAt obi jedi
+	Resurrect jedi
+	TakeControlOf jedi
+	ChildScript
+	{
+		PlayAnimationAndWait jedi human_deathfallback-getupslow_brace.anim 1.0 0.0
+		Follow jedi obi 2
+	}
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_207/Well done, Obi-Wan.  Your training is progressing well." Qui-Gon.dlg
+	CommunicatorOff
+	SetTeam obi 0
+	Pause 0 1
+
+	SayLineNonPositional jedi "/PloKoon_377/I now see your Master was not bragging when he told me he was training my replacement.  You are strong in the Force, young Kenobi.  It is no small thing to defeat a Jedi Master in combat." // PloKoon.dlg
+	Fadedownandwait
+	PreEndCutscene
+	FadeDown 0
+	
+	NextLevel L03_2a
+}

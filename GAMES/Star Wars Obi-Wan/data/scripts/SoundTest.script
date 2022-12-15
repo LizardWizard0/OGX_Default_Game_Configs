@@ -1,0 +1,48 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+FadeUp
+
+Script  "sound_fly_by"
+{
+TriggerUberGenAndWait A_z_UberGen_01 t1
+WaitUntilEnteredRegion  t1 kill_box
+RemoveActor t1
+TriggerUberGenAndWait A_z_UberGen_02 t2
+WaitUntilEnteredRegion  t2 kill_box
+RemoveActor t2
+TriggerUberGenAndWait A_z_UberGen_03 t3
+WaitUntilEnteredRegion  t3 kill_box
+RemoveActor t3
+TriggerUberGenAndWait A_z_UberGen_04 t4
+WaitUntilEnteredRegion  t4 kill_box
+RemoveActor t4
+TriggerUberGenAndWait A_z_UberGen_05 t5
+WaitUntilEnteredRegion  t5 kill_box
+RemoveActor t5
+TriggerUberGenAndWait A_z_UberGen_06 t6
+WaitUntilEnteredRegion  t6 kill_box
+RemoveActor t6
+TriggerUberGenAndWait A_z_UberGen_07 t7
+WaitUntilEnteredRegion  t7 kill_box
+RemoveActor t7
+TriggerUberGenAndWait A_z_UberGen_08 t8
+WaitUntilEnteredRegion  t8 kill_box
+RemoveActor t8
+TriggerUberGenAndWait A_z_UberGen_09 t9
+WaitUntilEnteredRegion  t9 kill_box
+RemoveActor t9
+TriggerUberGenAndWait A_z_UberGen_10 t10
+WaitUntilEnteredRegion  t10 kill_box2
+RemoveActor t10
+TriggerUberGenAndWait A_z_UberGen_11 t11
+WaitUntilEnteredRegion  t11 kill_box2
+RemoveActor t11
+TriggerUberGenAndWait A_z_UberGen_12 t12
+WaitUntilEnteredRegion  t12 kill_box2
+RemoveActor t12
+Loop
+}
+
+

@@ -1,0 +1,235 @@
+[MenuCheats]
+Options[0].Blurred.Text="GOD"
+Options[1].Blurred.Text="ALL GUNS"
+Options[2].Blurred.Text="WE WIN"
+Options[3].Blurred.Text="GHOST"
+Options[4].Blurred.Text="WALK"
+Options[5].Blurred.Text="ADD 4 BOTS"
+Options[6].Blurred.Text="KILL ALL BOTS"
+Options[7].Blurred.Text="ARTIST MODE"
+Options[8].Blurred.Text="NORMAL MODE"
+Options[9].Blurred.Text="STAT LOCATION"
+Options[10].Blurred.Text="STAT FPS"
+Options[11].Blurred.Text="TOGGLE LOGGING"
+Options[12].Blurred.Text="STAT NET"
+MenuTitle.Text="CHEATS"
+
+[MenuConnectionFailed]
+Message.Text="THIS GAME SESSION IS NO LONGER AVAILABLE."
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="NETWORK ERROR"
+
+[MenuCorruptContent]
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="DAMAGED SAVE"
+
+[MenuFileLimit]
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="WARNING"
+
+[MenuGameSettings]
+OptionLabels[0].Text="TIME LIMIT"
+OptionLabels[1].Text="SCORE LIMIT"
+OptionLabels[2].Text="ROUNDS PER MAP"
+OptionLabels[3].Text="MAX PLAYERS"
+OptionLabels[4].Text="PRIVATE SLOTS"
+OptionLabels[5].Text="BOTS"
+OptionLabels[6].Text="BOT SKILL"
+OptionLabels[7].Text="FRIENDLY FIRE"
+OptionLabels[8].Text="GAME SPEED"
+OptionLabels[9].Text="WEAPONS STAY"
+OptionLabels[10].Text="DEDICATED SERVER"
+Options[0].Items=("5:00","10:00","15:00","20:00","25:00","30:00","45:00","60:00")
+Options[1].Items=("1","2","3","4","5","6","7","8","9","10","15","20","25","30","35","40","50","75","100","NONE")
+Options[2].Items=("1","2","3","4","5","6","7","8","9","10")
+Options[3].Items=("2","3","4","5","6","7","8","9","10","11","12","13","14","15","16")
+Options[4].Items=("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16")
+Options[5].Items=("OFF","ON")
+Options[6].Items=()
+Options[7].Items=("0%","25%","50%","75%","100%","125%","150%","175%","200%")
+Options[8].Items=("75%","100%","125%")
+Options[9].Items=("OFF","ON")
+Options[10].Items=("OFF","ON")
+StringTimeSuffix=":00"
+BandwidthWarningTitle="WARNING"
+BandwidthWarningText="YOU HAVE EXCEEDED THE MAXIMUM NUMBER OF PLAYERS YOUR BANDWIDTH CAN SUPPORT.  THIS MAY RESULT IN POOR QUALITY GAMES FOR PLAYERS CONNECTING TO THIS SERVER.  ARE YOU SURE YOU WANT TO OVERRIDE THE PLAYER LIMIT?"
+XLabel.Text=": SELECT MUTATORS"
+MenuTitle.Text="GAME SETTINGS"
+
+[MenuLoading]
+Message.Text="LOADING SAVED GAMES"
+
+[MenuLoadingProfile]
+LoadingText="LOADING"
+CreatingText="CREATING"
+Message.Text="%action PROFILE: %pName"
+
+[MenuLostController]
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="ATTENTION"
+
+[MenuLostLink]
+ALabel.Text=": RETURN TO MAIN MENU"
+MenuTitle.Text="ATTENTION"
+
+[MenuLowStorage]
+ALabel.Text=": CONTINUE"
+BLabel.Text="FREE SPACE :"
+MenuTitle.Text="WARNING: LOW STORAGE"
+
+[MenuMain]
+Options[0].Blurred.Text="SINGLE PLAYER"
+Options[0].HelpText="PLAY THROUGH THE TOURNAMENT"
+Options[1].Blurred.Text="SYSTEM LINK"
+Options[1].HelpText="PLAY OVER LOCAL NETWORK"
+Options[2].Blurred.Text="PLAY LIVE"
+Options[2].HelpText="PLAY ON XBOX LIVE"
+Options[3].Blurred.Text="INSTANT ACTION"
+Options[3].HelpText="PLAY A PRACTICE MATCH"
+Options[4].Blurred.Text="TUTORIAL"
+Options[4].HelpText="LEARN HOW TO PLAY"
+Options[5].Blurred.Text="PROFILES"
+Options[5].HelpText="MANAGE YOUR PROFILES"
+Options[6].Blurred.Text="SETTINGS"
+Options[6].HelpText="ADJUST GAME SETTINGS"
+MenuTitle.Text="MAIN MENU"
+
+[MenuMessageBox]
+MenuTitle.Text="ATTENTION"
+
+[MenuNewProfileName]
+EditNameText="EDIT PROFILE NAME"
+InUseText="THERE IS ALREADY A PROFILE OR SAVED GAME NAMED %s"
+MinLenText="A PROFILE NAME MUST BE AT LEAST ONE LETTER OR NUMBER IN LENGTH"
+
+[MenuProfileWarning]
+MustCreateProfile="YOU MUST CREATE A PROFILE"
+MustSelectProfile="YOU MUST SELECT A PROFILE"
+WarningText="WARNING"
+WelcomeText="WELCOME"
+ALabel.Text=": CONTINUE"
+
+[MenuSaving]
+Message.Text="SAVING GAME"
+
+[MenuSelectControllerConfig]
+PresetList[0].PresetName="DEFAULT"
+PresetList[1].PresetName="CUSTOM"
+LocalizedAliases[0]="Move forward"
+LocalizedAliases[1]="Move back"
+LocalizedAliases[2]="Strafe right"
+LocalizedAliases[3]="Strafe left"
+LocalizedAliases[4]="Jump"
+LocalizedAliases[5]="Look up"
+LocalizedAliases[6]="Look down"
+LocalizedAliases[7]="Turn right"
+LocalizedAliases[8]="Turn left"
+LocalizedAliases[9]="Center view"
+LocalizedAliases[10]="Primary fire"
+LocalizedAliases[11]="Secondary fire"
+LocalizedAliases[12]="Forward / back"
+LocalizedAliases[13]="Right / left"
+LocalizedAliases[14]="Look up / down"
+LocalizedAliases[15]="Turn right / left"
+LocalizedAliases[16]="Voice Channels"
+LocalizedAliases[17]="Start Menu"
+LocalizedAliases[18]="Scoreboard"
+LocalizedAliases[19]="Stats"
+LocalizedAliases[20]="Next Weapon"
+LocalizedAliases[21]="Prev Weapon"
+LocalizedAliases[22]="Best Weapon"
+LocalizedAliases[23]="Turn 180"
+LocalizedAliases[24]="Turn right 90"
+LocalizedAliases[25]="Turn left 90"
+LocalizedAliases[26]="Taunts / Orders"
+NormalXText=": CUSTOMIZE"
+EditXText=": DONE"
+NormalBText="BACK :"
+EditBText="CANCEL :"
+ALabel.Text=": ACCEPT"
+MenuTitle.Text="SELECT CONFIG"
+
+[MenuSelectGameType]
+StringAllGameName="All Game Types"
+MenuTitle.Text="SELECT GAME TYPE"
+
+[MenuSelectMap]
+StringSize="SIZE: "
+StringLocation="LOCATION: "
+StringPlayers=" PLAYERS"
+StringVersus=" VS "
+StringVersusOn=" ON "
+StringTo=" TO "
+MenuTitle.Text="SELECT MAP"
+
+[MenuSelectMaps]
+ListLabels[0].Text="AVAILABLE"
+ListLabels[1].Text="SELECTED"
+Buttons[0].Blurred.Text="ADD ALL"
+Buttons[1].Blurred.Text="CLEAR ALL"
+Buttons[2].Blurred.Text="BEGIN!"
+StringSize="SIZE: "
+StringLocation="LOCATION: "
+StringPlayers=" PLAYERS"
+StringVersus=" VS "
+StringVersusOn=" ON "
+StringNoMaps="NO MAPS SELECTED!"
+StringTo=" TO "
+StringAddMap="ADD MAP"
+StringRemoveMap="REMOVE MAP"
+StringAddAll="ADD ALL"
+StringClearAll="CLEAR ALL"
+StringBegin="BEGIN!"
+MenuTitle.Text="SELECT MAPS"
+
+[MenuSelectMutators]
+StringActivate=": ACTIVATE"
+StringDeactivate=": DEACTIVATE"
+MenuTitle.Text="MUTATORS"
+
+[MenuSelectPlayer]
+StringAffinity="Affin: "
+EditAliasText="EDIT ALIAS"
+MenuTitle.Text="SELECT CHARACTER"
+
+[MenuSelectProfile]
+NewProfileText="< NEW >"
+StringDeleteConfirm="Delete "
+StringDeleteConfirmEnd=" profile?"
+RandomProfileText="< RANDOM >"
+XLabel.Text=": DELETE"
+MenuTitle.Text="SELECT PROFILE"
+
+[MenuStart]
+Options[0].Blurred.Text="RETURN TO GAME"
+Options[1].Blurred.Text="DISCONNECT"
+Options[2].Blurred.Text="SETTINGS"
+Options[3].Blurred.Text="SWITCH TEAMS"
+Options[4].Blurred.Text="PLAYERS LIST"
+Options[5].Blurred.Text="FRIENDS LIST"
+Options[6].Blurred.Text="CHEATS"
+StringTutorialTitle="TUTORIAL OPTIONS"
+StringReturnToTutorial="RETURN TO TUTORIAL"
+StringForfeit="FORFEIT"
+StringDisconnect="DISCONNECT"
+StringEndMatch="END MATCH"
+StringLeaveMatch="LEAVE MATCH"
+StringTutorialDisconnect="END TUTORIAL"
+StringReallyForfeit="REALLY FORFEIT?"
+StringReallyEndTutorial="REALLY END TUTORIAL?"
+StringReallyDisconnect="REALLY DISCONNECT?"
+StringReallyEndMatch="REALLY END THE MATCH?"
+StringReallyLeaveMatch="REALLY LEAVE THE MATCH?"
+StringReallySwitchTeams="REALLY SWITCH TEAMS?"
+StringGuestWillGoToo="YOUR GUESTS WILL BE FORCED TO DISCONNECT."
+StringGamePaused="GAME PAUSED"
+MenuTitle.Text="START MENU"
+
+[MenuWarning]
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="WARNING"
+
+[MenuWarningTransition]
+Message.Text="DOING STUFF"
+MenuTitle.Text="WARNING"
+

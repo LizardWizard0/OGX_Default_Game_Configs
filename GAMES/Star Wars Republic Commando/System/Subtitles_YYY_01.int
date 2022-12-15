@@ -1,0 +1,786 @@
+
+[Subtitles_YYY_01]
+
+SubtitleSound[2928]="D07Y1503"
+SubtitleText[2928]="Delta 07: The bigger the scalie, the better the target."
+
+SubtitleSound[2929]="CA1Y1100"
+SubtitleText[2929]="Clone Advisor 1: Trandoshan Slavers here on Kashyyyk have captured Tarfful, an important Wookiee leader."
+
+SubtitleSound[2930]="CA1Y1101"
+SubtitleText[2930]="Clone Advisor 1: Your mission is to infiltrate the nearby Trandoshan encampment and liberate Tarfful, along with any other Wookiees you might find."
+
+SubtitleSound[2931]="CA1Y1102"
+SubtitleText[2931]="Clone Advisor 1: There’s no intelligence on the security tech you can expect to find there, so proceed with caution."
+
+SubtitleSound[2932]="D62Y1112"
+SubtitleText[2932]="Delta 62: Is it just me, or are we getting less and less intelligence in these briefings?"
+
+SubtitleSound[2933]="D38Y1100"
+SubtitleText[2933]="Delta 38: Stow it, Seven."
+
+SubtitleSound[2934]="CA1Y1108"
+SubtitleText[2934]="Clone Advisor 1: The Trandoshan camp is a few hundred meters to the south."
+
+SubtitleSound[2935]="D40Y1109"
+SubtitleText[2935]="Delta 40: We've got lizards, sir."
+
+SubtitleSound[2936]="D38Y1111"
+SubtitleText[2936]="Delta 38: Take 'em down quietly, Deltas."
+
+SubtitleSound[2937]="D62Y1104"
+SubtitleText[2937]="Delta 62: Rule 23:  Never pull sentry duty on an empty stomach."
+
+SubtitleSound[2938]="D40Y1110"
+SubtitleText[2938]="Delta 40: There's the Trando camp."
+
+SubtitleSound[2939]="D07Y1107"
+SubtitleText[2939]="Delta 07: Looks more like a fortress.  Should be fun."
+
+SubtitleSound[2940]="D40Y1111"
+SubtitleText[2940]="Delta 40: More sniping, sir?"
+
+SubtitleSound[2941]="D40Y1100"
+SubtitleText[2941]="Delta 40: Keep em’ off that door!"
+
+SubtitleSound[2942]="D38Y1102"
+SubtitleText[2942]="Delta 38: So far, so good.  Now let's get to work on the door."
+
+SubtitleSound[2943]="D38Y1101"
+SubtitleText[2943]="Delta 38: Let's put that turret to good use."
+
+SubtitleSound[2944]="D62Y1113"
+SubtitleText[2944]="Delta 62: Think they'll be happy to see us?"
+
+SubtitleSound[2945]="D07Y1102"
+SubtitleText[2945]="Delta 07: Here's hoping they don't surrender…"
+
+SubtitleSound[2946]="D40Y1116"
+SubtitleText[2946]="Delta 40: He's dead."
+
+SubtitleSound[2947]="D40Y1121"
+SubtitleText[2947]="Delta 40: Not a good sign..."
+
+SubtitleSound[2948]="D62Y1102"
+SubtitleText[2948]="Delta 62: What’ve they done to him?"
+
+SubtitleSound[2949]="D62Y1116"
+SubtitleText[2949]="Delta 62: At least we'll be able to find our way back."
+
+SubtitleSound[2950]="D40Y1101"
+SubtitleText[2950]="Delta 40: Dead.  Let's hope Tarfful's in better shape."
+
+SubtitleSound[2951]="D62Y1100"
+SubtitleText[2951]="Delta 62: What?  I didn't do it!"
+
+SubtitleSound[2952]="D40Y1102"
+SubtitleText[2952]="Delta 40: Kill that spotlight!"
+
+SubtitleSound[2953]="D38Y1103"
+SubtitleText[2953]="Delta 38: Got it."
+
+SubtitleSound[2954]="D38Y1104"
+SubtitleText[2954]="Delta 38: What’s that?"
+
+SubtitleSound[2955]="CA1Y1103"
+SubtitleText[2955]="Clone Advisor 1: It's General Grievous ship!"
+
+SubtitleSound[2956]="D38Y1105"
+SubtitleText[2956]="Delta 38: What's the commander of the droid armies doing on Kashyyyk?"
+
+SubtitleSound[2957]="CA1Y1104"
+SubtitleText[2957]="Clone Advisor 1: Unknown, Three-Eight.  Continue your mission, but be ready for updated mission parameters. "
+
+SubtitleSound[2958]="D38Y1118"
+SubtitleText[2958]="Delta 38: Hmm.  A Trando Repeater.  Interesting."
+
+SubtitleSound[2959]="D40Y1103"
+SubtitleText[2959]="Delta 40: Looks like a good place to set up a trap, sir."
+
+SubtitleSound[2960]="D38Y1106"
+SubtitleText[2960]="Delta 38: All set.  Let’s get their attention and reel ‘em in."
+
+SubtitleSound[2961]="D40Y1112"
+SubtitleText[2961]="Delta 40: Lizard in the tower!"
+
+SubtitleSound[2962]="D62Y1105"
+SubtitleText[2962]="Delta 62: Scaley in the tower!"
+
+SubtitleSound[2963]="D38Y1112"
+SubtitleText[2963]="Delta 38: Trando in the tower!"
+
+SubtitleSound[2964]="D07Y1104"
+SubtitleText[2964]="Delta 07: C’mon, we can still get him!"
+
+SubtitleSound[2965]="D40Y1107"
+SubtitleText[2965]="Delta 40: Too late."
+
+SubtitleSound[2966]="D62Y1111"
+SubtitleText[2966]="Delta 62: What ARE those things?"
+
+SubtitleSound[2967]="D07Y1105"
+SubtitleText[2967]="Delta 07: They don't look so tough!"
+
+SubtitleSound[2968]="D62Y1103"
+SubtitleText[2968]="Delta 62: One down."
+
+SubtitleSound[2969]="D07Y1106"
+SubtitleText[2969]="Delta 07: Two down!"
+
+SubtitleSound[2970]="D40Y1108"
+SubtitleText[2970]="Delta 40: Hit him hard, Deltas! "
+
+SubtitleSound[2971]="D07Y1103"
+SubtitleText[2971]="Delta 07: Like shooting worrts in a barrel… "
+
+SubtitleSound[2972]="D62Y1114"
+SubtitleText[2972]="Delta 62: Why can't all our ambushes go that easily?"
+
+SubtitleSound[2973]="D38Y1113"
+SubtitleText[2973]="Delta 38: We got a nest here!"
+
+SubtitleSound[2974]="D38Y1119"
+SubtitleText[2974]="Delta 38: Slaver shotgun.  Wonder what kind of holes I can make with this?"
+
+SubtitleSound[2975]="D40Y1113"
+SubtitleText[2975]="Delta 40: String 'em along, and we'll mop 'em up!"
+
+SubtitleSound[2976]="D38Y1107"
+SubtitleText[2976]="Delta 38: Ok, everyone.  They know we’re coming, so let’s do this hard and loud."
+
+SubtitleSound[2977]="D38Y1120"
+SubtitleText[2977]="Delta 38: An ion-pulse concussion rifle."
+
+SubtitleSound[2978]="D40Y1120"
+SubtitleText[2978]="Delta 40: Try not to blow us up with that monster, sir."
+
+SubtitleSound[2979]="D38Y1121"
+SubtitleText[2979]="Delta 38: Get yourself some bacta, soldier."
+
+SubtitleSound[2980]="D40Y1114"
+SubtitleText[2980]="Delta 40: Room secured, sir."
+
+SubtitleSound[2981]="D07Y1108"
+SubtitleText[2981]="Delta 07: Stupid slavers are making it easy."
+
+SubtitleSound[2982]="D62Y1106"
+SubtitleText[2982]="Delta 62: What's that?"
+
+SubtitleSound[2983]="D38Y1114"
+SubtitleText[2983]="Delta 38: Zip-lines!"
+
+SubtitleSound[2984]="D40Y1115"
+SubtitleText[2984]="Delta 40: Okay, NOW it's secure."
+
+SubtitleSound[2985]="D38Y1108"
+SubtitleText[2985]="Delta 38: Four on one… that’s not right."
+
+SubtitleSound[2986]="D40Y1117"
+SubtitleText[2986]="Delta 40: This one's dead, too."
+
+SubtitleSound[2987]="D07Y1109"
+SubtitleText[2987]="Delta 07: Lousy trando cannibals…"
+
+SubtitleSound[2988]="D62Y1107"
+SubtitleText[2988]="Delta 62: This doesn't bode well for Tarfful... wherever he is."
+
+SubtitleSound[2989]="D62Y1101"
+SubtitleText[2989]="Delta 62: We've got a visual on the landing pad. "
+
+SubtitleSound[2990]="CA1Y1105"
+SubtitleText[2990]="Clone Advisor 1: Positive I.D. on General Grievous."
+
+SubtitleSound[2991]="D40Y1104"
+SubtitleText[2991]="Delta 40:  What’s he – Damn!"
+
+SubtitleSound[2992]="D38Y1109"
+SubtitleText[2992]="Delta 38: We’ve been spotted!  Get down there!  Move!"
+
+SubtitleSound[2993]="D62Y1108"
+SubtitleText[2993]="Delta 62: What in the galaxy was that?"
+
+SubtitleSound[2994]="D40Y1118"
+SubtitleText[2994]="Delta 40: Droids!"
+
+SubtitleSound[2995]="D62Y1109"
+SubtitleText[2995]="Delta 62: Superbattledroids!?"
+
+SubtitleSound[2996]="D07Y1110"
+SubtitleText[2996]="Delta 07: Hit 'em with your ECD's!"
+
+SubtitleSound[2997]="D40Y1119"
+SubtitleText[2997]="Delta 40: It's Tarfful!"
+
+SubtitleSound[2998]="D62Y1110"
+SubtitleText[2998]="Delta 62: Where are they taking him?"
+
+SubtitleSound[2999]="D38Y1115"
+SubtitleText[2999]="Delta 38: Grievous must want him for questioning."
+
+SubtitleSound[3000]="D07Y1111"
+SubtitleText[3000]="Delta 07: Nice work."
+
+SubtitleSound[3001]="D62Y1117"
+SubtitleText[3001]="Delta 62: Whoah.  That is one angry Wookiee."
+
+SubtitleSound[3002]="D40Y1106"
+SubtitleText[3002]="Delta 40: What!?"
+
+SubtitleSound[3003]="CA1Y1107"
+SubtitleText[3003]="Clone Advisor 1: Hurry, Grievous is taking off."
+
+SubtitleSound[3004]="D38Y1110"
+SubtitleText[3004]="Delta 38: Let's do this the quick way."
+
+SubtitleSound[3005]="CA1Y1109"
+SubtitleText[3005]="Clone Advisor 1: I'm receiving updated mission parameters, Deltas.  "
+
+SubtitleSound[3006]="D38Y1116"
+SubtitleText[3006]="Delta 38: Standing by."
+
+SubtitleSound[3007]="CA1Y1110"
+SubtitleText[3007]="Clone Advisor 1: Secure the launch pad, so we can get Tarfful out of here before Grievous can call in an air strike."
+
+SubtitleSound[3008]="D38Y1117"
+SubtitleText[3008]="Delta 38: Will do."
+
+SubtitleSound[3009]="CA1Y1002"
+SubtitleText[3009]="Clone Advisor 1: Intelligence from the Republic Assault Ship has revealed the position of the Trandoshan slaver camp where Tarfful's being held."
+
+SubtitleSound[3010]="CA1Y1004"
+SubtitleText[3010]="Clone Advisor 1: The Trandoshans have stepped up their presence here, so you'll need to get to the camp without setting off the alarm to take the camp before reinforcements arrive."
+
+SubtitleSound[3011]="D38Y1001"
+SubtitleText[3011]="Delta 38: Let's find that slaver camp."
+
+SubtitleSound[3012]="D38Y1002"
+SubtitleText[3012]="Delta 38: Careful; the Trandos may have some kind of perimeter warning system out here."
+
+SubtitleSound[3013]="D07Y1001"
+SubtitleText[3013]="Delta 07: Now we're in for it!"
+
+SubtitleSound[3014]="D40Y1001"
+SubtitleText[3014]="Delta 40: No escapees.  We don't want them raising the alarm."
+
+SubtitleSound[3015]="D07Y1002"
+SubtitleText[3015]="Delta 07: Don’t let them get to the alarm box!"
+
+SubtitleSound[3016]="D62Y1001"
+SubtitleText[3016]="Delta 62: No one likes a tattletale."
+
+SubtitleSound[3017]="D07Y1003"
+SubtitleText[3017]="Delta 07: That was invigorating."
+
+SubtitleSound[3018]="D62Y1002"
+SubtitleText[3018]="Delta 62: Look at this mess…these Trandos have no discipline."
+
+SubtitleSound[3019]="D40Y1002"
+SubtitleText[3019]="Delta 40: We must be getting close to the camp."
+
+SubtitleSound[3020]="D38Y1003"
+SubtitleText[3020]="Delta 38: If one of them gets to the alarm box we're dead!"
+
+SubtitleSound[3021]="D38Y1004"
+SubtitleText[3021]="Delta 38: We don't need any whistle blowers.  Make sure nothing escapes."
+
+SubtitleSound[3022]="CA1Y1005"
+SubtitleText[3022]="Clone Advisor 1: Let's make sure there's no warning for that camp!"
+
+SubtitleSound[3023]="D40Y1003"
+SubtitleText[3023]="Delta 40: There's the slaver's camp.  "
+
+SubtitleSound[3024]="D38Y1005"
+SubtitleText[3024]="Delta 38: Lots of sentries - We'll need to keep em' away from that alarm box."
+
+SubtitleSound[3025]="CA1Y1006"
+SubtitleText[3025]="Clone Advisor 1: Careful, deltas, this field is heavily mined."
+
+SubtitleSound[3026]="D38Y1007"
+SubtitleText[3026]="Delta 38: Keep em' off that box!"
+
+SubtitleSound[3027]="D38Y1008"
+SubtitleText[3027]="Delta 38: Let's clear a path through this minefield.  "
+
+SubtitleSound[3028]="D40Y1004"
+SubtitleText[3028]="Delta 40: Just a few more…"
+
+SubtitleSound[3029]="D38Y1009"
+SubtitleText[3029]="Delta 38: The path is clear.  Let's make that alarm box "malfunction.""
+
+SubtitleSound[3030]="D07Y1004"
+SubtitleText[3030]="Delta 07: Stay on those sentries!"
+
+SubtitleSound[3031]="CA1Y1007"
+SubtitleText[3031]="Clone Advisor 1: Now to find a way in.   Check perimeter weakness, squad."
+
+SubtitleSound[3032]="D38Y1010"
+SubtitleText[3032]="Delta 38: I found a maintenance duct."
+
+SubtitleSound[3033]="D07Y1005"
+SubtitleText[3033]="Delta 07: Over here.  I found our way in."
+
+SubtitleSound[3034]="D62Y1003"
+SubtitleText[3034]="Delta 62: Heh.  If that isn't a red carpet…"
+
+SubtitleSound[3035]="D40Y1005"
+SubtitleText[3035]="Delta 40: Perimeter breach found."
+
+SubtitleSound[3036]="D38Y1011"
+SubtitleText[3036]="Delta 38: Advisor, we've reached the landing pad.  I'm sending you exfil coordinates now."
+
+SubtitleSound[3037]="CA1Y1008"
+SubtitleText[3037]="Clone Advisor 1: We've got no intelligence on the security tech you can expect to find there.  Proceed with caution."
+
+SubtitleSound[3038]="D07Y1006"
+SubtitleText[3038]="Delta 07: Lights out."
+
+SubtitleSound[3039]="D62Y1004"
+SubtitleText[3039]="Delta 62: Illumination eliminated."
+
+SubtitleSound[3040]="D40Y1006"
+SubtitleText[3040]="Delta 40: Scratch one spotlight."
+
+SubtitleSound[3041]="D07Y1007"
+SubtitleText[3041]="Delta 07: Take cover - Scalies in the tower!  "
+
+SubtitleSound[3042]="CA1Y1514"
+SubtitleText[3042]="Clone Advisor 1: Deltas, those beams are wired up to automated alarms."
+
+SubtitleSound[3043]="D38Y1012"
+SubtitleText[3043]="Delta 38: Better stay out of the spotlights from now on, squad."
+
+SubtitleSound[3044]="D40Y1007"
+SubtitleText[3044]="Delta 40: That won't be giving us any more trouble.  "
+
+SubtitleSound[3045]="D38Y1013"
+SubtitleText[3045]="Delta 38: Well, they know we're here now."
+
+SubtitleSound[3046]="CA1Y1009"
+SubtitleText[3046]="Clone Advisor 1: You'll need to enter the main section of the camp from here.  "
+
+SubtitleSound[3047]="D38Y1014"
+SubtitleText[3047]="Delta 38: Squad, look for a way through."
+
+SubtitleSound[3048]="D62Y1005"
+SubtitleText[3048]="Delta 62: Not exactly skilled craftsmen, are they?"
+
+SubtitleSound[3049]="D07Y1008"
+SubtitleText[3049]="Delta 07: Let's go save some Wookiees."
+
+SubtitleSound[3050]="CA1Y1010"
+SubtitleText[3050]="Clone Advisor 1: Leader, the Trandos are keeping the Wookiees in the structure with the antenna on it."
+
+SubtitleSound[3051]="D07Y1009"
+SubtitleText[3051]="Delta 07: Let's get in there and free some wookies!"
+
+SubtitleSound[3052]="D40Y1008"
+SubtitleText[3052]="Delta 40: Take out that spotlight!"
+
+SubtitleSound[3053]="CA1Y1011"
+SubtitleText[3053]="Clone Advisor 1: Delta squad, we're reading an unidentified ship coming in for a landing.  Get to the top of that tower and get a visual on it."
+
+SubtitleSound[3054]="CA1Y1515"
+SubtitleText[3054]="Clone Advisor 1: Unidentified ship is directly above you now."
+
+SubtitleSound[3055]="CA1Y1516"
+SubtitleText[3055]="Clone Advisor 1: Delta Lead, Get me a visual on that Ship! "
+
+SubtitleSound[3056]="D38Y1015"
+SubtitleText[3056]="Delta 38: Advisor, I'm transmitting silhouette data on that ship now.  See anything you recognize?"
+
+SubtitleSound[3057]="CA1Y1012"
+SubtitleText[3057]="Clone Advisor 1: That's General Grievous's ship!"
+
+SubtitleSound[3058]="D38Y1016"
+SubtitleText[3058]="Delta 38: The Commander of the droid armies? What's he got going on Kashyyyk?"
+
+SubtitleSound[3059]="D40Y1009"
+SubtitleText[3059]="Delta 40: They're trying to slow us down.  We'll have to find another way through."
+
+SubtitleSound[3060]="D40Y1504"
+SubtitleText[3060]="Delta 40: They're trying to slow us down.  "
+
+SubtitleSound[3061]="CA1Y1517"
+SubtitleText[3061]="Clone Advisor 1: Lead, that's the detention facility.  Tarfful must be in there. "
+
+SubtitleSound[3062]="D62Y1006"
+SubtitleText[3062]="Delta 62: Heh.  That was impressive."
+
+SubtitleSound[3063]="D38Y1017"
+SubtitleText[3063]="Delta 38: Ok, everybody.  They're waiting for us.  "
+
+SubtitleSound[3064]="D62Y1504"
+SubtitleText[3064]="Delta 62: Heads up!  Incoming uglies!"
+
+SubtitleSound[3065]="D40Y1505"
+SubtitleText[3065]="Delta 40: Take cover, squad!  Put some grenades on those targets!"
+
+SubtitleSound[3066]="D40Y1010"
+SubtitleText[3066]="Delta 40: He's dead."
+
+SubtitleSound[3067]="D40Y1506"
+SubtitleText[3067]="Delta 40: He hasn't been dead long.  We better shift it or we're likely to find MORE dead Wookiees."
+
+SubtitleSound[3068]="D38Y1018"
+SubtitleText[3068]="Delta 38: I got a live one.  We need to get him out of there."
+
+SubtitleSound[3069]="CA1Y1518"
+SubtitleText[3069]="Clone Advisor 1: Slice into the trando security network to open that cell. "
+
+SubtitleSound[3070]="D07Y1010"
+SubtitleText[3070]="Delta 07: I got a live one here."
+
+SubtitleSound[3071]="D62Y1507"
+SubtitleText[3071]="Delta 62: Hold on, big guy.  We're getting you out of here."
+
+SubtitleSound[3072]="D40Y1507"
+SubtitleText[3072]="Delta 40: Rescued:  one Wookiee."
+
+SubtitleSound[3073]="D62Y1007"
+SubtitleText[3073]="Delta 62: Hey, this one's alive!"
+
+SubtitleSound[3074]="D40Y1011"
+SubtitleText[3074]="Delta 40: We've got a live on here, sir."
+
+SubtitleSound[3075]="D62Y1008"
+SubtitleText[3075]="Delta 62: Is it Tarfful?"
+
+SubtitleSound[3076]="CA1Y1013"
+SubtitleText[3076]="Clone Advisor 1: That's not Tarfful."
+
+SubtitleSound[3077]="CA1Y1014"
+SubtitleText[3077]="Clone Advisor 1: He says they took Tarfful a few minutes ago."
+
+SubtitleSound[3078]="CA1Y1015"
+SubtitleText[3078]="Clone Advisor 1: He says he only knows of one other enlisted Wookiee that's survived this long."
+
+SubtitleSound[3079]="D07Y1011"
+SubtitleText[3079]="Delta 07: Located another survivor.  Big one, too."
+
+SubtitleSound[3080]="D38Y1512"
+SubtitleText[3080]="Delta 38: Let's evacuate him."
+
+SubtitleSound[3081]="D40Y1510"
+SubtitleText[3081]="Delta 40: Rescued:  two Wookiees.  "
+
+SubtitleSound[3082]="D62Y1509"
+SubtitleText[3082]="Delta 62: Okay, big fella, go rip some arms off."
+
+SubtitleSound[3083]="D40Y1012"
+SubtitleText[3083]="Delta 40: The door is blocked.  I can't budge this thing."
+
+SubtitleSound[3084]="D62Y1009"
+SubtitleText[3084]="Delta 62: I bet a Wookiee could do it."
+
+SubtitleSound[3085]="D62Y1010"
+SubtitleText[3085]="Delta 62: See?  What'd I tell ya."
+
+SubtitleSound[3086]="D40Y1511"
+SubtitleText[3086]="Delta 40: We appreciate the help, warrior."
+
+SubtitleSound[3087]="D38Y1513"
+SubtitleText[3087]="Delta 38: Where's he going?"
+
+SubtitleSound[3088]="D62Y1510"
+SubtitleText[3088]="Delta 62: Blast!  He walked right into their spotlight!"
+
+SubtitleSound[3089]="D40Y1512"
+SubtitleText[3089]="Delta 40: What'd he say?"
+
+SubtitleSound[3090]="CA1Y1521"
+SubtitleText[3090]="Clone Advisor 1: Later, Delta squad.  Stay focused on Tarfful for now"
+
+SubtitleSound[3091]="CA1Y1522"
+SubtitleText[3091]="Clone Advisor 1: Be ready for a fight,  Deltas.  That tower is swarming with slavers."
+
+SubtitleSound[3092]="D62Y1511"
+SubtitleText[3092]="Delta 62: Tower full o' Trandos:  check."
+
+SubtitleSound[3093]="CA1Y1016"
+SubtitleText[3093]="Clone Advisor 1: Get back to the landing pad.  Grievous must be trying to take off with Tarfful."
+
+SubtitleSound[3094]="CA1Y1523"
+SubtitleText[3094]="Clone Advisor 1: Grievous's ship is warming up, Deltas!  Get back to that landing pad ASAP."
+
+SubtitleSound[3095]="D40Y1013"
+SubtitleText[3095]="Delta 40: We'll have to go the long way around.  "
+
+SubtitleSound[3096]="CA1Y1524"
+SubtitleText[3096]="Clone Advisor 1: Advise you take a shortcut through the Trandoshan nest."
+
+SubtitleSound[3097]="CA1Y1017"
+SubtitleText[3097]="Clone Advisor 1: Hurry, before it's too late!"
+
+SubtitleSound[3098]="CA1Y1526"
+SubtitleText[3098]="Clone Advisor 1: Delta squad - New orders. You are to verify that Grievous is indeed on Kashyyyk."
+
+SubtitleSound[3099]="CA1Y1527"
+SubtitleText[3099]="Clone Advisor 1: Highest priority. Can you see him near that ship?"
+
+SubtitleSound[3100]="CA1Y1528"
+SubtitleText[3100]="Clone Advisor 1: Find a window or viewport!  We need verification!"
+
+SubtitleSound[3101]="D40Y1014"
+SubtitleText[3101]="Delta 40: We've got a visual on the landing pad.  Uh-oh, he's seen us.  "
+
+SubtitleSound[3102]="D07Y1012"
+SubtitleText[3102]="Delta 07: There's Tarfful!  They've really done a number on him."
+
+SubtitleSound[3103]="D40Y1105"
+SubtitleText[3103]="Delta 40: There's Tarfful!  "
+
+SubtitleSound[3104]="D38Y1019"
+SubtitleText[3104]="Delta 38: Let's go get em' Delta squad!"
+
+SubtitleSound[3105]="D38Y1020"
+SubtitleText[3105]="Delta 38: Damn.  We'll have to blow through this."
+
+SubtitleSound[3106]="CA1Y1018"
+SubtitleText[3106]="Clone Advisor 1: Tarfful's warning you to watch your back!"
+
+SubtitleSound[3107]="CA1Y1106"
+SubtitleText[3107]="Clone Advisor 1: He says to watch your back!"
+
+SubtitleSound[3108]="CA1Y1019"
+SubtitleText[3108]="Clone Advisor 1: Tarfful says hurry, Grievous is taking off."
+
+SubtitleSound[3109]="D07Y1013"
+SubtitleText[3109]="Delta 07: We have to get in there before they take off!"
+
+SubtitleSound[3110]="D40Y1015"
+SubtitleText[3110]="Delta 40: Damn, too late."
+
+SubtitleSound[3111]="D62Y1011"
+SubtitleText[3111]="Delta 62: Whoa, what in the Hutt is that?"
+
+SubtitleSound[3112]="CA1Y1020"
+SubtitleText[3112]="Clone Advisor 1: He says that's one of Grievous'  Bodyguards.  Very tough."
+
+SubtitleSound[3113]="D62Y1115"
+SubtitleText[3113]="Delta 62: No kidding."
+
+SubtitleSound[3114]="D40Y1016"
+SubtitleText[3114]="Delta 40: Gunship, I'm requesting an exfil."
+
+SubtitleSound[3115]="CA1Y1537"
+SubtitleText[3115]="Clone Advisor 1: Well done, Deltas."
+
+SubtitleSound[3116]="CA1Y1538"
+SubtitleText[3116]="Clone Advisor 1: Interesting…"
+
+SubtitleSound[3117]="D40Y1514"
+SubtitleText[3117]="Delta 40: What's he saying?"
+
+SubtitleSound[3118]="CA1Y1539"
+SubtitleText[3118]="Clone Advisor 1: This camp is just the beginning.  There's a lot more going on here than we knew."
+
+SubtitleSound[3119]="CA1Y1540"
+SubtitleText[3119]="Clone Advisor 1: Prep for lift, Delta squad."
+
+SubtitleSound[3120]="CA1Y1021"
+SubtitleText[3120]="Clone Advisor 1: What took you so long? "
+
+SubtitleSound[3121]="D62Y1505"
+SubtitleText[3121]="Delta 62: Well, now we know what they were going to have for dinner. "
+
+SubtitleSound[3122]="D38Y1510"
+SubtitleText[3122]="Delta 38: Swamp Blurrg.  Maybe it can find a way out."
+
+SubtitleSound[3123]="D07Y1504"
+SubtitleText[3123]="Delta 07: Swamp Blurrgs don't count towards your kills, Boss."
+
+SubtitleSound[3124]="D62Y1506"
+SubtitleText[3124]="Delta 62: You mean I have to keep a separate blurrg count?"
+
+SubtitleSound[3125]="D38Y1511"
+SubtitleText[3125]="Delta 38: We can't get through the door - they've blocked it off."
+
+SubtitleSound[3126]="CA1Y1519"
+SubtitleText[3126]="Clone Advisor 1: Scanning a weakness in the back of the cell wall.  Blow through there."
+
+SubtitleSound[3127]="D40Y1508"
+SubtitleText[3127]="Delta 40: We're through, sir."
+
+SubtitleSound[3128]="D62Y1508"
+SubtitleText[3128]="Delta 62: The big fella's kinda mad, Boss."
+
+SubtitleSound[3129]="D07Y1505"
+SubtitleText[3129]="Delta 07: He's more than mad-- that's personal."
+
+SubtitleSound[3130]="D40Y1509"
+SubtitleText[3130]="Delta 40: Watch out!  It's a trap!"
+
+SubtitleSound[3131]="CA1Y1520"
+SubtitleText[3131]="Clone Advisor 1: Keep moving, Deltas.  Tarfful must be in there somewhere. "
+
+SubtitleSound[3132]="D07Y1506"
+SubtitleText[3132]="Delta 07: Ugh.. What's that smell?"
+
+SubtitleSound[3133]="CA1Y1525"
+SubtitleText[3133]="Clone Advisor 1: Slice that security door, Deltas."
+
+SubtitleSound[3134]="D40Y1513"
+SubtitleText[3134]="Delta 40: Sounds like a Wookiee's giving em' trouble on the other side."
+
+SubtitleSound[3135]="D38Y1514"
+SubtitleText[3135]="Delta 38: They're after Tarfful!"
+
+SubtitleSound[3136]="CA1Y1529"
+SubtitleText[3136]="Clone Advisor 1: Tarfful has information vital to the Republic."
+
+SubtitleSound[3137]="CA1Y1530"
+SubtitleText[3137]="Clone Advisor 1: The situation is serious, Delta Lead.  Grievous will escape with Tarfful unless you get to that landing pad and stop him!  "
+
+SubtitleSound[3138]="CA1Y1531"
+SubtitleText[3138]="Clone Advisor 1: He must survive.  Highest priority."
+
+SubtitleSound[3139]="D62Y1512"
+SubtitleText[3139]="Delta 62: That would be easier if he'd back down a little."
+
+SubtitleSound[3140]="CA1Y1532"
+SubtitleText[3140]="Clone Advisor 1: Never argue with a Wookiee, Three-Eight."
+
+SubtitleSound[3141]="D38Y1515"
+SubtitleText[3141]="Delta 38: Blast!  Tarfful's down."
+
+SubtitleSound[3142]="CA1Y1533"
+SubtitleText[3142]="Clone Advisor 1: Scanning zero life signs!  Delta Lead, we needed him ALIVE."
+
+SubtitleSound[3143]="CA1Y1534"
+SubtitleText[3143]="Clone Advisor 1: This guarantees we'll lose the war here on Kashyyyk."
+
+SubtitleSound[3144]="CA1Y1535"
+SubtitleText[3144]="Clone Advisor 1: Mission failed, Delta."
+
+SubtitleSound[3145]="CA1Y1536"
+SubtitleText[3145]="Clone Advisor 1: Report to base for reconditioning.  Sorry lads, it's over for Delta squad."
+
+SubtitleSound[3146]="D38Y1516"
+SubtitleText[3146]="Delta 38: He's a little beat-up, sir, but you can count Tarfful rescued."
+
+SubtitleSound[3147]="D38Y1509"
+SubtitleText[3147]="Delta 38: Okay, lads-- let's neutralize this barrier."
+
+SubtitleSound[3148]="CA1Y1541"
+SubtitleText[3148]="Clone Advisor 1: This is the same subject you identified working with the Trandoshans."
+
+SubtitleSound[3149]="CA1Y1542"
+SubtitleText[3149]="Clone Advisor 1: Looks like we finally found our mystery man."
+
+SubtitleSound[3150]="CA1Y1543"
+SubtitleText[3150]="Clone Advisor 1: His presence here signals something very important.  We've got to make sure it's Grievous.   Command requires 100% certainty."
+
+SubtitleSound[3151]="D62Y1513"
+SubtitleText[3151]="Delta 62: He sure gets around, this guy.."
+
+SubtitleSound[3152]="D40Y1515"
+SubtitleText[3152]="Delta 40: Looks like the same fighter craft we saw on Geonosis."
+
+SubtitleSound[3153]="CA1Y1544"
+SubtitleText[3153]="Clone Advisor 1: I'm processing our current Grievous dossier.  Lots of data."
+
+SubtitleSound[3154]="CA1Y1545"
+SubtitleText[3154]="Clone Advisor 1: Your recon and surveillance has been invaluable, Deltas.  Command appreciates this."
+
+SubtitleSound[3155]="CA1Y1513"
+SubtitleText[3155]="Clone Advisor 1: The Trandoshans have stepped up their presence here, so you'll need to find the slaver's camp without setting off any alarms if you want take it before reinforcements arrive."
+
+SubtitleSound[3156]="D38Y1500"
+SubtitleText[3156]="Delta 38: Slaver camp located."
+
+SubtitleSound[3157]="CA1Y1500"
+SubtitleText[3157]="Clone Advisor 1: Proceed, Deltas.  You should be able to rappel off that cliff into a clearing not far from the camp."
+
+SubtitleSound[3158]="CA1Y1501"
+SubtitleText[3158]="Clone Advisor 1: I'm scanning the area in your proximity now, Delta…"
+
+SubtitleSound[3159]="CA1Y1502"
+SubtitleText[3159]="Clone Advisor 1: Scans indicate you'll encounter light resistance, so you should be able to get in undetected.  "
+
+SubtitleSound[3160]="CA1Y1503"
+SubtitleText[3160]="Clone Advisor 1: Uh, Delta squad?  I read multiple signatures converging on your location…"
+
+SubtitleSound[3161]="D38Y1501"
+SubtitleText[3161]="Delta 38: Here they come!"
+
+SubtitleSound[3162]="D62Y1500"
+SubtitleText[3162]="Delta 62: So much for the element of surprise.  "
+
+SubtitleSound[3163]="D40Y1500"
+SubtitleText[3163]="Delta 40: It's a little too quite for my liking, sir."
+
+SubtitleSound[3164]="D38Y1502"
+SubtitleText[3164]="Delta 38: There's no other way.  Stay ready, Delta squad.  "
+
+SubtitleSound[3165]="D07Y1500"
+SubtitleText[3165]="Delta 07: Damn!  There goes our escape route!"
+
+SubtitleSound[3166]="D40Y1501"
+SubtitleText[3166]="Delta 40: They're on the catwalks! "
+
+SubtitleSound[3167]="D38Y1503"
+SubtitleText[3167]="Delta 38: We're outgunned!  Go for the door!  "
+
+SubtitleSound[3168]="D62Y1501"
+SubtitleText[3168]="Delta 62: No go, boss!  It's a trap!"
+
+SubtitleSound[3169]="D38Y1504"
+SubtitleText[3169]="Delta 38: Advisor, we're in deep here!"
+
+SubtitleSound[3170]="CA1Y1504"
+SubtitleText[3170]="Clone Advisor 1: Hold your rations, Delta!  There's a maintenance access hatch nearby."
+
+SubtitleSound[3171]="CA1Y1505"
+SubtitleText[3171]="Clone Advisor 1: Find it and blow your way in.  "
+
+SubtitleSound[3172]="D07Y1501"
+SubtitleText[3172]="Delta 07: Here's the hatch!"
+
+SubtitleSound[3173]="D40Y1502"
+SubtitleText[3173]="Delta 40: The hatch is here!"
+
+SubtitleSound[3174]="D38Y1505"
+SubtitleText[3174]="Delta 38: I found the hatch!"
+
+SubtitleSound[3175]="D62Y1502"
+SubtitleText[3175]="Delta 62: Hatch located!"
+
+SubtitleSound[3176]="CA1Y1506"
+SubtitleText[3176]="Clone Advisor 1: Blow it up and get out of there!"
+
+SubtitleSound[3177]="D07Y1502"
+SubtitleText[3177]="Delta 07: Where's it lead?"
+
+SubtitleSound[3178]="D62Y1503"
+SubtitleText[3178]="Delta 62: Who cares?  As long as it's not here!"
+
+SubtitleSound[3179]="CA1Y1507"
+SubtitleText[3179]="Clone Advisor 1: Excellent.  Secure the landing pad and proceed into the camp."
+
+SubtitleSound[3180]="D38Y1506"
+SubtitleText[3180]="Delta 38: The's door's blocked.  "
+
+SubtitleSound[3181]="CA1Y1508"
+SubtitleText[3181]="Clone Advisor 1: Three-Eight, those walls are full of structural weaknesses.  See if you can find one and blow through it."
+
+SubtitleSound[3182]="D38Y1507"
+SubtitleText[3182]="Delta 38: This wall looks pretty flimsy."
+
+SubtitleSound[3183]="D38Y1508"
+SubtitleText[3183]="Delta 38: Let's knock it down.  "
+
+SubtitleSound[3184]="D40Y1503"
+SubtitleText[3184]="Delta 40: They're on the catwalks!"
+
+SubtitleSound[3185]="CA1Y1509"
+SubtitleText[3185]="Clone Advisor 1: Scans indicate that the wookiees are being held in a building with a large communications antenna on it.  "
+
+SubtitleSound[3186]="CA1Y1510"
+SubtitleText[3186]="Clone Advisor 1: Find that detention facility and set those wookiees free."
+
+SubtitleSound[3187]="CA1Y1511"
+SubtitleText[3187]="Clone Advisor 1: That's the detention facility.  You should find Tarfful and the other wookiees in there."
+
+SubtitleSound[3188]="CA1Y1512"
+SubtitleText[3188]="Clone Advisor 1: Follow him. He'll show you where they took Tarfful."
+

@@ -1,0 +1,139 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+MissionObjective 1 "/Mission4Objective1/Defeat Depa Bilaba."
+MissionTitle "/Mission4Title/Saber Arena"
+SetExplorationNum 1
+SetForceUsesNeeded 4
+SetTimeToBeat 40
+SetDefaultSurface 09_mz_mrbl_d.sur
+
+
+CreateActor powerupexplorationmarker.dsc bob pu
+
+AddBattleLoop  m_saberArena_01_lp.wav  m_saberArena_01_end.wav  m_saberArena_01_lose.wav
+
+// actor jedi A_dueltrainingrobot_01  SA_01 //
+actor jedi A_dueldepabilaba_01  //SA_05//
+ //actor jedi A_DuelSaeseeTiin_01 SA_02 //
+//actor jedi A_DuelKiAdiMundi_01  SA_06 which comes after SA_02 //
+//actor jedi A_DuelAdiGallia_01  SA_07 //
+//actor jedi A_DuelPloKoon_01  SA_03 which comes after SA_07//
+//actor jedi A_DuelEethKoth_01  SA_08 which is after SA_03 //
+//actor jedi A_duelmacewindu_01  SA_04 which is after SA_08 //
+
+DisableDeathMessages
+MakeResurrectable jedi
+
+Teleport jedi dude
+LoadDLG Qui-Gon.dlg
+
+script "Start_Cutscene" 1
+{
+	TakeControlOf jedi
+	UnEquipWeapon jedi
+
+	WaitForAll
+	
+	BeginCutScene
+	FadeUpAndWait
+
+	WalkToNode jedi start_1
+	WaitUntilDoorOpen A_SA-Door_01
+	Pause 0.5
+	SayLineNonPositional jedi "/DepaBillaba_840a/ Are you ready to test your skills?"
+
+	WaitUntilArrived jedi start_1	
+
+	Pause 1
+
+	PreEndCutScene
+	StopTalking jedi
+	Teleport jedi bogan1	
+	EndCutScene
+		FadeUp
+    LockDoor A_SA-Door_01
+	PlayMusic BattleLoop
+	EnemyHealthMeter jedi
+	EquipWeapon	jedi
+	Pause 0.5
+	ReturnControlTo jedi
+	ForceTarget jedi obi
+
+	RemoveGroup 1
+	Save
+}
+
+Script "the_fight"
+{
+	Child TriggerUberGenAndWait A_z_UberGen_01 h1
+	Child TriggerUberGenAndWait A_z_UberGen_02 h2
+	Child TriggerUberGenAndWait A_z_UberGen_03 h3
+	Child TriggerUberGenAndWait A_z_UberGen_04 h4
+
+ConsoleCommand "r_maxshadows 2"
+CastShadows jedi true
+
+	if (IsGroupRemoved 1)
+	{
+		BeginCutScene
+		FadeUp
+		TakeControlOf jedi
+		WalkToNode jedi start_1
+		WaitUntilDoorOpen A_SA-Door_01
+		Pause 0.5
+		SayLineNonPositional jedi "/DepaBillaba_840a/ Are you ready to test your skills?"
+		WaitUntilArrived jedi start_1
+		PreEndCutScene
+		Teleport jedi bogan1	
+		EndCutScene
+		FadeUp
+		SetHitPointRatio obi 1	
+		
+		PlayMusic BattleLoop
+		EnemyHealthMeter jedi
+		EquipWeapon	jedi
+		Pause 0.5
+		ReturnControlTo jedi
+		ForceTarget jedi obi
+	}
+}
+
+script "Obi_Loses"
+{
+	ContinueWhenPlayerDies  // Make sure this script is not automatically ended when the player dies
+
+	WaitUntilKilled Obi
+	Pause 3
+
+	DisplayMessagePlayerDied
+}
+
+script "Obi_Wins"
+{
+	WaitUntilKilled jedi 
+	PlayMusic Victory
+	Pause 3
+	BeginCutScene
+	
+	LookAt obi jedi
+	Resurrect jedi
+	TakeControlOf jedi
+	ChildScript
+	{
+		PlayAnimationAndWait jedi human_deathfallback-getupslow_brace.anim 1.0 0.0
+		Follow jedi obi 2
+	}
+   
+	SayLineNonPositional jedi "/DepaBillaba_836/ Well fought, Padawan."
+	Pause 1
+	
+  	SetTeam obi 0
+   Pause 0 1
+
+	Fadedownandwait
+	PreEndCutscene
+	FadeDown 0
+	
+	SelectMission
+}

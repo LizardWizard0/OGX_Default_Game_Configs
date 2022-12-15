@@ -1,0 +1,72 @@
+state Base {
+	Conditions {
+		if GotTriggerArea == 1 goto PatrolWithTrigger
+		if PreviousResult == 0 goto Patrol
+	}
+	Actions {
+		SetFormationCommander
+		FormationMove
+	}
+}
+
+state Patrol {
+	Conditions {
+		if GotOpponent == 1 goto StartFight
+
+		if BeenAlerted == 1 goto StartFight
+	}
+	Actions {
+		FollowPath "walk"
+	}
+}
+
+state PatrolWithTrigger {
+	Conditions {
+		if OpponentInTriggerArea == 1 and
+		if GotOpponent == 1 goto StartFight
+
+		if BeenAlerted == 1 goto StartFight
+	}
+	Actions {
+		FollowPath "walk"
+	}
+}
+
+state StartFight {
+	Conditions {
+	}
+	Actions {
+		BreakFormation
+		GoToLevelPath
+		SetState "Fight"
+	}
+}
+
+state Approach {
+	Conditions {
+	if GotOpponent == 1 goto Fight
+	}
+	Actions {
+		FollowPlayer
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+		if IAmA "BattleDroid_Commander" == 1 goto CommanderFight
+		if IAmA "clone_ep3_sand" == 1 goto CommanderFight
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}
+
+state CommanderFight {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+	}
+	Actions {
+		EngageOpponent "goalrange 2" "firerange 3"
+	}
+}

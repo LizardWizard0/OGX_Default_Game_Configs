@@ -1,0 +1,911 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Int    BeginMission                0
+Int    AlarmsSetOff                0
+Int    Zone01-Alarm01-Destroyed    0
+Int    Zone01-Alarm02-Destroyed    0
+Int    Zone01-Alarm03-Destroyed    0
+Int    Zone02-Alarm01-Destroyed    0
+Int    Zone02-Alarm02-Destroyed    0
+Int    ExploreMarkerFound01        0
+Int    ExploreMarkerFound02        0
+
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_04.wav Suspense
+AddMusic l05_4_cs_02.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension 
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_13.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_victory_03.wav Battle
+AddMusic m_victory_04.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_battle_13_lp.wav  m_battle_12_win.wav  m_battle_13_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "Walk" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakePartialControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+            WaitUntilNear Guy Obi 5.0
+            ReturnControlTo Guy
+            EndFunction "Run"
+    }
+
+	WalkToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakePartialControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+            WaitUntilNear Guy Obi 5.0
+            ReturnControlTo Guy
+            EndFunction "Run"
+    }
+    
+	RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "Activate" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+
+    Teleport Guy StartSpot
+	TakePartialControlOf Guy
+
+    Childscript "Activate Interrupted"
+    {
+         WaitUntilNear Guy Obi 5.0
+         ReturnControlTo Guy
+         EndFunction "Activate"
+    }
+
+	RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}
+
+Function "SetStart" (Int StartNum, Int GroupNum)
+{
+    If (<> GroupNum 0)
+    {
+        RemoveGroup GroupNum
+    }
+
+    SetStartPosition StartNum
+    Save
+}
+
+Function "PowerUpRemoval" (Actor PowerUp, Int PowerUpGroup)
+{
+    WaitUntilRemoved PowerUp
+    If (= PowerUpGroup 21)
+    {
+        Set ExploreMarkerFound01 1
+    }
+    If (= PowerUpGroup 22)
+    {
+        Set ExploreMarkerFound02 1
+    }
+    RemoveGroup PowerUpGroup
+//    Save
+}
+
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene" 32
+{
+    TakeControlOf Obi
+    
+  	BeginCutScene
+	Int exitedEarly 1
+
+	CameraFixed StartShot01
+	PlayFlourish cut_5_3aintro_m.wav
+	FadeUpAndWait
+    // Trigger Starfighter flyby
+//    TriggerUberGen A_z_UberGen_01
+//    TriggerUberGen A_z_UberGen_02
+//    TriggerUberGen A_z_UberGen_03
+    // Trigger Starfighter flyby
+    TriggerUberGen A_z_UberGen_04
+    TriggerUberGen A_z_UberGen_05
+
+	Pause 0 10	
+ 
+	ChildScript "Rambling"
+	{
+		CommunicatorOn
+		CommunicatorMessageAndWait "/Asha_609/Obi-Wan.  Our spies report that our pilots are being moved to the observatory at the top of the main tower." asha.dlg
+		CommunicatorMessageAndWait "/Asha_610/It is heavily guarded and can only be reached by the access bridge that extends from the waterfall side of the mountain."  asha.dlg    
+		CommunicatorMessageAndWait "/Asha_613/You must find a way to break into the tower, free our pilots from their holding cells, and escort them safely back to the resistance zone."  asha.dlg    
+		CommunicatorMessageAndWait "/Asha_614/If you do happen to be detected, be sure to take out any enemies that you encounter before they can alert the others by sounding the alarm."  asha.dlg    
+		CommunicatorMessageAndWait "/Asha_616/Good luck Obi-Wan, and may the force be with you!"  asha.dlg    
+	}
+		 
+	MoveCameraAndWait bogan1 16 6 6
+	Pause 1
+	MoveCameraAndWait bogan2 0
+	Pause 2
+	Child MoveCameraAndWait bogan3 10 5 5
+	
+	Pause 5
+    WalkToNodeAndWait Obi Obi-StartSpot01
+    
+//    CommunicatorMessageAndWait "/Asha_611/Be mindful, Obi-Wan.  This is a maximum security area and you can be sure that all the battledroids are on high alert."  asha.dlg
+//    CommunicatorMessageAndWait "/Asha_612/It would be wise to minimize your exposure by sticking to shadows and avoid making any unnecessary sounds that might bring attention to yourself."  asha.dlg
+//    CommunicatorMessageAndWait "/Asha_615/The success of this rescue is essential to our plans for taking back Naboo from the Trade Federation."  asha.dlg
+
+	CommunicatorOff
+
+	DisableAudioFades
+	FadeDownAndWait 1
+
+	Set exitedEarly 0
+	PreEndCutScene
+	EndScript "Rambling"
+	CommunicatorOff
+	FadeDown 0.0
+	Teleport Obi Obi-StartSpot01
+	ReturnControlTo Obi
+	Set BeginMission 1
+
+	if (= exitedEarly 1)
+	{
+		StopMusic
+	}
+
+	StartMusicManager
+	EndCutScene
+
+	FadeUpAndWait
+	EnableAudioFades
+
+	SetStartPosition 1
+	RemoveGroup 32
+	Save
+}
+
+Script "Opening Cutscene 2" 31
+{
+    If (IsGroupRemoved 32)
+    {
+        Set BeginMission 0
+        StartMusicManager
+        FadeUpAndWait
+        Set BeginMission 1
+    }
+}
+
+Script "Obi-Wan Death Cleanup"
+{
+    ContinueWhenPlayerDies
+    
+    WaitUntilKilled Obi
+    
+//    Set BeginMission 0
+//    Save
+}
+
+Script "Level Transistion To L05_3B"
+{
+    WaitUntilEqual BeginMission 1
+    WaitUntilEnteredRegion Obi L05_3B_Trig
+    
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    
+    PreEndCutscene
+    FadeDown 0.0
+    Set BeginMission 0
+    EndCutscene
+    
+    RemoveGroup 2
+    SetStartPosition 3
+    Save
+    
+    NextPart L05_3B
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 08_13fnttop.sur
+}
+
+Script "PDA/Scoring Info"
+{
+    MissionTitle "/Mission23Title/Captives Of The Federation"
+    MissionObjective 1 "/Mission23Objective1/Sneak into the detention area."
+    MissionObjective 2 "/Mission23Objective2/Escort the starfighter pilots to safety."
+    SetTimeToBeat 11 45
+    SetExplorationNum 5
+	SetForceUsesNeeded 20
+}
+
+Script "Set Far Clip"
+{
+//    SetFarClip 325 0
+}
+
+Script "Set Pain Region Values"
+{
+    SetPainRegion Pain_Rgn_02 9999.0    
+}
+
+Script "Load DLG Files"
+{
+    LoadDLG asha.dlg
+    LoadDLG bad.dlg
+}
+
+Script "Initialize Locked Doors"
+{
+    LockDoor A_05_3_PalaceDoor_01_01
+    LockDoor A_05_3_PalaceDoor_01_05
+    LockDoor A_05_3_PalaceDoor_01_12
+}
+
+Script "Initialize Forcefields"
+{
+    //Turn off forcefield to L05_3B
+    Nudge Obi A_5-5_ff_controller_02
+}
+
+Script "Initialize Alarm Consoles"
+{
+    Actor Alarm01        A_5-3_alarm_01
+    Actor Alarm02        A_5-3_alarm_02
+    Actor Alarm03        A_5-3_alarm_05
+    Actor Alarm04        A_5-3_alarm_03
+    Actor Alarm05        A_5-3_alarm_04
+
+    
+    If (= Zone01-Alarm01-Destroyed 1)
+    {
+        Kill Alarm01
+    }
+    If (= Zone01-Alarm02-Destroyed 1)
+    {
+        Kill Alarm02
+    }
+    If (= Zone01-Alarm03-Destroyed 1)
+    {
+        Kill Alarm03
+    }
+    If (= Zone02-Alarm01-Destroyed 1)
+    {
+        Kill Alarm04
+    }
+    If (= Zone02-Alarm02-Destroyed 1)
+    {
+        Kill Alarm05
+    }
+}
+
+Script "Zone02-Sniper Region 01" 2
+{
+    Actor Sniper01     A_Battledroid-Sniper_01
+    Actor Sniper02     A_Battledroid-Sniper_02    
+
+
+    WaitUntilEnteredRegion Obi Z02-Sniper_Rgn_01
+    ForceTarget Sniper01 Obi
+    ForceTarget Sniper02 Obi        
+    
+    WaitUntilExitedRegion Obi Z02-Sniper_Rgn_01
+    ForceTargetOff Sniper01
+    ForceTargetOff Sniper02
+
+    Loop
+}
+
+Script "Zone02-Sniper Region 01 Check" 2
+{
+    Actor Sniper01     A_Battledroid-Sniper_01
+    Actor Sniper02     A_Battledroid-Sniper_02    
+
+
+    Child WaitUntilKilled Sniper01
+    Child WaitUntilKilled Sniper02
+    WaitForAll
+    
+    EndScript "Zone02-Sniper Region 01"
+}
+
+Script "Exploration Markers"
+{
+    Call PowerUpRemoval (A_powerupexplorationmarker_01, 21)
+    Call PowerUpRemoval (A_powerupexplorationmarker_02, 22)
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//-------------------------- Start Positions --------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Start Position 02" 2
+{
+    WaitUntilEnteredRegion Obi Start_Rgn_01
+    RemoveGroup 1
+    SetStartPosition 2
+    Save
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Patrols ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Zone01-BAD Patrol 01" 1
+{
+    Actor Commander04    A_Battledroid-Commander_04
+    Actor Commander05    A_Battledroid-Commander_05
+
+    SetPatrolTypes Commander04 1
+    SetPatrolTypes Commander05 2        
+    SetPatrolAttentionSpan Commander04 300.0
+    SetPatrolAttentionSpan Commander05 300.0
+    AddPatrolState Commander04    
+    AddPatrolState Commander05
+}
+
+Script "Zone01-BAD Patrol 02" 2
+{
+    Actor Commander02    A_Battledroid-Commander_02
+    Actor Infantry15     A_Battledroid-Infantry_15
+    Actor Infantry16     A_Battledroid-Infantry_16
+    Actor Infantry17     A_Battledroid-Infantry_17
+    
+    
+    TakeControlOf Infantry15
+    TakeControlOf Infantry16
+    TakeControlOf Infantry17        
+
+    FollowDirectional Infantry15 Commander02 2.5 135
+    FollowDirectional Infantry16 Commander02 2.0 180    
+    FollowDirectional Infantry17 Commander02 2.5 225
+	 
+	//For intro cutscene
+	Teleport Commander02 bad1
+	Teleport Infantry15 bad2
+	Teleport Infantry16 bad3
+	Teleport Infantry17 bad4
+	WalkToNode Commander02 node_bogan
+	
+    SetPatrolTypes Commander02 1
+    SetPatrolAttentionSpan Commander02 300.0
+    AddPatrolState Commander02
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander02
+        
+        ReturnControlTo Infantry15
+        ReturnControlTo Infantry16
+        ReturnControlTo Infantry17
+    }
+    
+    WaitUntilStateActivated Commander02 Attack
+    
+    EndScript "Commander Killed"
+        
+    ReturnControlTo Infantry15
+    ReturnControlTo Infantry16
+    ReturnControlTo Infantry17
+        
+    ForceTarget Infantry15 Obi
+    ForceTarget Infantry16 Obi
+    ForceTarget Infantry17 Obi
+}
+
+Script "Zone02-BAD Patrol 01" 2
+{
+    Actor Commander01    A_Battledroid-Commander_01
+    Actor Infantry09     A_Battledroid-Infantry_09
+    Actor Infantry10     A_Battledroid-Infantry_10
+    Actor Infantry11     A_Battledroid-Infantry_11
+ 
+
+    TakeControlOf Infantry09
+    TakeControlOf Infantry10
+    TakeControlOf Infantry11        
+
+    FollowDirectional Infantry09 Commander01 2.5 135
+    FollowDirectional Infantry10 Commander01 2.0 180    
+    FollowDirectional Infantry11 Commander01 2.5 225  
+    
+    SetPatrolTypes Commander01 1
+    SetPatrolAttentionSpan Commander01 300.0
+    AddPatrolState Commander01
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander01
+        
+        ReturnControlTo Infantry09
+        ReturnControlTo Infantry10
+        ReturnControlTo Infantry11
+    }
+    
+    WaitUntilStateActivated Commander01 Attack
+    
+    EndScript "Commander Killed"
+        
+    ReturnControlTo Infantry09
+    ReturnControlTo Infantry10
+    ReturnControlTo Infantry11
+        
+    ForceTarget Infantry09 Obi
+    ForceTarget Infantry10 Obi
+    ForceTarget Infantry11 Obi
+}
+
+Script "Zone02-BAD Patrol 02" 2
+{
+    Actor Commander03    A_Battledroid-Commander_03
+    Actor Infantry12     A_Battledroid-Infantry_12
+    Actor Infantry13     A_Battledroid-Infantry_13
+    Actor Infantry14     A_Battledroid-Infantry_14
+
+
+    TakeControlOf Infantry12
+    TakeControlOf Infantry13
+    TakeControlOf Infantry14        
+
+    FollowDirectional Infantry12 Commander03 2.5 135
+    FollowDirectional Infantry13 Commander03 2.0 180    
+    FollowDirectional Infantry14 Commander03 2.5 225  
+    
+    SetPatrolTypes Commander03 2
+    SetPatrolAttentionSpan Commander03 300.0
+    AddPatrolState Commander03
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander03
+        
+        ReturnControlTo Infantry12
+        ReturnControlTo Infantry13
+        ReturnControlTo Infantry14
+    }
+
+    WaitUntilStateActivated Commander03 Attack
+    
+    EndScript "Commander Killed"
+        
+    ReturnControlTo Infantry12
+    ReturnControlTo Infantry13
+    ReturnControlTo Infantry14
+        
+    ForceTarget Infantry12 Obi
+    ForceTarget Infantry13 Obi
+    ForceTarget Infantry14 Obi
+}
+
+
+////////////////////////////////////////////////////////////////////////
+//------------------------------ Alarms ------------------------------//
+////////////////////////////////////////////////////////////////////////
+
+Script "Zone01-Alarm 01" 1
+{
+    Actor Alarm         A_5-3_alarm_01
+    Actor Infantry07    A_Battledroid-Infantry_07
+    Actor Security21    A_Battledroid-Security_21
+    Actor Security22    A_Battledroid-Security_22
+    Actor Security23    A_Battledroid-Security_23
+    Actor Security24    A_Battledroid-Security_24            
+
+
+    Script "Zone01-Alarm Station 01"
+    {
+        WaitUntilNudged Alarm
+        Increment AlarmsSetOff 1
+    
+        ChildScript "Zone01-Alarm Sound 01"
+        {
+            PlayAudioCueAndWait Alarm PointSoundOneshot_01
+            Loop
+        }
+        
+        Teleport Security21 Zone01H-Spot01
+        Teleport Security22 Zone01H-Spot02
+        Teleport Security23 Zone01H-Spot03
+        Teleport Security24 Zone01H-Spot04
+
+        UnlockDoor A_05_3_Door_01_01
+
+        Call "Run" (Security21, Zone01-Alarm01-Spot01, 0.0)
+        Call "Run" (Security22, Zone01-Alarm01-Spot02, 1.0)
+        Call "Run" (Security23, Zone01-Alarm01-Spot03, 2.0)
+        Call "Run" (Security24, Zone01-Alarm01-Spot04, 3.0)
+        
+        ReturnControlTo Infantry07
+        WaitUntilKilled Alarm   
+        Set Zone01-Alarm01-Destroyed 1
+        EndScript "Zone01-Alarm 01"
+    }
+    
+    Script "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        Set Zone01-Alarm01-Destroyed 1        
+        ReturnControlTo Infantry07
+        ForceTarget Infantry07 Obi
+        EndScript "Zone01-Alarm Station 01"        
+        EndScript "Zone01-Alarm 01"
+    }
+
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry07
+        EndScript "Zone01-Alarm 01"
+    }
+
+    WaitUntilStateActivated Infantry07 Attack
+    
+    TakeControlOf Infantry07
+    RunToNodeAndWait Infantry07 Zone01-Alarm01
+    
+    LookAt Infantry07 Alarm
+    Sayline Infantry07 "/BattledroidInfantry_1290/Intruder detected in Sector 1-A.  Send reinforcements!" PushButton        
+    Nudge Infantry07 Alarm
+
+    EndScript "Alarm Interrupted"
+          
+    ReturnControlTo Infantry07
+    ForceTarget Infantry07 Obi
+}
+
+Script "Zone01-Alarm 02" 1
+{
+    Actor Alarm         A_5-3_alarm_02
+    Actor Infantry04    A_Battledroid-Infantry_04
+    Actor Security25    A_Battledroid-Security_25
+    Actor Security26    A_Battledroid-Security_26
+    Actor Security27    A_Battledroid-Security_27
+    Actor Security28    A_Battledroid-Security_28            
+
+        
+    Script "Zone01-Alarm Station 02"
+    {
+        WaitUntilNudged Alarm
+        Increment AlarmsSetOff 1        
+        
+        ChildScript "Zone01-Alarm Sound 02"
+        {
+            PlayAudioCueAndWait Alarm PointSoundOneshot_01
+            Loop
+        }
+    
+        Teleport Security25 Zone01HB-Spot01
+        Teleport Security26 Zone01HB-Spot02
+        Teleport Security27 Zone01HB-Spot03
+        Teleport Security28 Zone01HB-Spot04
+
+        UnlockDoor A_05_3_Door_01_02
+
+        Call "Run" (Security25, Zone01-Alarm02-Spot01, 0.0)
+        Call "Run" (Security26, Zone01-Alarm02-Spot02, 1.0)
+        Call "Run" (Security27, Zone01-Alarm02-Spot03, 2.0)
+        Call "Run" (Security28, Zone01-Alarm02-Spot04, 3.0)
+    
+        ReturnControlTo Infantry04
+        WaitUntilKilled Alarm        
+        Set Zone01-Alarm02-Destroyed 1
+        EndScript "Zone01-Alarm 02"
+    }
+
+    Script "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        Set Zone01-Alarm02-Destroyed 1        
+        ReturnControlTo Infantry04
+        ForceTarget Infantry04 Obi
+        Save
+        EndScript "Zone01-Alarm Station 02"        
+        EndScript "Zone01-Alarm 02"
+    }
+
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry04
+        EndScript "Zone01-Alarm 02"
+    }
+        
+    WaitUntilStateActivated Infantry04 Attack
+    
+    TakeControlOf Infantry04
+    RunToNodeAndWait Infantry04 Zone01-Alarm02
+    
+    LookAt Infantry04 Alarm
+    Sayline Infantry04 "/BattledroidInfantry_1291/Intruder detected in Sector 1-B.  Send reinforcements!" PushButton        
+    Nudge Infantry04 Alarm
+    
+    EndScript "Alarm Interrupted"
+
+    ReturnControlTo Infantry04
+    ForceTarget Infantry04 Obi    
+}
+
+Script "Zone01-Alarm 03" 2
+{
+    Actor Alarm          A_5-3_alarm_05
+    Actor Commander02    A_Battledroid-Commander_02
+    Actor Security01     A_Battledroid-Security_01
+    Actor Security02     A_Battledroid-Security_02
+    Actor Security03     A_Battledroid-Security_03
+    Actor Security04     A_Battledroid-Security_04            
+
+        
+    Script "Zone01-Alarm Station 03"
+    {
+        WaitUntilNudged Alarm
+        Increment AlarmsSetOff 1        
+    
+        ChildScript "Zone01-Alarm Sound 03"
+        {
+            PlayAudioCueAndWait Alarm PointSoundOneshot_01
+            Loop
+        }
+    
+        Teleport Security01 Zone01RB-Spot01
+        Teleport Security02 Zone01RB-Spot02
+        Teleport Security03 Zone01RB-Spot03
+        Teleport Security04 Zone01RB-Spot04
+
+        UnlockDoor A_05_3_PalaceDoor_01_05
+
+        Call "Run" (Security01, Zone01-Alarm03-Spot01, 0.0)
+        Call "Run" (Security02, Zone01-Alarm03-Spot02, 1.0)
+        Call "Run" (Security03, Zone01-Alarm03-Spot03, 2.0)
+        Call "Run" (Security04, Zone01-Alarm03-Spot04, 3.0)
+    
+        ReturnControlTo Commander02
+        WaitUntilKilled Alarm        
+        Set Zone01-Alarm03-Destroyed 1        
+        EndScript "Zone01-Alarm 03"
+    }
+    
+    Script "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        Set Zone01-Alarm03-Destroyed 1        
+        ReturnControlTo Commander02
+        ForceTarget Commander02 Obi
+        EndScript "Zone01-Alarm Station 03"        
+        EndScript "Zone01-Alarm 03"
+    }
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Commander02
+        EndScript "Zone01-Alarm 03"
+    }
+    
+    WaitUntilStateActivated Commander02 Attack
+    
+    TakeControlOf Commander02
+    RunToNodeAndWait Commander02 Zone01-Alarm03
+    
+    LookAt Commander02 Alarm
+    Sayline Commander02 "/BattledroidInfantry_1291/Intruder detected in Sector 1-B.  Send reinforcements!" PushButton        
+    Nudge Commander02 Alarm
+    
+    EndScript "Alarm Interrupted"
+
+    ReturnControlTo Commander02
+    ForceTarget Commander02 Obi    
+}
+
+Script "Zone02-Alarm 01" 2
+{
+    Actor Alarm          A_5-3_alarm_03
+    Actor Commander03    A_Battledroid-Commander_03
+    Actor Security29     A_Battledroid-Security_29
+    Actor Security30     A_Battledroid-Security_30
+    Actor Security31     A_Battledroid-Security_31
+    Actor Security32     A_Battledroid-Security_32
+
+
+    Script "Zone02-Alarm Station 01"
+    {
+        WaitUntilNudged Alarm    
+        Increment AlarmsSetOff 1        
+
+        ChildScript "Zone02-Alarm Sound 01"
+        {
+            PlayAudioCueAndWait Alarm PointSoundOneshot_01
+            Loop
+        }
+
+        Teleport Security29 Zone02R-Spot05
+        Teleport Security30 Zone02R-Spot06
+        Teleport Security31 Zone02R-Spot07
+        Teleport Security32 Zone02R-Spot08
+                        
+        UnlockDoor A_05_3_PalaceDoor_01_12
+
+        Call "Run" (Security29, Zone02-Alarm01-Spot01, 0.0)
+        Call "Run" (Security30, Zone02-Alarm01-Spot02, 1.0)
+        Call "Run" (Security31, Zone02-Alarm01-Spot03, 2.0)
+        Call "Run" (Security32, Zone02-Alarm01-Spot04, 3.0)
+    
+        ForceTarget Security29 Obi
+        ForceTarget Security30 Obi
+        ForceTarget Security31 Obi
+        ForceTarget Security32 Obi
+        
+        ReturnControlTo Commander03
+        WaitUntilKilled Alarm
+        Set Zone02-Alarm01-Destroyed 1
+        EndScript "Zone02-Alarm 01"        
+    }                
+    
+    Script "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        Set Zone02-Alarm01-Destroyed 1        
+        ReturnControlTo Commander03
+        ForceTarget Commander03 Obi
+        EndScript "Zone02-Alarm Station 01"
+        EndScript "Zone02-Alarm 01"
+    }
+
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Commander03
+        EndScript "Zone02-Alarm 01"
+    }
+        
+    WaitUntilStateActivated Commander03 Attack
+    
+    TakeControlOf Commander03
+    RunToNodeAndWait Commander03 Zone02-Alarm01
+    
+    LookAt Commander03 Alarm
+    Sayline Commander03 "/BattledroidInfantry_1293/Intruder detected in Sector 2-B.  Send reinforcements!" Typing
+    Nudge Commander03 Alarm
+    
+    EndScript "Alarm Interrupted"    
+
+    ReturnControlTo Commander03
+    ForceTarget Commander03 Obi
+}
+
+Script "Zone02-Alarm 02" 2
+{
+    Actor Alarm          A_5-3_alarm_04
+    Actor Commander01    A_Battledroid-Commander_01
+    Actor Security33     A_Battledroid-Security_33
+    Actor Security34     A_Battledroid-Security_34
+    Actor Security35     A_Battledroid-Security_35
+    Actor Security36     A_Battledroid-Security_36
+
+    
+    Script "Zone02-Alarm Station 02"
+    {
+        WaitUntilNudged Alarm
+        Increment AlarmsSetOff 1        
+        
+        ChildScript "Zone02-Alarm Sound 02"
+        {
+            PlayAudioCueAndWait Alarm PointSoundOneshot_01
+            Loop
+        }
+        
+        Teleport Security33 Zone02R-Spot01
+        Teleport Security34 Zone02R-Spot02
+        Teleport Security35 Zone02R-Spot03
+        Teleport Security36 Zone02R-Spot04
+
+        UnlockDoor A_05_3_PalaceDoor_01_12
+
+        Call "Run" (Security33, Zone02-Alarm02-Spot01, 0.0)
+        Call "Run" (Security34, Zone02-Alarm02-Spot02, 1.0)
+        Call "Run" (Security35, Zone02-Alarm02-Spot03, 2.0)
+        Call "Run" (Security36, Zone02-Alarm02-Spot04, 3.0)
+   
+        ForceTarget Security33 Obi
+        ForceTarget Security34 Obi
+        ForceTarget Security35 Obi
+        ForceTarget Security36 Obi
+        
+        ReturnControlTo Commander01
+        WaitUntilKilled Alarm
+        Set Zone02-Alarm02-Destroyed 1
+        EndScript "Zone02-Alarm 02"        
+    }
+                            
+    Script "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        Set Zone02-Alarm02-Destroyed 1        
+        ReturnControlTo Commander01
+        ForceTarget Commander01 Obi
+        EndScript "Zone02-Alarm Station 02"        
+        EndScript "Zone02-Alarm 02"
+    }
+
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Commander01
+        EndScript "Zone02-Alarm 02"
+    }
+    
+    WaitUntilStateActivated Commander01 Attack
+
+    TakeControlOf Commander01
+    RunToNodeAndWait Commander01 Zone02-Alarm02
+    
+    LookAt Commander01 Alarm
+    Sayline Commander01 "/BattledroidInfantry_1292/Intruder detected in Sector 2-A.  Send reinforcements!" Typing
+    Nudge Commander01 Alarm
+    
+    EndScript "Alarm Interrupted"    
+    
+    ReturnControlTo Commander01
+    ForceTarget Commander01 Obi    
+}

@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<fighterlist>
+
+	<fighter>
+		<name>HOUSE</name>
+		<model>V2IP_003A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>House (STF)</dispname>
+		<ID>0</ID>
+		<coreID>63</coreID>
+		<checkIndex>0</checkIndex>
+		<order>55</order>
+		<speechID>507</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BO</name>
+		<model>V2IP_012A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Bo (MAR)</dispname>
+		<ID>1</ID>
+		<coreID>56</coreID>
+		<checkIndex>0</checkIndex>
+		<order>48</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>NYNE</name>
+		<model>V2IP_009A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Nyne (STF)</dispname>
+		<ID>2</ID>
+		<coreID>55</coreID>
+		<checkIndex>0</checkIndex>
+		<order>47</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>TRICK</name>
+		<model>V2IP_013A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Trick (STF)</dispname>
+		<ID>3</ID>
+		<coreID>74</coreID>
+		<checkIndex>0</checkIndex>
+		<order>72</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CRUZ</name>
+		<model>V2IP_007A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Cruz (WRE)</dispname>
+		<ID>4</ID>
+		<coreID>60</coreID>
+		<checkIndex>0</checkIndex>
+		<order>52</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CHECHO</name>
+		<model>V2IP_017A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Checho</dispname>
+		<ID>5</ID>
+		<coreID>76</coreID>
+		<checkIndex>0</checkIndex>
+		<order>74</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SKULL</name>
+		<model>V2IP_018A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Skull (SUB)</dispname>
+		<ID>6</ID>
+		<coreID>71</coreID>
+		<checkIndex>1</checkIndex>
+		<order>63</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>TREJO</name>
+		<model>V2IP_112A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Trejo (STF)</dispname>
+		<ID>7</ID>
+		<coreID>23</coreID>
+		<checkIndex>0</checkIndex>
+		<order>17</order>
+		<speechID>8</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>ICE-T</name>
+		<model>V2IP_132A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Ice-T (SUB)</dispname>
+		<ID>8</ID>
+		<coreID>15</coreID>
+		<checkIndex>0</checkIndex>
+		<order>9</order>
+		<speechID>33</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SOLO</name>
+		<model>V2IP_011A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Solo (MAR)</dispname>
+		<ID>9</ID>
+		<coreID>62</coreID>
+		<checkIndex>0</checkIndex>
+		<order>54</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>WIDOWMAKER</name>
+		<model>V2IP_201A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Meca (KIC)</dispname>
+		<ID>10</ID>
+		<coreID>75</coreID>
+		<checkIndex>0</checkIndex>
+		<order>73</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>ELEPHANTMAN</name>
+		<model>V2IP_127A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Elephant Man (KIC)</dispname>
+		<ID>11</ID>
+		<coreID>38</coreID>
+		<checkIndex>0</checkIndex>
+		<order>32</order>
+		<speechID>10</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SEAN PAUL</name>
+		<model>V2IP_125A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Sean Paul (MAR)</dispname>
+		<ID>12</ID>
+		<coreID>20</coreID>
+		<checkIndex>0</checkIndex>
+		<order>14</order>
+		<speechID>27</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CHIANG</name>
+		<model>V2IP_006A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Chiang (MAR)</dispname>
+		<ID>13</ID>
+		<coreID>66</coreID>
+		<checkIndex>0</checkIndex>
+		<order>58</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>MASA</name>
+		<model>V2IP_005A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Masa (SUB)</dispname>
+		<ID>14</ID>
+		<coreID>67</coreID>
+		<checkIndex>0</checkIndex>
+		<order>59</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>TDB</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>15</ID>
+		<coreID>77</coreID>
+		<checkIndex>1</checkIndex>
+		<order>75</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>WC</name>
+		<model>V2IP_303A</model>
+		<shadow>V2SD_3EA</shadow>
+		<dispname>WC (MAR)</dispname>
+		<ID>16</ID>
+		<coreID>24</coreID>
+		<checkIndex>0</checkIndex>
+		<order>18</order>
+		<speechID>31</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CRACK</name>
+		<model>V2IP_106A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Crack (WRE)</dispname>
+		<ID>17</ID>
+		<coreID>17</coreID>
+		<checkIndex>0</checkIndex>
+		<order>11</order>
+		<speechID>12</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BAXTER</name>
+		<model>V2IP_015A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Baxter (STF)</dispname>
+		<ID>18</ID>
+		<coreID>58</coreID>
+		<checkIndex>0</checkIndex>
+		<order>50</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>DAN G</name>
+		<model>V2IP_004A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Dan-G (STF)</dispname>
+		<ID>19</ID>
+		<coreID>57</coreID>
+		<checkIndex>0</checkIndex>
+		<order>49</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CRAZY LEGS</name>
+		<model>V2IP_121A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Crazy Legs (MAR)</dispname>
+		<ID>20</ID>
+		<coreID>35</coreID>
+		<checkIndex>0</checkIndex>
+		<order>29</order>
+		<speechID>7</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>FLAVA FLAV</name>
+		<model>V2IP_110A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>FlavaFlav (MAR)</dispname>
+		<ID>21</ID>
+		<coreID>26</coreID>
+		<checkIndex>0</checkIndex>
+		<order>20</order>
+		<speechID>13</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>MAGIC</name>
+		<model>V2IP_128A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Magic (SUB)</dispname>
+		<ID>22</ID>
+		<coreID>11</coreID>
+		<checkIndex>0</checkIndex>
+		<order>5</order>
+		<speechID>2</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BUBBA SPARXX</name>
+		<model>V2IP_107A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Bubba Sparxxx (WRE)</dispname>
+		<ID>23</ID>
+		<coreID>28</coreID>
+		<checkIndex>0</checkIndex>
+		<order>22</order>
+		<speechID>1</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>LIL FLIP</name>
+		<model>V2IP_307A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Lil Flip (MAR)</dispname>
+		<ID>24</ID>
+		<coreID>34</coreID>
+		<checkIndex>0</checkIndex>
+		<order>28</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BANNER</name>
+		<model>V2IP_124A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>DavidBanner (STF)</dispname>
+		<ID>25</ID>
+		<coreID>16</coreID>
+		<checkIndex>0</checkIndex>
+		<order>10</order>
+		<speechID>9</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BLESS</name>
+		<model>V2IP_101A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Bless (MAR)</dispname>
+		<ID>26</ID>
+		<coreID>39</coreID>
+		<checkIndex>0</checkIndex>
+		<order>33</order>
+		<speechID>35</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>ROME</name>
+		<model>V2IP_010A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Rome (STF)</dispname>
+		<ID>27</ID>
+		<coreID>61</coreID>
+		<checkIndex>0</checkIndex>
+		<order>53</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>HAVOC</name>
+		<model>V2IP_118A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Havoc (MAR)</dispname>
+		<ID>28</ID>
+		<coreID>33</coreID>
+		<checkIndex>0</checkIndex>
+		<order>27</order>
+		<speechID>16</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>TBD_SOUTH</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>29</ID>
+		<coreID>78</coreID>
+		<checkIndex>1</checkIndex>
+		<order>76</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>FAM LAY</name>
+		<model>V2IP_120A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Fam Lay (STF)</dispname>
+		<ID>30</ID>
+		<coreID>37</coreID>
+		<checkIndex>0</checkIndex>
+		<order>31</order>
+		<speechID>11</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BONECRUSHER</name>
+		<model>V2IP_111A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Bonecrusher (WRE)</dispname>
+		<ID>31</ID>
+		<coreID>18</coreID>
+		<checkIndex>0</checkIndex>
+		<order>12</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>KURUPT</name>
+		<model>V2IP_130A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Slick Rick (SUB)</dispname>
+		<ID>32</ID>
+		<coreID>29</coreID>
+		<checkIndex>0</checkIndex>
+		<order>23</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BABY CHRIS</name>
+		<model>V2IP_122A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Chris (KIC)</dispname>
+		<ID>33</ID>
+		<coreID>40</coreID>
+		<checkIndex>0</checkIndex>
+		<order>34</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>MACK 10</name>
+		<model>V2IP_117A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Mack10 (STF)</dispname>
+		<ID>34</ID>
+		<coreID>30</coreID>
+		<checkIndex>0</checkIndex>
+		<order>24</order>
+		<speechID>20</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>XZIBIT</name>
+		<model>V2IP_115A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Xzibit (KIC)</dispname>
+		<ID>35</ID>
+		<coreID>13</coreID>
+		<checkIndex>0</checkIndex>
+		<order>7</order>
+		<speechID>32</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>WarrenG</name>
+		<model>V2IP_306A</model>
+		<shadow>V2SD_3EA</shadow>
+		<dispname>WarrenG (KIC)</dispname>
+		<ID>36</ID>
+		<coreID>41</coreID>
+		<checkIndex>1</checkIndex>
+		<order>35</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CROW2</name>
+		<model>V2IP_126B</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Crow2 (NO PLAYABLE)</dispname>
+		<ID>37</ID>
+		<coreID>2</coreID>
+		<checkIndex>1</checkIndex>
+		<order>66</order>
+		<speechID>28</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>---41</name>
+		<model>V2IP_407A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Kimora (STF)</dispname>
+		<ID>38</ID>
+		<coreID>46</coreID>
+		<checkIndex>1</checkIndex>
+		<order>40</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>---42</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>Gwen (STF)<dispname>
+		<ID>39</ID>
+		<coreID>50</coreID>
+		<checkIndex>1</checkIndex>
+		<order>44</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>---45</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>85</ID>
+		<coreID>85</coreID>
+		<checkIndex>1</checkIndex>
+		<order>83</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>---49</name>
+		<model>V2IP_204A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Santos (KIC)</dispname>
+		<ID>41</ID>
+		<coreID>73</coreID>
+		<checkIndex>1</checkIndex>
+		<order>65</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>---72</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>42</ID>
+		<coreID>79</coreID>
+		<checkIndex>1</checkIndex>
+		<order>77</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BEEK</name>
+		<model>V2IP_103A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>MemphisBleek (STF)</dispname>
+		<ID>43</ID>
+		<coreID>25</coreID>
+		<checkIndex>0</checkIndex>
+		<order>19</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>FREEWAY</name>
+		<model>V2IP_301A</model>
+		<shadow>V2SD_3EA</shadow>
+		<dispname>Freeway (KIC)</dispname>
+		<ID>44</ID>
+		<coreID>27</coreID>
+		<checkIndex>0</checkIndex>
+		<order>21</order>
+		<speechID>14</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>GHOSTFACE</name>
+		<model>V2IP_108A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Ghostface Killah (WRE)</dispname>
+		<ID>45</ID>
+		<coreID>21</coreID>
+		<checkIndex>0</checkIndex>
+		<order>15</order>
+		<speechID>15</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>COMP</name>
+		<model>V2IP_304A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Comp (WRE)</dispname>
+		<ID>46</ID>
+		<coreID>36</coreID>
+		<checkIndex>0</checkIndex>
+		<order>30</order>
+		<speechID>6</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CAPONE</name>
+		<model>V2IP_105A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Capone (STF)</dispname>
+		<ID>47</ID>
+		<coreID>19</coreID>
+		<checkIndex>0</checkIndex>
+		<order>13</order>
+		<speechID>3</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>NORE</name>
+		<model>V2IP_104A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>NORE (STF)</dispname>
+		<ID>48</ID>
+		<coreID>14</coreID>
+		<checkIndex>0</checkIndex>
+		<order>8</order>
+		<speechID>23</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>TBD</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>49</ID>
+		<coreID>80</coreID>
+		<checkIndex>1</checkIndex>
+		<order>78</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>JOE BUDDEN</name>
+		<model>V2IP_302A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>JoeBudden (MAR)</dispname>
+		<ID>50</ID>
+		<coreID>31</coreID>
+		<checkIndex>0</checkIndex>
+		<order>25</order>
+		<speechID>17</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SCARFACE</name>
+		<model>V2IP_116A</model>
+		<shadow>V2SD_3</shadow>
+		<dispname>Scarface (STF)</dispname>
+		<ID>51</ID>
+		<coreID>22</coreID>
+		<checkIndex>0</checkIndex>
+		<order>16</order>
+		<speechID>26</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>LL COOL J</name>
+		<model>V2IP_308A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>O.E (STF)</dispname>
+		<ID>52</ID>
+		<coreID>12</coreID>
+		<checkIndex>0</checkIndex>
+		<order>6</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>DMX</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>53</ID>
+		<coreID>3</coreID>
+		<checkIndex>0</checkIndex>
+		<order>85</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>LUDACRIS</name>
+		<model>V2IP_123A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Ludacris (KIC)</dispname>
+		<ID>54</ID>
+		<coreID>4</coreID>
+		<checkIndex>0</checkIndex>
+		<order>1</order>
+		<speechID>19</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>DOC</name>
+		<model>V2IP_109A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Doc (MAR)</dispname>
+		<ID>55</ID>
+		<coreID>10</coreID>
+		<checkIndex>1</checkIndex>
+		<order>4</order>
+		<speechID>25</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BLAZE</name>
+		<model>V2IP_113A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Blaze1 (WRE)</dispname>
+		<ID>56</ID>
+		<coreID>5</coreID>
+		<checkIndex>0</checkIndex>
+		<order>2</order>
+		<speechID>22</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>STICKY</name>
+		<model>V2IP_114A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Sticky1 (STF)</dispname>
+		<ID>57</ID>
+		<coreID>8</coreID>
+		<checkIndex>0</checkIndex>
+		<order>3</order>
+		<speechID>29</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CROW</name>
+		<model>V2IP_126A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Crow1 (MAR)</dispname>
+		<ID>58</ID>
+		<coreID>1</coreID>
+		<checkIndex>0</checkIndex>
+		<order>0</order>
+		<speechID>28</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>D-MOB</name>
+		<model>V2IP_014A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>D-mob1 (SUB)</dispname>
+		<ID>59</ID>
+		<coreID>51</coreID>
+		<checkIndex>0</checkIndex>
+		<order>45</order>
+		<speechID>502</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SHADOWYFIGURE</name>
+		<model>V2IP_501A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Shadowy Figure</dispname>
+		<ID>60</ID>
+		<coreID>81</coreID>
+		<checkIndex>1</checkIndex>
+		<order>79</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>JERVIS</name>
+		<model>V2IP_202A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Jervis (STF)</dispname>
+		<ID>61</ID>
+		<coreID>68</coreID>
+		<checkIndex>0</checkIndex>
+		<order>60</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>STARKS</name>
+		<model>V2IP_203A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Starks (STF)</dispname>
+		<ID>62</ID>
+		<coreID>69</coreID>
+		<checkIndex>1</checkIndex>
+		<order>61</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BIGPAUL</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>63</ID>
+		<coreID>82</coreID>
+		<checkIndex>1</checkIndex>
+		<order>80</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>LIL KIM</name>
+		<model>V2IP_404A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Lil Kim (MAR)</dispname>
+		<ID>64</ID>
+		<coreID>44</coreID>
+		<checkIndex>0</checkIndex>
+		<order>38</order>
+		<speechID>18</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SHAWNNA</name>
+		<model>V2IP_406A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Shawnna (KIC)</dispname>
+		<ID>65</ID>
+		<coreID>47</coreID>
+		<checkIndex>0</checkIndex>
+		<order>41</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>KELIS</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>66</ID>
+		<coreID>83</coreID>
+		<checkIndex>1</checkIndex>
+		<order>81</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CINDY</name>
+		<model>V2IP_403A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Cindy Johnson (STF)</dispname>
+		<ID>67</ID>
+		<coreID>48</coreID>
+		<checkIndex>0</checkIndex>
+		<order>42</order>
+		<speechID>501</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SHANIQUA</name>
+		<model>V2IP_402A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Shaniqua (WRE)</dispname>
+		<ID>68</ID>
+		<coreID>49</coreID>
+		<checkIndex>1</checkIndex>
+		<order>43</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CARMEN ELECTRA</name>
+		<model>V2IP_401A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Carmen Electra (MAR)</dispname>
+		<ID>69</ID>
+		<coreID>45</coreID>
+		<checkIndex>0</checkIndex>
+		<order>39</order>
+		<speechID>500</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>LAUREN</name>
+		<model>V2IP_405A</model>
+		<shadow>V2SD_4EA</shadow>
+		<dispname>Lauren</dispname>
+		<ID>70</ID>
+		<coreID>84</coreID>
+		<checkIndex>1</checkIndex>
+		<order>82</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>SNOWMAN</name>
+		<model>V2IP_002A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Snowman (WRE)</dispname>
+		<ID>71</ID>
+		<coreID>65</coreID>
+		<checkIndex>0</checkIndex>
+		<order>57</order>
+		<speechID>511</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>STINGRAY</name>
+		<model>V2IP_016A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Stingray (STF)</dispname>
+		<ID>72</ID>
+		<coreID>59</coreID>
+		<checkIndex>0</checkIndex>
+		<order>51</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>JACOB</name>
+		<model>V2IP_129A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Jacob (WRE)</dispname>
+		<ID>73</ID>
+		<coreID>43</coreID>
+		<checkIndex>1</checkIndex>
+		<order>37</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>MANNY</name>
+		<model>V2IP_008A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Manny (STF)</dispname>
+		<ID>74</ID>
+		<coreID>54</coreID>
+		<checkIndex>0</checkIndex>
+		<order>46</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>ROLINS</name>
+		<model>V2IP_131A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>ROLINS (STF)</dispname>
+		<ID>75</ID>
+		<coreID>72</coreID>
+		<checkIndex>1</checkIndex>
+		<order>64</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>POCKETS</name>
+		<model>V2IP_001A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Pockets (MAR)</dispname>
+		<ID>76</ID>
+		<coreID>64</coreID>
+		<checkIndex>0</checkIndex>
+		<order>56</order>
+		<speechID>510</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>PRODIGY</name>
+		<model>V2IP_119A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Prodigy (STF)</dispname>
+		<ID>77</ID>
+		<coreID>32</coreID>
+		<checkIndex>0</checkIndex>
+		<order>26</order>
+		<speechID>24</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>S-WORD</name>
+		<model>V2IP_102A</model>
+		<shadow>V2SD_1</shadow>
+		<dispname>Eric Sermon (WRE)</dispname>
+		<ID>78</ID>
+		<coreID>42</coreID>
+		<checkIndex>1</checkIndex>
+		<order>36</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>LOCKED</name>
+		<model>EMPTY</model>
+		<shadow>EMPTY</shadow>
+		<dispname>EMPTY</dispname>
+		<ID>79</ID>
+		<coreID>86</coreID>
+		<checkIndex>1</checkIndex>
+		<order>84</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>STICKY2</name>
+		<model>V2IP_114B</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Sticky2 (STF)</dispname>
+		<ID>80</ID>
+		<coreID>9</coreID>
+		<checkIndex>0</checkIndex>
+		<order>69</order>
+		<speechID>29</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BLAZE2</name>
+		<model>V2IP_113B</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Blaze2 (WRE)</dispname>
+		<ID>81</ID>
+		<coreID>6</coreID>
+		<checkIndex>0</checkIndex>
+		<order>67</order>
+		<speechID>22</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BLAZE3</name>
+		<model>V2IP_113C</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>Blaze3 (WRE)</dispname>
+		<ID>82</ID>
+		<coreID>7</coreID>
+		<checkIndex>0</checkIndex>
+		<order>68</order>
+		<speechID>22</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>D-MOB2</name>
+		<model>V2IP_014B</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>D-mob2 (SUB)</dispname>
+		<ID>83</ID>
+		<coreID>52</coreID>
+		<checkIndex>0</checkIndex>
+		<order>70</order>
+		<speechID>502</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>D-MOB3</name>
+		<model>V2IP_014C</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>D-mob3 (SUB)</dispname>
+		<ID>84</ID>
+		<coreID>53</coreID>
+		<checkIndex>0</checkIndex>
+		<order>71</order>
+		<speechID>502</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>BULLETPROOF</name>
+		<model>V2IP_305A</model>
+		<shadow>V2SD_2EA</shadow>
+		<dispname>Teck (KIC)</dispname>
+		<ID>40</ID>
+		<coreID>70</coreID>
+		<checkIndex>0</checkIndex>
+		<order>62</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+	<fighter>
+		<name>CP B__</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP B__</dispname>
+		<ID>86</ID>
+		<coreID>87</coreID>
+		<checkIndex>0</checkIndex>
+		<order>86</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BK_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BK_</dispname>
+		<ID>87</ID>
+		<coreID>88</coreID>
+		<checkIndex>0</checkIndex>
+		<order>87</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BKS</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BKS</dispname>
+		<ID>88</ID>
+		<coreID>89</coreID>
+		<checkIndex>0</checkIndex>
+		<order>88</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BKW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BKW</dispname>
+		<ID>89</ID>
+		<coreID>90</coreID>
+		<checkIndex>0</checkIndex>
+		<order>89</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BKM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BKM</dispname>
+		<ID>90</ID>
+		<coreID>91</coreID>
+		<checkIndex>0</checkIndex>
+		<order>90</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BS_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BS_</dispname>
+		<ID>91</ID>
+		<coreID>92</coreID>
+		<checkIndex>0</checkIndex>
+		<order>91</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BSW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BSW</dispname>
+		<ID>92</ID>
+		<coreID>93</coreID>
+		<checkIndex>0</checkIndex>
+		<order>92</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BSM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BSM</dispname>
+		<ID>93</ID>
+		<coreID>94</coreID>
+		<checkIndex>0</checkIndex>
+		<order>93</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BW_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BW_</dispname>
+		<ID>94</ID>
+		<coreID>95</coreID>
+		<checkIndex>0</checkIndex>
+		<order>94</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BWM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BWM</dispname>
+		<ID>95</ID>
+		<coreID>96</coreID>
+		<checkIndex>0</checkIndex>
+		<order>95</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP BM_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP BM_</dispname>
+		<ID>96</ID>
+		<coreID>97</coreID>
+		<checkIndex>0</checkIndex>
+		<order>96</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP K__</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP K__</dispname>
+		<ID>97</ID>
+		<coreID>98</coreID>
+		<checkIndex>0</checkIndex>
+		<order>97</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KB_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KB_</dispname>
+		<ID>98</ID>
+		<coreID>99</coreID>
+		<checkIndex>0</checkIndex>
+		<order>98</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KBS</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KBS</dispname>
+		<ID>99</ID>
+		<coreID>100</coreID>
+		<checkIndex>0</checkIndex>
+		<order>99</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KBW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KBW</dispname>
+		<ID>100</ID>
+		<coreID>101</coreID>
+		<checkIndex>0</checkIndex>
+		<order>100</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KBM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KBM</dispname>
+		<ID>101</ID>
+		<coreID>102</coreID>
+		<checkIndex>0</checkIndex>
+		<order>101</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KS_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KS_</dispname>
+		<ID>102</ID>
+		<coreID>103</coreID>
+		<checkIndex>0</checkIndex>
+		<order>102</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KSW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KSW</dispname>
+		<ID>103</ID>
+		<coreID>104</coreID>
+		<checkIndex>0</checkIndex>
+		<order>103</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KSM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KSM</dispname>
+		<ID>104</ID>
+		<coreID>105</coreID>
+		<checkIndex>0</checkIndex>
+		<order>104</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KW_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KW_</dispname>
+		<ID>105</ID>
+		<coreID>106</coreID>
+		<checkIndex>0</checkIndex>
+		<order>105</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KWM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KWM</dispname>
+		<ID>106</ID>
+		<coreID>107</coreID>
+		<checkIndex>0</checkIndex>
+		<order>106</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP KM_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP KM_</dispname>
+		<ID>107</ID>
+		<coreID>108</coreID>
+		<checkIndex>0</checkIndex>
+		<order>107</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP S__</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP S__</dispname>
+		<ID>108</ID>
+		<coreID>109</coreID>
+		<checkIndex>0</checkIndex>
+		<order>108</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SB_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SB_</dispname>
+		<ID>109</ID>
+		<coreID>110</coreID>
+		<checkIndex>0</checkIndex>
+		<order>109</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SBK</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SBK</dispname>
+		<ID>110</ID>
+		<coreID>111</coreID>
+		<checkIndex>0</checkIndex>
+		<order>110</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SBW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SBW</dispname>
+		<ID>111</ID>
+		<coreID>112</coreID>
+		<checkIndex>0</checkIndex>
+		<order>111</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SBM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SBM</dispname>
+		<ID>112</ID>
+		<coreID>113</coreID>
+		<checkIndex>0</checkIndex>
+		<order>112</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SK_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SK_</dispname>
+		<ID>113</ID>
+		<coreID>114</coreID>
+		<checkIndex>0</checkIndex>
+		<order>113</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SKW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SKW</dispname>
+		<ID>114</ID>
+		<coreID>115</coreID>
+		<checkIndex>0</checkIndex>
+		<order>114</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SKM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SKM</dispname>
+		<ID>115</ID>
+		<coreID>116</coreID>
+		<checkIndex>0</checkIndex>
+		<order>115</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SW_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SW_</dispname>
+		<ID>116</ID>
+		<coreID>117</coreID>
+		<checkIndex>0</checkIndex>
+		<order>116</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SWM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SWM</dispname>
+		<ID>117</ID>
+		<coreID>118</coreID>
+		<checkIndex>0</checkIndex>
+		<order>117</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP SM_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP SM_</dispname>
+		<ID>118</ID>
+		<coreID>119</coreID>
+		<checkIndex>0</checkIndex>
+		<order>118</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP W__</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP W__</dispname>
+		<ID>119</ID>
+		<coreID>120</coreID>
+		<checkIndex>0</checkIndex>
+		<order>119</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WB_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WB_</dispname>
+		<ID>120</ID>
+		<coreID>121</coreID>
+		<checkIndex>0</checkIndex>
+		<order>120</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WBK</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WBK</dispname>
+		<ID>121</ID>
+		<coreID>122</coreID>
+		<checkIndex>0</checkIndex>
+		<order>121</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WBS</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WBS</dispname>
+		<ID>122</ID>
+		<coreID>123</coreID>
+		<checkIndex>0</checkIndex>
+		<order>122</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WBM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WBM</dispname>
+		<ID>123</ID>
+		<coreID>124</coreID>
+		<checkIndex>0</checkIndex>
+		<order>123</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WK_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WK_</dispname>
+		<ID>124</ID>
+		<coreID>125</coreID>
+		<checkIndex>0</checkIndex>
+		<order>124</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WKS</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WKS</dispname>
+		<ID>125</ID>
+		<coreID>126</coreID>
+		<checkIndex>0</checkIndex>
+		<order>125</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WKM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WKM</dispname>
+		<ID>126</ID>
+		<coreID>127</coreID>
+		<checkIndex>0</checkIndex>
+		<order>126</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WS_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WS_</dispname>
+		<ID>127</ID>
+		<coreID>128</coreID>
+		<checkIndex>0</checkIndex>
+		<order>127</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WSM</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WSM</dispname>
+		<ID>128</ID>
+		<coreID>129</coreID>
+		<checkIndex>0</checkIndex>
+		<order>128</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP WM_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP WM_</dispname>
+		<ID>129</ID>
+		<coreID>130</coreID>
+		<checkIndex>0</checkIndex>
+		<order>129</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP M__</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP M__</dispname>
+		<ID>130</ID>
+		<coreID>131</coreID>
+		<checkIndex>0</checkIndex>
+		<order>130</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MB_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MB_</dispname>
+		<ID>131</ID>
+		<coreID>132</coreID>
+		<checkIndex>0</checkIndex>
+		<order>131</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MBK</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MBK</dispname>
+		<ID>132</ID>
+		<coreID>133</coreID>
+		<checkIndex>0</checkIndex>
+		<order>132</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MBS</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MBS</dispname>
+		<ID>133</ID>
+		<coreID>134</coreID>
+		<checkIndex>0</checkIndex>
+		<order>133</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MBW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MBW</dispname>
+		<ID>134</ID>
+		<coreID>135</coreID>
+		<checkIndex>0</checkIndex>
+		<order>134</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MK_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MK_</dispname>
+		<ID>135</ID>
+		<coreID>136</coreID>
+		<checkIndex>0</checkIndex>
+		<order>135</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MKS</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MKS</dispname>
+		<ID>136</ID>
+		<coreID>137</coreID>
+		<checkIndex>0</checkIndex>
+		<order>136</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MKW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MKW</dispname>
+		<ID>137</ID>
+		<coreID>138</coreID>
+		<checkIndex>0</checkIndex>
+		<order>137</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MS_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MS_</dispname>
+		<ID>138</ID>
+		<coreID>139</coreID>
+		<checkIndex>0</checkIndex>
+		<order>138</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MSW</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MSW</dispname>
+		<ID>139</ID>
+		<coreID>140</coreID>
+		<checkIndex>0</checkIndex>
+		<order>139</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+    <fighter>
+		<name>CP MW_</name>
+		<model>NULL</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP MW_</dispname>
+		<ID>140</ID>
+		<coreID>141</coreID>
+		<checkIndex>0</checkIndex>
+		<order>140</order>
+		<speechID>0</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+
+    <fighter>
+		<name>CP_HERO</name>
+		<model>V2IP_999A</model>
+		<shadow>V2SD_2</shadow>
+		<dispname>CP_HERO</dispname>
+		<ID>141</ID>
+		<coreID>141</coreID>
+		<checkIndex>0</checkIndex>
+		<order>141</order>
+		<speechID>536</speechID>
+		<bodysize>2</bodysize>
+		<ethnicity>1</ethnicity>
+		<sex>0</sex>
+	</fighter>
+
+</fighterlist>
+

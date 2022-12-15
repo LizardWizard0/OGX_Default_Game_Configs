@@ -1,0 +1,6 @@
+// This happens as soon as one player dies
+
+Pause 4
+FadeDownAndWait 2
+Pause .5
+VictoryScreenOn

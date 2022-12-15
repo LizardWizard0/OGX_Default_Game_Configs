@@ -1,0 +1,2201 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Actor  Qui A_Qui-Gon_01
+
+// Stage 1
+Actor Infantry41         A_Battledroid-Infantry_41
+Actor Infantry42         A_Battledroid-Infantry_42
+Actor Infantry43         A_Battledroid-Infantry_43
+Actor Infantry44         A_Battledroid-Infantry_44
+Actor Infantry45         A_Battledroid-Infantry_45
+Actor Infantry46         A_Battledroid-Infantry_46
+// Stage 2
+Actor Infantry47         A_Battledroid-Infantry_47
+Actor Infantry48         A_Battledroid-Infantry_48
+Actor Infantry49         A_Battledroid-Infantry_49
+Actor Infantry50         A_Battledroid-Infantry_50
+Actor Infantry51         A_Battledroid-Infantry_51
+Actor Commander04        A_Battledroid-Commander_04
+// Stage 3
+Actor Security21         A_Battledroid-Security_21
+Actor Security22         A_Battledroid-Security_22
+Actor Security23         A_Battledroid-Security_23
+Actor Security24         A_Battledroid-Security_24
+Actor Security25         A_Battledroid-Security_25
+Actor Security26         A_Battledroid-Security_26
+// Stage 4
+Actor Security27         A_Battledroid-Security_27
+Actor Security28         A_Battledroid-Security_28
+Actor Security29         A_Battledroid-Security_29
+Actor Security30         A_Battledroid-Security_30
+Actor Security31         A_Battledroid-Security_31
+Actor Commander05        A_Battledroid-Commander_05
+// Stage 5
+Actor Infantry52         A_Battledroid-Infantry_52
+Actor Infantry53         A_Battledroid-Infantry_53
+Actor Infantry54         A_Battledroid-Infantry_54
+Actor Kamikaze12         A_Battledroid-Kamikaze_12
+Actor Kamikaze13         A_Battledroid-Kamikaze_13
+Actor Kamikaze14         A_Battledroid-Kamikaze_14
+// Stage 6
+Actor Infantry55         A_Battledroid-Infantry_55
+Actor Infantry56         A_Battledroid-Infantry_56
+Actor Infantry57         A_Battledroid-Infantry_57
+Actor Security32         A_Battledroid-Security_32
+Actor Security33         A_Battledroid-Security_33
+Actor Commander06        A_Battledroid-Commander_06
+// Stage 7
+Actor Security34         A_Battledroid-Security_34
+Actor Security35         A_Battledroid-Security_35
+Actor Security36         A_Battledroid-Security_36
+Actor Kamikaze15         A_Battledroid-Kamikaze_15
+Actor Kamikaze16         A_Battledroid-Kamikaze_16
+Actor Kamikaze17         A_Battledroid-Kamikaze_17
+// Stage 8
+Actor Infantry58         A_Battledroid-Infantry_58
+Actor Infantry59         A_Battledroid-Infantry_59
+Actor Security37         A_Battledroid-Security_37
+Actor Security38         A_Battledroid-Security_38
+Actor Commander07        A_Battledroid-Commander_07
+Actor Commander08        A_Battledroid-Commander_08
+// Stage 9
+Actor Security39         A_Battledroid-Security_39
+Actor Security40         A_Battledroid-Security_40
+Actor Commander09        A_Battledroid-Commander_09
+Actor Kamikaze18         A_Battledroid-Kamikaze_18
+Actor Kamikaze19         A_Battledroid-Kamikaze_19
+Actor Kamikaze20         A_Battledroid-Kamikaze_20   
+
+Float  ChanceBADsAppear-Rgn_09    100.0
+Float  ChanceBADsAppear-Rgn_10    100.0
+Float  ChanceBADsAppear-Rgn_11    100.0
+Float  ChanceBADsAppear-Rgn_12    100.0
+Float  ChanceBADsAppear-Rgn_13    100.0
+Float  ChanceBADsAppear-Rgn_14    100.0
+Float  ChanceBADsAppear-Rgn_16    100.0
+Float  ChanceBADsAppear-Rgn_17    100.0
+Float  ChanceBADsAppear-Rgn_18    100.0
+Float  ChanceBADsAppear-Rgn_19    100.0
+Float  ChanceBADsAppear-Rgn_20    100.0
+
+Float  ChanceBADsAppear-Bridge    100.0
+
+Int    CurBADsAlive-Rgn_09 	      0
+Int    MaxBADsAlive-Rgn_09 	      6
+Int    CurBADsAlive-Rgn_10 	      0
+Int    MaxBADsAlive-Rgn_10 	      6
+Int    CurBADsAlive-Rgn_11 	      0
+Int    MaxBADsAlive-Rgn_11 	      6
+Int    CurBADsAlive-Rgn_12 	      0
+Int    MaxBADsAlive-Rgn_12 	      6
+Int    CurBADsAlive-Rgn_13 	      0
+Int    MaxBADsAlive-Rgn_13 	      6
+Int    CurBADsAlive-Rgn_14 	      0
+Int    MaxBADsAlive-Rgn_14 	      6
+Int    CurBADsAlive-Rgn_16 	      0
+Int    MaxBADsAlive-Rgn_16 	      6
+Int    CurBADsAlive-Rgn_17 	      0
+Int    MaxBADsAlive-Rgn_17 	      6
+Int    CurBADsAlive-Rgn_18 	      0
+Int    MaxBADsAlive-Rgn_18 	      6
+Int    CurBADsAlive-Rgn_19 	      0
+Int    MaxBADsAlive-Rgn_19 	      6
+Int    CurBADsAlive-Rgn_20 	      0
+Int    MaxBADsAlive-Rgn_20 	      6
+
+Int    InitialBADsAlive-Start     8
+Int    InitialBADsAlive-Bridge    8
+Int    CurBADsAlive-Bridge        0
+Int    MaxBADsAlive-Bridge        78
+
+Int    TC14Panic                  0
+Int    BeginMission               0
+Int    Hangar01Visited            0
+Int    TurretDestroyed            0
+
+Int    TotalBADsAlive             0
+Int    MissionCompleted           0
+Int    ShowDebugMessages          0
+Int    SkipToBridge               0
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Script "QuiGon Waits"
+{
+    WaitUntilEqual BeginMission 1
+
+    While (= BeginMission 1)
+    {
+	    WaitUntilStateActivated Qui Puppet
+        Pause 0.2
+	    WaitUntilStateShutDown Qui Puppet
+	    WaitUntilStateActivated Qui FollowPlayer
+	    PlayAudioCue Qui "FollowMe"
+	    PlayGesture Qui AttractAttention
+//	    Pause 10.0
+    }
+}
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakeControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+         Child WaitUntilNear Guy Obi 3.0
+         Child WaitUntilNear Guy Qui 3.0
+         WaitForAny
+         ReturnControlTo Guy
+         EndFunction "Run"
+    }
+    
+    RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "Activate" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime)
+{   
+    Pause PauseTime
+    
+    Teleport Guy StartSpot
+	TakeControlOf Guy
+
+    Childscript "Activate Interrupted"
+    {
+         WaitUntilNear Guy Obi 3.0
+         ReturnControlTo Guy
+         
+         EndFunction "Activate"
+    }
+  
+	RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "RunToRandomNode" (Actor Runner, Node GotoNode1, Node GotoNode2, Node Gotonode3, Node Gotonode4)
+{
+    Node DestinationNode
+    
+
+	RandomInt RandomNode 1 4
+
+	if (= RandomNode 1)
+	{
+		Set DestinationNode GotoNode1
+	}
+	if (= RandomNode 2)
+	{
+		Set DestinationNode GotoNode2
+	}
+	if (= RandomNode 3)
+	{
+		Set DestinationNode GotoNode3
+	}
+	if (= RandomNode 4)
+	{
+		Set DestinationNode GotoNode4
+	}
+
+	TakePartialControlOf Runner
+	RunToNodeAndWait Runner DestinationNode
+}
+
+Function "PrepareDroid" (Actor Droid)
+{
+	TakeControlOf Droid
+	EquipWeapon Droid
+}
+
+Function "CreateDroidAmbush" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	TriggerUberGenAndWait UberGen Droid
+	TakePartialControlOf Droid
+	RunToNode Droid GotoNode
+}	
+
+Function "CreateBADs" (Actor UberGen, Node GotoNode, Int CurrentAlive, Int MaxAllowed, Float Frequency)
+{
+	Actor Droid
+
+
+	If (< CurrentAlive MaxAllowed)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear Frequency)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_10 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_10" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_10 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_10" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_09" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_09 MaxBADsAlive-Rgn_09)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_09)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_09 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_09" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_09 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_09" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_10" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_10 MaxBADsAlive-Rgn_10)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_10)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_10 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_10" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_10 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_10" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_11" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_11 MaxBADsAlive-Rgn_11)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_11)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_11 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_11" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_11 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_11" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_12" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_12 MaxBADsAlive-Rgn_12)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_12)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_12 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_12" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_12 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_12" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_13" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_13 MaxBADsAlive-Rgn_13)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_13)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_13 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_13" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_13 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_13" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_14" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_14 MaxBADsAlive-Rgn_14)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_14)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_14 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_14" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_14 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_14" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_16" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_16 MaxBADsAlive-Rgn_16)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_16)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_16 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_16" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_16 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_16" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_17" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_17 MaxBADsAlive-Rgn_17)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_17)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_17 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_17" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_17 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_17" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_18" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_18 MaxBADsAlive-Rgn_18)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_18)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_18 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_18" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_18 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_18" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_19" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_19 MaxBADsAlive-Rgn_19)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_19)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_19 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_19" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_19 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_19" 0.5
+			}
+		}
+	}
+}
+
+Function "CreateBAD-Rgn_20" (Actor UberGen, Node GotoNode)
+{
+	Actor Droid
+
+
+	If (< CurBADsAlive-Rgn_20 MaxBADsAlive-Rgn_20)
+	{
+		RandomFloat ChanceToAppear 1.0 100.0
+
+		If (<= ChanceToAppear ChanceBADsAppear-Rgn_20)
+		{
+			TriggerUberGenAndWait UberGen Droid
+			Increment CurBADsAlive-Rgn_20 1
+	
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD generated - Rgn_20" 0.5
+			}
+
+			TakePartialControlOf Droid
+//			RunToNode Droid GotoNode
+            	RandomInt BADTarget 1 2
+                If (= BADTarget 1)
+                {
+                    ForceTargetAndAttack Droid Obi
+                }
+                Else
+                {
+                    ForceTargetAndAttack Droid Qui
+                }
+
+			WaitUntilKilled Droid
+			Decrement CurBADsAlive-Rgn_20 1
+
+			If (= ShowDebugMessages 1)
+			{
+				Display "BAD removed - Rgn_20" 0.5
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+Function "CheckBridgeRegions" (Int Stage)
+{
+    If (IsInRegion Obi BAD_Source_01_Rgn)
+    {
+        Call "SetBridgeBADStage" (1, Stage)
+    }
+    
+    If (IsInRegion Obi BAD_Source_02_Rgn)
+    {
+        Call "SetBridgeBADStage" (2, Stage)
+    }
+
+    If (IsInRegion Obi BAD_Source_03_Rgn)
+    {
+        Call "SetBridgeBADStage" (3, Stage)    
+    }
+    
+    If (IsNotInRegion Obi BAD_Source_01_Rgn)
+    {
+        If (IsNotInRegion Obi BAD_Source_02_Rgn)
+        {
+            If (IsNotInRegion Obi BAD_Source_03_Rgn)
+            {
+                Call "SetBridgeBADStage" (0, Stage)
+            }
+        }
+    }
+    
+}
+
+Function "SetBridgeBADStage" (Int RegionOccupied, Int Stage)
+{
+    Refpos StartSpot01
+    Refpos StartSpot02
+    Refpos StartSpot03
+    Refpos StartSpot04
+    Refpos StartSpot05
+    Refpos StartSpot06
+    Node   GotoNode01
+    Node   GotoNode02
+    Node   GotoNode03
+    Node   GotoNode04
+    Node   GotoNode05
+    Node   GotoNode06
+
+
+	// Select a random source for BADs
+	RandomInt BADSource 1 3
+
+	// Check if Obi is near the selected BAD source generators
+	While (= BADSource RegionOccupied)
+	{
+		RandomInt BADSource 1 3
+	}
+
+	if (= BADSource 1)
+	{
+        Set StartSpot01 BADSource01-Spot01
+        Set StartSpot02 BADSource01-Spot02
+        Set StartSpot03 BADSource01-Spot03
+        Set StartSpot04 BADSource01-Spot04
+        Set StartSpot05 BADSource01-Spot05
+        Set StartSpot06 BADSource01-Spot06
+        Set GotoNode01 BADSource01-Spot01
+        Set GotoNode02 BADSource01-Spot02
+        Set GotoNode03 BADSource01-Spot03
+        Set GotoNode04 BADSource01-Spot04
+        Set GotoNode05 BADSource01-Spot05
+        Set GotoNode06 BADSource01-Spot06
+    }
+	if (= BADSource 2)
+	{
+        Set StartSpot01 BADSource02-Spot01
+        Set StartSpot02 BADSource02-Spot02
+        Set StartSpot03 BADSource02-Spot03
+        Set StartSpot04 BADSource02-Spot04
+        Set StartSpot05 BADSource02-Spot05
+        Set StartSpot06 BADSource02-Spot06
+        Set GotoNode01 BADSource02-Spot01
+        Set GotoNode02 BADSource02-Spot02
+        Set GotoNode03 BADSource02-Spot03
+        Set GotoNode04 BADSource02-Spot04
+        Set GotoNode05 BADSource02-Spot05
+        Set GotoNode06 BADSource02-Spot06
+    }
+	if (= BADSource 3)
+	{
+        Set StartSpot01 BADSource03-Spot01
+        Set StartSpot02 BADSource03-Spot02
+        Set StartSpot03 BADSource03-Spot03
+        Set StartSpot04 BADSource03-Spot04
+        Set StartSpot05 BADSource03-Spot05
+        Set StartSpot06 BADSource03-Spot06
+        Set GotoNode01 BADSource03-Spot01
+        Set GotoNode02 BADSource03-Spot02
+        Set GotoNode03 BADSource03-Spot03
+        Set GotoNode04 BADSource03-Spot04
+        Set GotoNode05 BADSource03-Spot05
+        Set GotoNode06 BADSource03-Spot06
+    }
+    
+    if (= Stage 1)
+    {
+        Call "CreateBridgeBAD" (Infantry41, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry42, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry43, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Infantry44, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Infantry45, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Infantry46, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 2)
+    {
+        Call "CreateBridgeBAD" (Infantry47, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry48, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry49, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Infantry50, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Infantry51, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander04, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 3)
+    {
+        Call "CreateBridgeBAD" (Security21, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security22, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security23, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Security24, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Security25, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Security26, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 4)
+    {
+        Call "CreateBridgeBAD" (Security27, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security28, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security29, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Security30, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Security31, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander05, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 5)
+    {
+        Call "CreateBridgeBAD" (Infantry52, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry53, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry54, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze12, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze13, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze14, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 6)
+    {
+        Call "CreateBridgeBAD" (Infantry55, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry56, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Infantry57, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Security32, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Security33, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander06, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 7)
+    {
+        Call "CreateBridgeBAD" (Security34, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security35, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security36, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze15, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze16, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze17, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 8)
+    {
+        Call "CreateBridgeBAD" (Infantry58, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Infantry59, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Security37, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Security38, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Commander07, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Commander08, StartSpot06, GotoNode06, 0.0)
+    }
+    if (= Stage 9)
+    {
+        Call "CreateBridgeBAD" (Security39, StartSpot01, GotoNode01, 0.0)
+        Call "CreateBridgeBAD" (Security40, StartSpot02, GotoNode02, 0.0)
+        Call "CreateBridgeBAD" (Commander09, StartSpot03, GotoNode03, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze18, StartSpot04, GotoNode04, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze19, StartSpot05, GotoNode05, 0.0)
+        Call "CreateBridgeBAD" (Kamikaze20, StartSpot06, GotoNode06, 0.0)
+    }
+}
+
+Function "CreateBridgeBAD" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime)
+{
+    Call "Activate" (Guy, StartSpot, GotoNode, PauseTime)
+    Call "TrackBridgeBAD" (Guy)
+}
+
+Function "TrackBridgeBAD" (Actor Guy)
+{
+    Increment CurBADsAlive-Bridge 1
+    WaitUntilKilled Guy
+    Decrement CurBADsAlive-Bridge 1
+}
+
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene"
+{
+    Actor TC14               A_TC14_01
+    Actor Commander01        A_Battledroid-Commander_01
+    Actor Infantry01         A_Battledroid-Infantry_01
+    Actor Infantry02         A_Battledroid-Infantry_02
+    Actor Infantry03         A_Battledroid-Infantry_03
+    Actor Infantry04         A_Battledroid-Infantry_04
+    Actor Infantry05         A_Battledroid-Infantry_05
+    Actor Infantry06         A_Battledroid-Infantry_06
+    Actor Infantry07         A_Battledroid-Infantry_07
+                            
+    
+	Call "PrepareDroid" (Commander01)
+	Call "PrepareDroid" (Infantry01)
+	Call "PrepareDroid" (Infantry02)
+	Call "PrepareDroid" (Infantry03)
+	Call "PrepareDroid" (Infantry04)
+	Call "PrepareDroid" (Infantry05)
+	Call "PrepareDroid" (Infantry06)
+	Call "PrepareDroid" (Infantry07)
+
+	TakeControlOf Qui
+	TakeControlOf TC14
+
+	BeginCutScene
+
+	CameraFixed StartShot01    
+	FadeUpAndWait
+
+    SayLineNonPositionalAndContinue Obi "/Obi-Wan_381/I've got a bad feeling about this."
+    Pause 1.5
+                                                                            
+	CameraFixed camzoom1
+    Pause 2.0
+
+	CameraFixed fixcam1
+
+	LookAt Commander01 Infantry05
+	Sayline Commander01 "They must be dead by now." Talk
+	PlayGesture Commander01 PointRight
+	Sayline Commander01 "/BattleDroidInfantry_383/Check it out." Talk
+	Sayline Infantry05 "/BattleDroidInfantry_384/Roger, roger." Talk
+	LookAtAndWait Infantry05 A_01_d_conf_06
+	Pause 1.0
+
+	CameraFixed camzoom1 2 .5 .5
+
+	WalkToNodeAndWait TC14 TC14_Spot01
+	MoveCameraAndWait camzoom2 2 .5 .5
+	Sayline TC14 "/TC-14_57/Oh..."
+	Sayline TC14 "/TC-14_56/Excuse me."
+	RunToNode TC14 TC14_Spot02
+/*
+	EquipWeapon Obi
+	ActivateCurrentItem
+	EquipWeapon Qui
+	ActivateCurrentItem
+*/
+	Sayline Infantry05 "Oh, oh..."
+
+    InvincibilityOn Qui
+
+	ReturnControlTo Commander01
+	ReturnControlTo Infantry01
+	ReturnControlTo Infantry02
+	ReturnControlTo Infantry03
+	ReturnControlTo Infantry04
+	ReturnControlTo Infantry05
+	ReturnControlTo Infantry06
+	ReturnControlTo Infantry07
+    ReturnControlTo TC14
+	ReturnControlTo Qui
+
+    Set TC14Panic 1
+
+	EndCutScene
+}
+
+Script "Closing Cutscene"
+{
+	Actor Gen01 A_z_UberGen_227
+	Actor Gen02 A_z_UberGen_228
+//    Actor Destroyer01        A_DestroyerDroid_01
+//    Actor Destroyer02        A_DestroyerDroid_02    
+
+
+    WaitUntilEqual MissionCompleted 1
+    
+    InvincibilityOn Obi
+    InvincibilityOn Qui    
+    
+	TriggerUberGenAndWait Gen01 Destroyer01
+	TriggerUberGenAndWait Gen02 Destroyer02
+
+    TakeControlOf Destroyer01
+    TakeControlOf Destroyer02
+    TakeControlOf Obi
+
+//    Teleport Destroyer01 BADSource02-Spot04
+//    Teleport Destroyer02 BADSource02-Spot06
+    Teleport Obi Obi-EndSpot01
+
+    BeginCutscene
+	CameraFixed endshot0
+
+    RunToNodeAndWait Obi ObiSpot1
+    LookAt Obi A_01_d_blastdoor_93
+    Pause 1.0
+    
+	CameraFixed endshot1
+        
+    Child RunToNodeAndWait Destroyer01 Destroyer1Spot1
+    Child RunToNodeAndWait Destroyer02 Destroyer2Spot1
+    
+    WaitForAll
+
+	CameraFixed endshot0
+    Sayline Obi "/Obi-Wan_389/Master! Destroyers!"
+    // Qui Gon stop cutting door
+    RunToNodeAndWait Qui QuiSpot1
+    LookAt Qui A_01_d_blastdoor_93    
+    Pause 1.0
+                        
+    CameraFixed endshot2
+    DedRollOff Destroyer01
+    DedRollOff Destroyer02
+    
+    Childscript "Destroyers Firing"
+    {
+        FireAt Destroyer01 A_01_d_conf_10
+        FireAt Destroyer02 A_01_d_conf_10
+        Loop
+    }
+    
+    Pause 3.0
+    
+    CameraFixed endshot3
+    Pause 3.0
+
+	CameraFixed endshot0
+    Sayline Obi "/Obi-Wan_390/They have shield generators!"
+    Pause 1.0
+
+    CameraFixed endshot4 
+    Pause 3.0
+
+	CameraFixed endshot0
+    Sayline Qui "/Qui-Gon_391/It's a standoff! Let's go!"
+    Pause 1.0
+
+    CameraFixed endshot3
+    RunToNode Obi ObiSpot2
+    RunToNode Qui QuiSpot2
+
+    //Qui and Obi Run to right; big explosion
+
+    Pause 2.0
+    EndScript "Destroyers Firing"
+    StopFiringAt Destroyer01
+    StopFiringAt Destroyer02
+        
+    CameraFixed endshot4            
+    Pause 1.0
+
+    DisableDEDRoll Destroyer01
+    DisableDEDRoll Destroyer02
+            
+    WalkToNode Destroyer01 QuiSpot1
+    WalkToNode Destroyer02 ObiSpot1
+    Pause 3.0
+    
+    RunToNode Obi ObiSpot3
+    RunToNode Qui QuiSpot3
+    Pause 0.5
+    
+    CameraFixed endshot5
+    
+    WalkToNode Destroyer01 ObiSpot3
+    WalkToNode Destroyer02 QuiSpot3
+                
+    SayLineNonPositional Qui "/Qui-Gon_392/We've got to warn the Naboo and contact Chancelor Velorum."
+    SayLineNonPositional Qui "/Qui-Gon_393/The main hangar is this way.  Let's split up."
+//    SayLine Qui "Stow aboard separate ships and meet down on the planet."
+    
+    UnlockDoor A_01_d_tube2_32
+    OpenDoor A_01_d_tube2_32
+    
+    RunToNode Qui QuiSpot4
+    RunToNode Obi ObiSpot4
+    
+    Pause 1.0
+    
+    FadeDownAndWait                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    EndCutscene
+    
+    NextLevel L03_4
+}
+
+Script  "Qui Gon Killed - Mission Failed"
+{
+    MakeResurrectable Qui
+
+    WaitUntilKilled Qui
+    
+    BeginCutScene
+    
+    CameraOrbit Qui 3.0 3.0 10.0 0.0 1
+    
+	Pause 1.0    
+    
+	CommunicatorOn
+	CommunicatorMessageAndWait "You have allowed Qui Gon to be killed.  You have much to learn, Padawan."
+	CommunicatorMessageAndWait "Game Over."
+
+    Pause 3.0
+
+    FadeDownAndWait
+    EndCutScene
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambient ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "TC14 Panic"
+{
+    Actor TC14               A_TC14_01
+
+
+    WaitUntilEqual TC14Panic 1
+    
+    While (> InitialBADsAlive-Start 0)
+    {
+        CallAndWait "RunToRandomNode" (TC14, TC14_Spot01, TC14_Spot02, TC14_Spot03, TC14_Spot04)
+    }
+
+    WalkToNodeAndWait TC14 TC14_Spot01
+    LookAt TC14 Obi
+    ReturnControlTo TC14
+}
+
+Script "Nemoidians 01"
+{
+	Actor Nemoidian01 A_Nemoidian1_01
+	Actor Nemoidian02 A_Nemoidian2_01
+	Actor Gen01 A_z_UberGen_17
+	Actor Gen02 A_z_UberGen_18
+	Actor Gen03 A_z_UberGen_19
+	Actor Gen04 A_z_UberGen_20
+	Actor Gen05 A_z_UberGen_21
+	Actor Gen06 A_z_UberGen_22
+	Actor Gen07 A_z_UberGen_23
+	Actor Gen08 A_z_UberGen_24
+
+
+	Child WaitUntilKilled Nemoidian01
+	Child WaitUntilKilled Nemoidian02
+	WaitForAny
+
+	TriggerUberGenAndWait Gen01 BAD01
+	TriggerUberGenAndWait Gen02 BAD02
+	TriggerUberGenAndWait Gen03 BAD03
+	TriggerUberGenAndWait Gen04 BAD04
+	TriggerUberGenAndWait Gen05 BAD05
+	TriggerUberGenAndWait Gen06 BAD06
+	TriggerUberGenAndWait Gen07 BAD07
+	TriggerUberGenAndWait Gen08 BAD08
+}
+
+Script "PK4s 01"
+{
+}
+
+Script "Section02 - Nemoidian Runaway 01"
+{
+    Actor Nemoidian01            A_Nemoidian2_01
+    
+/*
+    WaitUntilEqual Hangar01Visited 1
+    UnlockDoor A_01_d_blastdoor_03
+    TakeControlOf Nemoidian01
+//    Teleport Nemoidian01 Section02-NemoidianSpot01
+    RunToNode Nemoidian01 Section02-Spot04
+//    OpenDoor A_01_d_blastdoor_03
+    
+    Child WaitUntilEnteredRegion Qui blastdoor_02_trig
+    Child WaitUntilEnteredRegion Obi blastdoor_02_trig
+    WaitForAny
+
+    LookAt Nemoidian01 A_01_d_blastdoor_02
+    SaylineAndContinue Nemoidian01 "Die Jedi! Guards! Help!"
+    
+    OpenDoor A_01_d_blastdoor_03
+    RunToNodeAndWait Nemoidian01 Section03-NemoidianSpot01
+    CloseDoor A_01_d_blastdoor_03
+    LockDoor A_01_d_blastdoor_03
+    
+    RunToNode Nemoidian01 Section03-NemoidianSpot02
+    
+*/    
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambushes ------------------------------//
+//////////////////////////////////////////////////////////////////////////
+
+Script "Section 06 - Ambush 01"
+{
+    Actor Infantry61        A_Battledroid-Infantry_61
+    Actor Infantry62        A_Battledroid-Infantry_62
+    Actor Infantry63        A_Battledroid-Infantry_63
+    Actor Infantry64        A_Battledroid-Infantry_64
+    Actor Infantry65        A_Battledroid-Infantry_65
+    Actor Infantry66        A_Battledroid-Infantry_66
+
+
+    Child WaitUntilEnteredRegion Obi S06_AI_Rgn_01
+    Child WaitUntilEnteredRegion Qui S06_AI_Rgn_01
+    WaitForAny
+
+    Call "Run" (Infantry61, Section06-Spot01, 0.0)
+    Call "Run" (Infantry62, Section06-Spot02, 0.0)
+    Call "Run" (Infantry63, Section06-Spot03, 0.0)
+    Call "Run" (Infantry64, Section06-Spot04, 1.0)
+    Call "Run" (Infantry65, Section06-Spot05, 1.0)
+    Call "Run" (Infantry66, Section06-Spot06, 1.0)
+}
+
+Script "Elevator Room 01 - Ambush 01"
+{
+    Actor Infantry67        A_Battledroid-Infantry_67
+    Actor Infantry68        A_Battledroid-Infantry_68
+    Actor Infantry69        A_Battledroid-Infantry_69
+    Actor Infantry70        A_Battledroid-Infantry_70
+    Actor Infantry71        A_Battledroid-Infantry_71
+    Actor Infantry72        A_Battledroid-Infantry_72        
+
+
+    Child WaitUntilEnteredRegion Obi ER01_Rgn_01
+    Child WaitUntilEnteredRegion Qui ER01_Rgn_01
+    WaitForAny
+    
+    Call "Run" (Infantry67, ER01-Spot01, 0.0)
+    Call "Run" (Infantry70, ER01-Spot02, 0.0)    
+    Call "Run" (Infantry68, ER01-Spot03, 0.5)
+    Call "Run" (Infantry71, ER01-Spot05, 0.5)
+    Call "Run" (Infantry69, ER01-Spot06, 1.0)
+    Call "Run" (Infantry72, ER01-Spot04, 1.0)    
+}
+
+Script "Section 03 - Ambush 01"
+{
+    Actor Nemoidian01       A_Nemoidian2_01
+    Actor Infantry81        A_Battledroid-Infantry_81
+    Actor Infantry82        A_Battledroid-Infantry_82
+    Actor Infantry83        A_Battledroid-Infantry_83
+    Actor Infantry84        A_Battledroid-Infantry_84
+    Actor Infantry85        A_Battledroid-Infantry_85
+    Actor Infantry86        A_Battledroid-Infantry_86
+
+
+    Child WaitUntilEnteredRegion Obi S03_Rgn_01
+    Child WaitUntilEnteredRegion Qui S03_Rgn_01
+    WaitForAny
+
+    Call "Run" (Infantry81, Section03-Spot01, 0.0)
+    Call "Run" (Infantry82, Section03-Spot02, 0.0)
+    Call "Run" (Infantry83, Section03-Spot03, 0.0)
+    Call "Run" (Infantry84, Section03-Spot04, 0.0)
+    Call "Run" (Infantry85, Section03-Spot05, 0.0)
+    Call "Run" (Infantry86, Section03-Spot06, 0.0)
+    
+    RunToNodeandWait Nemoidian01 Section04-NemoidianSpot01
+    RunToNode Nemoidian01 CR02-NemoidianSpot01
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Patrols ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////
+//------------------------------ Instructions ------------------------------//
+//////////////////////////////////////////////////////////////////////////////
+
+Script "Qui Gon Instructions 01"
+{
+    Actor Commander10            A_Battledroid-Commander_10
+    Actor Infantry73             A_Battledroid-Infantry_73
+    Actor Infantry74             A_Battledroid-Infantry_74    
+    Int   CallObi    10
+    Float ObiQuiDistance
+
+
+    WaitUntilEqual InitialBADsAlive-Start 0
+    TakeControlOf Qui
+    
+    RunToNodeAndWait Qui Qui-Start
+    LookAtAndWait Qui Obi
+
+    DistanceBetweenActors Obi Qui ObiQuiDistance
+    
+    While (> ObiQuiDistance 2.0)
+    {
+        DistanceBetweenActors Obi Qui ObiQuiDistance
+        
+        If (<= ObiQuiDistance 2.0)
+        {
+            EndWhileLoop
+        }
+        
+        If (= CallObi 10)
+        {
+            Sayline Qui "/Qui-Gon_1316/Obiwan, over here!" AttractAttention
+            Set CallObi 0
+        }
+        
+        Pause 1.0
+        Increment CallObi 1
+    }
+    
+    Sayline Qui "/Qui-Gon_1109/Obiwan, quickly... We must get to the bridge in the control sphere of this droid ship!" Talk
+    Sayline Qui "/Qui-Gon_1110/We must question the Viceroy and get to the bottom of this!"
+    Sayline Qui "/Qui-Gon_1111/You lead the way, I will follow." PointForward
+
+
+    TakeControlOf Commander10
+    TakeControlOf Infantry73
+    TakeControlOf Infantry74
+        
+    UnlockDoor A_01_d_blastdoor_02
+    OpenDoorAndWait A_01_d_blastdoor_02    
+    
+    Call "Run" (Commander10, Section02-Spot01, 0.0)
+    Call "Run" (Infantry73, Section02-Spot02, 0.5)
+    Call "Run" (Infantry74, Section02-Spot03, 0.5)
+    
+    ReturnControlTo Qui
+    
+    TakePartialControlOf Qui 0.35 False
+    SetFollowPlayerDistance Qui 10.0
+    SetActiveDistance Qui 15.0
+	SetMustFollowPlayerDistance Qui 20.0
+	SetMustFollowPlayerPriority Qui 0.8
+
+    RunToNode Qui Hangar01-QuiSpot01
+            
+    Set BeginMission 1
+    
+    If (= SkipToBridge 1)
+    {
+        Teleport Qui Qui-BridgeStart
+        Teleport Obi Obi-BridgeStart
+    }    
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Specific Encounters ------------------------------//
+/////////////////////////////////////////////////////////////////////////////////////
+
+Script "Ambush At Conference Room 01"
+{
+    Actor Commander01        A_Battledroid-Commander_01
+    Actor Infantry01         A_Battledroid-Infantry_01
+    Actor Infantry02         A_Battledroid-Infantry_02
+    Actor Infantry03         A_Battledroid-Infantry_03
+    Actor Infantry04         A_Battledroid-Infantry_04
+    Actor Infantry05         A_Battledroid-Infantry_05
+    Actor Infantry06         A_Battledroid-Infantry_06
+    Actor Infantry07         A_Battledroid-Infantry_07        
+
+    Child WaitUntilKilled Commander01
+    Child WaitUntilKilled Infantry01
+    Child WaitUntilKilled Infantry02
+    Child WaitUntilKilled Infantry03
+    Child WaitUntilKilled Infantry04
+    Child WaitUntilKilled Infantry05
+    Child WaitUntilKilled Infantry06
+    Child WaitUntilKilled Infantry07                        
+        
+    WaitForAll
+    
+    Set InitialBADsAlive-Start 0
+}
+
+Script "Hangar Bay 01"
+{
+    WaitUntilNearNode Qui Hangar01-QuiSpot01 1.0
+    WaitUntilNear Qui Obi 2.0    
+
+    TakeControlOf Qui
+            
+    Sayline Qui "They've destroyed our ship!" PointLeft
+    Sayline Qui "/Qui-Gon_1112/Obiwan, we must find the control room that operates the main turret in the hangar bay." Talk
+    Sayline Qui "/Qui-Gon_1113/We need to disable it from there so we can get to the other side of this hangar bay safely." PointForward
+    
+    Set Hangar01Visited 1
+    
+    ReturnControlTo Qui
+    TakePartialControlOf Qui 0.35 False
+    
+    RunToNode Qui Qui-Start
+}
+
+Script "Arrival At Turret Control Room"
+{
+/*
+    Sayline Qui "/Qui-Gon_1114/This is the control room we've been looking for.  We've found it.  The hangar bay turret controls are over there."
+    Sayline Qui "/Qui-Gon_1115/Quickly Obiwan, disable the main turret targeting systems and lets get back to the hangar."    
+*/    
+}
+
+Script "Construction Bay 01"
+{
+/*
+    Sayline Qui "/Qui-Gon_1317/We must be in the battledroid factory.  It looks like it's in full production."
+    Sayline Qui "/Qui-Gon_1318/The Trade Federation must be up to something."
+*/
+}
+
+Script "Construction Bay 02"
+{
+}
+
+Script "Conference Room 01"
+{
+    Actor Nemoidian01            A_Nemoidian2_01
+    Actor Infantry75            A_Battledroid-Infantry_75
+    Actor Infantry76            A_Battledroid-Infantry_76
+    Actor Infantry77            A_Battledroid-Infantry_77
+    Actor Infantry78            A_Battledroid-Infantry_78
+    Actor Infantry79            A_Battledroid-Infantry_79
+    Actor Infantry80            A_Battledroid-Infantry_80                    
+
+    
+    WaitUntilEqual Hangar01Visited 1
+    UnlockDoor A_01_d_blastdoor_03
+    TakeControlOf Nemoidian01
+//    Teleport Nemoidian01 Section02-NemoidianSpot01
+    RunToNode Nemoidian01 Section02-Spot04
+//    OpenDoor A_01_d_blastdoor_03
+
+    Child WaitUntilEnteredRegion Qui blastdoor_02_trig
+    Child WaitUntilEnteredRegion Obi blastdoor_02_trig
+    WaitForAny
+
+//    LookAt Nemoidian01 A_01_d_blastdoor_02
+    SaylineAndContinue Nemoidian01 "Die Jedi! Guards! Help!"
+    
+    RunToNodeAndWait Nemoidian01 Section03-NemoidianSpot01
+    RunToNode Nemoidian01 Section03-NemoidianSpot02
+    CloseDoorAndWait A_01_d_blastdoor_03
+    LockDoor A_01_d_blastdoor_03
+                
+    WaitUntilNearNode Qui Qui-Start 1
+
+    RunToNodeAndWait Qui Section02-QuiSpot01
+        
+//    WaitUntilNearNode Qui Section02-QuiSpot01 1
+
+    TakeControlOf Qui
+    
+    Sayline Qui "/Qui-Gon_1319/Obiwan, guard the door while I work on the lock."
+    LookAt Qui A_3-2_doorlock_06
+    
+    ChildScript "Qui Picks Lock"
+    {
+        PlayGestureAndWait Qui Manipulate
+        Loop
+    }
+    
+    ChildScript "BADs Near Qui"
+    {
+        WaitUntilDamaged Qui
+        Sayline Qui "Protect me, Obiwan!"
+        Loop
+    }
+    
+    UnlockDoor A_01_d_blastdoor_06
+    OpenDoorAndWait A_01_d_blastdoor_06
+
+    Call "Run" (Infantry75, Section02-Spot04, 0.0)
+    Call "Run" (Infantry76, Section02-Spot05, 0.0)
+    Call "Run" (Infantry77, Section02-Spot06, 0.0)
+    Call "Run" (Infantry78, Section02-Spot07, 0.0)
+    Call "Run" (Infantry79, Section02-Spot08, 0.0)
+    Call "Run" (Infantry80, Section02-Spot09, 0.0)            
+    
+    Child WaitUntilKilled Infantry75
+    Child WaitUntilKilled Infantry76
+    Child WaitUntilKilled Infantry77
+    Child WaitUntilKilled Infantry78
+    Child WaitUntilKilled Infantry79
+    Child WaitUntilKilled Infantry80                    
+    WaitForAll
+    
+    EndScript "Qui Picks Lock"
+    EndScript "BADs Near Qui"
+    
+    StopActions Qui
+          
+    UnlockDoor A_01_d_blastdoor_03
+    OpenDoor A_01_d_blastdoor_03
+        
+    Sayline Qui "/Qui-Gon_1320/I've unlocked the door Obiwan.  Let's go!"
+    
+    ReturnControlTo Qui
+    TakePartialControlOf Qui 0.35 False
+    
+    RunToNode Qui Section04-NemoidianSpot01
+}
+
+Script "Forcefield Trap"
+{
+    Child WaitUntilEnteredRegion Qui Ambush_Area
+    Child WaitUntilEnteredRegion Obi Ambush_Area
+    WaitForAll
+    
+    TakeControlOf Qui
+    LookAtAndWait Qui Obi
+    Sayline Qui "/Qui-Gon_1116/It's an ambush!  They're surrounding us with forcefields!"
+    Sayline Qui "/Qui-Gon_1117/We can't last against all of these battledroids."
+    Sayline Qui "/Qui-Gon_1118/Quickly, Obiwan!  We need to find an alternate way out of these halls!"
+    ReturnControlTo Qui
+        
+//    WaitUntilSees Obi A_01_HLa_grate_01 20.0
+    WaitUntilNearNode Obi Force_Jump_Up 2.0
+    TakeControlOf Qui
+    LookAtAndWait Qui Obi
+    Sayline Qui "/Qui-Gon_1119/That's it! Great thinking, Padawan!"    
+    Sayline Qui "/Qui-Gon_1120/Quickly! Get into the ventalation system."
+    Sayline Qui "/Qui-Gon_1121/We should be able to reach the command bridge faster by climbing up the air ducts."
+    RunToNodeAndWait Qui Vent_Hatch
+    WaitUntilNear Obi Qui 1.0
+    ReturnControlTo Qui
+}
+
+Script "Dioxin Gas Jets 01"
+{
+/*
+    Sayline Qui "/Qui-Gon_1323/Those mechanisms on the sides of this conduit filter toxic gases from the propulsion systems."
+    Sayline Qui "/Qui-Gon_1324/Watch out, the gas can be leathal."
+    Sayline Qui "/Qui-Gon_1325/Obiwan, we need to find a way to disable those mechanisms emitting the gas so we can pass through safely."
+
+    Sayline Qui "/Qui-Gon_1321/Obiwan, we can travel up to the next level by riding the updraft of this air stream."
+    Sayline Qui "/Qui-Gon_1322/Jump in!"
+*/
+}
+
+Script "Dioxin Gas Jets 02"
+{
+}
+
+Script "Dioxin Gas Jets 03"
+{
+/*
+    Sayline Qui "/Qui-Gon_1326/Obiwan, here is the way out of these conduits."
+    Sayline Qui "/Qui-Gon_1327/We are now in a cargo loading and storage area."
+    Sayline Qui "/Qui-Gon_1328/There must be a way out.  It won't be long before they determine our location."
+*/
+}
+
+Script "Hangar Bay 02"
+{
+/*
+    Sayline Qui "/Qui-Gon_1329/This is the observation deck, Obiwan.  We must be near the bridge."
+    Sayline Qui "/Qui-Gon_1330/The Trade Federation is readying their droid army. We must warn the Naboo."
+*/
+}
+
+Script "Arrival At Command Bridge"
+{
+    Actor Security06    A_Battledroid-Security_06
+    Actor Security07    A_Battledroid-Security_07
+    Actor Security08    A_Battledroid-Security_08
+    Actor Security09    A_Battledroid-Security_09
+    Actor Security10    A_Battledroid-Security_10
+    Actor Security11    A_Battledroid-Security_11
+    Actor Security12    A_Battledroid-Security_12
+    Actor Security13    A_Battledroid-Security_13
+    
+    
+    WaitUntilEnteredRegion Obi NearCommandBridge
+    
+    Sayline Qui "/Qui-Gon_1331/The command bridge is just up ahead, Obiwan."
+    Sayline Qui "/Qui-Gon_1332/First, we must dispose of all those security droids guarding the door."
+    Sayline Qui "/Qui-Gon_1333/Then, we will get some answers from our Nemoidian friends."    
+        
+    Child WaitUntilKilled Security06
+    Child WaitUntilKilled Security07
+    Child WaitUntilKilled Security08
+    Child WaitUntilKilled Security09
+    Child WaitUntilKilled Security10
+    Child WaitUntilKilled Security11
+    Child WaitUntilKilled Security12
+    Child WaitUntilKilled Security13
+    
+    WaitForAll
+    
+    Set InitialBADsAlive-Bridge 0
+}
+
+Script "Command Bridge Final Encounter"
+{
+    WaitUntilEqual InitialBADsAlive-Bridge 0
+
+    TakeControlOf Qui
+    RunToNodeAndWait Qui Qui_Cutting_Door
+    SayLine Qui "/Qui-Gon_1122/Obiwan, cover me while I cut through the bridge door!"
+    LookAt Qui A_01_d_conf_10
+    
+//    InvincibilityOff Qui
+    
+    Timer BridgeTimer
+
+    WaitUntilGreaterThan BridgeTimer 0.0
+    Call "CheckBridgeRegions" (1)
+    WaitUntilGreaterThan BridgeTimer 15.0
+    Call "CheckBridgeRegions" (2)
+    WaitUntilGreaterThan BridgeTimer 30.0
+    Call "CheckBridgeRegions" (3)
+    SayLine Qui "/Qui-Gon_1123/They've closed the blast doors.  This may take a little longer."
+
+    WaitUntilGreaterThan BridgeTimer 45.0
+    Call "CheckBridgeRegions" (4)
+    WaitUntilGreaterThan BridgeTimer 60.0
+    Call "CheckBridgeRegions" (5)
+    WaitUntilGreaterThan BridgeTimer 75.0
+    Call "CheckBridgeRegions" (6)
+    SayLine Qui "/Qui-Gon_1124/It's working. The blast doors are melting away."
+    
+    WaitUntilGreaterThan BridgeTimer 90.0
+    Call "CheckBridgeRegions" (7)
+    WaitUntilGreaterThan BridgeTimer 105.0
+    Call "CheckBridgeRegions" (8)
+    WaitUntilGreaterThan BridgeTimer 120.0
+    Call "CheckBridgeRegions" (9)
+    SayLine Qui "/Qui-Gon_1125/Almost through...  Just hold them off for a few more seconds..."
+
+    WaitUntilEqual CurBADsAlive-Bridge 0
+    
+    Pause 3.0
+    
+    Increment MissionCompleted 1
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Random Encounters ------------------------------//
+///////////////////////////////////////////////////////////////////////////////////
+
+Script "Random BADs - Rgn_09"
+{
+	Actor Gen01 A_z_UberGen_73
+	Actor Gen02 A_z_UberGen_74
+	Actor Gen03 A_z_UberGen_75
+	Actor Gen04 A_z_UberGen_76
+	Actor Gen05 A_z_UberGen_77
+	Actor Gen06 A_z_UberGen_78
+
+	Actor Gen07 A_z_UberGen_79
+	Actor Gen08 A_z_UberGen_80
+	Actor Gen09 A_z_UberGen_81
+	Actor Gen10 A_z_UberGen_82
+	Actor Gen11 A_z_UberGen_83
+	Actor Gen12 A_z_UberGen_84
+
+    Actor Infantry35            A_Battledroid-Infantry_35
+    Actor Infantry36            A_Battledroid-Infantry_36
+    Actor Infantry37            A_Battledroid-Infantry_37
+    Actor Infantry38            A_Battledroid-Infantry_38
+    Actor Infantry39            A_Battledroid-Infantry_39
+    Actor Infantry40            A_Battledroid-Infantry_40
+                        
+
+	If (IsNotInRegion Obi Rgn_09)
+	{
+		WaitUntilEnteredRegion Obi Rgn_09
+
+		// Choose UberGen group
+		RandomInt UberGenGroup 1 2
+
+		If (= UberGenGroup 1)
+		{
+                // Check if door is open
+/*
+			Call "CreateBAD-Rgn_09" (Gen01, Section08-Spot01)
+			Call "CreateBAD-Rgn_09" (Gen02, Section08-Spot02)
+			Call "CreateBAD-Rgn_09" (Gen03, Section08-Spot03)
+			Call "CreateBAD-Rgn_09" (Gen04, Section08-Spot04)
+			Call "CreateBAD-Rgn_09" (Gen05, Section08-Spot05)
+			Call "CreateBAD-Rgn_09" (Gen06, Section08-Spot06)
+*/
+           Call "Activate" (Infantry35, DeadEnd01-Spot01, Section08-Spot01, 0.0)
+           Call "Activate" (Infantry36, DeadEnd01-Spot02, Section08-Spot02, 0.5)
+           Call "Activate" (Infantry37, DeadEnd01-Spot03, Section08-Spot03, 1.0)
+           Call "Activate" (Infantry38, DeadEnd01-Spot04, Section08-Spot04, 1.5)
+           Call "Activate" (Infantry39, DeadEnd01-Spot05, Section08-Spot05, 2.0)
+           Call "Activate" (Infantry40, DeadEnd01-Spot06, Section08-Spot06, 2.5)
+           
+		}
+		Else
+		{
+                // Check if door is open
+/*                
+			Call "CreateBAD-Rgn_09" (Gen07, Section08-Spot01)
+			Call "CreateBAD-Rgn_09" (Gen08, Section08-Spot02)
+			Call "CreateBAD-Rgn_09" (Gen09, Section08-Spot03)
+			Call "CreateBAD-Rgn_09" (Gen10, Section08-Spot04)
+			Call "CreateBAD-Rgn_09" (Gen11, Section08-Spot05)
+			Call "CreateBAD-Rgn_09" (Gen12, Section08-Spot06)
+*/
+           Call "Activate" (Infantry35, DeadEnd02-Spot01, Section08-Spot01, 0.0)
+           Call "Activate" (Infantry36, DeadEnd02-Spot02, Section08-Spot02, 0.5)
+           Call "Activate" (Infantry37, DeadEnd02-Spot03, Section08-Spot03, 1.0)
+           Call "Activate" (Infantry38, DeadEnd02-Spot04, Section08-Spot04, 1.5)
+           Call "Activate" (Infantry39, DeadEnd02-Spot05, Section08-Spot05, 2.0)
+           Call "Activate" (Infantry40, DeadEnd02-Spot06, Section08-Spot06, 2.5)
+		}
+	}
+
+	Pause 3.0
+
+//	Loop
+}
+
+Script "Random BADs - Rgn_10"
+{
+	Actor Gen01 A_z_UberGen_85
+	Actor Gen02 A_z_UberGen_86
+	Actor Gen03 A_z_UberGen_87
+	Actor Gen04 A_z_UberGen_88
+	Actor Gen05 A_z_UberGen_89
+	Actor Gen06 A_z_UberGen_90
+
+
+	If (IsNotInRegion Obi Rgn_10)
+	{
+		WaitUntilEnteredRegion Obi Rgn_10
+
+		Call "CreateBAD-Rgn_10" (Gen01, Section09-Spot01)
+		Call "CreateBAD-Rgn_10" (Gen02, Section09-Spot02)
+		Call "CreateBAD-Rgn_10" (Gen03, Section09-Spot03)
+		Call "CreateBAD-Rgn_10" (Gen04, Section09-Spot04)
+		Call "CreateBAD-Rgn_10" (Gen05, Section09-Spot05)
+		Call "CreateBAD-Rgn_10" (Gen06, Section09-Spot06)
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_11"
+{
+	Actor Gen01 A_z_UberGen_91
+	Actor Gen02 A_z_UberGen_92
+	Actor Gen03 A_z_UberGen_93
+	Actor Gen04 A_z_UberGen_94
+	Actor Gen05 A_z_UberGen_95
+	Actor Gen06 A_z_UberGen_96
+
+	Actor Gen07 A_z_UberGen_97
+	Actor Gen08 A_z_UberGen_98
+	Actor Gen09 A_z_UberGen_99
+	Actor Gen10 A_z_UberGen_100
+	Actor Gen11 A_z_UberGen_101
+	Actor Gen12 A_z_UberGen_102
+
+
+	If (IsNotInRegion Obi Rgn_11)
+	{
+		WaitUntilEnteredRegion Obi Rgn_11
+
+		// Choose UberGen group
+		RandomInt UberGenGroup 1 2
+
+		If (= UberGenGroup 1)
+		{
+			Call "CreateBAD-Rgn_11" (Gen01, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen02, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen03, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen04, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen05, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen06, Ambush_11)
+		}
+		Else
+		{
+			Call "CreateBAD-Rgn_11" (Gen07, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen08, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen09, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen10, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen11, Ambush_11)
+			Call "CreateBAD-Rgn_11" (Gen12, Ambush_11)
+		}
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_12"
+{
+	Actor Gen01 A_z_UberGen_103
+	Actor Gen02 A_z_UberGen_104
+	Actor Gen03 A_z_UberGen_105
+	Actor Gen04 A_z_UberGen_106
+	Actor Gen05 A_z_UberGen_107
+	Actor Gen06 A_z_UberGen_108
+
+
+	If (IsNotInRegion Obi Rgn_12)
+	{
+		WaitUntilEnteredRegion Obi Rgn_12
+
+		Call "CreateBAD-Rgn_12" (Gen01, Ambush_12)
+		Call "CreateBAD-Rgn_12" (Gen02, Ambush_12)
+		Call "CreateBAD-Rgn_12" (Gen03, Ambush_12)
+		Call "CreateBAD-Rgn_12" (Gen04, Ambush_12)
+		Call "CreateBAD-Rgn_12" (Gen05, Ambush_12)
+		Call "CreateBAD-Rgn_12" (Gen06, Ambush_12)
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_13"
+{
+	Actor Gen01 A_z_UberGen_109
+	Actor Gen02 A_z_UberGen_110
+	Actor Gen03 A_z_UberGen_111
+	Actor Gen04 A_z_UberGen_112
+	Actor Gen05 A_z_UberGen_113
+	Actor Gen06 A_z_UberGen_114
+
+	Actor Gen07 A_z_UberGen_115
+	Actor Gen08 A_z_UberGen_116
+	Actor Gen09 A_z_UberGen_117
+	Actor Gen10 A_z_UberGen_118
+	Actor Gen11 A_z_UberGen_119
+	Actor Gen12 A_z_UberGen_120
+
+
+	If (IsNotInRegion Obi Rgn_13)
+	{
+		WaitUntilEnteredRegion Obi Rgn_13
+
+		// Choose UberGen group
+		RandomInt UberGenGroup 1 2
+
+		If (= UberGenGroup 1)
+		{
+			Call "CreateBAD-Rgn_13" (Gen01, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen02, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen03, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen04, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen05, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen06, Ambush_13)
+		}
+		Else
+		{
+			Call "CreateBAD-Rgn_13" (Gen07, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen08, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen09, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen10, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen11, Ambush_13)
+			Call "CreateBAD-Rgn_13" (Gen12, Ambush_13)
+		}
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_14"
+{
+	Actor Gen01 A_z_UberGen_115
+	Actor Gen02 A_z_UberGen_116
+	Actor Gen03 A_z_UberGen_117
+	Actor Gen04 A_z_UberGen_118
+	Actor Gen05 A_z_UberGen_119
+	Actor Gen06 A_z_UberGen_120
+
+
+	If (IsNotInRegion Obi Rgn_14)
+	{
+		WaitUntilEnteredRegion Obi Rgn_14
+
+		Call "CreateBAD-Rgn_14" (Gen01, Ambush_14)
+		Call "CreateBAD-Rgn_14" (Gen02, Ambush_14)
+		Call "CreateBAD-Rgn_14" (Gen03, Ambush_14)
+		Call "CreateBAD-Rgn_14" (Gen04, Ambush_14)
+		Call "CreateBAD-Rgn_14" (Gen05, Ambush_14)
+		Call "CreateBAD-Rgn_14" (Gen06, Ambush_14)
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_16"
+{
+	Actor Gen01 A_z_UberGen_121
+	Actor Gen02 A_z_UberGen_122
+	Actor Gen03 A_z_UberGen_123
+	Actor Gen04 A_z_UberGen_124
+	Actor Gen05 A_z_UberGen_125
+	Actor Gen06 A_z_UberGen_126
+
+	Actor Gen07 A_z_UberGen_127
+	Actor Gen08 A_z_UberGen_128
+	Actor Gen09 A_z_UberGen_129
+	Actor Gen10 A_z_UberGen_130
+	Actor Gen11 A_z_UberGen_131
+	Actor Gen12 A_z_UberGen_132
+
+
+	If (IsNotInRegion Obi Rgn_16)
+	{
+		WaitUntilEnteredRegion Obi Rgn_16
+
+		// Choose UberGen group
+		RandomInt UberGenGroup 1 2
+
+		If (= UberGenGroup 1)
+		{
+			Call "CreateBAD-Rgn_16" (Gen01, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen02, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen03, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen04, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen05, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen06, Ambush_16)
+		}
+		Else
+		{
+			Call "CreateBAD-Rgn_16" (Gen07, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen08, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen09, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen10, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen11, Ambush_16)
+			Call "CreateBAD-Rgn_16" (Gen12, Ambush_16)
+		}
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_17"
+{
+	Actor Gen01 A_z_UberGen_145
+	Actor Gen02 A_z_UberGen_146
+	Actor Gen03 A_z_UberGen_147
+	Actor Gen04 A_z_UberGen_148
+	Actor Gen05 A_z_UberGen_149
+	Actor Gen06 A_z_UberGen_150
+
+
+	If (IsNotInRegion Obi Rgn_17)
+	{
+		WaitUntilEnteredRegion Obi Rgn_17
+
+		Call "CreateBAD-Rgn_17" (Gen01, Ambush_17)
+		Call "CreateBAD-Rgn_17" (Gen02, Ambush_17)
+		Call "CreateBAD-Rgn_17" (Gen03, Ambush_17)
+		Call "CreateBAD-Rgn_17" (Gen04, Ambush_17)
+		Call "CreateBAD-Rgn_17" (Gen05, Ambush_17)
+		Call "CreateBAD-Rgn_17" (Gen06, Ambush_17)
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_18"
+{
+	Actor Gen01 A_z_UberGen_139
+	Actor Gen02 A_z_UberGen_140
+	Actor Gen03 A_z_UberGen_141
+	Actor Gen04 A_z_UberGen_142
+	Actor Gen05 A_z_UberGen_143
+	Actor Gen06 A_z_UberGen_144
+
+	Actor Gen07 A_z_UberGen_133
+	Actor Gen08 A_z_UberGen_134
+	Actor Gen09 A_z_UberGen_135
+	Actor Gen10 A_z_UberGen_136
+	Actor Gen11 A_z_UberGen_137
+	Actor Gen12 A_z_UberGen_138
+
+
+	If (IsNotInRegion Obi Rgn_18)
+	{
+		WaitUntilEnteredRegion Obi Rgn_18
+
+		// Choose UberGen group
+		RandomInt UberGenGroup 1 2
+
+		If (= UberGenGroup 1)
+		{
+			Call "CreateBAD-Rgn_18" (Gen01, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen02, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen03, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen04, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen05, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen06, Ambush_18)
+		}
+		Else
+		{
+			Call "CreateBAD-Rgn_18" (Gen07, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen08, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen09, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen10, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen11, Ambush_18)
+			Call "CreateBAD-Rgn_18" (Gen12, Ambush_18)
+		}
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_19"
+{
+	Actor Gen01 A_z_UberGen_151
+	Actor Gen02 A_z_UberGen_152
+	Actor Gen03 A_z_UberGen_153
+	Actor Gen04 A_z_UberGen_154
+	Actor Gen05 A_z_UberGen_155
+	Actor Gen06 A_z_UberGen_156
+
+
+	If (IsNotInRegion Obi Rgn_19)
+	{
+		WaitUntilEnteredRegion Obi Rgn_19
+
+		Call "CreateBAD-Rgn_19" (Gen01, Ambush_19)
+		Call "CreateBAD-Rgn_19" (Gen02, Ambush_19)
+		Call "CreateBAD-Rgn_19" (Gen03, Ambush_19)
+		Call "CreateBAD-Rgn_19" (Gen04, Ambush_19)
+		Call "CreateBAD-Rgn_19" (Gen05, Ambush_19)
+		Call "CreateBAD-Rgn_19" (Gen06, Ambush_19)
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+Script "Random BADs - Rgn_20"
+{
+	Actor Gen01 A_z_UberGen_157
+	Actor Gen02 A_z_UberGen_158
+	Actor Gen03 A_z_UberGen_159
+	Actor Gen04 A_z_UberGen_160
+	Actor Gen05 A_z_UberGen_161
+	Actor Gen06 A_z_UberGen_162
+
+	Actor Gen07 A_z_UberGen_163
+	Actor Gen08 A_z_UberGen_164
+	Actor Gen09 A_z_UberGen_165
+	Actor Gen10 A_z_UberGen_166
+	Actor Gen11 A_z_UberGen_167
+	Actor Gen12 A_z_UberGen_168
+
+	Actor Gen13 A_z_UberGen_169
+	Actor Gen14 A_z_UberGen_170
+	Actor Gen15 A_z_UberGen_171
+	Actor Gen16 A_z_UberGen_172
+	Actor Gen17 A_z_UberGen_173
+	Actor Gen18 A_z_UberGen_174
+
+
+	If (IsNotInRegion Obi Rgn_20)
+	{
+		WaitUntilEnteredRegion Obi Rgn_20
+
+		// Choose UberGen group
+		RandomInt UberGenGroup 1 3
+
+		If (= UberGenGroup 1)
+		{
+			Call "CreateBAD-Rgn_20" (Gen01, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen02, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen03, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen04, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen05, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen06, Ambush_20)
+		}
+		If (= UberGenGroup 2)
+		{
+			Call "CreateBAD-Rgn_20" (Gen07, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen08, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen09, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen10, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen11, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen12, Ambush_20)
+		}
+		If (= UberGenGroup 3)
+		{
+			Call "CreateBAD-Rgn_20" (Gen13, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen14, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen15, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen16, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen17, Ambush_20)
+			Call "CreateBAD-Rgn_20" (Gen18, Ambush_20)
+		}
+	}
+
+	Pause 3.0
+
+	Loop
+}
+
+
+//-------------------- Cheats --------------------//
+
+Script "Test Qui"
+{
+    // Test Qui Gon navigation of critical path
+	WaitUntilNudged Qui
+	TakeControlOf Qui
+	RunToNodeAndWait Qui Qui_Cutting_Door
+	ReturnControlTo Qui
+}
+
+Script "Test Nemoidian Running"
+{
+    Actor Nemoidian02            A_Nemoidian1_01
+
+
+    // Test Nemoidian Running
+	WaitUntilNudged Nemoidian02
+	TakeControlOf Nemoidian02
+	RunToNodeAndWait Nemoidian02 NemoidianTest01
+	RunToNodeAndWait Nemoidian02 NemoidianTest02
+	RunToNodeAndWait Nemoidian02 NemoidianTest03
+	RunToNodeAndWait Nemoidian02 NemoidianTest04
+    ReturnControlTo Nemoidian02
+    Loop
+}

@@ -1,0 +1,96 @@
+[ACTION_ShowPrompt0]
+PromptText="PRESS @ TO ACTIVATE LIFT"
+
+[BowcasterPickupMP0]
+PickupMessage="Wookiee Bowcaster"
+
+[BowcasterPickupMP1]
+PickupMessage="Wookiee Bowcaster"
+
+[ConcussionRiflePickupMP0]
+PickupMessage="LJ-50 Concussion Rifle"
+
+[DC15PickupMP4]
+PickupMessage="DC15s Side Arm Blaster"
+
+[DC17mAntiArmorWeaponPickupMP0]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mBlasterWeaponPickupMP0]
+PickupMessage="DC-17m Blaster"
+
+[DC17mSniperWeaponPickupMP0]
+PickupMessage="DC-17m Sniper Attachment"
+
+[DC17mSniperWeaponPickupMP1]
+PickupMessage="DC-17m Sniper Attachment"
+
+[EMPGrenadeMultiPlay0]
+PickupMessage="EC Detonators"
+
+[EMPGrenadeMultiPlay1]
+PickupMessage="EC Detonators"
+
+[LevelInfo0]
+Title="ENGINE"
+
+[LevelSummary]
+Title="ENGINE"
+
+[PickupHealth0]
+PickupMessage="Bacta tank"
+
+[PickupHealth1]
+PickupMessage="Bacta tank"
+
+[PickupHealth2]
+PickupMessage="Bacta tank"
+
+[PickupHealth3]
+PickupMessage="Bacta tank"
+
+[PickupHealth4]
+PickupMessage="Bacta tank"
+
+[PickupHealth5]
+PickupMessage="Bacta tank"
+
+[PickupHealth6]
+PickupMessage="Bacta tank"
+
+[PickupHealth7]
+PickupMessage="Bacta tank"
+
+[RocketLauncherPickupMP0]
+PickupMessage="Wookiee Homing Rocket Launcher"
+
+[SMGPickupMP2]
+PickupMessage="Trandoshan Mercenary SMG"
+
+[ShotgunPickupMP0]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP1]
+PickupMessage="ACP Array Gun"
+
+[ThermalDetonatorMultiPlay2]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay3]
+PickupMessage="Thermal Detonators"
+
+[Trigger0]
+Message="Lift in 3 seconds"
+
+[Trigger11]
+Message="Lift in 3 seconds"
+
+[Trigger19]
+Message="Lift"
+
+[Trigger3]
+Message="Lift"
+
+[Trigger8]
+Message="Lift"
+

@@ -1,0 +1,309 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+SetTimeToBeat 10 30 //10 minutes, 30 seconds, could also have said "SetTimeToBeat 630"
+
+SetDefaultSurface 08_13fnttop.sur
+
+LockDoor A_15_const_inside_elev_01
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_15.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_15.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_17.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_10.wav Battle
+AddMusic m_battle_11.wav Battle
+
+AddBattleLoop  m_battle_14_lp.wav  m_battle_14_win.wav  m_battle_14_lose.wav
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+/*
+///////////////////
+//  Save Points  //
+///////////////////
+
+Script "savepoint_begin"
+{
+	SetStartPosition 0
+	WaitUntilEnteredRegion Obi savepoint_begin // returns inside final elevator (savepoint playerstart faces out)
+	SetStartPosition 1
+	OpenDoor A_15_d_lower_elev_02
+	Save
+)
+*/
+
+Script "l01_4 continues"
+{
+	//BeginCutScene
+	//TakeControlOf Obi  // *** This won't work because Obi does not have an AI
+	
+	startMusicManager
+	FadeUp
+	Pause 1.0
+	OpenDoor A_15_d_lower_elev_02
+
+	//ReturnControlTo Obi
+	//EndCutscene
+}
+
+//////////////////
+//  Going Back  //
+//////////////////
+
+script "LoadPoint"
+{
+	WaitUntilEnteredRegion obi rgn_load_L01_4a
+	BeginCutscene
+	CameraPlayer Obi 0 2.5 4
+	FadeDownandWait
+	PreEndCutscene
+	FadeDown 0
+	EndCutScene
+	NextPart L01_4a
+}
+
+//////////////
+// Last Guy //
+//////////////
+
+
+Script "LastGuy"
+{
+	Actor LastGuy A_lastguy_01
+	TakeControlOf LastGuy
+	
+	InvincibilityOn LastGuy
+	
+	SetDeadOnAimFraction LastGuy 1  // Make him accurate!
+	WalkToNodeAndWait LastGuy LastGuyStart
+	LookAtNode LastGuy LastGuy1  // Prime this guy to run to that node!
+
+	WaitUntilEnteredRegion Obi RegionLastGuy
+
+	RunToNodeAndWait LastGuy LastGuy1
+
+	FireAt LastGuy Obi
+
+	Child RunToNodeAndWait LastGuy LastGuy2
+	InvincibilityOff LastGuy
+
+	WaitUntilSees Obi LastGuy 45
+	ReturnControlTo LastGuy
+
+}
+
+Script "Lower Trap"
+{
+	//TakeControlOf A_Gran-Club_05
+	//TakeControlOf A_Gran-Club_06
+	//TakeControlOf A_Gran-Club_02
+
+	Child WaitUntilEnteredRegion Obi lower_trap01
+	Child WaitUntilEnteredRegion Obi lower_trap02
+	WaitForAny
+
+	Child RunToNode A_Gran-Club_05 LastGuy2
+	Child RunToNode A_Gran-Club_06 LastGuy2
+	Child RunToNode A_Gran-Club_02 LastGuy2
+	
+	Child ForceTargetAndAttack A_Gran-Club_05 Obi
+	Child ForceTargetAndAttack A_Gran-Club_06 Obi
+	Child ForceTargetAndAttack A_Gran-Club_02 Obi
+}
+	
+
+
+////////////////////////
+// Lower Construction //
+////////////////////////
+
+LoadDLG Qui-Gon.dlg
+Actor Inform A_quarren_01
+LoadDLG gran.dlg
+LoadDLG informant.dlg	
+
+Script "Fail Condition - Lower Rumble"
+{
+	MakeResurrectable Inform
+	WaitUntilKilled Inform
+	Pause 1.0
+	BeginCutscene
+
+	CameraLookAtAndWait Inform 2 1 1
+	Pause 1.5
+	CommunicatorMessageAndWait "/Qui-Gon_225/Something’s wrong. We’ve lost contact with him. " Qui_Gon.dlg
+	CameraPlayer Inform 0 3.0 0
+	CommunicatorOff	
+	PreEndCutscene
+	FadeDownAndWait
+	CameraOff
+	EndCutScene
+
+	FailMission
+}
+
+Script "Lower Rumble"
+{
+	Actor Inform A_quarren_01
+	SetTeam Inform 0
+
+	AddPatrolState A_lowbase_Gran-Club_01
+	AddPatrolState A_lowbase_Gran-Club_04
+	AddPatrolState A_lowbase_Gran-Club_05
+
+	TakeControlOf A_Aqualish-Blaster_03
+	SetHostageSituation A_quarren_01 A_Aqualish-Blaster_03
+	SetHostageAlertDistance A_Aqualish-Blaster_03 8.0
+	WaitUntilNear Obi A_Aqualish-Blaster_03 18
+	ForceTargetAndAttack A_Aqualish-Blaster_03 Obi
+	ReturnControlTo Inform
+	PlayGesture Inform Panic 
+
+	WaitUntilEnteredRegion Obi RegionLowerBase
+	RunToNodeAndWait A_lowbase_Trandoshan-Concussion_01 kubaz_hide
+	Child WaitUntilNearNode Obi kubaz_hide 2
+	Child TakePartialControlOf A_lowbase_Trandoshan-Concussion_01
+	Child ForceTargetAndAttack A_lowbase_Trandoshan-Concussion_01 Obi
+
+	ForceTargetAndAttack A_lowbase_Aqualish-Dagger_06 Obi
+	ForceTargetAndAttack A_lowbase_Aqualish-Pipe_04 Obi
+	ForceTargetAndAttack A_lowbase_Gran-Club_01 Obi
+	ForceTargetAndAttack A_lowbase_Gran-Club_04 Obi
+	ForceTargetAndAttack A_lowbase_Gran-Club_05 Obi
+	ForceTargetAndAttack A_lowbase_Trandoshan-SpikedClub_03 Obi
+
+	Child WaitUntilKilled A_lowbase_Aqualish-Dagger_06 Obi
+	SayLineNonPositional Inform "/Informant_234/No!  Please!  Don't shoot... AAGH."
+	WaitForAll	
+
+	Child WaitUntilKilled A_lowbase_Aqualish-Pipe_04 Obi
+	Child WaitUntilKilled A_lowbase_Gran-Club_01 Obi
+	ForceTargetAndAttack A_lowbase_Trandoshan-Concussion_01 Obi
+	SayLineNonPositional Inform "/Informant_1190/Don't shoot!!!!!!"
+	WaitForAll
+
+	Child WaitUntilKilled A_lowbase_Gran-Club_04 Obi
+	Child WaitUntilKilled A_lowbase_Gran-Club_05 Obi
+	SayLineNonPositional Inform "/Informant_1189/Nooooo!!!!!"
+	WaitUntilKilled A_lowbase_Trandoshan-SpikedClub_03 Obi
+	WaitForAll
+}
+
+
+///////////////////////
+//  Ending Cutscene  //
+///////////////////////
+
+Script "Ending Cutscene"
+{
+	Actor Inform A_quarren_01
+
+	Child WaitUntilKilled A_lowbase_Trandoshan-Concussion_01
+	Child WaitUntilKilled A_lowbase_Aqualish-Pipe_04
+	Child WaitUntilKilled A_lowbase_Gran-Club_01
+	Child WaitUntilKilled A_lowbase_Gran-Club_04
+	Child WaitUntilKilled A_lowbase_Gran-Club_05
+	Child WaitUntilKilled A_lowbase_Trandoshan-SpikedClub_03
+	Child WaitUntilKilled A_lowbase_Aqualish-Dagger_06
+	Child WaitUntilKilled A_Kubaz-Blaster_04
+	WaitForAll
+	StopAction A_Aqualish-Blaster_03
+	ReturnControlTo A_Aqualish-Blaster_03
+	ForceTargetAndAttack A_Aqualish-Blaster_03 Obi
+
+	WaitUntilKilled A_Aqualish-Blaster_03
+
+	MissionObjectiveAchieved 2
+
+	InvincibilityOn Inform
+
+	Pause 1.0
+	DisableAudioFades
+	FadeDownAndWait
+
+	BeginCutscene
+	UnEquipWeapon Obi
+	TakeControlOf Obi
+	TakeControlOf Inform
+	
+	Teleport Obi obi
+	Teleport Inform inform
+	Teleport A_15_ConstCrateSm_04 crate1
+	Teleport A_15_ConstCrateSm_08 crate2
+	Pause 0.5
+	CameraFixed saved1
+	FadeUp
+
+	EnableAudioFades
+
+	StopMusicManager
+	PlayFlourish cut_1_4bextro_m.wav
+
+	SetAnimTableIndex Obi 1
+	Pause 0 5
+	WalkToNodeAndWait Obi goto_inform_obi
+
+	Child LookAtAndWait Obi Inform
+	Child LookAtAndWait Inform Obi
+	WaitForAll
+
+	CameraFixed saved3
+	Sayline Inform "/Informant_229/Thank you Obi-Wan!"
+	Sayline Inform "/Informant_231/I have much to tell you about these thugs."
+	CameraFixed saved2
+	Pause 0 15
+	PlayGesture Inform PalmUpLeft 2
+	Sayline Inform "/Informant_232/They are receiving large shipments of arms and plan on turning coruscant into a war zone."
+	StopAction Obi
+	StopAction Inform
+	WaitForAll
+	Child WalkToNode Obi goto_obi_ending
+	Sayline Obi "/Obi-Wan_809/Let's go!"
+	Child RunToNode Inform goto_obi_ending
+	Pause 0.5
+	CameraFixed saved4
+	WaitForAll
+
+	Child RunToNode Inform goto_inform_ending	
+	Pause 2.0
+
+	FadeDownAndWait 4.0
+	
+	WaitForAny
+
+	PreEndCutscene
+	FadeDown
+	CameraOff
+	CameraOff
+	EndCutScene
+
+	NextLevel L01_8
+}

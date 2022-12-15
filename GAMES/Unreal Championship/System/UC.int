@@ -1,0 +1,6 @@
+[General]
+Start="Unreal Championship (Starting)"
+Exit="Unreal Championship (Exiting)"
+Run="Unreal Championship (Running)"
+Product="Unreal Championship"
+Abbreviation="UC"

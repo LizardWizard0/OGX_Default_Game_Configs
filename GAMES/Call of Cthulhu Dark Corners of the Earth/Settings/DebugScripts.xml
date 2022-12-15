@@ -1,0 +1,145 @@
+<DebugScripts>
+		
+	<!-- Warning: only a max of 9 debug scripts can be displayed per page... -->
+
+	<Script>GameScripts\Debug\GENERAL\ToggleCustomDebugKeys.hfs</Script>
+	<Script>GameScripts\Debug\GENERAL\ToggleDebugGuiMode.hfs</Script>
+	<Script>GameScripts\Debug\GENERAL\ToggleRoomSounds.hfs</Script>
+	<Script>GameScripts\Debug\GENERAL\ReportActiveGameScripts.hfs</Script>
+	
+	<!-- <<<<<<<<<<<<<<<<     -- GENERAL --     >>>>>>>>>>>>>>>>>>  -->
+	<Debug_GENERAL>
+			
+		<General_Settings>
+			<Script>GameScripts\Debug\GENERAL\ToggleDebugger.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleNextDetailedDebugBox.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\TogglePauseMode.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleAllTriggers.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_ToggleRain.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleDebugGamma.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleAIDebugInfo.hfs</Script>
+		</General_Settings>
+		
+		<Player_Settings>
+			<Script>GameScripts\Debug\GENERAL\GiveMedicalItems.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\GiveAllWeapons.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\RestoreHealth.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\UnlockPlayer.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleInvisibility.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleFallingDamage.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\TogglePlayerDamage.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleSanitySystem.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\ToggleStaminaLoss.hfs</Script>
+		</Player_Settings>
+		
+		<Level_Specific>
+			<Script>GameScripts\Debug\GENERAL\LS_UnlockAllDoors.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_GiveAllItems.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_OutputCharacterData.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_SceneSkipForwards.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_SceneSkipBackwards.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_TeleportForwards.hfs</Script>
+			<Script>GameScripts\Debug\GENERAL\LS_TeleportBackwards.hfs</Script>
+		</Level_Specific>
+		
+		<Script>GameScripts\Debug\GENERAL\KillAllCharacters.hfs</Script>
+		<Script>GameScripts\Debug\GENERAL\IncreaseTimeCompression.hfs</Script>
+		<Script>GameScripts\Debug\GENERAL\ReduceTimeCompression.hfs</Script>
+		
+		
+	</Debug_GENERAL>
+	
+	
+	<!-- <<<<<<<<<<<<<<<<     -- TESTOPOLIS --     >>>>>>>>>>>>>>>>>>  -->
+	<Debug_TESTOPOLIS>
+			
+		<Gliding>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerMove.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerGlide.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\ToggleIOFile.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\ToggleGlidePosition.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\ToggleGlideMode.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerGlideNoRotate.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerTeleport.hfs</Script>
+		</Gliding>
+		
+		<Looking>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\ToggleIOFile.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerGlance.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerRotate.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\PlayerLookAtPoint.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\ToggleWatchNPC.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\Watching\ToggleWatchMode.hfs</Script>
+		</Looking>
+		
+		<Anim_Controls>
+			<Script>GameScripts\Testopolis\$Debug\Custom\PrevAnim.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\NextAnim.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\EventPlayAnim.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\EventLookAtPlayer.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\EventPatrol.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\EventRunInCircles.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\EventStop.hfs</Script>
+			<Script>GameScripts\Testopolis\$Debug\Custom\EventAlign.hfs</Script>
+		</Anim_Controls>
+		
+		<Script>GameScripts\Testopolis\$Debug\Custom\PreviousCharacter.hfs</Script>
+		<Script>GameScripts\Testopolis\$Debug\Custom\NextCharacter.hfs</Script>
+		<Script>GameScripts\Testopolis\$Debug\Custom\EventSpeak.hfs</Script>
+		<Script>GameScripts\Testopolis\$Debug\Custom\ToggleWalkMode.hfs</Script>
+		<Script>GameScripts\Testopolis\$Debug\Custom\ToggleLookatMode.hfs</Script>
+		<Script>GameScripts\Testopolis\$Debug\Custom\ToggleAnimLooping.hfs</Script>
+		<Script>GameScripts\Testopolis\$Debug\Custom\ToggleAlertStatus.hfs</Script>
+		
+	</Debug_TESTOPOLIS>
+	
+		
+	<!-- <<<<<<<<<<<<<<<<     -- 05_STREETS_THREE --     >>>>>>>>>>>>>>>>>>  -->
+	<Debug_05_STREETS_THREE>
+	
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\TestingScript1.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\TestingScript2.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\AddWeapons.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\SwitchDebugger.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\SwitchLightsStr3.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\UnlockPlayer.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\SkipArea.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\TeleportPlayer.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\IncTimeCompress.hfs</Script>
+		<Script>GameScripts\05_STREETS_THREE\$Debug\Custom\DecTimeCompress.hfs</Script>
+		
+	</Debug_05_STREETS_THREE>
+	
+		
+	<!-- <<<<<<<<<<<<<<<<     -- 06_REFINERY --     >>>>>>>>>>>>>>>>>>  -->
+	<Debug_06_REFINERY>
+	
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\TestingScript1.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\TestingScript2.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\AddWeapons.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\SwitchDebugger.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\SwitchLightsRefinery.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\UnlockPlayer.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\SkipArea.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\TeleportPlayer.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\IncTimeCompress.hfs</Script>
+		<Script>GameScripts\06_REFINERY\$Debug\Custom\DecTimeCompress.hfs</Script>
+		
+	</Debug_06_REFINERY>
+
+
+	<!-- <<<<<<<<<<<<<<<<     -- 08_BOAT --     >>>>>>>>>>>>>>>>>>  -->
+	<Debug_08_BOAT>
+	
+		<Script>GameScripts\08_BOAT\$Debug\Custom\SpawnDeep.hfs</Script>
+		<Script>GameScripts\08_BOAT\$Debug\Custom\DeepDecrementSpawnPoint.hfs</Script>
+		<Script>GameScripts\08_BOAT\$Debug\Custom\DeepIncrementSpawnPoint.hfs</Script>
+		<Script>GameScripts\08_BOAT\$Debug\Custom\LightOpLeaveLight.hfs</Script>
+		<Script>GameScripts\08_BOAT\$Debug\Custom\StartLightOp.hfs</Script>
+		<Script>GameScripts\08_BOAT\$Debug\Custom\CullAllObjects.hfs</Script>
+		<Script>GameScripts\08_BOAT\$Debug\Custom\UnCullAllObjects.hfs</Script>
+		
+	</Debug_08_BOAT>
+
+
+</DebugScripts>

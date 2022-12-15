@@ -1,0 +1,163 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+MissionObjective 1 "/Mission7Objective1/Defeat Saesee Tiin."
+MissionTitle "/Mission7Title/Saber Arena"
+SetExplorationNum 1
+SetForceUsesNeeded 5
+SetTimeToBeat 50
+SetDefaultSurface 09_mz_mrbl_d.sur
+
+
+CreateActor powerupexplorationmarker.dsc bob pu
+
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+
+actor jedi A_DuelSaeseeTiin_01			// SA_02 
+ 
+// actor jedi A_dueltrainingrobot_01	// SA_01
+// actor jedi A_dueldepabilaba_01		// SA_05
+// actor jedi A_DuelKiAdiMundi_01		// SA_06 which comes after SA_02
+// actor jedi A_DuelAdiGallia_01		// SA_07
+// actor jedi A_DuelPloKoon_01			// SA_03 which comes after SA_07
+// actor jedi A_DuelEethKoth_01			// SA_08 which is after SA_03
+// actor jedi A_duelmacewindu_01		// SA_04 which is after SA_08
+
+// Be sure to set: unlimited_respawn 0
+
+DisableDeathMessages
+MakeResurrectable jedi
+
+Teleport jedi dude
+LoadDLG Qui-Gon.dlg
+
+ConsoleCommand "r_maxshadows 2"
+CastShadows jedi true
+
+script "Start_Cutscene" 1
+{
+	TakeControlOf jedi
+	UnEquipWeapon jedi
+
+	WaitForAll
+	
+	BeginCutScene
+	FadeUpAndWait
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_286/You did well in fighting the Jin’ha Obi-Wan.  But their weapons and tactics may soon overwhelm you. Master Saesee Tiin has agreed to train with you. You can learn much from him." Qui-Gon.dlg
+	CommunicatorOff
+		
+	WalkToNode jedi start_1
+	//WaitUntilArrived jedi start_1
+
+	Pause 3
+	
+	SayLineNonPositional jedi "/SaeseeTiin_287/Greetings, Padawan..." // saeseetiin.dlg //
+	Pause 1
+	SayLineNonPositional obi "/Obi-Wan_288/Master..."
+	Pause 1	
+	SayLineNonPositional jedi "/SaeseeTiin_289/You were scared… when the Jin’ha attacked… your weapon could not save you." // saeseetiin.dlg//
+	SayLineNonPositional obi "/Obi-Wan_290/No... I..."
+	SayLineNonPositional jedi "/SaeseeTiin_291/You felt fear..." // saeseetiin.dlg //
+	Pause 1	
+	SayLineNonPositional obi "/Obi-Wan_292/I’m not sure."
+	Pause 1	
+	SayLineNonPositional jedi "/SaeseeTiin_293/I will teach you fear... BEGIN!" // saeseetiin.dlg //
+        
+	
+	PreEndCutScene
+	StopTalking jedi
+	Teleport jedi bogan1	
+	EndCutScene
+		FadeUp
+
+    LockDoor A_SA-Door_01
+	
+	PlayMusic BattleLoop
+	EquipWeapon	jedi
+	EnemyHealthMeter jedi
+	Pause 0.5
+	ReturnControlTo jedi
+	ForceTarget jedi obi
+	
+	RemoveGroup 1
+	Save
+}
+
+script "The_Fight"
+{
+ConsoleCommand "r_maxshadows 2"
+CastShadows jedi true
+
+	if (IsGroupRemoved 1)
+	{
+		BeginCutScene
+		FadeUp
+		TakeControlOf jedi
+		WalkToNode jedi start_1
+		WaitUntilArrived jedi start_1
+		PreEndCutScene
+		Teleport jedi bogan1	
+		EndCutScene
+		FadeUp
+		PlayMusic BattleLoop
+		EnemyHealthMeter jedi
+		EquipWeapon	jedi
+		Pause 0.5
+		ReturnControlTo jedi
+		ForceTarget jedi obi
+		SetHitPointRatio obi 1	
+	}
+}
+   
+Script "Obi_Loses"
+{
+	ContinueWhenPlayerDies  // Make sure this script is not automatically ended when the player dies
+
+	WaitUntilKilled Obi
+	Pause 5
+		   
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_1106/Saessee Tiin gives no quarter, when you defeat him you will be ready." Qui-Gon.dlg
+	CommunicatorOff
+
+	Pause 0 5
+
+	SayLineNonPositional jedi "/SaesseTiin_1107/You would like to try Again Padawan?" //saeseetiin.dlg
+	
+	Pause 1
+	
+	DisplayMessagePlayerDied
+}
+
+Script "Obi_Wins"
+{
+	WaitUntilKilled jedi 
+	PlayMusic Victory
+	Pause 3
+	BeginCutScene
+	
+	LookAt obi jedi
+	Resurrect jedi
+	TakeControlOf jedi
+	ChildScript
+	{
+		PlayAnimationAndWait jedi human_deathfallback-getupslow_brace.anim 1.0 0.0
+		Follow jedi obi 2
+	}
+	
+   SayLineNonPositional jedi "/SaeseeTiin_294/Your skill with the saber is most impressive.  The Force is indeed strong in you, young Obi-Wan.  But beware..." // saeseetiin.dlg
+
+	pause 1
+	      	   
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_295/Obi-Wan, Master Tiin, come quickly to the Council chambers!  Something has happened to Master Plo Koon and Eeth Koth!" Qui-Gon.dlg
+	CommunicatorOff
+
+	Fadedownandwait
+	PreEndCutscene
+	FadeDown 0
+	
+	NextLevel L02_1a			
+}

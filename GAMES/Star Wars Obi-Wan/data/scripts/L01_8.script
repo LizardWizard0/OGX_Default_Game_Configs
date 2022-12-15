@@ -1,0 +1,1138 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+/////////////
+//  Music  //
+/////////////
+
+SetDefaultSurface 02g_4grate_03.sur
+
+AddMusic m_suspense_03.wav Suspense
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_15.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_08.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_battle_10.wav Battle
+
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+
+SetMusicInterval Suspense 30 50
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+LoadDLG Qui-Gon.dlg 
+LoadDLG jinha.dlg 
+
+SetFarClip 3000 0
+
+
+
+Int killedRodianBlaster  0
+Int killedGranBlaster  0
+Int killedGranGrenade  0
+int killedTrandoshanBlaster  0
+Int killedTrandoshanConcussion  0
+Int killedJinhaBlaster  0
+Int killedJinhaFlail  0
+Int killedJinhaMace  0
+Int killedJinhaBlasterJinhaFlail  0
+
+Int killedBlasterSpikeClub 0
+Int killedBads 0
+Int kubazFlag 0
+Int acrossBridgeFlag 0
+Int openCutGroup 0
+Int objtwo 0
+
+HitPointTracker ObiHp Obi
+
+
+/////////////////////////////////////////
+// Exploration Marker Remove Commands  //
+// Added by Chris because Xiang forgot //
+/////////////////////////////////////////
+
+Function "ExplorationRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+
+
+/////////////////////////////
+//  DeathCounter Function  //
+/////////////////////////////
+
+Function "Rodian-Blaster DeathCounter" (Actor KilledRb)
+{
+   WaitUntilKilled KilledRb
+   Increment killedRodianBlaster 1
+}
+
+Function "Gran-Blaster DeathCounter" (Actor KilledGb)
+{
+   WaitUntilKilled KilledGb
+   Increment killedGranBlaster 1
+}
+
+Function "Gran-Grenade DeathCounter" (Actor KilledGg)
+{
+   WaitUntilKilled KilledGg
+   Increment killedGranGrenade 1
+}
+
+Function "Trandoshan-Blaster DeathCounter" (Actor KilledTb)
+{
+   WaitUntilKilled KilledTb
+   Increment killedTrandoshanBlaster 1
+}
+
+Function "Trandoshan-Concussion DeathCounter" (Actor KilledTc)
+{
+   WaitUntilKilled KilledTc
+   Increment killedTrandoshanConcussion 1
+}
+
+Function "Jin'ha-Blaster DeathCounter" (Actor KilledJhb)
+{
+   WaitUntilKilled KilledJhb
+   Increment killedJinhaBlaster 1
+}
+
+Function "jin'ha-rod DeathCounter" (Actor KilledJhbow)
+{
+   WaitUntilKilled KilledJhbow
+   Increment killedJinhaFlail 1
+}
+
+Function "Jin'ha-Mace DeathCounter" (Actor KilledJhm)
+{
+   WaitUntilKilled KilledJhm
+   Increment killedJinhaMace 1
+}
+
+Function "BlasterSpikedclub DeathCounter" (Actor KilledBlaSpiClub)
+{
+   WaitUntilKilled KilledBlaSpiClub
+   Increment killedBlasterSpikeClub 1
+}
+
+Function "AllBads DeathCounter" (Actor Bads)
+{
+   WaitUntilKilled Bads
+   Increment killedBads 1
+   //Print "The number of BADs killed is "
+   //Printint killedBads
+   //Println
+}
+
+///////////////////////////////////
+//  Bads First Mission Function  //
+///////////////////////////////////
+
+Function "RunToTheFirstNode Rodian-Blaster" (Actor Rodian-Blaster, Node Rodian-Blaster_a)
+{
+      Call "Rodian-Blaster DeathCounter" (Rodian-Blaster)
+	TakePartialControlOf Rodian-Blaster 0.35 False
+	ChildScript "ReturnControlToMrRodian-Blaster"
+      {
+	   WaitUntilNear Rodian-Blaster Obi 8.0
+         ReturnControlTo Rodian-Blaster
+         ForceTarget Rodian-Blaster Obi 
+      }  
+	RunToNodeAndWait Rodian-Blaster Rodian-Blaster_a
+      ReturnControlTo Rodian-Blaster
+      ForceTarget Rodian-Blaster Obi    
+}
+
+Function "RunToTheFirstNode Gran-Blaster" (Actor Gran-Blaster, Node Gran-Blaster_a)
+{
+      Call "Gran-Blaster DeathCounter" (Gran-Blaster)
+	TakePartialControlOf Gran-Blaster 0.35 False 
+	ChildScript "ReturnControlToMrGran-Blaster"
+      {
+	   WaitUntilNear Gran-Blaster Obi 5.0
+         ReturnControlTo Gran-Blaster 
+         ForceTarget Gran-Blaster Obi 
+      }  
+	RunToNodeAndWait Gran-Blaster Gran-Blaster_a
+      ReturnControlTo Gran-Blaster 
+      ForceTarget Gran-Blaster Obi    
+}
+
+Function "RunToTheFirstNode Gran-Grenade" (Actor Gran-Grenade, Node Gran-Grenade_a)
+{
+      Call "Gran-Grenade DeathCounter" (Gran-Grenade)
+	TakePartialControlOf Gran-Grenade 0.35 False
+	ChildScript "ReturnControlToMrGran-Grenade"
+      {
+	   WaitUntilNear Gran-Grenade Obi 12.0
+         ReturnControlTo Gran-Grenade 
+         ForceTarget Gran-Grenade Obi 
+      }  
+	RunToNodeAndWait Gran-Grenade Gran-Grenade_a
+      ReturnControlTo Gran-Grenade 
+      ForceTarget Gran-Grenade Obi    
+}
+
+Function "RunToTheFirstNode Trandoshan-Blaster" (Actor Trandoshan-Blaster, Node Trandoshan-Blaster_a)
+{
+      Call "Trandoshan-Blaster DeathCounter" (Trandoshan-Blaster)
+	TakePartialControlOf Trandoshan-Blaster 0.35 False
+	ChildScript "ReturnControlToMrTrandoshan-Blaster"
+      {
+	   WaitUntilNear Trandoshan-Blaster Obi 16.0
+         ReturnControlTo Trandoshan-Blaster 
+         ForceTarget Trandoshan-Blaster Obi 
+      }  
+	RunToNodeAndWait Trandoshan-Blaster Trandoshan-Blaster_a
+      ReturnControlTo Trandoshan-Blaster 
+      ForceTarget Trandoshan-Blaster Obi    
+}
+
+Function "RunToTheFirstNode Trandoshan-Concussion" (Actor Trandoshan-Concussion, Node Trandoshan-Concussion_a)
+{
+      Call "Trandoshan-Concussion DeathCounter" (Trandoshan-Concussion)
+	TakeControlOf Trandoshan-Concussion 
+	RunToNodeAndWait Trandoshan-Concussion Trandoshan-Concussion_a
+      ReturnControlTo Trandoshan-Concussion  
+	SetSniperAttackFlag Trandoshan-Concussion 
+	ForceTarget Trandoshan-Concussion Obi  
+}
+
+Function "RunToTheFirstNode Jin'ha-Blaster" (Actor Jin'ha-Blaster, Node Jin'ha-Blaster_a)
+{
+      Call "Jin'ha-Blaster DeathCounter" (Jin'ha-Blaster)
+	TakePartialControlOf Jin'ha-Blaster 0.35 False
+	ChildScript "ReturnControlToMrJin'ha-Blaster"
+      {
+	   WaitUntilNear Jin'ha-Blaster Obi 8.0
+         ReturnControlTo Jin'ha-Blaster 
+         ForceTarget Jin'ha-Blaster Obi 
+      }  
+	RunToNodeAndWait Jin'ha-Blaster Jin'ha-Blaster_a
+      ReturnControlTo Jin'ha-Blaster
+      ForceTarget Jin'ha-Blaster Obi    
+}
+
+Function "RunToTheFirstNode jin'ha-rod" (Actor jin'ha-rod, Node jin'ha-rod_a)
+{
+      Call "jin'ha-rod DeathCounter" (jin'ha-rod)
+	TakePartialControlOf jin'ha-rod 0.35 False
+	Script "ReturnControlToMrjin'ha-rod"
+      {
+	   WaitUntilNear jin'ha-rod Obi 8.0
+         ReturnControlTo jin'ha-rod 
+         ForceTarget jin'ha-rod Obi 
+      }  
+	WalkToNodeAndWait jin'ha-rod jin'ha-rod_a
+      ReturnControlTo jin'ha-rod
+      ForceTarget jin'ha-rod Obi    
+}
+
+///////////////////
+// Open CutScene //
+///////////////////
+Hide A_jinhaship_static_01
+Script "Alternate Opening"
+{
+   if (IsGroupRemoved 32)
+   {
+      FadeUp
+      StartMusicManager
+   }
+}
+Script "Opening Cut" 32  
+{
+   BeginCutScene 
+	Int exitedEarly 1
+   FadeUp
+   Script "Obi Walking"
+   {
+      MoveElevatorToFloor A_jinhaship_static_02 1
+	Teleport A_jin'ha-mace_05 ref_maceTower3
+	Teleport A_jin'ha-mace_06 ref_maceTower4  
+      Pause 0.02   
+      Teleport A_jin'ha-sword_02 ref_sword1
+      Pause 0.01
+      Teleport A_jin'ha-blaster_07 ref_openBlaster2
+      Pause 0.01
+      Teleport A_jin'ha-blaster_08 ref_openBlaster4
+      Pause 0.01
+      Teleport A_jin'ha-blaster_09 ref_openBlaster6
+      Pause 0.01
+      Teleport A_trandoshan-concussion_02 ref_openConcussion1
+      Pause 0.01
+      Teleport A_trandoshan-concussion_03 ref_openConcussion2
+      Pause 0.01
+      Teleport A_jin'ha-blaster_13 ref_openConcussion3
+      Pause 0.01
+      Teleport A_jin'ha-blaster_14 ref_openConcussion4
+	
+      UnEquipWeapon A_jin'ha-sword_02 
+      SetPatrolTypes A_jin'ha-mace_05 1
+      SetPatrolTypes A_jin'ha-mace_06 1
+      MoveElevatorToFloorAndWait A_jinhaship_static_03 1
+      Pause 6.0
+      MoveElevatorToFloor A_jinhaship_static_03 2
+      Pause 6.0
+      RemoveActor A_jinhaship_static_03
+   }
+   Script "Open Voice"
+   {
+	Pause 11.5
+      SayLineNonPositional Obi "/Obi-Wan_253/ Master, someone has just arrived. I can't make out their race, but they must be the arms dealers."
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_254/ Hmmm...Padawan. If you could place a tracking device on their ship. we find out where these gangsters are from." Qui-Gon.dlg      	
+	CommunicatorOff
+	Pause 0.5
+      SayLineNonPositional Obi "/Obi-Wan_255/ I will master. I...Uh-oh..."
+      WaitForAll
+   }
+ 
+   BinocularsOn
+   PlayFlourish "cut_1_8Intro_m.wav"
+   BinocularsLookAtAndWait A_kubaz-dagger_01
+   Zoom 0.6 2 1 1
+   Pause 3.0
+   BinocularsLookAtAndWait A_jin'ha-mace_06 3 1 1 0
+   Zoom 0.8 2 1 1  
+   Pause 3.0  
+   BinocularsLookAtAndWait A_poweruphealth_07 2 1 1
+   Pause 10.5
+   BinocularsLookAtAndWait A_jin'ha-sword_02 1 1 0
+   Zoom 0.99 2 1 1
+
+   TakeControlOf A_jin'ha-sword_02   
+   LookAt A_jin'ha-sword_02 Obi 3.0
+   WaitUntilFinishedTurning A_jin'ha-sword_02
+   PlayGestureAndWait A_jin'ha-sword_02 TurnHeadLeft 1
+   PlayGestureAndWait A_jin'ha-sword_02 TurnHeadRight 1  
+   LookAt A_jin'ha-sword_02 Obi 3.0
+   WaitUntilFinishedTurning A_jin'ha-sword_02
+   PlayGesture A_jin'ha-sword_02 PointForward 2.0  
+   TakeControlOf A_jin'ha-blaster_07
+   TakeControlOf A_jin'ha-blaster_08
+   TakeControlOf A_jin'ha-blaster_09
+   TakeControlOf A_trandoshan-concussion_02 
+   TakeControlOf A_trandoshan-concussion_03
+   RunToNode A_jin'ha-blaster_07 node_openBlaster
+   RunToNode A_jin'ha-blaster_08 node_openBlaster
+   RunToNode A_jin'ha-blaster_09 node_openBlaster
+   RunToNode A_trandoshan-concussion_02 node_openBlaster
+   RunToNode A_trandoshan-concussion_03 node_openBlaster
+   Pause 4.0 
+	DisableAudioFades
+   FadeDownAndWait 1
+
+	Set exitedEarly 0
+
+	PreEndCutscene
+
+	if (= exitedEarly 1)
+	{
+		StopMusic
+	}
+
+   EndScript "Open Voice"
+   EndScript "Obi Walking"
+   BinocularsOff
+   FadeDown 0
+
+   EndCutscene  
+   RemoveGroup 1
+   SetStartPosition 0
+
+   Set kubazFlag 1
+   FadeUp
+   EnableAudioFades
+
+	StartMusicManager
+
+   RemoveActor A_jinhaship_static_03 
+   Pause 0.25
+   RemoveActor A_jin'ha-mace_05
+   RemoveActor A_jin'ha-mace_06
+   Pause 0.25
+   RemoveActor A_jin'ha-sword_02 
+   RemoveActor A_jin'ha-blaster_07
+   Pause 0.25
+   RemoveActor A_jin'ha-blaster_08
+   RemoveActor A_jin'ha-blaster_09
+   Pause 0.25
+   RemoveActor A_poweruphealth_07
+   RemoveActor A_trandoshan-concussion_02
+   Pause 0.25
+   RemoveActor A_trandoshan-concussion_03
+   RemoveActor A_jin'ha-blaster_13
+   RemoveActor A_jin'ha-blaster_14
+   RemoveGroup 28
+   RemoveGroup 32
+   Save
+   Set openCutGroup 1
+}
+
+Script "ship for ending"
+{
+   WaitUntilEqual kubazFlag 1
+   RemoveActor A_jinhaship_static_02
+   Show A_jinhaship_static_01
+}
+
+///////////////////
+//  Main Script  //
+///////////////////
+
+Script "First Time Only" 29
+{
+   MissionObjective 1 "/Mission6Objective1/Defeat the weapon dealers." 
+   MissionObjective 2 "/Mission6Objective2/Place a tracker on the weapon dealer's ship."
+   MissionTitle "/Mission6Title/Secret of the Black Heth"
+   SetExplorationNum 2
+   SetForceUsesNeeded 10
+   SetTimeToBeat 4 45
+   RemoveGroup 29
+   Save
+}
+
+Script "Pringles"
+{
+   WaitUntilKilled A_jin'ha-sword_01
+   MissionObjectiveAchieved 1  // He defeated the dealer
+   MissionObjectiveAchieved 2  // He will place the tracker
+   Save
+}
+Script "Marker"
+{
+   Teleport A_powerupexplorationmarker_01 ref_expo1
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_01, 11)
+   Teleport A_powerupexplorationmarker_02 ref_expo2
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_02, 12)
+}
+//Region_Landing-1
+
+Script "Region Landing-1" 30
+{
+   Teleport A_kubaz-dagger_01 ref_patrol_tranBla_1
+   Call "AllBads DeathCounter" (A_kubaz-dagger_01)   
+   AddState A_kubaz-dagger_01 Patrol
+   WaitUntilEqual kubazFlag 1
+   ForceTarget A_kubaz-dagger_01 Obi
+}
+
+Hide A_1-8_thugvehicle_05 
+Hide A_1-8_thugvehicle_06 
+//Hide A_1-8_thugvehicle_07
+
+Script "SetMissionCriticalToAllTheVehicleGuy" 30
+{
+   SetMissionCritical A_trandoshan-spikedclub_02 2
+   SetMissionCritical A_trandoshan-spikedclub_04 2
+   SetMissionCritical A_kubaz-pistol_08 2
+   SetMissionCritical A_aqualish-pipe_02 2
+   SetMissionCritical A_aqualish-pipe_03 2
+   SetMissionCritical A_trandoshan-concussion_01 2
+
+   SetMissionCritical A_trandoshan-spikedclub_03 3
+   SetMissionCritical A_kubaz-pistol_04 3 
+   SetMissionCritical A_rodian-blaster_01 3
+
+   SetMissionCritical A_aqualish-pipe_01 4
+   SetMissionCritical A_gran-grenade_01 4 
+   SetMissionCritical A_trandoshan-spikedclub_01 4
+} 	
+
+Script "ThugVehicle-05" 30
+{    
+   //Timer Vehicle5
+   //WaitUntilGreaterThan Vehicle5 60 
+   Pause 40.0    
+   Show A_1-8_thugvehicle_05 
+   Teleport A_trandoshan-spikedclub_02 ref_thugV-05_1
+	Call "AllBads DeathCounter" (A_trandoshan-spikedclub_02)
+         TakePartialControlOf A_trandoshan-spikedclub_02 
+            AttachEntityTo A_trandoshan-spikedclub_02 A_1-8_thugvehicle_05
+               Pause 0.25
+   Teleport A_trandoshan-spikedclub_04 ref_thugV-05_2
+	Call "AllBads DeathCounter" (A_trandoshan-spikedclub_04)
+         TakePartialControlOf A_trandoshan-spikedclub_04 
+            AttachEntityTo A_trandoshan-spikedclub_04 A_1-8_thugvehicle_05
+               Pause 0.25
+   Teleport A_aqualish-pipe_02 ref_thugV-05_3
+	Call "AllBads DeathCounter" (A_aqualish-pipe_02)
+         TakePartialControlOf A_aqualish-pipe_02 
+            AttachEntityTo A_aqualish-pipe_02 A_1-8_thugvehicle_05
+               Pause 0.25
+/*
+   Teleport A_aqualish-pipe_03 ref_thugV-05_4
+	Call "AllBads DeathCounter" (A_aqualish-pipe_03)
+         TakePartialControlOf A_aqualish-pipe_03 
+            AttachEntityTo A_aqualish-pipe_03 A_1-8_thugvehicle_05
+               Pause 0.25
+*/
+   Teleport A_kubaz-pistol_08 ref_thugV-05_5
+	Call "AllBads DeathCounter" (A_kubaz-pistol_08)
+         TakePartialControlOf A_kubaz-pistol_08 
+            AttachEntityTo A_kubaz-pistol_08 A_1-8_thugvehicle_05
+               Pause 0.25
+   Teleport A_trandoshan-concussion_01 ref_thugV-05_6
+	Call "AllBads DeathCounter" (A_trandoshan-concussion_01)
+         TakePartialControlOf A_trandoshan-concussion_01 
+            AttachEntityTo A_trandoshan-concussion_01 A_1-8_thugvehicle_05
+                           
+   MoveElevatorToFloorAndWait A_1-8_thugvehicle_05 1
+   
+   Detach A_trandoshan-spikedclub_02 
+      Run A_trandoshan-spikedclub_02 
+	  JumpForward A_trandoshan-spikedclub_02
+	     ReturnControlTo A_trandoshan-spikedclub_02          
+		  Call "RunToTheFirstNode Trandoshan-Blaster" (A_trandoshan-spikedclub_02, node_thugV5_1)
+            
+   Detach A_trandoshan-spikedclub_04
+	Run A_trandoshan-spikedclub_04 
+	  JumpForward A_trandoshan-spikedclub_04
+	     ReturnControlTo A_trandoshan-spikedclub_04
+		  Call "RunToTheFirstNode Trandoshan-Blaster" (A_trandoshan-spikedclub_04, node_thugV5_2)          
+            
+   Detach A_aqualish-pipe_02 
+      Run A_aqualish-pipe_02
+	  JumpForward A_aqualish-pipe_02
+	     ReturnControlTo A_aqualish-pipe_02
+		  Call "RunToTheFirstNode Trandoshan-Blaster" (A_aqualish-pipe_02, node_thugV5_3)
+/*            
+   Detach A_aqualish-pipe_03 
+	  JumpForward A_aqualish-pipe_03
+	     ReturnControlTo A_aqualish-pipe_03
+		  Call "RunToTheFirstNode Trandoshan-Blaster" (A_aqualish-pipe_03, node_thugV5_4)
+*/
+   Detach A_kubaz-pistol_08 
+      Run A_kubaz-pistol_08
+	  JumpForward A_kubaz-pistol_08
+	     ReturnControlTo A_kubaz-pistol_08
+		  Call "RunToTheFirstNode Trandoshan-Blaster" (A_kubaz-pistol_08, node_thugV5_5) 
+            
+   Detach A_trandoshan-concussion_01 
+      Run A_trandoshan-concussion_01 
+	  JumpForward A_trandoshan-concussion_01
+	     ReturnControlTo A_trandoshan-concussion_01
+		  Call "RunToTheFirstNode Trandoshan-Concussion" (A_trandoshan-concussion_01, node_bridge)  
+
+      SetDeadOnAimFraction A_trandoshan-concussion_01 0.75
+      Pause 7.0 
+      WaitUntilExitedRegion Obi Region_v05
+      MoveElevatorToFloorAndWait A_1-8_thugvehicle_05 2
+      MoveElevatorToFloorAndWait A_1-8_thugvehicle_05 3
+      RemoveActor A_1-8_thugvehicle_05                                                                                                                                                                                                                                                                                                                                                                                                             
+}
+
+Script "ThugVehicle-06" 30
+{
+   //WaitUntilEqual killedBads 2
+   Timer Vehicle6
+   WaitUntilGreaterThan Vehicle6 20
+   //Pause 15.0
+   Show A_1-8_thugvehicle_06   
+/*
+   Teleport A_kubaz-pistol_03 ref_thugV-06_2
+	Call "AllBads DeathCounter" (A_kubaz-pistol_03)
+         TakePartialControlOf A_kubaz-pistol_03 
+            AttachEntityTo A_kubaz-pistol_03 A_1-8_thugvehicle_06
+               Pause 0.25
+   Teleport A_kubaz-pistol_05 ref_thugV-06_3
+	Call "AllBads DeathCounter" (A_kubaz-pistol_05)
+         TakePartialControlOf A_kubaz-pistol_05 
+            AttachEntityTo A_kubaz-pistol_05 A_1-8_thugvehicle_06
+               Pause 0.25
+*/
+   Teleport A_trandoshan-spikedclub_03 ref_thugV-06_4
+	Call "AllBads DeathCounter" (A_trandoshan-spikedclub_03)
+         TakePartialControlOf A_trandoshan-spikedclub_03 
+            AttachEntityTo A_trandoshan-spikedclub_03 A_1-8_thugvehicle_06
+               Pause 0.25
+   Teleport A_kubaz-pistol_04 ref_thugV-06_5
+	Call "AllBads DeathCounter" (A_kubaz-pistol_04)
+         TakePartialControlOf A_kubaz-pistol_04 
+            AttachEntityTo A_kubaz-pistol_04 A_1-8_thugvehicle_06
+               Pause 0.25
+   Teleport A_rodian-blaster_01 ref_thugV-06_6
+	Call "AllBads DeathCounter" (A_rodian-blaster_01)
+         TakePartialControlOf A_rodian-blaster_01 
+            AttachEntityTo A_rodian-blaster_01 A_1-8_thugvehicle_06            
+
+   MoveElevatorToFloorAndWait A_1-8_thugvehicle_06 1
+
+   Detach A_trandoshan-spikedclub_03 
+      Run A_trandoshan-spikedclub_03
+	  JumpForward A_trandoshan-spikedclub_03
+	     ReturnControlTo A_trandoshan-spikedclub_03
+              ForceTarget A_trandoshan-spikedclub_03 Obi
+		     Pause 1.0
+   Detach A_kubaz-pistol_04 
+      Run A_kubaz-pistol_04
+	  JumpForward A_kubaz-pistol_04
+	     ReturnControlTo A_kubaz-pistol_04
+              ForceTarget A_kubaz-pistol_04 Obi  
+            
+   Detach A_rodian-blaster_01 
+	  JumpForward A_rodian-blaster_01
+	     ReturnControlTo A_rodian-blaster_01
+              ForceTarget A_rodian-blaster_01 Obi       
+/*            
+   Detach A_kubaz-pistol_03 
+      Run A_kubaz-pistol_03
+	  JumpForward A_kubaz-pistol_03
+	     ReturnControlTo A_kubaz-pistol_03
+              ForceTarget A_kubaz-pistol_03 Obi            
+                 Pause 1.0
+   Detach A_kubaz-pistol_05 
+      Run A_kubaz-pistol_05
+	  JumpForward A_kubaz-pistol_05
+	     ReturnControlTo A_kubaz-pistol_05
+              ForceTarget A_kubaz-pistol_05 Obi         
+*/            
+    Pause 5.0  
+    WaitUntilExitedRegion Obi Region_v06  
+    MoveElevatorToFloorAndWait A_1-8_thugvehicle_06 2
+    MoveElevatorToFloorAndWait A_1-8_thugvehicle_06 3
+    RemoveActor A_1-8_thugvehicle_06                                                                                                                                                                                                                                                                                                                                                                                                             
+}
+
+Script "ThugVehicle-07" 30
+{ 
+   WaitUntilEqual kubazFlag 1
+   Teleport A_aqualish-pipe_01 ref_thugV-07_1ab
+   Teleport A_gran-grenade_01 ref_thugV-07_2ab
+   Teleport A_trandoshan-spikedclub_01 ref_thugV-07_3ab
+   Call "AllBads DeathCounter" (A_aqualish-pipe_01)
+   Call "AllBads DeathCounter" (A_gran-grenade_01)
+   Call "AllBads DeathCounter" (A_trandoshan-spikedclub_01)
+
+   ForceTarget A_aqualish-pipe_01 Obi            
+   ForceTarget A_gran-grenade_01 Obi  
+   ForceTarget A_trandoshan-spikedclub_01 Obi
+
+   Script "Gran Speaking1"
+   {
+      WaitUntilNear A_gran-grenade_05 Obi 8.0
+      SayLine A_gran-grenade_05 "/Gran_259/There he is ! Get him!"
+   }     
+   Script "Gran Speaking2"
+   {
+      WaitUntilNear A_gran-grenade_04 Obi 8.0
+      SayLine A_gran-grenade_04 "/Gran_213/Kill the snitch!!"
+   }       
+   Pause 3.0 
+   WaitUntilExitedRegion Obi Region_v07   
+   MoveElevatorToFloorAndWait A_1-8_thugvehicle_07 1
+   MoveElevatorToFloorAndWait A_1-8_thugvehicle_07 2
+   RemoveActor A_1-8_thugvehicle_07                                                                                                                                                                                                                                                                                                                                                                                                            
+}  
+                            
+//Region_Landing-2
+
+Script "Jin'ha-Blaster Defend the Bridge Region_k"
+{
+   WaitUntilEqual killedBads 12
+   Teleport A_jin'ha-blaster_05 ref_bla_1
+   Teleport A_jin'ha-blaster_06 ref_bla_2
+   Teleport A_jin'ha-blaster_03 ref_bla_3
+   Teleport A_jin'ha-blaster_04 ref_bla_4
+   Teleport A_jin'ha-blaster_01 ref_bla_5
+   Teleport A_jin'ha-blaster_02 ref_bla_6 
+   Teleport A_mp_powerupunlimitedforce_01 ref_bonus1 
+   Teleport A_poweruphealth_05 ref_bonus2
+   Teleport A_poweruphealth_06 ref_bonus3
+   
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-blaster_01)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-blaster_02)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-blaster_03)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-blaster_04)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-blaster_05)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-blaster_06)
+
+   Script "Jin'ha-Blaster Ambush-Fire Region_k"
+   {
+	WaitUntilEnteredRegion Obi Region_k
+      ForceTarget A_jin'ha-blaster_05 Obi
+      ForceTarget A_jin'ha-blaster_06 Obi
+      //Loop
+   }
+   Script "Jin'ha-Blaster Ambush-Fire Region_l"
+   {
+	WaitUntilEnteredRegion Obi Region_l
+      ForceTarget A_jin'ha-blaster_03 Obi
+      ForceTarget A_jin'ha-blaster_04 Obi
+      //Loop
+   }
+   Script "Jin'ha-Blaster Ambush-Fire Region_m"
+   {
+      WaitUntilEnteredRegion Obi Region_m
+      ForceTarget A_jin'ha-blaster_01 Obi
+      ForceTarget A_jin'ha-blaster_02 Obi
+      //Loop
+   }
+   Script "Jin'ha-Blaster Snipping Region_thugV2_a"
+   {
+	WaitUntilEqual acrossBridgeFlag 1
+	If(IsInRegion Obi Region_thugV2_a)
+	{
+         ForceTarget A_jin'ha-blaster_01 Obi
+         ForceTarget A_jin'ha-blaster_02 Obi
+         ForceTarget A_jin'ha-blaster_03 Obi
+         ForceTarget A_jin'ha-blaster_04 Obi
+         ForceTarget A_jin'ha-blaster_05 Obi	
+         ForceTarget A_jin'ha-blaster_06 Obi
+
+         SetSniperAttackFlag A_jin'ha-blaster_01
+         SetSniperAttackFlag A_jin'ha-blaster_02
+         SetSniperAttackFlag A_jin'ha-blaster_03
+         SetSniperAttackFlag A_jin'ha-blaster_04
+         SetSniperAttackFlag A_jin'ha-blaster_05	
+         SetSniperAttackFlag A_jin'ha-blaster_06	   
+      }
+	If(IsNotInRegion Obi Region_thugV2_a)
+	{
+         ClearSniperAttackFlag A_jin'ha-blaster_01
+         ClearSniperAttackFlag A_jin'ha-blaster_02
+         ClearSniperAttackFlag A_jin'ha-blaster_03
+         ClearSniperAttackFlag A_jin'ha-blaster_04
+         ClearSniperAttackFlag A_jin'ha-blaster_05	
+         ClearSniperAttackFlag A_jin'ha-blaster_06	   
+      }
+	Loop
+   }
+}
+
+Script "Bridge Flag"
+{
+   WaitUntilEnteredRegion Obi Region_thugV2_a
+   Set acrossBridgeFlag 1
+   EndScript "Jin'ha-Blaster Ambush-Fire Region_k"
+}
+Script "Bonus"
+{
+   WaitUntilEnteredRegion Obi Region_JinhaShip1
+   Teleport A_trandoshan-concussion_04 ref_concu1
+   Teleport A_trandoshan-concussion_05 ref_concu2
+   ForceTarget A_trandoshan-concussion_04 Obi
+   Pause 1.0
+   ForceTarget A_trandoshan-concussion_05 Obi
+}   
+/////////////////
+//  Bridge 1-3 //
+/////////////////
+
+Script "Move the Bridge 1-3" 
+{
+   WaitUntilEqual killedBads 12
+   MoveElevatorToFloor A_1-8_bridge_01 1
+   Pause 0.5
+   MoveElevatorToFloor A_1-8_bridge_02 1
+   Pause 0.5
+   MoveElevatorToFloor A_1-8_bridge_03 1
+
+   Pause 8.0
+   Teleport A_jin'ha-rod_01 ref_dagger_1
+   Teleport A_jin'ha-rod_02 ref_dagger_2
+   Teleport A_jin'ha-rod_03 ref_dagger_3
+   Teleport A_jin'ha-rod_04 ref_dagger_4
+   Teleport A_jin'ha-rod_05 ref_dagger_5
+   Teleport A_jin'ha-rod_06 ref_dagger_6
+
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-rod_01)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-rod_02)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-rod_03)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-rod_04)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-rod_05)
+   Call "BlasterSpikedclub DeathCounter" (A_jin'ha-rod_06)
+   
+   Pause 3.0
+
+   Call "RunToTheFirstNode jin'ha-rod" (A_jin'ha-rod_01, node_bow_1)
+   Call "RunToTheFirstNode jin'ha-rod" (A_jin'ha-rod_02, node_bow_2)
+   Call "RunToTheFirstNode jin'ha-rod" (A_jin'ha-rod_03, node_jinhadagger_3)
+   Call "RunToTheFirstNode jin'ha-rod" (A_jin'ha-rod_04, node_bow_4)
+   Call "RunToTheFirstNode jin'ha-rod" (A_jin'ha-rod_05, node_bow_5)
+   Call "RunToTheFirstNode jin'ha-rod" (A_jin'ha-rod_06, node_bow_6)
+
+}
+
+Script "Move the Bridge 1-3 Music" 
+{
+   WaitUntilEqual killedBads 12
+   PlayFlourish  m_l01_8_cs_02.wav 
+}
+
+//Mace Time
+
+Script "MaceLowPatrol_1"
+{
+   WaitUntilEqual killedBlasterSpikeClub 8
+   Teleport A_jin'ha-mace_01 ref_maceTower1
+   Teleport A_jin'ha-mace_03 ref_maceTower3   
+   PlayFlourish  m_l01_8_cs_02.wav     
+   TakePartialControlOf A_jin'ha-mace_01 
+   TakePartialControlOf A_jin'ha-mace_03 
+   RunToNode A_jin'ha-mace_01 node_mace01
+   RunToNode A_jin'ha-mace_03 node_mace03
+   Script "ArriveNodeMace01"
+   {
+      WaitUntilArrived A_jin'ha-mace_01 node_mace01
+      LookAtAndWait A_jin'ha-mace_01 Obi
+      ReturnControlTo A_jin'ha-mace_01
+   }
+   Script "ArriveNodeMace03"
+   {
+      WaitUntilArrived A_jin'ha-mace_03 node_mace03
+      LookAtAndWait A_jin'ha-mace_03 Obi
+      ReturnControlTo A_jin'ha-mace_03
+   }
+}
+Script "MaceLowPatrol_2"
+{
+   WaitUntilEqual killedBlasterSpikeClub 10
+   Teleport A_jin'ha-mace_02 ref_maceTower2
+   Teleport A_jin'ha-mace_04 ref_maceTower4     
+   PlayFlourish  m_l01_8_cs_02.wav     
+   TakePartialControlOf A_jin'ha-mace_02
+   TakePartialControlOf A_jin'ha-mace_04
+   RunToNode A_jin'ha-mace_02 node_mace02
+   RunToNode A_jin'ha-mace_04 node_mace04
+   Script "ArriveNodeMace02"
+   {
+      WaitUntilArrived A_jin'ha-mace_02 node_mace02
+      LookAtAndWait A_jin'ha-mace_02 Obi
+      ReturnControlTo A_jin'ha-mace_02
+   }
+   Script "ArriveNodeMace04"
+   {
+      WaitUntilArrived A_jin'ha-mace_04 node_mace04
+      LookAtAndWait A_jin'ha-mace_04 Obi
+      ReturnControlTo A_jin'ha-mace_04
+   }
+}
+
+Script "Boss"
+{
+   WaitUntilEqual acrossBridgeFlag 1
+   Teleport A_jin'ha-sword_01 ref_boss 
+      MakeResurrectable A_jin'ha-sword_01
+   WaitUntilEnteredRegion Obi Region_JinhaShip2
+   EnemyHealthMeter A_jin'ha-sword_01
+   BeginScript "Boss Guard the Ship" 
+}
+
+StoreScript "Boss Guard the Ship"
+{
+   WaitUntilExitedRegion A_jin'ha-sword_01 Region_JinhaShip2
+   TakeControlOf A_jin'ha-sword_01
+   RunToNodeAndWait A_jin'ha-sword_01 node_boss
+   LookAtAndWait A_jin'ha-sword_01 Obi
+   ReturnControlTo A_jin'ha-sword_01
+   Loop   
+}
+
+Script "End of the Game"
+{
+   WaitUntilKilled A_jin'ha-sword_01
+   If (IsAlive Obi)
+   {
+	InvincibilityOn Obi
+      EndScript "Boss Guard the Ship"
+//    Pause 2.0
+		
+      DisableAudioFades
+      FadeDown
+      
+      BeginCutScene
+      
+      FadeUp
+      EnableAudioFades
+
+      StopMusicManager
+      PlayFlourish "cut_1_8extro_m.wav"
+
+      CameraFixed ref_endcut1
+      Teleport Obi ref_boss				//ref_endObi
+      MoveCamera ref_endcut1 10.0
+      TakeControlOf Obi
+	UnEquipWeapon Obi
+      RunToNodeAndWait Obi node_end 
+      PlayAudioCue A_jinhaship_static_01 PointSoundOneShot_02
+	PlayAudioCue A_jinhaship_static_01 PointSoundOneShot_01
+      Pause 1.0 						//Pause 1.0
+      MoveElevatorToFloor A_jinhaship_static_01 1
+      MissionObjectiveAchieved 2
+      Pause 3.0  
+      RunToNode Obi node_towermace2    
+      Pause 6.0
+      FadeDownAndWait
+      CameraOff  
+      EndCutScene
+      NextLevel CUT_JC2
+   }
+}
+
+//////////////////////
+//  Powerup Script  //
+//////////////////////
+
+Script "DinnerTimeRegion_l"
+{
+   WaitUntilEnteredRegion Obi Region_l
+   Teleport A_poweruphealth_01 ref_power1
+   Teleport A_poweruphealth_02 ref_power2
+   Teleport A_poweruphealth_03 ref_power3
+   Teleport A_poweruphealth_04 ref_power4
+
+   Teleport A_poweruphealth_08 ref_chris1
+   Teleport A_poweruphealth_09 ref_chris2
+   Teleport A_poweruphealth_10 ref_chris3
+   Teleport A_poweruphealth_11 ref_chris4
+
+   Teleport A_powerupunlimitedforce_01 ref_force1
+   Teleport A_powerupunlimitedforce_02 ref_force2
+   Teleport A_powerupunlimitedforce_03 ref_force3
+   Teleport A_powerupunlimitedforce_04 ref_force4
+   Teleport A_powerupunlimitedforce_05 ref_force5
+   Teleport A_powerupunlimitedforce_06 ref_force6
+
+   EndScript "DinnerTimeRegion_m"
+   EndScript "DinnerTimeRegion_k"
+}
+Script "DinnerTimeRegion_m"
+{
+   WaitUntilEnteredRegion Obi Region_m
+   Teleport A_poweruphealth_01 ref_power1
+   Teleport A_poweruphealth_02 ref_power2
+   Teleport A_poweruphealth_03 ref_power3
+   Teleport A_poweruphealth_04 ref_power4
+
+   Teleport A_poweruphealth_08 ref_chris1
+   Teleport A_poweruphealth_09 ref_chris2
+   Teleport A_poweruphealth_10 ref_chris3
+   Teleport A_poweruphealth_11 ref_chris4
+
+   Teleport A_powerupunlimitedforce_01 ref_force1
+   Teleport A_powerupunlimitedforce_02 ref_force2
+   Teleport A_powerupunlimitedforce_03 ref_force3
+   Teleport A_powerupunlimitedforce_04 ref_force4
+   Teleport A_powerupunlimitedforce_05 ref_force5
+   Teleport A_powerupunlimitedforce_06 ref_force6
+
+   EndScript "DinnerTimeRegion_l"
+   EndScript "DinnerTimeRegion_k"
+}
+Script "DinnerTimeRegion_k"
+{
+   WaitUntilEnteredRegion Obi Region_k
+   Teleport A_poweruphealth_01 ref_power1
+   Teleport A_poweruphealth_02 ref_power2
+   Teleport A_poweruphealth_03 ref_power3
+   Teleport A_poweruphealth_04 ref_power4
+
+   Teleport A_poweruphealth_08 ref_chris1
+   Teleport A_poweruphealth_09 ref_chris2
+   Teleport A_poweruphealth_10 ref_chris3
+   Teleport A_poweruphealth_11 ref_chris4
+
+   Teleport A_powerupunlimitedforce_01 ref_force1
+   Teleport A_powerupunlimitedforce_02 ref_force2
+   Teleport A_powerupunlimitedforce_03 ref_force3
+   Teleport A_powerupunlimitedforce_04 ref_force4
+   Teleport A_powerupunlimitedforce_05 ref_force5
+   Teleport A_powerupunlimitedforce_06 ref_force6
+
+   EndScript "DinnerTimeRegion_l"
+   EndScript "DinnerTimeRegion_m"
+}
+///////////////////////
+//  SaveGame Script  //
+///////////////////////
+
+Script "SavePoint1" 
+{
+   WaitUntilEqual killedBads 12
+   SetStartPosition 1
+   RemoveGroup 28
+   RemoveGroup 30
+   RemoveGroup 31
+   RemoveGroup 32
+   Save
+}
+
+Script "ThugShipFailsafe"
+{
+   if (= StartPosition 1)
+   {
+        RemoveActor A_1-8_thugvehicle_05  
+	RemoveActor A_1-8_thugvehicle_06 
+	RemoveActor A_1-8_thugvehicle_07 
+   }
+}
+/*
+Script "SavePoint2"
+{
+   WaitUntilExitedRegion Obi Region_temp3
+   WaitUntilEqual openCutGroup 1
+   WaitForAny
+   SetStartPosition 0
+   RemoveGroup 28
+   RemoveGroup 32
+   Save
+}
+*/
+Script "Retreat"
+{
+   WaitUntilKilled A_jin'ha-sword_01
+   If (IsAlive A_jin'ha-rod_01)
+   {
+	RemoveState A_jin'ha-rod_01 Attack
+	TakeControlOf A_jin'ha-rod_01
+	PlayAudioCue A_jin'ha-rod_01 Retreat
+	RunToNode A_jin'ha-rod_01 node_thugV5_6
+   }   
+   If (IsAlive A_jin'ha-rod_02)
+   {
+	RemoveState A_jin'ha-rod_02 Attack
+	TakeControlOf A_jin'ha-rod_02
+	PlayAudioCue A_jin'ha-rod_02 Retreat
+	RunToNode A_jin'ha-rod_02 node_thugV5_6
+   }  
+   If (IsAlive A_jin'ha-rod_03)
+   {
+	RemoveState A_jin'ha-rod_03 Attack
+	TakeControlOf A_jin'ha-rod_03
+	PlayAudioCue A_jin'ha-rod_03 Retreat
+	RunToNode A_jin'ha-rod_03 node_thugV5_6
+   }  
+   If (IsAlive A_jin'ha-rod_04)
+   {
+	RemoveState A_jin'ha-rod_04 Attack
+	TakeControlOf A_jin'ha-rod_04
+	PlayAudioCue A_jin'ha-rod_04 Retreat
+	RunToNode A_jin'ha-rod_04 node_thugV5_6
+   }  
+   If (IsAlive A_jin'ha-rod_05)
+   {
+	RemoveState A_jin'ha-rod_05 Attack
+	TakeControlOf A_jin'ha-rod_05
+	PlayAudioCue A_jin'ha-rod_05 Retreat
+	RunToNode A_jin'ha-rod_05 node_thugV5_6
+   }  
+   If (IsAlive A_jin'ha-rod_06)
+   {
+	RemoveState A_jin'ha-rod_06 Attack
+	TakeControlOf A_jin'ha-rod_06
+	PlayAudioCue A_jin'ha-rod_06 Retreat
+	RunToNode A_jin'ha-rod_06 node_thugV5_6
+   }  
+   If (IsAlive A_jin'ha-blaster_01)
+   {
+	RemoveState A_jin'ha-blaster_01 Attack
+	TakeControlOf A_jin'ha-blaster_01
+	PlayAudioCue A_jin'ha-blaster_01 Retreat
+	RunToNode A_jin'ha-blaster_01 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-blaster_02)
+   {
+	RemoveState A_jin'ha-blaster_02 Attack
+	TakeControlOf A_jin'ha-blaster_02
+	PlayAudioCue A_jin'ha-blaster_02 Retreat
+	RunToNode A_jin'ha-blaster_02 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-blaster_03)
+   {
+	RemoveState A_jin'ha-blaster_03 Attack
+	TakeControlOf A_jin'ha-blaster_03
+	PlayAudioCue A_jin'ha-blaster_03 Retreat
+	RunToNode A_jin'ha-blaster_03 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-blaster_04)
+   {
+	RemoveState A_jin'ha-blaster_04 Attack
+	TakeControlOf A_jin'ha-blaster_04
+	PlayAudioCue A_jin'ha-blaster_04 Retreat
+	RunToNode A_jin'ha-blaster_04 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-blaster_05)
+   {
+	RemoveState A_jin'ha-blaster_05 Attack
+	TakeControlOf A_jin'ha-blaster_05
+	PlayAudioCue A_jin'ha-blaster_05 Retreat
+	RunToNode A_jin'ha-blaster_05 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-blaster_06)
+   {
+	RemoveState A_jin'ha-blaster_06 Attack
+	TakeControlOf A_jin'ha-blaster_06
+	PlayAudioCue A_jin'ha-blaster_06 Retreat
+	RunToNode A_jin'ha-blaster_06 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-mace_01)
+   {
+	RemoveState A_jin'ha-mace_01 Attack
+	TakeControlOf A_jin'ha-mace_01
+	PlayAudioCue A_jin'ha-mace_01 Retreat
+	RunToNode A_jin'ha-mace_01 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-mace_02)
+   {
+	RemoveState A_jin'ha-mace_02 Attack
+	TakeControlOf A_jin'ha-mace_02
+	PlayAudioCue A_jin'ha-mace_02 Retreat
+	RunToNode A_jin'ha-mace_02 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-mace_03)
+   {
+	RemoveState A_jin'ha-mace_03 Attack
+	TakeControlOf A_jin'ha-mace_03
+	PlayAudioCue A_jin'ha-mace_03 Retreat
+	RunToNode A_jin'ha-mace_03 node_thugV5_6
+   } 
+   If (IsAlive A_jin'ha-mace_04)
+   {
+	RemoveState A_jin'ha-mace_04 Attack
+	TakeControlOf A_jin'ha-mace_04
+	PlayAudioCue A_jin'ha-mace_04 Retreat
+	RunToNode A_jin'ha-mace_04 node_thugV5_6
+   } 
+   If (IsAlive A_trandoshan-concussion_04)
+   {
+	RemoveState A_trandoshan-concussion_04 Attack
+	TakeControlOf A_trandoshan-concussion_04
+	PlayAudioCue A_trandoshan-concussion_04 Retreat
+	RunToNode A_trandoshan-concussion_04 node_thugV5_6
+   } 
+   If (IsAlive A_trandoshan-concussion_05)
+   {
+	RemoveState A_trandoshan-concussion_05 Attack
+	TakeControlOf A_trandoshan-concussion_05
+	PlayAudioCue A_trandoshan-concussion_05 Retreat
+	RunToNode A_trandoshan-concussion_05 node_thugV5_6
+   } 
+}
+
+
+

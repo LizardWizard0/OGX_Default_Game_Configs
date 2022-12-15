@@ -1,0 +1,52 @@
+state Base {
+	Conditions {
+	}
+	Actions {
+		UseTimeBasedUpdate "FALSE"
+		;FollowPath "WALK"
+		SetState "Idle"
+	}
+}
+
+state Idle {
+	Conditions {
+		if GotOpponent == 1 goto Attack
+	}
+	Actions {
+		FollowPath "WALK"
+		;SetCircleDirection "Random"
+		;Circle "0.25"
+	}
+}
+
+state Attack {
+	Conditions {
+		if GotOpponent == 0 goto Idle
+		;if CannotReachDestination == 1 goto Idle
+		if CollidingWithOpponent == 1 goto HitOpponent
+	}
+	Actions {
+		FollowOpponent "ignore_radius" "can_go_off_path"
+	}
+}
+
+state HitOpponent {
+	Conditions {
+	}
+	Actions {
+		TakeDamage "opponent"		
+		SetState "Circle"
+	}
+}
+
+state Circle {
+	Conditions {
+		if GotOpponent == 0 goto Idle
+		if Timer > 2 goto Attack
+	}
+	Actions {
+		ResetTimer "mintime=0" "maxtime=1"
+		SetCircleDirection "Reverse"
+		CircleOpponent "0.5" "can_go_off_path"
+	}
+}

@@ -1,0 +1,534 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor QuiGon A_Qui-Gon_01
+SetMissionCritical QuiGon
+SetRunForwardSpeed QuiGon 5.8  //slow him down a little bit
+SetMaxAttackers QuiGon 2 //don't make more than 2 enemies attack him at once
+SetExplorationNum 5
+SetNodeHeightTolerance 0.4
+ConsoleCommand "r_rain 1"
+ConsoleCommand "r_rainbubbles 1.2"
+SetForceUsesNeeded 15
+SetTimeToBeat 2 15
+InvincibilityOn Quigon
+
+Actor kaadu1 A_kaadu_01
+Actor kaadu2 A_kaadu_02
+AddWorkEvent kaadu1 kaadu1_1
+AddWorkEvent kaadu1 kaadu1_2
+AddWorkEvent kaadu1 kaadu1_3
+AddWorkEvent kaadu2 kaadu2_1
+AddWorkEvent kaadu2 kaadu2_2
+AddWorkEvent kaadu2 kaadu2_3
+AddWorkEvent kaadu2 kaadu2_4
+
+//ConsoleCommand "r_3dlights 0"
+ConsoleCommand "r_fogstart 0.01"
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_17.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic l01_5_m_placard.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_06.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+
+AddMusic m_tension_01.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle_06.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_tension_13.wav Battle
+
+AddBattleLoop  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 10 20
+
+
+
+//script "Quigon died"
+//{
+//	waituntilkilled Quigon
+//	begincutscene
+//	cameraplayer Quigon 0 2.5 -5.0
+//	pause 0.5
+//	communicatoron
+//	CommunicatorMessageAndWait "Good going Obi-Wan." quigonjinn.dlg
+//	CommunicatorMessageAndWait "You LOSE." quigonjinn.dlg
+//	fadedownandwait
+//	endcutscene
+//	NextLevel L02_1a
+//}
+
+Script "Impatient Quigon"
+{
+	WaitUntilStateActivated Quigon Puppet
+	WaitUntilStateShutDown Quigon Puppet
+	WaitUntilStateActivated Quigon FollowPlayer
+	PlayAudioCue Quigon "FollowMe" 30.0 //don't play more often than every 30 seconds
+	PlayGesture Quigon AttractAttention
+	Pause 10
+	Loop
+}
+
+////////////////////
+// Respawn Points //
+////////////////////
+
+////deleted
+
+Script "QuiGon Respawn"
+{
+    if (= StartPosition 1)
+    {
+        Teleport Quigon qrespawn1
+    }
+        if (= StartPosition 2)
+    {
+        Teleport Quigon qrespawn2
+    }
+            if (= StartPosition 3)
+    {
+        Teleport Quigon qrespawn3
+    }
+}    
+
+////Save Points
+
+Script "SavePoint1"
+{
+   WaitUntilEnteredRegion Obi region_04
+   RemoveGroup 1
+   SetStartPosition 1
+   Save
+}
+
+Script "SavePoint2"
+{
+   WaitUntilEnteredRegion Obi region_05
+   RemoveGroup 1
+///shortdistance here.   
+   SetStartPosition 2
+   Save
+}
+
+Script "SavePoint3"
+{
+   WaitUntilEnteredRegion Obi region_10
+   RemoveGroup 1
+   RemoveGroup 2
+   SetStartPosition 3
+   Save
+}
+
+///// Exploration Markers
+function "ExplorationMarkerRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_01, 21)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_02, 22)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_03, 23)
+
+///////////////////
+//Enemy Functions//
+
+
+Function "FollowBuddy" (Actor Leader, Actor  Follower, Int  Distance, Int  Angle)
+{
+	AddPatrolState Leader
+    SetIdleAttentionSpan Leader 1
+    FollowStateDirectional Follower Leader Distance Angle
+}
+
+Function  "HurtEnemy" (actor Hurt, actor Attacker)
+{
+    WaitUntilDamaged Hurt
+    //TakePartialControlOf Attacker //no need to take partial control to force target
+    ForceTarget Attacker obi
+}
+
+Function  "KilledEnemy" (actor Dead, actor Angry)
+{
+    WaitUntilKilled  Dead 
+    //TakePartialControlOf Angry //no need to take partial control to force target
+    ForceTarget Angry obi //was ForceTargetAndAttack
+}
+
+Function "MeleeAmbush" (Node TooClose, Actor Ambush)
+{
+   float NodeProximity 0
+   DistanceBetweenActorAndNode Obi TooClose NodeProximity
+   if (<= NodeProximity 20)
+   {
+      ForceTarget Ambush Obi
+   }
+   loop
+}
+
+Function  "Patrol" (actor Patroller)
+{
+    AddPatrolState Patroller
+    SetIdleAttentionSpan Patroller 1
+}
+
+////End Enemy Functions////
+
+
+LoadDLG Qui-Gon.dlg
+SetDefaultSurface 03_dirt1.sur
+
+///First Patrol in Zone 1 /////
+
+Call Patrol (A_jin'ha-dagger_05)
+Call Patrol (A_jin'ha-mace_01)
+Call HurtEnemy (A_jin'ha-mace_01, A_jin'ha-blaster_02)
+Call HurtEnemy (A_jin'ha-dagger_05, A_jin'ha-blaster_01)
+Call KilledEnemy (A_jin'ha-blaster_01, A_jin'ha-blaster_02)
+Call KilledEnemy (A_jin'ha-blaster_02, A_jin'ha-blaster_01)
+
+////////////////////////////////////////////////
+Script "Mission Objectives First Time Only" 32
+{
+	MissionTitle "/Mission10Title/Into the Jin'ha Swamp"
+	MissionObjective 1 "/Mission10Objective1/Locate the Jedi Masters Plo Koon and Eeth Koth."
+	RemoveGroup 32
+	Save
+}
+
+
+Script "Opening Cutscene" 31
+{
+	InvincibilityOn Quigon
+	takecontrolof Quigon
+	TakeControlOf A_nuna_male_01
+	TakeControlOf A_nuna_male_02
+	TakeControlOf A_nuna_female_01
+	
+	Teleport obi Obi_Start_Cut
+	Teleport QuiGon Qui_Start_Cut
+	
+	RunToNode A_nuna_male_01 nuna_node01
+    FollowDirectional A_nuna_male_02 A_nuna_male_01 0.5 120
+    FollowDirectional A_nuna_female_01 A_nuna_male_01 0.7 240
+    Pause 0.25
+    BeginCutScene
+
+    Int exitedEarly 1
+    PlayFlourish cut_2_1aintro_m.wav
+	
+	FadeUp
+
+	PlaySound takeoff_repCruiser_01.wav Obi
+
+    CameraFixed startcam
+    MoveCamera nunacam 5 1 1
+
+    Pause 1.0
+    SayLineNonPositionalAndContinue QuiGon "/Qui-Gon_297/The situation has become very serious indeed. Stay close to me and watch carefully, Padawan. This is no time for heroics."    
+    Pause 0 1
+    
+    WalkToNode QuiGon Qui_Walk_First
+    WalkToNodeAndWait obi Obi_Walk_First
+    
+	Pause 0 20
+	
+    cameraoff
+    
+    //WaitUntilArrived QuiGon quigon_start_node01
+
+//Commands to execute if player exits cutscene early
+
+	DisableAudioFades
+   	FadeDown 0 15
+
+	Set exitedEarly 0
+
+	PreEndCutscene
+
+	if (= exitedEarly 1)
+	{
+		StopMusic  // Stop the intro music
+	}
+	
+	StartMusicManager    
+
+    FadeUp 2
+	 EnableAudioFades
+	Teleport QuiGon QuiGameCam
+	Teleport obi ObiGameCam
+	Teleport  A_nuna_male_01 nunamove1
+	Teleport  A_nuna_male_02 nunamove2
+	Teleport  A_nuna_female_01 nunamove3
+    StopTalking QuiGon
+    EndCutScene
+    RemoveGroup 31
+    Save
+
+    ReturnControlTo Quigon
+    takepartialcontrolof QuiGon 0.35 false
+    
+	SetMeleeDamage QuiGon 75 //make QuiGon do less damage (save some enemies for Obi)
+	SetFollowPlayer QuiGon
+
+	ReturnControlTo A_nuna_male_01
+	ReturnControlTo A_nuna_male_02
+	ReturnControlTo A_nuna_female_01
+        
+	RunToNode QuiGon qg_choice_02
+	PlayAnimationGoalAndWait QuiGon "human_loiter-pointfwd.anim"
+}
+
+Script "Alternate Opening"
+{
+   if (IsGroupRemoved 31)
+   {
+      FadeUp
+      StartMusicManager
+   }
+}
+
+
+
+Script "Start NunaPatrol 1"
+{
+    Call FollowBuddy (A_nuna_male_01, A_nuna_male_02, 2.0, 120)
+    Call FollowBuddy (A_nuna_male_01, A_nuna_female_01, 4.0, 240)
+}
+
+Script "Start Patrol 2"
+{
+	WaitUntilEnteredRegion Obi region_02
+	RunToNode QuiGon qg_node14
+	Call Patrol (A_jin'ha-dagger_19)
+	Call Patrol (A_jin'ha-mace_02)
+	Call Patrol (A_jin'ha-mace_03)
+
+    Call HurtEnemy (A_jin'ha-blaster_03, A_jin'ha-mace_02)
+    Call HurtEnemy (A_jin'ha-mace_03, A_jin'ha-blaster_04)
+    Call HurtEnemy (A_jin'ha-dagger_19, A_jin'ha-blaster_05)
+    
+    Call HurtEnemy (A_jin'ha-blaster_04, A_jin'ha-blaster_05)
+    Call HurtEnemy (A_jin'ha-blaster_05, A_jin'ha-blaster_04)
+}
+
+Script "Start NunaPatrol 2"
+{
+	WaitUntilEnteredRegion Obi region_02
+    Call FollowBuddy (A_nuna_male_10, A_nuna_male_11, 2.0, 180)
+}
+
+Script "Start Patrol 3"
+{
+	WaitUntilEnteredRegion Obi region_03
+	Call Patrol (A_jin'ha-dagger_08)
+	Call Patrol (A_jin'ha-dagger_20)
+	SetAIBoundaryAndNode A_jin'ha-sniper_03 region_aibound_03 sniper03
+}
+
+Script "Start Patrol 4"
+{
+	WaitUntilEnteredRegion Obi region_04
+	Call Patrol (A_jin'ha-sniper_05)
+	Call Patrol (A_jin'ha-mace_04)
+	Call Patrol (A_jin'ha-mace_05)
+}
+
+Script "Start NunaPatrol 4"
+{
+	WaitUntilEnteredRegion Obi region_04
+    Call FollowBuddy (A_nuna_male_04, A_nuna_female_02, 3.0, 90)
+}
+
+Script "Ambush region_04"
+{
+	WaitUntilEnteredRegion Obi region_04
+
+    Call Patrol (A_jin'ha-mace_04)
+
+	TakePartialControlOf A_jin'ha-dagger_08
+	TakePartialControlOf A_jin'ha-dagger_20
+
+	RunToNode A_jin'ha-dagger_08 ambush_01
+	RunToNode A_jin'ha-dagger_20 ambush_02
+	
+//	SetMustFollowPlayerPriority QuiGon 0.3
+//	SayLineNonPositional QuiGon "/Qui-Gon_306/Snipers..."
+    AiAudioOff QuiGon
+    Pause  2.0
+	SayLineNonPositional QuiGon "/Qui-Gon_1145/Watch out for snipers!"
+    Pause  2.0
+    AiAudioOn QuiGon
+//	SayLineNonPositional QuiGon "/Qui-Gon_1140/Be on the look out for more Jin'ha."
+	
+	Call KilledEnemy(A_jin'ha-dagger_08, A_jin'ha-sniper_05)
+	Call KilledEnemy(A_jin'ha-dagger_20, A_jin'ha-sniper_01)
+	
+//	SetMustFollowPlayerPriority QuiGon 0.8
+}
+
+Script "Start Patrol 5 - Lower"
+{
+	WaitUntilEnteredRegion Obi region_05
+	Call Patrol (A_jin'ha-mace_05)
+    Call HurtEnemy (A_jin'ha-mace_05, A_jin'ha-blaster_06)
+}
+
+Script "Start Patrol 5 - Upper"
+{
+	WaitUntilEnteredRegion Obi region_05
+////Sniper on cliff
+	SetAIBoundaryAndNode A_jin'ha-sniper_12 region_ai_bound_sniper12 sniper12
+
+////Ambushing - A_jin'ha-dagger_28
+    Call MeleeAmbush (dagger28, A_jin'ha-dagger_28)
+
+////First Patrol on Left
+    Call FollowBuddy (A_jin'ha-mace_06, A_jin'ha-mace_07, 2.0, 90)
+    
+////Second Patrol on Left
+    Call FollowBuddy (A_jin'ha-dagger_21, A_jin'ha-dagger_18, 3.0, 120)
+    
+////Ambushing from first tree - A_jin'ha-blaster_07
+    Call MeleeAmbush (blaster07, A_jin'ha-blaster_07)
+	Call HurtEnemy(A_jin'ha-dagger_21, A_jin'ha-blaster_07)
+	Call HurtEnemy(A_jin'ha-dagger_18, A_jin'ha-blaster_07)
+
+////Patrol in front of Pond Left
+    Call FollowBuddy (A_jin'ha-dagger_17, A_jin'ha-mace_09, 3.0, 90)
+        
+////Ambushing from second tree - A_jin'ha-dagger_10
+    Call MeleeAmbush (dagger10, A_jin'ha-dagger_10)
+	Call HurtEnemy (A_jin'ha-dagger_17, A_jin'ha-dagger_10)
+	Call HurtEnemy (A_jin'ha-mace_09, A_jin'ha-dagger_10)
+
+////First Patrol on Right
+    Call FollowBuddy (A_jin'ha-dagger_01, A_jin'ha-dagger_02, 2.0, 180)
+
+////Second Patrol on right
+    SetPatrolTypes A_jin'ha-dagger_24 2
+    SetPatrolTypes A_jin'ha-dagger_25 3
+	Call Patrol (A_jin'ha-dagger_24)
+	Call Patrol (A_jin'ha-dagger_25)
+
+////Hiding behind rocks-A_jin'ha-mace_08
+////Hiding behind rocks-A_jin'ha-dagger_15
+    Call MeleeAmbush (dagger15, A_jin'ha-mace_08)
+    Call MeleeAmbush (dagger15, A_jin'ha-dagger_15)
+	Call HurtEnemy(A_jin'ha-dagger_24, A_jin'ha-mace_08)
+	Call HurtEnemy(A_jin'ha-dagger_25, A_jin'ha-dagger_15)
+
+////Sniper in gulley on right - A_jin'ha-sniper_06 - removed
+
+///	Call Patrol (A_jin'ha-rod_03)
+///	Call Patrol (A_jin'ha-rod_05)
+
+	Call HurtEnemy(A_jin'ha-dagger_15, A_jin'ha-rod_03)
+	Call HurtEnemy(A_jin'ha-mace_09, A_jin'ha-rod_05)
+}
+
+Script "Run to get help - left"
+{
+    WaitUntilEnteredRegion Obi region_battle_02
+    TakeControlOf A_jin'ha-rod_05
+    RunToNodeAndWait A_jin'ha-rod_05 dagger10
+    ReturnControlTo A_jin'ha-rod_05
+    ForceTarget A_jin'ha-rod_05 obi
+    ForceTarget A_jin'ha-mace_09 obi
+    ForceTarget A_jin'ha-dagger_17 obi   
+}
+
+Script "Run to get help - right"
+{
+    WaitUntilEnteredRegion Obi region_battle_03
+    TakeControlOf A_jin'ha-rod_03
+    RunToNodeAndWait A_jin'ha-rod_03 dagger15
+    ReturnControlTo A_jin'ha-rod_03
+    ForceTarget A_jin'ha-rod_03 obi
+    ForceTarget A_jin'ha-dagger_24 obi
+    ForceTarget A_jin'ha-dagger_25 obi   
+}
+
+Script "Start Patrol 10"
+{
+	WaitUntilEnteredRegion Obi region_10
+    AiAudioOff QuiGon
+    Pause  2.0
+	SayLineNonPositional QuiGon "/Qui-Gon_306/Snipers..."
+    Pause  2.0
+    AiAudioOn QuiGon
+//If they have enough sniper nodes to provide coverage, they will
+//stay up there anyhow. If they drop down, then they can't get back
+//up so the boundary region only makes things worse cuz they keep
+//trying to get back there
+////First Turret
+//    SetAIBoundaryAndNode A_jin'ha-sniper_04 region_aibound_01 sniper04
+SetTeam A_jin'ha-sniper_04 13 //this will make him ignore qui and vice versa
+
+////Second Turret    
+//    SetAIBoundaryAndNode A_jin'ha-sniper_11 region_aibound_02 sniper11 
+SetTeam A_jin'ha-sniper_11 13 //this will make him ignore qui and vice versa
+}
+
+Script "Start NunaPatrol 10"
+{
+	WaitUntilEnteredRegion Obi region_10
+    Call FollowBuddy (A_nuna_male_09, A_nuna_female_06, 2.0, 90)
+    Call FollowBuddy (A_nuna_male_09, A_nuna_female_07, 3.0, 270)
+}
+
+/// The Break ///
+
+script "The Break - 1"
+{
+Int shouldEndLevel 0
+
+If (IsAlive Obi)
+    {
+        If (IsInRegion Obi region_aa_split01)
+        {
+            Set shouldEndLevel 1
+        }
+        If (IsInRegion Obi region_aa_split02)
+        {
+            Set shouldEndLevel 1
+        }
+    }
+    
+If (= shouldEndLevel 1)
+    {
+    BeginCutScene
+	InvincibilityOn Obi
+    takecontrolof Obi
+    walktonode Obi node_loadb
+    takecontrolof QuiGon
+    walktonode QuiGon quigonstartb
+    FadeDownandWait
+    EndCutScene
+    NextPart L02_1b
+    }
+loop
+}
+
+

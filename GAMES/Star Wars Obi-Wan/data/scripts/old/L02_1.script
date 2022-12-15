@@ -1,0 +1,356 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor QuiGon A_Qui-Gon_01
+
+ConsoleCommand "r_3dlights 0"
+ConsoleCommand "r_fogstart 0.01"
+SetNodeHeightTolerance 0.6  //to compensate for nodemap on rough terrain
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_17.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_06.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_11.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+
+script "Quigon died"
+{
+	waituntilkilled Quigon
+	begincutscene
+	cameraplayer Quigon 0 2.5 -5.0
+	pause 0.5
+	communicatoron
+	CommunicatorMessageAndWait "Good going Obi-Wan." quigonjinn.dlg
+	CommunicatorMessageAndWait "You LOSE." quigonjinn.dlg
+	fadedownandwait
+	endcutscene
+	NextLevel L02_1
+}
+
+Script "Impatient Quigon"
+{
+	WaitUntilStateActivated Quigon Puppet
+	WaitUntilStateShutDown Quigon Puppet
+	WaitUntilStateActivated Quigon FollowPlayer
+	PlayAudioCue Quigon "FollowMe"
+	PlayGesture Quigon AttractAttention
+	Pause 10
+	Loop
+}
+
+Script "Opening Music"
+{
+	Pause 0.5
+	PlayMusic Suspense 20 40  // Play a new suspense cue every 20 to 40 seconds
+}
+
+FadeUp
+LoadDLG QuiGonJinn.dlg
+SetDefaultSurface zoosurdirtsoil.sur
+
+AddPatrolState A_jin'ha-dagger_05
+AddPatrolState A_jin'ha-mace_01
+
+Script "Opening Cutscene"
+{
+	InvincibilityOn Quigon
+	takecontrolof Quigon
+	takecontrolof obi
+//	SetTeam QuiGon 0
+	BeginCutScene
+	//Pause 1
+	TakeControlOf A_nuna_male_01
+	TakeControlOf A_nuna_male_02
+	TakeControlOf A_nuna_female_01
+	RunToNode A_nuna_male_01 nuna_node01
+      FollowDirectional A_nuna_male_02 A_nuna_male_01 0.5 120
+    	FollowDirectional A_nuna_female_01 A_nuna_male_01 0.7 240
+	CameraTrack nunacam A_nuna_male_01
+	Pause 5.0
+	CameraTrack obicam obi
+	WalkToNode QuiGon quigon_start_node01
+	WalkToNode obi obi_start_node01
+    SayLineNonPositional QuiGon "/Qui-Gon_297/The situation has become very serious indeed. Stay close to me and watch carefully, Padawan. This is no time for heroics."
+	WaitUntilArrived QuiGon quigon_start_node01	
+	cameraoff
+	EndCutScene
+
+    ReturnControlTo Quigon
+    takepartialcontrolof QuiGon 0.35 false
+    
+	SetFollowPlayerDistance Quigon 10
+	SetActivateDistance QuiGon 15
+	SetMustFollowPlayerDistance QuiGon 20
+	SetMustFollowPlayerPriority QuiGon 0.8
+
+	ReturnControlTo A_nuna_male_01
+	//ReturnControlTo A_nuna_male_02
+	//ReturnControlTo A_nuna_female_01
+	//WalkToNode QuiGon qg_node01
+        
+	RunToNode QuiGon qg_node14
+	PlayAnimationGoalAndWait QuiGon "human_loiter-pointfwd.anim"
+}
+
+StartMusicManager //jw 8.21.01
+
+Script "Start NunaPatrol 1"
+{
+	AddPatrolState A_nuna_male_01
+	TakeControlOf A_nuna_male_02
+	TakeControlOf A_nuna_female_01
+    FollowDirectional A_nuna_male_02 A_nuna_male_01 0.5 120
+    FollowDirectional A_nuna_female_01 A_nuna_male_01 0.7 240
+    WaitUntilKilled A_nuna_male_01
+    ReturnControlTo A_nuna_male_02
+	ReturnControlTo A_nuna_female_01
+}
+
+Script "Start Patrol 2"
+{
+	WaitUntilEnteredRegion Obi region_02
+	AddPatrolState A_jin'ha-dagger_06
+	AddPatrolState A_jin'ha-dagger_19
+	AddPatrolState A_jin'ha-mace_02
+	AddPatrolState A_jin'ha-mace_03
+	SayLineNonPositional QuiGon "/Qui-Gon_306/Snipers..."
+}
+
+Script "Start NunaPatrol 2"
+{
+	WaitUntilEnteredRegion Obi region_02
+	AddPatrolState A_nuna_male_10
+	TakeControlOf A_nuna_male_11
+	FollowDirectional A_nuna_male_11 A_nuna_male_10 2 180
+    WaitUntilKilled A_nuna_male_10
+    ReturnControlTo A_nuna_male_11
+}
+
+Script "Start Patrol 3"
+{
+	WaitUntilEnteredRegion Obi region_03
+	AddPatrolState A_jin'ha-dagger_08
+	AddPatrolState A_jin'ha-dagger_20
+	AddPatrolState A_jin'ha-sniper_03
+}
+
+Script "Start Patrol 4"
+{
+	WaitUntilEnteredRegion Obi region_04
+	AddPatrolState A_jin'ha-sniper_05
+	AddPatrolState A_jin'ha-mace_04
+	AddPatrolState A_jin'ha-mace_05
+}
+
+Script "Start NunaPatrol 4"
+{
+	WaitUntilEnteredRegion Obi region_04
+	AddPatrolState A_nuna_male_04
+	TakeControlOf A_nuna_male_05
+	TakeControlOf A_nuna_female_02
+	FollowDirectional A_nuna_male_05 A_nuna_male_04 2 180
+	FollowDirectional A_nuna_female_02 A_nuna_male_04 3 90
+    WaitUntilKilled A_nuna_male_04
+    ReturnControlTo A_nuna_male_05
+    ReturnControlTo A_nuna_female_02
+}
+
+Script "Ambush region_04"
+{
+	WaitUntilEnteredRegion Obi region_04
+
+	TakePartialControlOf A_jin'ha-dagger_08
+	TakePartialControlOf A_jin'ha-dagger_20
+//	TakePartialControlOf A_jin'ha-dagger_19
+	TakePartialControlOf A_jin'ha-mace_04
+
+	RunToNode A_jin'ha-dagger_08 ambush_01
+	RunToNode A_jin'ha-dagger_20 ambush_02
+//	RunToNode A_jin'ha-dagger_19 ambush_03
+	RunToNode A_jin'ha-mace_04 ambush_04
+	
+//	SetMustFollowPlayerPriority QuiGon 0.3
+	SayLineNonPositional QuiGon "Go on ahead, I'll catch up!"
+	SayLineNonPositional QuiGon "Be on the look out for more Jin'ha."
+	
+	WaitUntilKilled A_jin'ha-dagger_08
+	WaitUntilKilled A_jin'ha-dagger_20
+//	WaitUntilKilled A_jin'ha-dagger_19
+	WaitUntilKilled A_jin'ha-mace_04
+	
+//	SetMustFollowPlayerPriority QuiGon 0.8
+}
+
+Script "Start Patrol 5"
+{
+	WaitUntilEnteredRegion Obi region_05
+	AddPatrolState A_jin'ha-dagger_21
+	//AddPatrolState A_jin'ha-dagger_18	
+	//AddPatrolState A_jin'ha-mace_07
+	AddPatrolState A_jin'ha-mace_06
+	AddPatrolState A_jin'ha-dagger_01
+	//AddPatrolState A_jin'ha-dagger_02
+	AddPatrolState A_jin'ha-mace_08
+	AddPatrolState A_jin'ha-dagger_15
+	AddPatrolState A_jin'ha-dagger_24
+	AddPatrolState A_jin'ha-dagger_25
+	TakeControlOf A_jin'ha-dagger_02
+	FollowDirectional A_jin'ha-dagger_02 A_jin'ha-dagger_01 4 180
+	TakeControlOf A_jin'ha-mace_07
+	FollowDirectional A_jin'ha-mace_07 A_jin'ha-mace_06 5 90
+	TakeControlOf A_jin'ha-dagger_18
+	FollowDirectional A_jin'ha-dagger_18 A_jin'ha-dagger_21 6 120
+    WaitUntilKilled A_jin'ha-dagger_01
+    ReturnControlTo A_jin'ha-dagger_02
+    WaitUntilKilled A_jin'ha-mace_06
+    ReturnControlTo A_jin'ha-mace_07
+    WaitUntilKilled A_jin'ha-dagger_21
+    ReturnControlTo A_jin'ha-dagger_18    
+}
+
+
+Script "Start Patrol 10"
+{
+	WaitUntilEnteredRegion Obi region_10
+	AddPatrolState A_jin'ha-dagger_17
+	//AddPatrolState A_jin'ha-mace_09
+	AddPatrolState A_jin'ha-mace_10
+	AddPatrolState A_jin'ha-dagger_16
+	AddPatrolState A_jin'ha-sniper_07
+	AddPatrolState A_jin'ha-mace_11
+	AddPatrolState A_jin'ha-dagger_14
+	TakeControlOf A_jin'ha-mace_09
+	FollowDirectional A_jin'ha-mace_09 A_jin'ha-dagger_17 6 120
+    WaitUntilKilled A_jin'ha-dagger_27
+    ReturnControlTo A_jin'ha-mace_09  
+}
+
+Script "Start NunaPatrol 10"
+{
+	WaitUntilEnteredRegion Obi region_10
+	AddPatrolState A_nuna_male_08
+	AddPatrolState A_nuna_male_09
+	TakeControlOf A_nuna_female_06
+	TakeControlOf A_nuna_female_07
+	TakeControlOf A_nuna_male_07
+	TakeControlOf A_nuna_female_08
+	FollowDirectional A_nuna_male_07 A_nuna_male_08 2 180
+	FollowDirectional A_nuna_female_08 A_nuna_male_08 3 90
+	FollowDirectional A_nuna_female_06 A_nuna_male_09 2 180
+	FollowDirectional A_nuna_female_07 A_nuna_male_09 3 90
+    WaitUntilKilled A_nuna_male_08
+    ReturnControlTo A_nuna_female_08
+    ReturnControlTo A_nuna_male_07
+    WaitUntilKilled A_nuna_male_09
+    ReturnControlTo A_nuna_female_06
+    ReturnControlTo A_nuna_female_07
+}
+
+Script "Start Patrol 7"
+{
+	WaitUntilEnteredRegion Obi region_07
+	AddPatrolState A_jin'ha-sniper_08
+	AddPatrolState A_jin'ha-sniper_09
+	AddPatrolState A_jin'ha-mace_12
+	AddPatrolState A_jin'ha-dagger_23
+	AddPatrolState A_jin'ha-mace_14
+	AddPatrolState A_jin'ha-dagger_13
+	AddPatrolState A_jin'ha-mace_13
+	AddPatrolState A_jin'ha-dagger_12
+	AddPatrolState A_jin'ha-mace_18
+	AddPatrolState A_jin'ha-dagger_26
+}
+
+Script "Quigon speaks 1"
+{
+	WaitUntilEnteredRegion Quigon region_07
+   SayLineNonPositional QuiGon "Be wary of traps, Obi!"
+}
+
+Script "Quigon speaks 2"
+{
+	WaitUntilEnteredRegion Quigon region_11
+   SayLineNonPositional QuiGon "This is one ugly swamp!"
+}
+
+Script "Start Patrol 11"
+{
+	WaitUntilEnteredRegion Obi region_11
+	//AddPatrolState A_jin'ha-sniper_10
+	AddPatrolState A_jin'ha-dagger_03
+	AddPatrolState A_jin'ha-dagger_09
+	AddPatrolState A_jin'ha-mace_17
+	AddPatrolState A_jin'ha-dagger_11
+	AddPatrolState A_jin'ha-mace_16
+      AddPatrolState A_jin'ha-mace_26
+      AddPatrolState A_jin'ha-dagger_10
+	TakeControlOf A_jin'ha-dagger_11
+	FollowDirectional A_jin'ha-dagger_11 A_jin'ha-mace_15 4 90
+    	WaitUntilDamaged A_jin'ha-mace_15
+    	ReturnControlTo A_jin'ha-dagger_11
+	TakeControlOf A_jin'ha-dagger_04
+	FollowDirectional A_jin'ha-dagger_04 A_jin'ha-mace_17 5 180
+    	WaitUntilDamaged A_jin'ha-mace_17
+    	ReturnControlTo A_jin'ha-dagger_04
+	TakeControlOf A_jin'ha-mace_25
+	FollowDirectional A_jin'ha-mace_25 A_jin'ha-mace_16 6 120
+	WaitUntilDamaged A_jin'ha-mace_16
+    	ReturnControlTo A_jin'ha-mace_25
+}
+
+Script "Start NunaPatrol 11"
+{
+	WaitUntilEnteredRegion Obi region_11
+	AddPatrolState A_nuna_male_05
+	TakeControlOf A_nuna_male_06
+	TakeControlOf A_nuna_female_05
+	FollowDirectional A_nuna_male_06 A_nuna_male_05 2 180
+	FollowDirectional A_nuna_female_05 A_nuna_male_05 4 120
+    WaitUntilKilled A_nuna_male_05
+    ReturnControlTo A_nuna_female_05
+    ReturnControlTo A_nuna_male_06
+}
+
+Script "Ending Cutscene"
+{
+	//WaitUntilEnteredRegion Obi region_endlevel
+	//WaitUntilDamaged A_jin'ha-mace_16
+    WaitUntilKilled A_jin'ha-mace_16
+    WaitUntilKilled A_jin'ha-mace_25
+    WaitUntilKilled A_jin'ha-mace_26
+    WaitUntilKilled A_jin'ha-dagger_10
+   FadeDownAndWait
+   Pause 0.5
+   	//BeginCutScene
+	takecontrolof QuiGon
+	//takecontrolof Obi
+	Teleport QuiGon quigon_end
+	Teleport Obi obi_end
+	LookAt QuiGon A_jinhaship_01
+	LookAt obi A_jinhaship_01
+	BeginCutScene
+  	FadeUp
+  	CameraFixed endcam01
+	SayLineNonPositional Obi "/Obi-Wan_323/They can't have survived, Master...."
+	PanLeft 75 11
+   SayLineNonPositional QuiGon "/Qui-Gon_324/No, Padawan, I sense both Jedi somewhere nearby. I will go and find them. I want you to find the jin'ha facility, and discover the source of their weapons technology. We can still turn defeat into victory."
+  	FadeDownAndWait
+	EndCutscene
+	NextLevel L02_3
+}

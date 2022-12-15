@@ -1,0 +1,642 @@
+<AI_Speed_Settings>
+
+	<!-- Speed settings for each ID -->
+	<!-- 51 Characters in total, labelled 0-50 -->
+
+    <ID0>
+		<!-- 0: Inmate -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID0>
+    
+    <ID1>
+		<!-- 1: Andrew Martin -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID1>
+
+    <ID2>
+		<!-- 2: Nathan Birch -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID2>
+
+    <ID3>
+		<!-- 3: Elliot Ropes -->
+        <Walk>114.0</Walk>
+        <Run>386.0</Run>
+        <Crawl>166.0</Crawl>
+        <Wounded_walk>102.0</Wounded_Walk>
+        <Back_Fast>186.0</Back_Fast>
+        <Back_Slow>120.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID3>
+    
+    <ID4>
+		<!-- 4: Deep One -->
+        <Walk>158.0</Walk>
+        <Run>410.0</Run>
+        <Crawl>100.0</Crawl>
+        <Wounded_walk>210.0</Wounded_Walk>
+        <Back_Fast>300.0</Back_Fast>
+        <Back_Slow>120.0</Back_Slow>
+        <Strafe_Fast>420.0</Strafe_Fast>
+        <Strafe_Slow>420.0</Strafe_Slow>
+    </ID4>
+    
+    <ID5>
+		<!-- 5: Hybrid 1 -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID5>
+    
+    <ID6>
+		<!-- 6: Hybrid 2 -->
+        <Walk>112.0</Walk>
+        <Run>390.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>118.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID6>
+    
+    <ID7>
+		<!-- 7: Hybrid 3 -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID7>
+    
+    <ID8>
+		<!-- 8: Josiah Bentley -->
+        <Walk>84.0</Walk>
+        <Run>330.0</Run>
+        <Crawl>100.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>150.0</Back_Fast>
+        <Back_Slow>70.0</Back_Slow>
+        <Strafe_Fast>220.0</Strafe_Fast>
+        <Strafe_Slow>84.0</Strafe_Slow>
+    </ID8>
+    
+    <ID9>
+		<!-- 9: Human -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID9>
+    
+    <ID10>
+		<!-- 10: Cultist -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID10>
+    
+    <ID11>
+		<!-- 11: Brian Burnham -->
+        <Walk>198.0</Walk>
+        <Run>390.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>170.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID11>
+    
+    <ID12>
+		<!-- 12: Generic -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID12>
+    
+    <ID13>
+		<!-- 13: Hybrid -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID13>
+    
+    <ID14>
+		<!-- 14: Lucas Mackey -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID14>
+    
+    <ID15>
+		<!-- 15: Jack Walters Indoor -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID15>
+    
+    <ID16>
+		<!-- 16: Jack Walters Insane -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID16>
+    
+    <ID17>
+		<!-- 17: Marine -->
+        <Walk>184.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID17>
+    
+    <ID18>
+		<!-- 18: Policeman -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID18>
+    
+    <ID19>
+		<!-- 19: Sailor -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID19>
+    
+    <ID20>
+		<!-- 20: Thomas Waite -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID20>
+    
+    <ID21>
+		<!-- 21: Zadok Allen -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID21>
+    
+    <ID22>
+		<!-- 22: Joe Sargent -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID22>
+    
+    <ID23>
+		<!-- 23: Charles Gilman -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID23>
+    
+    <ID24>
+		<!-- 24: Fat Variant -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID24>
+    
+    <ID25>
+		<!-- 25: Female Variant stage 2 -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID25>
+    
+    <ID26>
+		<!-- 26: Female Variant - Streets 2 Sleeping -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID26>
+    
+    <ID27>
+		<!-- 27: Rebecca Lawrence -->
+        <Walk>126.0</Walk>
+        <Run>370.0</Run>
+        <Crawl>144.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>176.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID27>
+    
+    <ID28>
+		<!-- 28: Ramona Waites -->
+        <Walk>126.0</Walk>
+        <Run>370.0</Run>
+        <Crawl>144.0</Crawl>
+        <Wounded_walk>110.0</Wounded_Walk>
+        <Back_Fast>176.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>180.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID28>
+    
+    <ID29>
+		<!-- 29: Hybrid 4 -->
+        <Walk>32.0</Walk>
+        <Run>340.0</Run>
+        <Crawl>140.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>160.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID29>
+    
+    <ID30>
+		<!-- 30: Edgar Hoover -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID30>
+    
+    <ID31>
+		<!-- 31: FBI Agent -->
+        <Walk>196.0</Walk>
+        <Run>390.0</Run>
+        <Crawl>162.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>172.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID31>
+    
+    <ID32>
+		<!-- 32: Female Generic	 -->
+        <Walk>126.0</Walk>
+        <Run>370.0</Run>
+        <Crawl>144.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>176.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>180.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID32>
+    
+    <ID33>
+		<!-- 33: Innsmouth Female Misc -->
+        <Walk>126.0</Walk>
+        <Run>370.0</Run>
+        <Crawl>144.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>176.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>180.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID33>
+    
+    <ID34>
+		<!-- 34: Innsmouth Male Misc -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID34>
+    
+    <ID35>
+		<!-- 35: Jacob Marsh -->
+        <Walk>112.0</Walk>
+        <Run>390.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>203.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>118.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID35>
+    
+    <ID36>
+		<!-- 36: Robert Marsh -->
+        <Walk>160.0</Walk>
+        <Run>160.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>160.0</Wounded_Walk>
+        <Back_Fast>150.0</Back_Fast>
+        <Back_Slow>150.0</Back_Slow>
+        <Strafe_Fast>150.0</Strafe_Fast>
+        <Strafe_Slow>150.0</Strafe_Slow>
+    </ID36>
+    
+    <ID37>
+		<!-- 37: Shot Cultist -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID37>
+    
+    <ID38>
+		<!-- 38: Sailor Captain -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID38>
+    
+    <ID39>
+		<!-- 39: Ruth Billingham -->
+        <Walk>126.0</Walk>
+        <Run>370.0</Run>
+        <Crawl>144.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>176.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID39>
+    
+    <ID40>
+		<!-- 40: Pensioner Female -->
+        <Walk>126.0</Walk>
+        <Run>370.0</Run>
+        <Crawl>144.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>176.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID40>
+    
+    <ID41>
+		<!-- 41: Pensioner Male -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID41>
+    
+    <ID42>
+		<!-- 42: Deep One Alpha -->
+        <Walk>130.0</Walk>
+        <Run>410.0</Run>
+        <Crawl>100.0</Crawl>
+        <Wounded_walk>210.0</Wounded_Walk>
+        <Back_Fast>300.0</Back_Fast>
+        <Back_Slow>120.0</Back_Slow>
+        <Strafe_Fast>420.0</Strafe_Fast>
+        <Strafe_Slow>360.0</Strafe_Slow>
+    </ID42>
+    
+    <ID43>
+		<!-- 43: Deep One Sorcerer -->
+        <Walk>226.0</Walk>
+        <Run>226.0</Run>
+        <Crawl>226.0</Crawl>
+        <Wounded_walk>226.0</Wounded_Walk>
+        <Back_Fast>222.0</Back_Fast>
+        <Back_Slow>222.0</Back_Slow>
+        <Strafe_Fast>150.0</Strafe_Fast>
+        <Strafe_Slow>150.0</Strafe_Slow>
+    </ID43>
+    
+    <ID44>
+		<!-- 44: Tainted Man -->
+        <Walk>170.0</Walk>
+        <Run>330.0</Run>
+        <Crawl>100.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>150.0</Back_Fast>
+        <Back_Slow>70.0</Back_Slow>
+        <Strafe_Fast>220.0</Strafe_Fast>
+        <Strafe_Slow>85.0</Strafe_Slow>
+    </ID44>
+    
+    <ID45>
+		<!-- 45: Sebastian Marsh  -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID45>
+    
+    <ID46>
+		<!-- 46: Humanoid -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID46>
+    
+    <ID47>
+		<!-- 47: Pensioner -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID47>
+    
+    <ID48>
+		<!-- 48: Polyp -->
+        <Walk>170.0</Walk>
+        <Run>360.0</Run>
+        <Crawl>140.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>155.0</Back_Fast>
+        <Back_Slow>80.0</Back_Slow>
+        <Strafe_Fast>220.0</Strafe_Fast>
+        <Strafe_Slow>90.0</Strafe_Slow>
+    </ID48>
+
+    <ID49>
+		<!-- 49: Female Variant stage 1 -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID49>
+
+    <ID50>
+		<!-- 50: Jack Mirror Image -->
+        <Walk>192.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>156.0</Crawl>
+        <Wounded_walk>112.0</Wounded_Walk>
+        <Back_Fast>164.0</Back_Fast>
+        <Back_Slow>90.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID50>
+
+    <ID51>
+		<!-- 5: Hybrid 1 Longcoat -->
+        <Walk>108.0</Walk>
+        <Run>380.0</Run>
+        <Crawl>160.0</Crawl>
+        <Wounded_walk>100.0</Wounded_Walk>
+        <Back_Fast>180.0</Back_Fast>
+        <Back_Slow>114.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID51>
+    
+    <ID52>
+		<!-- 52: Slimed FBI Agent -->
+        <Walk>196.0</Walk>
+        <Run>390.0</Run>
+        <Crawl>162.0</Crawl>
+        <Wounded_walk>116.0</Wounded_Walk>
+        <Back_Fast>172.0</Back_Fast>
+        <Back_Slow>94.0</Back_Slow>
+        <Strafe_Fast>210.0</Strafe_Fast>
+        <Strafe_Slow>80.0</Strafe_Slow>
+    </ID52>
+
+</AI_Speed_Settings>

@@ -1,0 +1,51 @@
+[LavaVolume0]
+LocationName="Blue Teleport Exit"
+
+[LavaVolume1]
+LocationName="Red Teleport Exit"
+
+[LevelInfo0]
+Title="Citadel"
+
+[LevelSummary]
+Title="Citadel"
+
+[Volume10]
+LocationName="Central Bridge"
+
+[Volume8]
+LocationName="Red Sniper Tower"
+
+[Volume9]
+LocationName="Blue Sniper Tower"
+
+[ZoneInfo0]
+LocationName="Blue Lower Entrance"
+
+[ZoneInfo1]
+LocationName="Outside"
+
+[ZoneInfo2]
+LocationName="Red Lower Entrance"
+
+[ZoneInfo3]
+LocationName="Red Lower Entrance"
+
+[ZoneInfo4]
+LocationName="Red Flag Room"
+
+[ZoneInfo5]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo6]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo7]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo8]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo9]
+LocationName="Blue Flag Room"
+

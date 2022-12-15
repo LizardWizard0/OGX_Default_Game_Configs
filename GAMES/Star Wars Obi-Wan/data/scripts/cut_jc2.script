@@ -1,0 +1,140 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor MaceWindu A_DuelMaceWindu_01
+Actor QuiGon A_Qui-Gon_01
+Actor KiAdi A_ki_adi_mundi_civillian_01
+Actor Plo A_plo_civillian_01
+
+UnEquipWeapon	MaceWindu
+UnEquipWeapon	QuiGon
+
+// TakeControlOf has a slight delay in it, so do these concurrently to avoid problems.
+
+Child TakeControlOf	MaceWindu
+Child TakeControlOf	QuiGon
+Child TakeControlOf	KiAdi
+Child TakeControlOf	Plo
+
+WaitForAll
+BeginCutScene
+
+CameraFixed First
+
+Pause 0 05
+
+SetAnimTableIndex MaceWindu 1
+SetAnimTableIndex QuiGon 1
+SetAnimTableIndex KiAdi 1
+SetAnimTableIndex Plo 1
+
+UnEquipWeapon	Obi
+Pause 0 05
+
+SetAnimTableIndex Obi 2
+Pause 0 05
+
+PlayAnimation Obi human_cut-jc1_obi_masterpose.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc1_qui_masterpose.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc1_mace_masterpose.anim 1.0 0.0
+PlayAnimation KiAdi mun_cut-jc2_masterpose.anim 1.0 0.0
+PlayAnimation Plo plo_cut-jc2_masterpose.anim 1.0 0.0
+
+Pause 0 05
+
+FadeUp
+
+PlayFlourish cut_jc2_m.wav
+
+PlayAnimation Obi human_cut-jc2_obi1_250shot1a.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc2_qui1_250shot1a.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc2_mace1_250shot1a.anim 1.0 0.0
+
+Pause 3 28
+
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_278/Well done, young Padawan. We have identified these arms dealers as the Jin’ha.. They are a group of fierce warriors* who have made a business of arms smuggling. Perhaps more importantly, the weapons they manufacture seem to be able to withstand our lightsabers. This maybe cortosis ore which we know has force resistant properties."
+
+Pause 6 09
+
+PlayAnimation Obi human_cut-jc2_obi1_250shot1a.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc2_qui217_276shot1b.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Second
+
+Pause 2 25
+
+PlayAnimation Obi human_cut-jc2_obi277_501shot2.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc2_qui277_501shot2.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc2_mace277_501shot2.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Third
+
+Pause 7 14
+
+PlayAnimation Obi human_cut-jc2_obi502_613shot3.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Fourth
+
+Pause 3 22
+
+SayLineNonPositionalAndContinue KiAdi "/Ki-Adi-Mundi_279/But surely the process of synthesizing cortosis into armor and weapons is far too expensive and sophisticated for the Jin’ha. Could others be involved?"
+PlayAnimation KiAdi mun_cut-jc2_kiadi614_899shot4.anim 1.0 0.0
+PlayAnimation Obi human_cut-jc2_obi614_899shot4.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Fifth
+
+Pause 9 05
+
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_280/It is well you succeeded in placing a tracker on their ship.  We are sendingt Masters Plo Koon and Eeth Koth to investigate.  We shall soon learn more."
+PlayAnimation MaceWindu human_cut-jc2_mace900_1056shot5.anim 1.0 0.0
+
+PlayAnimation Obi human_cut-jc2_obi900_1056shot5.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc2_qui900_1056shot5.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Sixth
+
+Pause 5 06
+
+PlayAnimation Plo plo_cut-jc2_plo1057_1185shot6.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Seventh
+
+Pause 4 08
+
+PlayAnimation Obi human_cut-jc2_obi1186_1321shot7.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc2_qui1186_1321shot7.anim 1.0 0.0
+
+PlayAnimation MaceWindu human_cut-jc1_mace_masterpose.anim 1.0 0.0
+
+Pause 0 01
+CameraOff
+CameraFixed Eighth
+
+SayLineNonPositionalAndContinue QuiGon "/Qui-Gon_1105/Now to proceed to the Trial arena Obi Wan, you must be prepared."
+
+Pause 4 14
+
+FadeDownAndWait 1
+PreEndCutScene  // If the player hits the start button, it will jump to here
+
+// Better do this before call to NextLevel, because the NextLevel command deletes this script!
+
+FadeDown 0  // Force the a full fade to black even if the player hits the start button
+
+SetAnimTableIndex obi 0
+
+EndCutScene
+
+NextLevel sa_02

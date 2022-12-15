@@ -1,0 +1,35 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/// medals stuff ///
+MissionTitle "/Mission21Title/Tusken Chief"
+MissionObjective 1 "/Mission21Objective1/Beat the Tusken Chief and rescue the Queen!"
+SetExplorationNum 2
+SetForceUsesNeeded 10
+SetTimeToBeat 1 45
+LoadDLG  QueenAmidala.dlg
+
+
+// Music//
+AddBattleLoop  m_battle_14_lp.wav  cut_4-7extro_m.wav  m_battle_14_lose.wav
+
+
+actor king A_tusken-king_01
+SetMissionCritical king 
+
+ConsoleCommand "r_maxshadows 2"
+ConsoleCommand "lockontoggle 1"
+ConsoleCommand "rumble_on 0"
+ConsoleCommand "disable_rumble 1"
+
+
+CastShadows king true
+
+Teleport king tt8
+Teleport Obi obit1
+FadeUp
+PlayMusic BattleLoop
+
+
+InvincibilityOn king
+InvincibilityOn Obi

@@ -1,0 +1,45 @@
+InvincibilityOn Obi
+SetFarClip 2000
+
+CameraFixed start
+
+OpeningCrawlOn
+
+Pause 1
+LongAgoOn
+FadeUpAndWait .5
+Pause 3
+FadeDownAndWait .5
+LongAgoOff
+
+Pause 2.5
+
+PlayFlourish "m_mainTitle.wav"
+Pause 0.1  // The main title has a slight delay at the beginning
+
+FadeUpAndWait .01
+
+StartLogo 11 4 .5 6    // display time, fade time, begin velocity, end velocity
+Pause 9
+
+SetOpeningTextCoordinates -32 -50
+SetOpeningTextDistance 85
+SetOpeningTextScale  0.1  -0.1
+
+// These lines must be added AFTER the OpeningText info has been set
+AddOpeningText "/TextCrawlParagraph1/"
+AddOpeningText "/TextCrawlParagraph2/"
+AddOpeningText "/TextCrawlParagraph3/"
+
+StartOpeningText 70 6 3.3 67    // display time, fade time, scroll rate, angle
+
+Pause 70
+
+MoveCameraDown 2100 45 3 3
+
+Pause 39
+FadeDownAndWait 3
+
+OpeningCrawlOff
+
+PlayFlashFile start.swf

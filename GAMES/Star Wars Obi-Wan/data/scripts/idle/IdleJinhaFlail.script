@@ -1,0 +1,5 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+AddGesture me None 2
+WaitUntilFinishedGesture me

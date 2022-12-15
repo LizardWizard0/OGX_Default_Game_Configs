@@ -1,0 +1,116 @@
+state Base {
+	Conditions {
+		if GotLocator == 0 goto WalkToOrigin
+		if GotLocator == 1 goto WalkToLocator
+	}
+	Actions {	
+		SetHitPoints "default"
+	}
+}
+
+state WalkToOrigin {
+	Conditions {
+		if OriginRange > 0.25 goto WalkToOrigin
+		if Timer > 10 goto Think
+		if GotLocator == 1 goto WalkToLocator
+	}
+	Actions {	
+		ResetTimer "mintime=1" "maxtime=5"
+		GoToOrigin "waittime=10" "walk"
+	}
+}
+
+state WalkToLocator {
+	Conditions {
+		if LocatorRange > 0.25 goto WalkToLocator
+		if Timer > 10 goto Think
+		if GotLocator == 0 goto WalkToOrigin
+	}
+	Actions {	
+		ResetTimer "mintime=1" "maxtime=5"
+		GoToLocator "waittime=10" "walk"
+	}
+}
+
+=============================
+
+state Think {
+	Conditions {
+		if GotOpponent == 1 goto ZapOpponent
+		if Random < 0.2 goto LookForNewDestination
+		if AlwaysTrue == 1 goto Base
+	}
+	Actions {	
+	}
+}
+
+state ZapOpponent {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if CannotReachDestination == 1 goto Base
+	}
+	Actions {
+		AttackOpponent
+	}
+}
+
+=============================
+state LookForNewDestination {
+	Conditions {
+		if GotLocator == 1 goto ReleaseLocator
+		if GotLocator == 0 goto LookForLocator
+	}
+	Actions {	
+	}
+}
+
+state ReleaseLocator {
+	Conditions {
+	}
+	Actions {	
+		ReleaseLocator
+		SetState "Base"
+	}
+}
+
+state LookForLocator {
+	Conditions {
+	}
+	Actions {	
+		GetLocatorFromGroup "name=Jawa" "max_range=14" "random"
+		SetState "Base"
+	}
+}
+
+=============================Been hit, trying to keep out of the players way=========================
+state TakenHit {
+	Conditions {
+	}
+	Actions {	
+		SetState "RunAway"
+	}
+}
+
+state RunAway {
+	Conditions {
+		if Timer > 5 and
+		if LastAttackerRange > 2.5 goto WaitForAWhile
+	}
+	Actions {	
+		ResetTimer
+		MoveAwayFromLastAttacker "99"
+	}
+}
+
+state WaitForAWhile {
+	Conditions {
+		if Timer < 5 and 
+		if LastAttackerRange < 1.5 goto RunAway
+		
+		if Timer > 10 goto Base
+	}
+	Actions {	
+		ResetTimer
+		FacePlayer
+	}
+}

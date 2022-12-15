@@ -1,0 +1,839 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+
+SetDefaultSurface 08_13fnttop.sur
+
+Function SetStartPosition (Region r, Int n)
+{
+	WaitUntilEnteredRegion Obi r
+	set StartPosition n
+}
+
+Script "Set_Respawn_Points"
+{
+	set StartPosition 0
+	Call SetStartPosition RGN_Start01 1
+	Call SetStartPosition RGN_Start02 2
+	Call SetStartPosition RGN_Start03 3
+	Call SetStartPosition RGN_Start04 4
+	Call SetStartPosition RGN_Start05 5
+	Call SetStartPosition RGN_Start06 6
+	Call SetStartPosition RGN_Start07 7
+	Call SetStartPosition RGN_Start08 8
+	Call SetStartPosition RGN_Start09 9
+}
+
+///////////////////////
+/// BEGIN FUNCTIONS ///
+///////////////////////
+
+/// OBI FUNCTIONS ///
+
+function "StealthStatus" (Region RGN_Stealth)
+{
+	waituntilenteredregion Obi RGN_Stealth
+	setteam obi 0
+	waituntilexitedregion Obi RGN_Stealth
+	setteam Obi 1
+}
+
+/// ENEMY FUNCTIONS ///
+
+function "RuntoNodeControl" (Actor Roadrunner, Node goto_Roadrunner)
+{
+	takepartialcontrolof Roadrunner
+	runtonodeandwait Roadrunner goto_Roadrunner
+}
+
+function "EnterRGNandRunToandPatrol" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	takepartialcontrolof Camby
+	waituntilenteredregion obi RGN_Camby
+	runtonode Camby goto_Camby
+	waituntilarrived Camby goto_Camby
+	returncontrolto Camby
+	addpatrolstate Camby
+}
+
+function "EnterRGNForceTarget" (Actor Anubis, Region KillObiBox)
+{
+	WaitUntilEnteredRegion Obi KillObiBox
+	ForceTarget Anubis Obi
+	WaitUntilExitedRegion Obi KillObiBox
+	ForceTargetOff Anubis Obi
+	loop
+}
+
+function "useitorloseit" (Actor VanishingActor)
+{
+	WaitUntilNotBeingRendered VanishingActor 0.5
+	RemoveActor VanishingActor
+}
+
+function "Electrofried" (Actor FriedEggs, region WaterRGN)
+{
+	waituntilenteredregion FriedEggs WaterRgn
+	takecontrolof FriedEggs
+	pause 2.0
+	removeactor FriedEggs
+}
+
+function "EnterRGNandRunTo" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	takepartialcontrolof Camby
+	waituntilenteredregion obi RGN_Camby
+	runtonode Camby goto_Camby
+	waituntilarrived Camby goto_Camby
+	returncontrolto Camby
+}
+
+function "FleeMode" (Actor Napoleon, Actor Peon)
+{
+	WaituntilKilled Napoleon
+	ForceState Peon Retreat
+}
+
+function "AmbushObi" (actor Ares, node goto_Ares, int AresPatrol)
+{
+    setpatroltypes Ares AresPatrol
+    waituntilnear Ares Obi 30.0
+    Takepartialcontrolof Ares
+    runtonodeandwait Ares goto_Ares
+    forcetarget Ares Obi
+}
+
+/// UBERGEN FUNCTIONS ///
+
+function "UG_SetPatrol" (Actor UG_Tetsuo, Int x)
+{
+	Actor Tetsuo
+	WaitUntilGenerated UG_Tetsuo Tetsuo
+	SetPatrolTypes Tetsuo x
+}
+
+function "UG_EnterRGNForceTarget" (Actor UG_GrimReaper, Region KillObiBox2)
+{
+	Actor GrimReaper
+	WaitUntilGenerated UG_GrimReaper GrimReaper
+	TakePartialControlOF GrimReaper
+
+	script "OnOff"
+	{
+		WaitUntilEnteredRegion Obi KillObiBox2
+		ForceTarget GrimReaper Obi
+		WaitUntilExitedRegion Obi KillObiBox2
+		ForceTargetOff GrimReaper Obi
+		loop
+	}
+}
+
+function "UG_PatrolAndRemove" (Actor UG_Waldo, int Tonka)
+{
+	Actor Waldo
+	WaitUntilGenerated UG_Waldo Waldo
+	setpatroltypes Waldo Tonka
+	WaitUntilExitedRegion Obi RGN_trig_Ducks
+ 	RemoveActor Waldo
+	loop
+}
+
+function "UG_RuntoNodeControl" (Actor UG_SirFrancis, Node goto_SirFrancis)
+{
+	Actor SirFrancis
+	WaitUntilGenerated UG_SirFrancis SirFrancis
+	TakePartialControlOf SirFrancis
+	RunToNodeandwait SirFrancis goto_SirFrancis
+}
+
+function "UG_RunToNodeAndPatrol" (Actor UG_Jubei, Node goto_Jubei)
+{
+	Actor Jubei
+	WaitUntilGenerated UG_Jubei Jubei
+	TakePartialControlOf Jubei
+	RunToNode Jubei goto_Jubei
+	WaitUntilArrived Jubei goto_Jubei
+	AddPatrolState Jubei
+}
+
+function "UG_Ambush" (actor UG_Rambo, node goto_Rambo, int RamboPatrol)
+{
+    actor Rambo
+    waituntilgenerated UG_Rambo Rambo
+    setpatroltypes Rambo RamboPatrol
+    waituntilnear Rambo Obi 30.0
+    Takepartialcontrolof Rambo
+    runtonodeandwait Rambo goto_Rambo
+    forcetarget Rambo Obi
+}
+
+/////////////////////
+/// END FUNCTIONS ///
+/////////////////////
+
+//////////////////
+/// BEGIN MAIN ///
+//////////////////
+
+///PART I - BEFORE PALACE DOORS///
+
+actor Qui A_Qui-Gon_01
+
+script "Opening_Encounter"
+{
+	actor Captor A_Battledroid-Infantry_41
+    actor Captive01 A_Naboo_Prisoner_01
+    actor Commander01 A_Battledroid-Commander_02
+
+	SetHostageSituation Captive01 Captor Commander01
+	SetHostageAlertDistance Commander01 8.0
+	SetHostageAlertDistance Captor 8.0
+
+	begincutscene
+	TakeControlOf Qui
+    CameraOrbit Captive01 5.5 2.5 6.0 180.0 true
+    pause 5.5
+    
+    childscript "CommanderWalk"
+    {
+        takepartialcontrolof Commander01
+	    WalkToNodeandwait Commander01 goto_infantry1_end
+        returncontrolto Commander01
+        setpatroltypes Commander01 1
+    }
+    
+    fadedown
+    pause 0.25
+    fadeup
+     
+    camerafixed badcam
+    pause 4.5    
+    movecamera badcam_midway 6.0 1.0 1.0
+    pause 5.5
+    
+    childscript "Communicate"
+    {
+        sayline Qui "/Qui-Gon_425/Obi-Wan, we have to get to the palace to protect the Queen.  It's best if we remain split up.  I will create a disturbance elsewhere in the city, while you find a back way in.  Try to avoid unnecessary entanglements with Federation troops."
+        sayline Obi "/Obi-Wan_426/Not a problem, Master."
+        sayline qui "/Qui-Gon_427/I'm quite serious, Obi-Wan."
+        sayline obi "/Obi-Wan_428/Yes, Master."
+    }
+
+    movecamera badcam_threequarters 3.0 1.0 1.0
+    pause 2.5
+    movecamera badcam_almostthere 1.5
+    pause 1.0
+    movecameraandwait obistart 1.5
+    
+    waitforall
+	fadedown
+	endcutscene
+
+	fadeup
+
+	stopactions Qui
+	WalktoNodeAndWait Qui goto_qui_door
+
+	script "Go Away Obi"
+	{
+        int InRegionCheck1 = 0
+
+        while (= InRegionCheck1 0)
+        {
+            LookAt Qui Obi
+
+            If (isinregion Obi RGN_goaway_Obi_01)
+            {
+                pauserandom 2.0 5.0
+                Sayline Qui "Shouldn't you be heading to the palace stairs?"
+            }
+            Else
+            {
+                Set InRegionCheck1 1
+			RemoveActor Qui
+            }
+        }
+	}
+}
+
+call Electrofried (A_Battledroid-Infantry_05, W_Z01a)
+setpatroltypes A_Battledroid-Infantry_05 3
+
+setpatroltypes A_Battledroid-Infantry_47 1
+setpatroltypes A_Battledroid-Infantry_48 1
+
+call StealthStatus RGN_Stealth01
+
+script "Mein_Kampf"
+{
+	int CommanderCheck 0
+
+	Actor Commander A_Battledroid-Commander_03
+
+	childscript "CommanderDies"
+	{
+		waituntilkilled Commander
+		set CommanderCheck 1
+	}
+
+	setpatroltypes Commander 2
+	WaitUntilEnteredRegion Obi RGN_Start02
+	TakeControlOf Commander
+	RunToNodeAndWait Commander goto_controlpanel
+	PlayGesture Commander Typing 10
+	pause 1.5
+	SayLineandcontinue Commander "/BattleDroidInfantry6_12/Send reinforcements!" 
+	ReturnControlTo Commander
+
+	if (= CommanderCheck 0)
+	{
+		TriggerUberGen (A_UG_Zone1_BAD12)
+		TriggerUberGen (A_UG_Zone1_BAD15)
+	}
+	else
+	{
+		endscript "Mein_Kampf"
+	}
+}
+
+setpatroltypes A_Battledroid-Kamikaze_04 2
+
+script "Hostage2"					/// Walking escorted prisoner ///
+{
+	actor Commander2 A_Battledroid-Commander_04
+	actor Captor2 A_Battledroid-Infantry_32
+	actor Captive2 A_Naboo_Prisoner_02
+
+	SetHostageSituation Captive2 Captor2 Commander2
+	SetHostageAlertDistance Commander2 8.0
+	SetHostageAlertDistance Captor2 8.0
+	SetHostageFollowCmdrDistance Captive2 2.0
+
+	waituntilenteredregion obi RGN_Trig_UG_BAD01
+	takepartialcontrolof Commander2
+	walktonodeandwait Commander2 goto_hostage2
+}
+
+/// BADs BY THE GENERATOR ///
+
+call UG_SetPatrol (A_UG_BAD01, 1)
+call UG_SetPatrol (A_UG_BAD02, 2)
+call UG_SetPatrol (A_UG_BAD03, 3)
+call UG_SetPatrol (A_UG_BAD04, 3)
+call UG_SetPatrol (A_UG_BAD05, 1)
+call UG_SetPatrol (A_UG_BAD24, 3)
+
+/// SECOND WAVE OF BADs THAT GENERATE WHEN OBI IS IN THE SNIPING AREA ABOVE HOSTAGE1 ///
+
+call UG_SetPatrol (A_UG_Zone1_BAD4, 1)
+call UG_SetPatrol (A_UG_Zone1_BAD5, 1)
+call UG_SetPatrol (A_UG_Zone1_BAD6, 1)
+
+/// BADs BY SNIPING AREA ABOVE HOSTAGE1 ///
+
+call UG_SetPatrol (A_UG_BAD12, 2)
+call UG_SetPatrol (A_UG_BAD15, 2)
+call UG_SetPatrol (A_UG_BAD16, 2)
+
+script "BADruntoHostage3"
+{
+	actor BAD23
+	waituntilgenerated A_UG_BAD23 BAD23
+	setpatroltypes BAD23 3
+
+	waituntilnear BAD23 Obi 20.0
+	takecontrolof BAD23
+	runtonodeandwait BAD23 goto_scaredyCat
+	returncontrolto BAD23
+}
+
+/// BADs ABOVE THE SITTING DUCKS ///
+
+call UG_EnterRGNForceTarget (A_UG_BAD22, RGN_attackObi01)
+
+function "ForceTargetAndReturnControl" (Actor Cain, Actor Abel)    /// CALLED IN SNIPERRESCUE ///
+{
+	TakePartialControlOF Cain
+	ForceTargetAndAttack Cain Abel
+	WaitUntilKilled Abel
+	ForceTargetAndAttackOff Cain
+	ReturnControlTo Cain
+}
+
+script "Hostage3"
+{
+	actor Commander3
+	actor Captor3
+    actor Captive3
+
+	child waituntilgenerated A_UG_BAD13 Commander3
+	child waituntilgenerated A_UG_BAD14 Captor3
+	child waituntilgenerated A_UG_Hostage3 Captive3
+	waitforall
+
+	SetHostageSituation Captive3 Captor3 Commander3
+	SetHostageAlertDistance Commander3 8.0
+	SetHostageAlertDistance Captor3 8.0
+
+    call AmbushObi (Commander3, goto_ambush2, 2)
+    
+    childscript "Captive3_RescuedBehavior"
+    {
+        child waituntilkilled Commander3
+        child waituntilkilled Captor3
+        waitforall    
+     
+        waituntilstateshutdown Captive3 BeHostage
+     
+        takecontrolof Captive3
+        sayline Captive3 "/male2_429/Jedi, come quickly!  There are more of us.  The Federation has been taking the prisoners this way."
+        runtonodeandwait Captive3 goto_sniperrescue
+        sayline Captive3 "/male2_430/Look down there."
+        lookat Captive3 A_09_bush1_10
+        playgestureandwait Captive3 pointforward 1.5
+        stopactions Captive3
+        walktonodeandwait Captive3 goto_sniperrescue_wait
+        sayline Captive3 "/male2_431/I'll wait here."
+        returncontrolto Captive3
+    }
+
+    script "SniperRescue"  
+    {
+          Int LocalNumKilled = 0        /// BEGIN SNIPERRESCUE ///
+        
+        	Persistent
+    
+    	Actor Civilian02
+    	Actor Civilian03
+    	Actor BAD_Leader01
+    	Actor BAD02
+    	Actor BAD03
+    	Actor BAD04
+    
+    	waituntilenteredregion Captive3 RGN_SniperRescue
+    
+    	Child triggerubergenandwait A_UG_Zone1_BAD_Escort01 BAD_Leader01
+    	Child triggerubergenandwait A_UG_Zone1_BAD_Escort02 BAD02
+    	Child triggerubergenandwait A_UG_Zone1_Civilian02 Civilian02
+    	Child triggerubergenandwait A_UG_Zone1_Civilian03 Civilian03
+    	Child triggerubergenandwait A_UG_Zone1_BAD_Escort03 BAD03
+    	Child triggerubergenandwait A_UG_Zone1_BAD_Escort04 BAD04
+    
+    	waitforall
+    
+    	SetTeam Civilian02 0
+    	SetTeam Civilian03 0
+    	
+    	TakeControlOf BAD_Leader01
+    	TakeControlOf BAD02
+    	Follow BAD02 BAD_Leader01 2
+    	TakeControlOf Civilian02
+    	Follow Civilian02 BAD02 2
+    	TakeControlOf Civilian03
+    	Follow Civilian03 Civilian02 2
+    	TakeControlOf BAD03
+    	Follow BAD03 Civilian03 2
+    	TakeControlOf BAD04
+    	Follow BAD04 BAD03 2
+    	waitforall
+    	
+    	waituntilnearnode Captive3 goto_sniperrescue 3.0
+    
+    	WalkToNode BAD_Leader01 goto_civilianescort_end
+    
+    	childscript "Kill BAD04"
+    	{
+    		waituntilkilled BAD04
+    		increment LocalNumKilled 1
+    	}
+    
+    	childscript "Kill BAD03"
+    	{
+    		waituntilkilled BAD03
+    		increment LocalNumKilled 1
+    		if (< LocalNumKilled 2)
+    		{
+    			SetTeam Civilian02 5
+    			SetTeam Civilian03 5
+    			ReturnControlTo Civilian02
+    			ReturnControlTo Civilian03
+    			call ForceTargetAndReturnControl (BAD_Leader01, Civilian02)
+    			call ForceTargetAndReturnControl (BAD04, Civilian03)
+    			call ForceTargetAndReturnControl (BAD02, Civilian02)
+    		}
+    	}
+    
+    	childscript "Kill BAD02"
+    	{
+    		waituntilkilled BAD02
+    		increment LocalNumKilled 1
+    		if (< LocalNumKilled 3)
+    		{
+    			SetTeam Civilian02 5
+    			SetTeam Civilian03 5
+    			ReturnControlTo Civilian02
+    			ReturnControlTo Civilian03
+    			call ForceTargetAndReturnControl (BAD04, Civilian03)
+    			call ForceTargetAndReturnControl (BAD03, Civilian03)
+    			call ForceTargetAndReturnControl (BAD_Leader01, Civilian02)
+    		}
+    		else
+    		{
+    			SetTeam Civilian02 5
+    			SetTeam Civilian03 5
+    
+    			script "Civilian02 Escape"
+    			{
+    				stopactions Civilian02
+    				runtonodeandwait Civilian02 goto_civilian_escapeto1
+    				lookat civilian03 Obi
+    				Waituntilnudged Civilian02
+    				sayline Civilian02 "/male2_432/Thank you for saving me!  Those droids surely would have killed me."
+    			}
+    
+    			script "Civilian03 Escape"
+    			{
+    				stopactions Civilian03
+    				runtonodeandwait Civilian03 goto_civilian_escapeto2
+    				lookat civilian03 Obi
+    				Waituntilnudged Civilian03
+    				sayline Civilian02 "/male2_432/Thank you for saving me!  Those droids surely would have killed me."
+    			}
+    		}
+    	}
+    
+    	childscript "Kill BAD_Leader01"
+    	{
+    		waituntilkilled BAD_Leader01
+    		increment LocalNumKilled 1
+    		if (< LocalNumKilled 4)
+    		{
+    			SetTeam Civilian02 5
+    			SetTeam Civilian03 5
+    			ReturnControlTo Civilian02
+    			ReturnControlTo Civilian03
+    			call ForceTargetAndReturnControl (BAD04, Civilian03)
+    			call ForceTargetAndReturnControl (BAD02, Civilian02)
+    			call ForceTargetAndReturnControl (BAD03, Civilian03)
+    		}
+    	}
+    
+    	waituntilnearnode BAD_Leader01 goto_civilianescort_end 3.0
+    
+         	if (= LocalNumKilled 3)
+    	{
+    		RemoveActor BAD_Leader01
+    	}
+    	else
+    	{
+    		removeactor BAD_Leader01
+    		removeactor BAD02
+    		removeactor Civilian02
+    		removeactor Civilian03
+    		removeactor BAD03
+    		removeactor BAD04
+    	}
+    }                                /// END SNIPERRESCUE ///
+    waitforall
+}
+
+//////////////////////////////////////////////////////////////
+/// BEGIN BAD's RUN DOWN PALACE ENTRANCE STAIRS AND PATROL ///
+//////////////////////////////////////////////////////////////
+
+int PalaceStairsDeathCheck1 0				/// Variable check to trigger BADs on other side of stairs to attack Obi ///
+
+function "PalaceStairsRunToNodeAndPatrol" (Actor UG_Genjuro, Node goto_Genjuro)
+{
+	actor Genjuro
+	Waituntilgenerated UG_Genjuro Genjuro
+
+	childscript "HurtGenjuro"
+	{
+		WaitUntilDamagedBy Genjuro Obi
+		set PalaceStairsDeathCheck1 1
+	}
+
+	childscript "ForceGenjuro"
+	{
+		waituntilequal PalaceStairsDeathCheck1 1
+		forcetargetandattack Genjuro Obi
+	}
+
+	takepartialcontrolof Genjuro
+	waituntilenteredregion Obi RGN_trig_UG_PalaceStairs
+	RunToNode Genjuro goto_Genjuro
+	WaitUntilArrived Genjuro goto_Genjuro
+	AddPatrolState Genjuro
+}
+
+script "BADattack_PalaceStairs"
+{
+	child call PalaceStairsRunToNodeAndPatrol (A_UG_BAD09, goto_palacestairs_L)
+	child call PalaceStairsRunToNodeAndPatrol (A_UG_BAD10, goto_palacestairs_L)
+	child call PalaceStairsRunToNodeAndPatrol (A_UG_BAD11, goto_palacestairs_L)
+	child call PalaceStairsRunToNodeAndPatrol (A_UG_BAD06, goto_palacestairs_R)
+	child call PalaceStairsRunToNodeAndPatrol (A_UG_BAD07, goto_palacestairs_R)
+	child call PalaceStairsRunToNodeAndPatrol (A_UG_BAD08, goto_palacestairs_R)
+	waitforall
+}
+
+////////////////////////////////////////////////////////////
+/// END BAD's RUN DOWN PALACE ENTRANCE STAIRS AND PATROL ///
+////////////////////////////////////////////////////////////
+
+script "SittingDucks"
+{
+	call UG_PatrolAndRemove (A_UG_BAD_Duck1, 1)
+	call UG_PatrolAndRemove (A_UG_BAD_Duck2, 1)
+	call UG_PatrolAndRemove (A_UG_BAD_Duck3, 3)
+    call UG_Ambush (A_UG_BAD_Duck4, goto_ambush1, 2)
+	call UG_PatrolAndRemove (A_UG_BAD_Duck5, 1)
+	call UG_PatrolAndRemove (A_UG_BAD_Duck6, 1)
+	call UG_PatrolAndRemove (A_UG_BAD_Duck7, 3)
+    call UG_Ambush (A_UG_BAD_Duck8, goto_ambush1, 2)
+}
+
+/////////////////////////////////////
+////// PART II - INSIDE PALACE //////
+/////////////////////////////////////
+
+//////////////////////////////
+/// BEGIN BRIDGE ENCOUNTER ///
+//////////////////////////////
+
+Actor Moses A_Naboo-Resistance2_01
+int Mosescheck 0					/// Variable check to see if Moses is alive ///
+
+script "Moses_LifeCheck"				/// Sets variable of Moses to dead ///
+{
+	waituntilkilled Moses
+	set Mosescheck 1
+}
+
+call EnterRGNForceTarget (A_Battledroid-Cannon_01, RGN_Trig_CannonAttack01)
+
+script "Bridge_Encounter"
+{
+	actor DeerInHeadlights1 A_Naboo-Resistance3_03
+	actor DeerInHeadlights2 A_Naboo-Resistance1_02
+
+	Actor Zone71_BAD01
+	Actor Barricade01 A_Battledroid-Security_01
+	Actor Barricade02 A_Battledroid-Security_02
+	Actor Barricade03 A_Battledroid-Security_03
+	Actor Barricade04 A_Battledroid-Security_04
+
+	actor BAD35 A_Battledroid-Infantry_35
+	actor BAD34 A_Battledroid-Infantry_34
+	actor Kamikaze01 A_Battledroid-Kamikaze_01
+
+	actor Starfighter01
+
+	setpatroltypes BAD35 1
+	setpatroltypes BAD34 1
+	setpatroltypes Kamikaze01 1
+
+	takecontrolof Barricade01
+	takecontrolof Barricade02
+	takecontrolof Barricade03
+	takecontrolof Barricade04
+	takecontrolof Moses
+	takecontrolof DeerInHeadlights1
+	takecontrolof DeerInHeadlights2
+
+	waituntildooropen A_09_D_Z71b_Z71_01
+
+	returncontrolto Barricade01
+	returncontrolto Barricade02
+	returncontrolto Barricade03
+	returncontrolto Barricade04
+	returncontrolto DeerInHeadlights1
+	returncontrolto DeerInHeadlights2
+
+	setteam Moses 0
+/*
+	childscript "BridgeExplodes"
+	{
+		triggerubergenandwait A_UG_Starfighter01 Starfighter01
+		pause 3.0
+		fireat Starfighter01 A_09_bridge_explode_01
+		fireat Starfighter01 A_09_bridge_explode_01
+		playanimation A_09_bridge_explode_01 09_bridge_explode.anim
+	}
+*/
+	runtonode Moses goto_nabooSoldier03_meetObi
+	WaitUntilnear Obi Moses 10.0
+	setteam Moses 5
+	StopActions Moses
+	LookAt Moses Obi
+	SayLine Moses "/female1_434/Thank goodness you're here!  The Republic hasn't forgotten us!"
+	SayLine Moses "/female1_435/We can't break the Federation's blockade on the bridge."
+
+	childscript "TriggerBADs"
+	{
+		call RunToNodeControl (BAD34, goto_Zone71_BAD01)
+		call RunToNodeControl (BAD35, goto_Zone71_BAD02)
+		call RunToNodeControl (Kamikaze01, goto_Zone71_BAD01)
+	}
+
+	SayLine Moses "/female1_439/We've got to find a way to the other side by going around..."
+	Sayline Moses "/female1_440/I'll wait here until reinforcements arrive."
+	Sayline Moses "/female1_441/You go ahead and find your way around to the other side of the bridge."
+	sayline Moses "/female1_442/Keep your eyes out for more droids.  They're everywhere."
+	LookAt Moses Kamikaze01
+	playgesture Moses PointForward 0.5
+	stopactions Moses
+	ReturnControlTo Moses
+
+	waitforall
+}
+
+call AmbushObi (A_Battledroid-Security_09, goto_ambush3, 2)
+
+////////////////////////////
+/// END BRIDGE ENCOUNTER ///
+////////////////////////////
+
+/// BADs ON THE UPPER EAST SIDE OF THE PALACADE ///
+
+setpatroltypes A_Battledroid-Security_08 2
+setpatroltypes A_Battledroid-Security_08 3
+
+setpatroltypes A_Battledroid-Infantry_50 1
+setpatroltypes A_Battledroid-Infantry_51 1
+setpatroltypes A_Battledroid-Kamikaze_02 3
+setpatroltypes A_Battledroid-Kamikaze_03 3
+
+call AmbushObi (A_Battledroid-Security_09, goto_ambush4, 2)
+
+script "Hostage4"
+{
+	actor Captor4 A_Battledroid-Infantry_49
+	actor Commander4 A_Battledroid-Commander_06
+	actor Captive4 A_Naboo_Prisoner_03
+
+	SetHostageSituation Captive4 Captor4 Commander4
+	SetHostageAlertDistance Commander4 12.0
+	SetHostageAlertDistance Captor4 8.0
+
+	setpatroltypes Commander4 2
+
+	waituntilkilled Captor4
+
+	waituntilstateshutdown Captive4 BeHostage
+	takecontrolof Captive4
+	walktonodeandwait Captive4 goto_captive3
+	lookat Captive4 A_09_bush1_48
+    playgesture Captive4 PointForward 1.0
+	sayline Captive4 "/male1_443/There are more battledroids down below."
+	stopactions Captive4
+	returncontrolto Captive4
+}
+
+/// BADs BY THE BRIDGE IN FRONT OF THE WATERFALL ///
+
+SetPatroltypes A_Battledroid-Infantry_52 1
+setpatroltypes A_Battledroid-Infantry_17 3
+
+script "AssassinDroid1_Attack"
+{
+	Actor AssassinDroid01 A_AssassinDroid-Mace_01
+
+	TakePartialControlOf AssassinDroid01
+	WaitUntilEnteredRegion Obi RGN_trig_AssassinDroid_roll
+	RuntoNodeandwait AssassinDroid01 goto_AssassinDroid01
+}
+
+/// SETPATROL TO BADS AFTER CLIMBING UP FROM WATERFALL AREA ///
+
+//call Electrofried (A_Battledroid-Security_01, W_Z71_b)
+//call Electrofried (A_Battledroid-Security_02, W_Z71_b)
+//call Electrofried (A_Battledroid-Security_03, W_Z71_b)
+//call Electrofried (A_Battledroid-Security_04, W_Z71_b)
+
+function "SetPatrolandElectrofry" (Actor UG_Tetsuo, Int x)
+{
+	Actor Tetsuo
+	WaitUntilGenerated UG_Tetsuo Tetsuo
+	SetPatrolTypes Tetsuo x
+	//call Electrofried (Tetsuo, W_Z71_b)
+}
+
+call SetPatrolandElectrofry (A_UG_Zone71_BAD23, 2)
+call SetPatrolandElectrofry (A_UG_Zone71_BAD24, 2)
+call SetPatrolandElectrofry (A_UG_Zone71_BAD25, 1)
+
+function "SecondAttackBehavior" (Actor UG_Roy)
+{
+	actor Roy
+	waituntilgenerated UG_Roy Roy
+	takepartialcontrolof Roy
+	waituntilenteredregion Obi RGN_UG_BAD01
+
+	if (= Mosescheck 1)			/// Checks to see if Moses is alive ///
+	{
+		runtonodeandwait Roy goto_bridge_edge
+		forcetarget Roy Obi
+	}
+	else
+	{
+		pause 5.0
+		forcetarget Roy Moses
+		waituntilkilled Moses
+		forcetargetoff Roy
+		runtonodeandwait Roy goto_bridge_edge
+		forcetarget Roy Obi
+	}
+}
+
+script "HelpMeObi"
+{
+	waituntilenteredregion Obi RGN_UG_BAD01
+
+	waituntildooropen A_09_D_Z71b_Z71_01
+	takecontrolof Moses
+	runtonodeandwait Moses goto_bridge_edge
+	sayline Moses "/female1_190/Help me!"
+}
+
+script "SecondWaveBADs"
+{
+	call SecondAttackBehavior (A_UG_BAD17)
+	call SecondAttackBehavior (A_UG_BAD18)
+	call SecondAttackBehavior (A_UG_BAD19)
+	call SecondAttackBehavior (A_UG_BAD21)
+}
+
+Call EnterRGNForceTarget (A_Battledroid-Sniper_01, RGN_trig_UG_Zone71_Sniper01)
+call UG_EnterRGNForceTarget (A_UG_Zone71_Grenadier01, RGN_trig_UG_Grenadier01)
+
+/// SETPATROL TO BADS IN THE DOME ///
+
+call UG_SetPatrol (A_UG_Zone71c_BAD01, 1)
+call UG_SetPatrol (A_UG_Zone71c_BAD02, 1)
+call UG_SetPatrol (A_UG_Zone71c_BAD03, 1)
+call UG_SetPatrol (A_UG_Zone71c_BAD04, 1)
+call UG_SetPatrol (A_UG_Zone71c_BAD05, 1)
+
+/// KAMIKAZE STAIRWAY ATTACKS ///
+
+call EnterRGNandRunTo (A_Battledroid-Kamikaze_05, goto_rundownstairs01, RGN_trig_UG_09)
+
+call EnterRGNandRunTo (A_Battledroid-Kamikaze_06, goto_rundownstairs02, RGN_trig_UG_rundownstairs)
+call EnterRGNandRunTo (A_Battledroid-Infantry_15, goto_rundownstairs02, RGN_trig_UG_rundownstairs)
+call EnterRGNandRunTo (A_Battledroid-Infantry_16, goto_rundownstairs02, RGN_trig_UG_rundownstairs)
+
+//////////////////////
+////// PART III //////
+//////////////////////
+
+script "HackEnd"
+{
+    waituntildooropen A_09_D_z77b_01
+    begincutscene
+    nextlevel L03_7a
+    fadedownandwait
+    endcutscene
+}

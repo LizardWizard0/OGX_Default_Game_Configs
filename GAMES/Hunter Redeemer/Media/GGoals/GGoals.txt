@@ -1,0 +1,191 @@
+
+
+
+NumGoals 12	//number of multilevel goals (in the game!)
+
+
+//Sample Global Goal Token File
+//Goal
+//{
+//	EventID 800	//event ID generated when the goal is complete
+//******Global Dummy Event - 1285
+//	GoalName	// unique name for the goal
+//	CountEvent 480	//events to count (since 'GoalSameFlag' is specified, this will count only 480's
+//	CompleteCount 2	//number needed for the goal to be complete
+//	GoalRevealEvent 480	//the event that will reveal this goal to the player (goal is always visible when this isn't specified)
+//	GoalSameEventFlag	//whether we're counting the same event (same ID's) or different ones (i.e., adjacent EventID's starting with 480)
+//
+//	//GoalType	//type of goal it is (number or enum name?) - to be implemented
+//	//GoalItemName	//(e.g., 'silver piece(s)') index into file - to be implemented
+//}
+
+//** Numbers used: 1288-1300
+//** Numbers Free: 1301-1684
+
+//*******************//
+//  Gallery Unlocks  //
+//*******************//
+
+///////////////////////////////////////
+//**Gallery 1 	
+Goal
+{
+	GoalName "KillWarGhoul1Time"
+	EventID 160  		// goes to settings.adr
+	CountEvent 1290 	// War Ghoul Death
+	CompleteCount 1
+}
+//////////////////////////////////////
+
+//////////////////////////////////////
+//**Gallery 2 
+Goal
+{
+	GoalName "KillDemon1Time"
+	EventID 161		// goes to settings.adr
+	CountEvent 1294 	// Demon Death
+	CompleteCount 1
+}
+//////////////////////////////////////
+
+///////////////////////////////////////
+//**Gallery 3	
+Goal
+{
+	GoalName "KillSanta3Times"
+	EventID 162  		// goes to settings.adr
+	CountEvent 1288		// Santa's Death
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 3	
+}
+///////////////////////////////////////
+
+///////////////////////////////////////
+//**Gallery 4 	
+Goal
+{
+	GoalName "KillAbomination3Times"
+	EventID 163  		// goes to settings.adr
+	CountEvent 1289 	// Abomination Death
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 3
+}
+//////////////////////////////////////
+
+///////////////////////////////////////
+//**Gallery 5 	
+Goal
+{
+	GoalName "KillWarGhoul3Times"
+	EventID 164  		// goes to settings.adr
+	CountEvent 1290 	// War Ghoul Death
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 3
+}
+//////////////////////////////////////
+
+///////////////////////////////////////
+//**Gallery 6 	
+Goal
+{
+	GoalName "KillBSD3Times"
+	EventID 165  		// goes to settings.adr
+	CountEvent 1291 	// BSD Death
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 3
+}
+//////////////////////////////////////
+
+//*End Gallery Unlocks*//
+
+
+
+
+//**************************//
+//  Hunter Variant Unlocks  //
+//**************************//
+
+//////////////////////////////////////
+//**Biker Variant
+Goal
+{
+	GoalName "10000Kills"
+	EventID 1285		// Dummy Event	
+	CountEvent 140		// Generic death event
+	CompleteCount 10000
+	GoalSameEventFlag
+}
+//////////////////////////////////////
+
+//////////////////////////////////////
+//**Cop Variant
+Goal
+{
+	GoalName "Rescue100Innocents"
+	EventID 1285		// Dummy Event	
+	CountEvent 6		// Innocent Rescued Event
+	CompleteCount 100
+ 	GoalSameEventFlag
+}
+//////////////////////////////////////
+
+//////////////////////////////////////
+//**Priest Variant
+Goal
+{
+	GoalName "KillDemon3Times"
+	EventID 1285		// Dummy Event
+	CountEvent 1294 	// Demon Death
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 3
+}
+//////////////////////////////////////
+
+//////////////////////////////////////
+//**Raver Variant
+Goal
+{
+	GoalName "CompleteNightclub3Times"
+	EventID 1285		// Dummy Event
+	CountEvent 1295 	// Carpenter Death 
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 3
+}
+//////////////////////////////////////
+
+//////////////////////////////////////
+//**Kaylie Variant
+Goal
+{
+	GoalName "Kill10TeddyBears"
+	EventID 1285		// Dummy Event
+	CountEvent 1296 	// Teddy Bear Death Event
+	GoalSameEventFlag	// BB 07/07/03 added
+	CompleteCount 10
+}
+//////////////////////////////////////
+
+//*End Variant Unlocks*//
+
+
+//*************************//
+//  Unlockable Characters  //
+//*************************//
+
+//////////////////////////////////////
+//**Wayward
+Goal
+{
+	GoalName "Let250InnocentsDie"
+	EventID 148		//goes to settings.adr	
+	CountEvent 141		//this is set in chars.txt
+	GoalSameEventFlag	//BB 07/07/03 added
+	CompleteCount 250
+}
+//////////////////////////////////////
+
+
+//*End Unlockable Characters*//
+
+
+

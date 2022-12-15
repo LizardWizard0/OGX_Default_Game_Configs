@@ -1,0 +1,1992 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Actor  Qui A_Qui-Gon_01
+
+SetMissionCritical Qui
+
+Node   Qui-GotoNode               
+
+Int    InitialBADsAlive-Start     8
+
+Int    Hangar01Visited            0
+Int    TurretDestroyed            0
+
+Int    StartDioxinGas             0
+Int    GasNowHurts                0
+
+Int    BeginMission               0
+Int    StartQuiGonFollow          0
+
+Int    SkipToControlRoom          0
+
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense1.wav Suspense
+AddMusic m_suspense_03.wav Suspense
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_10.wav Battle
+AddMusic m_battle_11.wav Battle
+
+AddBattleLoop  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "PrepareDroid" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+
+	TakeControlOf Guy
+    WalkToNodeAndWait Guy GotoNode
+	EquipWeapon Guy
+}
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakePartialControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+         Child WaitUntilNear Guy Obi 5.0
+         Child WaitUntilNear Guy Qui 5.0
+         WaitForAny
+         ReturnControlTo Guy
+         
+         EndFunction "Run"
+    }
+    
+    RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "Activate" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime)
+{   
+    Pause PauseTime
+    
+    Teleport Guy StartSpot
+	TakePartialControlOf Guy
+
+    Childscript "Activate Interrupted"
+    {
+         Child WaitUntilNear Guy Obi 5.0
+         Child WaitUntilNear Guy Qui 5.0         
+         WaitForAny
+         ReturnControlTo Guy
+         
+         EndFunction "Activate"
+    }
+  
+	RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "RunToRandomNode" (Actor Runner, Node GotoNode1, Node GotoNode2, Node Gotonode3, Node Gotonode4)
+{
+    Node DestinationNode
+    
+
+	RandomInt RandomNode 1 4
+
+	if (= RandomNode 1)
+	{
+		Set DestinationNode GotoNode1
+	}
+	if (= RandomNode 2)
+	{
+		Set DestinationNode GotoNode2
+	}
+	if (= RandomNode 3)
+	{
+		Set DestinationNode GotoNode3
+	}
+	if (= RandomNode 4)
+	{
+		Set DestinationNode GotoNode4
+	}
+
+	TakePartialControlOf Runner
+	RunToNodeAndWait Runner DestinationNode
+}
+
+Function "CreateExplosion" (Refpos ExplosionSpot)
+{
+    PlayAudioCue 3-2_screen_explo.aud SpriteEffect
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+    CreateParticleGen firegrenadeSmoke.gen FGS ExplosionSpot
+    CreateParticleGen firegrenade.gen FG ExplosionSpot
+    Pause 0.25
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+    Pause 0.5
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+    Pause 0.75
+    CreateParticleGen explosion_sparks.gen ES ExplosionSpot
+/*
+    CreateParticleGen explosion_sparks2.gen ES ExplosionSpot
+    CreateParticleGen turbolaserFire.gen ES ExplosionSpot
+    CreateParticleGen turbolaserSmoke.gen ES ExplosionSpot
+    CreateParticleGen flamering.gen ES ExplosionSpot
+*/
+}
+
+Function "CheckDoor" (Actor DoorName, Region BehindDoor, Region ClearDoor)
+{
+        While (IsDoorUnlocked DoorName)
+        {
+            Child WaitUntilAllCharactersExitedRegion BehindDoor
+            Child WaitUntilAllCharactersExitedRegion ClearDoor
+            WaitForAll
+        
+            CloseDoor DoorName
+            WaitUntilDoorClosed DoorName
+        
+            If (NoCharactersInRegion BehindDoor)
+            {
+                LockDoor DoorName
+                // Display "Door Locked" 1.0
+            }
+        }
+}
+
+Function "PowerUpRemoval" (Actor PowerUp, Int PowerUpGroup)
+{
+    WaitUntilRemoved PowerUp
+    RemoveGroup PowerUpGroup
+//    Save
+}
+
+
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene" 32
+{
+    Actor TC14               A_TC14_01
+    Actor Commander01        A_Battledroid-Commander_01
+    Actor Infantry01         A_Battledroid-Infantry_01
+    Actor Infantry02         A_Battledroid-Infantry_02
+    Actor Infantry03         A_Battledroid-Infantry_03
+    Actor Infantry04         A_Battledroid-Infantry_04
+    Actor Infantry05         A_Battledroid-Infantry_05
+    Actor Infantry06         A_Battledroid-Infantry_06
+    Actor Infantry07         A_Battledroid-Infantry_07
+
+  
+    TakeControlOf Obi
+    TakeControlOf Qui
+	TakeControlOf TC14
+
+	BeginCutScene
+	int exitedEarly 1
+
+    UnEquipWeapon Obi    
+    UnEquipWeapon Qui
+    HideObiSaber
+
+    Pause 0.5
+    
+    SetAnimTableIndex Obi 1
+    
+    //Closeup on Conference Room Door from Inside    
+	CameraFixed StartShot01
+	
+	PlayFlourish cut_3_2aintro_m.WAV    
+	FadeUpAndWait
+
+    UnlockDoor A_01_d_conf_06
+//    WaitUntilEnteredRegion Obi conf_06_trig    
+    OpenDoor A_01_d_conf_06
+	Pause 1
+    WalkToNode Obi Obi-StartSpot02
+    WalkToNode Qui Qui-StartSpot02
+	Pause 4
+	WalkToNode TC14 TC14_walkto
+//    WaitForAll
+
+//    LookAt Obi Qui
+//    LookAt Qui Obi
+    
+    Pause 1.0
+
+	ChildScript
+	{
+		WaitUntilDoorOpen A_01_d_conf_06
+		Pause 4
+		CloseDoor A_01_d_conf_06
+    }
+    
+	Pause 1.0
+
+    SaylineNonPositional Obi "/Obi-Wan_71/I have a bad feeling about this . . ."
+//    WalkToNode Obi Obi-StartSpot02
+//    WalkToNode Qui Qui-StartSpot02
+
+    Pause 1.0
+    
+    SaylineNonPositional Qui "/Qui-Gon_72/I don't sense anything."
+
+    StopActions Obi    
+    StopActions Qui    
+
+    Teleport Obi Obi-StartSpot00
+    Teleport Qui Qui-StartSpot00
+
+    SetAnimTableIndex Qui 1
+    SetAnimTableIndex Obi 2
+/*
+    Childscript "Obi-Spot04"
+    {
+        WalkToNodeAndWait Obi Obi-StartSpot04
+        LookAtAndWait Obi Qui
+    }
+
+    Childscript "Qui-Spot04"
+    {
+        WalkToNodeAndWait Qui Qui-StartSpot04
+        LookAtAndWait Qui Obi
+    }    
+*/
+    PlayAnimation Obi human_cut-jc4_obi_302_481shot2.anim 1.0 1.0
+    PlayAnimation Qui human_cut-jc1_qui1_156shot1.anim 1.0 1.0
+    Pause 0.5
+
+    // Conversation Shot 01                                                        
+    CameraFixed StartShot04
+    SaylineNonPositional Obi "/Obi-Wan_73/It's not about the mission, Master.  It's something . . . elsewhere . . . Elusive . . ."
+    
+    // Trigger Starfighter flyby
+    TriggerUberGen A_z_UberGen_04
+    TriggerUberGen A_z_UberGen_05
+
+    PlayAnimation Obi human_cut-jc1_obi1_156shot1.anim 1.0 1.0
+    PlayAnimation Qui human_cut-jc4_qui1_137shot1.anim 1.0 1.0
+    Pause 0.5
+
+    // Conversation Shot 02        
+    CameraFixed StartShot03
+    SaylineNonPositional Qui "/Qui-Gon_74/Don't center on your anxiety, Obi-Wan.  Keep your concentration here and now, where it belongs."
+    
+    PlayAnimation Obi human_cut-jc4_obi_588_679shot4.anim 1.0 1.0
+    Pause 0.5
+
+    // Conversation Shot 03                                                                                    
+    CameraFixed StartShot0B
+    SaylineNonPositional Obi "/Obi-Wan_75/But Master Yoda says I should be mindful of the future."
+    
+    PlayAnimation Qui human_cut-jc4_qui588_679shot4.anim 0.5 1.0        
+    Pause 0.5                
+
+    // Conversation Shot 04        
+    CameraFixed StartShot0A
+    SaylineNonPositional Qui "/Qui-Gon_76/But not at the expense of the moment.  Be mindful of the Living Force, my young Padawan."
+    
+    PlayAnimation Obi human_cut-jc3_obi804_907shot6.anim 1.0 1.0
+    Pause 0.5
+
+    // Conversation Shot 05
+    CameraFixed StartShot0C        
+    SaylineNonPositional Obi "/Obi-Wan_77/Yes, Master."    
+
+    Teleport Commander01 Commander-StartSpot01
+    Teleport Infantry01 Infantry-StartSpot01
+    Teleport Infantry02 Infantry-StartSpot02
+    Teleport Infantry03 Infantry-StartSpot03
+    Teleport Infantry04 Infantry-StartSpot04
+    Teleport Infantry05 Infantry-StartSpot05
+    Teleport Infantry06 Infantry-StartSpot06
+    Teleport Infantry07 Infantry-StartSpot07
+    Teleport TC14 TC14-StartSpot03
+    
+    Pause 1.0    
+            
+    //Outside Conference Room Shot
+	CameraFixed StartShot07
+
+    // Battledroids run in    
+	Child CallAndWait "PrepareDroid" (Commander01, Section02-Spot10, 0.0)
+	Child CallAndWait "PrepareDroid" (Infantry01, Section02-Spot07, 0.0)
+	Child CallAndWait "PrepareDroid" (Infantry02, Section02-Spot08, 0.5)
+	Child CallAndWait "PrepareDroid" (Infantry03, Section02-Spot13, 0.5)
+	Child CallAndWait "PrepareDroid" (Infantry04, Section02-Spot11, 0.5)
+	Child CallAndWait "PrepareDroid" (Infantry05, Section02-Spot12, 0.0)
+	Child CallAndWait "PrepareDroid" (Infantry06, Section02-Spot05, 0.5)
+	Child CallAndWait "PrepareDroid" (Infantry07, Section02-Spot04, 0.0)
+    WaitForAll
+
+    Childscript "Setup Obi 1"
+    {
+        Teleport Obi Obi-StartSpot03
+        StopActions Obi
+        LookAtAndWait Obi Qui
+    }
+    
+    Childscript "Setup Qui 1"
+    {
+        Teleport Qui Qui-StartSpot03
+        StopActions Qui
+        LookAtAndWait Qui Obi
+    }
+    
+    Childscript "Setup TC14 1"
+    {
+        Teleport TC14 TC14-StartSpot03
+        LookAtAndWait TC14 Qui
+    }
+    WaitForAll
+
+    SetAnimTableIndex Qui 0
+    SetAnimTableIndex Obi 0
+    ShowObiSaber
+
+//    Pause 0.5
+                
+    Pause 1.5
+    
+    // Inside Conference Room Shot
+    CameraFixed StartShot06
+    Pause 0.5
+                
+    PlayAudioCue rep_cruiser_explo.aud SpriteEffect
+    // Start Gas
+    Set StartDioxinGas 1
+	Pause 0.5
+//	EquipWeapon Obi
+    EnableEquipment Obi
+	EquipWeapon Qui
+    Pause 0.5
+//    PlayAudioCue grenade_explosion.aud SpriteEffect
+    Pause 0.5    
+    LookAt Qui A_01_d_conf_06    
+    LookAt Obi A_01_d_conf_06    
+//    PlayAudioCue grenade_explosion.aud SpriteEffect
+    
+	PlayAnimation TC14 ptc_loiter-ohmy.anim
+	Pause 0.5
+	SaylineNonPositional TC14 "/TC-14_57/Oh..."
+    SaylineNonPositional Obi "/Obi-Wan_82/What was that?"    
+    Pause 1.0
+    SaylineNonPositional Qui "/Qui-Gon_84/Dioxis gas!  Poison!"
+    
+//    UnEquipWeapon Obi
+    DisableEquipment Obi
+    UnEquipWeapon Qui
+    Pause 0.5
+                                                                            
+    //Outside Conference Room Shot
+	CameraFixed StartShot07
+    
+    Childscript "Setup Obi 2"
+    {
+        Teleport Obi Obi-StartSpot02
+        LookAtAndWait Obi A_01_d_conf_06
+    }
+    
+    Childscript "Setup Qui 2"
+    {
+        Teleport Qui Qui-StartSpot02
+        LookAtAndWait Qui A_01_d_conf_06
+    }
+    
+    Childscript "Setup TC14 2"
+    {
+        Teleport TC14 TC14-StartSpot02
+        LookAtAndWait TC14 A_01_d_conf_06
+        StopActions TC14
+    }
+    WaitForAll
+
+	LookAt Infantry05 Commander01
+    Pause 1.0
+
+    //Closeup on Commander and Infantry Battledroids
+    CameraFixed StartShot08
+
+	LookAt Commander01 Infantry05
+	Sayline Commander01 "/BattleDroidInfantry1_66/They must be dead by now." 
+	Sayline Commander01 "/BattleDroidInfantry1_221.73/Check it out." PointForward
+	Sayline Infantry05 "/BattleDroidInfantry1_215.2/Roger, roger."
+	LookAt Infantry05 A_01_d_conf_06
+	Pause 1.0
+
+    //Closeup on Conference Room Door from Outside
+	CameraFixed StartShot09
+
+	LookAt Commander01 A_01_d_conf_06
+
+    Childscript "Open Door for TC14"
+    {
+        Pause 1.0
+        OpenDoor A_01_d_conf_06
+    }
+    
+    WalkToNode TC14 TC14_Spot01
+	Pause 2
+	Sayline TC14 "/TC-14_56/Excuse me."
+	RunToNode TC14 TC14_Spot02
+
+    Pause 1.0
+
+//	EquipWeapon Obi
+    EnableEquipment Obi
+	EquipWeapon Qui
+
+	SaylineNonPositional Infantry05 "/BattleDroidInfantry1_215.14/Oh, oh..."
+//	SaylineNonPositional Infantry05 "/BattledroidInfantry_1315/Oh, oh..."
+
+    Pause 1.0
+	DisableAudioFades
+	Set exitedEarly 0
+
+	PreEndCutScene
+
+    FadeDown 0.0
+
+	StopAnimation Obi 0
+	StopAnimation Qui 0 
+
+    SetAnimTableIndex Qui 0
+    SetAnimTableIndex Obi 0
+    ShowObiSaber
+
+    Set Qui-GotoNode Hangar01-QuiSpot01
+
+    Set StartDioxinGas 1
+
+    Teleport Commander01 Commander-StartSpot01
+    Teleport Infantry01 Infantry-StartSpot01
+    Teleport Infantry02 Infantry-StartSpot02
+    Teleport Infantry03 Infantry-StartSpot03
+    Teleport Infantry04 Infantry-StartSpot04
+    Teleport Infantry05 Infantry-StartSpot05
+    Teleport Infantry06 Infantry-StartSpot06
+    Teleport Infantry07 Infantry-StartSpot07
+
+	StopActions TC14
+	StopActions Obi
+	StopActions Qui
+
+    Teleport TC14 TC14-StartSpot04
+    Teleport Obi Obi-StartSpot02
+    Teleport Qui Qui-StartSpot02
+
+	EquipWeapon Obi
+	EquipWeapon Qui
+
+	ReturnControlTo Commander01
+	ReturnControlTo Infantry01
+	ReturnControlTo Infantry02
+	ReturnControlTo Infantry03
+	ReturnControlTo Infantry04
+	ReturnControlTo Infantry05
+	ReturnControlTo Infantry06
+	ReturnControlTo Infantry07
+    ReturnControlTo TC14
+	ReturnControlTo Qui
+	ReturnControlTo Obi
+            
+    UnlockDoor A_01_d_conf_06
+    OpenDoor A_01_d_conf_06
+    
+    Set BeginMission 1
+
+	if (= exitedEarly 1)
+	{
+		StopMusic  // Stop the intro cutscene music //
+	}
+
+	PlayBattleLoopOverlap  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+
+	EndCutScene
+
+    FadeUpAndWait
+	EnableAudioFades
+    
+    SetStartPosition 1
+    RemoveGroup 32
+    Save
+    
+    If (= SkipToControlRoom 1)
+    {
+        Teleport Qui Qui-ControlRoomStart
+        Teleport Obi Obi-ControlRoomStart
+    }
+}
+
+Script "Opening Cutscene 2" 31
+{
+    If (IsGroupRemoved 32)
+    {
+        Set BeginMission 0
+        Set StartQuiGonFollow 0        
+        FadeUpAndWait
+        Set BeginMission 1        
+    }
+}
+
+Script "Obi-Wan Death Cleanup"
+{
+    ContinueWhenPlayerDies
+    
+    WaitUntilKilled Obi
+    AiAudioOff Qui
+    
+//    Set BeginMission 0
+//    Set StartQuiGonFollow 0
+//    Save
+}
+
+Script "Qui Gon Killed - Mission Failed"
+{
+    MakeResurrectable Qui
+
+    WaitUntilKilled Qui
+    
+    BeginCutScene
+        
+    CameraOrbit Qui 3.0 4.0 10.0 0.0 1
+    
+	Pause 1.0    
+    
+	CommunicatorOn
+	CommunicatorMessageAndWait "You have allowed Qui-Gon to be killed.  You have much to learn, Padawan."
+	CommunicatorMessageAndWait "Game Over."
+
+    Pause 3.0
+
+    FadeDownAndWait
+
+    PreEndCutscene
+    FadeDown 0.0
+    EndCutScene
+
+    FailMission
+}
+
+Script "Level Transistion To L03_2B"
+{
+    WaitUntilEnteredRegion Obi L03_2B_Trig
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    LookAt Obi A_01_d_blastdoor_23    
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    
+    PreEndCutscene
+    FadeDown 0.0
+    Set BeginMission 0
+    Set StartQuiGonFollow 0    
+    EndCutscene
+    
+    RemoveGroup 2
+    SetStartPosition 13
+    Save
+    
+    NextPart L03_2B
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "PDA/Scoring Info"
+{
+    MissionTitle "/Mission15Title/Betrayal"
+    MissionObjective 1 "/Mission15Objective1/Find a way to the command deck and confront the Neimoidians."
+    SetTimeToBeat 20 00
+    SetExplorationNum 5
+	SetForceUsesNeeded 25
+}
+
+Script "Set Far Clip"
+{
+    SetFarClip 350 0
+}
+
+Script "Adjust Far Clip"
+{
+    WaitUntilEnteredRegion Obi AdjustFarClip_Rgn_01
+    SetFarClip 1400 0    
+    WaitUntilExitedRegion Obi AdjustFarClip_Rgn_01
+    SetFarClip 200 0
+    Loop
+}
+
+Script "Load DLG Files"
+{
+    LoadDLG bad.dlg
+}
+
+Script "Set Pain Region Values"
+{
+//    SetPainRegion Turret_Pain_Rgn 9999.0
+    SetPainRegion OuterSpace_Rgn 400.0
+}
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 01_HLa_floor.sur
+}
+
+Script "MusicManager"
+{
+	WaitUntilEqual InitialBADsAlive-Start 0
+	StartMusicManager
+}
+
+Script "Initialize Level"
+{
+    Actor TC14                   A_TC14_01
+    Actor Commander01            A_Battledroid-Commander_01
+    Actor Infantry01             A_Battledroid-Infantry_01
+    Actor Infantry02             A_Battledroid-Infantry_02
+    Actor Infantry03             A_Battledroid-Infantry_03
+    Actor Infantry04             A_Battledroid-Infantry_04
+    Actor Infantry05             A_Battledroid-Infantry_05
+    Actor Infantry06             A_Battledroid-Infantry_06
+    Actor Infantry07             A_Battledroid-Infantry_07
+
+    Actor Console01              A_3-2_turretconsole_01_01
+    Actor Console02              A_3-2_turretconsole_02_01
+    Actor Console03              A_3-2_turretconsole_03_01
+    Actor Console04              A_3-2_turretconsole_04_01
+    Actor Screen01               A_3-2_sidescreen_01
+    Actor Screen02               A_3-2_sidescreen_02
+    Actor Screen03               A_3-2_mainscreen_01    
+    Actor Starfighter01          A_StarfighterDroid_01
+    Actor Starfighter02          A_StarfighterDroid_02
+    Actor Starfighter03          A_StarfighterDroid_03
+    
+    Actor Turret                 A_01_hbay_turret_01    
+
+
+    If (IsGroupRemoved 32)
+    {
+    If (= StartPosition 1)
+    {
+        Teleport Commander01 Commander-StartSpot01
+        Teleport Infantry01 Infantry-StartSpot01
+        Teleport Infantry02 Infantry-StartSpot02
+        Teleport Infantry03 Infantry-StartSpot03
+        Teleport Infantry04 Infantry-StartSpot04
+        Teleport Infantry05 Infantry-StartSpot05
+        Teleport Infantry06 Infantry-StartSpot06
+        Teleport Infantry07 Infantry-StartSpot07
+
+        Teleport TC14 TC14-StartSpot03
+
+	    EquipWeapon Obi
+        EquipWeapon Qui
+
+        UnlockDoor A_01_d_conf_06
+        OpenDoor A_01_d_conf_06
+
+		  PlayBattleLoop  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+    }
+    If (= StartPosition 12)
+    {
+        Kill Console01
+        Kill Console02
+        Kill Console03
+        Kill Console04
+        Kill Screen01
+        Kill Screen02
+        Kill Screen03
+        
+        InvincibilityOff Starfighter01
+        InvincibilityOff Starfighter02
+        InvincibilityOff Starfighter03
+        
+        DisableState Turret Attack_RemoteGun
+        Sleep Turret
+                                
+        Teleport TC14 TC14-StartSpot03    
+    
+        UnlockDoor A_01_d_conf_06
+        OpenDoor A_01_d_conf_06
+
+        UnlockDoor A_01_d_blastdoor_06
+        OpenDoor A_01_d_blastdoor_06
+        
+        UnlockDoor A_01_d_blastdoor_03
+        OpenDoor A_01_d_blastdoor_03
+                
+        UnlockDoor A_01_d_blastdoor_02
+        
+        UnLockDoor A_01_d_conf_04    
+    }
+    }
+}
+
+Script "Initialize Hangar" 1
+{
+    Actor Starfighter01            A_StarfighterDroid_01
+    Actor Starfighter02            A_StarfighterDroid_02
+    Actor Starfighter03            A_StarfighterDroid_03
+    
+    
+    InvincibilityOn Starfighter01
+    InvincibilityOn Starfighter02
+    InvincibilityOn Starfighter03
+
+    LockDoor A_01_d_conf_04
+}
+
+Script "Lock Doors"
+{
+    LockDoor A_01_d_blastdoor_11
+    LockDoor A_01_d_blastdoor_34
+    LockDoor A_01_d_blastdoor_13
+    LockDoor A_01_d_blastdoor_42
+    LockDoor A_01_d_blastdoor_37
+    LockDoor A_01_d_blastdoor_39
+    LockDoor A_01_d_blastdoor_18
+    LockDoor A_01_d_blastdoor_12
+    LockDoor A_01_d_blastdoor_46    
+}
+
+Script "Lock Elevators"
+{
+    LockDoor A_3-2_elevator_01
+    LockDoor A_3-2_elevator_02
+    LockDoor A_3-2_elevator_03
+    LockDoor A_3-2_elevator_04
+}
+
+Script "Exploration Markers"
+{
+    Call PowerUpRemoval (A_powerupexplorationmarker_01, 21)
+    Call PowerUpRemoval (A_powerupexplorationmarker_02, 22)
+}
+
+Script "Initialize Qui-Gon"
+{
+    If (IsGroupRemoved 32)
+    {
+    If (= StartPosition 1)
+    {
+        Teleport Qui Qui-StartSpot02
+        Set Qui-GotoNode Hangar01-QuiSpot01
+    }
+    
+    If (= StartPosition 12)
+    {
+        Teleport Qui Qui-StartTCR
+        Set Qui-GotoNode Qui-Transition
+    }
+    }
+}
+
+Script "Set Qui-Gon Defaults"
+{
+    InvincibilityOn Qui
+    SetRunForwardSpeed Qui 6.6 
+    SetMaxAttackers Qui 3
+}
+
+Script "Qui-Gon Follows"
+{
+    WaitUntilEqual StartQuiGonFollow 1
+    
+    TakePartialControlOf Qui 0.35 False
+    SetFollowPlayer Qui    
+
+    RunToNode Qui Qui-GotoNode
+}
+
+Script "Qui-Gon Waits"
+{
+    Int PlayCue            0
+    
+    
+    WaitUntilEqual StartQuiGonFollow 1
+
+    While (= StartQuiGonFollow 1)
+    {
+	    WaitUntilStateActivated Qui Puppet
+        Pause 0.2
+	    WaitUntilStateShutDown Qui Puppet
+
+	    WaitUntilStateActivated Qui FollowPlayer
+        Set PlayCue 1
+        
+        Script "Qui Gon Cues"
+        {
+//            Display "Qui Gon Cues Start" 1.0
+            WaitUntilEqual PlayCue 1
+    
+            While (= PlayCue 1)
+            {
+    	      PlayAudioCue Qui "FollowMe" 30.0 //don't play follow cue more than every 30 seconds
+                PlayGesture Qui AttractAttention
+                Pause 10.0
+            }
+        }
+        
+        Pause 0.2        
+        WaitUntilStateShutDown Qui FollowPlayer
+        Set PlayCue 0
+        EndScript "Qui Gon Cues"
+//        Display "Qui Gon Cues End" 1.0        
+    }
+}
+
+/*
+Script "Qui-Gon Waits"
+{
+    WaitUntilEqual StartQuiGonFollow 1
+
+    While (= StartQuiGonFollow 1)
+    {
+	    WaitUntilStateActivated Qui Puppet
+        Pause 0.2
+	    WaitUntilStateShutDown Qui Puppet
+	    WaitUntilStateActivated Qui FollowPlayer
+	    PlayAudioCue Qui "FollowMe" 30.0 //don't play follow cue more than every 30 seconds
+	    PlayGesture Qui AttractAttention
+	    Pause 10.0
+    }
+}
+*/
+
+Script "Qui-Gon Run Speed"
+{
+    WaitUntilFar Obi Qui 50.0
+    SetRunForwardSpeed Qui 13.2
+//    Display "Force Run!" 1.0
+
+    WaitUntilNear Obi Qui 30.0
+    SetRunForwardSpeed Qui 6.6
+//    Display "Normal Run" 1.0
+
+    Loop
+}
+
+Script "Hold your breath"
+{
+    WaitUntilEqual BeginMission 1
+
+    Timer breath
+    WaitUntilGreaterThan breath 30.0
+    Set GasNowHurts 1
+}
+
+Script "Conference Room Gas"
+{
+    WaitUntilEqual GasNowHurts 1
+    WaitUntilEnteredRegion Obi Conf01_Pain_Rgn
+    Pause 1.0
+            
+    While (IsInRegion Obi Conf01_Pain_Rgn)
+    {
+        DeductHitPoints Obi 25
+        Pause 1.0
+    }
+    
+    Loop
+}
+
+Script "Hangar Turret" 1
+{
+    Actor Turret            A_01_hbay_turret_01
+    
+    
+    While (= TurretDestroyed 0)
+    {
+        WaitUntilEnteredRegion Obi Turret_Pain_Rgn
+        WakeUp Turret        
+        SleepDisallow Turret
+        ForceTarget Turret Obi
+        WaitUntilExitedRegion Obi Turret_Pain_Rgn
+        SleepAllow Turret
+        ForceTargetOff Turret
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambient ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Conference Room Dioxin Gas"
+{
+    WaitUntilEqual StartDioxinGas 1
+    
+    CreateParticleGen dioxingas.gen DioxinGas01 Conf01-GasGen01
+    CreateParticleGen dioxingas.gen DioxinGas02 Conf01-GasGen02
+    CreateParticleGen dioxingas.gen DioxinGas03 Conf01-GasGen03
+    CreateParticleGen dioxingas.gen DioxinGas04 Conf01-GasGen04
+    CreateParticleGen dioxingas.gen DioxinGas05 Conf01-GasGen05
+    CreateParticleGen dioxingas.gen DioxinGas06 Conf01-GasGen06
+  
+    Pause 3.0
+    Loop  
+}
+
+Script "Conference Room Dioxin Gas Sound"
+{
+    WaitUntilEqual StartDioxinGas 1
+    
+    Childscript "Dioxin Gas 03 Sound"
+    {
+        PlayAudioCueAndWait 3_2_steamvent_hiss.aud Startup Conf01-GasGen03
+        CreateAudioCue DioxinGas03Snd 3_2_steamvent_hiss.aud Running Conf01-GasGen03
+    }
+    Childscript "Dioxin Gas 04 Sound"
+    {
+        PlayAudioCueAndWait 3_2_steamvent_hiss.aud Startup Conf01-GasGen04
+        CreateAudioCue DioxinGas04Snd 3_2_steamvent_hiss.aud Running Conf01-GasGen04
+    }
+	 
+	WaitForAll
+}
+
+Script "TC14 Panic" 1
+{
+    Actor TC14               A_TC14_01
+
+
+    WaitUntilEqual BeginMission 1
+    
+    ForceState TC14 Retreat
+    
+    WaitUntilEqual InitialBADsAlive-Start 0
+/*    
+    While (> InitialBADsAlive-Start 0)
+    {
+        CallAndWait "RunToRandomNode" (TC14, TC14_Spot01, TC14_Spot02, TC14_Spot03, TC14_Spot04)
+    }
+*/
+    ForceStateOff TC14
+    
+    DisableState TC14 Retreat
+    
+    TakeControlOf TC14    
+    WalkToNodeAndWait TC14 TC14_Spot01
+    LookAtAndWait TC14 Obi
+    StopActions TC14
+    
+    ReturnControlTo TC14
+    
+    EnableState TC14 Retreat    
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambushes ------------------------------//
+//////////////////////////////////////////////////////////////////////////
+
+Script "Section 06 - Ambush 01" 1
+{
+    Actor Infantry61        A_Battledroid-Infantry_61
+    Actor Infantry62        A_Battledroid-Infantry_62
+    Actor Infantry63        A_Battledroid-Infantry_63
+    Actor Infantry64        A_Battledroid-Infantry_64
+    Actor Infantry65        A_Battledroid-Infantry_65
+    Actor Infantry66        A_Battledroid-Infantry_66
+
+
+    Child WaitUntilEnteredRegion Obi S06_AI_Rgn_01
+    Child WaitUntilEnteredRegion Qui S06_AI_Rgn_01
+    WaitForAny
+
+    Call "Run" (Infantry61, Section06-Spot01, 0.0)
+    Call "Run" (Infantry62, Section06-Spot02, 0.0)
+    Call "Run" (Infantry63, Section06-Spot03, 0.0)
+    Call "Run" (Infantry64, Section06-Spot04, 1.0)
+    Call "Run" (Infantry65, Section06-Spot05, 1.0)
+    Call "Run" (Infantry66, Section06-Spot06, 1.0)
+}
+
+Script "Elevator Room 01 - Ambush 01" 1
+{
+    Actor Infantry67        A_Battledroid-Infantry_67
+    Actor Infantry68        A_Battledroid-Infantry_68
+    Actor Infantry69        A_Battledroid-Infantry_69
+    Actor Infantry70        A_Battledroid-Infantry_70
+    Actor Infantry71        A_Battledroid-Infantry_71
+    Actor Infantry72        A_Battledroid-Infantry_72        
+
+
+    Child WaitUntilEnteredRegion Obi ER01_Rgn_01
+    Child WaitUntilEnteredRegion Qui ER01_Rgn_01
+    WaitForAny
+    
+    Call "Run" (Infantry67, ER01-Spot01, 0.0)
+    Call "Run" (Infantry70, ER01-Spot02, 0.0)    
+    Call "Run" (Infantry68, ER01-Spot03, 0.5)
+    Call "Run" (Infantry71, ER01-Spot05, 0.5)
+    Call "Run" (Infantry69, ER01-Spot06, 1.0)
+    Call "Run" (Infantry72, ER01-Spot04, 1.0)    
+}
+
+Script "Section 03 - Ambush 01" 1
+{
+    Actor Nemoidian01       A_Nemoidian2_01
+    Actor Infantry81        A_Battledroid-Infantry_81
+    Actor Infantry82        A_Battledroid-Infantry_82
+    Actor Infantry83        A_Battledroid-Infantry_83
+    Actor Infantry84        A_Battledroid-Infantry_84
+    Actor Infantry85        A_Battledroid-Infantry_85
+    Actor Infantry86        A_Battledroid-Infantry_86
+
+
+    TakeControlOf Nemoidian01
+
+    Child WaitUntilEnteredRegion Obi S03_Rgn_01
+    Child WaitUntilEnteredRegion Qui S03_Rgn_01
+    WaitForAny
+
+    Call "Run" (Infantry81, Section03-Spot01, 0.0)
+    Call "Run" (Infantry82, Section03-Spot02, 0.0)
+    Call "Run" (Infantry83, Section03-Spot03, 0.0)
+    Call "Run" (Infantry84, Section03-Spot04, 0.0)
+    Call "Run" (Infantry85, Section03-Spot05, 0.0)
+    Call "Run" (Infantry86, Section03-Spot06, 0.0)
+    
+    RunToNodeAndWait Nemoidian01 Section04-NemoidianSpot01
+    RunToNodeAndWait Nemoidian01 CR02-NemoidianSpot01
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+//----------------------------------- Patrols ------------------------------------//
+////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Specific Encounters ------------------------------//
+/////////////////////////////////////////////////////////////////////////////////////
+
+Script "Ambush At Conference Room 01" 1
+{
+    Actor Commander01        A_Battledroid-Commander_01
+    Actor Infantry01         A_Battledroid-Infantry_01
+    Actor Infantry02         A_Battledroid-Infantry_02
+    Actor Infantry03         A_Battledroid-Infantry_03
+    Actor Infantry04         A_Battledroid-Infantry_04
+    Actor Infantry05         A_Battledroid-Infantry_05
+    Actor Infantry06         A_Battledroid-Infantry_06
+    Actor Infantry07         A_Battledroid-Infantry_07        
+
+    Child WaitUntilKilled Commander01
+    Child WaitUntilKilled Infantry01
+    Child WaitUntilKilled Infantry02
+    Child WaitUntilKilled Infantry03
+    Child WaitUntilKilled Infantry04
+    Child WaitUntilKilled Infantry05
+    Child WaitUntilKilled Infantry06
+    Child WaitUntilKilled Infantry07                        
+        
+    WaitForAll
+    
+	 PlayMusic Victory
+    Set InitialBADsAlive-Start 0
+}
+
+Script "Qui-Gon Instructions" 1
+{
+    Actor Commander10            A_Battledroid-Commander_10
+    Actor Infantry73             A_Battledroid-Infantry_73
+    Actor Infantry74             A_Battledroid-Infantry_74    
+    Int   CallObi    10
+    Float ObiQuiDistance
+
+
+    WaitUntilEqual InitialBADsAlive-Start 0
+    TakeControlOf Qui
+    
+    RunToNodeAndWait Qui Qui-Start
+    LookAtAndWait Qui Obi
+
+    DistanceBetweenActors Obi Qui ObiQuiDistance
+    
+    While (> ObiQuiDistance 2.0)
+    {
+        DistanceBetweenActors Obi Qui ObiQuiDistance
+        
+        If (<= ObiQuiDistance 2.0)
+        {
+            EndWhileLoop
+        }
+        
+        If (= CallObi 10)
+        {
+            PlayAudioCue Qui "FollowMe"
+    	  PlayGesture Qui AttractAttention
+//            Sayline Qui "/Qui-Gon_1316/Obiwan, over here!" AttractAttention
+            Set CallObi 0
+        }
+        
+        Pause 1.0
+        Increment CallObi 1
+    }
+    
+    SayLineNonPositional Qui "/Qui-Gon_1109/Obiwan, quickly... We must get to the bridge in the control sphere of this droid ship!" Talk
+    SayLineNonPositional Qui "/Qui-Gon_1110/We must question the Viceroy and get to the bottom of this!"
+//    Sayline Qui "/Qui-Gon_1111/You lead the way, I will follow." PointForward
+
+    Pause 0.5
+
+    Teleport Commander10 Section06-Spot02
+    Teleport Infantry73 Section06-Spot01
+    Teleport Infantry74 Section06-Spot03
+    
+    SaylineNonPositionalAndContinue Commander10 "/BattleDroidInfantry1_63/"
+    LookAtAndWait Qui A_01_d_blastdoor_02
+    StopActions Qui
+    
+    ReturnControlTo Qui
+
+    Pause 0.5
+                                                                                                
+    UnlockDoor A_01_d_blastdoor_02
+    OpenDoorAndWait A_01_d_blastdoor_02    
+
+    SaylineNonPositional Commander10 "/BattleDroidInfantry1_64/" PointForward    
+        
+    Call "Run" (Commander10, Section02-Spot01, 0.0)
+    Call "Run" (Infantry73, Section02-Spot02, 0.5)
+    Call "Run" (Infantry74, Section02-Spot03, 0.5)
+    
+    Set StartQuiGonFollow 1
+}
+
+Script "Hangar Bay 01" 1
+{
+    WaitUntilNearNode Qui Hangar01-QuiSpot01 1.0
+    WaitUntilNear Qui Obi 2.0    
+
+    TakeControlOf Qui
+    
+    LookAtAndWait Qui A_01_hbay_turret_01        
+    SayLineNonPositional Qui "/Qui-Gon_83/They've destroyed our ship!" PointForward
+    LookAtAndWait Qui Obi
+    SayLineNonPositional Qui "/Qui-Gon_1112/Obiwan, we must find the control room that operates the main turret in the hangar bay." Talk
+    SayLineNonPositional Qui "/Qui-Gon_1113/We need to disable it from there so we can get to the other side of this hangar bay safely." PointForward
+    
+    StopActions Qui
+    
+    Set Hangar01Visited 1
+    
+    ReturnControlTo Qui
+    TakePartialControlOf Qui 0.35 False
+    
+    Set Qui-GotoNode Section02-QuiSpot01
+    RunToNode Qui Qui-GotoNode
+}
+
+Script "Conference Room 01" 1
+{
+    Actor Nemoidian01            A_Nemoidian2_01
+    Actor Infantry75            A_Battledroid-Infantry_75
+    Actor Infantry76            A_Battledroid-Infantry_76
+    Actor Infantry77            A_Battledroid-Infantry_77
+    Actor Infantry78            A_Battledroid-Infantry_78
+    Actor Infantry79            A_Battledroid-Infantry_79
+    Actor Infantry80            A_Battledroid-Infantry_80                    
+
+    
+    WaitUntilEqual Hangar01Visited 1
+    UnlockDoor A_01_d_blastdoor_03
+    TakeControlOf Nemoidian01
+    Teleport Nemoidian01 Section03-NemoidianSpot01
+    OpenDoor A_01_d_blastdoor_03
+    
+    Child WaitUntilEnteredRegion Qui blastdoor_02_trig
+    Child WaitUntilEnteredRegion Obi blastdoor_02_trig
+//    Child WaitUntilNear Nemoidian01 Obi 6.0
+//    Child WaitUntilNear Nemoidian01 Qui 6.0
+    WaitForAny
+
+//    LookAt Nemoidian01 A_01_d_blastdoor_02
+    SaylineNonPositional Nemoidian01 "/Neimoidian1_66.33/Die Jedi! Guards! Help!"
+    
+//    RunToNodeAndWait Nemoidian01 Section03-NemoidianSpot01
+    DoorIgnoreClearance A_01_d_blastdoor_03
+    CloseDoor A_01_d_blastdoor_03
+    LockDoor A_01_d_blastdoor_03
+    RunToNode Nemoidian01 Section03-NemoidianSpot02                
+                                                
+//    WaitUntilNearNode Qui Qui-Start 1
+
+//    RunToNodeAndWait Qui Section02-QuiSpot01
+        
+    WaitUntilNearNode Qui Section02-QuiSpot01 1
+
+    TakeControlOf Qui
+    RunToNodeAndWait Qui Section02-QuiSpot01
+    
+    LookAtAndWait Qui Obi
+    SaylineNonPositional Qui "/Qui-Gon_1319/Obiwan, guard the door while I work on the lock."
+    LookAtAndWait Qui A_3-2_doorlock_06
+    
+    ChildScript "Qui Picks Lock"
+    {
+        PlayGestureAndWait Qui Typing
+        Loop
+    }
+    
+    ChildScript "BADs Near Qui"
+    {
+        WaitUntilDamaged Qui
+        SaylineNonPositional Qui "/Qui-Gon_1132/Obi-Wan, I need your help over here!"
+        Loop
+    }
+    
+    Teleport Infantry75 Section01-Spot01
+    Teleport Infantry76 Section01-Spot02
+    Teleport Infantry77 Section01-Spot03
+    Teleport Infantry78 Section01-Spot04
+    Teleport Infantry79 Section01-Spot05
+    Teleport Infantry80 Section01-Spot06    
+    
+    UnlockDoor A_01_d_blastdoor_06
+    OpenDoorAndWait A_01_d_blastdoor_06
+
+    Call "Run" (Infantry75, Section02-Spot04, 0.0)
+    Call "Run" (Infantry76, Section02-Spot05, 0.0)
+    Call "Run" (Infantry77, Section02-Spot06, 0.0)
+    Call "Run" (Infantry78, Section02-Spot07, 0.0)
+    Call "Run" (Infantry79, Section02-Spot08, 0.0)
+    Call "Run" (Infantry80, Section02-Spot09, 0.0)            
+    
+    Child WaitUntilKilled Infantry75
+    Child WaitUntilKilled Infantry76
+    Child WaitUntilKilled Infantry77
+    Child WaitUntilKilled Infantry78
+    Child WaitUntilKilled Infantry79
+    Child WaitUntilKilled Infantry80                    
+    WaitForAll
+    
+    Pause 0.5
+    
+    EndScript "Qui Picks Lock"
+    EndScript "BADs Near Qui"
+    
+    StopActions Qui
+          
+    UnlockDoor A_01_d_blastdoor_03
+    OpenDoor A_01_d_blastdoor_03
+     
+    LookAtAndWait Qui Obi       
+    SaylineNonPositional Qui "/Qui-Gon_1320/I've unlocked the door Obiwan.  Let's go!"
+    StopActions Qui
+    
+    ReturnControlTo Qui
+    TakePartialControlOf Qui 0.35 False
+/*    
+    Set Qui-GotoNode Section04-NemoidianSpot01
+    RunToNode Qui Qui-GotoNode
+    
+    WaitUntilNearNode Qui Section04-NemoidianSpot01 1
+*/
+    Set Qui-GotoNode Turret_Control
+    RunToNode Qui Qui-GotoNode
+}
+
+Script "Arrival At Turret Control Room" 1
+{
+    Float QuiDistance
+    
+    
+    WaitUntilEnteredRegion Qui Turret_Control_Rgn
+    
+    StopActions Qui
+    ReturnControlTo Qui
+    
+    SayLineNonPositional Qui "/Qui-Gon_1114/This is the control room we've been looking for.  We've found it.  The hangar bay turret controls are over there."
+     
+    Script "Qui Waiting For Turret Destroyed"
+    {       
+        While (= TurretDestroyed 0)
+        {
+            DistanceBetweenActors Obi Qui QuiDistance
+    
+            If (< QuiDistance 20.0)
+            {
+                SayLineNonPositional Qui "/Qui-Gon_1115/Quickly Obiwan, disable the main turret targeting systems and lets get back to the hangar."
+                Pause 30.0
+            }
+        }
+    }
+}    
+
+Script "Turret Room BADs" 1
+{
+    Actor Commander02        A_Battledroid-Commander_02
+    Actor Security14         A_Battledroid-Security_14
+    Actor Security15         A_Battledroid-Security_15
+    Actor Security41         A_Battledroid-Security_41
+    Actor Security42         A_Battledroid-Security_42        
+    Actor Infantry32         A_Battledroid-Infantry_32
+    Actor Infantry33         A_Battledroid-Infantry_33
+    Actor Infantry34         A_Battledroid-Infantry_34
+    Actor Infantry87         A_Battledroid-Infantry_87
+    Actor Infantry88         A_Battledroid-Infantry_88
+    Actor Infantry89         A_Battledroid-Infantry_89
+
+
+    Child WaitUntilKilled Commander02
+    Child WaitUntilKilled Security14
+    Child WaitUntilKilled Security15
+    Child WaitUntilKilled Security41    
+    Child WaitUntilKilled Security42    
+    Child WaitUntilKilled Infantry32
+    Child WaitUntilKilled Infantry33
+    Child WaitUntilKilled Infantry34
+    Child WaitUntilKilled Infantry87
+    Child WaitUntilKilled Infantry88
+    Child WaitUntilKilled Infantry89            
+    WaitForAll
+    
+    StopActions Qui
+    
+    TakeControlOf Qui
+    RunToNodeAndWait Qui Turret_Control
+    LookAtAndWait Qui Obi
+    ReturnControlTo Qui
+}
+
+Script "Turret Room Consoles" 1
+{
+    Actor Console01              A_3-2_turretconsole_01_01
+    Actor Console02              A_3-2_turretconsole_02_01
+    Actor Console03              A_3-2_turretconsole_03_01
+    Actor Console04              A_3-2_turretconsole_04_01
+    Actor Screen01               A_3-2_sidescreen_01
+    Actor Screen02               A_3-2_sidescreen_02
+    Actor Screen03               A_3-2_mainscreen_01    
+    Actor Starfighter01          A_StarfighterDroid_01
+    Actor Starfighter02          A_StarfighterDroid_02
+    Actor Starfighter03          A_StarfighterDroid_03
+    Actor Turret                 A_01_hbay_turret_01    
+
+    
+    Child WaitUntilKilled Console01
+    Child WaitUntilKilled Console02
+    Child WaitUntilKilled Console03
+    Child WaitUntilKilled Console04    
+            
+    WaitForAll
+    
+    Pause 1.0
+    Call "CreateExplosion" (Screen02-Spot01)
+    Kill Screen02
+    Pause 1.0
+    Call "CreateExplosion" (Screen01-Spot01)
+    Kill Screen01
+    Pause 1.0
+    Call "CreateExplosion" (Screen03-Spot01)
+    Kill Screen03
+    Pause 1.0    
+
+    DisableState Turret Attack_RemoteGun
+    Sleep Turret
+    EndScript "Hangar Turret"
+    EndScript "Turret Room BADs"
+    EndScript "Arrival At Turret Control Room"
+
+    Set TurretDestroyed 1
+                                    
+    SetPainRegion Turret_Pain_Rgn 0.0
+    UnLockDoor A_01_d_conf_04
+    
+    LockDoor A_01_d_blastdoor_11
+    LockDoor A_01_d_blastdoor_34
+    LockDoor A_01_d_blastdoor_13
+    LockDoor A_01_d_blastdoor_42
+    LockDoor A_01_d_blastdoor_37
+    LockDoor A_01_d_blastdoor_39
+    LockDoor A_01_d_blastdoor_18
+    LockDoor A_01_d_blastdoor_12
+    
+    InvincibilityOff Starfighter01
+    InvincibilityOff Starfighter02
+    InvincibilityOff Starfighter03
+    
+    RemoveGroup 1
+    SetStartPosition 12
+    Save
+}
+
+Script "Leaving Turret Room" 2
+{
+    WaitUntilEqual TurretDestroyed 1
+    
+    StopTalking Qui
+    StopActions Qui
+    TakeControlOf Qui    
+    LookAtAndWait Qui Obi
+
+    Sayline Qui "/Qui-Gon_1283/Good job, Obiwan!"
+    Sayline Qui "/Qui-Gon_1282/Let's go!"    
+
+    ReturnControlTo Qui
+
+    StopActions Qui
+        
+    TakePartialControlOf Qui 0.35 False
+    Set Qui-GotoNode Qui-Transition
+    Set StartQuiGonFollow 1    
+    RunToNode Qui Qui-GotoNode
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Battle Encounters ------------------------------//
+///////////////////////////////////////////////////////////////////////////////////
+
+Script "Section08 BADs - Part 1" 1
+{
+    Actor Infantry08            A_Battledroid-Infantry_08
+    Actor Infantry09            A_Battledroid-Infantry_09
+    Actor Infantry10            A_Battledroid-Infantry_10
+    Actor Infantry11            A_Battledroid-Infantry_11
+    Actor Infantry12            A_Battledroid-Infantry_12
+    Actor Infantry13            A_Battledroid-Infantry_13
+
+
+	WaitUntilEnteredRegion Obi S08_AI_Rgn_01
+
+    RandomInt TeleportLocation 1 2
+
+    If (= TeleportLocation 1)
+    {
+        Teleport Infantry08 DeadEnd01-Spot01
+        Teleport Infantry09 DeadEnd01-Spot02
+        Teleport Infantry10 DeadEnd01-Spot03
+        Teleport Infantry11 DeadEnd01-Spot04
+        Teleport Infantry12 DeadEnd01-Spot05
+        Teleport Infantry13 DeadEnd01-Spot06
+
+        UnlockDoor A_01_d_blastdoor_11
+        OpenDoor A_01_d_blastdoor_11
+                
+        Call "Run" (Infantry08, Section08-Spot01, 0.0)
+        Call "Run" (Infantry09, Section08-Spot02, 0.5)
+        Call "Run" (Infantry10, Section08-Spot03, 1.0)
+        Call "Run" (Infantry11, Section08-Spot04, 1.5)
+        Call "Run" (Infantry12, Section08-Spot05, 2.0)
+        Call "Run" (Infantry13, Section08-Spot06, 2.5)
+        
+        Pause 1.0
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_11, DE01_Clear_Rgn, blastdoor_11_clear)
+    }
+	Else
+    {
+        Teleport Infantry08 DeadEnd02-Spot01
+        Teleport Infantry09 DeadEnd02-Spot02
+        Teleport Infantry10 DeadEnd02-Spot03
+        Teleport Infantry11 DeadEnd02-Spot04
+        Teleport Infantry12 DeadEnd02-Spot05
+        Teleport Infantry13 DeadEnd02-Spot06
+
+        UnlockDoor A_01_d_blastdoor_34
+        OpenDoor A_01_d_blastdoor_34
+                
+        Call "Run" (Infantry08, Section08-Spot01, 0.0)
+        Call "Run" (Infantry09, Section08-Spot02, 0.5)
+        Call "Run" (Infantry10, Section08-Spot03, 1.0)
+        Call "Run" (Infantry11, Section08-Spot04, 1.5)
+        Call "Run" (Infantry12, Section08-Spot05, 2.0)
+        Call "Run" (Infantry13, Section08-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_34, DE02_Clear_Rgn, blastdoor_34_clear)
+    }
+}
+
+Script "Section08 BADs - Part 2" 2
+{
+    Actor Security33            A_Battledroid-Security_33
+    Actor Security34            A_Battledroid-Security_34
+    Actor Security35            A_Battledroid-Security_35
+    Actor Security36            A_Battledroid-Security_36
+    Actor Security37            A_Battledroid-Security_37
+    Actor Security38            A_Battledroid-Security_38
+
+
+    WaitUntilEqual TurretDestroyed 1
+	WaitUntilEnteredRegion Obi S08_AI_Rgn_01
+
+    RandomInt TeleportLocation 1 2
+
+    If (= TeleportLocation 1)
+    {
+        Teleport Security33 DeadEnd01-Spot01
+        Teleport Security34 DeadEnd01-Spot02
+        Teleport Security35 DeadEnd01-Spot03
+        Teleport Security36 DeadEnd01-Spot04
+        Teleport Security37 DeadEnd01-Spot05
+        Teleport Security38 DeadEnd01-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_11
+        OpenDoor A_01_d_blastdoor_11
+                
+        Call "Run" (Security33, Section08-Spot01, 0.0)
+        Call "Run" (Security34, Section08-Spot02, 0.5)
+        Call "Run" (Security35, Section08-Spot03, 1.0)
+        Call "Run" (Security36, Section08-Spot04, 1.5)
+        Call "Run" (Security37, Section08-Spot05, 2.0)
+        Call "Run" (Security38, Section08-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_11, DE01_Clear_Rgn, blastdoor_11_clear)        
+    }
+	Else
+    {
+        Teleport Security33 DeadEnd02-Spot01
+        Teleport Security34 DeadEnd02-Spot02
+        Teleport Security35 DeadEnd02-Spot03
+        Teleport Security36 DeadEnd02-Spot04
+        Teleport Security37 DeadEnd02-Spot05
+        Teleport Security38 DeadEnd02-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_34
+        OpenDoor A_01_d_blastdoor_34        
+                
+        Call "Run" (Security33, Section08-Spot01, 0.0)
+        Call "Run" (Security34, Section08-Spot02, 0.5)
+        Call "Run" (Security35, Section08-Spot03, 1.0)
+        Call "Run" (Security36, Section08-Spot04, 1.5)
+        Call "Run" (Security37, Section08-Spot05, 2.0)
+        Call "Run" (Security38, Section08-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_34, DE02_Clear_Rgn, blastdoor_34_clear)        
+	}
+}
+
+Script "Section09 BADs - Part 1" 1
+{
+    Actor Infantry14            A_Battledroid-Infantry_14
+    Actor Infantry15            A_Battledroid-Infantry_15
+    Actor Infantry16            A_Battledroid-Infantry_16
+    Actor Infantry17            A_Battledroid-Infantry_17
+    Actor Infantry18            A_Battledroid-Infantry_18
+    Actor Infantry19            A_Battledroid-Infantry_19
+    
+
+    WaitUntilEnteredRegion Obi S09_AI_Rgn_01
+    
+    Teleport Infantry14 DeadEnd03-Spot01
+    Teleport Infantry15 DeadEnd03-Spot02
+    Teleport Infantry16 DeadEnd03-Spot03
+    Teleport Infantry17 DeadEnd03-Spot04
+    Teleport Infantry18 DeadEnd03-Spot05
+    Teleport Infantry19 DeadEnd03-Spot06
+    
+    UnlockDoor A_01_d_blastdoor_13
+    OpenDoor A_01_d_blastdoor_13
+
+    Call "Run" (Infantry14, Section09-Spot01, 0.0)
+    Call "Run" (Infantry15, Section09-Spot02, 0.5)
+    Call "Run" (Infantry16, Section09-Spot03, 1.0)
+    Call "Run" (Infantry17, Section09-Spot04, 1.5)
+    Call "Run" (Infantry18, Section09-Spot05, 2.0)
+    Call "Run" (Infantry19, Section09-Spot06, 2.5)
+    
+    Pause 1.0    
+    
+    CallAndWait "CheckDoor" (A_01_d_blastdoor_13, DE03_Clear_Rgn, blastdoor_13_clear)
+}    
+
+Script "Section09 BADs - Part 2" 2
+{
+    Actor Infantry47            A_Battledroid-Infantry_47
+    Actor Infantry48            A_Battledroid-Infantry_48
+    Actor Infantry49            A_Battledroid-Infantry_49
+    Actor Infantry50            A_Battledroid-Infantry_50
+    Actor Infantry51            A_Battledroid-Infantry_51
+    Actor Infantry52            A_Battledroid-Infantry_52
+
+
+    WaitUntilEqual TurretDestroyed 1
+    WaitUntilEnteredRegion Obi S09_AI_Rgn_01
+
+    Teleport Infantry47 DeadEnd03-Spot01
+    Teleport Infantry48 DeadEnd03-Spot02
+    Teleport Infantry49 DeadEnd03-Spot03
+    Teleport Infantry50 DeadEnd03-Spot04
+    Teleport Infantry51 DeadEnd03-Spot05
+    Teleport Infantry52 DeadEnd03-Spot06
+    
+    UnlockDoor A_01_d_blastdoor_13
+    OpenDoor A_01_d_blastdoor_13
+    
+    Call "Run" (Infantry47, Section09-Spot01, 0.0)
+    Call "Run" (Infantry48, Section09-Spot02, 0.5)
+    Call "Run" (Infantry49, Section09-Spot03, 1.0)
+    Call "Run" (Infantry50, Section09-Spot04, 1.5)
+    Call "Run" (Infantry51, Section09-Spot05, 2.0)
+    Call "Run" (Infantry52, Section09-Spot06, 2.5)
+    
+    Pause 1.0    
+    
+    CallAndWait "CheckDoor" (A_01_d_blastdoor_13, DE03_Clear_Rgn, blastdoor_13_clear)    
+}
+
+Script "Section10 BADs - Part 1" 1
+{
+    Actor Infantry20            A_Battledroid-Infantry_20
+    Actor Infantry21            A_Battledroid-Infantry_21
+    Actor Infantry22            A_Battledroid-Infantry_22
+    Actor Infantry23            A_Battledroid-Infantry_23
+    Actor Infantry24            A_Battledroid-Infantry_24
+    Actor Infantry25            A_Battledroid-Infantry_25
+
+
+	WaitUntilEnteredRegion Obi S10_AI_Rgn_01
+
+    RandomInt TeleportLocation 1 2
+
+    If (= TeleportLocation 1)
+	{
+        Teleport Infantry20 DeadEnd04-Spot01
+        Teleport Infantry21 DeadEnd04-Spot02
+        Teleport Infantry22 DeadEnd04-Spot03
+        Teleport Infantry23 DeadEnd04-Spot04
+        Teleport Infantry24 DeadEnd04-Spot05
+        Teleport Infantry25 DeadEnd04-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_42
+        OpenDoor A_01_d_blastdoor_42
+        
+        Call "Run" (Infantry20, Section10-Spot01, 0.0)
+        Call "Run" (Infantry21, Section10-Spot02, 0.5)
+        Call "Run" (Infantry22, Section10-Spot03, 1.0)
+        Call "Run" (Infantry23, Section10-Spot04, 1.5)
+        Call "Run" (Infantry24, Section10-Spot05, 2.0)
+        Call "Run" (Infantry25, Section10-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_42, DE04_Clear_Rgn, blastdoor_42_clear)
+    }
+	Else
+	{
+        Teleport Infantry20 DeadEnd05-Spot01
+        Teleport Infantry21 DeadEnd05-Spot02
+        Teleport Infantry22 DeadEnd05-Spot03
+        Teleport Infantry23 DeadEnd05-Spot04
+        Teleport Infantry24 DeadEnd05-Spot05
+        Teleport Infantry25 DeadEnd05-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_37
+        OpenDoor A_01_d_blastdoor_37
+        
+        Call "Run" (Infantry20, Section10-Spot01, 0.0)
+        Call "Run" (Infantry21, Section10-Spot02, 0.5)
+        Call "Run" (Infantry22, Section10-Spot03, 1.0)
+        Call "Run" (Infantry23, Section10-Spot04, 1.5)
+        Call "Run" (Infantry24, Section10-Spot05, 2.0)
+        Call "Run" (Infantry25, Section10-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_37, DE05_Clear_Rgn, blastdoor_37_clear)
+	}
+}
+
+Script "Section10 BADs - Part 2" 2
+{
+    Actor Security27            A_Battledroid-Security_27
+    Actor Security28            A_Battledroid-Security_28
+    Actor Security29            A_Battledroid-Security_29
+    Actor Security30            A_Battledroid-Security_30
+    Actor Security31            A_Battledroid-Security_31
+    Actor Security32            A_Battledroid-Security_32
+
+
+    WaitUntilEqual TurretDestroyed 1
+	WaitUntilEnteredRegion Obi S10_AI_Rgn_01
+
+    RandomInt TeleportLocation 1 2
+
+    If (= TeleportLocation 1)
+	{
+        Teleport Security27 DeadEnd04-Spot01
+        Teleport Security28 DeadEnd04-Spot02
+        Teleport Security29 DeadEnd04-Spot03
+        Teleport Security30 DeadEnd04-Spot04
+        Teleport Security31 DeadEnd04-Spot05
+        Teleport Security32 DeadEnd04-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_42
+        OpenDoor A_01_d_blastdoor_42
+        
+        Call "Run" (Security27, Section10-Spot07, 0.0)
+        Call "Run" (Security28, Section10-Spot08, 0.5)
+        Call "Run" (Security29, Section10-Spot09, 1.0)
+        Call "Run" (Security30, Section10-Spot10, 1.5)
+        Call "Run" (Security31, Section10-Spot11, 2.0)
+        Call "Run" (Security32, Section10-Spot12, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_42, DE04_Clear_Rgn, blastdoor_42_clear)        
+    }
+	Else
+	{
+        Teleport Security27 DeadEnd05-Spot01
+        Teleport Security28 DeadEnd05-Spot02
+        Teleport Security29 DeadEnd05-Spot03
+        Teleport Security30 DeadEnd05-Spot04
+        Teleport Security31 DeadEnd05-Spot05
+        Teleport Security32 DeadEnd05-Spot06
+
+        UnlockDoor A_01_d_blastdoor_37
+        OpenDoor A_01_d_blastdoor_37
+        
+        Call "Run" (Security27, Section10-Spot07, 0.0)
+        Call "Run" (Security28, Section10-Spot08, 0.5)
+        Call "Run" (Security29, Section10-Spot09, 1.0)
+        Call "Run" (Security30, Section10-Spot10, 1.5)
+        Call "Run" (Security31, Section10-Spot11, 2.0)
+        Call "Run" (Security32, Section10-Spot12, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_37, DE05_Clear_Rgn, blastdoor_37_clear)
+	}
+}
+
+Script "Section12 BADs - Part 1" 1
+{
+    Actor Infantry26            A_Battledroid-Infantry_26
+    Actor Infantry27            A_Battledroid-Infantry_27
+    Actor Infantry28            A_Battledroid-Infantry_28
+    Actor Infantry29            A_Battledroid-Infantry_29
+    Actor Infantry30            A_Battledroid-Infantry_30
+    Actor Infantry31            A_Battledroid-Infantry_31
+
+
+    WaitUntilEnteredRegion Obi S12_AI_Rgn_01
+
+    Teleport Infantry26 DeadEnd06-Spot01
+    Teleport Infantry27 DeadEnd06-Spot02
+    Teleport Infantry28 DeadEnd06-Spot03
+    Teleport Infantry29 DeadEnd06-Spot04
+    Teleport Infantry30 DeadEnd06-Spot05
+    Teleport Infantry31 DeadEnd06-Spot06                
+    
+    UnlockDoor A_01_d_blastdoor_39
+    OpenDoor A_01_d_blastdoor_39
+    
+    Call "Run" (Infantry26, Section12-Spot01, 0.0)
+    Call "Run" (Infantry27, Section12-Spot02, 0.5)
+    Call "Run" (Infantry28, Section12-Spot03, 1.0)
+    Call "Run" (Infantry29, Section12-Spot04, 1.5)
+    Call "Run" (Infantry30, Section12-Spot05, 2.0)
+    Call "Run" (Infantry31, Section12-Spot06, 2.5)
+    
+    Pause 1.0    
+    
+    CallAndWait "CheckDoor" (A_01_d_blastdoor_39, DE06_Clear_Rgn, blastdoor_39_clear)
+}
+
+Script "Section12 BADs - Part 2" 2
+{
+    Actor Infantry41            A_Battledroid-Infantry_41
+    Actor Infantry42            A_Battledroid-Infantry_42
+    Actor Infantry43            A_Battledroid-Infantry_43
+    Actor Infantry44            A_Battledroid-Infantry_44
+    Actor Infantry45            A_Battledroid-Infantry_45
+    Actor Infantry46            A_Battledroid-Infantry_46
+
+
+    WaitUntilEqual TurretDestroyed 1
+    WaitUntilEnteredRegion Obi S12_AI_Rgn_01
+
+    Teleport Infantry41 DeadEnd06-Spot01
+    Teleport Infantry42 DeadEnd06-Spot02
+    Teleport Infantry43 DeadEnd06-Spot03
+    Teleport Infantry44 DeadEnd06-Spot04
+    Teleport Infantry45 DeadEnd06-Spot05
+    Teleport Infantry46 DeadEnd06-Spot06                    
+    
+    UnlockDoor A_01_d_blastdoor_39
+    OpenDoor A_01_d_blastdoor_39
+    
+    Call "Run" (Infantry41, Section12-Spot01, 0.0)
+    Call "Run" (Infantry42, Section12-Spot02, 0.5)
+    Call "Run" (Infantry43, Section12-Spot03, 1.0)
+    Call "Run" (Infantry44, Section12-Spot04, 1.5)
+    Call "Run" (Infantry45, Section12-Spot05, 2.0)
+    Call "Run" (Infantry46, Section12-Spot06, 2.5)
+    
+    Pause 1.0    
+    
+    CallAndWait "CheckDoor" (A_01_d_blastdoor_39, DE06_Clear_Rgn, blastdoor_39_clear)    
+}
+
+Script "Section13 BADs - Part 1" 1
+{
+    Actor Infantry35            A_Battledroid-Infantry_35
+    Actor Infantry36            A_Battledroid-Infantry_36
+    Actor Infantry37            A_Battledroid-Infantry_37
+    Actor Infantry38            A_Battledroid-Infantry_38
+    Actor Infantry39            A_Battledroid-Infantry_39
+    Actor Infantry40            A_Battledroid-Infantry_40
+
+
+    WaitUntilEnteredRegion Obi S13_AI_Rgn_01
+
+    RandomInt TeleportLocation 1 2
+
+    If (= TeleportLocation 1)
+	{
+        Teleport Infantry35 DeadEnd07-Spot01
+        Teleport Infantry36 DeadEnd07-Spot02
+        Teleport Infantry37 DeadEnd07-Spot03
+        Teleport Infantry38 DeadEnd07-Spot04
+        Teleport Infantry39 DeadEnd07-Spot05
+        Teleport Infantry40 DeadEnd07-Spot06
+                                                
+        UnlockDoor A_01_d_blastdoor_18
+        OpenDoor A_01_d_blastdoor_18
+        
+        Call "Run" (Infantry35, Section13-Spot01, 0.0)
+        Call "Run" (Infantry36, Section13-Spot02, 0.5)
+        Call "Run" (Infantry37, Section13-Spot03, 1.0)
+        Call "Run" (Infantry38, Section13-Spot04, 1.5)
+        Call "Run" (Infantry39, Section13-Spot05, 2.0)
+        Call "Run" (Infantry40, Section13-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_18, DE07_Clear_Rgn, blastdoor_18_clear)
+    }
+	Else
+	{
+        Teleport Infantry35 DeadEnd08-Spot01
+        Teleport Infantry36 DeadEnd08-Spot02
+        Teleport Infantry37 DeadEnd08-Spot03
+        Teleport Infantry38 DeadEnd08-Spot04
+        Teleport Infantry39 DeadEnd08-Spot05
+        Teleport Infantry40 DeadEnd08-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_12
+        OpenDoor A_01_d_blastdoor_12
+        
+        Call "Run" (Infantry35, Section13-Spot01, 0.0)
+        Call "Run" (Infantry36, Section13-Spot02, 0.5)
+        Call "Run" (Infantry37, Section13-Spot03, 1.0)
+        Call "Run" (Infantry38, Section13-Spot04, 1.5)
+        Call "Run" (Infantry39, Section13-Spot05, 2.0)
+        Call "Run" (Infantry40, Section13-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_12, DE08_Clear_Rgn, blastdoor_12_clear)
+	}
+}
+
+Script "Section13 BADs - Part 2" 2
+{
+    Actor Security21            A_Battledroid-Security_21
+    Actor Security22            A_Battledroid-Security_22
+    Actor Security23            A_Battledroid-Security_23
+    Actor Security24            A_Battledroid-Security_24
+    Actor Security25            A_Battledroid-Security_25
+    Actor Security26            A_Battledroid-Security_26
+
+
+    WaitUntilEqual TurretDestroyed 1
+    WaitUntilEnteredRegion Obi S13_AI_Rgn_01
+
+    RandomInt TeleportLocation 1 2
+
+    If (= TeleportLocation 1)
+	{
+        Teleport Security21 DeadEnd07-Spot01
+        Teleport Security22 DeadEnd07-Spot02
+        Teleport Security23 DeadEnd07-Spot03
+        Teleport Security24 DeadEnd07-Spot04
+        Teleport Security25 DeadEnd07-Spot05
+        Teleport Security26 DeadEnd07-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_18
+        OpenDoor A_01_d_blastdoor_18
+        
+        Call "Run" (Security21, Section13-Spot01, 0.0)
+        Call "Run" (Security22, Section13-Spot02, 0.5)
+        Call "Run" (Security23, Section13-Spot03, 1.0)
+        Call "Run" (Security24, Section13-Spot04, 1.5)
+        Call "Run" (Security25, Section13-Spot05, 2.0)
+        Call "Run" (Security26, Section13-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_18, DE07_Clear_Rgn, blastdoor_18_clear)        
+    }
+	Else
+	{
+        Teleport Security21 DeadEnd08-Spot01
+        Teleport Security22 DeadEnd08-Spot02
+        Teleport Security23 DeadEnd08-Spot03
+        Teleport Security24 DeadEnd08-Spot04
+        Teleport Security25 DeadEnd08-Spot05
+        Teleport Security26 DeadEnd08-Spot06
+        
+        UnlockDoor A_01_d_blastdoor_12
+        OpenDoor A_01_d_blastdoor_12
+        
+        Call "Run" (Security21, Section13-Spot01, 0.0)
+        Call "Run" (Security22, Section13-Spot02, 0.5)
+        Call "Run" (Security23, Section13-Spot03, 1.0)
+        Call "Run" (Security24, Section13-Spot04, 1.5)
+        Call "Run" (Security25, Section13-Spot05, 2.0)
+        Call "Run" (Security26, Section13-Spot06, 2.5)
+        
+        Pause 1.0        
+        
+        CallAndWait "CheckDoor" (A_01_d_blastdoor_12, DE08_Clear_Rgn, blastdoor_12_clear)        
+    }
+}

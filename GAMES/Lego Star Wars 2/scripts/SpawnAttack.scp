@@ -1,0 +1,45 @@
+state Base {
+	Conditions {
+		if Timer > 1 goto Approach
+		if OpponentRange < 1 goto Approach
+	}
+	Actions {
+		//Sets the side to baddie incase any nuterals want to use this script
+		SetSide "baddie"
+
+		KeepWeaponOut
+		BreakFormation
+		ResetTimer
+		FollowPlayer "Run"
+	}
+}
+
+state Wander {
+	Conditions {
+		if GotOpponent == 1 goto Approach
+	}
+	Actions {
+		KeepWeaponOut "FALSE"
+		FollowPath "Walk"
+	}
+}
+
+state Approach {
+	Conditions {
+		if GotOpponent == 1 goto Fight
+		if PartyUnderCover == 1 goto Wander
+	}
+	Actions {
+		CannotBeSeen "FALSE"
+		FollowPlayer
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}

@@ -1,0 +1,157 @@
+10_00	JohnSanderson	Griffin House Common	Fri Sep 08 03:18:01	163	163
+10_01	JohnSanderson	Griffin Upstairs	Fri Sep 08 03:18:59	163	163
+10_02	JohnSanderson	Griffin Downstairs	Fri Sep 08 03:19:36	163	163
+10_03	JohnSanderson	Griffin Outside	Fri Sep 08 17:52:12	163	163
+11_00	JohnSanderson	Hospital Common	Fri Sep 08 03:20:45	163	163
+11_01	JohnSanderson	Hospital Lobby	Fri Sep 08 03:22:01	163	163
+11_02	JohnSanderson	Hospital Ricochet 2	Fri Sep 08 03:22:16	163	163
+11_03	JohnSanderson	Hospital WaterSpill	Fri Sep 08 03:22:56	163	163
+11_04	JohnSanderson	Electron Microscope	Fri Sep 08 03:24:07	163	163
+11_05	JohnSanderson	Maternity Ward	Fri Sep 08 03:24:49	163	163
+11_06	JohnSanderson	Hospital Barricade	Fri Sep 08 03:25:23	163	163
+11_07	JohnSanderson	MRI Room	Fri Sep 08 03:25:51	163	163
+11_08	JohnSanderson	Liposuction Begin	Fri Sep 08 03:26:13	163	163
+11_09	JohnSanderson	Hospital Last Stand	Fri Sep 08 03:26:43	163	163
+11_10	JohnSanderson	Hospital ICU	Fri Sep 08 03:26:55	163	163
+11_11	JohnSanderson	The Morgue	Fri Sep 08 03:27:23	163	163
+11_12	JohnSanderson	Hospital Ricochet	Fri Sep 08 03:27:38	163	163
+11_13	JohnSanderson	Liposuction A	Fri Sep 08 03:28:04	163	163
+11_14	JohnSanderson	Liposuction B	Fri Sep 08 03:28:22	163	163
+11_15	JohnSanderson	Liposuction C	Fri Sep 08 03:28:46	163	163
+11_16	JohnSanderson	Liposuction End	Fri Sep 08 03:29:07	163	163
+12_00	JohnSanderson	Police Station Common	Fri Sep 08 03:29:44	163	163
+12_01	JohnSanderson	Police Station Cells 1	Fri Sep 08 03:30:06	163	163
+12_02	JohnSanderson	Police Station Shower3	Fri Sep 08 03:30:20	163	163
+12_03	JohnSanderson	Police Station Cells 2	Fri Sep 08 03:30:41	163	163
+12_04	JohnSanderson	Police Station Desks 1	Fri Sep 08 03:31:11	163	163
+12_05	JohnSanderson	Police Station Evidence	Fri Sep 08 03:32:05	163	163
+12_06	JohnSanderson	Police Station Desks 2	Fri Sep 08 03:32:19	163	163
+12_07	JohnSanderson	Police Station Lockers	Fri Sep 08 03:32:32	163	163
+12_08	JohnSanderson	Police Station Lobby	Fri Sep 08 03:32:45	163	163
+12_10	JohnSanderson	Police Station Shower 2	Fri Sep 08 03:32:55	163	163
+12_11	JohnSanderson	Police Station Shower 1	Fri Sep 08 03:33:05	163	163
+14_00	JohnSanderson	Spooner St Common	Fri Sep 08 03:33:35	163	163
+14_01	JohnSanderson	Spooner St Hospital	Fri Sep 08 03:34:38	163	163
+14_02	JohnSanderson	Spooner St Police	Fri Sep 08 03:35:33	163	163
+14_03	JohnSanderson	Spooner St Festival	Fri Sep 08 03:36:13	163	163
+14_04	JohnSanderson	Spooner St Soccer	Fri Sep 08 17:52:44	163	163
+14_05	JohnSanderson	Spooner St Res1	Fri Sep 08 17:53:09	163	163
+14_06	JohnSanderson	Spooner St Res2	Fri Sep 08 17:53:37	163	163
+15_00	JohnSanderson	Inside Peter 2 Common	Fri Sep 08 03:37:59	163	163
+15_01	JohnSanderson	The Stomach	Fri Sep 08 03:38:35	163	163
+15_02	JohnSanderson	StraightHall 1	Fri Sep 08 03:39:02	163	163
+15_03	JohnSanderson	Left Lungs	Fri Sep 08 03:39:32	163	163
+15_04	JohnSanderson	SplitHall 1	Fri Sep 08 03:39:45	163	163
+15_06	JohnSanderson	Lois Brain	Fri Sep 08 03:40:36	163	163
+15_07	JohnSanderson	Football Brain	Fri Sep 08 03:41:05	163	163
+15_08	JohnSanderson	StraightHall 2	Fri Sep 08 03:41:15	163	163
+15_09	JohnSanderson	Right Lung	Fri Sep 08 03:41:49	163	163
+15_10	JohnSanderson	SplitHall 2	Fri Sep 08 03:42:03	163	163
+15_11	JohnSanderson	Bladder	Fri Sep 08 03:42:44	163	163
+15_12	JohnSanderson	Trooper Race	Fri Sep 08 03:43:09	163	163
+15_13	JohnSanderson	Left Testicle	Fri Sep 08 03:43:51	163	163
+15_14	JohnSanderson	Right Testicle	Fri Sep 08 03:44:11	163	163
+21_00	JohnSanderson	Channel 5 Common	Fri Sep 08 03:44:25	163	163
+21_01	JohnSanderson	Channel 5 Entrance	Fri Sep 08 03:45:58	163	163
+21_02	JohnSanderson	Channel 5 Newsroom	Fri Sep 08 03:46:45	163	163
+21_03	JohnSanderson	Channel 5 Dance Show	Fri Sep 08 03:47:16	163	163
+21_04	JohnSanderson	Channel 5 Hero Dog	Fri Sep 08 03:47:54	163	163
+21_05	JohnSanderson	Channel 5 Jolly Farm	Fri Sep 08 03:48:30	163	163
+21_06	JohnSanderson	Channel 5 Control Room	Fri Sep 08 03:49:10	163	163
+21_07	JohnSanderson	Channel 5 Dressing Rooms	Fri Sep 08 03:50:03	163	163
+22_00	JohnSanderson	Cheesy's Common	Fri Sep 08 03:50:16	163	163
+22_01	JohnSanderson	Cheesy's Good	Fri Sep 08 03:51:46	163	163
+22_02	JohnSanderson	Cheesy's Dining	Fri Sep 08 03:52:36	163	163
+22_03	JohnSanderson	Cheesy's Evil	Fri Sep 08 03:53:42	163	163
+22_04	JohnSanderson	Cheesy's Mess Hall	Fri Sep 08 18:25:28	163	163
+30_00	JohnSanderson	Geronimo's Common	Fri Sep 08 03:54:46	163	163
+30_01	JohnSanderson	Geronimo's Entrance	Fri Sep 08 03:55:51	163	163
+30_02	JohnSanderson	Geronimo's Lobby 1	Fri Sep 08 03:56:42	163	163
+30_03	JohnSanderson	Geronimo's Elevator 1	Fri Sep 08 03:57:29	163	163
+30_04	JohnSanderson	Geronimo's Chapel	Fri Sep 08 03:58:04	163	163
+30_05	JohnSanderson	Geronimo's Games	Fri Sep 08 03:58:55	163	163
+30_06	JohnSanderson	Geronimo's Buffet	Fri Sep 08 04:00:09	163	163
+30_07	JohnSanderson	Geronimo's Elevator 2	Fri Sep 08 04:00:23	163	163
+30_08	JohnSanderson	Geronimo's Lobby 2	Fri Sep 08 04:00:52	163	163
+30_09	JohnSanderson	Geronimo's Ring	Fri Sep 08 04:01:15	163	163
+31_00	JohnSanderson	Bertram's Lair Common	Fri Sep 08 04:01:33	163	163
+31_01	JohnSanderson	Bertram's Entrance	Fri Sep 08 04:02:24	163	163
+31_02	JohnSanderson	Jetpack Hall	Fri Sep 08 04:03:00	163	163
+31_03	JohnSanderson	Clone Chamber	Fri Sep 08 04:03:59	163	163
+31_04	JohnSanderson	Sliding1	Fri Sep 08 04:04:31	163	163
+31_05	JohnSanderson	Laser Grid	Fri Sep 08 04:05:43	163	163
+31_06	JohnSanderson	Pickup Heaven	Fri Sep 08 04:06:03	163	163
+31_07	JohnSanderson	Nap Time Massacre	Fri Sep 08 04:06:48	163	163
+31_08	JohnSanderson	Elevators	Fri Sep 08 04:07:29	163	163
+31_09	JohnSanderson	Slalom	Fri Sep 08 04:07:48	163	163
+31_10	JohnSanderson	Gantry1	Fri Sep 08 04:08:41	163	163
+31_11	JohnSanderson	Gantry2	Fri Sep 08 04:09:11	163	163
+31_12	JohnSanderson	Gantry Top	Fri Sep 08 04:09:26	163	163
+32_00	JohnSanderson	Docks Common	Fri Sep 08 04:09:43	163	163
+32_01	JohnSanderson	Docks 1	Fri Sep 08 04:11:31	163	163
+32_02	JohnSanderson	Docks 2	Fri Sep 08 17:54:01	163	163
+32_03	JohnSanderson	Docks 3	Fri Sep 08 17:54:35	163	163
+32_04	JohnSanderson	Docks 4	Fri Sep 08 04:12:53	163	163
+32_05	JohnSanderson	Docks 5	Fri Sep 08 04:13:31	163	163
+32_06	JohnSanderson	Docks 6	Fri Sep 08 04:13:51	163	163
+40_00	JohnSanderson	Dog Track Common	Fri Sep 08 04:14:06	163	163
+40_01	JohnSanderson	Dog Track Entrance	Fri Sep 08 04:15:16	163	163
+40_02	JohnSanderson	Dog Track Box 1	Fri Sep 08 04:16:04	163	163
+40_03	JohnSanderson	Dog Track Box 2	Fri Sep 08 04:16:28	163	163
+40_04	JohnSanderson	Dog Track Box 3	Fri Sep 08 04:16:56	163	163
+40_05	JohnSanderson	Dog Track Box 4	Fri Sep 08 04:17:10	163	163
+40_06	JohnSanderson	Dog Track Box 5	Fri Sep 08 04:17:24	163	163
+40_08	JohnSanderson	Dog Track Concession	Fri Sep 08 04:17:45	163	163
+40_09	JohnSanderson	Dog Track Bleachers	Fri Sep 08 04:18:27	163	163
+40_10	JohnSanderson	Dog Track Kennel	Fri Sep 08 04:18:48	163	163
+40_11	JohnSanderson	Dog Track Race Track	Fri Sep 08 04:19:24	163	163
+43_00	JohnSanderson	Playground 1 Common	Fri Sep 08 04:19:43	163	163
+43_01	JohnSanderson	Playground 1	Fri Sep 08 04:20:33	163	163
+43_02	JohnSanderson	Playground 2	Fri Sep 08 04:21:11	163	163
+43_03	JohnSanderson	Playground 3	Fri Sep 08 04:21:30	163	163
+43_04	JohnSanderson	Playground 4	Fri Sep 08 04:21:49	163	163
+44_00	JohnSanderson	Chicken Fight Common	Fri Sep 08 04:22:30	163	163
+44_01	JohnSanderson	Drunken Clam	Fri Sep 08 04:23:00	163	163
+44_02	JohnSanderson	Fuzzy Clam	Fri Sep 08 04:23:39	163	163
+44_03	JohnSanderson	Prison Riot	Fri Sep 08 04:23:51	163	163
+44_04	JohnSanderson	Aircraft Carrier	Fri Sep 08 04:24:15	163	163
+44_05	JohnSanderson	Cargo Plane	Fri Sep 08 04:24:32	163	163
+44_06	JohnSanderson	Falling Life Raft	Fri Sep 08 04:24:49	163	163
+44_07	JohnSanderson	Penthouse Crisis	Fri Sep 08 04:25:21	163	163
+81_00	JohnSanderson	Sky Hook Microgame	Fri Sep 08 04:25:50	163	163
+81_01	JohnSanderson	Sexy Party Microgame	Fri Sep 08 04:26:18	163	163
+81_03	JohnSanderson	Microgame Vote	Fri Sep 08 04:26:44	163	163
+81_05	JohnSanderson	Can Of Tuna Microgame	Fri Sep 08 04:27:10	163	163
+81_07	JohnSanderson	Marco Polo	Fri Sep 08 04:27:24	163	163
+82_00	JohnSanderson	Most Disturbing Microgame	Fri Sep 08 04:27:40	163	163
+82_01	JohnSanderson	Microgame Columbus	Fri Sep 08 04:28:06	163	163
+82_02	JohnSanderson	Microgame Worst Job	Fri Sep 08 04:28:29	163	163
+82_03	JohnSanderson	Crazy Idea	Fri Sep 08 04:28:42	163	163
+82_04	JohnSanderson	Nature Special NS	Fri Sep 08 04:29:08	163	163
+82_05	JohnSanderson	Big	Fri Sep 08 04:29:25	163	163
+83_00	JohnSanderson	ForgotHowToSitDown	Fri Sep 08 04:29:37	163	163
+83_01	JohnSanderson	Blown budget	Fri Sep 08 04:29:48	163	163
+83_02	JohnSanderson	MicrogameSmallStature	Fri Sep 08 04:30:07	163	163
+83_03	JohnSanderson	Jesus Microgame	Fri Sep 08 04:30:20	163	163
+83_04	JohnSanderson	GodDance	Fri Sep 08 04:30:33	163	163
+83_05	JohnSanderson	Microgame Disco	Fri Sep 08 04:30:51	163	163
+84_00	JohnSanderson	Microgame Locked Keys	Fri Sep 08 04:31:06	163	163
+99_02	JohnSanderson	Attract mode	Fri Sep 08 04:31:14	163	163
+99_51	JohnSanderson	Load Hospital Screen	Fri Sep 08 04:31:20	163	163
+99_52	JohnSanderson	Loading PoliceStation	Fri Sep 08 04:31:25	163	163
+99_53	JohnSanderson	Loading Spooner Street	Fri Sep 08 04:31:31	163	163
+99_54	JohnSanderson	Loading BertramsLair	Fri Sep 08 04:31:36	163	163
+99_55	JohnSanderson	Loading Channel5	Fri Sep 08 04:31:41	163	163
+99_56	JohnSanderson	Loading CheesyCharlies	Fri Sep 08 04:31:46	163	163
+99_57	JohnSanderson	Loading Docks	Fri Sep 08 04:31:52	163	163
+99_58	JohnSanderson	Loading DogTrack	Fri Sep 08 04:31:57	163	163
+99_59	JohnSanderson	Loading GeronimosPalace	Fri Sep 08 04:32:02	163	163
+99_60	JohnSanderson	Loading GriffenHouse	Fri Sep 08 04:32:08	163	163
+99_61	JohnSanderson	Loading InsidePeter	Fri Sep 08 04:32:13	163	163
+99_62	JohnSanderson	Loading Playground	Fri Sep 08 04:32:19	163	163
+99_63	JohnSanderson	Loading DrunkenClam	Fri Sep 08 04:32:24	163	163
+99_80	JohnSanderson	Play FMV and Load Level	Fri Sep 08 04:32:29	163	163
+99_91	JohnSanderson	Title Screen	Fri Sep 08 04:32:54	163	163
+99_92	JohnSanderson	Options Screen	Fri Sep 08 04:33:09	163	163
+99_96	JohnSanderson	common game ui	Fri Sep 08 04:33:19	163	163
+

@@ -1,0 +1,241 @@
+[Public]
+;Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
+Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Engine.MasterMD5Commandlet,Class=Class,MetaClass=Core.Commandlet)
+Preferences=(Caption="Advanced",Parent="Advanced Options")
+Preferences=(Caption="Game Engine Settings",Parent="Advanced",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+Preferences=(Caption="Key Aliases",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=Aliases)
+Preferences=(Caption="Raw Key Bindings",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=RawKeys)
+Preferences=(Caption="Drivers",Parent="Advanced Options",Class=Engine.Engine,Immediate=False,Category=Drivers)
+Preferences=(Caption="Public Server Information",Parent="Networking",Class=Engine.GameReplicationInfo,Immediate=True)
+Preferences=(Caption="Game Settings",Parent="Advanced Options",Class=Engine.GameInfo,Immediate=True)
+
+[Errors]
+NetOpen="Error opening file"
+NetWrite="Error writing to file"
+NetRefused="Server refused to send '%s'"
+NetClose="Error closing file"
+NetSize="File size mismatch"
+NetMove="Error moving file"
+NetInvalid="Received invalid file request"
+NoDownload="Package '%s' is not downloadable"
+DownloadFailed="Downloading package '%s' failed: %s"
+RequestDenied="Server requested file from pending level: Denied"
+ConnectionFailed="Connection failed"
+ChAllocate="Couldn't allocate channel"
+NetAlready="Already networking"
+NetListen="Listen failed: No linker context available"
+LoadEntry="Can't load Entry: %s"
+InvalidUrl="Invalid URL: %s"
+InvalidLink="Invalid Link: %s"
+FailedBrowse="Failed to enter %s: %s"
+Listen="Listen failed: %s"
+AbortToEntry="Failed; returning to Entry"
+ServerOpen="Servers can't open network URLs"
+ServerListen="Dedicated server can't listen: %s"
+Pending="Pending connect to '%s' failed; %s"
+LoadPlayerClass="Failed to load player class"
+ServerOutdated="Server's version is outdated"
+ClientOutdated="You need to apply the latest patches"
+
+[Progress]
+CancelledConnect="Cancelled Connect Attempt"
+RunningNet="%s: %s (%i players)"
+NetReceiving="Receiving '%s': %i/%i"
+NetReceiveOk="Successfully received '%s'"
+NetSend="Sending '%s'"
+NetSending="Sending '%s': %i/%i"
+Connecting="Connecting..."
+Listening="Listening for clients..."
+Loading="Loading"
+Saving="Saving"
+Paused="Paused by %s"
+ReceiveFile="Receiving '%s' (F10 Cancels)"
+ReceiveOptionalFile="Receiving optional file '%s' (Press F10 to Skip)"
+ReceiveSize="Size %iK, Complete %3.1f%%"
+ConnectingText=""
+ConnectingURL="unreal://%s/%s"
+
+[ServerCommandlet]
+HelpCmd=server
+HelpOneLiner="Network game server"
+HelpUsage=server map.unr[?game=gametype] [-option...] [parm=value]...
+HelpWebLink=http://unreal.epicgames.com/servertips.htm
+HelpParm[0]=Log
+HelpDesc[0]="Specify the log file to generate"
+HelpParm[1]=AllAdmin
+HelpDesc[1]="Give all players admin privelages"
+
+[MasterMD5Commandlet]
+HelpCmd=mastermd5 [*.ext {*.ext ...} ]
+HelpOneLiner="Generate the master MD5 table"
+HelpUsage=mastermd5
+HelpWebLink=http://unreal.epicgames.com/servertips.htm
+
+[General]
+Upgrade="To enter this server, you need the latest free update to Unreal available from Epic's Web site:"
+UpgradeURL="http://www.unreal.com/upgrade"
+UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
+Version="Version %i"
+
+[AccessControl]
+IPBanned="Your IP address has been banned on this server."
+WrongPassword="The password you entered is incorrect."
+NeedPassword="You need to enter a password to join this game."
+SessionBanned="Your IP address has been banned from the current game session."
+
+[Ammo]
+PickupMessage="You picked up some ammo."
+
+[ConcatWarningTest]
+locString="Localized String!"
+
+[Crushed]
+DeathString="%o was crushed by %k."
+FemaleSuicide="%o was crushed."
+MaleSuicide="%o was crushed."
+
+[DamageType]
+DeathString="%o was killed by %k."
+FemaleSuicide="%o killed herself."
+MaleSuicide="%o killed himself."
+
+[GameInfo]
+DefaultPlayerName="Player"
+GameName="Game"
+VoteTypeStrings[0]="Restart Game"
+VoteTypeStrings[1]="Change Map"
+VoteTypeStrings[2]="Start Match"
+VoteTypeStrings[3]="Kick Player"
+VoteTypeStrings[4]="Mute Player"
+bAlternateMode=False
+
+[GameMessage]
+SwitchLevelMessage="Switching Levels"
+LeftMessage=" left the game."
+FailedTeamMessage="Could not find team for player"
+FailedPlaceMessage="Could not find a starting spot"
+FailedSpawnMessage="Could not spawn player"
+EnteredMessage=" entered the game."
+MaxedOutMessage="Server is already at capacity."
+OvertimeMessage="Scores are tied."
+GlobalNameChange="changed name to"
+NewTeamMessage="is now on the"
+NewTeamMessageTrailer="team."
+NoNameChange="Name is already in use."
+VoteStarted="started a vote."
+VotePassed="Vote passed."
+
+[GameProfile]
+LadderNames[0]="DEATHMATCH"
+LadderNames[1]="CAPTURE THE FLAG"
+LadderNames[2]="DOUBLE DOMINATION"
+LadderNames[3]="BOMBING RUN"
+DifficultyNames[0]="NOVICE"
+DifficultyNames[1]="SKILLED"
+DifficultyNames[2]="MASTERFUL"
+DifficultyNames[3]="GODLIKE"
+
+[Gibbed]
+DeathString="%o exploded in a shower of body parts"
+FemaleSuicide="%o exploded in a shower of body parts"
+MaleSuicide="%o exploded in a shower of body parts"
+
+[LevelInfo]
+Title="Untitled"
+
+[MatSubAction]
+Desc="N/A"
+
+[Mutator]
+FriendlyName="Mutator"
+Description="Description"
+
+[Pickup]
+PickupMessage="Snagged an item."
+
+[PlayerController]
+QuickSaveString="Quick Saving"
+NoPauseMessage="Game is not pauseable"
+ViewingFrom="Now viewing from"
+OwnCamera="Now viewing from own camera"
+
+[PlayerProfile]
+StyleString[0]="Psycho"
+StyleString[1]="Aggressive"
+StyleString[2]="CoolHeaded"
+StyleString[3]="Evasive"
+StyleString[4]="Stealthy"
+PositionCodes[0]="D"
+PositionCodes[1]="O"
+PositionCodes[2]="F"
+
+[PlayerReplicationInfo]
+StringSpectating="Spectating"
+StringUnknown="Unknown"
+
+[ProfileBase]
+PositionText[0]="DEFENSE"
+PositionText[1]="OFFENSE"
+PositionText[2]="FREELANCE"
+
+[SubActionCameraEffect]
+Desc="Camera effect"
+
+[SubActionCameraShake]
+Desc="Shake"
+
+[SubActionFOV]
+Desc="FOV"
+
+[SubActionFade]
+Desc="Fade"
+
+[SubActionGameSpeed]
+Desc="Game Speed"
+
+[SubActionOrientation]
+Desc="Orientation"
+
+[SubActionSceneSpeed]
+Desc="Scene Speed"
+
+[SubActionTrigger]
+Desc="Trigger"
+
+[Suicided]
+DeathString="%o had a sudden heart attack."
+
+[TeamInfo]
+ColorNames[0]="red"
+ColorNames[1]="blue"
+ColorNames[2]="green"
+ColorNames[3]="gold"
+
+[Volume]
+LocationName="unspecified"
+
+[Weapon]
+MessageNoAmmo=" has no ammo"
+
+[WeaponPickup]
+PickupMessage="You got a weapon"
+
+[XBoxPlayerInput]
+LookPresets[0].PresetName="Linear"
+LookPresets[1].PresetName="Exponential"
+LookPresets[2].PresetName="Hybrid"
+LookPresets[3].PresetName="Custom"
+
+[fell]
+DeathString="%o left a small crater"
+FemaleSuicide="%o left a small crater"
+MaleSuicide="%o left a small crater"
+
+[xNameList]
+maNames=()
+mDefaultName="NoName"
+
+[xPrivilegeBase]
+Tags=()
+

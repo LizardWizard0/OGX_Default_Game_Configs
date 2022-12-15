@@ -1,0 +1,78 @@
+[LevelInfo0]
+Title="Disclosure"
+
+[LevelSummary]
+Title="Disclosure"
+
+[ZoneInfo1]
+LocationName="Red Spawn Room"
+
+[ZoneInfo10]
+LocationName="Red Hall"
+
+[ZoneInfo11]
+LocationName="Bomb Spawn Room"
+
+[ZoneInfo12]
+LocationName="Blue Sniper Deck"
+
+[ZoneInfo13]
+LocationName="Blue Hall"
+
+[ZoneInfo14]
+LocationName="Blue Hall"
+
+[ZoneInfo15]
+LocationName="Blue Spawn Room"
+
+[ZoneInfo16]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo17]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo18]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo19]
+LocationName="Blue Spawn Room"
+
+[ZoneInfo2]
+LocationName="Red Bomb Room"
+
+[ZoneInfo20]
+LocationName="Blue Hall"
+
+[ZoneInfo21]
+LocationName="Blue Hall"
+
+[ZoneInfo22]
+LocationName="Rocket Launcher"
+
+[ZoneInfo3]
+LocationName="Red Bomb Room"
+
+[ZoneInfo4]
+LocationName="Red Bomb Room"
+
+[ZoneInfo5]
+LocationName="Red Spawn Room"
+
+[ZoneInfo6]
+LocationName="Red Hall"
+
+[ZoneInfo7]
+LocationName="Red Hall"
+
+[ZoneInfo8]
+LocationName="Red Sniper Deck"
+
+[ZoneInfo9]
+LocationName="Red Hall"
+
+[xBombDelivery0]
+ObjectiveName="bluebombhoop"
+
+[xbombdelivery1]
+ObjectiveName="bluebombhoop"
+

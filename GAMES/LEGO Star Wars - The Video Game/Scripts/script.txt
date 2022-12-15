@@ -1,0 +1,16 @@
+default
+defend
+Attack
+Jedi
+NonJedi
+Droid
+Storm
+Wander
+patrol
+Sniper
+block
+DoggedAttack
+FreePlayDefend
+GenericDefend
+DisguisedClone
+CommanderPatrol

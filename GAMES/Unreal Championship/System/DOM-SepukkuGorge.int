@@ -1,0 +1,30 @@
+[LevelInfo0]
+Title="Sepukku Gorge"
+
+[LevelSummary]
+Title="Sepukku Gorge"
+
+[Volume0]
+LocationName="Point 'B' Side"
+
+[Volume1]
+LocationName="Point 'A' Side"
+
+[Volume2]
+LocationName="Sepukku Bridge"
+
+[Volume3]
+LocationName="Red Cave"
+
+[Volume4]
+LocationName="Blue Cave"
+
+[Volume5]
+LocationName="Dom Point 'B'"
+
+[Volume6]
+LocationName="Dom Point 'A'"
+
+[ZoneInfo0]
+LocationName="Outside"
+

@@ -1,0 +1,778 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+Actor QuiGon "Qui_Gon"
+Actor TC14 "A_TC14"
+Actor Nem1 "A_Nemoidian01_03"
+Actor Nem2 "A_Nemoidian02_04"
+Actor ConferenceRoomDoor "A_01_d_conf_01"
+
+
+
+
+///////////////////
+//  TC14 Escort  //
+///////////////////
+
+
+Script "TC14 Escort"
+{
+	PlayFlourish "l01_m_intro_02.wav"
+	FadeUp
+	
+	ChildScript "Obi Equips Saber"
+	{
+		WaitUntilEquippedItem ObiWan EquipObiSaber.dsc
+		SayLine QuiGon "/Qui-GonJinn_1172/What are you doing?"
+		SayLine QuiGon "/Qui-GonJinn_1173/You endanger us and the mission."
+	}
+	
+	TakeControlOf TC14 
+	TakeControlOf QuiGon 
+
+	Pause 1.0   // Wait a second before Qui-Gon speaks to you
+
+	SayLineAndContinue QuiGon "/Qui-GonJinn_45.28/" 
+	PlayAnimationGoalAndWait QuiGon "human_loiter-pointfwd.anim" 
+
+	Event "Play Ramp Animation"    // Can't do this from the scripts yet
+	PlaySoundAndWait  01_rep_ramp_open.wav	 "A_01_rpc_ramp_01"
+	PlayLoopingSound  01_rep_ramp_hydraul_lp.wav  "A_01_rpc_ramp_01"
+	WaitFor "RampToLower"
+	
+	LookAt TC14 ObiWan
+	WalkToNode TC14 "tc14_greet"
+
+	LookAt QuiGon TC14
+	WalkToNode QuiGon "quigon_greet"
+	
+	WaitUntilEnteredRegion QuiGon "trig_tc14_converse_01" 
+	LookAt TC14 QuiGon 
+	SayLine TC14 "/TC-14_58.24/Greetings ambassadors."
+	SayLine TC14 "/TC-14_58.25/I am TC-14 human-cyborg relations."
+	SayLine TC14 "/TC-14_58.26/My masters apologize that they can not be here to greet you personally."
+	SayLine TC14 "/TC-14_58.27/If you would follow me to the conference room..."
+
+	Follow QuiGon TC14 5.0
+	WalkToNode TC14 "tc14_outside_conf"  // Go to the conference room
+
+	
+	ChildScript "Scold Obi if he gets too far away"  
+	{
+		WaitUntilFar ObiWan TC14 25  // If Obi gets more than 25 meters away
+
+		LookAt TC14 ObiWan
+		LookAt QuiGon ObiWan
+
+		ChildScript "Start walking again when Obi returns"
+		{
+			WaitUntilNear ObiWan TC14 20.0 
+			StopActions QuiGon
+			StopActions TC14
+			Follow QuiGon TC14 5.0
+			WalkToNode TC14 "tc14_outside_conf"  // Start going to the conference room again
+			ResetScript "Scold Obi if he gets too far away"
+		}
+
+		Pause 3.0 
+		SayLine TC14 "/TC-14_58.2/" 
+		Pause 5.0 
+		SayLine TC14 "/TC-14_58.28/" 
+		Pause 5.0 
+		SayLine TC14 "/TC-14_58.21/" 
+		Pause 5.0 
+		SayLine TC14 "/TC-14_58.22/" 
+		Pause 5.0 
+		SayLineAndContinue QuiGon "/Qui-GonJinn_45.45/"
+		PlayAnimationGoalAndWait QuiGon "human_loiter-gesturecrossarms.anim" 
+		Pause 5.0 
+		SayLineAndContinue QuiGon "/Qui-GonJinn_45.44/" 
+		PlayAnimationGoalAndWait QuiGon "human_loiter-pointfwd.anim" 
+		Pause 2.0 
+
+		Loop
+	}
+
+
+	WaitUntilEnteredRegion TC14 "trig_script_tc14_say_1" 
+	SayLine TC14 "/TC-14_58.29/" 
+	Pause 0.5 
+	SayLineAndContinue  TC14 "/TC-14_58.32/" 
+
+	WaitUntilEnteredRegion  TC14 "trig_script_tc14_say_3" 
+	SayLineAndContinue  TC14 "/TC-14_58.3/" 
+
+	WaitUntilEnteredRegion  TC14 "trig_script_tc14_say_4" 
+	SayLineAndContinue  TC14 "/TC-14_58.31/" 
+		
+	WaitUntilArrived TC14 "tc14_outside_conf" 
+	UnlockDoor ConferenceRoomDoor 
+	Nudge TC14 ConferenceRoomDoor
+
+	LookAt TC14 ObiWan 
+	
+	ChildScript   // Will end as soon as Obi enters the conference room
+	{
+		SayLine TC14 "/TC-14_58.33/Here we are ambassadors.  Please enter the conference room."
+		Pause 5.0
+		Loop
+	}
+
+	Pause 0.5
+	StopActions QuiGon     // Stop Following TC14
+	LookAt QuiGon ObiWan
+	WalkToNode QuiGon "quigon_attack"
+
+	WaitUntilEnteredRegion ObiWan "trig_d_conf_01_2"
+}
+
+
+
+
+
+
+////////////////////////////
+//  Secretive Nemoidians  //
+////////////////////////////
+
+
+Script "Secretive Nemoidians"
+{
+	WaitUntilEnteredRegion ObiWan "trig_start_nim_talking"
+
+	WakeUp Nem1
+	WakeUp Nem2
+	TakeControlOf Nem1
+	TakeControlOf Nem2
+	
+	LookAt Nem1 Nem2
+	LookAt Nem2 Nem1
+
+	ChildScript "Secret Conversation"
+	{
+		SayLine Nem1 "/Neimoidian1_86/Preparations are underway already."
+		SayLine Nem2 "/Neimoidian2_87/I don't understand why we're doing this."
+		SayLine Nem1 "/Neimoidian1_88/It's too late for that."
+		SayLine Nem2 "/Neimoidian2_89/We must be successful.  It could mean absolute ruin if we are not."
+		WaitUntilEnteredRegion ObiWan "trig_start_nim_talking"
+		Pause 5.0
+		Loop 
+	}
+
+	WaitUntilNear ObiWan Nem2 4.0
+	EndScript "Secret Conversation"
+
+	SayLine Nem1 "/Neimoidian1_90/Shhh!!" 
+	Child WalkToNodeAndWait Nem1 "nem_01"
+	Child WalkToNodeAndWait Nem2 "nem_02"
+	WaitForAll 
+
+	// Now the Nemoidians will "scold" Obi if he gets too close to them
+	ChildScript Scold 
+	{
+		WaitUntilNear ObiWan Nem2 4.0
+
+		LookAt Nem1 ObiWan
+		LookAt Nem2 ObiWan
+
+		ChildScript   // Reset the scold script when Obi leaves
+		{
+			WaitUntilFar ObiWan Nem2 5.0
+			LookAt Nem1 Nem2
+			LookAt Nem2 Nem1
+			ResetScript Scold  // Resets this script too
+		}
+
+		SayLine Nem2 "/Neimoidian2_91/Hello Ambassador."
+		Pause 0.25
+		SayLine Nem1 "/Neimoidian1_92/Greetings Ambassadors."
+		Pause 0.25
+		SayLine Nem1 "/Neimoidian1_93/I'm afraid we can't discuss Federation business with you."
+		Pause 2.0
+
+		SayLine Nem1 "/Neimoidian1_98/You look suspiciously like a Jedi."
+		Pause 0.25
+		SayLine Nem2 "/Neimoidian2_99/I hadn't known the Senate planned to send Jedi to this meeting."
+		Pause 2.0
+
+		SayLine Nem1 "/Neimoidian1_100/Aren't you afraid you'll be late for your meeting?"
+		Pause 1.0
+		SayLine Nem2 "/Neimoidian2_101/Run along to your meeting."
+		Pause 2.0
+
+		SayLine Nem1 "/Neimoidian1_102/You'll find our conference rooms quite comfortable."
+		Pause 0.25
+		SayLine Nem2 "/Neimoidian2_103/We've just had new climate control installed in our conference rooms."
+		Pause 4.0
+
+		Loop 
+	}
+
+	WaitUntilEnteredRegion ObiWan "trig_d_conf_01_2"
+}
+
+
+
+
+
+///////////////////
+//  Hostile Obi  //
+///////////////////
+
+
+Script "Hostile Obi"
+{
+	// Don't hurt any of these guys before entering the conference room or else...
+	Child WaitUntilDamagedBy TC14 ObiWan
+	Child WaitUntilDamagedBy A_PK_4_01 ObiWan
+	Child WaitUntilDamagedBy A_PK_4_02 ObiWan
+	Child WaitUntilDamagedBy A_PK_4_03 ObiWan
+	Child WaitUntilDamagedBy A_PK_4_04 ObiWan
+	Child WaitUntilDamagedBy A_PK_4_07 ObiWan
+	Child WaitUntilDamagedBy A_PK_4_08 ObiWan
+	Child WaitUntilDamagedBy A_BAD_Security_04 ObiWan
+	Child WaitUntilDamagedBy A_BAD_Security_05 ObiWan
+	Child WaitUntilDamagedBy A_BAD_infantry_conf_1	ObiWan
+	Child WaitUntilDamagedBy A_BAD_infantry_conf_2	ObiWan
+	Child WaitUntilDamagedBy A_BAD_infantry_conf_3	ObiWan
+	Child WaitUntilDamagedBy A_BAD_infantry_conf_4	ObiWan
+	Child WaitUntilDamagedBy A_Starfighter_droid_04	ObiWan
+	Child WaitUntilDamagedBy A_Starfighter_droid_03	ObiWan
+
+	ChildScript 
+	{
+		WaitUntilDamagedBy Nem1 ObiWan
+		SayLineAndContinue Nem2 "/Neimoidian1_96/You killed him!  Help!  Guards!  Help!"
+	}
+
+	ChildScript 
+	{
+		WaitUntilDamagedBy Nem2 ObiWan
+		SayLineAndContinue Nem1 "/Neimoidian1_96/You killed him!  Help!  Guards!  Help!"
+	}
+
+	WaitForAny    // Wait for any of them to be damaged by Obi-Wan
+
+	EndScript "Enter Conference Room"
+	EndScript "TC14 Escort"
+	EndScript "Secretive Nemoidians"
+
+	ReturnControlTo QuiGon
+
+	ForceState TC14 Retreat
+	ForceState Nem1 Retreat
+	ForceState Nem2 Retreat
+
+	PlayLoopingSound "fed_klaxon_01.wav"
+	
+	// Killing the lights changes their texture to a red one
+	Kill "A_01_HL_clear_light_01"
+	Kill "A_01_HL_clear_light_02"
+	Kill "A_01_HL_clear_light_03"
+	Kill "A_01_HL_clear_light_04"
+	Kill "A_01_HL_clear_light_05"
+	Kill "A_01_HL_clear_light_06"
+	Kill "A_01_HL_clear_light_07"
+	Kill "A_01_HL_clear_light_08"
+	Kill "A_01_HL_clear_light_09"
+	Kill "A_01_HL_clear_light_10"
+	Kill "A_01_HL_clear_light_11"
+	Kill "A_01_HL_clear_light_12"
+	Kill "A_01_HL_clear_light_13"
+	Kill "A_01_HL_clear_light_14"
+	Kill "A_01_HL_clear_light_15"
+	Kill "A_01_HL_clear_light_16"
+	Kill "A_01_HL_clear_light_17"
+	Kill "A_01_HL_clear_light_18"
+	Kill "A_01_HL_clear_light_19"
+	Kill "A_01_HL_clear_light_20"
+	Kill "A_01_HL_clear_light_21"
+	Kill "A_01_HL_clear_light_22"
+
+	Event "Obi Must Die"	
+}
+
+
+
+Script "Enter conference room"
+{
+	WaitUntilEnteredRegion ObiWan "trig_d_conf_01_2"
+	EndScript "Hostile Obi"
+	Sleep Nem1
+	Sleep Nem2
+	BeginScript "Conference Room CutScene"
+}
+
+
+
+
+
+////////////////////////////////
+//  Conference Room CutScene  //
+////////////////////////////////
+
+
+Actor ConfBAD1 A_BAD_infantry_conf_1
+Actor ConfBAD2 A_BAD_infantry_conf_2
+Actor ConfBAD3 A_BAD_infantry_conf_3
+Actor ConfBAD4 A_BAD_infantry_conf_4
+
+StoreScript "Conference Room CutScene"
+{
+	BeginCutScene
+	WaitUntilEnteredRegion QuiGon "trig_d_conf_01_2"
+
+	ChildScript
+	{
+		SayLine TC14 "/TC-14_55/My masters will be with you shortly."
+		Nudge TC14 ConferenceRoomDoor
+	}
+
+	// Shot #1
+
+	//CameraTrack ObiWan A_RFP_CR_camera_01   // *** CameraTrack doesn't take RefPos's yet
+	WalkToNode QuiGon "quigon_in_conf"
+	WalkToNode QuiGon "tc14_in_conf"  // Putting a WalkToNode immediately afterwards
+	WalkToNode QuiGon "out_in_conf"   //  causes Qui-Gon to go there first
+
+	Pause 1
+	WalkToNode ObiWan "obi_in_conf"
+
+	WaitUntilArrived ObiWan "obi_in_conf"
+	LookAt ObiWan QuiGon
+	WaitUntilArrived QuiGon "quigon_in_conf"
+
+	SayLine ObiWan "/Obi-WanKenobi_71/I have a bad feeling about this."
+	SayLine QuiGon "/Qui-GonJinn_72/I don't sense anything."
+	SayLine ObiWan "/Obi-WanKenobi_73/It's not about the mission, Master.  It's something elsewhere.  Elusive."
+
+	Nudge TC14 ConferenceRoomDoor
+	//CameraOff  // Get rid of that camera ***
+
+
+	// Shot #2
+
+	//CameraTrack TC14 A_RFP_CR_camera_01  // ***
+	Event "Setup Tea Tray"
+
+	ChildScript  "Prepare Ambush"
+	{
+		WalkToNodeAndWait TC14 "tc14_tea"
+		Nudge TC14 ConferenceRoomDoor
+		LockDoor ConferenceRoomDoor
+
+		TakeControlOf ConfBAD1
+		InvincibilityOn ConfBAD1
+		WalkToNode ConfBAD1 bad_conf1
+
+		TakeControlOf ConfBAD2
+		InvincibilityOn ConfBAD2
+		WalkToNode ConfBAD2 bad_conf2
+
+		TakeControlOf ConfBAD3
+		InvincibilityOn ConfBAD3
+		WalkToNode ConfBAD3 bad_conf3
+
+		TakeControlOf ConfBAD4
+		InvincibilityOn ConfBAD4
+		WalkToNode ConfBAD4 bad_conf4
+
+		Pause 0.5
+		Event "Put Down Tea Tray"
+		StopActions TC14
+		LookAt TC14 ObiWan
+	}
+
+	SayLine QuiGon "/Qui-GonJinn_74/Don't center on your anxiety, Obi-Wan.  Keep your concentration on the here and now, where it belongs."
+	//CameraOff
+
+
+	// Shot #3
+
+	//CameraTrack ObiWan (-22.6 -22.7 149.2)  (0.0, 1.5, 0.0) ***
+	SayLine ObiWan "/Obi-WanKenobi_75/Master Yoda says I should be mindful of the future."
+
+	ChildScript "Starfighter Droids"
+	{
+		TriggerUberGen "A_UG_conf_sfds_02"
+		Pause 0.7
+		TriggerUberGen "A_UG_conf_sfds_01"
+		Pause 2.5
+		TriggerUberGen "A_UG_conf_sfds_03"
+	}
+
+	//CameraOff
+
+	
+	// Shot #4
+
+	//CameraTrack QuiGon  (-17.9  -22.1  148.8)  (0.0  1.5  0.0) ***
+	SayLine QuiGon "/Qui-GonJinn_76/But not at the expense of the present.  Be mindful of the Living Force, my young Padawan."
+	SayLine ObiWan "/Obi-WanKenobi_77/Yes, Master."
+	//CameraOff
+
+
+	WaitForScriptToEnd PrepareAmbush
+	EndCutScene
+	BeginScript "Conference Room Ambush"
+}
+
+
+
+
+
+//////////////////////////////
+//  Conference Room Ambush  //
+//////////////////////////////
+
+
+StoreScript "Conference Room Ambush"
+{
+	ChildScript "TC14 Panics if Obi attacks her"
+	{
+		WaitUntilDamagedBy TC14 ObiWan
+		ForceState TC14 Retreat
+	}
+
+	Pause 5.0
+	PlaySound "explo_long_01.wav" ConferenceRoomDoor  // the door is in the direction of the explosions
+	PlaySound "Explo_Med_01.wav" ConferenceRoomDoor
+	Pause 0.5
+	Event "Poison Gas"
+
+	ChildScript {
+		SetPainRegion "trig_conf_room_gas_01" 10.15
+		WaitUntilExitedRegion Obi "trig_conf_room_gas_01"
+		SetPainRegion "trig_conf_room_gas_01" 0.0
+	} 
+
+	PlayFlourish 01_flourish_gas.wav
+	ForceState TC14 Retreat
+
+	Pause 0.5
+	StopActions QuiGon
+	LookAt QuiGon TC14
+	//SayLine ObiWan "/Obi-WanKenobi_82/[BOOM]  What happened?!!"
+	SayLine QuiGon "Qui-GonJinn_83/They've destroyed our ship!"
+	EquipWeapon QuiGon
+
+	SayLine QuiGon "/Qui-GonJinn_84/(gas begins hissing in) Dioxis gas!  Poison!"
+	SayLine QuiGon "/Qui-GonJinn_85/Concentrate, Obi-Wan."
+	SayLine QuiGon "/Qui-GonJinn_1166/The force can be used to heal - yourself and others."
+	SayLine QuiGon "/Qui-GonJinn_1158/Quickly!  Do as I do!"
+	// QuiGon->Character()->ActivateForcePower(ForceHealID ***
+	Pause 2.5
+	// QuiGon->Character()->DeactivateAllForcePowers( ***
+	StopActions QuiGon
+	WalkToNode QuiGon "quigon_attack"
+
+	Pause 2.5
+	SayLine ConfBAD1 "/BattleDroidInfantry1_66/They must be dead by now, but make certain..."
+	SayLine ConfBAD1 "/BattleDroidInfantry1_221.73/Check it out corporal..."
+	SayLine ConfBAD2 "/BattleDroidInfantry1_215.2/Roger Roger..."
+
+	LookAt QuiGon ObiWan
+	Pause 0.5
+
+	LockDoor "A_01_d_blastdoor_02"
+	UnlockDoor "A_01_d_blastdoor_05"
+
+	UnlockDoor ConferenceRoomDoor
+	Nudge ConfBAD1 ConferenceRoomDoor
+	LockDoor ConferenceRoomDoor
+
+	ReturnControlTo ConfBAD1
+	InvincibilityOff ConfBAD1
+
+	ReturnControlTo ConfBAD2
+	InvincibilityOff ConfBAD2
+
+	ReturnControlTo ConfBAD3
+	InvincibilityOff ConfBAD3
+
+	ReturnControlTo ConfBAD4
+	InvincibilityOff ConfBAD4
+
+	
+	ReturnControlTo QuiGon
+	ForceTarget QuiGon ConfBAD1
+	SayLineAndContinue QuiGon "/Qui-GonJinn_1157/Now - Let us press the attack!"
+	
+	PlayFlourish 01_flourish_conf_attack.wav
+	
+	// Killing the lights changes their texture to a red one
+	Kill "A_01_HL_clear_light_01"
+	Kill "A_01_HL_clear_light_02"
+	Kill "A_01_HL_clear_light_03"
+	Kill "A_01_HL_clear_light_04"
+	Kill "A_01_HL_clear_light_05"
+	Kill "A_01_HL_clear_light_06"
+	Kill "A_01_HL_clear_light_07"
+	Kill "A_01_HL_clear_light_08"
+	Kill "A_01_HL_clear_light_09"
+	Kill "A_01_HL_clear_light_10"
+	Kill "A_01_HL_clear_light_11"
+	Kill "A_01_HL_clear_light_12"
+	Kill "A_01_HL_clear_light_13"
+	Kill "A_01_HL_clear_light_14"
+	Kill "A_01_HL_clear_light_15"
+	Kill "A_01_HL_clear_light_16"
+	Kill "A_01_HL_clear_light_17"
+	Kill "A_01_HL_clear_light_18"
+	Kill "A_01_HL_clear_light_19"
+	Kill "A_01_HL_clear_light_20"
+	Kill "A_01_HL_clear_light_21"
+	Kill "A_01_HL_clear_light_22"
+
+	Event "Conference Room Finale"
+
+	BeginScript "Taking Down Droids"
+}
+
+
+
+
+
+StoreScript "Taking Down Droids"
+{
+	ChildScript "Kill All Conf Droids"
+	{
+		WaitUntilKilled ConfBAD1
+		WaitUntilKilled ConfBAD2
+		WaitUntilKilled ConfBAD3
+		WaitUntilKilled ConfBAD4
+
+		PlayFlourish "01_flourish_conf_end.wav"
+		PlayLoopingSound "fed_klaxon_01.wav"
+	}
+	
+	WaitUntilEnteredRegion ObiWan "trig_script_fab_room_1"
+	//	CSoundCue::PlaySoundCue("notify.wav"
+}
+
+
+
+
+/////////////////
+//  Nim_Conf2  //
+/////////////////
+
+Script Nim_Conf2
+{
+	Actor  Nem  A_Nemoidian02_talk 
+
+	WaitUntilEnteredRegion ObiWan trig_nim_conf_room_02
+	WakeUp Nem
+
+	ChildScript 
+	{
+		WaitUntilExitedRegion ObiWan trig_call_nim_bads  // Does this overlap trig_nim_conf_room_02?
+		EndScript Nim_Conf2
+	}
+
+	SayLine Nem "/Neimoidian 1_66.31/" 
+	SayLine Nem "/Neimoidian 1_66.32/"
+	SayLine Nem "/Neimoidian 1_66.34/"
+	SayLine Nem "/Neimoidian 1_66.33/"
+	TriggerUberGen "A_UG_BADsec_nim"
+}
+
+
+
+
+
+////////////////////
+//  Control Room  //
+////////////////////
+
+Script "Control Room"
+{
+	WaitUntilKilled "A_BAD_Pilot_10"
+	WaitUntilKilled "A_01_cntrlrm_sec_1"
+	WaitUntilKilled "A_01_cntrlrm_pilot_1"
+	WaitUntilKilled "A_01_cntrlrm_pilot_2"
+	WaitUntilKilled "A_BAD_Security_43"
+
+	Pause 2.0
+	SayLine QuiGon "/Qui-GonJinn_45.32/We can use the conduit to gain entry to the fabrication room."
+	SayLine QuiGon "/Qui-GonJinn_45.31/Obi-Wan, we must somehow DIVERT the power from that conduit."
+	TakeControlOf QuiGon
+	WalkToNodeAndWait QuiGon quigon_controlroom
+
+	ChildScript "Wait Until Obi Is Ready"
+	{
+		SayLine(QuiGon,"/Qui-GonJinn_45.33/I need your help. Stand over by those controls."
+		
+		ChildScript 
+		{
+			Pause 3.0
+			ResetScript "Wait Until Obi Is Ready"
+		}
+
+		WaitUntilEnteredRegion Obi "trig_cntrlrm_is_obi_ready"
+	}
+
+	WaitForScriptToEnd "Wait Until Obi Is Ready"
+
+	Script "Push Spheres"
+	{
+		SayLine QuiGon "/Qui-GonJinn_45.28/Padawan, are you ready?"
+		Nudge QuiGon "A_01_cntrlrm_sphere_1"
+
+		ChildScript
+		{
+			Pause 1.0  // Obi has one second to push the second sphere
+			PauseScript "Push Spheres"
+			Pause 5.0
+			SayLine QuiGon "/Qui-GonJinn_85/concentrate, obiwan"
+			ResetScript "Push Spheres"
+		}
+
+		WaitUntilNudged "A_01_cntrlrm_sphere_2"
+	}
+
+	WaitForScriptToEnd "Push Spheres"
+	Event "TurnOffBeam"
+	SayLine QuiGon "/Qui-GonJinn_1162/Follow me!"    // (or 45.44)
+	SetTeam "A_01_cntrlrm_grate_01" 8
+	ForceTarget QuiGon "A_01_cntrlrm_grate_01"
+	WalkToNodeAndWait QuiGon "into_beam"
+	WalkToNodeAndWait QuiGon "quigon_pre_fabroom"
+
+	Script
+	{
+		WaitUntilActivatedForcePower QuiGon
+		Kill "A_01_Fab_vent_01"
+	}
+
+	WalkToNodeAndWait QuiGon "fab_bads"
+}
+	
+
+
+
+
+
+
+
+
+
+
+//////////////////
+//  Setup World //
+//////////////////
+
+Script "Setup World"
+{
+	SetDoorToHalfCycle ConferenceRoomDoor  // This makes it so that it won't automatically close
+	SetTeam ConferenceRoomDoor 8
+	LockDoor ConferenceRoomDoor
+
+	// Make the army of prop BAD's motionless
+	Sleep "A_BAD_infantry_01"
+	Sleep "A_BAD_infantry_02"
+	Sleep "A_BAD_infantry_03"
+	Sleep "A_BAD_infantry_04"
+	Sleep "A_BAD_infantry_05"
+	Sleep "A_BAD_infantry_06"
+	Sleep "A_BAD_infantry_07"
+	Sleep "A_BAD_infantry_08"
+	Sleep "A_BAD_infantry_09"
+	Sleep "A_BAD_infantry_10"
+	Sleep "A_BAD_infantry_11"
+	Sleep "A_BAD_infantry_12"
+	Sleep "A_BAD_infantry_13"
+	Sleep "A_BAD_infantry_14"
+	Sleep "A_BAD_infantry_15"
+	Sleep "A_BAD_infantry_16"
+	Sleep "A_BAD_infantry_17"
+	Sleep "A_BAD_infantry_18"
+	Sleep "A_BAD_infantry_19"
+	Sleep "A_BAD_infantry_20"
+	Sleep "A_BAD_infantry_21"
+	Sleep "A_BAD_infantry_22"
+	Sleep "A_BAD_infantry_23"
+	Sleep "A_BAD_infantry_24"
+	Sleep "A_BAD_infantry_25"
+	Sleep "A_BAD_infantry_26"
+	Sleep "A_BAD_infantry_27"
+	Sleep "A_BAD_infantry_28"
+	Sleep "A_BAD_commander_01"
+	Sleep "A_BAD_commander_02"
+	Sleep "A_Nemoidian01_03"
+	Sleep "A_Nemoidian02_04"
+	Sleep "A_Nemoidian02_talk"
+	Sleep "A_Nemoidian02_sitting"
+	Sleep "A_Nemoidian01_sitting"
+	//Sleep "A_BAD_Security_35"
+	//Sleep "A_BAD_Security_36"
+
+	// Make the lights invincible so that Obi can't kill them.  When they "die"
+	// they change to a different texture.
+	InvincibilityOn "A_01_HL_clear_light_01"
+	InvincibilityOn "A_01_HL_clear_light_02"
+	InvincibilityOn "A_01_HL_clear_light_03"
+	InvincibilityOn "A_01_HL_clear_light_04"
+	InvincibilityOn "A_01_HL_clear_light_05"
+	InvincibilityOn "A_01_HL_clear_light_06"
+	InvincibilityOn "A_01_HL_clear_light_07"
+	InvincibilityOn "A_01_HL_clear_light_08"
+	InvincibilityOn "A_01_HL_clear_light_09"
+	InvincibilityOn "A_01_HL_clear_light_10"
+	InvincibilityOn "A_01_HL_clear_light_11"
+	InvincibilityOn "A_01_HL_clear_light_12"
+	InvincibilityOn "A_01_HL_clear_light_13"
+	InvincibilityOn "A_01_HL_clear_light_14"
+	InvincibilityOn "A_01_HL_clear_light_15"
+	InvincibilityOn "A_01_HL_clear_light_16"
+	InvincibilityOn "A_01_HL_clear_light_17"
+	InvincibilityOn "A_01_HL_clear_light_18"
+	InvincibilityOn "A_01_HL_clear_light_19"
+	InvincibilityOn "A_01_HL_clear_light_20"
+	InvincibilityOn "A_01_HL_clear_light_21"
+	InvincibilityOn "A_01_HL_clear_light_22"
+
+	InvincibilityOn QuiGon
+
+	// hide the tea set in the conference room
+	Hide "A_01_tc14_cup_01"
+	Hide "A_01_tc14_cup_02"
+	Hide "A_01_tc14_tea_01"
+	Hide "A_01_tc14_tray_01"
+
+	Call "Elevator Guard" A_BAD_Security_04
+	Call "Elevator Guard" A_BAD_Security_05
+	Call "Elevator Guard" A_BAD_infantry_conf_1
+	Call "Elevator Guard" A_BAD_infantry_conf_2
+	Call "Elevator Guard" A_BAD_infantry_conf_3
+	Call "Elevator Guard" A_BAD_infantry_conf_4
+}
+
+
+
+Function "Elevator Guard" (Actor Guard)
+{
+	TakeControlOf Guard
+	WaitUntilNear Obi Guard 2.0
+	LookAt Guard Obi
+
+	ChildScript "When Obi Leaves"
+	{
+		WaitUntilFar Obi Guard 2.0
+		StopActions Guard
+		// Return to original rotation and position
+		ResetScript "Elevator Guards"
+	}
+
+	SayLine Guard "BattleDroidInfantry1_66.13"
+	Pause 3.0
+	SayLine Guard "BattleDroidInfantry1_66.14"
+	Pause 3.0
+	SayLine Guard "BattleDroidInfantry1_215"
+	Pause 3.0
+	SayLine Guard "BattleDroidInfantry1_214"
+	Pause 3.0
+	SayLine Guard "BattleDroidInfantry1_215.12"
+	Pause 3.0
+}

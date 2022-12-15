@@ -1,0 +1,26 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto StartAttack
+	}
+	Actions {
+		BreakFormation
+	}
+}
+
+state StartAttack {
+	Conditions {
+	}
+	Actions {
+		KeepWeaponOut
+		SetState "Attack"
+	}
+}
+
+state Attack {
+	Conditions {
+		if GotOpponent == 0 goto Base
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}

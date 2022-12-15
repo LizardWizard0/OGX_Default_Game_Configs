@@ -1,0 +1,923 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Actor  Naboo01              A_SquadLeader_01
+Actor  Naboo02              A_Naboo-StarfighterPilotFemale1_01
+Actor  Naboo03              A_Naboo-StarfighterPilotMale1_02
+Actor  Naboo04              A_Naboo-StarfighterPilotFemale1_02    
+Actor  Naboo05              A_Naboo-StarfighterPilotMale1_03
+Actor  Naboo06              A_Naboo-StarfighterPilotMale1_04
+
+Actor  Asha			A_naboo-resistance_leader_battle_outfit_01
+Actor  Resistance02         A_Naboo-Resistance3_01
+Actor  Resistance03         A_Naboo-Resistance3_02
+
+Int    BeginMission         0
+Int    MissionCompleted     0
+
+Int    AlarmsSetOff         0
+
+Int    Zone02Part2Cleared   0
+Int    Zone01Part2Cleared   0
+
+Int    PilotsAtZone02       0
+Int    PilotsAtZone01       0
+
+Int    PilotsInvincible     0
+Int    SkipMission          0
+
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_intro2.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic l08_m_sighting1.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension 
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_l01_8_cs_02.wav Tension
+AddMusic m_tension_13.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_victory_03.wav Battle
+AddMusic m_victory_04.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_battle_13_lp.wav  m_battle_12_win.wav  m_battle_13_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "Walk" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+    TakePartialControlOf Guy
+    WalkToNode Guy GotoNode
+}	
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+    TakePartialControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+            WaitUntilNear Guy Obi 5.0
+            ReturnControlTo Guy
+            EndFunction "Run"
+    }
+    
+    RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "Random Naboo Target" (Actor Guy, Float PauseTime)
+{
+    Pause PauseTime
+    WakeUp Guy
+
+	RandomInt NabooTarget 1 6
+
+	if (= NabooTarget 1)
+	{
+        ForceTarget Guy Naboo01
+	}
+
+	if (= NabooTarget 2)
+	{
+        ForceTarget Guy Naboo02
+	}
+    
+	if (= NabooTarget 3)
+	{
+        ForceTarget Guy Naboo03
+	}
+
+    if (= NabooTarget 4)
+	{
+        ForceTarget Guy Naboo04
+	}
+
+	if (= NabooTarget 5)
+	{
+        ForceTarget Guy Naboo05
+	}
+
+	if (= NabooTarget 6)
+	{
+        ForceTarget Guy Naboo06
+	}
+}
+
+Function "PowerUpRemoval" (Actor PowerUp, Int PowerUpGroup)
+{
+    WaitUntilRemoved PowerUp
+    If (= PowerUpGroup 21)
+    {
+        Set ExploreMarkerFound01 1
+    }
+    If (= PowerUpGroup 22)
+    {
+        Set ExploreMarkerFound02 1
+    }
+    RemoveGroup PowerUpGroup
+//    Save
+}
+
+Function "Firefight" (Actor Guy, Region DetectRegion, Int ReleaseActor)
+{
+    InvincibilityOn Guy
+    WaitUntilEnteredRegion Obi DetectRegion
+    
+    InvincibilityOff Guy
+    
+    If (= ReleaseActor 1)
+    {
+        ClearAiBoundary Guy
+    }
+}
+
+Function "Firefight2" (Actor Guy, Region DetectRegion, Int ReleaseActor)
+{
+    SetDamagedByPlayerOnly Guy
+    WaitUntilEnteredRegion Obi DetectRegion
+    
+    ClearDamagedByPlayerOnly Guy
+    
+    If (= ReleaseActor 1)
+    {
+        ClearAiBoundary Guy
+    }
+}
+
+Function "Teleport and Run" (Actor guy, RefPos runfrompos, Node runto)
+{
+	TakeControlOf guy
+	Teleport guy runfrompos
+	RunToNode guy runto
+}
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene" 32
+{
+//    TakeControlOf Obi
+    BeginCutscene
+//    CameraTrack Transition01 Obi
+//    RunToNode Obi Obi-Start
+	FadeUpAndWait
+//    TurnToNodeOrientationAndWait Obi Obi-Start
+    
+	DisableAudioFades
+
+    PreEndCutScene
+//    ReturnControlTo Obi
+    Set BeginMission 1
+    
+	EndCutScene
+
+	StartMusicManager
+    FadeUp 0.0
+	EnableAudioFades
+    
+    SetStartPosition 0
+    RemoveGroup 32
+    Save
+    
+    If (= SkipMission 1)
+    {
+        Pause 1.0
+        Increment MissionCompleted 1        
+    }    
+}
+
+Script "Opening Cutscene 2" 31
+{
+    If (IsGroupRemoved 32)
+    {
+        Set BeginMission 0    
+        StartMusicManager
+        FadeUpAndWait
+        Set BeginMission 1        
+    }
+}
+
+Script "Closing Cutscene"
+{
+    // Resistance appear; provide cover for fleeing pilots;
+    WaitUntilEqual MissionCompleted 1
+
+	//make sure that none of the pilots or Asha will die or be shot at
+	//after the cutscene begins
+	SetTeam Naboo01 0
+	SetTeam Naboo02 0
+	SetTeam Naboo03 0
+	SetTeam Naboo04 0
+	SetTeam Naboo05 0
+	SetTeam Naboo06 0
+    	InvincibilityOn Naboo01
+	InvincibilityOn Naboo02
+	InvincibilityOn Naboo03
+	InvincibilityOn Naboo04
+	InvincibilityOn Naboo05
+	InvincibilityOn Naboo06
+	SetTeam Asha 0
+	InvincibilityOn Asha
+
+	FadeDownAndWait 0.5
+	 
+	TakeControlOf Asha
+    TakeControlOf Resistance02
+    TakeControlOf Resistance03        
+            
+    Teleport Asha ResistanceLeader01
+    Teleport Obi Obi-EndPoint01
+
+	 
+	Call "Teleport and Run" (Naboo01, runfrom1, Naboo01-EndPoint01)
+	Call "Teleport and Run" (Naboo02, runfrom2, Naboo02-EndPoint01)
+	Call "Teleport and Run" (Naboo03, runfrom3, Naboo03-EndPoint01)
+	Call "Teleport and Run" (Naboo04, runfrom4, Naboo04-EndPoint01)
+	Call "Teleport and Run" (Naboo05, runfrom5, Naboo05-EndPoint01)
+	Call "Teleport and Run" (Naboo06, runfrom6, Naboo06-EndPoint01)
+
+	BeginCutScene
+	CameraFixed bridge_view
+	
+	StopMusicManager
+	PlayFlourish cut_5_3cextro_m.wav
+	
+	FadeUpAndWait 0.5
+	
+	Pause 5
+
+    // Move camera to resistance tower door
+	CameraFixed endshot01
+
+    LookAt Asha Obi
+
+    Sayline Asha "/Asha_617/Obiwan! This way!" PalmUpRight
+    
+    RunToNodeAndWait Obi Obi-EndPoint02
+    LookAt Obi Asha
+    
+    LookAtAndWait Asha Naboo01
+    Sayline Asha "/Asha_618/Thank you for getting back our pilots." PointForward
+
+    LookAtAndWait Asha Obi
+    Sayline Asha "/Asha_619/However, we now have a bigger threat to deal with."
+    Sayline Asha "/Asha_620/Come with me, I'll tell you on the way."
+    
+    FadeDownAndWait
+	PreEndCutscene
+	FadeDown 0.0
+    EndCutscene
+    
+    NextLevel L05_4a
+}
+
+Script "Obi-Wan Death Cleanup"
+{
+    ContinueWhenPlayerDies
+    
+    WaitUntilKilled Obi
+    
+//    Set BeginMission 0
+//    Save
+}
+
+Script "Mission Failed"
+{
+    Actor DeadPilot
+    
+    
+    Childscript "Dead Pilot 1"
+    {
+        WaitUntilKilled Naboo01
+        MakeResurrectable Naboo01
+        Set DeadPilot Naboo01    
+    }
+
+    Childscript "Dead Pilot 2"
+    {
+        WaitUntilKilled Naboo02
+        MakeResurrectable Naboo02        
+        Set DeadPilot Naboo02    
+    }
+    
+    Childscript "Dead Pilot 3"
+    {
+        WaitUntilKilled Naboo03
+        MakeResurrectable Naboo03        
+        Set DeadPilot Naboo03    
+    }
+    
+    Childscript "Dead Pilot 4"
+    {
+        WaitUntilKilled Naboo04
+        MakeResurrectable Naboo04        
+        Set DeadPilot Naboo04  
+    }
+    
+    Childscript "Dead Pilot 5"
+    {
+        WaitUntilKilled Naboo05
+        MakeResurrectable Naboo05        
+        Set DeadPilot Naboo05  
+    }
+    
+    Childscript "Dead Pilot 6"
+    {
+        WaitUntilKilled Naboo06
+        MakeResurrectable Naboo06        
+        Set DeadPilot Naboo06  
+    }
+    
+    WaitForAny
+    
+    BeginCutscene
+    
+    CameraOrbit DeadPilot 3.0 4.0 10.0 0.0 1    
+//	CameraPlayer DeadPilot 0 2.5 -5.0
+//	Zoom 0.75 3.0
+
+	Pause 1.0
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Asha_621/You failed to escort all of the pilots safely back to the resistance." asha.dlg
+	CommunicatorMessageAndWait "/Asha_622/Game Over." asha.dlg
+
+    Pause 2.0
+    
+	FadeDownAndWait
+
+    PreEndCutScene
+    FadeDown 0.0
+	EndCutscene
+
+    FailMission
+}
+
+Script "Level Transistion To L05_3B"
+{
+/*
+    WaitUntilEqual BeginMission 1
+    WaitUntilEnteredRegion Obi L05_3B_Trig
+    
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    
+    PreEndCutScene
+    FadeDown 0.0
+    Set BeginMission 0        
+    EndCutscene
+    
+    SetStartPosition 0
+    Save
+    
+    NextPart L05_3B
+*/    
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 08_13fnttop.sur
+}
+
+Script "Set Far Clip"
+{
+//    SetFarClip 325 0
+}
+
+Script "Set Pain Region Values"
+{
+    SetPainRegion Pain_Rgn_02 9999.0    
+}
+
+Script "Load DLG Files"
+{
+    LoadDLG asha.dlg
+    LoadDLG bad.dlg
+    LoadDLG Squadleader.dlg    
+}
+
+Script "Initialize Locked Doors"
+{
+    LockDoor A_05_3_PalaceDoor_01_01
+    LockDoor A_05_3_PalaceDoor_01_05
+    LockDoor A_05_3_PalaceDoor_01_12
+}
+
+Script "Initialize Alarm Consoles"
+{
+    Actor Alarm01        A_5-3_alarm_01
+    Actor Alarm02        A_5-3_alarm_02
+    Actor Alarm03        A_5-3_alarm_05
+    Actor Alarm04        A_5-3_alarm_03
+    Actor Alarm05        A_5-3_alarm_04
+
+    
+    If (= Zone01-Alarm01-Destroyed 1)
+    {
+        Kill Alarm01
+    }
+    If (= Zone01-Alarm02-Destroyed 1)
+    {
+        Kill Alarm02
+    }
+    If (= Zone01-Alarm03-Destroyed 1)
+    {
+        Kill Alarm03
+    }
+    If (= Zone02-Alarm01-Destroyed 1)
+    {
+        Kill Alarm04
+    }
+    If (= Zone02-Alarm02-Destroyed 1)
+    {
+        Kill Alarm05
+    }
+}
+
+Script "Naboo Pilots"
+{
+    TakeControlOf Naboo01
+    TakeControlOf Naboo02
+    TakeControlOf Naboo03
+    TakeControlOf Naboo04
+    TakeControlOf Naboo05
+    TakeControlOf Naboo06
+    
+    LookAt Naboo01 Obi
+    LookAt Naboo02 Obi
+    LookAt Naboo03 Obi
+    LookAt Naboo04 Obi
+    LookAt Naboo05 Obi
+    LookAt Naboo06 Obi    
+}
+
+Script "Initialize Pilots"
+{
+    If (IsGroupRemoved 32)
+    {
+    If (= StartPosition 1)
+    {
+        Set Zone02Part2Cleared 1
+        Set Zone01Part2Cleared 0
+
+        Set PilotsAtZone02 1
+        Set PilotsAtZone01 0
+    
+        Teleport Naboo01 Naboo01-StartSpot02
+        Teleport Naboo02 Naboo02-StartSpot02
+        Teleport Naboo03 Naboo03-StartSpot02
+        Teleport Naboo04 Naboo04-StartSpot02
+        Teleport Naboo05 Naboo05-StartSpot02
+        Teleport Naboo06 Naboo06-StartSpot02
+    }
+    }
+}
+
+Script "Initialize Exploration Markers"
+{
+    If (= ExploreMarkerFound01 1)
+    {
+        RemoveActor A_powerupexplorationmarker_01
+    }
+    Else
+    {
+        Call PowerUpRemoval (A_powerupexplorationmarker_01, 21)   
+    }
+
+    If (= ExploreMarkerFound02 1)
+    {
+        RemoveActor A_powerupexplorationmarker_02
+    }
+    Else
+    {
+        Call PowerUpRemoval (A_powerupexplorationmarker_02, 22)
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Patrols ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Zone02-BAD Patrol 01" 1
+{
+    Actor Sword01        A_AssassinDroid-Sword_01
+    Actor Kamikaze01     A_Battledroid-Kamikaze_01
+    Actor Kamikaze02     A_Battledroid-Kamikaze_02
+    Actor Kamikaze03     A_Battledroid-Kamikaze_03
+    
+
+    TakeControlOf Kamikaze01
+    TakeControlOf Kamikaze02
+    TakeControlOf Kamikaze03
+
+    FollowDirectional Kamikaze01 Sword01 2.5 135
+    FollowDirectional Kamikaze02 Sword01 2.0 180
+    FollowDirectional Kamikaze03 Sword01 2.5 225
+    
+    SetPatrolTypes Sword01 1
+    SetPatrolAttentionSpan Sword01 300.0
+    AddPatrolState Sword01
+
+    Childscript "Sword Killed"
+    {
+        WaitUntilKilled Sword01
+
+        ReturnControlTo Kamikaze01
+        ReturnControlTo Kamikaze02
+        ReturnControlTo Kamikaze03
+    }
+
+    WaitUntilStateActivated Sword01 Attack
+
+    EndScript "Sword Killed"
+        
+    ReturnControlTo Kamikaze01
+    ReturnControlTo Kamikaze02
+    ReturnControlTo Kamikaze03
+        
+    ForceTarget Kamikaze01 Obi
+    ForceTarget Kamikaze02 Obi
+    ForceTarget Kamikaze03 Obi
+}
+
+Script "Zone02-BAD Patrol 02" 1
+{
+    Actor Sword02        A_AssassinDroid-Sword_02
+    Actor Kamikaze04     A_Battledroid-Kamikaze_04
+    Actor Kamikaze05     A_Battledroid-Kamikaze_05
+    Actor Kamikaze06     A_Battledroid-Kamikaze_06
+    
+
+    TakeControlOf Kamikaze04
+    TakeControlOf Kamikaze05
+    TakeControlOf Kamikaze06
+
+    FollowDirectional Kamikaze04 Sword02 2.5 135
+    FollowDirectional Kamikaze05 Sword02 2.0 180
+    FollowDirectional Kamikaze06 Sword02 2.5 225
+    
+    SetPatrolTypes Sword02 1
+    SetPatrolAttentionSpan Sword02 300.0
+    AddPatrolState Sword02
+
+    Childscript "Sword Killed"
+    {
+        WaitUntilKilled Sword02
+
+        ReturnControlTo Kamikaze04
+        ReturnControlTo Kamikaze05
+        ReturnControlTo Kamikaze06
+    }
+
+    WaitUntilStateActivated Sword02 Attack
+
+    EndScript "Sword Killed"
+        
+    ReturnControlTo Kamikaze04
+    ReturnControlTo Kamikaze05
+    ReturnControlTo Kamikaze06
+        
+    ForceTarget Kamikaze04 Obi
+    ForceTarget Kamikaze05 Obi
+    ForceTarget Kamikaze06 Obi
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+//-------------------------------- Alarms --------------------------------//
+////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Pilot Wait Points ------------------------------//
+///////////////////////////////////////////////////////////////////////////////////
+
+Script "Zone02-Pilots Wait" 1
+{
+    WaitUntilEqual BeginMission 1    
+
+    Pause 1.0
+     
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Squadleader_628/Clear out those droids so we can move to the next street!"
+    CommunicatorOff
+
+    WaitUntilEqual Zone02Part2Cleared 1
+
+    //CommunicatorOn
+    SayLineNonPositional Obi "/Obi-Wan_1303/Squad Leader, all battleroids in next sector have been removed."
+    CommunicatorMessageAndWait "/Squadleader_630/Good job, Obi-Wan.  We're moving ahead to the next courtyard."
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint07
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint07
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint07
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint07
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint07
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint07
+    }
+    
+    WaitForAll
+    
+    Increment PilotsAtZone02 1
+    SetStartPosition 1
+    RemoveGroup 1
+    Save    
+}
+
+Script "Pilots Escape" 2
+{
+    WaitUntilEqual Zone02Part2Cleared 1
+    WaitUntilEqual PilotsAtZone02 1
+
+    Pause 1.0    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Squadleader_627/The area ahead is still occupied by droids."
+    CommunicatorOff
+    
+    WaitUntilEqual Zone01Part2Cleared 1
+
+    //CommunicatorOn
+    SayLineNonPositional Obi "/Obi-Wan_1304/Squad Leader, I've cleared the way to the resistance.  Now's your chance to escape!"
+    CommunicatorMessageAndWait "/Squadleader_632/Excellent, Obi-Wan.  We're going to move along now."
+    CommunicatorMessageAndWait "/SquadLeader_1305/Squadleader Naboo-1, requesting access to the south entrance.  Asha, the Jedi has freed us."
+    CommunicatorOff
+    
+/*            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo-Escape
+        RunToNodeAndWait Naboo01 Naboo01-EndPoint01
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-EndPoint01
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo-Escape
+        RunToNodeAndWait Naboo02 Naboo02-EndPoint01
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-EndPoint01
+    }
+    
+    Childscript
+    {
+        Pause 2.0   
+        RunToNodeAndWait Naboo03 Naboo-Escape         
+        RunToNodeAndWait Naboo03 Naboo03-EndPoint01
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-EndPoint01
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo-Escape        
+        RunToNodeAndWait Naboo04 Naboo04-EndPoint01
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-EndPoint01
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo-Escape        
+        RunToNodeAndWait Naboo05 Naboo05-EndPoint01
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-EndPoint01
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo-Escape        
+        RunToNodeAndWait Naboo06 Naboo06-EndPoint01
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-EndPoint01
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/SquadLeader_1305/"
+    CommunicatorMessageAndWait "/SquadLeader_1306/We made it. Yipee!"
+    CommunicatorOff    
+*/    
+    Pause 1.0
+
+    MissionObjectiveAchieved 2
+    Increment PilotsAtZone01 1
+    Increment MissionCompleted 1
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ BAD Reinforcements ------------------------------//
+////////////////////////////////////////////////////////////////////////////////////
+
+Script "Zone02-Part2 Reinforcements" 1
+{
+    Actor Sword01        A_AssassinDroid-Sword_01
+    Actor Sword02        A_AssassinDroid-Sword_02    
+    Actor Kamikaze01     A_Battledroid-Kamikaze_01
+    Actor Kamikaze02     A_Battledroid-Kamikaze_02
+    Actor Kamikaze03     A_Battledroid-Kamikaze_03
+    Actor Kamikaze04     A_Battledroid-Kamikaze_04
+    Actor Kamikaze05     A_Battledroid-Kamikaze_05
+    Actor Kamikaze06     A_Battledroid-Kamikaze_06 
+    Actor Sniper01       A_Battledroid-Sniper_01           
+    Actor Sniper02       A_Battledroid-Sniper_02
+
+                                    
+    Child WaitUntilKilled Sword01
+    Child WaitUntilKilled Sword02
+    Child WaitUntilKilled Kamikaze01
+    Child WaitUntilKilled Kamikaze02
+    Child WaitUntilKilled Kamikaze03
+    Child WaitUntilKilled Kamikaze04
+    Child WaitUntilKilled Kamikaze05
+    Child WaitUntilKilled Kamikaze06
+    Child WaitUntilKilled Sniper01
+    Child WaitUntilKilled Sniper02    
+    
+    WaitForAll
+    
+    Increment Zone02Part2Cleared 1
+}
+
+Script "Zone01-Part2 Reinforcements" 2
+{
+    Actor Security01        A_battledroid-security_01
+    Actor Security02        A_battledroid-security_02
+    Actor Security03        A_battledroid-security_03
+    Actor Security04        A_battledroid-security_04
+    Actor Grenade01         A_battledroid-grenadecon_01
+    Actor Grenade02         A_battledroid-grenadecon_02
+    Actor Commander01       A_battledroid-commander_01
+    Actor Baron01           A_BaronDroid_01
+    Actor Baron02           A_BaronDroid_02
+    Actor Asha              A_naboo-resistance_leader_battle_outfit_01    
+    
+
+    Child WaitUntilKilled Security01
+    Child WaitUntilKilled Security02
+    Child WaitUntilKilled Security03
+    Child WaitUntilKilled Security04
+    Child WaitUntilKilled Grenade01
+    Child WaitUntilKilled Grenade02
+    Child WaitUntilKilled Commander01
+    Child WaitUntilKilled Baron01
+    Child WaitUntilKilled Baron02    
+    WaitForAll
+
+    UnlockDoor A_05_3_PalaceDoor_01_01
+    
+    RunToNodeAndWait Asha Asha-Spot01
+    
+    PlayGesture Asha AttractAttention
+
+    Increment Zone01Part2Cleared 1
+}
+
+Script "Zone01-Bridge Firefight"
+{
+    Actor Asha              A_naboo-resistance_leader_battle_outfit_01
+    Actor Resistance01      A_Naboo-Resistance3_01
+    Actor Resistance02      A_Naboo-Resistance3_02    
+    Actor Soldier01         A_naboo-soldier_01
+    Actor Soldier02         A_naboo-soldier_2_01
+    
+    Actor Security01        A_battledroid-security_01
+    Actor Security02        A_battledroid-security_02
+    Actor Security03        A_battledroid-security_03
+    Actor Security04        A_battledroid-security_04
+    Actor Grenade01         A_battledroid-grenadecon_01
+    Actor Grenade02         A_battledroid-grenadecon_02
+    Actor Commander01       A_battledroid-commander_01
+    Actor Baron01           A_BaronDroid_01
+    Actor Baron02           A_BaronDroid_02
+ 
+ 
+    TakeControlOf Asha
+    TakeControlOf Commander01
+    TakeControlOf Baron01
+    TakeControlOf Baron02    
+
+    InvincibilityOn Asha
+    SetDamagedByPlayerOnly Commander01
+    SetDamagedByPlayerOnly Baron01
+    SetDamagedByPlayerOnly Baron02
+
+    Call "Firefight" (Resistance01, Z01-BridgeFirefight, 1)
+    Call "Firefight" (Resistance02, Z01-BridgeFirefight, 1)
+    Call "Firefight" (Soldier01, Z01-BridgeFirefight, 1)
+    Call "Firefight" (Soldier02, Z01-BridgeFirefight, 1)
+    
+    Call "Firefight2" (Security01, Z01-BridgeFirefight, 1)
+    Call "Firefight2" (Security02, Z01-BridgeFirefight, 1)
+    Call "Firefight2" (Security03, Z01-BridgeFirefight, 1)
+    Call "Firefight2" (Security04, Z01-BridgeFirefight, 1)
+    Call "Firefight2" (Grenade01, Z01-BridgeFirefight, 1)    
+    Call "Firefight2" (Grenade02, Z01-BridgeFirefight, 1)
+    
+    WaitUntilEnteredRegion Obi Z01-BridgeFirefight
+
+    ClearDamagedByPlayerOnly Commander01
+    ClearDamagedByPlayerOnly Baron01
+    ClearDamagedByPlayerOnly Baron02
+            
+    ReturnControlTo Commander01
+    ReturnControlTo Baron01
+    ReturnControlTo Baron02    
+}
+
+//-------------------- Cheats --------------------//
+
+Script "Pilots Invincible"
+{
+    If (= PilotsInvincible 1)
+    {
+        InvincibilityOn Naboo01
+        InvincibilityOn Naboo02
+        InvincibilityOn Naboo03
+        InvincibilityOn Naboo04
+        InvincibilityOn Naboo05
+        InvincibilityOn Naboo06                                        
+    }
+}

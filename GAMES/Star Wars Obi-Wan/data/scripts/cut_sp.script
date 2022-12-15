@@ -1,0 +1,97 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+LoadDLG male2.dlg
+LoadDLG asha.dlg
+
+Script "Sacred Place And Sewers Cutscene"
+{
+   Actor Qui           		A_Qui-Gon_01
+   Actor Queen            	A_Queen_Amadala_Royal_Outfit_01
+   Actor BossNass         	A_Gungan-Nass_01
+
+	UnEquipWeapon Obi
+	UnEquipWeapon Qui
+	Pause 0 5
+	SetAnimTableIndex Obi 1
+	Pause 0 5
+
+   BeginCutscene
+   FadeUpAndWait
+    
+ 	TakeControlOf Qui
+ 
+	Follow Qui Obi 2
+	CameraOff
+	CameraFixed lookatQui
+	ChildScript
+	{
+		Pause 10
+		CameraOff
+		CameraFixed darren1
+	}
+
+	SayLine Qui "/Qui-Gon_597/ We seem fairly safe while in the protection of these Gungans.  I will act as the Queen's bodyguard alone.  I want you to meet up with the Naboo resistance in the tunnels below Theed.  They will need your assistance in a counter-attack they have planned.  I will meet up with you later."
+	CameraOff
+	CameraFixed darren2
+	SayLine Obi "/Obi-Wan_598/ Yes, Master."
+	CameraOff
+	CameraFixed darren4
+	SayLine Qui "/Qui-Gon_599/ And Obi-Wan-"
+	CameraOff
+	CameraFixed darren3
+	SayLine Obi "/Obi-Wan_600/ Yes, Master.  'Be careful,' I know..."
+	CameraOff
+	CameraFixed darren5
+	SayLine Qui "/Qui-Gon_601/ Hmpf."
+    
+	FadeDownAndWait
+	
+	CameraOff
+	CameraFixed bogan2 //bogan1
+	Gotostart Obi 1
+	
+	Actor Soldier 				A_Naboo-Resistance1_01
+	Actor Resistance 			A_Naboo-Resistance3_01
+   Actor Asha             	A_naboo-resistance_leader_battle_outfit_01
+ 	
+	TakeControlOf Asha
+	Teleport Asha Asha_start
+	SetAnimTableIndex Obi 1
+	TakeControlOf Soldier
+	TakeControlOf Resistance
+	
+	LookAt Soldier Obi
+	LookAt Resistance Obi
+	
+	FadeUpAndWait
+	
+//	SayLineNonPositional Resistance "Hold it right there.  Hands up."
+//	CameraOff
+//	CameraFixed bogan2
+	SayLineNonPositional Obi "/Obi-Wan_603/ I'm here to help you."
+	CameraOff
+//	CameraFixed third
+	Childscript
+	{
+		WalkToNodeAndWait Asha Asha_goto
+		LookAt Asha Obi
+	}
+	SayLineNonPositional Soldier "/Male2_604/ Who are you?  What's your name?"
+	SayLineNonPositional Asha "/Asha_605/ Obi-Wan Kenobi."
+	SayLineNonPositional Obi "/Obi-Wan_606/ Asha?"
+	CameraOff
+	CameraFixed bogan3
+	SayLineNonPositional Asha "/Asha_607/ Welcome to the Resistance, Jedi."
+    
+	FadeDownAndWait
+	PreEndCutscene
+	FadeDown 0
+	EndCutscene
+	NextLevel L05_3a
+}

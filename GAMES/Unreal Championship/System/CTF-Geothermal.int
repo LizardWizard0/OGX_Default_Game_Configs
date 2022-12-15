@@ -1,0 +1,69 @@
+[LevelInfo0]
+Title="Geothermal"
+
+[LevelSummary]
+Title="Geothermal"
+
+[ZoneInfo0]
+LocationName="Red Flag Room"
+
+[ZoneInfo1]
+LocationName="Red Machine Room"
+
+[ZoneInfo10]
+LocationName="Blue Machine Room"
+
+[ZoneInfo11]
+LocationName="Blue Vent Room"
+
+[ZoneInfo12]
+LocationName="Red Flag Room"
+
+[ZoneInfo13]
+LocationName="Middle Area"
+
+[ZoneInfo14]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo15]
+LocationName="Blue Lower Entrance"
+
+[ZoneInfo19]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo2]
+LocationName="Red Vent Room"
+
+[ZoneInfo20]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo23]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo24]
+LocationName="Blue Flag Room"
+
+[ZoneInfo25]
+LocationName="Blue Flag Room"
+
+[ZoneInfo26]
+LocationName="Blue Upper Entrance"
+
+[ZoneInfo4]
+LocationName="Red Lower Entrance"
+
+[ZoneInfo5]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo6]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo7]
+LocationName="Blue Flag Room"
+
+[ZoneInfo8]
+LocationName="Red Upper Entrance"
+
+[ZoneInfo9]
+LocationName="Red Flag Room"
+

@@ -1,0 +1,31 @@
+state Base {
+	Conditions {
+	}
+	Actions {
+		CanShootOffScreen
+		DontPush
+		RequiresLOS
+		SetMinViewHeight "-99.0"
+		SetState "LookOut"
+	}
+}
+
+state LookOut {
+	Conditions {
+		if GotOpponent == 1 goto Engage
+	}
+	Actions {
+		GoToOrigin
+	}
+}
+
+state Engage {
+	Conditions {
+		if GotOpponent == 0 goto LookOut
+	}
+	Actions {
+		EngageOpponent "static" "offscreen"
+	}
+}
+
+

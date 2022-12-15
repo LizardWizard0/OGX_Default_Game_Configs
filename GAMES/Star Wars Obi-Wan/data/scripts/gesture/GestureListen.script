@@ -1,0 +1,11 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+PlayGestureAndWait me HandsOnHips 4 
+PlayGestureAndWait me None 2
+PlayGestureAndWait me ScratchHead 4
+PlayGestureAndWait me None 2 
+PlayGestureAndWait me Think 6
+//PlayAudioCue me Idle
+PlayGestureAndWait me HandsOnHips 6
+PlayGestureAndWait me none 2

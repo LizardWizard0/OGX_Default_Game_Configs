@@ -1,0 +1,665 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+SetNodeHeightTolerance 0.4
+
+////////////////
+//  PDA Info  //
+////////////////
+
+MissionTitle "/Mission20Title/Rescue on Tatooine"
+MissionObjective 1 "/Mission20Objective1/"
+
+SetTimeToBeat 6 45 
+SetForceUsesNeeded 25
+SetExplorationNum 3
+
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_06.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_08.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_16.wav Suspense
+AddMusic m_suspense_17.wav Suspense
+AddMusic l11_m_intro1.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_08.wav Tension
+AddMusic m_tension_10.wav Tension
+AddMusic m_tension_11.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic l01_5_m_placard.wav Tension
+
+AddMusic m_tension_01.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle_06.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_tension_13.wav Battle
+AddMusic l14_m_battle1.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+SetDefaultSurface 11_canyon06
+
+AddPatrolState A_Tusken-Gaffi_18
+
+SetNodeHeightTolerance 0.4
+
+AddWorkEvent A_Tusken-Gaffi_01 A_Tusken-Gaffi_01
+AddWorkEvent A_Tusken-Gaffi_02 A_Tusken-Gaffi_02
+AddWorkEvent A_z_Tusken-GaffiPack3_01 A_z_Tusken-GaffiPack3_01
+AddWorkEvent A_z_Tusken-GaffiPack3_03 A_z_Tusken-GaffiPack3_03
+AddWorkEvent A_z_Tusken-FlamingGaffAmbush_01 A_z_Tusken-FlamingGaffAmbush_0
+AddWorkEvent A_z_Tusken-FlamingGaffiBrdg_03 A_z_Tusken-FlamingGaffiBrdg_03
+
+
+///////////////////////
+// Save/Load Points  //
+///////////////////////
+
+Script "checkpoint1"
+{
+	SetStartPosition 0
+	WaitUntilEnteredRegion Obi checkpoint1
+	SetStartPosition 1
+	Save
+}
+
+Script "checkpoint2"
+{
+	WaitUntilEnteredRegion Obi checkpoint2
+	SetStartPosition 2
+	Save
+}
+
+Script "savepoint_final"
+{
+	WaitUntilEnteredRegion Obi rgn_load_L04_3b
+	SetStartPosition 3
+	Save
+}
+////////////////////
+//Opening Cutscene//
+////////////////////
+
+Script "Opening Cutscene" 32
+{
+	LoadDlg CaptainPanaka.dlg
+
+	BeginCutScene
+
+	int exitedEarly 1
+
+	Crouch obi
+	FadeUp
+
+	PlayFlourish cut_4_3aintro_m.wav
+
+	BinocularsOn
+	BinocularsLookAt A_ban_03 3 .5 .5
+	Zoom .2 3 .5 .5
+
+	Child BinocularsLookAt A_ban_01 2 .2 .2
+	CommunicatorMessageAndWait "/CaptainPanaka_1000/Obi-Wan, I can't believe I'm saying this but it's up to you to get the Queen." CaptainPanaka.dlg
+	CommunicatorOff
+
+	Zoom .85 2 .5 .5
+	BinocularsLookAtAndWait A_14_spear01_02 3 .2 .5
+	BinocularsLookAtAndWait A_Tusken-Gaffi_01 3 .2 .2
+	SayLineAndContinue obi "/Obi-Wan_562/They must have taken the Queen this way." Obi.dlg
+	Zoom .99 4 1 1
+	BinocularsLookAtAndWait A_14_pod_part14_02 3 .4 .4
+	SayLineAndContinue obi "/Obi-Wan_563/This canyon is absolutely filled with those creatures.  I’ll be walking straight into the heart of their camp." Obi.dlg
+	AddPatrolState A_Tusken-Gaffi_03
+	BinocularsLookAtAndWait A_Tusken-Gaffi_02 3 .2 .2
+
+	Pause 1.5
+	Zoom .6 5 .2 .4
+	Pause 1
+
+	DisableAudioFades
+	FadeDownAndWait 3
+	
+	Set exitedEarly 0
+
+	PreEndCutScene	
+
+	if (= exitedEarly 1)
+	{
+	   StopMusic
+	}
+
+	FadeDown 0
+	BinocularsOff
+	EndCutScene
+
+	FadeUp
+	EnableAudioFades
+
+	startMusicManager
+	RemoveGroup 32
+	Save
+}
+
+
+Script "AlternateOpening"
+{
+	if (IsGroupRemoved 32)
+	{
+		StartMusicManager
+	}
+}
+
+
+///////////////////////////
+//  Exploration Markers  //
+///////////////////////////
+
+Function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 31)
+call PowerupRemoval (A_powerupexplorationmarker_02, 27)
+Call "GonkMessage" (A_gonk1_01)
+
+
+///////////////////////
+// Chris Gonk Script //
+///////////////////////
+
+Function "GonkMessage" (Actor Messenger)
+{
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	AIAudioOff Messenger
+	TakeControlOf Messenger
+	LookAt Messenger Obi
+	Childscript "GonkDead"
+	{
+		WaitUntilKilled Messenger
+		EndScript "Message"
+	}
+	Childscript "Message"
+	{
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0	
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 1.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Idle // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		ReturnControlTo Messenger
+		AIAudioOn Messenger
+	}
+	WaitForAll
+}
+
+
+
+///////////////////////////
+//  Sniper Gun Powerups  //
+///////////////////////////
+
+Function "SniperGunRemoval" (actor TuskenSniperGun, int SniperGunRemovalGroup)
+{
+	WaitUntilRemoved TuskenSniperGun
+	RemoveGroup SniperGunRemovalGroup
+	Save
+}
+
+Call SniperGunRemoval (A_PowerupSniperRifle_01, 30)
+Call SniperGunRemoval (A_PowerupSniperRifle_02, 29)
+Call SniperGunRemoval (A_PowerupSniperRifle_03, 28)
+
+///////////////////////
+//Ambushed by Tuskens//
+///////////////////////
+
+Script "Tusken1 Jumps Obi"
+{
+	// WaitUntilEnteredRegion obi gaffi_jumpdown02
+	// TakeControlOf A_z_Tusken-Gaffi_04 
+	// EquipWeapon A_z_Tusken-Gaffi_04 
+	// RunToNode A_z_Tusken-Gaffi_04  goto_gaffi01
+	// ForceTargetAndAttack A_z_Tusken-Gaffi_04  Obi
+}
+
+Script "Tusken Trio Jumps Obi"
+{
+	WaitUntilEnteredRegion obi gaffi_jumpdown01
+	Teleport A_15_ConstCrate_02 A_generic_02
+	Pause 1.0
+
+	Child ImpulseTowardsNode A_14_rock3_1m_08 9 goto_gaffi05
+	DamageAsIfThrownBy A_14_rock3_1m_08 A_z_Tusken-Gaffi_01 3.0 //damage for the next 3.0 seconds
+	Child ImpulseTowardsNode A_14_rock1_1m_02 10 goto_gaffi05
+	DamageAsIfThrownBy A_14_rock1_1m_02 A_z_Tusken-Gaffi_01 3.0
+	Child ImpulseTowardsNode A_14_rock3_1m_07 5 goto_gaffi05
+	DamageAsIfThrownBy A_14_rock3_1m_07 A_z_Tusken-Gaffi_01 3.0
+	Pause 1.0
+	WaitForAll
+
+	Child ImpulseTowardsNode A_14_rock2_1m_06 8 goto_gaffi06
+	DamageAsIfThrownBy A_14_rock2_1m_06 A_z_Tusken-Gaffi_01 3.0 
+	Child ImpulseTowardsNode A_14_rock3_1m_03 7 goto_gaffi06
+	DamageAsIfThrownBy A_14_rock3_1m_03 A_z_Tusken-Gaffi_01 3.0 
+	Child ImpulseTowardsNode A_14_rock2_1m_01 10 goto_gaffi06
+	DamageAsIfThrownBy A_14_rock2_1m_01 A_z_Tusken-Gaffi_01 3.0 
+	Pause 1.0
+	WaitForAll
+
+	Child TakeControlOf A_z_Tusken-Gaffi_01
+	Child EquipWeapon A_z_Tusken-Gaffi_01
+	Child RunToNodeAndWait A_z_Tusken-Gaffi_01 goto_gaffi04_A
+	Child RunToNodeAndWait A_z_Tusken-Gaffi_01 goto_gaffi04
+	Child ForceTargetAndAttack A_z_Tusken-Gaffi_01 Obi
+
+	Child TakeControlOf A_z_Tusken-Gaffi_02 
+	Child EquipWeapon A_z_Tusken-Gaffi_02 
+	Child RunToNodeAndWait A_z_Tusken-Gaffi_02 goto_gaffi05_A
+	Child RunToNodeAndWait A_z_Tusken-Gaffi_02 goto_gaffi05
+	Child ForceTargetAndAttack A_z_Tusken-Gaffi_02 Obi
+
+	Child TakeControlOf A_z_Tusken-Gaffi_03
+	Child EquipWeapon A_z_Tusken-Gaffi_03
+	Child RunToNodeAndWait A_z_Tusken-Gaffi_03 goto_gaffi06_A
+	Child RunToNodeAndWait A_z_Tusken-Gaffi_03 goto_gaffi06
+	Child ForceTargetAndAttack A_z_Tusken-Gaffi_03 Obi
+}
+
+Script "Tusken Pack 'o Wolves 1"
+{
+	Actor Pack1_01 A_z_Tusken-GaffiPack1_01 
+	Actor Pack1_02 A_z_Tusken-GaffiPack1_02 
+	Actor Pack1_03 A_z_Tusken-GaffiPack1_03
+ 
+	WaitUntilEnteredRegion obi gaffi_pack1
+
+	Child TakePartialControlOf Pack1_01
+	Child EquipWeapon Pack1_01
+	Child RunToNode Pack1_01 goto_pack_c
+	Child RunToNode Pack1_01 goto_gaffi04
+	Child ForceTargetAndAttack Pack1_01 Obi
+
+	Child TakePartialControlOf Pack1_02
+	Child EquipWeapon Pack1_02
+	Child RunToNode Pack1_01 goto_pack_f
+	Child RunToNode Pack1_02 goto_gaffi05
+	Child ForceTargetAndAttack Pack1_02 Obi
+
+	Child TakePartialControlOf Pack1_03
+	Child EquipWeapon Pack1_03
+	Child RunToNode Pack1_01 goto_pack_i
+	Child RunToNode Pack1_03 goto_gaffi06
+	Child ForceTargetAndAttack Pack1_03 Obi
+}
+
+
+Script "Tusken Pack 'o Wolves 3"
+{
+	WaitUntilEnteredRegion obi gaffi_pack3
+	Actor Pack3_01 A_z_Tusken-GaffiPack3_01 
+	Actor Pack3_03 A_z_Tusken-GaffiPack3_03 
+
+	Child TakeControlOf Pack3_01
+	Child EquipWeapon Pack3_01
+
+
+	Child TakeControlOf Pack3_03 
+	Child EquipWeapon Pack3_03 
+
+
+	WaitUntilEnteredRegion Obi pack3_wakeup1
+	Child ForceTargetAndAttack Pack3_01 Obi
+	Child ForceTargetAndAttack Pack3_03 Obi
+}
+
+//////////////////////
+//  Tusken Arches  ///
+//////////////////////
+
+Script "Tusken Grenade Alley"
+{
+	WaitUntilEnteredRegion Obi pack3_wakeup1
+	Actor TuskGren02 A_z_Tusken-Grenade_02 
+	Actor TuskGren04 A_z_Tusken-Grenade_04 
+	Actor TuskGren08 A_z_Tusken-Grenade_08 
+	Actor TuskGren09 A_z_Tusken-Grenade_09 
+	Actor TuskSnipe01 A_z_Tusken-Sniper_01 
+	Actor TuskSnipe02 A_z_Tusken-Sniper_02 
+	Actor TuskSnipe03 A_z_Tusken-Sniper_03 
+	Actor TuskSnipe04 A_z_Tusken-Sniper_04 
+
+	Child TakePartialControlOf TuskSnipe01
+	Child EquipWeapon TuskSnipe01
+
+	Child TakePartialControlOf TuskSnipe02
+	Child EquipWeapon TuskSnipe02
+
+	Child TakePartialControlOf TuskSnipe03
+	Child EquipWeapon TuskSnipe03
+
+	Child TakePartialControlOf TuskSnipe04
+	Child EquipWeapon TuskSnipe04
+	
+
+	Child SetSniperAttackFlag TuskSnipe01
+	Child ForceTargetAndAttack TuskSnipe01 Obi
+	Child WaitUntilNear Obi TuskSnipe01 5
+	Child ReturnControlTo TuskSnipe01
+
+	Child SetSniperAttackFlag TuskSnipe02
+	Child ForceTargetAndAttack TuskSnipe02 Obi
+	Child WaitUntilNear Obi TuskSnipe02 5
+	Child ReturnControlTo TuskSnipe02
+
+	Child SetSniperAttackFlag TuskSnipe03
+	Child ForceTargetAndAttack TuskSnipe03 Obi
+	Child WaitUntilNear Obi TuskSnipe03 5
+	Child ReturnControlTo TuskSnipe03
+
+	Child SetSniperAttackFlag TuskSnipe04
+	Child ForceTargetAndAttack TuskSnipe04 Obi
+	Child WaitUntilNear Obi TuskSnipe04 5
+	Child ReturnControlTo TuskSnipe04
+}
+
+Script "Arches End"
+{
+	Actor TBArchend02 A_z_Tusken-Blaster_archend_02 
+	Actor TBArchend04 A_z_Tusken-Blaster_archend_04 
+	Actor TGArchend01 A_z_Tusken-Gaffi_archend_01 
+	Actor TGArchend03 A_z_Tusken-Gaffi_archend_03 
+
+	WaitUntilEnteredRegion Obi last_arch_guantlet
+
+	Child TakePartialControlOf TGArchend01
+	Child RunToNodeAndWait TGArchend01 archend_A_02
+
+	Child TakePartialControlOf TBArchend02
+	Child RunToNodeAndWait TBArchend02 archend_A_02
+
+	Child TakePartialControlOf TGArchend03
+	Child RunToNodeAndWait TGArchend03 archend_A_02
+
+	Child TakePartialControlOf TBArchend04
+	Child RunToNodeAndWait TBArchend04 archend_A_02
+
+	Child TakePartialControlOf TGArchend01
+	Child RunToNodeAndWait TGArchend01 archend_B_01
+	Child RunToNodeAndWait TGArchend01 archend_B_03
+
+	Child TakePartialControlOf TBArchend02
+	Child RunToNodeAndWait TBArchend02 archend_B_01
+	Child RunToNodeAndWait TBArchend02 archend_B_03
+
+	Child TakePartialControlOf TGArchend03
+	Child RunToNodeAndWait TGArchend03 archend_B_01
+	Child RunToNodeAndWait TGArchend03 archend_B_03
+
+	Child TakePartialControlOf TBArchend04
+	Child RunToNodeAndWait TBArchend04 archend_B_01
+	Child RunToNodeAndWait TBArchend04 archend_B_03
+}
+
+//////////////////////////////////
+//  Pre Village Cliff Sequence  //
+//////////////////////////////////
+
+Script "Tusken Blaster Jump"
+{
+	WaitUntilEnteredRegion Obi tusken_jump1
+	ForceTargetAndAttack A_Tusken-Grenade_01 Obi
+}
+
+Script "Flame-Gaffi Ambush 1"
+{
+	Actor FlameGaf1 A_z_Tusken-FlamingGaffi_01
+	WaitUntilEnteredRegion Obi cliff_flameGambush1
+	TakePartialControlOf FlameGaf1 
+	EquipWeapon FlameGaf1
+	ForceTargetAndAttack FlameGaf1 Obi
+}
+
+Script "Cliff Ambush 1"
+{
+	Actor GafAmbush1 A_z_Tusken-FlamingGaffAmbush_01 
+	Actor GafAmbush2 A_z_Tusken-FlamingGaffAmbush_02 
+	Actor GafAmbush3 A_z_Tusken-FlamingGaffAmbush_03 
+	Actor GafAmbush4 A_z_Tusken-GaffiAmbush_04 
+	Actor GafAmbush5 A_z_Tusken-GaffiAmbush_05 
+	Actor GafAmbush6 A_z_Tusken-GaffiAmbush_06 
+	Actor GafAmbush7 A_z_Tusken-GaffiAmbush_07 
+	Actor GafAmbush8 A_z_Tusken-GaffiAmbush_08 
+
+	WaitUntilEnteredRegion Obi cliff_ambush
+
+	Child TakeControlOf GafAmbush1
+	Child EquipWeapon GafAmbush1
+	Child ForceTargetAndAttack GafAmbush1 Obi
+
+	Child TakeControlOf GafAmbush2
+	Child EquipWeapon GafAmbush2
+	Child ForceTargetAndAttack GafAmbush2 Obi
+
+	Child TakeControlOf GafAmbush3
+	Child EquipWeapon GafAmbush3
+	Child ForceTargetAndAttack GafAmbush3 Obi
+
+	Child TakePartialControlOf GafAmbush4
+	Child EquipWeapon GafAmbush4
+	RunToNode GafAmbush4 GafReinforce01a
+	RunToNode GafAmbush4 GafReinforce02a
+	RunToNode GafAmbush4 GafReinforce03a
+	Child ForceTargetAndAttack GafAmbush4 Obi
+
+	Child TakePartialControlOf GafAmbush5
+	Child EquipWeapon GafAmbush5
+	Child RunToNode GafAmbush5 GafReinforce01b
+	Child RunToNode GafAmbush5 GafReinforce02b
+	Child RunToNode GafAmbush5 GafReinforce03b
+	Child ForceTargetAndAttack GafAmbush5 Obi
+
+	Child TakePartialControlOf GafAmbush6
+	Child EquipWeapon GafAmbush6
+	Child RunToNode GafAmbush6 GafReinforce01c
+	Child RunToNode GafAmbush6 GafReinforce02c
+	Child RunToNode GafAmbush6 GafReinforce03c
+	Child ForceTargetAndAttack GafAmbush6 Obi
+
+	Child TakePartialControlOf GafAmbush7
+	Child EquipWeapon GafAmbush7
+	Child RunToNode GafAmbush7 GafReinforce01a
+	Child RunToNode GafAmbush7 GafReinforce02a
+	Child RunToNode GafAmbush7 GafReinforce03a
+	Child ForceTargetAndAttack GafAmbush7 Obi
+
+	Child TakePartialControlOf GafAmbush8
+	Child EquipWeapon GafAmbush8
+	Child RunToNode GafAmbush8 GafReinforce01c
+	Child RunToNode GafAmbush8 GafReinforce02c
+	Child RunToNode GafAmbush8 GafReinforce03c
+	Child ForceTargetAndAttack GafAmbush8 Obi
+}
+
+Script "Flame Gaffi Bridge"
+{
+	Actor FGB01 A_z_Tusken-FlamingGaffiBrdg_01 
+	Actor FGB02 A_z_Tusken-FlamingGaffiBrdg_02 
+	Actor FGB03 A_z_Tusken-FlamingGaffiBrdg_03 
+
+	WaitUntilEnteredRegion Obi bridge1_flamegaf
+
+	TakePartialControlOf FGB03
+	RunToNodeAndWait FGB03 goto_bridge3
+
+	SetSniperAttackFlag A_Tusken-Sniper_08
+
+	ChildScript "Flame Gaffi Bridge1"
+	{	
+		TakeControlOf FGB01
+		RunToNode FGB01 goto_bridgestart
+		RunToNode FGB01 goto_bridge1
+		ForceTarget FGB01 Obi
+		PlayAnimation FGB01 tr1_braceweapon-tuskenswordtaunt.anim .5 .75
+		Pause 2.0
+		PlayAnimation FGB01 tr1_braceweapon-tuskenswordtaunt.anim .25 .5
+		WaitUntilEnteredRegion Obi bridge1
+		ForceTargetAndAttack FGB01 Obi
+	}
+
+	ChildScript "Flame Gaffi Bridge2"
+	{
+		TakeControlOf FGB02
+		RunToNode FGB02 goto_bridgestart
+		RunToNode FGB02 goto_bridge2
+		ForceTarget FGB02 Obi
+		PlayAnimation FGB02 tr1_braceweapon-tuskenswordtaunt.anim .30 1.0
+		Pause 2.0
+		PlayAnimation FGB02 tr1_braceweapon-tuskenswordtaunt.anim .15 .30
+		WaitUntilEnteredRegion Obi bridge2
+		ForceTargetAndAttack FGB02 Obi
+	}
+}
+
+
+script "LoadPoint"
+{
+    	waituntilenteredregion obi rgn_load_L04_3b
+	UnEquipWeapon Obi
+	BeginCutScene
+	TakeControlOf Obi
+	CameraFixed obiend Obi
+	Child RunToNode Obi goto_obiend
+	WaitUntilEnteredRegion Obi fadedown
+	FadeDownAndWait 3.0
+	EndCutScene	
+	SetStartPosition 3
+	RemoveGroup 32
+	Save
+
+	NextPart L04_3b
+}

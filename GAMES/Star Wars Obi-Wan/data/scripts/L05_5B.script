@@ -1,0 +1,706 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Int    BeginMission        0
+Int    MissionCompleted    0
+
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_04.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension 
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_13.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_victory_03.wav Battle
+AddMusic m_victory_04.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_battle_13_lp.wav  m_battle_13_win.wav  m_battle_13_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "Walk" (Actor Guy, Node GotoNode, Float PauseTime, Int ReturnControl)
+{
+    Pause PauseTime
+	TakeControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+            WaitUntilNear Guy Obi 5.0
+            ReturnControlTo Guy
+            EndFunction "Run"
+    }
+    
+	WalkToNodeAndWait Guy GotoNode
+    
+    If (= ReturnControl 1)
+    {
+        ReturnControlTo Guy
+    }
+}	
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime, Int ReturnControl)
+{
+    Pause PauseTime
+	TakeControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+            WaitUntilNear Guy Obi 5.0
+            ReturnControlTo Guy
+            EndFunction "Run"
+    }
+    
+	RunToNodeAndWait Guy GotoNode
+    
+    If (= ReturnControl 1)
+    {
+        ReturnControlTo Guy
+    }
+}	
+
+Function "Activate" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime, Int ReturnControl)
+{   
+    Pause PauseTime
+    
+    Teleport Guy StartSpot
+	TakeControlOf Guy
+
+    Childscript "Activate Interrupted"
+    {
+         WaitUntilNear Guy Obi 5.0
+         ReturnControlTo Guy
+         EndFunction "Activate"
+    }
+  
+	RunToNodeAndWait Guy GotoNode
+
+    If (= ReturnControl 1)
+    {
+        ReturnControlTo Guy
+    }
+}	
+
+Function "SetStart" (Int StartNum, Int GroupNum)
+{
+    If (<> RemoveGroup 0)
+    {
+        RemoveGroup GroupNum
+    }
+
+    SetStartPosition StartNum
+    Save
+}
+
+Function "Firefight" (Actor Guy, Region DetectRegion1, Region DetectRegion2, Int ReleaseActor)
+{
+    InvincibilityOn Guy
+    Child WaitUntilEnteredRegion Obi DetectRegion1
+    Child WaitUntilEnteredRegion Obi DetectRegion2
+    WaitForAny
+    InvincibilityOff Guy
+    
+    If (= ReleaseActor 1)
+    {
+        ClearAiBoundary Guy
+    }
+}
+
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene"
+{
+	BeginCutScene
+	FadeUpAndWait
+/*
+	CommunicatorMessageAndWait "/Asha_677/Obi-wan.  Now that you've eliminated turbolaser threat, we can begin launching our starfighters." asha.dlg
+	CommunicatorMessageAndWait "/Asha_678/However, our pilots are currently pinned down by a Federation installation guarding the entrance to the main hangar." asha.dlg
+	CommunicatorMessageAndWait "/Asha_679/They need your help to clear a path through the blockade in order to get to their ships safely." asha.dlg
+	CommunicatorMessageAndWait "/Asha_680/It is imparative that you make contact with our pilot convoy, and help them gain access to the hangar." asha.dlg
+    CommunicatorMessageAndWait "/Asha_681/Our surprise attack on the orbiting droid ship depends on the successful launch of our starfighters." asha.dlg
+    CommunicatorMessageAndWait "/Asha_682/Time is of the essence, Jedi.  The Gungan soldiers cannot last forever against the might of a fully coordinated droid army." asha.dlg
+//    CommunicatorMessageAndWait "/Asha_683/Good luck, Jedi!" asha.dlg    
+*/    
+    PreEndCutScene
+    Set BeginMission 1
+    StartMusicManager
+    FadeUp 0
+	EndCutScene
+}
+
+//Part B
+Script "Level Transistion To L05_5A"
+{
+    WaitUntilEqual BeginMission 1
+    WaitUntilEnteredRegion Obi L05_5A_Trig
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    EndCutscene
+    NextPart L05_5A
+}
+
+Script "Level Transistion To L05_5C"
+{
+    WaitUntilEqual BeginMission 1
+    WaitUntilEnteredRegion Obi L05_5C_Trig
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    EndCutscene
+    NextPart L05_5C
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Set Far Clip"
+{
+    SetFarClip 250 0
+}
+
+Script "Set Default Surface Sound"
+{
+//    SetDefaultSurface 01_HLa_floor.sur
+}
+
+Script "Set Pain Region Values"
+{
+//    SetPainRegion Turret_Pain_Rgn 9999.0
+}
+
+Script "Load DLG Files"
+{
+    LoadDLG asha.dlg
+    LoadDLG bad.dlg
+}
+
+Script "Set Forcefields"
+{
+    // Set initial state of forcefields
+    Nudge Obi A_5-5_ff_controller_06        //PartA
+    Nudge Obi A_5-5_ff_generator_01         //PartA
+    Nudge Obi A_5-5_ff_generator_03         //PartB
+    Nudge Obi A_5-5_ff_generator_04         //PartB
+    
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//-------------------------- Start Positions --------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Start Position 00"
+{
+    WaitUntilEqual BeginMission 1
+    SetStartPosition 0
+    Save
+}
+
+Script "Start Position 01"
+{
+/*
+    WaitUntilEnteredRegion Obi Start_Rgn_01
+    RemoveGroup 1
+    SetStartPosition 1
+    Save
+*/
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Patrols ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+//PartB
+Script "Zone06-BAD Patrol 01"
+{
+    Actor Commander08    A_Battledroid-Commander_08
+
+
+    SetPatrolTypes Commander08 1
+    SetPatrolAttentionSpan Commander08 300.0
+    AddPatrolState Commander08
+}
+
+Script "Zone05-BAD Patrol 01"
+{
+    Actor Commander09    A_Battledroid-Commander_09
+
+
+    SetPatrolTypes Commander09 1
+    SetPatrolAttentionSpan Commander09 300.0
+    AddPatrolState Commander09
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Alarms -------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+//PartB
+Script "Zone07-Alarm 01"
+{
+    Actor Alarm          A_5-3_alarm_03
+    Actor Commander08    A_Battledroid-Commander_08    
+    Actor Mace01         A_AssassinDroid-Mace_01
+    Actor Kamikaze03     A_Battledroid-Kamikaze_03
+    Actor Kamikaze04     A_Battledroid-Kamikaze_04
+    Actor Kamikaze05     A_Battledroid-Kamikaze_05
+    
+        
+    Script "Zone07-Alarm Station 01"
+    {
+        WaitUntilNudged Alarm
+
+        ReturnControlTo Commander08
+        
+        SetAIBoundaryAndNode Mace01 Z07_AI_Rgn_01 Zone07-Alarm01-Spot09
+        SetAIBoundaryAndNode Kamikaze03 Z07_AI_Rgn_01 Zone07-Alarm01-Spot10
+        SetAIBoundaryAndNode Kamikaze04 Z07_AI_Rgn_01 Zone07-Alarm01-Spot11
+        SetAIBoundaryAndNode Kamikaze05 Z07_AI_Rgn_01 Zone07-Alarm01-Spot12                
+        
+        Child CallAndWait "Activate" (Mace01, Zone07-Spot01, Zone07-Alarm01-Spot01, 0.0, 0)
+        Child CallAndWait "Activate" (Kamikaze03, Zone07-Spot02, Zone07-Alarm01-Spot02, 1.0, 0)
+        Child CallAndWait "Activate" (Kamikaze04, Zone07-Spot03, Zone07-Alarm01-Spot03, 2.0, 0)
+        Child CallAndWait "Activate" (Kamikaze05, Zone07-Spot04, Zone07-Alarm01-Spot04, 2.0, 0)        
+        
+        WaitForAll
+        
+        // Open Forcefield
+//        Nudge Mace01 A_5-5_ff_generator_03
+        
+//        WaitUntilDoorOpen A_ForceField_11
+                
+        // Run Ahead
+        Child CallAndWait "Run" (Mace01, Zone07-Alarm01-Spot05, 0.0, 0)
+        Child CallAndWait "Run" (Kamikaze03, Zone07-Alarm01-Spot06, 0.0, 0)
+        Child CallAndWait "Run" (Kamikaze04, Zone07-Alarm01-Spot07, 0.0, 0)
+        Child CallAndWait "Run" (Kamikaze05, Zone07-Alarm01-Spot08, 0.0, 0)        
+        
+        WaitForAll
+                                        
+        // Close Forcefield
+        Nudge Mace01 A_5-5_ff_generator_03
+
+//        WaitUntilDoorClosed A_ForceField_11
+    
+        // Open Forcefield
+        LookAtAndWait Mace01 A_5-5_ff_generator_10
+        Nudge Mace01 A_5-5_ff_generator_10
+
+        WaitUntilDoorOpen A_ForceField_10
+        
+        // Run ahead
+        Call "Run" (Mace01, Zone07-Alarm01-Spot09, 0.0, 1)
+        Call "Run" (Kamikaze03, Zone07-Alarm01-Spot10, 0.0, 1)
+        Call "Run" (Kamikaze04, Zone07-Alarm01-Spot11, 0.0, 1)
+        Call "Run" (Kamikaze05, Zone07-Alarm01-Spot12, 0.0, 1)
+        
+        EndScript "Zone07-Alarm 01"
+    }
+
+    WaitUntilStateActivated Commander08 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Commander08
+        EndScript "Zone07-Alarm 01"
+    }
+
+    ChildScript "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        ReturnControlTo Commander08
+        ForceTarget Commander08 Obi
+        EndScript "Zone07-Alarm 01"     
+    }
+        
+    TakeControlOf Commander08
+    RunToNodeAndWait Commander08 Zone07-Alarm01
+    
+    LookAt Commander08 Alarm
+    Sayline Commander08 "/BattledroidInfantry_1291/Intruder detected in Sector 1-B.  Send reinforcements!" PushButton
+    Nudge Commander08 Alarm
+    
+    EndScript "Alarm Interrupted"
+    
+    ReturnControlTo Commander08
+    ForceTarget Commander08 Obi
+}
+
+Script "Zone07-Alarm 02"
+{
+    Actor Alarm          A_5-3_alarm_04
+    Actor Commander09    A_Battledroid-Commander_09
+    Actor Mace02         A_AssassinDroid-Mace_02
+    Actor Railgun03      A_Battledroid-Railgun_03
+    Actor Railgun04      A_Battledroid-Railgun_04
+    
+        
+    Script "Zone07-Alarm Station 02"
+    {
+        WaitUntilNudged Alarm
+
+        ReturnControlTo Commander09
+        
+        Child CallAndWait "Activate" (Mace02, Zone07-Spot05, Zone07-Alarm02-Spot01, 0.0, 0)
+        Child CallAndWait "Activate" (Railgun03, Zone07-Spot06, Zone07-Alarm02-Spot02, 1.0, 0)
+        Child CallAndWait "Activate" (Railgun04, Zone07-Spot07, Zone07-Alarm02-Spot03, 2.0, 0)
+        
+        WaitForAll
+        
+        // Open Forcefield
+//        Nudge Mace02 A_5-5_ff_generator_04
+        
+//        WaitUntilDoorOpen A_ForceField_13
+                
+        // Run Ahead
+        Child CallAndWait "Run" (Mace02, Zone07-Alarm02-Spot05, 0.0, 0)
+        Child CallAndWait "Run" (Railgun03, Zone07-Alarm02-Spot06, 0.0, 0)
+        Child CallAndWait "Run" (Railgun04, Zone07-Alarm02-Spot07, 0.0, 0)
+        
+        WaitForAll
+                                        
+        // Close Forcefield
+        Nudge Mace02 A_5-5_ff_generator_04
+        
+//        WaitUntilDoorClosed A_ForceField_13
+    
+        // Open Forcefield
+        LookAtAndWait Mace02 A_5-5_ff_generator_11
+        Nudge Mace02 A_5-5_ff_generator_11
+
+        WaitUntilDoorOpen A_ForceField_12
+        
+        // Run ahead
+        Call "Run" (Mace02, Zone07-Alarm02-Spot09, 0.0, 1)
+        Call "Run" (Railgun03, Zone07-Alarm02-Spot10, 0.0, 1)
+        Call "Run" (Railgun04, Zone07-Alarm02-Spot11, 0.0, 1)
+        
+        EndScript "Zone07-Alarm 02"
+    }
+
+    WaitUntilStateActivated Commander09 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Commander09
+        EndScript "Zone07-Alarm 02"
+    }
+
+    ChildScript "Alarm Destroyed"
+    {
+        WaitUntilKilled Alarm
+        ReturnControlTo Commander09
+        ForceTarget Commander09 Obi
+        EndScript "Zone07-Alarm 02"     
+    }
+        
+    TakeControlOf Commander09
+    RunToNodeAndWait Commander09 Zone07-Alarm02
+    
+    LookAt Commander09 Alarm
+    Sayline Commander09 "/BattledroidInfantry_1291/Intruder detected in Sector 1-B.  Send reinforcements!" PushButton
+    Nudge Commander09 Alarm
+    
+    EndScript "Alarm Interrupted"
+    
+    ReturnControlTo Commander09
+    ForceTarget Commander09 Obi
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Hostages -----------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+//PartB
+Script "Zone05-Hostage 01"
+{
+    Actor Hostage02          A_Naboo_Civilian_Male_1_02
+    Actor Commander02        A_Battledroid-Commander_02
+    Actor Security02         A_Battledroid-Security_02
+
+
+    SetHostageSituation Hostage02 Security02 Commander02
+    SetHostageAlertDistance Commander02 8.0
+    SetHostageAlertDistance Security02 8.0
+    
+    WaitUntilStateActivated Hostage02 BeHostage
+    WaitUntilStateShutdown Hostage02 BeHostage
+    
+    TakeControlOf Hostage02
+    LookAt Hostage02 Obi
+    
+    Sayline Hostage02 "Thank you, Jedi!  Follow me I have something for you."
+    
+    RunToNodeAndWait Hostage02 Hostage02-Spot01
+}
+
+Script "Zone10-Hostage 01"
+{
+    Actor Hostage03          A_Naboo_Civilian_Male_1_03
+    Actor Commander03        A_Battledroid-Commander_03
+    Actor Security03         A_Battledroid-Security_03
+
+
+    SetHostageSituation Hostage03 Security03 Commander03
+    SetHostageAlertDistance Commander03 8.0
+    SetHostageAlertDistance Security03 8.0
+    
+    WaitUntilStateActivated Hostage03 BeHostage
+    WaitUntilStateShutdown Hostage03 BeHostage
+    
+    TakeControlOf Hostage03
+    LookAt Hostage03 Obi
+    
+    Sayline Hostage03 "Thank you, Jedi!  Follow me I have something for you."
+    
+    RunToNodeAndWait Hostage03 Hostage03-Spot01
+    Nudge Hostage03 A_5-5_ff_controller_03
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambushes -----------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+//PartB
+Script "Zone11-Assassin Drop"
+{
+    Actor Destroyer05        A_DestroyerDroid_05
+    Actor Sword01            A_AssassinDroid-Sword_01
+    Actor Sword02            A_AssassinDroid-Sword_02    
+    Actor Security22         A_Battledroid-Security_22
+    Actor Security23         A_Battledroid-Security_23
+    Actor Security24         A_Battledroid-Security_24
+    Actor Security25         A_Battledroid-Security_25
+    Actor Commander11        A_Battledroid-Commander_11
+    
+
+    TakeControlOf Commander11        
+    WaitUntilKilled Destroyer05
+    WaitForAll
+    
+    TakeControlOf Sword01
+    TakeControlOf Sword02
+    TakeControlOf Security22
+    TakeControlOf Security23
+    TakeControlOf Security24
+    TakeControlOf Security25            
+    
+    Teleport Sword01 Zone11-Spot01
+    Teleport Sword02 Zone11-Spot04
+    Teleport Security22 Zone11-Spot02
+    Teleport Security23 Zone11-Spot03
+    Teleport Security24 Zone11-Spot05
+    Teleport Security25 Zone11-Spot06
+    
+    Child CallAndWait "Walk" (Security22, Zone11-Spot04, 0.0, 0)
+    Child CallAndWait "Walk" (Security23, Zone11-Spot05, 0.0, 0)
+    Child CallAndWait "Walk" (Security24, Zone11-Spot09, 0.0, 0)
+    Child CallAndWait "Walk" (Security25, Zone11-Spot10, 0.0, 0)
+    WaitForAll
+    
+    Child CallAndWait "Walk" (Sword01, Zone11-Spot01, 0.0, 0)
+    Child CallAndWait "Walk" (Sword02, Zone11-Spot06, 0.0, 0)
+    WaitForAll
+    
+    Pause 1.0
+    
+    Child CallAndWait "Walk" (Sword01, Zone11-Spot02, 0.0, 0)
+    Child CallAndWait "Walk" (Sword02, Zone11-Spot07, 0.0, 0)
+    WaitForAll
+
+    Pause 1.0
+/*            
+    Child CallAndWait "Run" (Sword01, Zone11-Spot03, 0.0, 0)
+    Child CallAndWait "Run" (Sword02, Zone11-Spot08, 0.0, 0)
+    WaitForAll
+*/
+    Run Sword01
+    Run Sword02
+    JumpForward Sword01
+    JumpForward Sword02
+
+    ForceTarget Security22 Obi
+    ForceTarget Security23 Obi
+    ForceTarget Security24 Obi
+    ForceTarget Security25 Obi        
+
+    SetAIBoundaryAndNode Sword01 Z11_AI_Rgn_01 Zone11-Spot03
+    SetAIBoundaryAndNode Sword02 Z11_AI_Rgn_01 Zone11-Spot08
+            
+    ReturnControlTo Sword01
+    ReturnControlTo Sword02
+    ReturnControlTo Security22
+    ReturnControlTo Security23
+    ReturnControlTo Security24
+    ReturnControlTo Security25
+    
+    Child WaitUntilKilled Sword01
+    Child WaitUntilKilled Sword02
+//    Child WaitUntilKilled Security22
+//    Child WaitUntilKilled Security23
+//    Child WaitUntilKilled Security24
+//    Child WaitUntilKilled Security25
+    WaitForAll
+
+    LookAtAndWait Commander11 A_5-5_ff_generator_12
+    Nudge Commander11 A_5-5_ff_generator_12
+
+    WaitUntilDoorOpen A_ForceField_15
+    
+    ReturnControlTo Commander11
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambient ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Zone04-Firefight01"
+{
+    Actor Soldier01         A_naboo-soldier_01
+    Actor Soldier02         A_naboo-soldier_02
+    Actor Security18        A_Battledroid-Security_18
+    Actor Security19        A_Battledroid-Security_19
+    Actor Security20        A_Battledroid-Security_20
+    Actor Security21        A_Battledroid-Security_21            
+ 
+       
+    Call "Firefight" (Soldier01, Z04_Firefight_01, Z04_Firefight_02, 1)
+    Call "Firefight" (Soldier02, Z04_Firefight_01, Z04_Firefight_02, 1)
+    Call "Firefight" (Security18, Z04_Firefight_01, Z04_Firefight_02, 0)
+    Call "Firefight" (Security19, Z04_Firefight_01, Z04_Firefight_02, 0)
+    Call "Firefight" (Security20, Z04_Firefight_01, Z04_Firefight_02, 0)
+    Call "Firefight" (Security21, Z04_Firefight_01, Z04_Firefight_02, 0)            
+}
+
+Script "Zone07-Show01"
+{
+//    WaitUntilEnteredRegion Obi Z07-Show01
+}
+
+Script "Zone07-Show02"
+{
+//    WaitUntilEnteredRegion Obi Z07-Show02
+}
+
+Script "Zone09-Show01"
+{
+    WaitUntilEnteredRegion Obi Z09-Show01
+}
+
+Script "Zone09-Show02"
+{
+    WaitUntilEnteredRegion Obi Z09-Show02
+}
+
+Script "Zone12-Show01"
+{
+    WaitUntilEnteredRegion Obi Z12-Show01
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Specific Encounters ------------------------------//
+/////////////////////////////////////////////////////////////////////////////////////
+
+Script "Rgn_10_Guys"
+{
+    Actor Commander12        A_Battledroid-Commander_12
+    Actor Security26         A_Battledroid-Security_26
+    Actor Security27         A_Battledroid-Security_27
+    
+    
+    TakeControlOf Commander12
+    TakeControlOf Security26
+    TakeControlOf Security27
+
+    WaitUntilEnteredRegion Obi Z09_Rgn_01
+    
+    ReturnControlTo Commander12
+    ReturnControlTo Security26
+    ReturnControlTo Security27
+}
+
+Script "Saylines for Voice Recording"
+{
+/*
+    //Part B
+    CommunicatorMessageAndWait "/Qui-Gon_688/"
+	CommunicatorMessageAndWait "/Qui-Gon_690/Obiwan.  I'm hiding out near the main hangar with the queen and the resistance." quigonjinn.dlg
+	CommunicatorMessageAndWait "/Qui-Gon_691/The situation is worse than I thought." quigonjinn.dlg
+	CommunicatorMessageAndWait "/Qui-Gon_692/The Trade Federation has this place locked down and I risk the queen's life if I leave her side to help the pilots." quigonjinn.dlg
+	CommunicatorMessageAndWait "/Qui-Gon_693/We haven't been detected yet, but I don't know how long we can remain unseen." quigonjinn.dlg
+	CommunicatorMessageAndWait "I need you to get as quickly as you can before we are discovered." quigonjinn.dlg
+	CommunicatorMessageAndWait "/Qui-Gon_695/Once you arrive, we will devise a plan of attack." quigonjinn.dlg
+	CommunicatorMessageAndWait "/Qui-Gon_696/In the meantime, maintain radio silence.  Out." quigonjinn.dlg
+
+    //Part C        
+    Sayline QuiGon "/Qui-Gon_698/Obiwan, over here."
+    Sayline QuiGon "/Qui-Gon_699/Thank the Maker, you made it.  As you can see, the door to the main hangar is being heavily guarded by the Federation."
+    Sayline NabooPilot "/male3_700/We need your help to clear out their baracade before we can gain entrance."
+    Sayline NabooPilot "/male3_701/We've already lost our escort before you guys arrived trying to pass through the blockade.  We can't afford to loose anymore people."
+    Sayline QuiGon "/Qui-Gon_702/Sensors indicate battledroid patrols are getting closer to our position."
+    Sayline QuiGon "/Qui-Gon_703/Obiwan, you go ahead with the pilots.  I will stay with the queen and protect the rear."
+    Sayline QuiGon "/Qui-Gon_704/You must hurry, Padawan.  The force will be with you, always."
+
+    Sayline NabooPilot "/male3_705/Here, take these ion grenades.  They may come in usefull.  It's all we have left."
+    Sayline NabooPilot "/male3_706/We'll wait here until the path has been cleared or if you need more grenades."    
+    Sayline NabooPilot "/male3_707/Help us Obiwan Kenobi, you're our only hope."        
+
+    Sayline NabooPilot "/male3_708/Here are some more ion grenades, Obiwan."
+    
+    Sayline NabooPilot "/male3_711/Those Federation tanks are the biggest threat.  Perhaps you should try to take them out first, Obiwan."    
+*/    
+}

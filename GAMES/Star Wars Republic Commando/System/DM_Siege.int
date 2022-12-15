@@ -1,0 +1,75 @@
+[BowcasterPickupMP2]
+PickupMessage="Wookiee Bowcaster"
+
+[BowcasterPickupMP3]
+PickupMessage="Wookiee Bowcaster"
+
+[DC15PickupMP0]
+PickupMessage="DC15s Side Arm Blaster"
+
+[DC17mAntiArmorWeaponPickupMP1]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mAntiArmorWeaponPickupMP3]
+PickupMessage="DC-17m Anti-Armor Attachment"
+
+[DC17mBlasterWeaponPickupMP0]
+PickupMessage="DC-17m Blaster"
+
+[DC17mSniperWeaponPickupMP3]
+PickupMessage="DC-17m Sniper Attachment"
+
+[DC17mSniperWeaponPickupMP4]
+PickupMessage="DC-17m Sniper Attachment"
+
+[EMPGrenadeMultiPlay0]
+PickupMessage="EC Detonators"
+
+[EMPGrenadeMultiPlay1]
+PickupMessage="EC Detonators"
+
+[LevelInfo0]
+Title="ARENA A17"
+
+[LevelSummary]
+Title="ARENA A17"
+
+[PickupHealth0]
+PickupMessage="Bacta tank"
+
+[PickupHealth1]
+PickupMessage="Bacta tank"
+
+[PickupHealth2]
+PickupMessage="Bacta tank"
+
+[PickupHealth3]
+PickupMessage="Bacta tank"
+
+[PickupHealth4]
+PickupMessage="Bacta tank"
+
+[PickupHealth5]
+PickupMessage="Bacta tank"
+
+[PickupHealth7]
+PickupMessage="Bacta tank"
+
+[SMGPickupMP0]
+PickupMessage="Trandoshan Mercenary SMG"
+
+[ShotgunPickupMP4]
+PickupMessage="ACP Array Gun"
+
+[ShotgunPickupMP5]
+PickupMessage="ACP Array Gun"
+
+[ThermalDetonatorMultiPlay0]
+PickupMessage="Thermal Detonators"
+
+[ThermalDetonatorMultiPlay1]
+PickupMessage="Thermal Detonators"
+
+[TrandoshanRifleMPPickup2]
+PickupMessage="LS-150 Heavy ACP Repeater Gun"
+

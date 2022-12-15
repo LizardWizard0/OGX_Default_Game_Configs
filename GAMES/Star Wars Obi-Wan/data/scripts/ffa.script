@@ -1,0 +1,49 @@
+//BeginCutScene//
+FadeUp
+
+SetTeam Obi
+SetTeam A_DuelMaceWindu_01 0
+SetTeam A_DuelQuiGon_01 0
+SetTeam A_DuelAdiGallia_01 0
+SetTeam A_dueldepabilaba_01 0
+SetTeam A_DuelEethKoth_01 0
+SetTeam A_DuelKiAdiMundi_01 0
+SetTeam A_DuelPloKoon_01 0
+SetTeam A_DuelSaeseeTiin_01 0
+Print "ready"
+Pause  2
+Print "fight!"
+//EndCutScene//
+
+SetTeam Obi 15
+SetTeam A_DuelMaceWindu_01 15
+SetTeam A_DuelQuiGon_01 15
+SetTeam A_DuelAdiGallia_01 15
+SetTeam A_dueldepabilaba_01 15
+SetTeam A_DuelEethKoth_01 15
+SetTeam A_DuelKiAdiMundi_01 15
+SetTeam A_DuelPloKoon_01 15
+SetTeam A_DuelSaeseeTiin_01 15
+
+
+ForceTarget A_DuelAdiGallia_01 Obi
+WaitUntilKilled A_DuelAdiGallia_01
+ForceTarget A_dueldepabilaba_01 Obi
+WaitUntilKilled A_dueldepabilaba_01
+ForceTarget A_DuelEethKoth_01 Obi
+WaitUntilKilled A_DuelEethKoth_01
+ForceTarget A_DuelKiAdiMundi_01 Obi
+WaitUntilKilled A_DuelKiAdiMundi_01
+ForceTarget A_DuelPloKoon_01 Obi
+WaitUntilKilled A_DuelPloKoon_01
+ForceTarget A_DuelSaeseeTiin_01 Obi
+WaitUntilKilled A_DuelSaeseeTiin_01
+ForceTarget A_DuelQuiGon_01 Obi
+WaitUntilKilled A_DuelQuiGon_01
+ForceTarget A_DuelMaceWindu_01 Obi
+WaitUntilKilled A_DuelMaceWindu_01
+SayLine  Obi "Damn straight!"
+
+
+
+

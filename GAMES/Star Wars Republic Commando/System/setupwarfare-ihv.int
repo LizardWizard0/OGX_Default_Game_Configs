@@ -1,0 +1,26 @@
+[Setup]
+LocalProduct=Unreal Technology Benchmark
+DefaultFolder=C:\UnrealBenchmark
+ReadMe=Help\ReadMe.htm
+SetupWindowTitle=Unreal Technology Benchmark Setup
+AutoplayWindowTitle=Unreal Technology Benchmark Options
+ProductURL=http://www.unreal.com/
+VersionURL=http://unreal.epicgames.com/versions.htm
+Developer=Epic Games, Inc.
+DeveloperURL=http://www.epicgames.com/
+Logo=Help\UnrealTournamentSetupLogo.bmp
+License=License.int
+
+[General]
+PlayLevelCommand=&Play this Unreal level
+OpenLinkCommand=&Open this Unreal link
+InstallModuleCommand=&Install this Unreal module
+EditLevelCommand=&Edit this Unreal level
+
+[GameGroup]
+Caption=Unreal Technology Benchmark
+Description=Installation is required.
+
+[DirectXGroup]
+Caption=DirectX
+Description=Optional Microsoft DirectX 8 drivers for enhanced graphics, sound, and joystick support.

@@ -1,0 +1,12 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+AddGesture me None 2 
+AddGesture me TurnHeadLeft
+AddGesture me PointLeft 2
+AddGesture me None 2 
+AddGesture me PointForward 3
+AddGesture me None 3
+AddGesture me TurnHeadRight 2
+AddGesture me PointRight 2
+WaitUntilFinishedGesture me

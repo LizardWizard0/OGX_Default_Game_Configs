@@ -1,0 +1,158 @@
+[MenuEndMatch]
+MatchResultText="YOU HAVE %s1 THE %s2!"
+WonText="WON"
+LostText="LOST"
+MatchText="MATCH"
+LadderText="LADDER"
+ALabel.Text=": OK"
+MenuTitle.Text="MATCH RESULTS"
+
+[MenuFourOptionTemplate]
+OptionButtons[0].Blurred.Text="1234567890ABCDEF"
+
+[MenuHintBox]
+HintDisabledText="Hints have been disabled. Hints can be turned back on from the Settings menu."
+XLabel.Text=": DO NOT SHOW HINTS"
+ALabel.Text=": CONTINUE"
+
+[MenuLadder]
+Versus.Text="VERSUS"
+GameTypeAcronym[0]="DM"
+GameTypeAcronym[1]="CTF"
+GameTypeAcronym[2]="DOM"
+GameTypeAcronym[3]="BR"
+GameTypeAcronym[4]="SV"
+GameTypeAcronymFix="TDM"
+LadderText="%type LADDER: GAME %x OF %n"
+WonLadderText="%type LADDER CHAMPIONS"
+SurvivalTitle="SURVIVAL"
+FinalTitle="TOURNAMENT CHAMPION"
+ALabelNormal=": PLAY"
+ALabelFinal=": END SCENE"
+XLabel.Text=": EDIT TEAM"
+
+[MenuNewGame]
+DifficultyList=()
+InfoText[0].Text="CHOOSE TEAM SYMBOL"
+InfoText[1].Text="CHOOSE DIFFICULTY"
+ALabel.Text=": NEXT"
+MenuTitle.Text="GAME SETUP"
+
+[MenuNewGameName]
+TeamText="TEAM"
+EditTeamNameText="CHOOSE TEAM NAME"
+InUseText="THERE IS ALREADY A SAVED GAME OR PROFILE NAMED %s"
+MinLenText="A SAVED GAME NAME MUST BE AT LEAST ONE LETTER OR NUMBER IN LENGTH"
+
+[MenuPickTeam]
+FinishButton.Blurred.Text="FINISH"
+SelectText=": SELECT"
+DeselectText=": DESELECT"
+FinishText=": FINISH"
+XLabel.Text=": STATS"
+MenuTitle.Text="PICK YOUR TEAMMATES"
+
+[MenuPlayerProfile]
+PercentText=" %"
+
+[MenuRetrySurvival]
+Message.Text="RETURN TO LADDER MENU OR REPLAY MATCH?"
+ALabel.Text=": LADDER MENU"
+BLabel.Text="REPLAY :"
+MenuTitle.Text="CONFIRM"
+
+[MenuSelectGame]
+NewGameText="START A NEW GAME"
+NewLabel=": NEW GAME"
+LoadLabel=": LOAD GAME"
+StringDeleteConfirm="Delete saved game "
+StringDeleteConfirmEnd="?"
+TitleText="SELECT GAME: (%x/%n)"
+ChampionText="CHAMPION"
+LockedText="LOCKED"
+XLabel.Text=": DELETE"
+ALabel.Text=": NEW GAME"
+MenuTitle.Text="SELECT GAME"
+
+[MenuSkillBonus]
+SkillTitles[0].Text="ACCURACY:"
+SkillTitles[1].Text="AGILITY:"
+SkillTitles[2].Text="TACTICS:"
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="SKILL BONUS"
+
+[MenuStartingLineup]
+SelectText=": SELECT"
+DeselectText=": DESELECT"
+SelectedText=": SELECTED"
+XLabel.Text=": STATS"
+MenuTitle.Text="EDIT STARTING LINEUP"
+
+[MenuStorageSelection]
+Button[0].Blurred.Text="HardDisk"
+Button[1].Blurred.Text="MU 1A"
+Button[2].Blurred.Text="MU 1B"
+Button[3].Blurred.Text="MU 2A"
+Button[4].Blurred.Text="MU 2B"
+Button[5].Blurred.Text="MU 3A"
+Button[6].Blurred.Text="MU 3B"
+Button[7].Blurred.Text="MU 4A"
+Button[8].Blurred.Text="MU 4B"
+Status[0].Text="Status"
+Status[1].Text="Status"
+Status[2].Text="Status"
+Status[3].Text="Status"
+Status[4].Text="Status"
+Status[5].Text="Status"
+Status[6].Text="Status"
+Status[7].Text="Status"
+Status[8].Text="Status"
+back.Blurred.Text="BACK"
+StatusBad="Bad"
+StatusNotInserted="Not inserted"
+StatusEmpty="Empty"
+StatusFull="Full"
+StatusPercentUsed="% used"
+StatusUnknown="Unknown!"
+SpaceFree="Free Blocks:"
+SpaceTotal="Total Blocks:"
+NameHardDisk="Xbox Hard Disk"
+MenuTitle.Text="Select Storage Device"
+
+[MenuTeamTemplate]
+TeamName.Text="1234567890abcdef"
+MenuTitle.Text="TEAM TEMPLATE"
+
+[MenuTestLayout]
+ButtonBack.Blurred.Text="BACK"
+ButtonDelete.Blurred.Text="DELETE"
+ButtonNew.Blurred.Text="NEW"
+ButtonOk.Blurred.Text="OK"
+TextMemDevice.Text="Storage Device"
+TextSaveGameInfo.Text="Save Game Info"
+TextMemDeviceInfo.Text="Storage Device Info"
+
+[MenuTutorialPrompt]
+InputButton1.Text="A"
+InputButton2.Text="A"
+InputLabel1.Text=": "
+InputLabel2.Text=": "
+ComboLabel1.Text=": Berserk"
+ComboLabel2.Text=": Agility"
+ComboLabel3.Text=": Regeneration"
+ComboLabel4.Text=": Invisibility"
+SkipLabel.Text=": SKIP"
+StringPrimaryFire=": Primary Fire"
+StringAltFire=": Alternate Fire"
+StringNextWeapon=": Next Weapon"
+StringPrevWeapon=": Previous Weapon"
+StringJump=": Jump"
+RightTriggerText="Right Trigger"
+LeftTriggerText="Left Trigger"
+RightThumbText="Right Thumb"
+LeftThumbText="LeftThumb"
+BlackButtonText="Black"
+WhiteButtonText="White"
+ALabel.Text=": YES"
+BLabel.Text="NO :"
+

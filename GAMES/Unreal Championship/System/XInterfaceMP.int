@@ -1,0 +1,17 @@
+[MenuLanGames]
+ServerListHeadings[0].Text="SERVER"
+ServerListHeadings[1].Text="MAP"
+ServerListHeadings[2].Text="GAME"
+ServerListHeadings[3].Text="SIZE"
+NoServersFound.Text="NO SERVERS FOUND."
+XLabel.Text=": HOST GAME"
+MenuTitle.Text="SYSTEM LINK GAMES"
+
+[MenuMissingMap]
+MissingMapText[0]="You do not have "
+MissingMapText[1]=". It is available as"
+MissingMapText[2]="a free download from Xbox Live. You must"
+MissingMapText[3]="select another server to play on."
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="ATTENTION"
+

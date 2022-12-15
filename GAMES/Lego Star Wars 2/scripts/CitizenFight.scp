@@ -1,0 +1,40 @@
+state Base
+{
+	Conditions
+	{
+		if GotOpponent == 1 goto BlasterDefend
+		
+		if GotOpponent == 0 goto BlasterAlert
+	}
+	Actions
+	{
+		KeepWeaponOut "TRUE"	
+		FollowPath "WALK"
+	}
+}
+
+state BlasterAlert
+{
+	Conditions
+	{
+		if GotOpponent == 1 goto BlasterDefend
+	}
+	Actions
+	{	
+		KeepWeaponOut "TRUE"
+		FaceOpponent
+	}
+}
+
+state BlasterDefend
+{
+	Conditions
+	{
+		if GotOpponent == 0 goto BlasterAlert
+	}
+	
+	Actions
+	{	
+		EngageOpponent "goalrange 0.5" "firerange 1.0"
+	}
+}

@@ -1,0 +1,807 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+MissionTitle "/Mission1Title/Jedi Training"
+MissionObjective 1 "/Mission1Objective1/Learn, Padawan"
+
+//SetVampireMode A_TR_Hall_Standard_08//
+SetVampireMode A_TR_crawl_space_01
+//SetVampireMode A_TR_Hall_DoorJam_06//
+SetVampireMode A_TR_Hall_Standard_07
+//SetVampireMode A_TR_Foyer_03//
+SetVampireMode A_TR_Force_Push_Hall_01
+SetVampireMode A_TR_force_push_room_01
+SetVampireMode A_TR_Hall_DoorJam_01
+SetVampireMode A_TR_Hall_Standard_06
+SetVampireMode A_TR_Hall_Standard_01
+SetVampireMode A_TR_Hall_DoorJam_02
+//SetVampireMode A_TR_Foyer_02//
+//SetVampireMode A_TR_Foyer_06//
+SetVampireMode A_TR_Hall_DoorJam_03
+//SetVampireMode A_TR_Hall_Standard_02//
+//SetVampireMode A_TR_Foyer_01//
+//SetVampireMode A_TR_Foyer_07//
+SetVampireMode A_TR_Hall_DoorJam_04
+SetVampireMode A_TR_Hall_Standard_03
+//SetVampireMode A_TR_Foyer_05//
+//SetVampireMode A_TR_Foyer_04//
+SetVampireMode A_TR_Hall_DoorJam_05
+SetVampireMode A_TR_Hall_Standard_04
+//SetVampireMode A_TR_Hall_Standard_05//
+SetVampireMode A_TR_Hall_DoorJam_07
+//SetVampireMode A_TR_Saber_Room_01//
+
+SetDefaultSurface zoosurstonemarble.sur
+
+script "powderpuff"
+{
+	WaitUntilDamaged Obi
+	pause 3
+	SetHitPoints Obi 800
+	loop
+}
+
+script "bamf1"
+{
+	WaitUntilEnteredRegion Obi teleport1
+	BeginCutScene
+	FadeDown
+	pause .2
+	teleport obi telref1
+	pause 1
+	CameraFixed telecam1
+	FadeUpAndWait
+	EndCutScene
+	loop
+}
+
+script "bamf2"
+{
+	WaitUntilEnteredRegion Obi teleport2
+	BeginCutScene
+	FadeDown
+	pause .2
+	teleport Obi telref2
+	pause 1
+	CameraFixed telecam2
+	FadeUpAndWait
+	PreEndCutScene
+	teleport Obi telref2
+	FadeUp 0
+	EndCutScene
+	loop
+}
+
+script "bamf3"
+{
+	WaitUntilEnteredRegion Obi getback
+	teleport Obi telref2
+	loop
+}
+
+
+script "bamf_duelrobo"
+{
+	WaitUntilEnteredRegion A_dueltrainingrobot_01 teleport2
+	teleport A_dueltrainingrobot_01 roboref1
+	loop
+}
+
+
+fadeup
+
+/*
+script "poo"
+{
+	WaitUntilKilled A_1-8_crate_07_01
+	createactor A_1-8_crate_07_01 A_1-8_crate_07_01 poo
+	loop
+}
+*/
+
+actor saesee A_Sassee_Tiin_Civillian_01
+LoadDLG  trainingrobot.dlg
+LoadDLG  SaeseeTiin.dlg
+actor yoda A_Yoda_civilian_01
+//loadDLG yoda.dlg//
+actor oppo A_Oppo_Rancises_civilian_01
+actor yarrel A_yarrel_poof_01
+actor kiadi A_ki_adi_mundi_civillian_01
+
+actor robo1 A_trainingrobot_01
+actor robo2 A_trainingrobot_02
+actor robo3 A_trainingrobot_03
+actor robo4 A_trainingrobot_04
+actor robo5 A_trainingrobot_05
+actor robo6 A_trainingrobot_06
+actor robo7 A_trainingrobot_07
+actor robo8 A_trainingrobot_08
+actor robo9 A_trainingrobot_09
+actor robo10 A_trainingrobot_10
+actor robo11 A_trainingrobot_11
+actor robo12 A_trainingrobot_12
+actor robo13 A_trainingrobot_13
+actor robo14 A_trainingrobot_14
+actor robo15 A_trainingrobot_15
+actor robo16 A_trainingrobot_16
+
+Script "Initialize"
+{
+	SetMissionCritical robo1
+	SetMissionCritical robo2
+	SetMissionCritical robo3
+	SetMissionCritical robo4
+	SetMissionCritical robo5
+	SetMissionCritical robo6
+	SetMissionCritical robo7
+	SetMissionCritical robo8
+	SetMissionCritical robo9
+	SetMissionCritical robo10
+	SetMissionCritical robo11
+	SetMissionCritical robo12
+	SetMissionCritical robo13
+	SetMissionCritical robo14
+	SetMissionCritical robo15
+	SetMissionCritical robo16
+
+	SetHitPoints robo14 10
+	SetHitPoints robo15 10
+	SetHitPoints robo16 10
+	InvincibilityOn robo1
+	InvincibilityOn robo2
+	InvincibilityOn robo3
+	InvincibilityOn robo5
+	InvincibilityOn robo6
+	InvincibilityOn robo10
+	InvincibilityOn robo11
+	InvincibilityOn robo12
+	InvincibilityOn robo13
+
+	LockDoor A_trn_hall_door_03
+	LockDoor A_trn_hall_door_04
+	LockDoor A_trn_dr_jump_01
+	LockDoor A_trn_dr_obpush_01
+	LockDoor A_trn_dr_throw_01
+	LockDoor A_trn_dr_pull_01
+	LockDoor A_trn_dr_saberthrow_01
+	LockDoor A_trn_bridge_01
+	LockDoor A_trn_dr_throw_01
+
+	TakeControlOf robo4
+	TakeControlOf robo5
+	TakeControlOf robo6
+	TakeControlOf robo9
+	TakeControlOf robo14
+	TakeControlOf robo15
+	TakeControlOf robo16
+	SetTeam robo4 15
+	SetTeam robo5 15
+	SetTeam robo6 15
+	SetTeam robo9 15
+	SetTeam robo14 15
+	SetTeam robo15 15
+	SetTeam robo16 15
+}
+
+script "bamf_robo7"
+{
+	WaitUntilEnteredRegion robo7 teleport1
+	teleport robo7 telref1
+	loop
+}
+
+function "lookatobi" (actor dude)
+{
+	TakeControlOf dude
+	LookAtAndWait dude Obi
+	pause 5
+}
+
+call "lookatobi" robo1
+call "lookatobi" robo2
+//call "lookatobi" robo7//
+
+TriggerUberGenAndWait A_z_ubergen_01 dum1
+
+TakeControlOf dum1
+EquipWeapon dum1
+SetHitPoints dum1 300
+LookAtAndWait dum1 Obi
+
+TriggerUberGenAndWait A_z_ubergen_03 dum3
+InvincibilityOn dum3
+TakeControlOf dum3
+EquipWeapon dum3
+
+
+
+script "robo1_says"
+{
+	
+        SayLine2D  robo1 "/TrainingRobot_888/ Welcome to Jedi Training. I am JTR-47, Automated Combat Specialist. I will be responsible for your initial training."
+	Pause 2
+	SayLine2D  robo1 "/TrainingRobot_1480/ While in the training area, the force will protect you, so you are in no real danger."
+        Pause 2
+	SayLine2D  robo1 "/TrainingRobot_1513/	Use the left thumbstick to move." ///replaced : added///
+        DisplayControlsWalk /TrainingRobot_889/
+	SayLine2D  robo1 "/TrainingRobot_890/ Move the left thumbstick up slightly to walk. Move it all the way up to run." /// replaced///
+	Pause 2
+	SayLine2D  robo1  "/TrainingRobot_891/ Walk to the door"
+	WaitUntilNear Obi A_trn_hall_door_01 3
+	DisplayControlsOff
+
+	ChildScript "opendoor1"
+	{
+		pause 1
+		DisplayControlsUse /TrainingRobot_892/
+		SayLine2D  robo1 "/TrainingRobot_892/To open the door press the use button"
+		child pause 10
+		child WaitUntilNudged robo1 
+		waitforany
+		loop
+	}
+    
+	WaitUntilDoorOpen A_trn_hall_door_01
+	DisplayControlsOff
+	EndScript "opendoor1"
+
+	ChildScript "gotonext1"
+	{
+		child pause 10
+		child WaitUntilNudged robo1 
+		waitforany
+		SayLine2D  robo1 "/TrainingRobot_1481/ The next training robot is at the end of the hall.  Run to him now."
+		loop
+	}
+
+	WaitForAll
+}
+
+
+script "crouch_robo"
+{
+	WaitUntilNear Obi robo2 5
+	EndScript "robo1_says"
+	RemoveActor robo1
+
+	/*
+	script "movealong1"
+	{
+		WaitUntilNudged robo1
+		SayLine2D  robo1 "Move to the next room for further training."
+		child pause 10
+		child WaitUntilNudged robo1 
+		waitforany
+		loop
+	}
+	*/
+
+	ChildScript "gotonext2"
+	{
+		DisplayControlsCrouch /TrainingRobot_899/
+		SayLine2D  robo2 "/TrainingRobot_899/ To get through small spaces press the crouch button"
+		child pause 12
+		child WaitUntilNudged robo2 
+		waitforany
+		loop
+	}
+
+	WaitForScriptToEnd gotonext2
+}
+
+
+script "jump_robo"
+{
+	WaitUntilEnteredRegion Obi fight1_reg
+	DisplayControlsOff
+	EndScript "crouch_robo"
+	RemoveActor robo2
+
+	/*
+	script "movealong1"
+	{
+		WaitUntilNudged robo2
+		SayLine2D  robo2 "Move to the next room for further training."
+		child pause 10
+		child WaitUntilNudged robo2 
+		waitforany
+		loop
+	}
+	*/
+
+	script "info1"
+	{
+		pause 1
+
+		DisplayControlsJump /TrainingRobot_893/
+		SayLine2D  robo3 "/TrainingRobot_893/To Jump, press the Jump Button"
+		Pause 1
+		SayLine2D  robo3 "/TrainingRobot_894/If you jump towards a ledge, and move the left thumbstick up, you will automatically grab hold." ///replaced///
+		DisplayControlsOff
+		SayLine2D  robo3 "/TrainingRobot_895/Now jump forward and grab the ledge. "
+		Pause 2
+		Pause 1
+		SayLine2D  robo3 "/TrainingRobot_896/ Move the left thumbstick left or right to shimmy along the edge." ///replaced///
+		Pause 3
+	}
+
+	script "gotonext3"
+	{
+		WaitForScriptToEnd  "info1"
+		SayLine2D  robo3 "/TrainingRobot_897/Move the left thumbstick up to pull yourself up." ///replaced ///
+		child pause 10
+		child WaitUntilNudged robo3
+		waitforany
+		loop
+	}
+    
+	InvincibilityOn dum1
+	WaitUntilExitedRegion Obi fight1_reg
+	EndScript "gotonext3"
+	EndScript "info1"
+
+	script "saber_blah"
+	{
+		pause 1
+
+		DisplayControlsSaber /TrainingRobot_904/
+		SayLine2D  robo3 "/TrainingRobot_1467/ Use the right thumbstick to control your Lightsaber"
+		Pause 1
+		SayLine2D  robo3 "/TrainingRobot_905/Moving the right thumbstick to the right, swings to your right." ///replaced ///
+		Pause 1
+		SayLine2D  robo3 "/TrainingRobot_906/Move the right thumbstick to the left, and you swing to the left." ///replaced ///
+		Pause 1
+		SayLine2D  robo3 "/TrainingRobot_907/Move the right thumbstick up to strike down over your head." ///replaced ///
+		DisplayControlsOff
+
+		Pause 1
+		SayLine2D  robo3 "/TrainingRobot_908/Practice your lightsaber strikes on Training Robot 1138."
+		WaitUntilNudged robo3
+		loop
+	}
+    
+	pause 15
+	EquipWeapon dum1
+	InvincibilityOff dum1
+	WaitUntilKilled dum1
+	pause 1
+
+	script "gotonext4"
+	{
+		DisplayControlsAcrobatics /TrainingRobot_903/
+		SayLine2D  robo3 "/TrainingRobot_1466/ Press and hold the acrobatics button and then move with the left thumbstick to do acrobatics." ///replaced///
+		child pause 10
+		child WaitUntilNudged robo3
+		waitforany
+		loop
+	}
+    
+	WaitUntilDidAcrobatics Obi
+	EndScript "gotonext4"
+
+	Pause 2
+	DisplayControlsOff
+	TriggerUberGenAndWait A_z_ubergen_02 dum2
+	SetHitPoints dum2 299
+	OpenDoor A_trn_dr_deflect_01
+
+	script "gotonext5"
+	{
+        	SayLine2D  robo3 "/TrainingRobot_1468/ To reflect a shot, face your enemy and pull back on the right thumbstick as the shot approaches."
+        	Pause 1
+		SayLine2D  robo3 "/TrainingRobot_914/Reflect shots back at Training Robot 32P2."
+		child pause 10
+		child WaitUntilNudged robo3
+		waitforany
+		loop
+	}
+
+	ChildScript "ResupplyWeapon"
+	{
+		WaitUntilForcePulled dum2
+		Pause .5
+		AddInventoryItem dum2 equipbadblaster.dsc
+		Loop
+	}
+
+	WaitUntilKilled dum2
+	EndScript "ResupplyWeapon"
+
+	UnlockDoor A_trn_dr_jump_01
+	OpenDoorAndWait A_trn_dr_jump_01
+	LockDoor A_trn_dr_jump_01
+
+	EndScript "gotonext5"
+
+	Script "jumpy_thing"
+	{
+		pause 2
+		DisplayControlsForceJump /TrainingRobot_922/
+		SayLine2D  robo3 "/TrainingRobot_922/ Excellent. Now, pull and hold the Force modifier trigger and press the jump button to Force Jump." ///replaced///
+		Pause 2
+		SayLine2D  robo3 "/TrainingRobot_895/ Now jump forward and grab the ledge. "
+		child pause 10
+		child WaitUntilNudged robo3
+		waitforany
+		loop
+	}
+
+	WaitUntilEnteredRegion Obi jump_reg
+	DisplayControlsOff
+	EndScript "jumpy_thing"
+
+	SayLine2D  robo3 "/TrainingRobot_901/Well-done."
+	Pause 1
+
+	script "gotonext6"
+	{
+		SayLine2D  robo3 "/TrainingRobot_1481/ The next training robot is at the end of the hall.  Run to him now." 
+		child pause 5
+		child WaitUntilNudged robo3
+		waitforany
+		loop
+	}
+
+	WaitUntilNear Obi robo7 8
+	EndScript "gotonext6"
+
+	RemoveActor robo3
+
+	script "movealong2"
+	{
+		WaitUntilNudged robo3
+		SayLine2D  robo3 "/TrainingRobot_1484/ Move to the next room for further training."
+		child pause 10
+		child WaitUntilNudged robo3 
+		waitforany
+		loop
+	}
+
+	DisplayControlsForcePush /TrainingRobot_916/
+	SayLine2D  robo7 "/TrainingRobot_916/ Pull and hold the Force modifier trigger and press the push button to Force Push enemies." ///replaced///
+	//Nudge Obi A_5-5_ff_generator_01//
+	Pause 1
+	OpenDoorAndWait A_trn_dr_push_01
+	LockDoor A_trn_dr_push_01
+
+	script "gotonext7"
+	{
+		SayLine2D  robo7 "/TrainingRobot_1483/ Now, push the training robots off the ledge."
+		child pause 10
+		child WaitUntilNudged robo7
+		waitforany
+		loop
+	}
+    
+	EquipWeapon robo5
+	EquipWeapon robo6
+	EquipWeapon robo9
+
+
+	script "pushed_bots"
+	{
+		childscript "falling1"
+		{
+			WaitUntilExitedRegion robo5 reg_pushed
+			Kill robo5
+		}
+		childscript "falling2"
+		{
+			WaitUntilExitedRegion robo6 reg_pushed
+			Kill robo6
+		}
+		childscript "falling3"
+		{
+			WaitUntilExitedRegion robo9 reg_pushed
+			Kill robo9
+		}
+
+		WaitForAll
+	}
+
+	WaitForScriptToEnd "pushed_bots"
+	DisplayControlsOff
+	endscript "gotonext7"
+
+	UnlockDoor A_trn_hall_door_03
+	UnlockDoor A_trn_hall_door_04
+	OpenDoor A_trn_hall_door_03
+	OpenDoor A_trn_hall_door_04
+     
+	childscript "lockmdoor1"
+	{
+		WaitUntilDoorOpen A_trn_hall_door_03
+		LockDoor A_trn_hall_door_03
+	}
+
+	childscript "lockmdoor2"
+	{
+		WaitUntilDoorOpen A_trn_hall_door_04
+		LockDoor A_trn_hall_door_04
+	}
+
+	script "gotonext7aa"
+	{
+		SayLine2D  robo11 "/TrainingRobot_1484/ Move to the next room for further training."
+		child pause 10
+		child WaitUntilNudged robo11
+		waitforany
+		loop
+	}
+
+	WaitUntilNear Obi robo10 5
+
+	script "lockdoorz"
+	{
+		CloseDoor A_trn_hall_door_03
+		CloseDoorandwait A_trn_hall_door_04
+		LockDoor A_trn_hall_door_04
+		LockDoor A_trn_hall_door_03
+	}
+    
+	endscript "gotonext7aa"
+
+	DisplayControlsForceThrow /TrainingRobot_918/
+	SayLine2D  robo10 "/TrainingRobot_918/ Pull and hold the Force modifier trigger and press the throw button to Force Throw an object." ///replaced///
+
+	UnlockDoor A_trn_dr_obpush_01
+	OpenDoorAndWait A_trn_dr_obpush_01
+	LockDoor A_trn_dr_obpush_01
+	//WaitUntilForcePushedObject Obi//
+	pause 1
+
+	script "gotonext7a"
+	{
+		SayLine2D  robo10 "/TrainingRobot_1485/ Use the crate to jump to the ledge."
+		child pause 15
+		child WaitUntilNudged robo10
+		waitforany
+		loop
+	}
+
+	WaitUntilNear Obi robo11 10
+	DisplayControlsOff
+	endscript "gotonext7a"
+	RemoveActor robo10
+
+	script "movealong3"
+	{
+		WaitUntilNudged robo10
+		SayLine2D  robo10 "/TrainingRobot_1484/ Move to the next room for further training."
+		loop
+	}
+
+	Pause 1
+
+	script "gotonext8"
+	{
+		SayLine2D  robo11 "/TrainingRobot_920/If an enemy is nearby, the Force will guide the object at the enemy."
+		SayLine2D  robo11 "/TrainingRobot_921/Feel free to throw the barrel at Training Robot 1138."
+		child pause 10
+		child WaitUntilNudged robo11
+		waitforany
+		loop
+	}
+
+	//WaitForScriptToEnd "gotonext8"//
+
+	pause 6
+
+	UnlockDoor A_trn_dr_throw_01
+	OpenDoorAndWait A_trn_dr_throw_01
+	LockDoor A_trn_dr_throw_01
+
+
+	InvincibilityOn robo4
+	WaitUntilHitByForceThrow robo4
+
+        RemoveActor A_1-4_barrel_sm_02
+        RemoveActor A_1-4_barrel_sm_03
+        RemoveActor A_1-4_barrel_sm_04
+        RemoveActor A_1-4_barrel_sm_05
+        RemoveActor A_1-4_barrel_sm_06
+        RemoveActor A_1-4_barrel_sm_07
+        RemoveActor A_1-4_barrel_sm_08
+
+	InvincibilityOff robo4
+	Kill robo4
+        
+
+	endscript "gotonext8"
+	SayLine2D  robo11 "/TrainingRobot_901/Well-done."
+
+
+	script "gotonext8b"
+	{
+		SayLine2D  robo11 "/TrainingRobot_1484/ Move to the next room for further training."
+		child pause 10
+		child WaitUntilNudged robo11
+		waitforany
+		loop
+	}
+
+	WaitUntilNear Obi robo12 8
+	endscript "gotonext8b"
+	removeactor robo11
+
+	script "movealong4"
+	{
+		WaitUntilNudged robo11
+		SayLine2D  robo11 "/TrainingRobot_1484/ Move to the next room for further training."
+		loop
+	}
+
+	LookAt dum3 obi
+
+	script "gotonext9"
+	{
+		DisplayControlsForcePull /TrainingRobot_925/
+		SayLine2D  robo12 "/TrainingRobot_1474/ Pull and hold the Force modifier trigger and press the pull button to Force Pull and disarm an opponent." ///replaced///
+		SayLine2D  robo12 "/TrainingRobot_926/Force Pull the weapon from Training Robot 1138"
+                    SayLine2D  robo12 "/TrainingRobot_1475/ Force disarm only works on blasters"
+		child pause 10
+		child WaitUntilNudged robo12
+		waitforany
+		loop
+	}
+    
+	//WaitForScriptToEnd "gotonext9"//
+	pause 3
+
+	UnlockDoor A_trn_dr_pull_01
+	OpenDoor A_trn_dr_pull_01
+	lockDoor A_trn_dr_pull_01
+
+        InvincibilityOn dum3
+	WaitUntilForcePulled dum3
+	DisplayControlsOff
+	kill dum3
+        
+	endscript "gotonext9"
+
+	script "gotonext9b"
+	{
+		SayLine2D  robo12 "/TrainingRobot_1484/ Move to the next room for further training."
+		child pause 10
+		child WaitUntilNudged robo12
+		waitforany
+		loop
+	}
+    
+	WaitUntilNear obi robo13 5
+	endscript "gotonext9b"
+	removeactor robo12
+        SayLine2D  robo13 "/TrainingRobot_1478/ Stepping through a force nexus will give you unlimited force power for a short time"
+
+
+	script "gotonext9c"
+	{
+		SayLine2D  robo13 "/TrainingRobot_1471/ To throw your lightsaber using the Force, pull and hold the Force modifier trigger and press in on the right thumbstick." ///replaced///
+                    SayLine2D  robo13 "/TrainingRobot_1472/ You can guide the lightsaber with the right thumbstick." ///replaced///
+                    SayLine2D  robo13 "/TrainingRobot_1473/ Releasing the force modifier trigger will return the saber to you"
+                    SayLine2D  robo13 "/TrainingRobot_1486/ Throw your saber to destroy the training droids"
+                    child pause 20
+		child WaitUntilNudged robo13
+		waitforany
+		loop
+	}
+    
+	//WaitForScriptToEnd "gotonext9c"//
+
+	pause 8
+
+
+	UnlockDoor A_trn_dr_saberthrow_01
+	OpenDoorAndWait A_trn_dr_saberthrow_01
+	LockDoor A_trn_dr_saberthrow_01
+
+
+	script "saber_throw_kills"
+	{
+		child waituntilkilled robo14
+		child waituntilkilled robo15
+		child waituntilkilled robo16
+		waitforall
+		EndScript "gotonext9c"
+		endscript "bamf3"
+	}
+
+	WaitForScriptToEnd "saber_throw_kills"
+
+	pause 3
+
+	endscript "bamf3"
+
+	UnlockDoor A_trn_bridge_01
+	OpenDoorAndWait A_trn_bridge_01
+	LockDoor A_trn_bridge_01
+
+
+	script "gotonext10"
+	{
+		SayLine2D  robo13 "/TrainingRobot_1487/ The Duel training robot is waiting for you in the final room.  Go to him now"
+		child pause 10
+		child WaitUntilNudged robo13
+		waitforany
+		loop
+	}
+
+	InvincibilityOn A_dueltrainingrobot_01
+	TakeControlOf A_dueltrainingrobot_01
+	WaitUntilNear Obi robo8 10
+	endscript "gotonext10"
+	RemoveActor robo13
+
+	script "movealong5"
+	{
+		WaitUntilNudged robo13
+		SayLine2D  robo13 "/TrainingRobot_1484/ Move to the next room for further training."
+		loop
+	}
+
+	DisplayControlsSaber /TrainingRobot_927/
+	SayLine2D  robo8 "/TrainingRobot_927/Pull and hold the Force modifier trigger and move the right thumbstick to execute a Force attack." ///replaced///
+	DisplayControlsOff
+	Pause 1
+	SayLine2D  robo8 "/TrainingRobot_929/These attacks are the special domain of the Jedi."  
+	Pause 1
+
+	script "gotonext11"
+	{
+		SayLine2D  robo8 "/TrainingRobot_1488/ Now face the sparring droid."///replaced///
+		child pause 5
+		child WaitUntilNudged robo8
+		waitforany
+		loop
+	}
+
+	WaitUntilNear Obi A_dueltrainingrobot_01 3
+
+	EndScript "gotonext11"
+
+	/// disableswing goes here ///
+	Pause 1
+	SayLine2D  robo8 "/TrainingRobot_932/Moving Left and Right while locked on will keep your position relative to your opponent."
+	Pause 1
+
+	ReturnControlTo A_dueltrainingrobot_01
+	InvincibilityOff A_dueltrainingrobot_01
+	EnemyHealthMeter A_dueltrainingrobot_01
+
+	script "lastlines"
+	{      
+                    SayLine2D  robo8 "/TrainingRobot_1476/ To enable lock on, pull the strafe modifier trigger, this will lock on to the nearest enemy. " ///replaced///
+		SayLine2D  robo8 "/TrainingRobot_1489/ You can make your opponent vulnerable by focusing your own defensive block."
+		SayLine2D  robo8 "/TrainingRobot_939/ Move down on the right thumbstick. This will focus your defense and your saber will be active with the Force." ///replaced///
+		Pause 1
+		SayLine2D  robo8 "/TrainingRobot_940/Time your parry so that you are focused when your opponent strikes. Doing this will stun your opponent, and give you the opportunity to counter-attack."
+                    pause 1
+                    SayLine2D  robo8 "/TrainingRobot_1490/ To use Force Focus, pull and hold the Force modifier trigger and press the focus button. This will slow things down for a limited amount of time." ///replaced///
+		WaitUntilNudged robo8
+		loop
+	}
+
+	/// waituntilactiveblocked A_dueltrainingrobot_01 goes here ///
+	WaitUntilDamaged A_dueltrainingrobot_01
+	WaitUntilDamaged A_dueltrainingrobot_01
+	child SayLine2D  saesee "/SaeseeTiin_797/A good strike."
+	WaitUntilKilled A_dueltrainingrobot_01
+	endscript "lastlines"
+	MissionObjectiveAchieved 1
+
+	script "endcutscene"
+	{
+		BeginCutScene
+		pause 1
+		CameraFixed camend2
+		SayLine2D  kiadi "/Ki-Adi-Mundi_882/ Excellent!" Talk
+		pause 1
+		CameraFixed camend1
+		SayLine2D  saesee "/SaeseeTiin_800/ Yes… now I see why your Master has so much faith in you, Padawan." Talk
+		pause 2
+		preendcutscene    
+		EndCutScene
+		mainmenu
+	}
+}

@@ -1,0 +1,93 @@
+//AddBattleLoop  m_saberArena_01_lp.wav  m_saberArena_01_end.wav  m_saberArena_01_lose.wav
+//AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetDefaultSurface 09_mz_mrbl_d.sur
+
+Function GetObi (Actor a)
+{
+	ForceTarget a Obi
+	Child WaitUntilKilled a
+	//Child Pause 30
+	WaitForAny
+}
+
+
+Script Main
+{
+	BeginCutScene
+
+	SetTeam Obi 0
+	SetTeam A_duelmacewindu_01 0
+	SetTeam A_DuelQuiGon_01 0
+	SetTeam A_DuelAdiGallia_01 0
+	SetTeam A_dueldepabilaba_01 0
+	SetTeam A_DuelEethKoth_01 0
+	SetTeam A_DuelKiAdiMundi_01 0
+	SetTeam A_DuelPloKoon_01 0
+	SetTeam A_DuelSaeseeTiin_01 0
+
+	FadeUpAndWait 2
+
+	PreEndCutscene
+	FadeUp 0
+	EndCutScene
+
+	PlayMusic BattleLoop
+
+	SetTeam Obi 15
+	SetTeam A_duelmacewindu_01 15
+	SetTeam A_DuelQuiGon_01 15
+	SetTeam A_DuelAdiGallia_01 15
+	SetTeam A_dueldepabilaba_01 15
+	SetTeam A_DuelEethKoth_01 15
+	SetTeam A_DuelKiAdiMundi_01 15
+	SetTeam A_DuelPloKoon_01 15
+	SetTeam A_DuelSaeseeTiin_01 15
+
+	RemoveState A_duelmacewindu_01 Taunt
+	RemoveState A_DuelQuiGon_01 Taunt
+	RemoveState A_DuelAdiGallia_01 Taunt
+	RemoveState A_dueldepabilaba_01 Taunt
+	RemoveState A_DuelEethKoth_01 Taunt
+	RemoveState A_DuelKiAdiMundi_01 Taunt
+	RemoveState A_DuelPloKoon_01 Taunt
+	RemoveState A_DuelSaeseeTiin_01 Taunt
+
+	CallAndWait GetObi( A_DuelAdiGallia_01 )
+	CallAndWait GetObi( A_dueldepabilaba_01 )
+	CallAndWait GetObi( A_DuelEethKoth_01 )
+	CallAndWait GetObi( A_DuelKiAdiMundi_01 )
+	CallAndWait GetObi( A_DuelPloKoon_01 )
+	CallAndWait GetObi( A_DuelSaeseeTiin_01 )
+	CallAndWait GetObi( A_DuelQuiGon_01 )
+	CallAndWait GetObi( A_duelmacewindu_01 )
+}
+
+
+Script EndTheLevel
+{
+	WaitUntilKilled A_DuelAdiGallia_01
+	WaitUntilKilled A_dueldepabilaba_01
+	WaitUntilKilled A_DuelEethKoth_01
+	WaitUntilKilled A_DuelKiAdiMundi_01
+	WaitUntilKilled A_DuelPloKoon_01
+	WaitUntilKilled A_DuelSaeseeTiin_01
+	WaitUntilKilled A_DuelQuiGon_01
+	WaitUntilKilled A_duelmacewindu_01
+
+	BeginCutScene
+	PlayMusic Victory
+	pause 3
+	sayline obi "/Obi-Wan_851/ I need only my lightsaber."
+	pause 1
+
+	FadeDownAndWait 2
+	
+	PreEndCutscene
+	FadeDown 0
+	endcutscene
+
+	SelectMission
+}
+

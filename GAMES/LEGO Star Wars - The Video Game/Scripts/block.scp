@@ -1,0 +1,20 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 and 
+		if OpponentRange < 3 goto Engage
+	}
+	Actions {
+		DontPush
+		GoToOrigin
+	}
+}
+
+state Engage {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if OpponentRange > 3 goto Base
+	}
+	Actions {
+		EngageOpponent "static" "firerange 3"
+	}
+}

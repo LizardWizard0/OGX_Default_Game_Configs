@@ -1,0 +1,2518 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Int    PilotsInvincible     0
+Int    SkipPart01           0
+Int    SkipMission          0
+
+Int    AlarmsSetOff         0
+
+Int    Section01Cleared     0
+Int    Section02Cleared     0
+Int    Section03Cleared     0
+Int    Section04Cleared     0
+Int    Section05Cleared     0
+Int    Section06Cleared     0
+Int    Section07Cleared     0
+
+Int    PilotsRescued        0
+
+Int    Section08Cleared     0
+Int    Section09Cleared     0
+Int    Section10Cleared     0
+Int    Section11Cleared     0
+Int    Section12Cleared     0
+Int    Section13Cleared     0
+Int    Section13bCleared    0
+Int    Section14Cleared     0
+
+Int    MissionCompleted     0
+
+Actor  Naboo01              A_SquadLeader_01
+Actor  Naboo02              A_Naboo-StarfighterPilotFemale1_01
+Actor  Naboo03              A_Naboo-StarfighterPilotMale1_02
+Actor  Naboo04              A_Naboo-StarfighterPilotFemale1_02    
+Actor  Naboo05              A_Naboo-StarfighterPilotMale1_03
+Actor  Naboo06              A_Naboo-StarfighterPilotMale1_04        
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "Walk" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakePartialControlOf Guy
+	WalkToNode Guy GotoNode
+}	
+
+Function "Run" (Actor Guy, Node GotoNode, Float PauseTime)
+{
+    Pause PauseTime
+	TakeControlOf Guy
+
+    Childscript "Run Interrupted"
+    {
+            WaitUntilNear Guy Obi 2.0
+            ReturnControlTo Guy
+            EndFunction "Run"
+    }
+    
+	RunToNodeAndWait Guy GotoNode
+    ReturnControlTo Guy
+}	
+
+Function "Random Naboo Target" (Actor Guy, Float PauseTime)
+{
+    Pause PauseTime
+    WakeUp Guy
+
+	RandomInt NabooTarget 1 6
+
+	if (= NabooTarget 1)
+	{
+        ForceTarget Guy Naboo01
+	}
+
+	if (= NabooTarget 2)
+	{
+        ForceTarget Guy Naboo02
+	}
+    
+	if (= NabooTarget 3)
+	{
+        ForceTarget Guy Naboo03
+	}
+
+    if (= NabooTarget 4)
+	{
+        ForceTarget Guy Naboo04
+	}
+
+	if (= NabooTarget 5)
+	{
+        ForceTarget Guy Naboo05
+	}
+
+	if (= NabooTarget 6)
+	{
+        ForceTarget Guy Naboo06
+	}
+}
+
+////////////////////
+//Cutscenes       //
+////////////////////
+
+Script "Opening Cutscene"
+{
+    LoadDLG asha.dlg
+    
+	BeginCutScene
+
+    // Move camera to tower
+	CameraFixed startshot01
+	FadeUpAndWait
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Asha_609/Obiwan.  Our spies report that our pilots are being moved to the observatory at the top of the main tower." asha.dlg
+
+    // Move camera to bridge
+	CommunicatorMessage "/Asha_610/It is heavily guarded and can only be reached by the access bridge that extends from the waterfall side of the mountain."  asha.dlg
+    MoveCameraAndWait startshot02 5.0
+    // Trigger Starfighter flyby
+    TriggerUberGen A_z_UberGen_01
+    TriggerUberGen A_z_UberGen_02
+    TriggerUberGen A_z_UberGen_03
+    MoveCameraAndWait startshot03 5.0
+    
+    // Move camera to patrol area
+	CommunicatorMessage "/Asha_611/Be mindful, Obiwan.  This is a maximum security area and you can be sure that all the battledroids are on high alert."  asha.dlg
+    MoveCameraAndWait startshot04 5.0
+    MoveCameraAndWait startshot05 5.0    
+	
+    CommunicatorMessage "/Asha_612/It would be wise to minimize your exposure by sticking to shadows and avoid making any unnecessary sounds that might bring attention to yourself."  asha.dlg
+    MoveCameraAndWait startshot06 6.0    
+    MoveCameraAndWait startshot07 6.0	
+
+    // Move camera to end point
+	CommunicatorMessage "/Asha_613/You must find a way to break into the tower, free our pilots from their holding cells, and escort them safely back to the resistance zone."  asha.dlg
+    MoveCameraAndWait startshot08 7.0
+    // Trigger Starfighter flyby    
+    TriggerUberGen A_z_UberGen_04
+    TriggerUberGen A_z_UberGen_05
+    MoveCameraAndWait startshot09 5.0	
+
+    // Move camera to show alarm stand
+	CommunicatorMessage "/Asha_614/If you do happen to be detected, be sure to take out any enemies that you encounter before they can alert the others by sounding the alarm."  asha.dlg
+    MoveCameraAndWait startshot10 12.0
+
+    // Move camera to obi start
+    CommunicatorMessage "/Asha_615/The success of this rescue is essential to our plans for taking back Naboo from the Trade Federation."  asha.dlg
+    MoveCameraAndWait startshot11 8.0	
+
+	CommunicatorMessage "/Asha_616/Good luck Obiwan, and may the force be with you!"  asha.dlg
+    MoveCameraAndWait startshot13 5.0	//Should be startshot12; changed temporarily for MS submission
+
+	Pause 5.0
+	CommunicatorOff
+	EndCutScene
+}
+
+Script "Closing Cutscene"
+{
+    Actor ResistanceLeader A_naboo-resistance_leader_battle_outfit_01
+    
+    
+    // Resistance appear; provide cover for fleeing pilots;
+    WaitUntilEqual MissionCompleted 1
+
+    TakeControlOf ResistanceLeader
+    TakeControlOf Obi
+    UnEquipWeapon Obi
+            
+    Teleport ResistanceLeader ResistanceLeader01
+    Teleport Obi Obi-EndPoint01
+
+	BeginCutScene
+
+    // Move camera to resistance tower door
+	CameraFixed endshot01
+
+    LookAt ResistanceLeader Obi
+
+    Sayline ResistanceLeader "/Asha_617/Obiwan! This way!" PalmUpRight
+    
+    RunToNodeAndWait Obi Obi-EndPoint02
+    LookAt Obi ResistanceLeader
+    
+    LookAtAndWait ResistanceLeader Naboo01
+    Sayline ResistanceLeader "/Asha_618/Thank you for getting back our pilots." PointForward
+
+    LookAtAndWait ResistanceLeader Obi
+    Sayline ResistanceLeader "/Asha_619/However, we now have a bigger threat to deal with."
+    Sayline ResistanceLeader "/Asha_620/Come with me, I'll tell you on the way."
+    
+    LookAtNodeAndWait ResistanceLeader LookHere
+    
+    FadeDownAndWait
+    EndCutscene
+    
+    NextLevel L05_4   
+}
+
+
+Script "Mission Failed"
+{
+    Actor DeadPilot
+    
+    
+    Childscript "Dead Pilot 1"
+    {
+        WaitUntilKilled Naboo01
+        MakeResurrectable Naboo01
+        Set DeadPilot Naboo01    
+    }
+
+    Childscript "Dead Pilot 2"
+    {
+        WaitUntilKilled Naboo02
+        MakeResurrectable Naboo02        
+        Set DeadPilot Naboo02    
+    }
+    
+    Childscript "Dead Pilot 3"
+    {
+        WaitUntilKilled Naboo03
+        MakeResurrectable Naboo03        
+        Set DeadPilot Naboo03    
+    }
+    
+    Childscript "Dead Pilot 4"
+    {
+        WaitUntilKilled Naboo04
+        MakeResurrectable Naboo04        
+        Set DeadPilot Naboo04  
+    }
+    
+    Childscript "Dead Pilot 5"
+    {
+        WaitUntilKilled Naboo05
+        MakeResurrectable Naboo05        
+        Set DeadPilot Naboo05  
+    }
+    
+    Childscript "Dead Pilot 6"
+    {
+        WaitUntilKilled Naboo06
+        MakeResurrectable Naboo06        
+        Set DeadPilot Naboo06  
+    }
+    
+    WaitForAny
+    
+    BeginCutscene
+    
+    CameraOrbit DeadPilot 3.0 2.0 10.0 0.0 1    
+//	CameraPlayer DeadPilot 0 2.5 -5.0
+//	Zoom 0.75 3.0
+
+	Pause 1.0
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Asha_621/You failed to escort all of the pilots safely back to the resistance." asha.dlg
+	CommunicatorMessageAndWait "/Asha_622/Game Over." asha.dlg
+
+    Pause 2.0
+    
+	FadeDownAndWait
+	EndCutscene
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Scoring Info"
+{
+    SetTimeToBeat 8 00
+    SetExplorationNum 5
+}
+
+Script "Set Far Clip"
+{
+//    SetFarClip 325 0
+}
+
+Script "Set Pain Region Values"
+{
+    SetPainRegion Pain_Rgn_01 9999.0
+    SetPainRegion Pain_Rgn_02 9999.0    
+}
+
+Script "Pilot Prisoner Escort"
+{
+    Actor Security01        A_Battledroid-Security_01
+    Actor Security02        A_Battledroid-Security_02    
+    Actor Heavy01           A_Battledroid-HeavyWeapon_01
+    Actor Heavy02           A_Battledroid-HeavyWeapon_02
+    Actor Heavy03           A_Battledroid-HeavyWeapon_03
+    Actor Heavy04           A_Battledroid-HeavyWeapon_04    
+
+
+    Nudge Obi A_5-5_ff_controller_01    //Turn off forcefield
+    Nudge Obi A_5-5_ff_controller_02    //Turn off forcefield
+    Nudge Obi A_5-5_ff_controller_03    //Turn off forcefield
+
+    TakeControlOf Security01
+    TakeControlOf Security02
+    TakeControlOf Heavy01
+    TakeControlOf Heavy02
+    TakeControlOf Heavy03
+    TakeControlOf Heavy04
+    
+    TakeControlOf Naboo01
+    TakeControlOf Naboo02
+    TakeControlOf Naboo03
+    TakeControlOf Naboo04
+    TakeControlOf Naboo05                
+    TakeControlOf Naboo06    
+
+    FollowDirectional Naboo02 Naboo01 1.90 110
+    FollowDirectional Naboo03 Naboo01 1.90 250
+    FollowDirectional Naboo04 Naboo01 2.30 180    
+    FollowDirectional Naboo05 Naboo02 2.30 180
+    FollowDirectional Naboo06 Naboo03 2.30 180
+//    FollowDirectional Naboo05 Naboo04 1.90 110
+//    FollowDirectional Naboo06 Naboo04 1.90 250
+
+    FollowDirectional Security01 Naboo01 6.35 205
+    FollowDirectional Security02 Naboo01 6.35 155    
+            
+    WalkToNodeAndWait Naboo01 Naboo01Node
+//    WalkToNode Naboo01 Naboo01Node    
+//    WalkToNodeAndWait Naboo04 Naboo04Node
+
+    StopActions Naboo01
+    StopActions Naboo02
+    StopActions Naboo03        
+    StopActions Naboo04
+    StopActions Naboo05
+    StopActions Naboo06
+    StopActions Security01
+    StopActions Security02
+    
+    LookAt Security01 Naboo04
+    LookAt Security02 Naboo04
+    LookAt Heavy01 Naboo01
+    LookAt Heavy02 Naboo01
+    
+    PlayGesture Naboo01 CapturedKneel 10.0
+    PlayGesture Naboo02 CapturedKneel 10.0
+    PlayGesture Naboo03 CapturedKneel 10.0
+    PlayGesture Naboo04 CapturedKneel 10.0
+    PlayGesture Naboo05 CapturedKneel 10.0
+    PlayGesture Naboo06 CapturedKneel 10.0
+                            
+    PlayGestureAndWait Heavy02 PalmUpLeft
+    PlayGesture Security01 PointForward
+        
+    Pause 10.0        
+
+    Nudge Obi A_5-5_ff_controller_01    //Turn on forcefield
+
+    StopAction Security01
+    StopAction Security02
+    StopAction Heavy01
+    StopAction Heavy02
+
+    Teleport Naboo01 Naboo01-StartPoint01
+    Teleport Naboo02 Naboo02-StartPoint01
+    Teleport Naboo03 Naboo03-StartPoint01
+    Teleport Naboo04 Naboo04-StartPoint01
+    Teleport Naboo05 Naboo05-StartPoint01
+    Teleport Naboo06 Naboo06-StartPoint01
+
+    LookAt Naboo01 Obi
+    LookAt Naboo02 Obi
+    LookAt Naboo03 Obi
+    LookAt Naboo04 Obi
+    LookAt Naboo05 Obi
+    LookAt Naboo06 Obi 
+    
+    // set team of pilots to neutral so they are not killed by BADs    
+/*
+    ReturnControlTo Naboo01
+    ReturnControlTo Naboo02
+    ReturnControlTo Naboo03
+    ReturnControlTo Naboo04
+    ReturnControlTo Naboo05
+    ReturnControlTo Naboo06                    
+*/                                                                        
+    ReturnControlTo Security01
+    ReturnControlTo Security02
+    ReturnControlTo Heavy01
+    ReturnControlTo Heavy02
+    ReturnControlTo Heavy03
+    ReturnControlTo Heavy04    
+            
+    SetPatrolTypes Security01 1
+    SetPatrolTypes Security02 2
+    
+    SetPatrolAttentionSpan Security01 300.0
+    SetPatrolAttentionSpan Security02 300.0
+
+    AddPatrolState Security01
+    AddPatrolState Security02
+}
+
+Script "Zone06-Ambush 01"
+{
+    Actor Sword02    A_AssassinDroid-Sword_02
+    Actor Sword03    A_AssassinDroid-Sword_03
+
+        
+    WaitUntilEnteredRegion Obi Z06-Sniper_Rgn_01
+    
+    TakeControlOf Sword02
+    TakeControlOf Sword03    
+
+    ClearAIBoundary Sword02
+    ClearAIBoundary Sword03    
+            
+    UnlockDoor A_05_3_Door_04_01
+    
+    Child RunToNodeAndWait Sword02 Zone06-Spot01
+    Child RunToNodeAndWait Sword03 Zone06-Spot02    
+    WaitForAll
+    
+    CloseDoor A_05_3_Door_04_01
+    LockDoor A_05_3_Door_04_01    
+    
+    Call "Run" (Sword02, Zone06-Spot03, 0.0)
+    Call "Run" (Sword03, Zone06-Spot04, 0.0)    
+}
+
+Script "Zone02-Sniper Region 01"
+{
+    Actor Sniper01     A_Battledroid-Sniper_01
+
+        
+    While (Exists Sniper01)
+    {
+        WaitUntilEnteredRegion Obi Z02-Sniper_Rgn_01
+        ForceTarget Sniper01 Obi
+    
+        WaitUntilExitedRegion Obi Z02-Sniper_Rgn_01
+
+        ForceTargetOff Sniper01
+    }
+}
+
+Script "Zone06-Sniper Region 01"
+{
+    Actor Sniper04     A_Battledroid-Sniper_04
+    
+
+    While (Exists Sniper04)
+    {
+        WaitUntilEnteredRegion Obi Z06-Sniper_Rgn_01
+        ForceTarget Sniper04 Obi
+    
+        WaitUntilExitedRegion Obi Z06-Sniper_Rgn_01
+
+        ForceTargetOff Sniper04
+    }
+}
+
+Script "Zone04-Grenade Region 01"
+{
+    Actor Grenade05    A_Battledroid-GrenadeCon_05
+    Actor Grenade06    A_Battledroid-GrenadeCon_06    
+    Int Guys 2
+
+        
+    While (> Guys 0)
+    {    
+        WaitUntilEnteredRegion Obi Z04-Grenade_Rgn_01
+        ForceTarget Grenade05 Obi
+        ForceTarget Grenade06 Obi
+    
+        WaitUntilExitedRegion Obi Z04-Grenade_Rgn_01
+
+        ForceTargetOff Grenade05
+        ForceTargetOff Grenade06
+
+        Set Guys 0
+    
+        If (Exists Grenade05)
+        {
+            Increment Guys 1
+        }
+    
+        If (Exists Grenade06)
+        {
+            Increment Guys 1
+        }
+    }        
+}
+
+Script "Unlock Tower Door Once Inside"
+{
+    WaitUntilEnteredRegion Obi 05_3_Door_04_Unlock
+    UnlockDoor A_05_3_Door_04_01
+}
+
+Script "Unlock Zone07 Door Once Inside"
+{
+    WaitUntilEnteredRegion Obi 05_3_Door_02_Unlock
+    UnlockDoor A_05_3_Door_02_01
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Patrols ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+
+Script "Tower Commander Patrol"
+{
+    Actor Commander02   A_Battledroid-Commander_02
+
+        
+    SetPatrolTypes Commander02 1
+    SetPatrolAttentionSpan Commander02 300.0
+    AddPatrolState Commander02
+}
+
+Script "Zone01-BAD Patrol 01"
+{
+    Actor Security03    A_Battledroid-Security_03
+    Actor Security04    A_Battledroid-Security_04
+
+    SetPatrolTypes Security03 1
+    SetPatrolTypes Security04 2        // Change Security02 to follow Security01 ?
+    
+    SetPatrolAttentionSpan Security03 300.0
+    SetPatrolAttentionSpan Security04 300.0
+
+    AddPatrolState Security03    
+    AddPatrolState Security04
+}
+
+Script "Zone01-BAD Patrol 02"
+{
+    Actor Security19     A_Battledroid-Security_19
+    Actor Security20     A_Battledroid-Security_20
+    
+    
+    SetPatrolTypes Security19 1
+    SetPatrolTypes Security20 2
+    SetPatrolAttentionSpan Security19 300.0
+    SetPatrolAttentionSpan Security20 300.0
+    AddPatrolState Security19
+    AddPatrolState Security20
+}
+
+Script "Zone02-BAD Patrol 01"
+{
+    Actor Commander01    A_Battledroid-Commander_01
+    Actor Infantry09     A_Battledroid-Infantry_09
+    Actor Infantry10     A_Battledroid-Infantry_10
+    Actor Infantry11     A_Battledroid-Infantry_11
+ 
+
+    TakeControlOf Infantry09
+    TakeControlOf Infantry10
+    TakeControlOf Infantry11        
+
+    FollowDirectional Infantry09 Commander01 2.5 135
+    FollowDirectional Infantry10 Commander01 2.0 180    
+    FollowDirectional Infantry11 Commander01 2.5 225  
+    
+    SetPatrolTypes Commander01 1
+    SetPatrolAttentionSpan Commander01 300.0
+    AddPatrolState Commander01
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander01
+        
+        ReturnControlTo Infantry09
+        ReturnControlTo Infantry10
+        ReturnControlTo Infantry11
+    }
+    
+    WaitUntilStateActivated Commander01 Attack
+    
+    EndScript "Commander Killed"
+        
+    ReturnControlTo Infantry09
+    ReturnControlTo Infantry10
+    ReturnControlTo Infantry11
+        
+    ForceTarget Infantry09 Obi
+    ForceTarget Infantry10 Obi
+    ForceTarget Infantry11 Obi
+}
+
+Script "Zone02-BAD Patrol 02"
+{
+    Actor Commander03    A_Battledroid-Commander_03
+    Actor Infantry12     A_Battledroid-Infantry_12
+    Actor Infantry13     A_Battledroid-Infantry_13
+    Actor Infantry14     A_Battledroid-Infantry_14
+
+
+    TakeControlOf Infantry12
+    TakeControlOf Infantry13
+    TakeControlOf Infantry14        
+
+    FollowDirectional Infantry12 Commander03 2.5 135
+    FollowDirectional Infantry13 Commander03 2.0 180    
+    FollowDirectional Infantry14 Commander03 2.5 225  
+    
+    SetPatrolTypes Commander03 2
+    SetPatrolAttentionSpan Commander03 300.0
+    AddPatrolState Commander03
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander03
+        
+        ReturnControlTo Infantry12
+        ReturnControlTo Infantry13
+        ReturnControlTo Infantry14
+    }
+
+    WaitUntilStateActivated Commander03 Attack
+    
+    EndScript "Commander Killed"
+        
+    ReturnControlTo Infantry12
+    ReturnControlTo Infantry13
+    ReturnControlTo Infantry14
+        
+    ForceTarget Infantry12 Obi
+    ForceTarget Infantry13 Obi
+    ForceTarget Infantry14 Obi
+}
+
+Script "Zone03-BAD Patrol 01"
+{
+    Actor Commander05    A_Battledroid-Commander_05
+    Actor Infantry18     A_Battledroid-Infantry_18
+    Actor Infantry19     A_Battledroid-Infantry_19
+    Actor Infantry20     A_Battledroid-Infantry_20
+
+
+    TakeControlOf Infantry18
+    TakeControlOf Infantry19
+    TakeControlOf Infantry20        
+
+    FollowDirectional Infantry18 Commander05 2.5 135
+    FollowDirectional Infantry19 Commander05 2.0 180    
+    FollowDirectional Infantry20 Commander05 2.5 225  
+    
+    SetPatrolTypes Commander05 1
+    SetPatrolAttentionSpan Commander05 300.0
+    AddPatrolState Commander05
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander05
+        
+        ReturnControlTo Infantry18
+        ReturnControlTo Infantry19
+        ReturnControlTo Infantry20
+    }
+
+    WaitUntilStateActivated Commander05 Attack
+    
+    EndScript "Commander Killed"
+        
+    ReturnControlTo Infantry18
+    ReturnControlTo Infantry19
+    ReturnControlTo Infantry20
+        
+    ForceTarget Infantry18 Obi
+    ForceTarget Infantry19 Obi
+    ForceTarget Infantry20 Obi
+}
+
+Script "Zone04-BAD Patrol 01"
+{
+    Actor Commander04    A_Battledroid-Commander_04
+    Actor Infantry15     A_Battledroid-Infantry_15
+    Actor Infantry16     A_Battledroid-Infantry_16
+    Actor Infantry17     A_Battledroid-Infantry_17
+
+
+    TakeControlOf Infantry15
+    TakeControlOf Infantry16
+    TakeControlOf Infantry17        
+
+    FollowDirectional Infantry15 Commander04 2.5 135
+    FollowDirectional Infantry16 Commander04 2.0 180    
+    FollowDirectional Infantry17 Commander04 2.5 225  
+
+    ClearAIBoundary Commander04
+    ClearAIBoundary Infantry15
+    ClearAIBoundary Infantry16
+    ClearAIBoundary Infantry17        
+    
+    SetPatrolTypes Commander04 1
+    SetPatrolAttentionSpan Commander04 300.0
+    AddPatrolState Commander04
+    
+    Childscript "Commander Killed"
+    {
+        WaitUntilKilled Commander04
+        
+        ReturnControlTo Infantry15
+        ReturnControlTo Infantry16
+        ReturnControlTo Infantry17
+    }
+
+    WaitUntilStateActivated Commander04 Attack
+
+    EndScript "Commander Killed"
+            
+    ReturnControlTo Infantry15
+    ReturnControlTo Infantry16
+    ReturnControlTo Infantry17
+        
+    ForceTarget Infantry15 Obi
+    ForceTarget Infantry16 Obi
+    ForceTarget Infantry17 Obi
+}
+
+
+////////////////////////////////////////////////////////////////////////
+//------------------------------ Alarms ------------------------------//
+////////////////////////////////////////////////////////////////////////
+
+Script "Zone01-Alarm 01"
+{
+    Actor Alarm         A_5-3_alarm_01
+    Actor Infantry07    A_Battledroid-Infantry_07
+    Actor Security21    A_Battledroid-Security_21
+    Actor Security22    A_Battledroid-Security_22
+    Actor Security23    A_Battledroid-Security_23
+    Actor Security24    A_Battledroid-Security_24            
+
+        
+    WaitUntilStateActivated Infantry07 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry07
+        EndScript "Zone01-Alarm 01"
+    }
+    
+    TakeControlOf Infantry07
+    RunToNodeAndWait Infantry07 Zone01-Alarm01
+    
+    LookAt Infantry07 Alarm
+    Sayline Infantry07 "/BattleDroidInfantry_1290/Intruder detected in Sector 1-A.  Send reinforcements!" PushButton        
+
+    EndScript "Alarm Interrupted"
+    
+    Increment AlarmsSetOff 1
+    PrintInt AlarmsSetOff    
+      
+    ReturnControlTo Infantry07
+    ForceTarget Infantry07 Obi    
+
+    Teleport Security21 Zone01H-Spot01
+    Teleport Security22 Zone01H-Spot02
+    Teleport Security23 Zone01H-Spot03
+    Teleport Security24 Zone01H-Spot04
+
+    UnlockDoor A_05_3_Door_01_01
+
+    Call "Run" (Security21, Zone01-Alarm01-Spot01, 0.0)
+    Call "Run" (Security22, Zone01-Alarm01-Spot02, 1.0)
+    Call "Run" (Security23, Zone01-Alarm01-Spot03, 2.0)
+    Call "Run" (Security24, Zone01-Alarm01-Spot04, 3.0)            
+}
+
+Script "Zone01-Alarm 02"
+{
+    Actor Alarm         A_5-3_alarm_02
+    Actor Infantry04    A_Battledroid-Infantry_04
+    Actor Security25    A_Battledroid-Security_25
+    Actor Security26    A_Battledroid-Security_26
+    Actor Security27    A_Battledroid-Security_27
+    Actor Security28    A_Battledroid-Security_28            
+
+        
+    WaitUntilStateActivated Infantry04 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry04
+        EndScript "Zone01-Alarm 02"
+    }
+    
+    TakeControlOf Infantry04
+    RunToNodeAndWait Infantry04 Zone01-Alarm02
+    
+    LookAt Infantry04 Alarm
+    Sayline Infantry04 "/BattleDroidInfantry_1291/Intruder detected in Sector 1-B.  Send reinforcements!" PushButton        
+    
+    EndScript "Alarm Interrupted"
+    
+    Increment AlarmsSetOff 1    
+    PrintInt AlarmsSetOff
+
+    ReturnControlTo Infantry04
+    ForceTarget Infantry04 Obi    
+
+    Teleport Security25 Zone01HB-Spot01
+    Teleport Security26 Zone01HB-Spot02
+    Teleport Security27 Zone01HB-Spot03
+    Teleport Security28 Zone01HB-Spot04
+
+    UnlockDoor A_05_3_Door_01_02
+
+    Call "Run" (Security25, Zone01-Alarm02-Spot01, 0.0)
+    Call "Run" (Security26, Zone01-Alarm02-Spot02, 1.0)
+    Call "Run" (Security27, Zone01-Alarm02-Spot03, 2.0)
+    Call "Run" (Security28, Zone01-Alarm02-Spot04, 3.0)
+}
+
+Script "Zone02-Alarm 01"
+{
+    Actor Alarm         A_5-3_alarm_03
+    Actor Infantry12    A_Battledroid-Infantry_12
+    Actor Security29    A_Battledroid-Security_29
+    Actor Security30    A_Battledroid-Security_30
+    Actor Security31    A_Battledroid-Security_31
+    Actor Security32    A_Battledroid-Security_32
+
+                
+    WaitUntilStateActivated Infantry12 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry12
+        EndScript "Zone02-Alarm 01"
+    }
+    
+    TakeControlOf Infantry12
+    RunToNodeAndWait Infantry12 Zone02-Alarm01
+    
+    LookAt Infantry12 Alarm
+    Sayline Infantry12 "/BattleDroidInfantry_1293/Intruder detected in Sector 2-B.  Send reinforcements!" PushButton    
+    
+    EndScript "Alarm Interrupted"    
+    
+    Increment AlarmsSetOff 1
+    PrintInt AlarmsSetOff    
+
+    ReturnControlTo Infantry12
+    ForceTarget Infantry12 Obi
+
+    Teleport Security29 Zone02-Spot05
+    Teleport Security30 Zone02-Spot06
+    Teleport Security31 Zone02-Spot07
+    Teleport Security32 Zone02-Spot08
+    
+    ForceTarget Security29 Obi
+    ForceTarget Security30 Obi
+    ForceTarget Security31 Obi
+    ForceTarget Security32 Obi
+                
+/*
+    UnlockDoor A_05_3_Door_01_02
+
+    Call "Run" (Security29, Zone02-Alarm01-Spot01, 0.0)
+    Call "Run" (Security30, Zone02-Alarm01-Spot02, 1.0)
+    Call "Run" (Security31, Zone02-Alarm01-Spot03, 2.0)
+    Call "Run" (Security32, Zone02-Alarm01-Spot04, 3.0)
+*/
+}
+
+Script "Zone02-Alarm 02"
+{
+    Actor Alarm         A_5-3_alarm_04
+    Actor Infantry09    A_Battledroid-Infantry_09
+    Actor Security33    A_Battledroid-Security_33
+    Actor Security34    A_Battledroid-Security_34
+    Actor Security35    A_Battledroid-Security_35
+    Actor Security36    A_Battledroid-Security_36
+
+                
+    WaitUntilStateActivated Infantry09 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry09
+        EndScript "Zone02-Alarm 01"
+    }
+    
+    TakeControlOf Infantry09
+    RunToNodeAndWait Infantry09 Zone02-Alarm02
+    
+    LookAt Infantry09 Alarm
+    Sayline Infantry09 "/BattleDroidInfantry_1292/Intruder detected in Sector 2-A.  Send reinforcements!" PushButton    
+    
+    EndScript "Alarm Interrupted"    
+    
+    Increment AlarmsSetOff 1  
+    PrintInt AlarmsSetOff      
+
+    ReturnControlTo Infantry09
+    ForceTarget Infantry09 Obi    
+
+    Teleport Security33 Zone02-Spot01
+    Teleport Security34 Zone02-Spot02
+    Teleport Security35 Zone02-Spot03
+    Teleport Security36 Zone02-Spot04
+    
+    ForceTarget Security33 Obi
+    ForceTarget Security34 Obi
+    ForceTarget Security35 Obi
+    ForceTarget Security36 Obi
+/*
+    UnlockDoor A_05_3_Door_01_02
+
+    Call "Run" (Security33, Zone02-Alarm01-Spot01, 0.0)
+    Call "Run" (Security34, Zone02-Alarm01-Spot02, 1.0)
+    Call "Run" (Security35, Zone02-Alarm01-Spot03, 2.0)
+    Call "Run" (Security36, Zone02-Alarm01-Spot04, 3.0)
+*/
+}
+
+Script "Zone03-Alarm 01"
+{
+    Actor Alarm         A_5-3_alarm_05
+    Actor Infantry18    A_Battledroid-Infantry_18
+    Actor Security13    A_Battledroid-Security_13
+    Actor Security14    A_Battledroid-Security_14
+    Actor Security15    A_Battledroid-Security_15
+    Actor Security16    A_Battledroid-Security_16            
+
+        
+    WaitUntilStateActivated Infantry18 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry18
+        EndScript "Zone03-Alarm 01"
+    }
+    
+    TakeControlOf Infantry18
+    RunToNodeAndWait Infantry18 Zone03-Alarm01
+    
+    LookAt Infantry18 Alarm
+    Sayline Infantry18 "/BattleDroidInfantry_1291/Intruder detected in Sector 3-A.  Send reinforcements!" PushButton        
+    
+    EndScript "Alarm Interrupted"
+    
+    Increment AlarmsSetOff 1    
+    PrintInt AlarmsSetOff
+
+    ReturnControlTo Infantry18
+    ForceTarget Infantry18 Obi    
+
+    Teleport Security13 Zone04-Spot01
+    Teleport Security14 Zone04-Spot02
+    Teleport Security15 Zone04-Spot03
+    Teleport Security16 Zone04-Spot04
+
+    UnlockDoor A_05_3_Door_01_02
+
+    Call "Run" (Security13, Zone03-Alarm01-Spot01, 0.0)
+    Call "Run" (Security14, Zone03-Alarm01-Spot02, 0.0)
+    Call "Run" (Security15, Zone03-Alarm01-Spot03, 0.0)
+    Call "Run" (Security16, Zone03-Alarm01-Spot04, 0.0)
+}
+
+Script "Zone04-Alarm 01"
+{
+    Actor Alarm         A_5-3_alarm_06
+    Actor Infantry15    A_Battledroid-Infantry_15
+    Actor Kamikaze21    A_Battledroid-Kamikaze_21
+    Actor Kamikaze22    A_Battledroid-Kamikaze_22
+    Actor Kamikaze23    A_Battledroid-Kamikaze_23
+    Actor Kamikaze24    A_Battledroid-Kamikaze_24            
+
+
+    WaitUntilStateActivated Infantry15 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Infantry15
+        EndScript "Zone04-Alarm 01"
+    }
+    
+    TakeControlOf Infantry15
+    RunToNodeAndWait Infantry15 Zone04-Alarm01
+    
+    LookAt Infantry15 Alarm
+    Sayline Infantry15 "/BattleDroidInfantry_1295/Intruder detected in Sector 4-A.  Send reinforcements!" PushButton    
+    
+    EndScript "Alarm Interrupted"    
+    
+    Increment AlarmsSetOff 1  
+    PrintInt AlarmsSetOff      
+
+    ReturnControlTo Infantry15
+    ForceTarget Infantry15 Obi
+    
+    Teleport Kamikaze21 Zone04-Spot01
+    Teleport Kamikaze22 Zone04-Spot02
+    Teleport Kamikaze23 Zone04-Spot03
+    Teleport Kamikaze24 Zone04-Spot04
+                
+    ForceTarget Kamikaze21 Obi
+    ForceTarget Kamikaze22 Obi
+    ForceTarget Kamikaze23 Obi
+    ForceTarget Kamikaze24 Obi
+}
+
+Script "Zone05-Alarm 01"
+{
+    Actor Alarm         A_5-3_alarm_06
+    Actor Security08    A_Battledroid-Security_08
+    Actor Kamikaze25    A_Battledroid-Kamikaze_25
+    Actor Kamikaze26    A_Battledroid-Kamikaze_26
+    Actor Kamikaze27    A_Battledroid-Kamikaze_27
+    Actor Kamikaze28    A_Battledroid-Kamikaze_28
+    
+    
+    WaitUntilStateActivated Security08 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Security08
+        EndScript "Zone05-Alarm 01"
+    }
+    
+    TakeControlOf Security08
+    RunToNodeAndWait Security08 Zone05-Alarm01
+    
+    LookAt Security08 Alarm
+    Sayline Security08 "/BattleDroidInfantry_1296/Intruder detected in Sector 5-A.  Send reinforcements!" PushButton    
+    
+    EndScript "Alarm Interrupted"    
+    
+    Increment AlarmsSetOff 1  
+    PrintInt AlarmsSetOff      
+
+    ReturnControlTo Security08
+    ForceTarget Security08 Obi
+    
+    Teleport Kamikaze25 Zone04-Spot01
+    Teleport Kamikaze26 Zone04-Spot02
+    Teleport Kamikaze27 Zone04-Spot03
+    Teleport Kamikaze28 Zone04-Spot04
+                
+    ForceTarget Kamikaze25 Obi
+    ForceTarget Kamikaze26 Obi
+    ForceTarget Kamikaze27 Obi
+    ForceTarget Kamikaze28 Obi
+}
+
+Script "Zone08-Alarm 01"
+{
+    Actor Alarm         A_5-3_alarm_08
+    Actor Security07    A_Battledroid-Security_07
+
+
+    WaitUntilStateActivated Security07 Attack
+    
+    ChildScript "Alarm Interrupted"
+    {
+        WaitUntilKilled Security07
+        EndScript "Zone08-Alarm 01"
+    }
+    
+    TakeControlOf Security07
+    RunToNodeAndWait Security07 Zone08-Alarm01
+    
+    LookAt Security07 Alarm
+    Sayline Security07 "/BattleDroidInfantry_1297/Code Red!  Intruder has infiltrated tower prison!  Escape attempt in progress!" PushButton    
+    
+    EndScript "Alarm Interrupted"    
+    
+    Increment AlarmsSetOff 1  
+    PrintInt AlarmsSetOff      
+
+    ReturnControlTo Security07
+    ForceTarget Security07 Obi
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Pilot Wait Points ------------------------------//
+///////////////////////////////////////////////////////////////////////////////////
+
+Script "Pilots Wait 01"
+{
+    WaitUntilEqual PilotsRescued 1
+    
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint01
+    }    
+    
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint01
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint01
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint01
+    }
+    
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint01
+    }
+    
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint01
+    }
+    
+    Childscript
+    {
+        Pause 6.0    
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint01
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint01
+    }
+
+    WaitForAll
+
+	CommunicatorOn
+    CommunicatorMessageAndWait "/male3_627/We'll wait here until the area ahead is cleared of hostiles." male3.dlg
+	CommunicatorOff
+}
+
+Script "Pilots Wait 02"
+{
+    WaitUntilEqual Section08Cleared 1
+
+	CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1298/Squad Leader, I've clean out all of the enemies in the next sector." obi.dlg
+    CommunicatorMessageAndWait "/male3_630/Good job, Obiwan.  We're moving ahead to the next area."
+	CommunicatorOff
+
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint02
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint02
+    }
+
+    Childscript
+    {
+        Pause 1.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint02
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint02
+    }
+
+    Childscript
+    {
+        Pause 2.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint02
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint02
+    }
+
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint02
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint02
+    }
+        
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint02
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint02
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint02
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint02
+    }
+
+    WaitForAll
+    
+    CommunicatorOn    
+    CommunicatorMessageAndWait "/male3_628/The area ahead still contains an enemy presence." male3.dlg
+    CommunicatorOff
+}
+
+Script "Pilots Wait 03"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1299/Squad Leader, the Federation reinforcements in the next sector have been eliminated." obi.dlg
+    CommunicatorMessageAndWait "/male3_631/Well done, Jedi.  We're on our way to the next area." male3.dlg
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint03
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint03
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint03
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint03
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint03
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint03
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint03
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint03
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint03
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint03
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint03
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint03
+    }
+    
+    WaitForAll
+
+    CommunicatorOn        
+    CommunicatorMessageAndWait "/male3_629/We'll wait here until the area ahead is cleared of hostiles." male3.dlg
+    CommunicatorOff
+}
+
+Script "Pilots Wait 04"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1
+    WaitUntilEqual Section10Cleared 1        
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1300/Squad Leader, your path through the next sector has been cleared of all hostiles." obi.dlg
+    CommunicatorMessageAndWait "/male3_632/Excellent, Obiwan.  We're moving forward to the next area." male3.dlg
+    CommunicatorOff
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint04
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint04
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint04
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint04
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint04
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint04
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint04
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint04
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint04
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint04
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint04
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint04
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/male3_627/Eliminate the Federation threat in the area ahead and then we'll moved up to the next section." male3.dlg
+    CommunicatorOff
+}
+
+Script "Pilots Wait 05"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1    
+    WaitUntilEqual Section10Cleared 1        
+    WaitUntilEqual Section11Cleared 1
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1301/Squad Leader, lead your squadron up to the next sector.  The coast is clear." obi.dlg        
+    CommunicatorMessageAndWait "/male3_630/Good job, Obiwan.  We're moving ahead to the next area." male3.dlg
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint05
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint05
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint05
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint05
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint05
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint05
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint05
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint05
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint05
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint05
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint05
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint05
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/male3_628/The area ahead still contains an enemy presence." male3.dlg
+    CommunicatorOff
+}
+
+Script "Pilots Wait 06"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1    
+    WaitUntilEqual Section10Cleared 1
+    WaitUntilEqual Section11Cleared 1    
+    WaitUntilEqual Section12Cleared 1
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1302/Squad Leader, the next sector is clear.  Get moving." obi.dlg
+    CommunicatorMessageAndWait "/male3_631/Well done, Jedi.  We're on our way to the next area." male3.dlg
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint06
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint06
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint06
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint06
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint06
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint06
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint06
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint06
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint06
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint06
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint06
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint06
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/male3_629/We'll wait here until the area ahead is cleared of hostiles." male3.dlg
+    CommunicatorOff    
+}
+
+Script "Pilots Wait 06b"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1    
+    WaitUntilEqual Section10Cleared 1
+    WaitUntilEqual Section11Cleared 1    
+    WaitUntilEqual Section12Cleared 1
+    WaitUntilEqual Section13Cleared 1    
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1302/Squad Leader, the next sector is clear.  Get moving." obi.dlg
+    CommunicatorMessageAndWait "/male3_632/Well done, Jedi.  We're on our way to the next area." male3.dlg
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint06b
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint06b
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint06b
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint06b
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint06b
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint06b
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint06b
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint06b
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint06b
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint06b
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint06b
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint06b
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/male3_627/We'll wait here until the area ahead is cleared of hostiles." male3.dlg
+    CommunicatorOff    
+}
+
+Script "Pilots Wait 07"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1    
+    WaitUntilEqual Section10Cleared 1
+    WaitUntilEqual Section11Cleared 1    
+    WaitUntilEqual Section12Cleared 1        
+    WaitUntilEqual Section13Cleared 1
+    WaitUntilEqual Section13bCleared 1    
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1303/Squad Leader, all battleroids in next sector have been removed." obi.dlg
+    CommunicatorMessageAndWait "/male3_630/Good job, Obiwan.  We're moving ahead to the next area." male3.dlg
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo01-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-WaitPoint07
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo02-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-WaitPoint07
+    }
+    
+    Childscript
+    {
+        Pause 2.0    
+        RunToNodeAndWait Naboo03 Naboo03-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-WaitPoint07
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo04-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-WaitPoint07
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo05-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-WaitPoint07
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo06-WaitPoint07
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-WaitPoint07
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/male3_628/Eliminate the Federation threat in the area ahead and then we'll moved up to the next section." male3.dlg
+    CommunicatorOff
+}
+
+Script "Pilots Escape"
+{
+    WaitUntilEqual Section08Cleared 1
+    WaitUntilEqual Section09Cleared 1    
+    WaitUntilEqual Section10Cleared 1
+    WaitUntilEqual Section11Cleared 1    
+    WaitUntilEqual Section12Cleared 1        
+    WaitUntilEqual Section13Cleared 1    
+    WaitUntilEqual Section13bCleared 1     
+    WaitUntilEqual Section14Cleared 1
+
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Obi-Wan_1304/Squad Leader, I've cleared the way to the resistance.  Now's your chance to escape!" obi.dlg
+    CommunicatorMessageAndWait "/male3_632/Good job, Obiwan.  We're making a break for the resistance." male3.dlg
+    CommunicatorOff    
+            
+    Childscript
+    {
+        RunToNodeAndWait Naboo01 Naboo-Escape
+        RunToNodeAndWait Naboo01 Naboo01-EndPoint01
+        TurnToNodeOrientationAndWait Naboo01 Naboo01-EndPoint01
+    }
+
+    Childscript
+    {
+        Pause 1.0
+        RunToNodeAndWait Naboo02 Naboo-Escape
+        RunToNodeAndWait Naboo02 Naboo02-EndPoint01
+        TurnToNodeOrientationAndWait Naboo02 Naboo02-EndPoint01
+    }
+    
+    Childscript
+    {
+        Pause 2.0   
+        RunToNodeAndWait Naboo03 Naboo-Escape         
+        RunToNodeAndWait Naboo03 Naboo03-EndPoint01
+        TurnToNodeOrientationAndWait Naboo03 Naboo03-EndPoint01
+    }
+    
+    Childscript
+    {
+        Pause 3.0    
+        RunToNodeAndWait Naboo04 Naboo-Escape        
+        RunToNodeAndWait Naboo04 Naboo04-EndPoint01
+        TurnToNodeOrientationAndWait Naboo04 Naboo04-EndPoint01
+    }
+
+    Childscript
+    {
+        Pause 4.0    
+        RunToNodeAndWait Naboo05 Naboo-Escape        
+        RunToNodeAndWait Naboo05 Naboo05-EndPoint01
+        TurnToNodeOrientationAndWait Naboo05 Naboo05-EndPoint01
+    }
+
+    Childscript
+    {
+        Pause 5.0    
+        RunToNodeAndWait Naboo06 Naboo-Escape        
+        RunToNodeAndWait Naboo06 Naboo06-EndPoint01
+        TurnToNodeOrientationAndWait Naboo06 Naboo06-EndPoint01
+    }
+    
+    WaitForAll
+    
+    CommunicatorOn
+    CommunicatorMessageAndWait "/SquadLeader_1305/"
+    CommunicatorMessageAndWait "/SquadLeader_1306/We made it. Yipee!"
+    CommunicatorOff    
+    
+    Increment MissionCompleted 1    
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ BAD Reinforcements ------------------------------//
+////////////////////////////////////////////////////////////////////////////////////
+
+Script "Tower BADs"
+{
+    Actor Commander02    A_Battledroid-Commander_02
+    Actor Heavy05        A_Battledroid-HeavyWeapon_05
+    Actor Heavy06        A_Battledroid-HeavyWeapon_06
+    Actor Security05     A_Battledroid-Security_05
+    Actor Security06     A_Battledroid-Security_06
+    Actor Security07     A_Battledroid-Security_07
+    Actor Sword02        A_AssassinDroid-Sword_02
+    Actor Sword03        A_AssassinDroid-Sword_03    
+    
+    
+    Child WaitUntilKilled Commander02
+    Child WaitUntilKilled Heavy05
+    Child WaitUntilKilled Heavy06
+    Child WaitUntilKilled Security05
+    Child WaitUntilKilled Security06
+    Child WaitUntilKilled Security07
+    Child WaitUntilKilled Sword02
+    Child WaitUntilKilled Sword03
+    
+    WaitForAll
+    
+    WaitUntilNear Obi Naboo01 1.0
+    
+    Sayline Naboo01 "/male3_623/Thank you for freeing us, Jedi." male3.dlg
+    Sayline Naboo01 "/male3_624/You must help me get my squadron back to the resistance safely." male3.dlg
+    Sayline Naboo01 "/male3_625/We'll follow you out but stay back until the coast is clear." male3.dlg
+    Sayline Naboo01 "/male3_626/Let's go, Jedi." male3.dlg
+    
+    Increment PilotsRescued 1
+}
+
+Script "Reinforcements 01"
+{
+    Actor Shield01      A_Battledroid-Blaster+Shield_01
+    Actor Shield02      A_Battledroid-Blaster+Shield_02
+    Actor Shield03      A_Battledroid-Blaster+Shield_03
+    Actor Shield04      A_Battledroid-Blaster+Shield_04
+    Actor Shield05      A_Battledroid-Blaster+Shield_05
+    Actor Shield06      A_Battledroid-Blaster+Shield_06
+    Actor Sniper05      A_Battledroid-Sniper_05
+    Actor Sniper06      A_Battledroid-Sniper_06    
+                                    
+
+    WaitUntilEqual PilotsRescued 1
+    
+    Pause 10.0
+
+    UnlockDoor A_05_3_Door_03_01
+    
+    Call "Run" (Shield01, Zone06-Ambush-Spot01, 0.0)
+    Call "Run" (Shield02, Zone06-Ambush-Spot02, 1.0)
+    Call "Run" (Shield03, Zone06-Ambush-Spot03, 1.0)
+    Call "Run" (Shield04, Zone06-Ambush-Spot04, 2.0)
+    Call "Run" (Shield05, Zone06-Ambush-Spot05, 3.0)
+    Call "Run" (Shield06, Zone06-Ambush-Spot06, 3.0)
+    Call "Run" (Sniper05, Zone06-Ambush-Spot08, 4.0)
+    Call "Run" (Sniper06, Zone06-Ambush-Spot09, 4.0)    
+    
+    Child WaitUntilKilled Shield01
+    Child WaitUntilKilled Shield02
+    Child WaitUntilKilled Shield03
+    Child WaitUntilKilled Shield04
+    Child WaitUntilKilled Shield05
+    Child WaitUntilKilled Shield06
+    Child WaitUntilKilled Sniper05
+    Child WaitUntilKilled Sniper06
+    
+    WaitForAll
+    
+    Increment Section08Cleared 1
+}
+
+Script "Reinforcements 02"
+{
+    Actor Sword04         A_AssassinDroid-Sword_04
+    Actor Sword05         A_AssassinDroid-Sword_05
+
+
+    WaitUntilEqual PilotsRescued 1
+
+    Child WaitUntilKilled Sword04
+    Child WaitUntilKilled Sword05
+    
+    WaitForAll
+
+    Increment Section09Cleared 1
+}
+
+Script "Reinforcements 03"
+{
+    Actor Mace03        A_AssassinDroid-Mace_03
+    Actor Mace04        A_AssassinDroid-Mace_04
+    Actor Shield07      A_Battledroid-Blaster+Shield_07
+    Actor Shield08      A_Battledroid-Blaster+Shield_08
+    Actor Shield09      A_Battledroid-Blaster+Shield_09
+    Actor Shield10      A_Battledroid-Blaster+Shield_10
+    Actor Heavy07       A_Battledroid-HeavyWeapon_07
+    Actor Heavy08       A_Battledroid-HeavyWeapon_08
+    Actor Heavy09       A_Battledroid-HeavyWeapon_09
+
+
+    WaitUntilEqual PilotsRescued 1        
+                        
+//    Child WaitUntilKilled Mace03
+//    Child WaitUntilKilled Mace04
+    Child WaitUntilKilled Shield07
+    Child WaitUntilKilled Shield08
+    Child WaitUntilKilled Shield09
+    Child WaitUntilKilled Shield10
+    Child WaitUntilKilled Heavy07
+    Child WaitUntilKilled Heavy08
+    Child WaitUntilKilled Heavy09    
+    
+    WaitForAll
+    
+    Increment Section10Cleared 1
+}
+
+Script "Reinforcements 04"
+{
+    Actor Baron04        A_BaronDroid_04
+    Actor Baron05        A_BaronDroid_05
+    Actor Baron06        A_BaronDroid_06
+    Actor Kamikaze29     A_Battledroid-Kamikaze_29
+    Actor Kamikaze30     A_Battledroid-Kamikaze_30
+    Actor Sword06        A_AssassinDroid-Sword_06    
+    Actor Sword07        A_AssassinDroid-Sword_07
+    Actor Security37     A_Battledroid-Security_37
+    Actor Security38     A_Battledroid-Security_38
+    Actor Security39     A_Battledroid-Security_39
+
+
+    WaitUntilEqual PilotsRescued 1
+    
+//    Child WaitUntilKilled Baron04
+    Child WaitUntilKilled Baron05
+//    Child WaitUntilKilled Baron06
+    Child WaitUntilKilled Kamikaze29
+    Child WaitUntilKilled Kamikaze30
+//    Child WaitUntilKilled Sword06
+//    Child WaitUntilKilled Sword07
+    Child WaitUntilKilled Security37
+    Child WaitUntilKilled Security38
+    Child WaitUntilKilled Security39        
+    
+    WaitForAll        
+    
+    Increment Section11Cleared 1
+}
+
+Script "Reinforcements 05"
+{
+    Actor Heavy10       A_Battledroid-HeavyWeapon_10
+    Actor Heavy11       A_Battledroid-HeavyWeapon_11
+    Actor Grenade07     A_Battledroid-GrenadeCon_07    
+    Actor Grenade08     A_Battledroid-GrenadeCon_08
+    Actor Grenade09     A_Battledroid-GrenadeCon_09
+    Actor Grenade10     A_Battledroid-GrenadeCon_10
+    Actor Shield11      A_Battledroid-Blaster+Shield_11
+    Actor Shield12      A_Battledroid-Blaster+Shield_12
+    Actor Shield13      A_Battledroid-Blaster+Shield_13
+    Actor Shield14      A_Battledroid-Blaster+Shield_14
+
+
+    WaitUntilEqual PilotsRescued 1
+    
+    Child WaitUntilKilled Heavy10
+    Child WaitUntilKilled Heavy11
+    Child WaitUntilKilled Grenade07
+    Child WaitUntilKilled Grenade08
+    Child WaitUntilKilled Grenade09
+    Child WaitUntilKilled Grenade10            
+    Child WaitUntilKilled Shield11
+    Child WaitUntilKilled Shield12
+    Child WaitUntilKilled Shield13
+    Child WaitUntilKilled Shield14            
+    
+    WaitForAll
+        
+    Increment Section12Cleared 1
+}
+
+Script "Reinforcements 06"
+{
+    Actor Kamikaze05    A_Battledroid-Kamikaze_05
+    Actor Kamikaze06    A_Battledroid-Kamikaze_06
+    Actor Kamikaze07    A_Battledroid-Kamikaze_07
+    Actor Kamikaze08    A_Battledroid-Kamikaze_08
+    Actor Kamikaze09    A_Battledroid-Kamikaze_09
+    Actor Kamikaze10    A_Battledroid-Kamikaze_10
+    Actor Kamikaze11    A_Battledroid-Kamikaze_11
+    Actor Kamikaze12    A_Battledroid-Kamikaze_12
+    Actor Kamikaze13    A_Battledroid-Kamikaze_13
+    Actor Kamikaze14    A_Battledroid-Kamikaze_14
+    Actor Kamikaze15    A_Battledroid-Kamikaze_15
+    Actor Kamikaze16    A_Battledroid-Kamikaze_16
+    Actor Kamikaze17    A_Battledroid-Kamikaze_17
+    Actor Kamikaze18    A_Battledroid-Kamikaze_18
+    Actor Kamikaze19    A_Battledroid-Kamikaze_19
+    Actor Kamikaze20    A_Battledroid-Kamikaze_20    
+
+
+    WaitUntilEqual PilotsRescued 1
+    WaitUntilEqual Section12Cleared 1
+    
+    Pause 15.0    // Give pilots a head start
+
+    Teleport Kamikaze05 Zone04-Spot01
+    Teleport Kamikaze06 Zone04-Spot02
+    Teleport Kamikaze07 Zone04-Spot03
+    Teleport Kamikaze08 Zone04-Spot04
+    Teleport Kamikaze09 Zone04-Spot05
+    Teleport Kamikaze10 Zone04-Spot06
+    Teleport Kamikaze11 Zone04-Spot07
+    Teleport Kamikaze12 Zone04-Spot08
+    
+    Teleport Kamikaze13 Zone02-Spot01
+    Teleport Kamikaze14 Zone02-Spot02
+    Teleport Kamikaze15 Zone02-Spot03
+    Teleport Kamikaze16 Zone02-Spot04
+    Teleport Kamikaze17 Zone02-Spot05
+    Teleport Kamikaze18 Zone02-Spot06
+    Teleport Kamikaze19 Zone02-Spot07     
+    Teleport Kamikaze20 Zone02-Spot08
+
+    Call "Random Naboo Target" (Kamikaze05, 0.0)
+    Call "Random Naboo Target" (Kamikaze13, 0.0)
+    Call "Random Naboo Target" (Kamikaze06, 1.0)
+    Call "Random Naboo Target" (Kamikaze14, 1.0)
+    Call "Random Naboo Target" (Kamikaze07, 2.0)
+    Call "Random Naboo Target" (Kamikaze15, 2.0)
+    Call "Random Naboo Target" (Kamikaze08, 3.0)
+    Call "Random Naboo Target" (Kamikaze16, 3.0)
+    Call "Random Naboo Target" (Kamikaze09, 4.0)
+    Call "Random Naboo Target" (Kamikaze17, 4.0)
+    Call "Random Naboo Target" (Kamikaze10, 5.0)
+    Call "Random Naboo Target" (Kamikaze18, 5.0)
+    Call "Random Naboo Target" (Kamikaze11, 6.0)
+    Call "Random Naboo Target" (Kamikaze19, 6.0)
+    Call "Random Naboo Target" (Kamikaze12, 7.0)
+    Call "Random Naboo Target" (Kamikaze20, 7.0)    
+   
+    Child WaitUntilKilled Kamikaze05
+    Child WaitUntilKilled Kamikaze06
+    Child WaitUntilKilled Kamikaze07
+    Child WaitUntilKilled Kamikaze08
+    Child WaitUntilKilled Kamikaze09
+    Child WaitUntilKilled Kamikaze10
+    Child WaitUntilKilled Kamikaze11
+    Child WaitUntilKilled Kamikaze12
+    Child WaitUntilKilled Kamikaze13
+    Child WaitUntilKilled Kamikaze14
+    Child WaitUntilKilled Kamikaze15
+    Child WaitUntilKilled Kamikaze16
+    Child WaitUntilKilled Kamikaze17
+    Child WaitUntilKilled Kamikaze18
+    Child WaitUntilKilled Kamikaze19
+    Child WaitUntilKilled Kamikaze20                
+
+    WaitForAll
+
+    Increment Section13Cleared 1
+}
+
+Script "Reinforcements 06b"
+{
+    Actor Sniper07      A_Battledroid-Sniper_07
+    Actor Sniper08      A_Battledroid-Sniper_08
+    Actor Shield15      A_Battledroid-Blaster+Shield_15
+    Actor Shield16      A_Battledroid-Blaster+Shield_16
+    Actor Shield17      A_Battledroid-Blaster+Shield_17
+    Actor Shield18      A_Battledroid-Blaster+Shield_18
+    Actor Kamikaze31    A_Battledroid-Kamikaze_31
+    Actor Kamikaze32    A_Battledroid-Kamikaze_32
+    Actor Kamikaze33    A_Battledroid-Kamikaze_33
+    Actor Baron07       A_BaronDroid_07
+    Actor Baron08       A_BaronDroid_08
+    Actor Mace05        A_AssassinDroid-Mace_05
+    Actor Mace06        A_AssassinDroid-Mace_06
+
+        
+    WaitUntilEqual PilotsRescued 1
+
+    Child WaitUntilKilled Sniper07
+    Child WaitUntilKilled Sniper08    
+    Child WaitUntilKilled Shield15
+    Child WaitUntilKilled Shield16
+    Child WaitUntilKilled Shield17
+    Child WaitUntilKilled Shield18 
+    Child WaitUntilKilled Kamikaze31    
+    Child WaitUntilKilled Kamikaze32
+    Child WaitUntilKilled Kamikaze33
+    Child WaitUntilKilled Baron07
+    Child WaitUntilKilled Baron08 
+    Child WaitUntilKilled Mace05
+    Child WaitUntilKilled Mace06
+    
+    WaitForAll
+    
+    Increment Section13bCleared 1    
+}
+
+Script "Reinforcements 07"
+{
+    Actor Destroyer01    A_DestroyerDroid_01
+    Actor Destroyer02    A_DestroyerDroid_02
+    Actor Destroyer03    A_DestroyerDroid_03
+    
+    
+    WaitUntilEqual PilotsRescued 1
+
+    Child WaitUntilKilled Destroyer01
+    Child WaitUntilKilled Destroyer02
+    Child WaitUntilKilled Destroyer03
+            
+    WaitForAll            
+            
+    Increment Section14Cleared 1
+}
+
+
+Script "Prepare Level for Part 2"
+{
+    // Part 1 BADs
+    // Zone01
+    Actor Infantry01      A_Battledroid-Infantry_01
+    Actor Infantry02      A_Battledroid-Infantry_02
+    Actor Infantry03      A_Battledroid-Infantry_03
+    Actor Infantry04      A_Battledroid-Infantry_04
+    Actor Infantry05      A_Battledroid-Infantry_05
+    Actor Infantry06      A_Battledroid-Infantry_06
+    Actor Infantry07      A_Battledroid-Infantry_07
+    Actor Infantry08      A_Battledroid-Infantry_08
+    Actor Security03      A_Battledroid-Security_03
+    Actor Security04      A_Battledroid-Security_04
+    Actor Security19      A_Battledroid-Security_19
+    Actor Security20      A_Battledroid-Security_20
+    // Zone02
+    Actor Commander01     A_Battledroid-Commander_01
+    Actor Commander03     A_Battledroid-Commander_03
+    Actor Infantry09      A_Battledroid-Infantry_09
+    Actor Infantry10      A_Battledroid-Infantry_10
+    Actor Infantry11      A_Battledroid-Infantry_11
+    Actor Infantry12      A_Battledroid-Infantry_12
+    Actor Infantry13      A_Battledroid-Infantry_13
+    Actor Infantry14      A_Battledroid-Infantry_14 
+    Actor Sniper01        A_Battledroid-Sniper_01
+    // Zone03
+    Actor Cannon01        A_Battledroid-Cannon_01
+    Actor Cannon02        A_Battledroid-Cannon_02
+    Actor GrenadeCon01    A_Battledroid-GrenadeCon_01
+    Actor GrenadeCon02    A_Battledroid-GrenadeCon_02
+    Actor GrenadeCon03    A_Battledroid-GrenadeCon_03
+    Actor GrenadeCon04    A_Battledroid-GrenadeCon_04
+    Actor Security13      A_Battledroid-Security_13
+    Actor Security14      A_Battledroid-Security_14
+    Actor Security15      A_Battledroid-Security_15
+    Actor Security16      A_Battledroid-Security_16
+    Actor Security17      A_Battledroid-Security_17
+    Actor Security18      A_Battledroid-Security_18
+    Actor Baron01         A_BaronDroid_01
+    Actor Baron02         A_BaronDroid_02
+    Actor Baron03         A_BaronDroid_03
+    // Zone04
+    Actor Mace01          A_AssassinDroid-Mace_01
+    Actor Mace02          A_AssassinDroid-Mace_02
+    Actor Sword01         A_AssassinDroid-Sword_01
+    Actor Commander04     A_Battledroid-Commander_04
+    Actor GrenadeCon05    A_Battledroid-GrenadeCon_05
+    Actor GrenadeCon06    A_Battledroid-GrenadeCon_06
+    Actor Infantry15      A_Battledroid-Infantry_15
+    Actor Infantry16      A_Battledroid-Infantry_16
+    Actor Infantry17      A_Battledroid-Infantry_17
+    Actor Sniper02        A_Battledroid-Sniper_02
+    Actor Sniper03        A_Battledroid-Sniper_03
+    // Zone05
+    Actor Security08      A_Battledroid-Security_08
+    Actor Security09      A_Battledroid-Security_09
+    Actor Security10      A_Battledroid-Security_10
+    Actor Security11      A_Battledroid-Security_11
+    Actor Security12      A_Battledroid-Security_12
+    // Zone06
+    Actor Heavy01         A_Battledroid-HeavyWeapon_01
+    Actor Heavy02         A_Battledroid-HeavyWeapon_02
+    Actor Heavy03         A_Battledroid-HeavyWeapon_03
+    Actor Heavy04         A_Battledroid-HeavyWeapon_04
+    Actor Security01      A_Battledroid-Security_01
+    Actor Security02      A_Battledroid-Security_02
+    // Zone08A
+    Actor Sword02         A_AssassinDroid-Sword_02
+    Actor Sword03         A_AssassinDroid-Sword_03
+    Actor Commander02     A_Battledroid-Commander_02
+    Actor Heavy05         A_Battledroid-HeavyWeapon_05
+    Actor Heavy06         A_Battledroid-HeavyWeapon_06
+    // Zone08B            
+    Actor Sniper04        A_Battledroid-Sniper_04
+    // Zone08C                    
+    Actor Security05      A_Battledroid-Security_05
+    Actor Security06      A_Battledroid-Security_06
+    Actor Security07      A_Battledroid-Security_07
+            
+/*
+    Actor Cannon01        A_Battledroid-Cannon_01
+    Actor Kamikaze01      A_Battledroid-Kamikaze_01
+    Actor Kamikaze02      A_Battledroid-Kamikaze_02
+    Actor Kamikaze03      A_Battledroid-Kamikaze_03
+    Actor Kamikaze04      A_Battledroid-Kamikaze_04
+*/
+
+    // Part 2 BADs
+    // Zone06
+    Actor Shield01        A_Battledroid-Blaster+Shield_01
+    Actor Shield02        A_Battledroid-Blaster+Shield_02
+    Actor Shield03        A_Battledroid-Blaster+Shield_03
+    Actor Shield04        A_Battledroid-Blaster+Shield_04
+    Actor Shield05        A_Battledroid-Blaster+Shield_05
+    Actor Shield06        A_Battledroid-Blaster+Shield_06
+    Actor Sniper05        A_Battledroid-Sniper_05
+    Actor Sniper06        A_Battledroid-Sniper_06    
+    // Zone07
+    Actor Sword04         A_AssassinDroid-Sword_04
+    Actor Sword05         A_AssassinDroid-Sword_05
+    // Zone05
+    Actor Mace03          A_AssassinDroid-Mace_03
+    Actor Mace04          A_AssassinDroid-Mace_04    
+    Actor Shield07        A_Battledroid-Blaster+Shield_07
+    Actor Shield08        A_Battledroid-Blaster+Shield_08
+    Actor Shield09        A_Battledroid-Blaster+Shield_09
+    Actor Shield10        A_Battledroid-Blaster+Shield_10
+    Actor Heavy07         A_Battledroid-HeavyWeapon_07
+    Actor Heavy08         A_Battledroid-HeavyWeapon_08
+    Actor Heavy09         A_Battledroid-HeavyWeapon_09
+    // Zone04
+    Actor Baron04         A_BaronDroid_04
+    Actor Baron05         A_BaronDroid_05
+    Actor Baron06         A_BaronDroid_06
+    Actor Kamikaze29      A_Battledroid-Kamikaze_29
+    Actor Kamikaze30      A_Battledroid-Kamikaze_30
+    Actor Sword06         A_AssassinDroid-Sword_06    
+    Actor Sword07         A_AssassinDroid-Sword_07
+    Actor Security37      A_Battledroid-Security_37
+    Actor Security38      A_Battledroid-Security_38
+    Actor Security39      A_Battledroid-Security_39
+    // Zone03
+    Actor Baracade01    A_5-4_barracade_01
+    Actor Baracade02    A_5-4_barracade_02
+    Actor Baracade03    A_5-4_barracade_03
+    Actor Heavy10       A_Battledroid-HeavyWeapon_10
+    Actor Heavy11       A_Battledroid-HeavyWeapon_11
+    Actor Grenade07     A_Battledroid-GrenadeCon_07    
+    Actor Grenade08     A_Battledroid-GrenadeCon_08
+    Actor Grenade09     A_Battledroid-GrenadeCon_09
+    Actor Grenade10     A_Battledroid-GrenadeCon_10            
+    Actor Shield11      A_Battledroid-Blaster+Shield_11           
+    Actor Shield12      A_Battledroid-Blaster+Shield_12
+    Actor Shield13      A_Battledroid-Blaster+Shield_13
+    Actor Shield14      A_Battledroid-Blaster+Shield_14            
+    // Zone02
+    Actor Shield15      A_Battledroid-Blaster+Shield_15
+    Actor Shield16      A_Battledroid-Blaster+Shield_16
+    Actor Shield17      A_Battledroid-Blaster+Shield_17
+    Actor Shield18      A_Battledroid-Blaster+Shield_18
+    Actor Sniper07      A_Battledroid-Sniper_07
+    Actor Sniper08      A_Battledroid-Sniper_08
+    Actor Kamikaze31    A_Battledroid-Kamikaze_31
+    Actor Kamikaze32    A_Battledroid-Kamikaze_32
+    Actor Kamikaze33    A_Battledroid-Kamikaze_33
+    Actor Baron07       A_BaronDroid_07
+    Actor Baron08       A_BaronDroid_08
+    Actor Mace05        A_AssassinDroid-Mace_05
+    Actor Mace06        A_AssassinDroid-Mace_06
+    // Zone01
+    Actor Destroyer01    A_DestroyerDroid_01
+    Actor Destroyer02    A_DestroyerDroid_02
+    Actor Destroyer03    A_DestroyerDroid_03
+    
+
+    WaitUntilEqual PilotsRescued 1
+    
+    // Remove Part 1 BADs
+    // Zone01
+    RemoveActor Infantry01
+    RemoveActor Infantry02
+    RemoveActor Infantry03
+    RemoveActor Infantry04
+    RemoveActor Infantry05
+    RemoveActor Infantry06
+    RemoveActor Infantry07
+    RemoveActor Infantry08
+    RemoveActor Security03
+    RemoveActor Security04
+    RemoveActor Security19
+    RemoveActor Security20
+    
+    Pause 1.0
+    
+    // Zone02
+    RemoveActor Commander01
+    RemoveActor Commander03
+    RemoveActor Infantry09
+    RemoveActor Infantry10
+    RemoveActor Infantry11
+    RemoveActor Infantry12
+    RemoveActor Infantry13
+    RemoveActor Infantry14
+    RemoveActor Sniper01
+    
+    Pause 1.0
+        
+    // Zone03
+    RemoveActor Cannon01
+    RemoveActor Cannon02
+    RemoveActor GrenadeCon01
+    RemoveActor GrenadeCon02
+    RemoveActor GrenadeCon03
+    RemoveActor GrenadeCon04
+    RemoveActor Security13
+    RemoveActor Security14
+    RemoveActor Security15
+    RemoveActor Security16
+    RemoveActor Security17
+    RemoveActor Security18
+    RemoveActor Baron01
+    RemoveActor Baron02
+    RemoveActor Baron03
+    
+    Pause 1.0
+        
+    // Zone04
+    RemoveActor Mace01
+    RemoveActor Mace02
+    RemoveActor Sword01
+    RemoveActor Commander04
+    RemoveActor GrenadeCon05
+    RemoveActor GrenadeCon06
+    RemoveActor Infantry15
+    RemoveActor Infantry16
+    RemoveActor Infantry17
+    RemoveActor Sniper02
+    RemoveActor Sniper03
+    
+    Pause 1.0
+        
+    // Zone05
+    RemoveActor Security08
+    RemoveActor Security09
+    RemoveActor Security10
+    RemoveActor Security11
+    RemoveActor Security12
+
+    Pause 1.0    
+    
+    // Zone06
+    RemoveActor Heavy01
+    RemoveActor Heavy02
+    RemoveActor Heavy03
+    RemoveActor Heavy04
+    RemoveActor Security01
+    RemoveActor Security02
+    
+    Pause 1.0
+/*        
+    // Zone08A
+    RemoveActor Sword02
+    RemoveActor Sword03
+    RemoveActor Commander02
+    RemoveActor Heavy05
+    RemoveActor Heavy06
+    
+    Pause 1.0
+        
+    // Zone08B            
+    RemoveActor Sniper04
+    
+    Pause 1.0
+        
+    // Zone08C                    
+    RemoveActor Security05
+    RemoveActor Security06
+    RemoveActor Security07
+    
+    Pause 1.0
+*/    
+    // Setup Part 2 BADs    
+    //Populate Zone06
+    Teleport Shield01 Zone07-Spot01
+    Teleport Shield02 Zone07-Spot02
+    Teleport Shield03 Zone07-Spot03
+    Teleport Shield04 Zone07-Spot04
+    Teleport Shield05 Zone07-Spot05
+    Teleport Shield06 Zone07-Spot06
+    Teleport Sniper05 Zone07-Spot08
+    Teleport Sniper06 Zone07-Spot09    
+    
+    Pause 1.0
+    
+    //Populate Zone07
+    Teleport Sword04 Zone07-Spot07
+    Teleport Sword05 Zone07-Spot10
+
+    Pause 1.0
+    
+    //Populate Zone05; Check if alarm was previously tripped
+//    Teleport Mace03   Zone05-Spot01
+//    Teleport Mace04   Zone05-Spot02        
+    Teleport Shield07 Zone05-Spot03
+    Teleport Shield08 Zone05-Spot04
+    Teleport Shield09 Zone05-Spot05
+    Teleport Shield10 Zone05-Spot06
+    Teleport Heavy07  Zone05-Spot07
+    Teleport Heavy08  Zone05-Spot08
+    Teleport Heavy09  Zone05-Spot09    
+
+    Pause 1.0
+    
+    //Populate Zone04; Check if alarm was previously tripped
+//    Teleport Baron04 Zone04-Spot09
+    Teleport Baron05 Zone04-Spot10
+//    Teleport Baron06 Zone04-Spot11
+    Teleport Kamikaze29 Zone04-Spot12
+    Teleport Kamikaze30 Zone04-Spot18
+//    Teleport Sword06 Zone04-Spot14
+//    Teleport Sword07 Zone04-Spot16
+    Teleport Security37 Zone04-Spot13    
+    Teleport Security38 Zone04-Spot15
+    Teleport Security39 Zone04-Spot17        
+
+    Pause 1.0        
+
+    //Populate Zone03; Check if alarm was previously tripped
+//    Teleport Baracade01 Baracade01
+//    Teleport Baracade02 Baracade02
+//    Teleport Baracade03 Baracade03
+    Teleport Heavy10 Zone03-Spot01
+    Teleport Heavy11 Zone03-Spot02
+    Teleport Grenade07 Zone03-Spot03
+    Teleport Grenade08 Zone03-Spot04
+    Teleport Grenade09 Zone03-Spot05
+    Teleport Grenade10 Zone03-Spot06
+    Teleport Shield11 Zone03-Spot07
+    Teleport Shield12 Zone03-Spot08
+    Teleport Shield13 Zone03-Spot09
+    Teleport Shield14 Zone03-Spot10
+    
+    Pause 1.0
+    
+    //Populate Zone02; Check if alarm was previously tripped
+    Teleport Shield15 Zone02-Spot09
+    Teleport Shield16 Zone02-Spot10
+    Teleport Shield17 Zone02-Spot11
+    Teleport Shield18 Zone02-Spot12
+    Teleport Sniper07 Zone02-Spot13
+    Teleport Sniper08 Zone02-Spot18
+    Teleport Kamikaze31 Zone02-Spot17
+    Teleport Kamikaze32 Zone02-Spot19
+    Teleport Kamikaze33 Zone02-Spot22
+    Teleport Baron07 Zone02-Spot21       
+    Teleport Baron08 Zone02-Spot23 
+    Teleport Mace05 Zone02-Spot16  
+    Teleport Mace06 Zone02-Spot20   
+
+    Pause 1.0
+        
+    //Populate Zone01; Check if alarm was previously tripped
+    Teleport Destroyer01 Zone01-Spot01
+    Teleport Destroyer02 Zone01-Spot02
+    Teleport Destroyer03 Zone01-Spot03
+}
+
+
+//-------------------- Cheats --------------------//
+
+Script "Pilots Invincible"
+{
+    If (= PilotsInvincible 1)
+    {
+        InvincibilityOn Naboo01
+        InvincibilityOn Naboo02
+        InvincibilityOn Naboo03
+        InvincibilityOn Naboo04
+        InvincibilityOn Naboo05
+        InvincibilityOn Naboo06                                        
+    }
+}
+
+Script "Skip Part 1 BADs"
+{
+    // Part 1 BADs
+    // Zone01
+    Actor Infantry01      A_Battledroid-Infantry_01
+    Actor Infantry02      A_Battledroid-Infantry_02
+    Actor Infantry03      A_Battledroid-Infantry_03
+    Actor Infantry04      A_Battledroid-Infantry_04
+    Actor Infantry05      A_Battledroid-Infantry_05
+    Actor Infantry06      A_Battledroid-Infantry_06
+    Actor Infantry07      A_Battledroid-Infantry_07
+    Actor Infantry08      A_Battledroid-Infantry_08
+    Actor Security03      A_Battledroid-Security_03
+    Actor Security04      A_Battledroid-Security_04
+    Actor Security19      A_Battledroid-Security_19
+    Actor Security20      A_Battledroid-Security_20
+    // Zone02
+    Actor Commander01     A_Battledroid-Commander_01
+    Actor Commander03     A_Battledroid-Commander_03
+    Actor Infantry09      A_Battledroid-Infantry_09
+    Actor Infantry10      A_Battledroid-Infantry_10
+    Actor Infantry11      A_Battledroid-Infantry_11
+    Actor Infantry12      A_Battledroid-Infantry_12
+    Actor Infantry13      A_Battledroid-Infantry_13
+    Actor Infantry14      A_Battledroid-Infantry_14 
+    Actor Sniper01        A_Battledroid-Sniper_01
+    // Zone03
+    Actor Cannon01        A_Battledroid-Cannon_01
+    Actor Cannon02        A_Battledroid-Cannon_02
+    Actor GrenadeCon01    A_Battledroid-GrenadeCon_01
+    Actor GrenadeCon02    A_Battledroid-GrenadeCon_02
+    Actor GrenadeCon03    A_Battledroid-GrenadeCon_03
+    Actor GrenadeCon04    A_Battledroid-GrenadeCon_04
+    Actor Security13      A_Battledroid-Security_13
+    Actor Security14      A_Battledroid-Security_14
+    Actor Security15      A_Battledroid-Security_15
+    Actor Security16      A_Battledroid-Security_16
+    Actor Security17      A_Battledroid-Security_17
+    Actor Security18      A_Battledroid-Security_18
+    Actor Baron01         A_BaronDroid_01
+    Actor Baron02         A_BaronDroid_02
+    Actor Baron03         A_BaronDroid_03
+    // Zone04
+    Actor Mace01          A_AssassinDroid-Mace_01
+    Actor Mace02          A_AssassinDroid-Mace_02
+    Actor Sword01         A_AssassinDroid-Sword_01
+    Actor Commander04     A_Battledroid-Commander_04
+    Actor GrenadeCon05    A_Battledroid-GrenadeCon_05
+    Actor GrenadeCon06    A_Battledroid-GrenadeCon_06
+    Actor Infantry15      A_Battledroid-Infantry_15
+    Actor Infantry16      A_Battledroid-Infantry_16
+    Actor Infantry17      A_Battledroid-Infantry_17
+    Actor Sniper02        A_Battledroid-Sniper_02
+    Actor Sniper03        A_Battledroid-Sniper_03
+    // Zone05
+    Actor Security08      A_Battledroid-Security_08
+    Actor Security09      A_Battledroid-Security_09
+    Actor Security10      A_Battledroid-Security_10
+    Actor Security11      A_Battledroid-Security_11
+    Actor Security12      A_Battledroid-Security_12
+    // Zone06
+    Actor Heavy01         A_Battledroid-HeavyWeapon_01
+    Actor Heavy02         A_Battledroid-HeavyWeapon_02
+    Actor Heavy03         A_Battledroid-HeavyWeapon_03
+    Actor Heavy04         A_Battledroid-HeavyWeapon_04
+    Actor Security01      A_Battledroid-Security_01
+    Actor Security02      A_Battledroid-Security_02
+    // Zone08A
+    Actor Sword02         A_AssassinDroid-Sword_02
+    Actor Sword03         A_AssassinDroid-Sword_03
+    Actor Commander02     A_Battledroid-Commander_02
+    Actor Heavy05         A_Battledroid-HeavyWeapon_05
+    Actor Heavy06         A_Battledroid-HeavyWeapon_06
+    // Zone08B            
+    Actor Sniper04        A_Battledroid-Sniper_04
+    // Zone08C                    
+    Actor Security05      A_Battledroid-Security_05
+    Actor Security06      A_Battledroid-Security_06
+    Actor Security07      A_Battledroid-Security_07
+    
+    
+    If (= SkipPart01 1)
+    {
+        WaitUntilKilled Infantry04 
+        
+        // Zone01
+        Kill Infantry01
+        Kill Infantry02
+        Kill Infantry03
+//        Kill Infantry04
+        Kill Infantry05
+        Kill Infantry06
+        Kill Infantry07
+        Kill Infantry08
+        Kill Security03
+        Kill Security04
+        Kill Security19
+        Kill Security20
+        // Zone02
+        Kill Commander01
+        Kill Commander03
+        Kill Infantry09
+        Kill Infantry10
+        Kill Infantry11
+        Kill Infantry12
+        Kill Infantry13
+        Kill Infantry14
+        Kill Sniper01
+        // Zone03
+        Kill Cannon01
+        Kill Cannon02
+        Kill GrenadeCon01
+        Kill GrenadeCon02
+        Kill GrenadeCon03
+        Kill GrenadeCon04
+        Kill Security13
+        Kill Security14
+        Kill Security15
+        Kill Security16
+        Kill Security17
+        Kill Security18
+        Kill Baron01
+        Kill Baron02
+        Kill Baron03
+        // Zone04
+        Kill Mace01
+        Kill Mace02
+        Kill Sword01
+        Kill Commander04
+        Kill GrenadeCon05
+        Kill GrenadeCon06
+        Kill Infantry15
+        Kill Infantry16
+        Kill Infantry17
+        Kill Sniper02
+        Kill Sniper03
+        // Zone05
+        Kill Security08
+        Kill Security09
+        Kill Security10
+        Kill Security11
+        Kill Security12
+        // Zone06
+        Kill Heavy01
+        Kill Heavy02
+        Kill Heavy03
+        Kill Heavy04
+        Kill Security01
+        Kill Security02
+        // Zone08A
+        Kill Sword02
+        Kill Sword03
+        Kill Commander02
+        Kill Heavy05
+        Kill Heavy06
+        // Zone08B
+        Kill Sniper04
+        // Zone08C
+        Kill Security05
+        Kill Security06
+        Kill Security07
+    }
+}
+
+Script "Skip Mission"
+{
+    Actor Infantry04      A_Battledroid-Infantry_04
+    
+
+    if (= SkipMission 1)
+    {
+        WaitUntilKilled Infantry04
+            
+        Increment MissionCompleted 1
+    }
+}

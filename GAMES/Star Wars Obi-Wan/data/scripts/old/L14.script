@@ -1,0 +1,91 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+FadeUp
+
+//////////////////////////////
+//  REGION TRIGGERED MUSIC  //
+//////////////////////////////
+
+Script Flourish1
+{
+	WaitUntilEnteredRegion Obi "tusken_fight_01"
+	PlayFlourish "m_battle4.wav"
+}
+
+Script Flourish2
+{
+	WaitUntilEnteredRegion Obi "music_01"
+	PlayFlourish "m_suspense_13.wav"
+}
+
+Script Flourish3
+{
+	WaitUntilEnteredRegion Obi "tusken_attack_02"
+	PlayFlourish "l14_m_battle1.wav"
+}
+
+Script Flourish4
+{
+	WaitUntilEnteredRegion Obi "music_02"
+	PlayFlourish "l14_m_tomb_2.wav"
+}
+
+Script Flourish5
+{
+	WaitUntilEnteredRegion Obi "music_03"
+	PlayFlourish "m_suspense_06.wav"
+}
+
+Script Flourish6
+{
+	WaitUntilEnteredRegion Obi "music_05"
+	PlayFlourish "m_suspense_08.wav"
+}
+
+Script RockMusic
+{
+	WaitUntilEnteredRegion "A_14_rock6_3m_02" "music_04"
+	PlayFlourish "l14_m_battle1.wav"
+}
+
+Script OpeningFlourish
+{
+	Pause 3.0
+	PlayFlourish "m_tension_13.wav"
+}
+
+
+
+
+///////////////
+//  Snipers  //
+///////////////
+
+Script "Snipers"
+{
+	ForceTarget "A_Tusken_Sniper_21" Obi
+	ForceTarget "A_Tusken_Sniper_05" Obi
+	ForceTarget "A_Tusken_Sniper2_05" Obi
+	ForceTarget "A_Tusken_Sniper2_06" Obi
+	ForceTarget "A_Tusken_Sniper2_07" Obi
+	ForceTarget "A_Tusken_Sniper2_09" Obi
+	ForceTarget "A_Tusken_Sniper2_08" Obi
+}
+
+Script "Generated Sniper 1"
+{
+	Actor Sniper1
+	WaitUntilGenerated "A_z_UberGen_tsksniper_01" Sniper1
+	ForceTarget Sniper1 Obi
+	Loop
+}
+
+Script "Generated Sniper 2"
+{
+	Actor Sniper2
+	WaitUntilGenerated "A_z_UberGen_tsksniper_02" Sniper2
+	ForceTarget Sniper2 Obi
+	Loop
+}

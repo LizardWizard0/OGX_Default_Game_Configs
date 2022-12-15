@@ -1,0 +1,117 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor MaceWindu A_DuelMaceWindu_01
+Actor QuiGon A_Qui-Gon_01
+
+UnEquipWeapon	MaceWindu
+UnEquipWeapon	QuiGon
+
+// TakeControlOf has a slight delay in it, so do these concurrently to avoid problems.
+
+Child TakeControlOf	MaceWindu
+Child TakeControlOf	QuiGon
+
+WaitForAll
+BeginCutScene
+
+CameraFixed First
+
+Pause 0 5
+
+SetAnimTableIndex MaceWindu 1
+SetAnimTableIndex QuiGon 1
+
+UnEquipWeapon	Obi
+Pause 0 5
+
+SetAnimTableIndex Obi 2
+Pause 0 5
+
+PlayAnimation Obi human_cut-jc1_obi_masterpose.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc1_mace_masterpose.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc1_qui_masterpose.anim 1.0 0.0
+
+Pause 0 5
+
+FadeUp
+
+PlayFlourish cut_jc4_m.wav
+
+PlayAnimation Obi human_cut-jc4_obi1_137shot1.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc4_mace1_137shot1.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc4_qui1_137shot1.anim 1.0 0.0
+
+Pause 2
+
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_582/You and Master Qui-Gon have served the Council well on Naboo. But the appearance of the Sith who attacked your Master is disturbing.  Our skills shall be tested to their limits.  Your master now believes you ready for the Trials. You agree?"
+
+Pause 4 15
+
+PlayAnimation MaceWindu human_cut-jc4_mace138_301shot1b.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Second
+
+Pause 5
+
+PlayAnimation MaceWindu human_cut-jc4_mace302_481shot2.anim 1.0 0.0
+PlayAnimation Obi human_cut-jc4_obi_302_481shot2.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc4_qui302_481shot2.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Third
+
+Pause 4
+
+SayLineNonPositionalAndContinue obi "/Obi-Wan_583/I do!"
+
+Pause 1 11
+
+PlayAnimation MaceWindu human_cut-jc4_mace482_587shot3.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Fourth
+
+Pause 0 4
+
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_584/And are you ready then to face....me?"
+
+Pause 3
+
+PlayAnimation MaceWindu human_cut-jc4_mace588_679shot4.anim 1.0 0.0
+PlayAnimation Obi human_cut-jc4_obi_588_679shot4.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc4_qui588_679shot4.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Fifth
+
+Pause 1 07
+
+SayLineNonPositionalAndContinue obi "/Obi-Wan_585/I am..."
+
+Pause 2
+
+PlayAnimation MaceWindu human_cut-jc4_mace680_811shot5.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Sixth
+
+Pause 3 
+
+FadeDownAndWait 1
+PreEndCutScene  // If the player hits the start button, it will jump to here
+
+// Better do this before call to NextLevel, because the NextLevel command deletes this script!
+
+FadeDown 0  // Force the a full fade to black even if the player hits the start button
+
+SetAnimTableIndex obi 0
+EndCutScene
+
+NextLevel sa_04

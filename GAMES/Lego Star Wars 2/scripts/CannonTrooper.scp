@@ -1,0 +1,122 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto StartFight
+
+		if PartyUnderCover == 0 and
+		if EitherPlayerInTriggerArea == 1.0 goto StartFight
+	}
+	Actions {
+		GoToOrigin "waittime=10"
+	}
+}
+
+state StartFight {
+	Conditions {
+		if TakenOver == 1 goto InCannon
+		if GotLocator == 1 goto GoToLocator
+		if GotOpponent == 1 goto Fight
+	}
+	Actions {
+		FollowPlayer
+	}
+}
+
+state GoToLocator {
+	Conditions {
+		if GotLocator == 0 goto Fight
+		if OpponentRange < 1.5 goto Fight
+	}
+	Actions {
+		GoToLocator "wait=0.5"
+		SetState "StaticAttack"
+	}
+}
+
+state StaticAttack {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if LocatorRange > 0.25 goto GoToLocator
+		if OpponentRange < 1.5 goto Fight
+		
+		if Timer > 10 goto StaticAttack_LookForEmptyCannon
+	}
+	Actions {
+		EngageOpponent "static" "fXirerange=viewrange"
+	}
+}
+
+state StaticAttack_LookForEmptyCannon
+{
+	Conditions
+	{
+		if HasTakeOverTarget == 1 goto GoToEmptyCannon
+		if HasTakeOverTarget == 0 goto StaticAttack
+	}
+	Actions
+	{
+		SetTakeOverTarget "type=TrooperCannon" "maxrange=2"
+		ResetTimer "mintime=-5" "maxtime=0"	
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		
+		if Timer > 10 goto Fight_LookForEmptyCannon
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange=3"
+	}
+}
+
+state Fight_LookForEmptyCannon
+{
+	Conditions
+	{
+		if HasTakeOverTarget == 1 goto GoToEmptyCannon
+		if HasTakeOverTarget == 0 goto Fight
+	}
+	Actions
+	{
+		SetTakeOverTarget "type=TrooperCannon" "maxrange=2"
+		ResetTimer "mintime=-5" "maxtime=0"	
+	}
+}
+////
+state InCannon {
+	Conditions {
+		if TakenOver == 0 goto StartFight
+	}
+	Actions {
+		EngageOpponent "static" "firerange=5" "fireinterval=0.25"
+	}
+}
+
+state GoToEmptyCannon
+{
+	Conditions
+	{
+		if TakenOver == 1 goto StartFight //if already has taken something over
+		if TakeOverRange < 1 goto EnterCannon
+		if TakenOver "TakeoverTarget" == 1 goto StartFight
+		if HasTakeOverTarget == 0 goto StartFight
+		if CannotReachDestination == 1 goto StartFight
+	}
+	Actions
+	{
+		FollowCharacter "TakeOverTarget" "RUN" "ignore_radius" "can_go_off_path"
+	}
+}
+
+state EnterCannon
+{
+	Conditions
+	{
+	}
+	Actions
+	{
+		TakeOver
+		SetState "StartFight"
+	}
+}

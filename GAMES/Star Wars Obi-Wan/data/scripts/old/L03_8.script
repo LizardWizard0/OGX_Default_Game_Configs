@@ -1,0 +1,1162 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+
+SetDefaultSurface 08_13fnttop.sur
+
+/// GLOBAL ACTORS ///
+
+actor Qui A_Qui-Gon_01
+
+Function SetStartPosition (Region r, Int n)
+{
+	WaitUntilEnteredRegion Obi r
+	set StartPosition n
+}
+
+Script "Set_Respawn_Points"
+{
+	set StartPosition 0
+	Call SetStartPosition RGN_Start01 1
+	Call SetStartPosition RGN_Start02 2
+	Call SetStartPosition RGN_Start03a 3
+	Call SetStartPosition RGN_Start03 4
+	Call SetStartPosition RGN_Start04 5
+	Call SetStartPosition RGN_Start05 6
+	Call SetStartPosition RGN_Start06 7
+	Call SetStartPosition RGN_Start07 8
+	Call SetStartPosition RGN_AI_Boundary01 9
+	Call SetStartPosition RGN_trig_AttackTheQueen01 10
+	Call SetStartPosition RGN_trig_AttackTheQueen02 11
+}
+
+///////////////////////
+/// BEGIN FUNCTIONS ///
+///////////////////////
+
+/// OBI FUNCTIONS ///
+
+function "StealthStatus" (Region RGN_Stealth)
+{
+	waituntilenteredregion Obi RGN_Stealth
+	setteam obi 0
+	waituntilexitedregion Obi RGN_Stealth
+	setteam Obi 1
+}
+
+function "BeamMeUp" (Actor Scottie, Region RGN_Teleporter, RefPos RefPos_Scottie)
+{
+    waituntilenteredregion Scottie RGN_Teleporter
+    Teleport Scottie RefPos_Scottie
+}
+
+/// QUI FUNCTIONS ///
+
+function "StrongArm" (actor Gumby, int GumbyDamage)
+{
+    childscript "LoopDaLoop"
+    {
+        waituntildamagedby Gumby Qui
+        deducthitpoints Gumby GumbyDamage
+        loop
+    }
+    
+    waituntilkilled Gumby
+    endfunction
+}
+
+/// ENEMY FUNCTIONS ///
+
+function "AmbushObi" (actor Ares, node goto_Ares)
+{
+    waituntilnear Ares Obi 20.0
+    Takepartialcontrolof Ares
+    runtonodeandwait Ares goto_Ares
+    forcetarget Ares Obi
+}
+
+function "RuntoNodeControl" (Actor Roadrunner, Node goto_Roadrunner)
+{
+	takepartialcontrolof Roadrunner
+	runtonodeandwait Roadrunner goto_Roadrunner
+}
+
+function "EnterRGNandRunToandPatrol" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	takepartialcontrolof Camby
+	waituntilenteredregion obi RGN_Camby
+	runtonode Camby goto_Camby
+	waituntilarrived Camby goto_Camby
+	returncontrolto Camby
+	addpatrolstate Camby
+}
+
+function "EnterRGNForceTarget" (Actor Maguro, Region RGN_Maguro)
+{
+	WaitUntilEnteredRegion Obi RGN_Maguro
+	ForceTarget Maguro Obi
+}
+
+function "EnterRGNForceTargetLoop" (Actor Anubis, Region KillObiBox)
+{
+	WaitUntilEnteredRegion Obi KillObiBox
+    TakepartialControlof Anubis
+	ForceTarget Anubis Obi
+	WaitUntilExitedRegion Obi KillObiBox
+	ForceTargetOff Anubis Obi
+    stopactions Anubis
+	loop
+}
+
+function "useitorloseit" (Actor VanishingActor)
+{
+	WaitUntilNotBeingRendered VanishingActor 0.5
+	RemoveActor VanishingActor
+}
+
+function "Electrofried" (Actor FriedEggs, region WaterRGN)
+{
+	waituntilenteredregion FriedEggs WaterRgn
+	takecontrolof FriedEggs
+	pause 2.0
+	removeactor FriedEggs
+}
+
+function "EnterRGNandRunTo" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	takepartialcontrolof Camby
+	waituntilenteredregion obi RGN_Camby
+	runtonode Camby goto_Camby
+	waituntilarrived Camby goto_Camby
+	returncontrolto Camby
+}
+
+function "FleeMode" (Actor Napoleon, Actor Peon)
+{
+	WaituntilKilled Napoleon
+	ForceState Peon Retreat
+}
+
+function "WalktoNodeAndPatrol" (Actor Gza, node goto_Gza)
+{
+    takepartialcontrolof Gza
+    walktonodeandwait Gza goto_Gza
+    returncontrolto Gza
+    addpatrolstate Gza
+}
+
+/// UBERGEN FUNCTIONS ///
+
+function "UG_SetPatrol" (Actor UG_Tetsuo, Int x)
+{
+	Actor Tetsuo
+	WaitUntilGenerated UG_Tetsuo Tetsuo
+	SetPatrolTypes Tetsuo x
+}
+
+function "UG_EnterRGNForceTarget" (Actor UG_GrimReaper, Region KillObiBox2)
+{
+	Actor GrimReaper
+	WaitUntilGenerated UG_GrimReaper GrimReaper
+	TakePartialControlOF GrimReaper
+
+	script "OnOff"
+	{
+		WaitUntilEnteredRegion Obi KillObiBox2
+		ForceTarget GrimReaper Obi
+		WaitUntilExitedRegion Obi KillObiBox2
+		ForceTargetOff GrimReaper Obi
+		loop
+	}
+}
+
+function "UG_RuntoNodeControl" (Actor UG_SirFrancis, Node goto_SirFrancis)
+{
+	Actor SirFrancis
+	WaitUntilGenerated UG_SirFrancis SirFrancis
+	TakePartialControlOf SirFrancis
+	RunToNodeandwait SirFrancis goto_SirFrancis
+}
+
+function "UG_RunToNodeAndPatrol" (Actor UG_Jubei, Node goto_Jubei)
+{
+	Actor Jubei
+	WaitUntilGenerated UG_Jubei Jubei
+	TakePartialControlOf Jubei
+	RunToNode Jubei goto_Jubei
+	WaitUntilArrived Jubei goto_Jubei
+	AddPatrolState Jubei
+}
+
+function "UG_Ambush" (actor UG_Rambo, node goto_Rambo, int RamboPatrol)
+{
+    actor Rambo
+    waituntilgenerated UG_Rambo Rambo
+    setpatroltypes Rambo RamboPatrol
+    waituntilnear Rambo Obi 30.0
+    Takepartialcontrolof Rambo
+    runtonodeandwait Rambo goto_Rambo
+    forcetarget Rambo Obi
+}
+
+/////////////////////
+/// END FUNCTIONS ///
+/////////////////////
+
+Script "Opening_Messages"
+{
+	Pause 0.5
+	BeginCutScene
+
+    childscript "Communicate"
+    {
+        pause 9.0
+        CommunicatorOn
+        CommunicatorMessageAndWait "/Obi-Wan_525/Master, the Federation has captured the Queen." obi.dlg
+        CommunicatorMessageAndWait "/Qui-Gon_526/I feared as much." quigonjinn.dlg
+        CommunicatorMessageAndWait "/Obi-Wan_527/They're taking her to some sort of detention center, where they're going to force her to sign a treaty." obi.dlg
+        CommunicatorMessageAndWait "/Qui-Gon_529/I agree. Meet up with me Padawan.  We will need to work together to rescue her." quigonjinn.dlg
+        CommunicatorOff
+    }
+
+    camerafixed flycam_start
+    
+    childscript "AATaction"
+    {
+        //moveandrotateobjectandwait A_AAT_static_01 aat_01 2.0 1.0
+        moveandrotateobjectandwait A_AAT_static_01 aat_02 2.0
+    }
+    
+    pause 2.0
+    movecamera flycam_01 2.0 1.0 0
+    pause 1.75
+    movecamera flycam_02 4.0
+    pause 3.75
+    movecameraandwait flycam_03 3.0
+    movecameraandwait flycam_04 2.0
+    movecameraandwait flycam_04a 2.0
+    movecameraandwait flycam_05 2.0
+    movecameraandwait flycam_05a 2.0
+    movecameraandwait flycam_06 2.0
+    movecameraandwait flycam_07 2.0
+    movecamera flycam_08 3.0
+    pause 2.5
+    
+    fadedown
+    pause 0.25
+    fadeup
+	EndCutScene
+}
+
+//////////////////
+/// BEGIN MAIN ///
+//////////////////
+
+/// WIN-LOSE CONDITIONS ///
+
+actor Queen A_Queen_Amadala_Travel_Outfit_01
+
+script "YouLose"
+{
+    waituntilkilled Queen
+    pause 1.5
+    begincutscene
+	cameraplayer Queen 0 2.5 5.0
+	zoom 0.75 3.0
+	pause 0.5
+	communicatoron
+	CommunicatorMessageAndWait "/Qui-Gon_530/The queen has been killed.  Our mission here is a failure." quigonjinn.dlg
+	fadedown
+	pause 1.0
+	endcutscene
+}
+
+/// ISLAND PLAZA ///
+
+//call EnterRGNForceTargetLoop (A_Battledroid-Cannon_02, RGN_trig_Cannon01)
+setpatroltypes A_AssassinDroid-Mace_01 2
+
+//////////////////////////////////
+/// BEGIN SCAREDYCAT ENCOUNTER ///
+//////////////////////////////////
+
+call BeamMeUp (Obi, RGN_Teleport02, Teleport02)
+
+int ScaredyCatGrenadesOn 0
+
+actor ScaredyCat A_Naboo_Guard_01
+
+script "ScaredyCat_Encounter"
+{
+    actor Grenadier01 A_Battledroid-GrenadeCon_03
+
+    takecontrolof ScaredyCat
+    takecontrolof Grenadier01
+    invincibilityon ScaredyCat
+
+    childscript "Grenadier01_Attack"
+    {
+        waituntilenteredregion Obi RGN_Start01
+        forcetargetandattack Grenadier01 A_dummy_object_01
+        waituntilexitedregion ScaredyCat RGN_trig_Grenadier02
+        forcetargetandattackoff Grenadier01
+        returncontrolto Grenadier01        
+    }
+
+    waituntilenteredregion obi RGN_ScaredyCat
+       
+    childscript "ScaredyCat_Retreat"
+    {
+        forcestate ScaredyCat Retreat
+        waituntilnear ScaredyCat Obi 5.0
+        //call EnterRGNForceTargetLoop (Grenadier01, RGN_trig_Grenadier02)
+        forcestateoff ScaredyCat
+        follow ScaredyCat Obi 2.0
+        lookatandwait ScaredyCat Obi
+        sayline ScaredyCat "/male3_531/Thank goodness you're here Jedi!"
+        stopactions ScaredyCat
+        sayline ScaredyCat "/male3_532/Follow me!"
+        runtonodeandwait ScaredyCat goto_scaredyCat
+        lookatandwait ScaredyCat A_AAT_static_01
+        playgesture ScaredyCat PointForward 2.0
+        sayline ScaredyCat "/male3_533/We've got to take out that tank!"
+        lookatandwait ScaredyCat A_EquipBADCannon_01
+        playgesture ScaredyCat PointForward 2.0
+        sayline ScaredyCat "/male3_534/Watch the cannons they're deadly."
+        sayline ScaredyCat "/male3_535/The armor's too strong.  You're gonna need Ion grenades to take out the tank."
+        sayline ScaredyCat "/male3_536/We will need Ion grenades."
+        addinventoryitem obi PowerupConcussionGrenade.dsc
+        sayline ScaredyCat "/male3_537/Come back if you need anymore.  I'm fully stocked."
+        stopactions ScaredyCat
+        returncontrolto ScaredyCat
+        set ScaredyCatGrenadesOn 1
+    }
+    
+    childscript "ScaredyCat_InvincibilityOff"
+    {
+        waituntilexitedregion ScaredyCat RGN_trig_Grenadier02
+        invincibilityoff ScaredyCat
+    }
+    
+    waitforall
+    
+}
+
+script "GiveObiGrenades_ScaredyCat"
+{
+    waituntilequal ScaredyCatGrenadesOn 1
+    waituntilnudgedby ScaredyCat Obi
+    sayline ScaredyCat "/male3_539/Need more grenades?  Here you go."
+    addinventoryitem obi PowerupConcussionGrenade.dsc
+    loop
+}
+
+////////////////////////////////
+/// END SCAREDYCAT ENCOUNTER ///
+////////////////////////////////
+
+/// CANNONS DRILL OBI AS HE ATTEMPTS TO CROSS 1ST BRIDGE ///
+
+//call EnterRGNForceTargetLoop (A_Battledroid-Cannon_01, RGN_trig_Cannon02)
+//call EnterRGNForceTargetLoop (A_Battledroid-Cannon_03, RGN_trig_Cannon03)
+//call EnterRGNForceTargetLoop (A_Battledroid-Cannon_05, RGN_trig_Cannon05)
+
+
+/// KAMIKAZES ATTACK OBI AS HE CROSSES THE 1ST BRIDGE ///
+
+call EnterRGNForceTarget (A_Battledroid-Kamikaze_01, RGN_trig_Kamikaze01)
+call EnterRGNForceTarget (A_Battledroid-Kamikaze_02, RGN_trig_Kamikaze01)
+
+/// GRENADIERS PROTECTING CANNONS ///
+
+call EnterRGNForceTargetLoop (A_Battledroid-GrenadeCon_01, RGN_trig_Grenadier01)
+
+setpatroltypes A_Battledroid-Infantry_05 3
+setpatroltypes A_Battledroid-Infantry_06 3
+
+setpatroltypes A_Battledroid-Infantry_01 1
+setpatroltypes A_Battledroid-Infantry_02 1
+setpatroltypes A_Battledroid-Infantry_03 1
+
+setpatroltypes A_Battledroid-Commander_02 2
+
+call electrofried (A_Battledroid-Infantry_01, pond)
+call electrofried (A_Battledroid-Infantry_02, pond)
+call electrofried (A_Battledroid-Infantry_03, pond)
+call electrofried (A_Battledroid-Commander_02, pond)
+
+/// KAMIKAZES BY BARRICADE ///
+
+setpatroltypes A_Battledroid-Kamikaze_03 3
+setpatroltypes A_Battledroid-Kamikaze_04 3
+
+/// SECURITY DROIDS BEHIND BARRICADE ///
+
+setpatroltypes A_Battledroid-Security_03 2
+
+///////////////////////
+/// BEGIN RUNAWAY01 ///
+///////////////////////
+
+/// RUNAWAY01 MAIN ENCOUNTER ///
+
+actor Runaway01 A_naboo-soldier_01
+actor BAD07 A_Battledroid-Infantry_07
+actor BAD08 A_Battledroid-Infantry_08
+actor BAD09 A_Battledroid-Infantry_09
+actor Commander03 A_Battledroid-Commander_03
+actor NabooAmbush01 A_Naboo-Resistance2_05
+
+function "FocusAttack" (actor Houdini, node goto_Houdini)
+{
+    childscript "HoudiniReturnControl"
+    {
+        waituntilnear Obi Houdini 5.0
+        forcetargetandattackoff Houdini
+        returncontrolto Houdini
+    }
+    
+    pause 0.5
+    runtonodeandwait Houdini goto_Houdini
+    forcetargetandattack Houdini Runaway01
+    
+    waitforall
+}
+
+script "Runaway01_MainEncounter"
+{
+    takecontrolof BAD07    
+    takecontrolof BAD08
+    takecontrolof BAD09
+    takecontrolof Commander03
+
+    takecontrolof NabooAmbush01
+    takecontrolof Runaway01
+
+    waituntilenteredregion Obi RGN_trig_RunAway01
+    
+    childscript "NabooAmbush01_Behavior"
+    {
+        forcetargetandattack NabooAmbush01 Commander03
+        waituntilkilled Commander03
+        forcetargetandattackoff NabooAmbush01
+    }
+    
+    setdeadonaimfraction BAD07 0
+    
+    child call FocusAttack (BAD07, goto_BAD07)
+    child call FocusAttack (BAD08, goto_BAD08)
+    child call FocusAttack (BAD09, goto_BAD09)
+    child call FocusAttack (Commander03, goto_Commander03)
+
+    childscript "Trapped"
+    {
+        runtonodeandwait Runaway01 goto_runaway01
+        returncontrolto Runaway01
+    }
+      
+    waitforall
+}
+
+/// RUNAWAY01 SUB ENCOUNTER ///
+
+actor NabooAmbush02 A_Naboo-Resistance3_01
+actor Security08 A_Battledroid-Security_08
+actor Security09 A_Battledroid-Security_09
+
+function "AttackCycle" (actor Snoopy)
+{
+    Node DestinationNode  
+    takecontrolof Snoopy
+    
+    script "EndAttackLoop"
+    {
+        waituntilnear Obi Snoopy 10.0
+        endscript "NodeAttackLoop"
+        returncontrolto Snoopy
+    }
+    
+    script "NodeAttackLoop"
+    {
+        RandomInt x 1 4
+    
+        if (= x 1)
+        {
+            Set DestinationNode BAD07_A
+        }
+        if (= x 2)
+        {
+            Set DestinationNode BAD07_B
+        }
+        if (= x 3)
+        {
+            Set DestinationNode BAD07_C
+        }
+        if (= x 4)
+        {
+            Set DestinationNode BAD07_D
+        }
+        
+        runtonodeandwait Snoopy DestinationNode
+        fireat Snoopy NabooAmbush02
+        loop
+    }
+}
+
+script "Runaway01_SubEncounter"
+{
+    actor Commander06 A_Battledroid-Commander_06
+
+    invincibilityon NabooAmbush02
+    invincibilityon Security08
+    invincibilityon Security09
+
+    call AttackCycle (Security08)
+    call AttackCycle (Security09)
+        
+    waituntilnear obi NabooAmbush02 20.0
+    
+    invincibilityoff Security08
+    invincibilityoff Security09
+    invincibilityoff NabooAmbush02
+    
+    call RunToNodeControl (Commander06, BAD07_B)
+    call RunToNodeControl (A_Battledroid-Infantry_19, BAD07_B)
+    call RunToNodeControl (A_Battledroid-Infantry_20, BAD07_B)
+    call RunToNodeControl (A_Battledroid-Infantry_21, BAD07_B)
+    call RunToNodeControl (A_Battledroid-Infantry_22, BAD07_B)
+}
+
+
+/////////////////////
+/// END RUNAWAY01 ///
+/////////////////////
+
+//////////////////////////
+/// BEGIN TUNNELVISION ///
+//////////////////////////
+
+int InfantryPatrolAlert 0
+
+function "InfantryPatrol" (actor Hamachi)
+{
+    setpatroltypes Hamachi 3
+    waituntilequal InfantryPatrolAlert 1
+    forcetarget Hamachi Obi
+}
+
+function "BadAimSwitch" (actor SuperMan)
+{
+    takecontrolof Superman
+    waituntilenteredregion obi RGN_Start03
+    returncontrolto Superman
+    setdeadonaimfraction Superman 0
+    waituntilnear Obi Superman 10.0
+    setdeadonaimfraction Superman 0.6
+    waituntilnear Obi Superman 5.0
+    clearaiboundary Superman
+}
+
+function "SoldierSwitch" (Actor Grunt)
+{
+    invincibilityon Grunt
+    takecontrolof Grunt
+    waituntilenteredregion Obi RGN_Start03
+    returncontrolto Grunt
+    setdeadonaimfraction Grunt 0
+    waituntilnear Obi Grunt 10.0
+    invincibilityoff Grunt
+    setdeadonaimfraction Grunt 0.6
+    waituntilnear Obi Grunt 5.0
+    clearaiboundary Grunt    
+}
+
+call EnterRGNForceTargetLoop (A_Battledroid-GrenadeCon_05, RGN_trig_Grenadier05)
+
+call AmbushObi (A_Battledroid-Security_10, goto_ambush1)
+
+actor TunnelSoldier1 A_Naboo-Resistance1_01
+actor TunnelSoldier2 A_Naboo-Resistance2_06
+actor TunnelSoldier3 A_Naboo-Resistance3_03
+
+actor Security13 A_Battledroid-Security_13
+actor Security14 A_Battledroid-Security_14
+
+actor Security04 A_Battledroid-Security_04
+actor Security11 A_Battledroid-Security_11
+actor Security12 A_Battledroid-Security_12
+
+actor Commander05 A_Battledroid-Commander_05
+
+//invincibilityon TunnelSoldier1
+//invincibilityon TunnelSoldier2
+//invincibilityon TunnelSoldier3
+
+call SoldierSwitch (TunnelSoldier1)
+call SoldierSwitch (TunnelSoldier2)
+call SoldierSwitch (TunnelSoldier3)
+call BadAimSwitch (Security13)
+call BadAimSwitch (Security14)
+call BadAimSwitch (Security04)
+call BadAimSwitch (Security11)
+call BadAimSwitch (Security12)
+call BadAimSwitch (Commander05)
+
+call InfantryPatrol (A_Battledroid-Infantry_04)
+call InfantryPatrol (A_Battledroid-Infantry_10)
+call InfantryPatrol (A_Battledroid-Infantry_11)
+call InfantryPatrol (A_Battledroid-Infantry_12)
+call InfantryPatrol (A_Battledroid-Infantry_13)
+
+call BeamMeUp (Obi, RGN_Teleport01, Teleport01)
+
+////////////////////////
+/// END TUNNELVISION ///
+////////////////////////
+
+/// SECOND BRIDGE MELEE PATROLS ///
+
+setpatroltypes A_AssassinDroid-Mace_02 1
+setpatroltypes A_AssassinDroid-Mace_03 2
+setpatroltypes A_AssassinDroid-Mace_05 3
+setpatroltypes A_Battledroid-Sniper_01 2
+setpatroltypes A_Battledroid-Sniper_02 1
+
+call electrofried (A_AssassinDroid-Mace_02, Canal01)
+call electrofried (A_AssassinDroid-Mace_03, Canal01)
+call electrofried (A_AssassinDroid-Mace_05, Canal01)
+call electrofried (A_AssassinDroid-Mace_04, Canal01)
+call electrofried (A_Battledroid-Commander_04, Canal01)
+
+call EnterRGNForceTargetLoop (A_Battledroid-GrenadeCon_04, RGN_trig_Grenadier04)
+
+//////////////////////
+/// BEGIN HOSTAGE1 ///
+//////////////////////
+
+int Captive01GrenadesOn 0
+actor Captive01 A_Naboo_Prisoner_01
+
+script "Hostage1"
+{
+    actor Captor01 A_AssassinDroid-Mace_04
+    actor Commander04 A_Battledroid-Commander_04
+    
+	SetHostageSituation Captive01 Captor01 Commander04
+	SetHostageAlertDistance Commander04 8.0
+	SetHostageAlertDistance Captor01 8.0
+
+    setpatroltypes Commander04 1
+    
+    waituntilstateactivated Captive01 BeHostage
+    waituntilstateshutdown Captive01 BeHostage
+    set Captive01GrenadesOn 1
+}
+
+script "GiveObiGrenades_Captive01"
+{
+    waituntilequal Captive01GrenadesOn 1
+    waituntilnudgedby Captive01 Obi
+    takecontrolof Captive01
+    addinventoryitem obi PowerupConcussionGrenade.dsc
+    sayline Captive01 "Here are more grenades."
+    returncontrolto Captive01
+    loop
+}
+
+////////////////////
+/// END HOSTAGE1 ///
+////////////////////
+
+setpatroltypes A_Battledroid-Kamikaze_07 1
+setpatroltypes A_Battledroid-Kamikaze_08 1
+
+script "SneakyStairs"
+{
+    actor Sneaky_Melee01 A_AssassinDroid-Sword_09
+    actor Sneaky_Melee02 A_AssassinDroid-Mace_08
+    actor Sneaky_Melee02_R A_AssassinDroid-Mace_06
+    actor Sneaky_Melee02_L A_AssassinDroid-Mace_07
+    
+    takepartialcontrolof Sneaky_Melee02_R
+    takepartialcontrolof Sneaky_Melee02_L
+    
+    waituntilenteredregion obi RGN_SneakyStairs
+    
+    child wakeup Sneaky_Melee02_R
+    child wakeup Sneaky_Melee02_L
+    child followdirectional Sneaky_Melee02_R Sneaky_Melee02 2.0 240    
+    child followdirectional Sneaky_Melee02_L Sneaky_Melee02 2.0 240
+    waitforall
+    
+    //child call ReturnFromInfinity (Sneaky_Melee02_R)
+    //child call ReturnFromInfinity (Sneaky_Melee02_L)
+    child call WalktoNodeAndPatrol (Sneaky_Melee01, goto_downstairs01)
+    child call WalktoNodeAndPatrol (Sneaky_Melee02, goto_downstairs01)
+    waitforall
+}
+
+///////////////////////////////
+/// BEGIN QUI PRELUDE FIGHT ///
+///////////////////////////////
+
+int QuiCanContinue 0                /// CONNECTS "QUIFIGHTS" WITH "QUISPEAKS" ///
+int TriggerCommenceMarch 0          /// ACTIVATES QUEEN ESCORT ///
+
+Actor Melee05 A_AssassinDroid-Sword_05
+Actor Melee06 A_AssassinDroid-Sword_06
+
+call strongarm (Melee05, 200)
+call strongarm (Melee06, 200)
+
+script "QuiFights"
+{
+    invincibilityon Qui
+    invincibilityon Melee05
+    invincibilityon Melee06
+    
+    takecontrolof Qui
+    takecontrolof Melee05
+    takecontrolof Melee06
+
+    waituntilenteredregion obi RGN_Start07
+
+    forcetargetandattack Melee05 Qui
+    forcetargetandattack Melee06 Qui
+    
+    returncontrolto Qui
+    
+    waituntilnear Obi Qui 30.0
+
+    childscript "Melee05Returns"
+    {
+        invincibilityoff Melee05
+        forcetargetandattackoff Melee05
+        returncontrolto Melee05
+    }
+
+    childscript "Melee06Returns"
+    {
+        invincibilityoff Melee06
+        forcetargetandattackoff Melee06
+        returncontrolto Melee06
+    }
+
+    childscript "QuiContinueCondition"
+    {
+        child waituntilkilled Melee05
+        child waituntilkilled Melee06
+        waitforall
+        
+        set QuiCanContinue 1
+        
+        sayline Qui "/Qui-Gon_540/Whew.  Those droids were a nuisance."
+        
+    }
+    
+    waitforall
+}
+
+/////////////////////////////
+/// END QUI PRELUDE FIGHT ///
+/////////////////////////////
+
+//////////////////////////////////////////////////
+/// BEGIN CHECKS FOR FINAL COURTYARD ENCOUNTER ///
+//////////////////////////////////////////////////
+
+int isinArcade 1            /// DETECTS IF OBI HAS LEFT THE ARCADE ///
+
+script "JumpingTheGun"
+{
+    child waituntilenteredregion obi RGN_trig_AttackTheQueen01
+    child waituntilenteredregion obi RGN_trig_AttackTheQueen02
+    waitforany
+    set isinArcade 0
+    //sayline Qui "You're outside of the arcade"
+}    
+
+int PrematureAttack 0        /// FLAGS WHETHER OR NOT QUI HAS FINISHED FIGHTING ///
+
+script "PrematureCommenceMarch"
+{
+    waituntilequal isinArcade 0
+    if (= QuiCanContinue 0)
+    {
+        sayline Qui "/Qui-Gon_542/Where are you going?!?"
+        set TriggerCommenceMarch 1
+        set PrematureAttack 1
+    } 
+}
+
+////////////////////////////////////////////////
+/// END CHECKS FOR FINAL COURTYARD ENCOUNTER ///
+////////////////////////////////////////////////
+
+/////////////////////////////
+/// BEGIN FINAL COURTYARD ///
+/////////////////////////////
+
+int BodyBagCount 0
+
+function "FinalCourtyardKillCounter" (actor BodyBag)
+{
+    waituntilkilled BodyBag
+    increment BodyBagCount 1
+}
+
+actor Maiden1 A_Queen_Handmaiden_Travel_01
+actor Maiden2 A_Queen_Handmaiden_Travel_02
+
+actor Melee01 A_AssassinDroid-Sword_01
+actor Melee02 A_AssassinDroid-Sword_02
+actor Melee03 A_AssassinDroid-Mace_09
+
+actor SecurityLeftFlank01 A_Battledroid-Kamikaze_05
+actor SecurityRightFlank01 A_Battledroid-Kamikaze_06
+actor SecurityLeftFlank02 A_Battledroid-Security_02
+actor SecurityRightFlank02 A_Battledroid-Security_01
+actor SecurityLead A_Battledroid-Security_07
+
+actor Commander01 A_Battledroid-Commander_01
+
+/// SET FUNCTIONS FOR LOCAL KILL COUNTER ///
+
+call FinalCourtyardKillCounter (SecurityLead)
+call FinalCourtyardKillCounter (Melee01)
+call FinalCourtyardKillCounter (Melee02)
+call FinalCourtyardKillCounter (Melee03)
+call FinalCourtyardKillCounter (SecurityLeftFlank01)
+call FinalCourtyardKillCounter (SecurityRightFlank01)
+call FinalCourtyardKillCounter (SecurityLeftFlank02)
+call FinalCourtyardKillCounter (SecurityRightFlank02)
+
+call StrongArm (Melee01, 200)
+call StrongArm (Melee02, 200)
+call StrongArm (Melee03, 150)
+
+setteam Queen 0
+setteam Maiden1 0
+setteam Maiden2 0
+
+function "InitialMeleeBehavior" (Actor MethodMan)
+{
+    takepartialcontrolof MethodMan
+    forcetarget MethodMan Qui
+    waituntilnear MethodMan Obi 5.0
+    forcetargetoff MethodMan
+}
+
+script "QuiSpeaks"
+{
+    waituntilequal QuiCanContinue 1
+    clearaiboundary Qui
+/*
+    /// FOR TESTING PURPOSES ///
+
+    waituntilnudgedby Qui Obi
+    removeactor Melee05
+    removeactor Melee06
+    
+    /// FOR TESTING PURPOSES ///
+*/
+    invincibilityon Qui
+    
+    childscript "AWOL"
+    {
+        waituntilequal isinArcade 0
+        endscript "ThePlan"
+        sayline Qui "/Qui-Gon_543/What are you doing!"
+        sayline Qui "/Qui-Gon_544/You are jeapordizing the mission!"
+    }
+    
+    script "ThePlan"
+    {
+        waituntilnear Qui Obi 5.0
+        takecontrolof Qui
+        sayline Qui "/Qui-Gon_545/Follow me Obi."
+        walktonodeandwait Qui goto_qui_hide
+        set TriggerCommenceMarch 1
+        lookatandwait Qui Commander01
+        playgesture Qui PointForward 2.0
+        sayline Qui "/Qui-Gon_546/There's a convenient bottleneck here.  The Federation escort will have to pass this way."
+        walktonodeandwait Qui goto_qui_01
+        unequipweapon Qui
+        sayline Qui "/Qui-Gon_547/Put away your saber for now.  The noise will attract too much attention."
+        sayline Qui "/Qui-Gon_548/Here's the plan."
+        sayline Qui "/Qui-Gon_549/Wait for my command."
+        sayline Qui "/Qui-Gon_550/We're outnumbered, but these droids have a weakness.  They don't adapt well to new situations.  We can use a classic pincher tactic, attacking from the front and rear, to confuse them."
+        sayline Qui "/Qui-Gon_551/I'll mount a direct assault from the front."
+        sayline Qui "/Qui-Gon_552/You protect the queen and attack their flank."
+        stopactions Qui
+        waituntilnearnode SecurityLead goto_queen_escort03 2.0
+        walktonodeandwait Qui goto_qui_02
+        sayline Qui "Get ready."
+        waituntilnearnode SecurityLead goto_queen_escort05 2.0
+        endscript "JumpingTheGun"
+        set isinArcade 1        
+        sayline Qui "Let's go!"
+    }
+    
+    waitforscripttoend "ThePlan"
+    
+    runtonodeandwait Qui goto_queen_escort05
+    forcetargetandattack Qui Melee01
+    waituntilexitedregion Qui RGN_Stealth01
+    
+    child call InitialMeleeBehavior (Melee01)
+    child call InitialMeleeBehavior (Melee02)
+    child call InitialMeleeBehavior (Melee03)
+    
+    childscript "FreeAttackMode"
+    {
+        waituntildamagedby Melee01 Qui
+        forcetargetandattackoff Qui
+        returncontrolto Qui
+    }
+    
+    waitforall
+}
+
+script "CommenceMarch"
+{
+    // invincibilityon Queen
+    
+    takecontrolof Queen
+    takecontrolof Maiden1
+    takecontrolof Maiden2
+    
+    takepartialcontrolof Melee01
+    takepartialcontrolof Melee02
+    takepartialcontrolof Melee03
+
+    takecontrolof SecurityRightFlank01
+    takecontrolof SecurityLeftFlank01
+    takepartialcontrolof SecurityRightFlank02
+    takepartialcontrolof SecurityLeftFlank02
+    takepartialcontrolof SecurityLead
+    
+    takecontrolof Commander01
+      
+    waituntilequal TriggerCommenceMarch 1
+
+    child followdirectional Melee01 SecurityLead 2.0 240
+    child followdirectional Melee02 SecurityLead 2.0 120
+    
+    child follow Queen SecurityLead 2.0
+    child follow Maiden1 Queen 2.0
+    child follow Maiden2 Maiden1 2.0
+    
+    child followdirectional SecurityLeftFlank01 Queen 2.0 120
+    child followdirectional SecurityRightFlank01 Queen 2.0 240
+
+    child followdirectional SecurityLeftFlank02 Maiden2 2.0 120
+    child followdirectional SecurityRightFlank02 Maiden2 2.0 240
+
+    child follow Melee03 Maiden2 2.0
+    
+    waitforall
+    
+    childscript "Commander01_Behavior"
+    {
+        walktonodeandwait Commander01 goto_ffield_switch01
+        waituntilnearnode SecurityLead goto_queen_escort02 2.0
+        lookat Commander01 A_5-5_ff_generator_01
+        nudge Commander01 A_5-5_ff_generator_01
+        pause 1.0
+        lockdoor A_ForceField_01
+        stopaction Commander01
+        walktonodeandwait Commander01 goto_removeactor
+        removeactor Commander01
+    }
+
+    childscript "KilltheQueen"
+    {
+        if (= PrematureAttack 1)
+        {
+            waituntilnear Queen Obi 30.0
+            
+            setteam Queen 3
+            
+            childscript "KillQueenLeft1"
+            {
+                stopactions SecurityLeftFlank01
+                forcetargetandattack SecurityLeftFlank01 Queen
+            }
+            
+            childscript "KillQueenRight1"
+            {
+                stopactions SecurityRightFlank01
+                forcetargetandattack SecurityRightFlank01 Queen
+            }
+            
+            waitforall
+        }
+        else
+        {
+            waituntilequal isinArcade 0
+            waituntilnear Queen Obi 30.0
+            
+            setteam Queen 3
+            
+            childscript "KillQueenLeft2"
+            {
+                stopactions SecurityLeftFlank01
+                forcetargetandattack SecurityLeftFlank01 Queen
+            }
+            
+            childscript "KillQueenRight2"
+            {
+                stopactions SecurityRightFlank01
+                forcetargetandattack SecurityRightFlank01 Queen
+            }
+            
+            waitforall
+        }
+    }
+
+    childscript "Queen_Behavior"
+    {
+        child waituntilsees Queen Qui 20.0
+        child waituntilsees Queen Obi 20.0
+        waitforany
+        stopactions Queen
+        child setteam Queen 3
+        child setteam Maiden1 3
+        child setteam Maiden2 3
+        runtonodeandwait Queen goto_queen_escape 5.0
+        childscript "QueenRetreat"
+        {
+            stopactions Queen
+            returncontrolto Queen
+        }
+        childscript "Maiden1Retreat"
+        {
+            stopactions Maiden1
+            returncontrolto Maiden1
+        }
+        childscript "Maiden2Retreat"
+        {
+            stopactions Maiden2
+            returncontrolto Maiden2
+        }
+        waitforall
+    }
+    
+    childscript "SecurityLead_Behavior"
+    {      
+        childscript "BringDownForceField"
+        {
+            waituntilnearnode SecurityLead goto_queen_escort_C 5.0
+            nudge Commander01 A_5-5_ff_generator_01
+        }
+             
+        setpatroltypes SecurityLead 3
+        setpatrolattentionspan SecurityLead 10000
+        
+        child wakeup SecurityLead
+        child wakeup Melee01
+        child wakeup Melee02
+        child wakeup Melee03
+        child wakeup SecurityRightFlank02
+        child wakeup SecurityLeftFlank02
+
+        forcestate SecurityLead Patrol
+       
+        script "TerminateSecurityLeadPatrol"
+        {
+            childscript "AtTheEndofTheLine"
+            {
+                waituntilnearnode SecurityLead goto_queen_escort_end 5.0
+                forcestateoff SecurityLead
+            }
+
+            childscript "ObiIsTooClose"
+            {
+                waituntilsees SecurityLead Obi 20.0
+                forcestateoff SecurityLead
+            }
+            
+            waitforany
+        }
+        
+        waitforall
+    }
+    
+    childscript "BridgeSecurity_Disengage"
+    {
+        waituntilnearnode Queen goto_queen_escort01 3.0
+    
+        childscript "RightSideBridge_Security"
+        {
+            stopactions SecurityRightFlank02
+            walktonodeandwait SecurityRightFlank02 goto_BAD_Bridge_R
+            returncontrolto SecurityRightFlank02
+            setpatroltypes SecurityRightFlank02 2
+            //waituntilnearnode Maiden2 goto_queen_escort03 3.0
+            //setpatroltypes SecurityRightFlank02 3
+        }    
+        
+        childscript "LeftSideBridge_Security"
+        {
+            stopactions SecurityLeftFlank02
+            walktonodeandwait SecurityLeftFlank02 goto_BAD_Bridge_L
+            returncontrolto SecurityLeftFlank02
+            setpatroltypes SecurityLeftFlank02 1
+            //waituntilnearnode Maiden2 goto_queen_escort03 3.0
+            //setpatroltypes SecurityLeftFlank02 3
+        } 
+        
+        waitforall
+    }
+    
+    childscript "SecurityFlank_Disengage"
+    {
+        waituntilnearnode Queen goto_queen_escort02 3.0
+
+        childscript "RightFlanker"
+        {
+            stopactions SecurityRightFlank01
+            walktonodeandwait SecurityRightFlank01 goto_BAD_Flank_R
+            returncontrolto SecurityRightFlank01
+            setpatroltypes SecurityRightFlank01 2
+        }
+
+        childscript "LeftFlanker"
+        {
+            stopactions SecurityLeftFlank01
+            walktonodeandwait SecurityLeftFlank01 goto_BAD_Flank_L
+            returncontrolto SecurityLeftFlank01
+            setpatroltypes SecurityLeftFlank01 1
+        }
+
+        waitforall
+    }
+    
+    waitforall
+}
+
+///////////////////////////
+/// END FINAL COURTYARD ///
+///////////////////////////
+
+script "YouWin"
+{
+    waituntilequal BodyBagCount 8
+    pause 1.5
+    begincutscene
+    communicatoron
+    unequipweapon Obi
+    communicatormessageandwait "Good job Obi-Wan!" quigonjinn.dlg
+    communicatormessageandwait "The queen has been saved and we've secured the area." quigonjinn.dlg
+    communicatormessageandwait "Let's get out of here!" quigonjinn.dlg
+	fadedown
+	pause 1.0
+	endcutscene
+    nextlevel L04_3
+}
+
+/////////////////////
+////// THE END //////
+/////////////////////

@@ -1,0 +1,30 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto Approach
+	}
+	Actions {
+		CannotBeSeen
+		SetHearDistance "1.5"
+		Idle
+	}
+}
+
+state Approach {
+	Conditions {
+	if GotOpponent == 1 goto Fight
+	}
+	Actions {
+		CannotBeSeen "FALSE"
+		KeepWeaponOut
+		FollowPlayer
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}

@@ -1,0 +1,11 @@
+name lego_font_06
+height 60
+base 48 
+trans 255
+chars "ABCDEFGHIJKLMNO"
+chars "PQRSTUVWXYZ"
+chars "abcdefghijklmnop"
+chars "qrstuvwxyz"
+chars "0123456789"
+chars ".,:/-?!'"
+

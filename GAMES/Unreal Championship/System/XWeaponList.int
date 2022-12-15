@@ -1,0 +1,14 @@
+[Public]
+Weapon=(FriendlyName="Assault Rifle",WeaponClassName=XWeapons.AssaultRifle,AttachmentMeshName=WeaponStaticMesh.AssaultRiflePickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.AssaultRiflePickup)
+Weapon=(FriendlyName="Ball Launcher",WeaponClassName=XWeapons.BallLauncher,AttachmentMeshName=WeaponStaticMesh.BallLauncherPickup,AttachmentDrawScale=0.400000,PickupMeshName=)
+Weapon=(FriendlyName="Bio-Rifle",WeaponClassName=XWeapons.BioRifle,AttachmentMeshName=WeaponStaticMesh.BioRiflePickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.BioRiflePickup)
+Weapon=(FriendlyName="Flak Cannon",WeaponClassName=XWeapons.FlakCannon,AttachmentMeshName=WeaponStaticMesh.FlakCannonPickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.FlakCannonPickup)
+Weapon=(FriendlyName="Link Gun",WeaponClassName=XWeapons.LinkGun,AttachmentMeshName=WeaponStaticMesh.LinkGunPickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.LinkGunPickup)
+Weapon=(FriendlyName="Minigun",WeaponClassName=XWeapons.Minigun,AttachmentMeshName=WeaponStaticMesh.MinigunPickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.MinigunPickup)
+Weapon=(FriendlyName="T.A.G. Rifle",WeaponClassName=XWeapons.Painter,AttachmentMeshName=WeaponStaticMesh.PainterPickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.PainterPickup)
+Weapon=(FriendlyName="Rocket Launcher",WeaponClassName=XWeapons.RocketLauncher,AttachmentMeshName=WeaponStaticMesh.RocketLauncherPickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.RocketLauncherPickup)
+Weapon=(FriendlyName="Shield Gun",WeaponClassName=XWeapons.ShieldGun,AttachmentMeshName=WeaponStaticMesh.ShieldGunPickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.ShieldGunPickup)
+Weapon=(FriendlyName="Shock Rifle",WeaponClassName=XWeapons.ShockRifle,AttachmentMeshName=WeaponStaticMesh.ShockRiflePickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.ShockRiflePickup)
+Weapon=(FriendlyName="Lightning Gun",WeaponClassName=XWeapons.SniperRifle,AttachmentMeshName=WeaponStaticMesh.SniperRiflePickup,AttachmentDrawScale=0.400000,PickupMeshName=WeaponStaticMesh.SniperRiflePickup)
+Weapon=(FriendlyName="Translocator",WeaponClassName=XWeapons.TransLauncher,AttachmentMeshName=WeaponStaticMesh.TranslocatorPickup,AttachmentDrawScale=0.400000,PickupMeshName=)
+

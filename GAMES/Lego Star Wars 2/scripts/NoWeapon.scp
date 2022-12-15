@@ -1,0 +1,31 @@
+state Base {
+	Conditions {
+		if PlayerRange < 3.5 and
+		if GotOpponent == 1 goto Wait
+	}
+	Actions {	
+		FollowPlayer "0.75"
+	}
+}
+
+state Wait {
+	Conditions {
+		if PlayerRange > 3.5 goto Base
+		if OpponentRange < 1.5 goto Retreat
+		if GotOpponent == 0 goto Base
+	}
+	Actions {	
+		Idle
+	}
+}
+
+state Retreat {
+	Conditions {
+		if PlayerRange > 3.5 goto Base
+		if GotOpponent == 0 goto Base
+		if OpponentRange > 2 goto Wait
+	}
+	Actions {	
+		RetreatFromOpponent "3"
+	}
+}

@@ -1,0 +1,97 @@
+<gconfig>
+    <note1>This is the GLOBAL CONFIG file.</note1>
+    <note2>Things here are usually REQUIRED for proper operation of the code</note2>
+    <?xa37dd45ffe100bfffcc9753aabac325f07cb3fa231144fe2e33ae4783feead2b8a73ff021fac326df0ef9753ab9cdf6573ddff0312fab0b0ff39779eaff312x?>
+
+<!-- XBOX -->
+<!-- 
+Build Types:
+  0 - Debug FE
+  1 - Main FE
+  2 - Demo FE
+  3 - Final FE
+  4 - ?
+  5 - Online FE
+-->
+	<buildtype>1</buildtype>
+	
+	<MCAutoload>1</MCAutoload>
+	<MCAutosave>1</MCAutosave>
+	
+		
+	<audio>1</audio>
+	
+	<StoryModeCheatFile>cheats/smoke.smc</StoryModeCheatFile>
+		
+	
+    <Music_Vol>45</Music_Vol>
+
+    <Master_Vol>32767</Master_Vol>
+
+    <FESFX_Vol>20000</FESFX_Vol>
+
+	<Ambience_Vol>30000</Ambience_Vol>
+	<AmbienceRAM_Vol>30000</AmbienceRAM_Vol>
+	<AmbienceRandom_Vol>30000</AmbienceRandom_Vol>
+	<BlazingFreeze_Vol>30000</BlazingFreeze_Vol>
+	<BlazinSFX_Vol>30000</BlazinSFX_Vol>
+	<BodyAux_Vol>30000</BodyAux_Vol>
+    <BodyCollide_Vol>29100</BodyCollide_Vol>
+    <BodyContacts_Vol>26418</BodyContacts_Vol>
+    <BoneCrunch_Vol>18000</BoneCrunch_Vol>
+    <CrowdAngry_Vol>19000</CrowdAngry_Vol>
+    <CrowdBoo_Vol>19000</CrowdBoo_Vol>
+    <CrowdCheer_Vol>19000</CrowdCheer_Vol>
+    <CrowdOoh_Vol>19000</CrowdOoh_Vol>
+    <CrowdRAM_Vol>17000</CrowdRAM_Vol>
+    <CrowdRandomReaction_Vol>24000</CrowdRandomReaction_Vol>
+    <CrowdStream_Vol>6888</CrowdStream_Vol>
+    <EnvAttack_Vol>32767</EnvAttack_Vol>
+    <FaceHit_Vol>16242</FaceHit_Vol>
+    <FallCardboard_Vol>25435</FallCardboard_Vol>
+    <FallConcrete_Vol>20000</FallConcrete_Vol>
+    <FallDirt_Vol>16500</FallDirt_Vol>
+    <FallGlobal_Vol>16500</FallGlobal_Vol>
+    <FallMat_Vol>16500</FallMat_Vol>
+    <FallWood_Vol>16500</FallWood_Vol>
+    <FeetConcrete_Vol>10000</FeetConcrete_Vol>
+    <FeetDirt_Vol>10000</FeetDirt_Vol>
+    <FeetGlobal_Vol>10000</FeetGlobal_Vol>
+    <FeetMat_Vol>6000</FeetMat_Vol>
+    <FeetWood_Vol>24135</FeetWood_Vol>
+    <FemaleGrunt_Vol>14000</FemaleGrunt_Vol>
+    <FoleyFX_Vol>2657</FoleyFX_Vol>
+    <Grapple_Vol>27672</Grapple_Vol>
+    <Grunts_Vol>13142</Grunts_Vol>
+    <HandSlap_Vol>16000</HandSlap_Vol>
+    <HeadSmack_Vol>20000</HeadSmack_Vol>
+    <HitBlock_Vol>32767</HitBlock_Vol>
+    <Kick_Vol>32767</Kick_Vol>
+    <LocationSFX_Vol>30000</LocationSFX_Vol>
+    <MatFall_Vol>17000</MatFall_Vol>
+    <MatSuperFall_Vol>17000</MatSuperFall_Vol>
+    <Moment_Vol>32767</Moment_Vol>
+    <PointsMove_Vol>32767</PointsMove_Vol>
+    <Punch_Vol>32767</Punch_Vol>
+    <SFX_Vol>11000</SFX_Vol>
+    <SFX_Vol2>11000</SFX_Vol2>
+    <SFX_Vol5>17000</SFX_Vol5>
+    <SFX_Submix2>11000</SFX_Submix2>
+    <SFX_SubmixGlobal>16000</SFX_SubmixGlobal>
+    <Shop_Vol>16000</Shop_Vol>
+    <Special_Vol>25000</Special_Vol>
+    <Weapon_Vol>16000</Weapon_Vol>
+    <Whoosh_Vol>15100</Whoosh_Vol>
+
+	<Speech_Announcer>100</Speech_Announcer>
+	<Speech_Character>100</Speech_Character>
+	<Speech_Heckle>19</Speech_Heckle>
+	<Speech_Taunt>100</Speech_Taunt>
+	
+	<CrowdAI_IntensityIncMul>6.4</CrowdAI_IntensityIncMul>
+	<CrowdAI_IntensityDrop>11</CrowdAI_IntensityDrop>
+	<CrowdAI_IntensityLowest>14</CrowdAI_IntensityLowest>
+
+	<CinemaDisableParticles>0</CinemaDisableParticles>
+</gconfig>
+

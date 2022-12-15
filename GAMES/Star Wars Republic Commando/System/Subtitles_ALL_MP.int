@@ -1,0 +1,1182 @@
+
+[Subtitles_ALL_MP]
+
+SubtitleSound[2928]="CA1ZZ001"
+SubtitleText[2928]="Clone Advisor 1: 10 minutes remaining…"
+
+SubtitleSound[2929]="CA1ZZ002"
+SubtitleText[2929]="Clone Advisor 1: 5 minutes remaining…"
+
+SubtitleSound[2930]="CA1ZZ003"
+SubtitleText[2930]="Clone Advisor 1: 1 minute remaining…"
+
+SubtitleSound[2931]="CA1ZZ004"
+SubtitleText[2931]="Clone Advisor 1: 30 seconds remaining…"
+
+SubtitleSound[2932]="CA1ZZ005"
+SubtitleText[2932]="Clone Advisor 1: Blue Team has the flag."
+
+SubtitleSound[2933]="CA1ZZ006"
+SubtitleText[2933]="Clone Advisor 1: Red Team has the flag."
+
+SubtitleSound[2934]="CA1ZZ007"
+SubtitleText[2934]="Clone Advisor 1: Blue Team's flag has been returned."
+
+SubtitleSound[2935]="CA1ZZ008"
+SubtitleText[2935]="Clone Advisor 1: Red Team's flag has been returned."
+
+SubtitleSound[2936]="CA1ZZ009"
+SubtitleText[2936]="Clone Advisor 1: Blue Team's flag has been dropped."
+
+SubtitleSound[2937]="CA1ZZ010"
+SubtitleText[2937]="Clone Advisor 1: Red Team's flag has been dropped."
+
+SubtitleSound[2938]="CA1ZZ011"
+SubtitleText[2938]="Clone Advisor 1: Blue Team scored!"
+
+SubtitleSound[2939]="CA1ZZ012"
+SubtitleText[2939]="Clone Advisor 1: Red Team scored."
+
+SubtitleSound[2940]="CA1ZZ013"
+SubtitleText[2940]="Clone Advisor 1: Blue Team has taken the lead."
+
+SubtitleSound[2941]="CA1ZZ014"
+SubtitleText[2941]="Clone Advisor 1: Red Team has taken the lead."
+
+SubtitleSound[2942]="CA1ZZ015"
+SubtitleText[2942]="Clone Advisor 1: Blue Team is dominating!"
+
+SubtitleSound[2943]="CA1ZZ016"
+SubtitleText[2943]="Clone Advisor 1: Red team is dominating!"
+
+SubtitleSound[2944]="CA1ZZ017"
+SubtitleText[2944]="Clone Advisor 1: Blue Team has won the match!"
+
+SubtitleSound[2945]="CA1ZZ018"
+SubtitleText[2945]="Clone Advisor 1: Red Team has won the match."
+
+SubtitleSound[2946]="CA1ZZ019"
+SubtitleText[2946]="Clone Advisor 1: Capture the flag."
+
+SubtitleSound[2947]="CA1ZZ020"
+SubtitleText[2947]="Clone Advisor 1: Team Deathmatch."
+
+SubtitleSound[2948]="CA1ZZ021"
+SubtitleText[2948]="Clone Advisor 1: Deathmatch."
+
+SubtitleSound[2949]="CA1ZZ022"
+SubtitleText[2949]="Clone Advisor 1: Assault."
+
+SubtitleSound[2950]="CA1ZZ023"
+SubtitleText[2950]="Clone Advisor 1: Blue Team is Attacking."
+
+SubtitleSound[2951]="CA1ZZ024"
+SubtitleText[2951]="Clone Advisor 1: Red Team is Attacking."
+
+SubtitleSound[2952]="CA1ZZ025"
+SubtitleText[2952]="Clone Advisor 1: Blue Team has saved the base."
+
+SubtitleSound[2953]="CA1ZZ026"
+SubtitleText[2953]="Clone Advisor 1: Red Team has saved the base."
+
+SubtitleSound[2954]="CA1ZZ027"
+SubtitleText[2954]="Clone Advisor 1: Headshot!"
+
+SubtitleSound[2955]="CA1ZZ028"
+SubtitleText[2955]="Clone Advisor 1: Scratch two."
+
+SubtitleSound[2956]="CA1ZZ029"
+SubtitleText[2956]="Clone Advisor 1: Scratch three!"
+
+SubtitleSound[2957]="CA1ZZ030"
+SubtitleText[2957]="Clone Advisor 1: Scratch four! *chuckle* Nice work."
+
+SubtitleSound[2958]="CA1ZZ031"
+SubtitleText[2958]="Clone Advisor 1: Good job, soldier!"
+
+SubtitleSound[2959]="CA1ZZ032"
+SubtitleText[2959]="Clone Advisor 1: Simple. Infiltrate the enemy base, capture their flag, and return it to yours. "
+
+SubtitleSound[2960]="CA1ZZ033"
+SubtitleText[2960]="Clone Advisor 1: You are Attacking. To score you must bring your flag to the enemy base."
+
+SubtitleSound[2961]="CA1ZZ034"
+SubtitleText[2961]="Clone Advisor 1: You are Defending. Keep the enemy from bringing their flag into your base."
+
+SubtitleSound[2962]="CA1ZZ035"
+SubtitleText[2962]="Clone Advisor 1: The squad is your weapon. Eliminate the enemy."
+
+SubtitleSound[2963]="CA1ZZ036"
+SubtitleText[2963]="Clone Advisor 1: You're on your own, soldier. Good luck."
+
+SubtitleSound[2964]="D07ZZ001"
+SubtitleText[2964]="Delta 07: Follow me!"
+
+SubtitleSound[2965]="D07ZZ002"
+SubtitleText[2965]="Delta 07: Let's go!"
+
+SubtitleSound[2966]="D07ZZ003"
+SubtitleText[2966]="Delta 07: On my way!"
+
+SubtitleSound[2967]="D07ZZ004"
+SubtitleText[2967]="Delta 07: Clear the path!"
+
+SubtitleSound[2968]="D07ZZ005"
+SubtitleText[2968]="Delta 07: Taking fire!"
+
+SubtitleSound[2969]="D07ZZ006"
+SubtitleText[2969]="Delta 07: I need backup!"
+
+SubtitleSound[2970]="D07ZZ007"
+SubtitleText[2970]="Delta 07: Cover me!"
+
+SubtitleSound[2971]="D07ZZ008"
+SubtitleText[2971]="Delta 07: Incoming!"
+
+SubtitleSound[2972]="D07ZZ009"
+SubtitleText[2972]="Delta 07: Fire in the Hole!"
+
+SubtitleSound[2973]="D07ZZ010"
+SubtitleText[2973]="Delta 07: All clear!"
+
+SubtitleSound[2974]="D07ZZ011"
+SubtitleText[2974]="Delta 07: Roger that."
+
+SubtitleSound[2975]="D07ZZ012"
+SubtitleText[2975]="Delta 07: Affirmative."
+
+SubtitleSound[2976]="D07ZZ013"
+SubtitleText[2976]="Delta 07: Negative."
+
+SubtitleSound[2977]="D07ZZ014"
+SubtitleText[2977]="Delta 07: On my way!"
+
+SubtitleSound[2978]="D07ZZ015"
+SubtitleText[2978]="Delta 07: Good to go, sir."
+
+SubtitleSound[2979]="D07ZZ016"
+SubtitleText[2979]="Delta 07: Ready to engage."
+
+SubtitleSound[2980]="D07ZZ017"
+SubtitleText[2980]="Delta 07: All clear!"
+
+SubtitleSound[2981]="D07ZZ018"
+SubtitleText[2981]="Delta 07: Commando receiving assistance."
+
+SubtitleSound[2982]="D07ZZ019"
+SubtitleText[2982]="Delta 07: Thanks for the help, Delta."
+
+SubtitleSound[2983]="D07ZZ020"
+SubtitleText[2983]="Delta 07: Getting into position!"
+
+SubtitleSound[2984]="D07ZZ021"
+SubtitleText[2984]="Delta 07: Roger that."
+
+SubtitleSound[2985]="D07ZZ022"
+SubtitleText[2985]="Delta 07: Affirmative."
+
+SubtitleSound[2986]="D07ZZ023"
+SubtitleText[2986]="Delta 07: Negative."
+
+SubtitleSound[2987]="D07ZZ024"
+SubtitleText[2987]="Delta 07: Lock and load, Deltas."
+
+SubtitleSound[2988]="D07ZZ025"
+SubtitleText[2988]="Delta 07: Go! Go! Go!"
+
+SubtitleSound[2989]="D07ZZ026"
+SubtitleText[2989]="Delta 07: Follow me!"
+
+SubtitleSound[2990]="D07ZZ027"
+SubtitleText[2990]="Delta 07: Let's go!"
+
+SubtitleSound[2991]="D07ZZ028"
+SubtitleText[2991]="Delta 07: Assault their position!"
+
+SubtitleSound[2992]="D07ZZ029"
+SubtitleText[2992]="Delta 07: Take up defensive position!"
+
+SubtitleSound[2993]="D07ZZ030"
+SubtitleText[2993]="Delta 07: Clear the path!"
+
+SubtitleSound[2994]="D07ZZ031"
+SubtitleText[2994]="Delta 07: I need backup!"
+
+SubtitleSound[2995]="D07ZZ032"
+SubtitleText[2995]="Delta 07: Cover me!"
+
+SubtitleSound[2996]="D07ZZ033"
+SubtitleText[2996]="Delta 07: Hold your fire!"
+
+SubtitleSound[2997]="D07ZZ034"
+SubtitleText[2997]="Delta 07: Regroup, squad!"
+
+SubtitleSound[2998]="D07ZZ035"
+SubtitleText[2998]="Delta 07: Incoming!"
+
+SubtitleSound[2999]="D07ZZ036"
+SubtitleText[2999]="Delta 07: Taking fire!"
+
+SubtitleSound[3000]="D07ZZ037"
+SubtitleText[3000]="Delta 07: Fire in the Hole!"
+
+SubtitleSound[3001]="D07ZZ038"
+SubtitleText[3001]="Delta 07: Man down!"
+
+SubtitleSound[3002]="D07ZZ039"
+SubtitleText[3002]="Delta 07: Check your aim!"
+
+SubtitleSound[3003]="D07ZZ040"
+SubtitleText[3003]="Delta 07: Friendly fire! Friendly fire!"
+
+SubtitleSound[3004]="D07ZZ041"
+SubtitleText[3004]="Delta 07: Need meds!"
+
+SubtitleSound[3005]="D07ZZ042"
+SubtitleText[3005]="Delta 07: I need bacta!"
+
+SubtitleSound[3006]="D07ZZ043"
+SubtitleText[3006]="Delta 07: I'm running low on life here!"
+
+SubtitleSound[3007]="D07ZZ044"
+SubtitleText[3007]="Delta 07: Outa my way, I need bacta!"
+
+SubtitleSound[3008]="D07ZZ045"
+SubtitleText[3008]="Delta 07: Hostile down!"
+
+SubtitleSound[3009]="D07ZZ046"
+SubtitleText[3009]="Delta 07: You are dead!"
+
+SubtitleSound[3010]="D07ZZ047"
+SubtitleText[3010]="Delta 07: Bang and you're dead!"
+
+SubtitleSound[3011]="D07ZZ048"
+SubtitleText[3011]="Delta 07: Stay down!"
+
+SubtitleSound[3012]="D07ZZ049"
+SubtitleText[3012]="Delta 07: What a waste."
+
+SubtitleSound[3013]="D07ZZ050"
+SubtitleText[3013]="Delta 07: Another kill for the cause."
+
+SubtitleSound[3014]="D07ZZ051"
+SubtitleText[3014]="Delta 07: Trando neutralized"
+
+SubtitleSound[3015]="D07ZZ052"
+SubtitleText[3015]="Delta 07: Trando scum!"
+
+SubtitleSound[3016]="D07ZZ053"
+SubtitleText[3016]="Delta 07: Cold blooded scumbag."
+
+SubtitleSound[3017]="D07ZZ054"
+SubtitleText[3017]="Delta 07: I'll see you in hell, lizard!"
+
+SubtitleSound[3018]="D07ZZ055"
+SubtitleText[3018]="Delta 07: The only good lizard, is a dead lizard."
+
+SubtitleSound[3019]="D38ZZ001"
+SubtitleText[3019]="Delta 38: Follow me!"
+
+SubtitleSound[3020]="D38ZZ002"
+SubtitleText[3020]="Delta 38: Let's go!"
+
+SubtitleSound[3021]="D38ZZ003"
+SubtitleText[3021]="Delta 38: On my way!"
+
+SubtitleSound[3022]="D38ZZ004"
+SubtitleText[3022]="Delta 38: Clear the path!"
+
+SubtitleSound[3023]="D38ZZ005"
+SubtitleText[3023]="Delta 38: Taking fire!"
+
+SubtitleSound[3024]="D38ZZ006"
+SubtitleText[3024]="Delta 38: I need backup!"
+
+SubtitleSound[3025]="D38ZZ007"
+SubtitleText[3025]="Delta 38: Cover me!"
+
+SubtitleSound[3026]="D38ZZ008"
+SubtitleText[3026]="Delta 38: Incoming!"
+
+SubtitleSound[3027]="D38ZZ009"
+SubtitleText[3027]="Delta 38: Fire in the Hole!"
+
+SubtitleSound[3028]="D38ZZ010"
+SubtitleText[3028]="Delta 38: All clear!"
+
+SubtitleSound[3029]="D38ZZ011"
+SubtitleText[3029]="Delta 38: Roger that."
+
+SubtitleSound[3030]="D38ZZ012"
+SubtitleText[3030]="Delta 38: Affirmative."
+
+SubtitleSound[3031]="D38ZZ013"
+SubtitleText[3031]="Delta 38: Negative."
+
+SubtitleSound[3032]="D38ZZ014"
+SubtitleText[3032]="Delta 38: On my way!"
+
+SubtitleSound[3033]="D38ZZ015"
+SubtitleText[3033]="Delta 38: Good to go, sir."
+
+SubtitleSound[3034]="D38ZZ016"
+SubtitleText[3034]="Delta 38: Ready to engage."
+
+SubtitleSound[3035]="D38ZZ017"
+SubtitleText[3035]="Delta 38: All clear!"
+
+SubtitleSound[3036]="D38ZZ018"
+SubtitleText[3036]="Delta 38: Commando receiving assistance."
+
+SubtitleSound[3037]="D38ZZ019"
+SubtitleText[3037]="Delta 38: Thanks for the help, Delta."
+
+SubtitleSound[3038]="D38ZZ020"
+SubtitleText[3038]="Delta 38: Getting into position!"
+
+SubtitleSound[3039]="D38ZZ021"
+SubtitleText[3039]="Delta 38: Roger that."
+
+SubtitleSound[3040]="D38ZZ022"
+SubtitleText[3040]="Delta 38: Affirmative."
+
+SubtitleSound[3041]="D38ZZ023"
+SubtitleText[3041]="Delta 38: Negative."
+
+SubtitleSound[3042]="D38ZZ024"
+SubtitleText[3042]="Delta 38: Lock and load, Deltas."
+
+SubtitleSound[3043]="D38ZZ025"
+SubtitleText[3043]="Delta 38: Go! Go! Go!"
+
+SubtitleSound[3044]="D38ZZ026"
+SubtitleText[3044]="Delta 38: Follow me!"
+
+SubtitleSound[3045]="D38ZZ027"
+SubtitleText[3045]="Delta 38: Let's go!"
+
+SubtitleSound[3046]="D38ZZ028"
+SubtitleText[3046]="Delta 38: Assault their position!"
+
+SubtitleSound[3047]="D38ZZ029"
+SubtitleText[3047]="Delta 38: Take up defensive position!"
+
+SubtitleSound[3048]="D38ZZ030"
+SubtitleText[3048]="Delta 38: Clear the path!"
+
+SubtitleSound[3049]="D38ZZ031"
+SubtitleText[3049]="Delta 38: I need backup!"
+
+SubtitleSound[3050]="D38ZZ032"
+SubtitleText[3050]="Delta 38: Cover me!"
+
+SubtitleSound[3051]="D38ZZ033"
+SubtitleText[3051]="Delta 38: Hold your fire!"
+
+SubtitleSound[3052]="D38ZZ034"
+SubtitleText[3052]="Delta 38: Regroup, squad!"
+
+SubtitleSound[3053]="D38ZZ035"
+SubtitleText[3053]="Delta 38: Incoming!"
+
+SubtitleSound[3054]="D38ZZ036"
+SubtitleText[3054]="Delta 38: Taking fire!"
+
+SubtitleSound[3055]="D38ZZ037"
+SubtitleText[3055]="Delta 38: Fire in the Hole!"
+
+SubtitleSound[3056]="D38ZZ038"
+SubtitleText[3056]="Delta 38: Man down!"
+
+SubtitleSound[3057]="D38ZZ039"
+SubtitleText[3057]="Delta 38: Check your aim!"
+
+SubtitleSound[3058]="D38ZZ040"
+SubtitleText[3058]="Delta 38: Friendly fire! Friendly fire!"
+
+SubtitleSound[3059]="D38ZZ041"
+SubtitleText[3059]="Delta 38: Need meds!"
+
+SubtitleSound[3060]="D38ZZ042"
+SubtitleText[3060]="Delta 38: I need bacta!"
+
+SubtitleSound[3061]="D38ZZ043"
+SubtitleText[3061]="Delta 38: I'm running low on life here!"
+
+SubtitleSound[3062]="D38ZZ044"
+SubtitleText[3062]="Delta 38: Outa my way, I need bacta!"
+
+SubtitleSound[3063]="D38ZZ045"
+SubtitleText[3063]="Delta 38: Hostile down!"
+
+SubtitleSound[3064]="D38ZZ046"
+SubtitleText[3064]="Delta 38: You are dead!"
+
+SubtitleSound[3065]="D38ZZ047"
+SubtitleText[3065]="Delta 38: Bang and you're dead!"
+
+SubtitleSound[3066]="D38ZZ048"
+SubtitleText[3066]="Delta 38: Stay down!"
+
+SubtitleSound[3067]="D38ZZ049"
+SubtitleText[3067]="Delta 38: What a waste."
+
+SubtitleSound[3068]="D38ZZ050"
+SubtitleText[3068]="Delta 38: Another kill for the cause."
+
+SubtitleSound[3069]="D38ZZ051"
+SubtitleText[3069]="Delta 38: Trando neutralized"
+
+SubtitleSound[3070]="D38ZZ052"
+SubtitleText[3070]="Delta 38: Trando scum!"
+
+SubtitleSound[3071]="D38ZZ053"
+SubtitleText[3071]="Delta 38: Cold blooded scumbag."
+
+SubtitleSound[3072]="D38ZZ054"
+SubtitleText[3072]="Delta 38: I'll see you in hell, lizard!"
+
+SubtitleSound[3073]="D38ZZ055"
+SubtitleText[3073]="Delta 38: The only good lizard, is a dead lizard."
+
+SubtitleSound[3074]="D40ZZ001"
+SubtitleText[3074]="Delta 40: Follow me!"
+
+SubtitleSound[3075]="D40ZZ002"
+SubtitleText[3075]="Delta 40: Let's go!"
+
+SubtitleSound[3076]="D40ZZ003"
+SubtitleText[3076]="Delta 40: On my way!"
+
+SubtitleSound[3077]="D40ZZ004"
+SubtitleText[3077]="Delta 40: Clear the path!"
+
+SubtitleSound[3078]="D40ZZ005"
+SubtitleText[3078]="Delta 40: Taking fire!"
+
+SubtitleSound[3079]="D40ZZ006"
+SubtitleText[3079]="Delta 40: I need backup!"
+
+SubtitleSound[3080]="D40ZZ007"
+SubtitleText[3080]="Delta 40: Cover me!"
+
+SubtitleSound[3081]="D40ZZ008"
+SubtitleText[3081]="Delta 40: Incoming!"
+
+SubtitleSound[3082]="D40ZZ009"
+SubtitleText[3082]="Delta 40: Fire in the Hole!"
+
+SubtitleSound[3083]="D40ZZ010"
+SubtitleText[3083]="Delta 40: All clear!"
+
+SubtitleSound[3084]="D40ZZ011"
+SubtitleText[3084]="Delta 40: Roger that."
+
+SubtitleSound[3085]="D40ZZ012"
+SubtitleText[3085]="Delta 40: Affirmative."
+
+SubtitleSound[3086]="D40ZZ013"
+SubtitleText[3086]="Delta 40: Negative."
+
+SubtitleSound[3087]="D40ZZ014"
+SubtitleText[3087]="Delta 40: On my way!"
+
+SubtitleSound[3088]="D40ZZ015"
+SubtitleText[3088]="Delta 40: Good to go, sir."
+
+SubtitleSound[3089]="D40ZZ016"
+SubtitleText[3089]="Delta 40: Ready to engage."
+
+SubtitleSound[3090]="D40ZZ017"
+SubtitleText[3090]="Delta 40: All clear!"
+
+SubtitleSound[3091]="D40ZZ018"
+SubtitleText[3091]="Delta 40: Commando receiving assistance."
+
+SubtitleSound[3092]="D40ZZ019"
+SubtitleText[3092]="Delta 40: Thanks for the help, Delta."
+
+SubtitleSound[3093]="D40ZZ020"
+SubtitleText[3093]="Delta 40: Getting into position!"
+
+SubtitleSound[3094]="D40ZZ021"
+SubtitleText[3094]="Delta 40: Roger that."
+
+SubtitleSound[3095]="D40ZZ022"
+SubtitleText[3095]="Delta 40: Affirmative."
+
+SubtitleSound[3096]="D40ZZ023"
+SubtitleText[3096]="Delta 40: Negative."
+
+SubtitleSound[3097]="D40ZZ024"
+SubtitleText[3097]="Delta 40: Lock and load, Deltas."
+
+SubtitleSound[3098]="D40ZZ025"
+SubtitleText[3098]="Delta 40: Go! Go! Go!"
+
+SubtitleSound[3099]="D40ZZ026"
+SubtitleText[3099]="Delta 40: Follow me!"
+
+SubtitleSound[3100]="D40ZZ027"
+SubtitleText[3100]="Delta 40: Let's go!"
+
+SubtitleSound[3101]="D40ZZ028"
+SubtitleText[3101]="Delta 40: Assault their position!"
+
+SubtitleSound[3102]="D40ZZ029"
+SubtitleText[3102]="Delta 40: Take up defensive position!"
+
+SubtitleSound[3103]="D40ZZ030"
+SubtitleText[3103]="Delta 40: Clear the path!"
+
+SubtitleSound[3104]="D40ZZ031"
+SubtitleText[3104]="Delta 40: I need backup!"
+
+SubtitleSound[3105]="D40ZZ032"
+SubtitleText[3105]="Delta 40: Cover me!"
+
+SubtitleSound[3106]="D40ZZ033"
+SubtitleText[3106]="Delta 40: Hold your fire!"
+
+SubtitleSound[3107]="D40ZZ034"
+SubtitleText[3107]="Delta 40: Regroup, squad!"
+
+SubtitleSound[3108]="D40ZZ035"
+SubtitleText[3108]="Delta 40: Incoming!"
+
+SubtitleSound[3109]="D40ZZ036"
+SubtitleText[3109]="Delta 40: Taking fire!"
+
+SubtitleSound[3110]="D40ZZ037"
+SubtitleText[3110]="Delta 40: Fire in the Hole!"
+
+SubtitleSound[3111]="D40ZZ038"
+SubtitleText[3111]="Delta 40: Man down!"
+
+SubtitleSound[3112]="D40ZZ039"
+SubtitleText[3112]="Delta 40: Check your aim!"
+
+SubtitleSound[3113]="D40ZZ040"
+SubtitleText[3113]="Delta 40: Friendly fire! Friendly fire!"
+
+SubtitleSound[3114]="D40ZZ041"
+SubtitleText[3114]="Delta 40: Need meds!"
+
+SubtitleSound[3115]="D40ZZ042"
+SubtitleText[3115]="Delta 40: I need bacta!"
+
+SubtitleSound[3116]="D40ZZ043"
+SubtitleText[3116]="Delta 40: I'm running low on life here!"
+
+SubtitleSound[3117]="D40ZZ044"
+SubtitleText[3117]="Delta 40: Outa my way, I need bacta!"
+
+SubtitleSound[3118]="D40ZZ045"
+SubtitleText[3118]="Delta 40: Hostile down!"
+
+SubtitleSound[3119]="D40ZZ046"
+SubtitleText[3119]="Delta 40: You are dead!"
+
+SubtitleSound[3120]="D40ZZ047"
+SubtitleText[3120]="Delta 40: Bang and you're dead!"
+
+SubtitleSound[3121]="D40ZZ048"
+SubtitleText[3121]="Delta 40: Stay down!"
+
+SubtitleSound[3122]="D40ZZ049"
+SubtitleText[3122]="Delta 40: What a waste."
+
+SubtitleSound[3123]="D40ZZ050"
+SubtitleText[3123]="Delta 40: Another kill for the cause."
+
+SubtitleSound[3124]="D40ZZ051"
+SubtitleText[3124]="Delta 40: Trando neutralized"
+
+SubtitleSound[3125]="D40ZZ052"
+SubtitleText[3125]="Delta 40: Trando scum!"
+
+SubtitleSound[3126]="D40ZZ053"
+SubtitleText[3126]="Delta 40: Cold blooded scumbag."
+
+SubtitleSound[3127]="D40ZZ054"
+SubtitleText[3127]="Delta 40: I'll see you in hell, lizard!"
+
+SubtitleSound[3128]="D40ZZ055"
+SubtitleText[3128]="Delta 40: The only good lizard, is a dead lizard."
+
+SubtitleSound[3129]="D62ZZ001"
+SubtitleText[3129]="Delta 62: Follow me!"
+
+SubtitleSound[3130]="D62ZZ002"
+SubtitleText[3130]="Delta 62: Let's go!"
+
+SubtitleSound[3131]="D62ZZ003"
+SubtitleText[3131]="Delta 62: On my way!"
+
+SubtitleSound[3132]="D62ZZ004"
+SubtitleText[3132]="Delta 62: Clear the path!"
+
+SubtitleSound[3133]="D62ZZ005"
+SubtitleText[3133]="Delta 62: Taking fire!"
+
+SubtitleSound[3134]="D62ZZ006"
+SubtitleText[3134]="Delta 62: I need backup!"
+
+SubtitleSound[3135]="D62ZZ007"
+SubtitleText[3135]="Delta 62: Cover me!"
+
+SubtitleSound[3136]="D62ZZ008"
+SubtitleText[3136]="Delta 62: Incoming!"
+
+SubtitleSound[3137]="D62ZZ009"
+SubtitleText[3137]="Delta 62: Fire in the Hole!"
+
+SubtitleSound[3138]="D62ZZ010"
+SubtitleText[3138]="Delta 62: All clear!"
+
+SubtitleSound[3139]="D62ZZ011"
+SubtitleText[3139]="Delta 62: Roger that."
+
+SubtitleSound[3140]="D62ZZ012"
+SubtitleText[3140]="Delta 62: Affirmative."
+
+SubtitleSound[3141]="D62ZZ013"
+SubtitleText[3141]="Delta 62: Negative."
+
+SubtitleSound[3142]="TWEZZ001"
+SubtitleText[3142]="Taun We: 10 minutes remaining…"
+
+SubtitleSound[3143]="TWEZZ002"
+SubtitleText[3143]="Taun We: 5 minutes remaining…"
+
+SubtitleSound[3144]="TWEZZ003"
+SubtitleText[3144]="Taun We: 1 minute remaining…"
+
+SubtitleSound[3145]="TWEZZ004"
+SubtitleText[3145]="Taun We: Blue Team has the flag."
+
+SubtitleSound[3146]="TWEZZ005"
+SubtitleText[3146]="Taun We: Red Team has the flag."
+
+SubtitleSound[3147]="TWEZZ006"
+SubtitleText[3147]="Taun We: Blue Team's flag has been returned."
+
+SubtitleSound[3148]="TWEZZ007"
+SubtitleText[3148]="Taun We: Red Team's flag has been returned."
+
+SubtitleSound[3149]="TWEZZ008"
+SubtitleText[3149]="Taun We: Blue Team scored."
+
+SubtitleSound[3150]="TWEZZ009"
+SubtitleText[3150]="Taun We: Red Team scored."
+
+SubtitleSound[3151]="TWEZZ010"
+SubtitleText[3151]="Taun We: Blue Team has taken the lead."
+
+SubtitleSound[3152]="TWEZZ011"
+SubtitleText[3152]="Taun We: Red Team has taken the lead."
+
+SubtitleSound[3153]="TWEZZ012"
+SubtitleText[3153]="Taun We: Blue Team has acquired a sizeable lead."
+
+SubtitleSound[3154]="TWEZZ013"
+SubtitleText[3154]="Taun We: Blue Team has a substantial lead."
+
+SubtitleSound[3155]="TWEZZ014"
+SubtitleText[3155]="Taun We: Red Team has acquired a sizeable lead."
+
+SubtitleSound[3156]="TWEZZ015"
+SubtitleText[3156]="Taun We: Red Team has a substantial lead."
+
+SubtitleSound[3157]="TWEZZ016"
+SubtitleText[3157]="Taun We: Blue Team has won the match."
+
+SubtitleSound[3158]="TWEZZ017"
+SubtitleText[3158]="Taun We: Red Team has won the match."
+
+SubtitleSound[3159]="TMCZZ001"
+SubtitleText[3159]="Trando Merc: On my way!"
+
+SubtitleSound[3160]="TMCZZ002"
+SubtitleText[3160]="Trando Merc: I am ready to kill!"
+
+SubtitleSound[3161]="TMCZZ003"
+SubtitleText[3161]="Trando Merc: Ready to engage."
+
+SubtitleSound[3162]="TMCZZ004"
+SubtitleText[3162]="Trando Merc: All clear!"
+
+SubtitleSound[3163]="TMCZZ005"
+SubtitleText[3163]="Trando Merc: Assisting comrade!"
+
+SubtitleSound[3164]="TMCZZ006"
+SubtitleText[3164]="Trando Merc: Excellent work, brother!"
+
+SubtitleSound[3165]="TMCZZ007"
+SubtitleText[3165]="Trando Merc: Taking position!"
+
+SubtitleSound[3166]="TMCZZ008"
+SubtitleText[3166]="Trando Merc: Understood."
+
+SubtitleSound[3167]="TMCZZ009"
+SubtitleText[3167]="Trando Merc: Affirmative."
+
+SubtitleSound[3168]="TMCZZ010"
+SubtitleText[3168]="Trando Merc: Negative."
+
+SubtitleSound[3169]="TMCZZ011"
+SubtitleText[3169]="Trando Merc: Prepare for combat!"
+
+SubtitleSound[3170]="TMCZZ012"
+SubtitleText[3170]="Trando Merc: Go! Go! Go!"
+
+SubtitleSound[3171]="TMCZZ013"
+SubtitleText[3171]="Trando Merc: Follow me!"
+
+SubtitleSound[3172]="TMCZZ014"
+SubtitleText[3172]="Trando Merc: Move out!"
+
+SubtitleSound[3173]="TMCZZ015"
+SubtitleText[3173]="Trando Merc: Attack the weakings!"
+
+SubtitleSound[3174]="TMCZZ016"
+SubtitleText[3174]="Trando Merc: Go defensive!"
+
+SubtitleSound[3175]="TMCZZ017"
+SubtitleText[3175]="Trando Merc: Clear the path!"
+
+SubtitleSound[3176]="TMCZZ018"
+SubtitleText[3176]="Trando Merc: Back me up!"
+
+SubtitleSound[3177]="TMCZZ019"
+SubtitleText[3177]="Trando Merc: Cover me!"
+
+SubtitleSound[3178]="TMCZZ020"
+SubtitleText[3178]="Trando Merc: Cease firing!"
+
+SubtitleSound[3179]="TMCZZ021"
+SubtitleText[3179]="Trando Merc: Form up!"
+
+SubtitleSound[3180]="TMCZZ022"
+SubtitleText[3180]="Trando Merc: Incoming!"
+
+SubtitleSound[3181]="TMCZZ023"
+SubtitleText[3181]="Trando Merc: Taking fire!"
+
+SubtitleSound[3182]="TMCZZ024"
+SubtitleText[3182]="Trando Merc: Frag out!"
+
+SubtitleSound[3183]="TMCZZ025"
+SubtitleText[3183]="Trando Merc: Fallen comrade!"
+
+SubtitleSound[3184]="TMCZZ026"
+SubtitleText[3184]="Trando Merc: Watch your fire!"
+
+SubtitleSound[3185]="TMCZZ027"
+SubtitleText[3185]="Trando Merc: Friendly fire!"
+
+SubtitleSound[3186]="TMCZZ028"
+SubtitleText[3186]="Trando Merc: Medicals needed!"
+
+SubtitleSound[3187]="TMCZZ029"
+SubtitleText[3187]="Trando Merc: I need medtech!"
+
+SubtitleSound[3188]="TMCZZ030"
+SubtitleText[3188]="Trando Merc: My life is fading!"
+
+SubtitleSound[3189]="TMCZZ031"
+SubtitleText[3189]="Trando Merc: Move! I need bacta!"
+
+SubtitleSound[3190]="TMCZZ032"
+SubtitleText[3190]="Trando Merc: Human dead!"
+
+SubtitleSound[3191]="TMCZZ033"
+SubtitleText[3191]="Trando Merc: Death!"
+
+SubtitleSound[3192]="TMCZZ034"
+SubtitleText[3192]="Trando Merc: Your life. Taken!"
+
+SubtitleSound[3193]="TMCZZ035"
+SubtitleText[3193]="Trando Merc: Stay down!"
+
+SubtitleSound[3194]="TMCZZ036"
+SubtitleText[3194]="Trando Merc: Ha! Ha! Ha! Ha!"
+
+SubtitleSound[3195]="TMCZZ037"
+SubtitleText[3195]="Trando Merc: Glory to the many!"
+
+SubtitleSound[3196]="TMCZZ038"
+SubtitleText[3196]="Trando Merc: Shhh. Sleep now."
+
+SubtitleSound[3197]="TMCZZ039"
+SubtitleText[3197]="Trando Merc: Human weaklings!"
+
+SubtitleSound[3198]="TMCZZ040"
+SubtitleText[3198]="Trando Merc: Warm blooded softskins!"
+
+SubtitleSound[3199]="TMCZZ041"
+SubtitleText[3199]="Trando Merc: Your soul is mine!"
+
+SubtitleSound[3200]="TMCZZ042"
+SubtitleText[3200]="Trando Merc: If not slavery. Death!"
+
+SubtitleSound[3201]="TMAZZ001"
+SubtitleText[3201]="Trando Merc Advisor: 10 minutes remaining…"
+
+SubtitleSound[3202]="TMAZZ002"
+SubtitleText[3202]="Trando Merc Advisor: 5 minutes remaining…"
+
+SubtitleSound[3203]="TMAZZ003"
+SubtitleText[3203]="Trando Merc Advisor: 1 minute remaining…"
+
+SubtitleSound[3204]="TMAZZ004"
+SubtitleText[3204]="Trando Merc Advisor: 30 seconds remaining…"
+
+SubtitleSound[3205]="TMAZZ005"
+SubtitleText[3205]="Trando Merc Advisor: Blue Team has the flag."
+
+SubtitleSound[3206]="TMAZZ006"
+SubtitleText[3206]="Trando Merc Advisor: Red Team has the flag."
+
+SubtitleSound[3207]="TMAZZ007"
+SubtitleText[3207]="Trando Merc Advisor: Blue Team's flag has been returned."
+
+SubtitleSound[3208]="TMAZZ008"
+SubtitleText[3208]="Trando Merc Advisor: Red Team's flag has been returned."
+
+SubtitleSound[3209]="TMAZZ009"
+SubtitleText[3209]="Trando Merc Advisor: Blue team's flag has been dropped."
+
+SubtitleSound[3210]="TMAZZ010"
+SubtitleText[3210]="Trando Merc Advisor: Red team's flag has been dropped."
+
+SubtitleSound[3211]="TMAZZ011"
+SubtitleText[3211]="Trando Merc Advisor: Blue Team scored."
+
+SubtitleSound[3212]="TMAZZ012"
+SubtitleText[3212]="Trando Merc Advisor: Red Team scored!"
+
+SubtitleSound[3213]="TMAZZ013"
+SubtitleText[3213]="Trando Merc Advisor: Blue Team has taken the lead."
+
+SubtitleSound[3214]="TMAZZ014"
+SubtitleText[3214]="Trando Merc Advisor: Red Team has taken the lead."
+
+SubtitleSound[3215]="TMAZZ015"
+SubtitleText[3215]="Trando Merc Advisor: Blue Team is dominating!"
+
+SubtitleSound[3216]="TMAZZ016"
+SubtitleText[3216]="Trando Merc Advisor: Red Team is dominating!"
+
+SubtitleSound[3217]="TMAZZ017"
+SubtitleText[3217]="Trando Merc Advisor: Blue Team has won the match."
+
+SubtitleSound[3218]="TMAZZ018"
+SubtitleText[3218]="Trando Merc Advisor: Red Team has won the match."
+
+SubtitleSound[3219]="TMAZZ019"
+SubtitleText[3219]="Trando Merc Advisor: Capture the flag."
+
+SubtitleSound[3220]="TMAZZ020"
+SubtitleText[3220]="Trando Merc Advisor: Team Deathmatch."
+
+SubtitleSound[3221]="TMAZZ021"
+SubtitleText[3221]="Trando Merc Advisor: Deathmatch."
+
+SubtitleSound[3222]="TMAZZ022"
+SubtitleText[3222]="Trando Merc Advisor: Assault."
+
+SubtitleSound[3223]="TMAZZ023"
+SubtitleText[3223]="Trando Merc Advisor: Blue Team is Attacking."
+
+SubtitleSound[3224]="TMAZZ024"
+SubtitleText[3224]="Trando Merc Advisor: Red Team is Attacking."
+
+SubtitleSound[3225]="TMAZZ025"
+SubtitleText[3225]="Trando Merc Advisor: Blue Team has saved the base."
+
+SubtitleSound[3226]="TMAZZ026"
+SubtitleText[3226]="Trando Merc Advisor: Red Team has saved the base."
+
+SubtitleSound[3227]="TMAZZ027"
+SubtitleText[3227]="Trando Merc Advisor: Headshot!"
+
+SubtitleSound[3228]="TMAZZ028"
+SubtitleText[3228]="Trando Merc Advisor: Two dead."
+
+SubtitleSound[3229]="TMAZZ029"
+SubtitleText[3229]="Trando Merc Advisor: Three dead!"
+
+SubtitleSound[3230]="TMAZZ030"
+SubtitleText[3230]="Trando Merc Advisor: Four humans terminated!"
+
+SubtitleSound[3231]="TMAZZ031"
+SubtitleText[3231]="Trando Merc Advisor: Well done!"
+
+SubtitleSound[3232]="TMAZZ032"
+SubtitleText[3232]="Trando Merc Advisor: Steal the enemy flag and bring it back to your base."
+
+SubtitleSound[3233]="TMAZZ033"
+SubtitleText[3233]="Trando Merc Advisor: You are Attacking. To score you must bring your flag to the enemy base."
+
+SubtitleSound[3234]="TMAZZ034"
+SubtitleText[3234]="Trando Merc Advisor: You are Defending. Keep the enemy from bringing their flag into your base."
+
+SubtitleSound[3235]="TMAZZ035"
+SubtitleText[3235]="Trando Merc Advisor: Work with your brothers to annihilate the enemy!"
+
+SubtitleSound[3236]="TMAZZ036"
+SubtitleText[3236]="Trando Merc Advisor: They are weak. You are powerful. Kill them all!"
+
+SubtitleSound[3237]="TSRZZ001"
+SubtitleText[3237]="Trando Slaver: On my way!"
+
+SubtitleSound[3238]="TSRZZ002"
+SubtitleText[3238]="Trando Slaver: I am ready to kill!"
+
+SubtitleSound[3239]="TSRZZ003"
+SubtitleText[3239]="Trando Slaver: Ready to engage."
+
+SubtitleSound[3240]="TSRZZ004"
+SubtitleText[3240]="Trando Slaver: All clear!"
+
+SubtitleSound[3241]="TSRZZ005"
+SubtitleText[3241]="Trando Slaver: Assisting comrade!"
+
+SubtitleSound[3242]="TSRZZ006"
+SubtitleText[3242]="Trando Slaver: Excellent work, brother!"
+
+SubtitleSound[3243]="TSRZZ007"
+SubtitleText[3243]="Trando Slaver: Taking position!"
+
+SubtitleSound[3244]="TSRZZ008"
+SubtitleText[3244]="Trando Slaver: Understood."
+
+SubtitleSound[3245]="TSRZZ009"
+SubtitleText[3245]="Trando Slaver: Affirmative."
+
+SubtitleSound[3246]="TSRZZ010"
+SubtitleText[3246]="Trando Slaver: Negative."
+
+SubtitleSound[3247]="TSRZZ011"
+SubtitleText[3247]="Trando Slaver: Prepare for combat!"
+
+SubtitleSound[3248]="TSRZZ012"
+SubtitleText[3248]="Trando Slaver: Go! Go! Go!"
+
+SubtitleSound[3249]="TSRZZ013"
+SubtitleText[3249]="Trando Slaver: Follow me!"
+
+SubtitleSound[3250]="TSRZZ014"
+SubtitleText[3250]="Trando Slaver: Move out!"
+
+SubtitleSound[3251]="TSRZZ015"
+SubtitleText[3251]="Trando Slaver: Attack the weakings!"
+
+SubtitleSound[3252]="TSRZZ016"
+SubtitleText[3252]="Trando Slaver: Go defensive!"
+
+SubtitleSound[3253]="TSRZZ017"
+SubtitleText[3253]="Trando Slaver: Clear the path!"
+
+SubtitleSound[3254]="TSRZZ018"
+SubtitleText[3254]="Trando Slaver: Back me up!"
+
+SubtitleSound[3255]="TSRZZ019"
+SubtitleText[3255]="Trando Slaver: Cover me!"
+
+SubtitleSound[3256]="TSRZZ020"
+SubtitleText[3256]="Trando Slaver: Cease firing!"
+
+SubtitleSound[3257]="TSRZZ021"
+SubtitleText[3257]="Trando Slaver: Form up!"
+
+SubtitleSound[3258]="TSRZZ022"
+SubtitleText[3258]="Trando Slaver: Incoming!"
+
+SubtitleSound[3259]="TSRZZ023"
+SubtitleText[3259]="Trando Slaver: Taking fire!"
+
+SubtitleSound[3260]="TSRZZ024"
+SubtitleText[3260]="Trando Slaver: Frag out!"
+
+SubtitleSound[3261]="TSRZZ025"
+SubtitleText[3261]="Trando Slaver: Fallen comrade!"
+
+SubtitleSound[3262]="TSRZZ026"
+SubtitleText[3262]="Trando Slaver: Watch your fire!"
+
+SubtitleSound[3263]="TSRZZ027"
+SubtitleText[3263]="Trando Slaver: Friendly fire!"
+
+SubtitleSound[3264]="TSRZZ028"
+SubtitleText[3264]="Trando Slaver: Medicals needed!"
+
+SubtitleSound[3265]="TSRZZ029"
+SubtitleText[3265]="Trando Slaver: I need medtech!"
+
+SubtitleSound[3266]="TSRZZ030"
+SubtitleText[3266]="Trando Slaver: My life is fading!"
+
+SubtitleSound[3267]="TSRZZ031"
+SubtitleText[3267]="Trando Slaver: Move! I need bacta!"
+
+SubtitleSound[3268]="TSRZZ032"
+SubtitleText[3268]="Trando Slaver: Human dead!"
+
+SubtitleSound[3269]="TSRZZ033"
+SubtitleText[3269]="Trando Slaver: Death!"
+
+SubtitleSound[3270]="TSRZZ034"
+SubtitleText[3270]="Trando Slaver: Your life. Taken!"
+
+SubtitleSound[3271]="TSRZZ035"
+SubtitleText[3271]="Trando Slaver: Stay down!"
+
+SubtitleSound[3272]="TSRZZ036"
+SubtitleText[3272]="Trando Slaver: Ha! Ha! Ha! Ha!"
+
+SubtitleSound[3273]="TSRZZ037"
+SubtitleText[3273]="Trando Slaver: Glory to the many!"
+
+SubtitleSound[3274]="TSRZZ038"
+SubtitleText[3274]="Trando Slaver: Shhh. Sleep now."
+
+SubtitleSound[3275]="TSRZZ039"
+SubtitleText[3275]="Trando Slaver: Human weaklings!"
+
+SubtitleSound[3276]="TSRZZ040"
+SubtitleText[3276]="Trando Slaver: Warm blooded softskins!"
+
+SubtitleSound[3277]="TSRZZ041"
+SubtitleText[3277]="Trando Slaver: Your soul is mine!"
+
+SubtitleSound[3278]="TSRZZ042"
+SubtitleText[3278]="Trando Slaver: If not slavery. Death!"
+
+SubtitleSound[3279]="TS2ZZ001"
+SubtitleText[3279]="Trando Slaver 2: On my way!"
+
+SubtitleSound[3280]="TS2ZZ002"
+SubtitleText[3280]="Trando Slaver 2: I am ready to kill!"
+
+SubtitleSound[3281]="TS2ZZ003"
+SubtitleText[3281]="Trando Slaver 2: Ready to engage."
+
+SubtitleSound[3282]="TS2ZZ004"
+SubtitleText[3282]="Trando Slaver 2: All clear!"
+
+SubtitleSound[3283]="TS2ZZ005"
+SubtitleText[3283]="Trando Slaver 2: Assisting comrade!"
+
+SubtitleSound[3284]="TS2ZZ006"
+SubtitleText[3284]="Trando Slaver 2: Excellent work, brother!"
+
+SubtitleSound[3285]="TS2ZZ007"
+SubtitleText[3285]="Trando Slaver 2: Taking position!"
+
+SubtitleSound[3286]="TS2ZZ008"
+SubtitleText[3286]="Trando Slaver 2: Understood."
+
+SubtitleSound[3287]="TS2ZZ009"
+SubtitleText[3287]="Trando Slaver 2: Affirmative."
+
+SubtitleSound[3288]="TS2ZZ010"
+SubtitleText[3288]="Trando Slaver 2: Negative."
+
+SubtitleSound[3289]="TS2ZZ011"
+SubtitleText[3289]="Trando Slaver 2: Prepare for combat!"
+
+SubtitleSound[3290]="TS2ZZ012"
+SubtitleText[3290]="Trando Slaver 2: Go! Go! Go!"
+
+SubtitleSound[3291]="TS2ZZ013"
+SubtitleText[3291]="Trando Slaver 2: Follow me!"
+
+SubtitleSound[3292]="TS2ZZ014"
+SubtitleText[3292]="Trando Slaver 2: Move out!"
+
+SubtitleSound[3293]="TS2ZZ015"
+SubtitleText[3293]="Trando Slaver 2: Attack the weakings!"
+
+SubtitleSound[3294]="TS2ZZ016"
+SubtitleText[3294]="Trando Slaver 2: Go defensive!"
+
+SubtitleSound[3295]="TS2ZZ017"
+SubtitleText[3295]="Trando Slaver 2: Clear the path!"
+
+SubtitleSound[3296]="TS2ZZ018"
+SubtitleText[3296]="Trando Slaver 2: Back me up!"
+
+SubtitleSound[3297]="TS2ZZ019"
+SubtitleText[3297]="Trando Slaver 2: Cover me!"
+
+SubtitleSound[3298]="TS2ZZ020"
+SubtitleText[3298]="Trando Slaver 2: Cease firing!"
+
+SubtitleSound[3299]="TS2ZZ021"
+SubtitleText[3299]="Trando Slaver 2: Form up!"
+
+SubtitleSound[3300]="TS2ZZ022"
+SubtitleText[3300]="Trando Slaver 2: Incoming!"
+
+SubtitleSound[3301]="TS2ZZ023"
+SubtitleText[3301]="Trando Slaver 2: Taking fire!"
+
+SubtitleSound[3302]="TS2ZZ024"
+SubtitleText[3302]="Trando Slaver 2: Frag out!"
+
+SubtitleSound[3303]="TS2ZZ025"
+SubtitleText[3303]="Trando Slaver 2: Fallen comrade!"
+
+SubtitleSound[3304]="TS2ZZ026"
+SubtitleText[3304]="Trando Slaver 2: Watch your fire!"
+
+SubtitleSound[3305]="TS2ZZ027"
+SubtitleText[3305]="Trando Slaver 2: Friendly fire!"
+
+SubtitleSound[3306]="TS2ZZ028"
+SubtitleText[3306]="Trando Slaver 2: Medicals needed!"
+
+SubtitleSound[3307]="TS2ZZ029"
+SubtitleText[3307]="Trando Slaver 2: I need medtech!"
+
+SubtitleSound[3308]="TS2ZZ030"
+SubtitleText[3308]="Trando Slaver 2: My life is fading!"
+
+SubtitleSound[3309]="TS2ZZ031"
+SubtitleText[3309]="Trando Slaver 2: Move! I need bacta!"
+
+SubtitleSound[3310]="TS2ZZ032"
+SubtitleText[3310]="Trando Slaver 2: Human dead!"
+
+SubtitleSound[3311]="TS2ZZ033"
+SubtitleText[3311]="Trando Slaver 2: Death!"
+
+SubtitleSound[3312]="TS2ZZ034"
+SubtitleText[3312]="Trando Slaver 2: Your life. Taken!"
+
+SubtitleSound[3313]="TS2ZZ035"
+SubtitleText[3313]="Trando Slaver 2: Stay down!"
+
+SubtitleSound[3314]="TS2ZZ036"
+SubtitleText[3314]="Trando Slaver 2: Ha! Ha! Ha! Ha!"
+
+SubtitleSound[3315]="TS2ZZ037"
+SubtitleText[3315]="Trando Slaver 2: Glory to the many!"
+
+SubtitleSound[3316]="TS2ZZ038"
+SubtitleText[3316]="Trando Slaver 2: Shhh. Sleep now."
+
+SubtitleSound[3317]="TS2ZZ039"
+SubtitleText[3317]="Trando Slaver 2: Human weaklings!"
+
+SubtitleSound[3318]="TS2ZZ040"
+SubtitleText[3318]="Trando Slaver 2: Warm blooded softskins!"
+
+SubtitleSound[3319]="TS2ZZ041"
+SubtitleText[3319]="Trando Slaver 2: Your soul is mine!"
+
+SubtitleSound[3320]="TS2ZZ042"
+SubtitleText[3320]="Trando Slaver 2: If not slavery. Death!"
+

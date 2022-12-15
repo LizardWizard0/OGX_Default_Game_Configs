@@ -1,0 +1,30 @@
+[LevelInfo0]
+Title="Kalendra"
+
+[LevelSummary]
+Title="Kalendra"
+
+[Volume0]
+LocationName="Blue Bomb Base"
+
+[Volume1]
+LocationName="Red Bomb Base"
+
+[Volume2]
+LocationName="Red Base Entrance"
+
+[Volume5]
+LocationName="Blue Base Entrance"
+
+[Volume6]
+LocationName="Middle Area"
+
+[Volume9]
+LocationName="Super Shield Area"
+
+[xBombDelivery0]
+ObjectiveName="RedDelivery"
+
+[xbombdelivery1]
+ObjectiveName="BlueDelivery"
+

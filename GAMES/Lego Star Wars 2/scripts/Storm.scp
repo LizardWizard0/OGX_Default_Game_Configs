@@ -1,0 +1,43 @@
+state Base {
+	Conditions {
+		if GotTriggerArea == 0 goto Enter
+		if EitherPlayerInTriggerArea == 1.0 goto Enter
+
+		if BeenAlerted == 1 goto Enter
+	}
+	Actions {
+		CannotBeSeen
+		KeepWeaponOut
+		BreakFormation
+		Idle
+	}
+}
+
+state Enter {
+	Conditions {
+		if GotLocator == 0 goto Approach
+		if LocatorRangeXZ < 0.5 goto Approach
+	}
+	Actions {
+		GoToLocator
+	}
+}
+
+state Approach {
+	Conditions {
+	if GotOpponent == 1 goto Fight
+	}
+	Actions {
+		CannotBeSeen "FALSE"
+		FollowPlayer
+	}
+}
+
+state Fight {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}

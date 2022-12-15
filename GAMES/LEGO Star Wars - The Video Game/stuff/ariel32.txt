@@ -1,0 +1,11 @@
+name ariel32
+height 32
+base 0
+trans 0
+chars 01234567890.=!"
+chars £$%^&*()_+ABCDE
+chars FGHIJKLMNOPQRS
+chars TUVWXYZabcdefghij
+chars klmnopqrstuvwxyz[
+chars "]{};'#:@~,./<>?\|"
+

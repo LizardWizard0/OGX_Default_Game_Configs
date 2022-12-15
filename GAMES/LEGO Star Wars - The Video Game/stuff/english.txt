@@ -1,0 +1,934 @@
+20 "1st"
+21 "2nd"
+22 "3rd"
+23 "4th"
+24 "5th"
+25 "6th"
+26 "7th"
+27 "8th"
+28 "9th"
+29 "10th"
+
+50 "Legal Mumbo Jumbo"
+51 "LEGO"
+52 "A long time ago in a galaxy far, far away...."
+
+;**********************
+53 "To be continued..."
+54 "Reverse up/down"
+55 "Dexter's Diner"
+56 "Exit to Dexter's Diner? All progress made since your last save will be lost!"
+57 "Continue Story"
+58 "Locked"
+
+100 "Qui-Gon Jinn"
+101 "Obi-Wan Kenobi"
+102 "Obi-Wan Kenobi (Jedi Master)"
+103 "Jar Jar Binks"
+104 "R2-D2"
+105 "Anakin Skywalker (Boy)"
+106 "Count Dooku"
+107 "Yoda"
+108 "Jedi Starfighter"
+109 "Flash Speeder"
+110 "Royal Guard"
+111 "Zam Wesell"
+112 "Stormtrooper"
+;*************Accented Padme
+113 "Padmé"
+114 "Slave 1"
+115 "Gungan Bongo"
+116 "Clone"
+117 "Darth Sidious"
+118 "Jango Fett"
+119 "Darth Maul"
+120 "Captain Panaka"
+121 "C-3PO"
+122 "TC-14"
+123 "STAP"
+124 "Captain Tarpals"
+125 "Battle Droid"
+126 "Droideka"
+127 "Queen Amidala"
+128 "Mace Windu"
+129 "MTT"
+130 "AAT"
+131 "Naboo Starfighter"
+132 "Trade Federation Landing Ship"
+133 "Sebulba's Pod"
+134 "Gasgano's Pod"
+135 "Anakins's Pod"
+136 "Watto"
+137 "PK Droid"
+138 "R4-P17"
+139 "Boss Nass"
+140 "Kaadu"
+141 "Gasgano"
+142 "Sebulba"
+143 "Falumpaset"
+144 "Boba Fett"
+145 "Chewbacca"
+146 "General Grievous"
+147 "Obi-Wan Kenobi (Episode III)"
+148 "Disguised Clone"
+149 "Republic Cruiser"
+150 "Royal Starship"
+151 "Droid Control Ship"
+152 "Sith Infiltrator"
+153 "Zam Wesell's Speeder"
+154 "Republic Gunship"
+155 "Anakin Skywalker (Padawan)"
+156 "Anakin Skywalker (Darth Vader)"
+157 "Anakin Skywalker (Jedi)"
+;*************Accented Padme
+158 "Padmé (Clawed)"
+159 "Padmé (Battle)"
+160 "Padmé (Geonosis)"
+161 "Mace Windu (Episode III)"
+162 "Super Battle Droid"
+163 "Battle Droid (Commander)"
+164 "Battle Droid (Security)"
+165 "Battle Droid (Geonosis)"
+166 "Geonosian"
+167 "Gonk Droid"
+168 "Wookiee"
+169 "Chancellor Palpatine"
+170 "Clone (Episode III)"
+171 "Clone (Episode III, Pilot)"
+;****************************Now Cody, not Sand Trooper
+172 "Commander Cody"
+173 "Clone (Episode III, Swamp)"
+174 "Dexter Jettster"
+175 "Luminara"
+176 "Grievous' Bodyguard"
+177 "Clone (Episode III, Walker)"
+178 "Commander Cody"
+179 "Shaak Ti"
+180 "Ki-Adi Mundi"
+181 "AT-TE"
+182 "Solar Sailor"
+183 "Drop Ship"
+184 "Emergency Ship"
+185 "Jedi Starfighter (Episode III)"
+186 "Wookiee Cat"
+;***********Was X wing
+187 "Arc Fighter"
+188 "V Wing"
+189 "Rebel Trooper"
+190 "Kit Fisto"
+191 "Lama Su"
+192 "Taun We"
+193 "Princess Leia"
+194 "Rebel Blockade Runner"
+
+300 "Chapter"
+301 "Scene"
+302 "Mos Espa Cantina"
+
+;
+; Text crawls - use up to 5 paragraphs, max 256 characters each...
+;
+
+; Negotiations
+400 "Turmoil has engulfed the Galactic Republic! With a blockade of deadly battleships, the Trade Federation has stopped all shipping to the small planet of Naboo."
+401 "The Supreme Chancellor has secretly dispatched Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi to settle the conflict..."
+402
+403
+404
+
+; Invasion Of Naboo
+405 "The Trade Federation has launched a full-scale attack on the peaceful world of Naboo."
+406 "Hiding aboard the landing craft, Qui-Gon Jinn and Obi-Wan Kenobi have secretly hitched a ride with the invasion force. Now they must make contact with local forces - before it is too late..."
+407
+408
+409
+
+; Escape From Naboo
+410 "The Gungan ruler Boss Nass has refused to help the people of Naboo. Qui-Gon Jinn and Obi-Wan Kenobi have left his underwater city for the Royal Palace in Theed."
+411 "As Trade Federation battle droids seize control of the Naboo capital city, Queen Amidala and Captain Panaka, her loyal protector, are powerless to repel the invasion..."
+412
+413
+414
+
+; Mos Espa Podrace
+415 "Queen Amidala and her Jedi protectors have fled Naboo, heading for Coruscant. They plan to inform the Galactic Senate of the Trade Federation invasion."
+416 "However, the Royal Starship's hyperdrive is damaged in the escape, and they have been forced to land on the remote planet of Tatooine for repairs..."
+417
+418
+419
+
+; Retake Theed Palace
+420 "On Coruscant, Queen Amidala has found the Galactic Senate corrupted by Trade Federation influence, and mired in bureaucracy."
+421 "Frustrated, she has returned home to Naboo. Together with Qui-Gon Jinn, Obi-Wan Kenobi, Captain Panaka, R2-D2 and the young podracer from Tatooine, Anakin Skywalker, Queen Amidala now plans to infiltrate the Royal Palace and capture the evil Trade Federation Viceroy..."
+422
+423
+424
+
+; Anakin's Flight
+425 "As the battle for Naboo rages on the planet's surface, a desperate assault has been launched on the Trade Federation battleships above."
+426 "Anakin Skywalker finds himself at the controls of an N-1 Starfighter, heading for the Droid Control Ship..."
+427
+428
+429
+
+; Darth Maul
+430 "The Trade Federation army has been neutralized by Anakin Skywalker, but the battle continues in the Royal Palace."
+431 "Qui-Gon Jinn and Obi-Wan Kenobi have one more enemy to face..."
+432
+433
+434
+
+; Discovery On Kamino
+435 "The Galactic Republic plunges ever deeper into crisis. The mysterious Count Dooku leads a Separatist movement which threatens the future of the Republic."
+436 "In this time of turmoil, Obi-Wan Kenobi investigates the attempted assassination of Senator Padmé Amidala. With his astromech droid R4-P17, the Jedi Knight tracks the source of a poisoned dart to the remote world of Kamino..."
+437
+438
+439
+
+; Droid Factory
+440 "Obi-Wan Kenobi has tracked the bounty hunter Jango Fett to the planet of Geonosis. This rocky world, known for its droid production factories, forms the base of operations for the Separatist movement."
+441 "While Anakin Skywalker guards Senator Padmé Amidala, Obi-Wan lands his Jedi Starfighter on the planet's surface..."
+442
+443
+444
+
+; Jedi Battle
+445 "In their attempt to rescue Obi-Wan Kenobi on the planet Geonosis, Anakin Skywalker and Padmé Amidala have been captured by Jango Fett."
+446 "Obi-Wan has sent a distress signal to the Jedi Council. But hopes of rescue seem remote, as the evil Separatist leader Count Dooku oversees their execution..."
+447
+448
+449
+;******************************New
+; Count Dooku
+450 "As the battle rages between the Clone forces of the Republic and the Separatist droid army, the Separatist leader Count Dooku flees to his secret hangar."
+451 "Obi-Wan Kenobi and Anakin Skywalker follow closely behind, prepared for a final showdown with the Sith Lord..."
+452
+453
+454
+
+; Battle Over Coruscant
+455 "The Republic is crumbling under a Separatist assault led by Count Dooku and General Grievous. In a stunning move, Separatist forces have swept into Coruscant and kidnapped Supreme Chancellor Palpatine."
+456 "As the Droid Army attempts to flee with their hostage, Obi-Wan Kenobi and Anakin Skywalker lead a desperate mission to rescue the Chancellor..."
+457
+458
+459
+
+; Chancellor In Peril
+460 "High above the planet Coruscant, a deadly battle rages between Separatist forces and the Army of the Republic."
+461 "On the Separatist flagship, Count Dooku and General Grievous hold Chancellor Palpatine captive. Crashing their Jedi Starfighters into the main hangar, Obi-Wan Kenobi and Anakin Skywalker are surrounded by hostile droid forces..."
+462
+463
+464
+
+; General Grievous
+465 "Obi-Wan Kenobi and Anakin Skywalker have saved Chancellor Palpatine. But his captor, General Grievous, has escaped."
+466 "The Jedi Council assigns Obi-Wan Kenobi the task of hunting down Grievous, who is hiding on the sinkhole world of Utapau..."
+467
+468
+469
+
+; Defence Of Kashyyyk
+470 "Obi-Wan Kenobi has taken care of General Grievous, but the Clone Wars continue. Across the galaxy, Jedi Knights lead the Army of the Republic into battle against Separatist forces."
+471 "Jedi Master Yoda fights on the Wookiee planet of Kashyyyk. But the Sith Lord Darth Sidious is about to reveal himself, and draw a new darkness over the galaxy..."
+472
+473
+474
+
+; Ruin Of The Jedi
+475 "Palpatine has issued Order 66, turning the Clone Army against the Jedi. Across the galaxy, clones have gunned down their Jedi generals."
+476 "Yoda and Obi-Wan Kenobi have survived, and head for the Jedi Temple on Coruscant. They hope to find some answers to this shocking turn of events within the Jedi Archives..."
+477
+478
+479
+
+; Darth Vader
+480 "Anakin Skywalker, once the young Podracing champion of Tatooine, Padawan to  Obi-Wan Kenobi and hero of the Clone Wars, has finally given in to his secret emotions and fallen to the Dark Side."
+481 "His wife Padmé rushes to the volcanic world of Mustafar, hoping to turn Anakin back from his dark path. She has no idea that Anakin's former master Obi-Wan is hiding aboard her ship..."
+482
+483
+484
+
+; Bonus
+485 "It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire."
+486 "Princess Leia Organa now has the blueprints for the Empire's new weapon, the Death Star. But her ship is intercepted and boarded by Darth Vader and his stormtroopers..."
+487
+488
+489
+;***********************************New
+; Gunship Cavalry
+490 "The Grand Army of the Republic has been called into action. Led by Mace Windu and Yoda, the new Clone forces clash with the Separatist droid armies on the planet Geonosis."
+491 "Obi-Wan Kenobi and Anakin Skywalker engage with the enemy, as they pursue Count Dooku in their Republic attack gunship..."
+492
+493
+494
+
+;
+; End of text crawls
+;
+
+500 "Episode I"
+501 "THE PHANTOM MENACE"
+502 "NEGOTIATIONS"
+503 "INVASION OF NABOO"
+504 "ESCAPE FROM NABOO"
+505 "MOS ESPA PODRACE"
+506 "RETAKE THEED PALACE"
+507 "ANAKIN'S FLIGHT"
+508 "DARTH MAUL"
+
+530 "Episode II"
+531 "ATTACK OF THE CLONES"
+532 "DISCOVERY ON KAMINO"
+533 "DROID FACTORY"
+534 "JEDI BATTLE"
+535 "GUNSHIP CAVALRY"
+536 "COUNT DOOKU"
+
+560 "Episode III"
+561 "REVENGE OF THE SITH"
+562 "BATTLE OVER CORUSCANT"
+563 "CHANCELLOR IN PERIL"
+564 "GENERAL GRIEVOUS"
+565 "DEFENCE OF KASHYYYK"
+566 "RUIN OF THE JEDI"
+567 "DARTH VADER"
+
+570 "DEFENSE OF KASHYYYK"
+571 "Episode IV"
+572 "A NEW HOPE"
+;**************************
+573 "Episode I complete..."
+574 "Episode II complete..."
+575 "Episode III complete..."
+
+;
+; Hints - slots 600-699
+;
+; First Level Stuff: Negotiations, Kamino & Cruiser
+;
+600 "In Free Play mode, you can cycle between different characters by pulling [TOGGLELEFT] or [TOGGLERIGHT]. Remember, each character has a different ability."
+601 "Press [SPECIAL] to use the Force on glowing LEGO objects."
+602 "Hold [SPECIAL] to use your special ability. Jedi can use The Force on glowing LEGO objects."
+603 "Walk up to a friendly character and press [TAG] to take control of them."
+604 "Press [ACTION] to deflect blaster bolts as they approach you."
+605 "You can regain control of your other characters at any time by moving up to them and pressing [TAG]."
+606 "Hold [SPECIAL] to use your special ability. Droids can open certain doors."
+607 "Collect all 10 LEGO canisters in this demo for a secret game code..."
+608 "Congratulations! You've collected all 10 LEGO canisters. Your secret game code is A725X4. Use this in the full game for a special bonus."
+
+;600 "Press SQUARE to attack."
+;601 "Press X to jump. Press X when in the air to double jump."
+;602 "Hold CIRCLE to use your special ability. Jedi can use The Force on glowing LEGO objects."
+;603 "Walk up to a friendly character and press TRIANGLE to take control of them."
+;604 "Jedi can deflect laser bolts. Hold SQUARE as the bolt gets close to you."
+;605 "Double-jump and press SQUARE when in the air to do a special Jedi attack."
+;606 "Hold CIRCLE to use your special ability. Droids can open certain doors."
+;
+;Invasion of Naboo
+;
+;607 "Jar Jar can double jump extra high - press X while in the air."
+;608 "Collect coins to get things."
+;609 "Collect minikit pieces to get other things."
+;
+; Escape From Naboo
+;
+;610 "Press SQUARE to attack. Blaster Characters will fire."
+;611 "Hold CIRCLE to use your special ability. Blaster Characters can fire a grapple at these points."
+;
+;Retake Theed Palace
+;
+;612 "Astromech Droids hover instead of jumping."
+;613 "Hold CIRCLE to use your special ability. Young Anakin can crawl through certain vents."
+;
+;***********************
+618 "You can reverse the up/down controls in the Options menu."
+619 "Try to tag your friend before you are gripped by the forces of the dark side."
+;***********************
+620 "Double-jump and press [SQUARE] when in the air to do a special Jedi attack."
+621 "Press [SQUARE] to attack."
+622 "Press [X] to jump. Press [X] when in the air to double jump."
+623 "Jar Jar can double jump extra high - press [X] while in the air."
+624 "The more LEGO studs you collect, the more things you will be able to buy here."
+625 "Collect all the LEGO canisters in each level to build minikit models. You can view these in the parking lot outside"
+626 "Many areas of the levels can only be reached by certain characters. Go back to these levels in Freeplay, and try to find all the secrets!"
+627 "Once you have defeated an enemy character in a level, you will be able to buy it here. Try to collect all the characters!"
+628 "Blaster characters can grapple to other areas. Stand on the red circles and press [CIRCLE]."
+629 "Jar Jar can jump higher than other characters. Press [x] twice to do his super jump."
+630 "Astromech droids can use their probe on some electronic panels. Move up to the panel and press [circle]."
+631 "Astromech droids can hover for a limited time. Press and hold [x] to activate the boosters."
+632 "Watch out for black LEGO objects. Dark Force characters can use the Force on them."
+633 "Hold [CIRCLE] to use your special ability. Young Anakin can crawl through certain vents."
+634 "Freeplay mode means you can go back and play a completed level with any character that you have unlocked!"
+635 "To take other characters into the levels in Freeplay, simply tag them in the Diner and go through the door of the level you wish to play."
+636 "Fill up the Jedi meter in each level to receive a super-kit piece. Collect all 17 to reveal a super-secret bonus!"
+637 "The Jedi Meter appears at the top of the screen in each level. Fill it up by collecting LEGO studs. Take care - you lose studs if you die!"
+;****************************
+638 "Press [X] to go faster."
+639 "Blaster characters can shoot targets."
+
+;
+;Cheats
+;
+640 "Invincibility"
+641 "Unlimited health"
+642 "Special Blaster"
+643 "Super Blaster"
+644 "Mega Blaster"
+645 "Purple Lightsaber"
+646 "Black Lightsaber"
+647 "Broom-saber"
+648 "Special Yoda chair"
+649 "Hints"
+650 "Unlock bonus level"
+651 "Moustache mode"
+652 "Minikit detector"
+653 "Safe mode"
+654 "Play on Easy difficulty"
+655 "Play on Hard difficulty"
+656 "Cheats"
+657 "Bonuses"
+658 "Enter Code"
+659 "Code accepted"
+660 "Code rejected"
+661 "Weapons"
+662 "Characters"
+663 "Extras"
+664 "Hint"
+;***************
+665 "Silhouettes"
+666 "Purple"
+667 "Moustaches"
+668 "Tea cups"
+669 "Brushes"
+670 "Big Blasters"
+671 "Classic Blasters"
+672 "Silly Blasters"
+
+;
+680 "Go through the Episode I door to start the first level. The Episode II and III doors will unlock once this level is completed."
+681 "This is where your collection of minikits will be displayed. Collect minikit parts in the levels, which are accessed through the doors inside the Diner."
+682 "If you go back to the diner, you can now play Episode II or Episode III..."
+
+; Hints - slots 600-699
+;
+
+700 "Game"
+701 "New Game"
+702 "DEMO"
+703 "Bonus"
+704 "Extra"
+705 "Paused"
+706 "Resume"
+707 "Restart"
+708 "Restart Level?"
+709 "Exit"
+710 "Exit Level?"
+711 "Are you sure you want to quit? All progress made since your last save will be lost!"
+712 "Options"
+713 "Finish!"
+714 "Continue"
+715 "Retry"
+716 "Quit"
+717 "Yes"
+718 "Ready..."
+719 "Go!"
+720 "Win!"
+721 "No"
+722 "On"
+723 "Off"
+724 "Done"
+725 "Accept"
+726 "Select"
+727 "Back"
+728 "Cancel"
+729 "Vibration"
+730 "Surround Sound"
+731 "Sound Volume"
+732 "Sound"
+733 "Music Volume"
+734 "Music"
+735 "Press START"
+736 "Insert controller in port 1"
+737 "Stereo"
+738 "Mono"
+739 "Insert controller in port 2"
+740 "Level"
+741 "Complete!"
+742 "Time"
+743 "Current Game"
+744 "Too Slow!"
+745 "Press ^x to continue"
+746 "Press the START button"
+747 "Adjust Screen"
+748 "Screen left/right"
+749 "Screen up/down"
+750 "The controller in controller port 1 has been removed. Please insert a controller into controller port 1 to continue with the game."
+751 "Memory Card Slot 1"
+752 "Checking the memory card (PS2) in MEMORY CARD slot 1"
+753 "Empty"
+754 "Load"
+755 "Save"
+756 "Delete"
+757 "Load Game"
+758 "Save Game"
+759 "Delete Game"
+760 "No memory card (PS2) in MEMORY CARD slot 1"
+761 "No LEGO Star Wars save data present on the memory card (PS2) inserted in MEMORY CARD slot 1"
+762 "Format"
+763 "Overwrite"
+764 "Memory Card is full"
+765 "Confirm Load?"
+766 "Confirm save?"
+767 "Confirm delete"
+768 "Format memory card (PS2)?"
+769 "Do you wish to overwrite previous save?"
+770 "Loading"
+771 "Saving"
+772 "Deleting"
+773 "Formatting"
+774 "Game loaded"
+775 "Game saved"
+776 "Game deleted"
+777 "Failed to load"
+778 "Failed to save"
+779 "Failed to delete"
+780 "Failed to format"
+781 "The memory card (PS2) in MEMORY CARD slot 1 is unformatted"
+782 "Please insert a memory card (PS2) with at least %iKB free into MEMORY CARD slot 1 or you will be unable to save."
+783 "LEGO Star Wars requires %iKB"
+784 "Format Memory Card"
+785 "Formatting complete"
+786 "Insufficient free space"
+787 "Do not remove the controller, memory card (PS2) in MEMORY CARD slot 1, reset, or switch off the console."
+788 "No memory card (PS2) in MEMORY CARD slot 1."
+789 "Insufficient space on the memory card (PS2) in MEMORY CARD slot 1."
+790 "All progress will be lost."
+791 "Paused - press START to resume"
+792 "Games stored on Hard Disk"
+793 "Free blocks"
+794 "Saving game..."
+795 "Unable to load game."
+796 "Damaged save"
+797 "Disc Cover Open"
+798 "Wrong Game Disc"
+799 "No Game Disc"
+800 "Retry Error"
+801 "Fatal Error"
+802 "Licensed by Nintendo"
+803 "Continue without save"
+804 "Manage Memory Card"
+805 "Wrong device in Slot A. Please insert a Memory Card."
+806 "The Memory Card in Slot A is damaged and cannot be used."
+807 "The Memory Card in Slot A is corrupted and needs to be deleted."
+808 "The Memory Card in Slot A is corrupted and needs to be formatted. Do you want to format?"
+809 "Previously saved data will be lost. Would you like to continue formatting?"
+810 "Failed to format the Memory Card."
+811 "Previously saved data will be lost. Would you like to continue deleting?"
+812 "Failed to delete the Memory Card."
+813 "Once you start the game, you won't be able to save."
+814 "LEGO Star Wars"
+815 "Saved game slots"
+816 "Player 1"
+817 "Player 2"
+818 "The controller in controller port 2 has been removed. Please insert a controller into controller port 2 to continue with the game."
+819 "Drop Out"
+820 "Drop Out Of Game?"
+821 "Landing Ship"
+822 "Character Viewer"
+823 "Story"
+824 "Free Play"
+825 "View Camera"
+826 "Pad 1"
+827 "Pad 2"
+828 "Episode II unlocked..."
+829 "Episode III unlocked..."
+830 "Insert controller"
+831 "Replay Story"
+832 "Change"
+833 "Play"
+834 "Buy"
+835 "Loading Game..."
+836 "Load Corrupted"
+837 "OK"
+838 "Slot"
+839 "Present"
+840 "Autosave will now use Game %i on the memory card (PS2) inserted in MEMORY CARD slot 1"
+841 "Do not remove the controller, memory card (PS2) in MEMORY CARD slot 1, reset, or switch off the console whenever you see the icon above on screen."
+842 "The memory card (PS2) in MEMORY CARD slot 1 has been removed."
+843 "Autosave has now been disabled."
+844 "Autosave will be re-enabled when you Load or Save any game."
+845 "Do you want to start the game?"
+;***************************
+846 "Episode IV unlocked..."
+847 "No space"
+848 "Audio Volume"
+849 "Audio"
+850 "Superkit Piece"
+851 "Minikit"
+852 "Stud Total"
+853 "Studs"
+854 "Overwriting data..."
+855 "Failed to overwrite"
+
+; pc installer .......
+
+900 "DirectX 9.0c Installation starting"
+901 "Setup is almost complete."
+902 "Choose the options you want below."
+903 "Click Finish to continue."
+904 "Click Finish to complete LEGO StarWars Setup."
+905 "I would like to view the README file."
+906 "I would like a desktop shortcut."
+907 "I would like to launch LEGO StarWars."
+
+908 "UnInstall LEGO StarWars"
+
+; pc game menus.....
+
+909 "HARD DISK"
+910 "Exit To Windows"
+911 "Controller Options"
+912 "Video Options"
+
+; pc screen resolution options.....
+
+913 "LOW  640x480"
+914 "MEDIUM  800x600"
+915 "HIGH  1024x768"
+916 "ULTRA  1280x1024"
+917 "LOW  640x480  (CURRENT)"
+918 "MEDIUM  800x600  (CURRENT)"
+919 "HIGH  1024x768  (CURRENT)"
+920 "ULTRA  1280x1024  (CURRENT)"
+
+; pc controller setup.....
+
+921 "CURSOR-MOVE"
+922 "ENTER-SELECT"
+923 "F1-PLAYER 2"
+924 "F1-PLAYER 1"
+925 "CONTROL SETUP PLAYER 1"
+926 "CONTROL SETUP PLAYER 2"
+927 "F2-RESTORE"
+928 "F3-DEFAULT KEYS"
+929 "ESC-PLAY"
+930 "EMPTY SLOT"
+931 "DUPLICATE INPUT WITH PLAYER 2"
+
+; key selection display text....
+
+932 "ESC"
+933 "1"
+934 "2"               
+935 "3"               
+936 "4"               
+937 "5"               
+938 "6"               
+939 "7"               
+940 "8"               
+941 "9"               
+942 "0"               
+
+943 "MINUS"               
+; - on main keyboard 
+
+944 "EQUALS"        
+  
+945 "BACK"                
+; backspace 
+
+946 "TAB"             
+947 "Q"               
+948 "W"               
+949 "E"              
+950 "R"               
+951 "T"               
+952 "Y"               
+953 "U"               
+954 "I"               
+955 "O"               
+956 "P"       
+957 "LBRACKET"
+958 "RBRACKET"        
+
+959 "ENTER"              
+; Enter on main keyboard 
+
+960 "L CTRL"        
+961 "A"               
+962 "S"               
+963 "D"               
+964 "F"               
+965 "G"               
+966 "H"               
+967 "J"               
+968 "K"               
+969 "L"               
+970 "SEMICOLON"       
+971 "APOSTROPHE"      
+
+972 "GRAVE"               
+; accent grave 
+
+973 "L SHIFT"          
+974 "BACKSLASH"       
+975 "Z"               
+976 "X"               
+977 "C"               
+978 "V"               
+979 "B"               
+980 "N"               
+981 "M"               
+982 "COMMA"         
+  
+983 "STOP"    
+; . on main keyboard 
+
+984 "FORE SLASH"               
+; / on main keyboard 
+
+985 "R SHIFT"          
+
+986 "MULT"            
+; * on numeric keypad 
+
+987 "L ALT"               
+; left Alt 
+
+988 "SPACE"           
+989 "CAPLOCK"         
+990 "F1"              
+991 "F2"              
+992 "F3"              
+993 "F4"              
+994 "F5"              
+995 "F6"              
+996 "F7"              
+997 "F8"              
+998 "F9"              
+999 "F10"             
+1000 "NUMLOCK"
+
+1001 "SCROLL LOCK"
+; Scroll Lock 
+
+1002 "NUM 7"         
+1003 "NUM 8"         
+1004 "NUM 9"         
+
+1005 "NUM MINUS"            
+; - on numeric keypad 
+
+1006 "NUM 4"         
+1007 "NUM 5"         
+1008 "NUM 6"         
+
+1009 "NUM ADD"                 
+; + on numeric keypad 
+
+1010 "NUM 1"         
+1011 "NUM 2"         
+1012 "NUM 3"         
+1013 "NUM 0"         
+
+1014 "NUM POINT"             
+; . on numeric kypad 
+
+1017 "F11"             
+1018 "F12"      
+
+1030 "F13"     
+1031 "F14"                 
+1032 "F15"                 
+
+1042 "KANA"                
+; (Japanese keyboard)            
+
+1044 "ABNT_C1"             
+; /? on Brazilian keyboard 
+
+1050 "CONVERT"             
+; (Japanese keyboard)            
+
+1052 "NOCONVERT"          
+; (Japanese keyboard)            
+
+1054 "YEN"                 
+; (Japanese keyboard)            
+
+1055 "ABNT_C2"             
+; 7e  Numpad . on Brazilian keyboard 
+
+1070 "NUM EQUAL"        
+; 8d  = on numeric keypad (NEC PC98) 
+
+1073 "PREVTRACK"           
+; Previous Track (DIK_CIRCUMFLEX on Japanese keyboard) 
+
+1074 "AT"                  
+1075 "COLON"               
+1076 "UNDERLINE"          
+
+1077 "KANJI"               
+; (Japanese keyboard)            
+
+1078 "STOP"                
+1079 "AX"                  
+;                     (Japan AX) 
+
+1080 "UNLABELED"           
+;                        (J3100) 
+
+1082 "NEXTTRACK"           
+; Next Track 
+
+1085 "NUM ENT"         
+; Enter on numeric keypad 
+
+1086 "RGT CTRL"       
+; right control key 
+
+1090 "MUTE"                
+
+1091 "CALC"          
+; calculator 
+
+1092 "PLAY"           
+1093 ""
+1094 "MEDIASTOP"           
+
+1104 "VOLDOWN"          
+; volume down / up
+1106 "VOLUP"            
+
+1108 "WEBHOME"   
+1109 "NUM COMMA"         
+; , on numeric keypad 
+
+1111 "NUM DIV"              
+; / on numeric keypad */
+
+1113 "SYSRQ"           
+
+1114 "RGT ALT"              
+;  right Alt 
+
+1127 "PAUSE"               
+
+; arrow keypad
+1129 "HOME"               
+1130 "UP"                  
+1131 "PG UP"               
+
+1133 "LEFT"                
+
+1135 "RIGHT"               
+
+1137 "END"                 
+1138 "DOWN"                
+1139 "PG DOWN"             
+1140 "INSERT"              
+1141 "DELETE"              
+
+1149 "LT WIN"               
+; Left / right  Windows key 
+1150 "RT WIN"               
+1151 "APPS"                
+; AppMenu key 
+
+1152 "Joystick"
+
+1153 "J1 LEFT"
+1154 "J1 RIGHT"
+1155 "J1 UP"
+1156 "J1 DOWN"
+1157 "J1 Z UP"
+1158 "J1 Z DOWN"
+1159 "J1 Z LEFT"
+1160 "J1 Z RIGHT"
+1161 "J1 HAT LFT"
+1162 "J1 HAT RGT"
+1163 "J1 HAT UP"
+1164 "J1 HAT DWN"
+1165 "J1 Button 1"
+1166 "J1 Button 2"
+1167 "J1 Button 3"
+1168 "J1 Button 4"
+1169 "J1 Button 5"
+1170 "J1 Button 6"
+1171 "J1 Button 7"
+1172 "J1 Button 8"
+1173 "J1 Button 9"
+1174 "J1 Button 10"
+1175 "J1 Button 11"
+1176 "J1 Button 12"
+1177 "J1 Button 13"
+1178 "J1 Button 14"
+1179 "J1 Button 15"
+1180 "J1 Button 16"
+1181 "No Save Data Present"
+
+1182	"Play"
+1183	"Controller options"
+1184	"Control Setup Player 1"
+1185	"Press the ESC key"
+1186	"Player 2"
+1187	"Move left"
+1188	"Move right"
+1189	"Move up"
+1190	"Move down"
+1191	"Tag"
+1192	"Special"
+1193	"Jump"
+1194	"Action"
+1195	"Character toggle up"
+1196	"Character toggle down"
+1197	"Start/pause"
+1198	"empty"
+1199	"Cursor-move"
+1200	"Enter-select"
+1201	"Reset old"
+1202	"Default keys"
+1203	"Play"
+1204	"Left"
+1205	"Right"
+1206	"Down"
+1207	"Up"
+1208	"Button"
+1209	"Press ESC"
+1210	"Video Options"
+1211	"Low"
+1212	"Medium"
+1213	"High"
+1214	"Ultra"
+1215	"Back"
+1216	"Restore previous display"
+1217	"Keep this display"
+1218	"Exit to Windows"
+
+
+1225 "PLEASE RECONNECT THE CONTROLLER AND PRESS START TO CONTINUE"
+1226 "PLEASE RECONNECT THE CONTROLLER AND PRESS START TO CONTINUE"
+
+1227  "Abandon Changes"
+1228  "Reset To Defaults"
+1229  "Return To Game"
+1230  "Bloom Filtering"
+1231  "Floor Reflections"
+1232  "Plastic Reflections"
+1233  "Shadow Mapping"
+1234  "Bump Mapping"
+1235  "Launch Lego Star Wars"
+1236  "Uninstall Lego Star Wars"
+1237  "Lego Star Wars Game Website"
+1238  "Advanced Options"
+1239  "Auto-Save"
+1240  "%d%s blocks available on hard disk"
+1241  "Loading game. Please do not turn off your Xbox console."
+1242  "Saving game. Please do not turn off your Xbox console."
+1243  "Your Xbox doesn't have enough free blocks to save games. You need %d more free blocks. Press [JUMP] to continue without saving or [SPECIAL] to free more blocks."
+1244  "Go to Xbox dashboard"
+1245  "The saved game appears to be damaged and cannot be used. Press [JUMP] to continue."
+1246  "Autosave will now use Game %i on the Hard Disk",
+1247  "Effect Options"
+

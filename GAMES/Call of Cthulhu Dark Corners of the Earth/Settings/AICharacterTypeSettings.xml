@@ -1,0 +1,1015 @@
+<!-- Character type settings -->
+<!-- NOTE : Maximum number of bones is 18, currently. Don't add any new bones --->
+
+
+<!-- Notes on <BoneDescriptor> tag:
+	 --------------------------------
+	 
+	 Each bone tag must have the <Bone_Radius> and <Bone_Part> tags.
+     You can optionally specify the <Bone_Length> tag, which allows you to explicitly
+     set the length of a specific bone (for ballistic collision detection) rather than
+     have the length taken from the animation system.
+     If you specify a <Bone_Length> tag for a particular bone, you can also specify a
+     <Bone_Extend> tag for the same bone.  Setting this to 1 will mean that the bone maintains
+     its original start point, and the specified bone length will take effect from this point.
+     Setting <Bone_Extend> to 0, or not specifying it, means that the specified bone length will
+     be distributed equally around the bone's original centre point.  <Bone_Extend> has no meaning for
+     a particular bone if <Bone_Length> is not also specified on the bone in question.
+     For any bone you can optionally specify a <Bone_Shift> tag, which should specify a floating point value.
+     This tag allows you to move a bone backwards and forwards along the vector that defines the bone's direction
+     by the distance specified in the tag.
+-->
+
+
+<AI_Settings>
+    <AI_Character_Type>
+    
+    
+        <!-- Type 0 : humanoid -->
+        <TYPE_0>
+            <Physics_Height>180.0</Physics_Height>
+            <Physics_Radius>30.0</Physics_Radius>
+            <AICollisionRadius>60.0</AICollisionRadius>
+			<LadderOffset>78.0</LadderOffset>
+			<LadderTurnDelay>0.25</LadderTurnDelay>			
+			<Look_At_Height_Offset>-20.0</Look_At_Height_Offset>
+            <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+                        
+            <BoneDescriptor>
+                <!-- Bone description -->
+                <Bip01 Neck>	<!-- Bone description -->
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                </Bip01 Neck>
+    
+                <Bip01 Head>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>28.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>5.5</Bone_Shift>
+                </Bip01 Head>
+                    
+                <Bip01 Spine2>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius> 
+                    <Bone_Length>26.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>0.0</Bone_Shift>
+                </Bip01 Spine2>
+                
+                <Bip01 R UpperArm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>35.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-12.0</Bone_Shift>
+                </Bip01 R UpperArm>
+    
+                <Bip01 L UpperArm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>35.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-12.0</Bone_Shift>
+                </Bip01 L UpperArm>
+                
+                <Bip01 R Forearm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>7.7</Bone_Radius>
+                    <Bone_Length>40.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-32.0</Bone_Shift>
+                </Bip01 R Forearm>
+    
+                <Bip01 L Forearm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>7.7</Bone_Radius>
+                    <Bone_Length>40.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-32.0</Bone_Shift>
+                </Bip01 L Forearm>
+                
+                <Bip01 R Hand>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>6.0</Bone_Radius>
+                    <Bone_Length>26.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 R Hand>
+                
+                <Bip01 L Hand>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>6.0</Bone_Radius>
+                    <Bone_Length>20.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>12.5</Bone_Shift>
+                </Bip01 L Hand>
+                
+                <Bip01 Spine1>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                    <Bone_Length>44.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-20.0</Bone_Shift>
+                </Bip01 Spine1>
+                
+                <Bip01 Pelvis>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>21.5</Bone_Radius>
+                    <Bone_Length>37.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-5.0</Bone_Shift>
+                </Bip01 Pelvis>
+                
+                <Bip01 Spine>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>7.0</Bone_Radius> <!-- this is the weird angled one -->
+                    <Bone_Length>40.0</Bone_Length>
+                </Bip01 Spine>
+                
+                <Bip01 R Thigh>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>10.5</Bone_Radius>
+					<Bone_Length>49.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>15.0</Bone_Shift>
+                </Bip01 R Thigh>
+    
+                <Bip01 L Thigh>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>10.5</Bone_Radius>
+					<Bone_Length>49.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>15.0</Bone_Shift>
+                </Bip01 L Thigh>
+                
+                <Bip01 R Calf>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>58.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-38.0</Bone_Shift>
+                </Bip01 R Calf>
+    
+                <Bip01 L Calf>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>58.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-38.0</Bone_Shift>
+                </Bip01 L Calf>
+                
+                <Bip01 R Foot>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>8.0</Bone_Length>
+                    <Bone_Shift>30.0</Bone_Shift>
+                </Bip01 R Foot>
+                
+                <Bip01 L Foot>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>8.0</Bone_Length>
+                    <Bone_Shift>30.0</Bone_Shift>
+                </Bip01 L Foot>
+                
+            </BoneDescriptor>
+        </TYPE_0>
+    
+        <!-- Type 1 : Hybrid -->
+        <TYPE_1>
+            <Physics_Height>180.0</Physics_Height>
+            <Physics_Radius>50.0</Physics_Radius>
+            <AICollisionRadius>120.0</AICollisionRadius>
+		    <LadderOffset>90.0</LadderOffset>
+			<LadderTurnDelay>0.8</LadderTurnDelay>	
+ 			<Look_At_Height_Offset>-50.0</Look_At_Height_Offset>
+           <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+    
+            <BoneDescriptor>
+                <!-- Bone description -->
+                <Bip01 Head>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>14.0</Bone_Radius>
+                    <Bone_Length>28.0</Bone_Length>
+                    <Bone_Shift>-1.0</Bone_Shift>
+                </Bip01 Head>
+                
+                <Bip01 Neck>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                </Bip01 Neck>
+    
+                <Bip01 Spine2>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>14.5</Bone_Radius>
+                    <Bone_Length>23.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-2.0</Bone_Shift>
+                </Bip01 Spine2>
+    
+                <Bip01 R UpperArm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>9.0</Bone_Radius>
+                    <Bone_Length>43.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-28.0</Bone_Shift>
+                </Bip01 R UpperArm>
+                                
+                <Bip01 L UpperArm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>9.0</Bone_Radius>
+                    <Bone_Length>43.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-28.0</Bone_Shift>
+                </Bip01 L UpperArm>
+    
+                <Bip01 R Forearm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>9.0</Bone_Radius>
+                    <Bone_Length>40.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-27.0</Bone_Shift>
+                </Bip01 R Forearm>
+    
+                <Bip01 L Forearm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>9.0</Bone_Radius>
+                    <Bone_Length>40.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-27.0</Bone_Shift>
+                </Bip01 L Forearm>
+    
+                <Bip01 R Hand>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>8.0</Bone_Radius>
+                    <Bone_Length>23.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>12.5</Bone_Shift>
+                </Bip01 R Hand>
+                
+                <Bip01 L Hand>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>8.0</Bone_Radius>
+                    <Bone_Length>23.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>12.5</Bone_Shift>
+                </Bip01 L Hand>
+                
+                <Bip01 Spine1>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>29.0</Bone_Radius>
+                    <Bone_Length>43.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-23.0</Bone_Shift>
+                </Bip01 Spine1>
+                 
+                 <Bip01 Pelvis>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>27.0</Bone_Radius>
+                    <Bone_Length>46.0</Bone_Length>
+                </Bip01 Pelvis>
+                
+                <Bip01 Spine>		<!-- this is the weird angled one -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>10.0</Bone_Length>
+                </Bip01 Spine>
+    
+                <Bip01 R Thigh>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>13.4</Bone_Radius>
+					<Bone_Length>57.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 R Thigh>    
+                
+                <Bip01 L Thigh>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>13.4</Bone_Radius>
+					<Bone_Length>57.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 L Thigh>
+                
+                <Bip01 R Calf>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>10.5</Bone_Radius>
+                    <Bone_Length>60.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-40.0</Bone_Shift>
+                </Bip01 R Calf>
+ 
+                <Bip01 L Calf>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>10.5</Bone_Radius>
+                    <Bone_Length>60.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-40.0</Bone_Shift>
+                </Bip01 L Calf>
+    
+                <Bip01 R Foot>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>11.5</Bone_Radius>
+                    <Bone_Length>9.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>40.0</Bone_Shift>
+                </Bip01 R Foot>
+    
+                <Bip01 L Foot>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>11.5</Bone_Radius>
+                    <Bone_Length>9.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>40.0</Bone_Shift>
+                </Bip01 L Foot>
+                
+            </BoneDescriptor>
+        </TYPE_1>
+        
+        <!-- Type 2 : DeepOne -->
+        <TYPE_2>
+            <Physics_Height>190.0</Physics_Height>
+            <Physics_Radius>70.0</Physics_Radius>
+            <AICollisionRadius>100.0</AICollisionRadius>
+			<LadderOffset>100.0</LadderOffset>
+			<LadderTurnDelay>0.8</LadderTurnDelay>	
+ 			<Look_At_Height_Offset>0.0</Look_At_Height_Offset>
+           <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+    
+            <BoneDescriptor>
+                <!-- Bone description -->
+                <Bip01 Head>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>19.0</Bone_Radius>
+                    <Bone_Length>28.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 Head>
+                
+                <Bip01 Neck>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                </Bip01 Neck>
+    
+                <Bip01 Spine2>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>22.0</Bone_Radius>
+                    <Bone_Length>55.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-4.0</Bone_Shift>
+                </Bip01 Spine2>
+    
+                <Bip01 R UpperArm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>16.0</Bone_Radius>
+                    <Bone_Length>74.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-26.0</Bone_Shift>
+                </Bip01 R UpperArm>
+                                
+                <Bip01 L UpperArm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>16.0</Bone_Radius>
+                    <Bone_Length>74.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-26.0</Bone_Shift>
+                </Bip01 L UpperArm>
+    
+                <Bip01 R Forearm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>13.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-8.0</Bone_Shift>
+                </Bip01 R Forearm>
+    
+                <Bip01 L Forearm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>13.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-8.0</Bone_Shift>
+                </Bip01 L Forearm>
+    
+                <Bip01 R Hand>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>16.5</Bone_Radius>
+                    <Bone_Length>38.5</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>8.0</Bone_Shift>
+                </Bip01 R Hand>
+                
+                <Bip01 L Hand>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>16.5</Bone_Radius>
+                    <Bone_Length>38.5</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>8.0</Bone_Shift>
+                </Bip01 L Hand>
+                
+                <Bip01 Spine1>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>42.0</Bone_Radius>
+                    <Bone_Length>54.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-23.0</Bone_Shift>
+                </Bip01 Spine1>
+                 
+                 <Bip01 Pelvis>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>31.0</Bone_Radius>
+                    <Bone_Length>47.0</Bone_Length>
+                </Bip01 Pelvis>
+                
+                <Bip01 Spine>		<!-- this is the weird angled one -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>30.0</Bone_Radius>
+                    <Bone_Length>34.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-10.0</Bone_Shift>
+                </Bip01 Spine>
+    
+                <Bip01 R Thigh>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>16.5</Bone_Radius>
+					<Bone_Length>61.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 R Thigh>    
+                
+                <Bip01 L Thigh>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>16.5</Bone_Radius>
+					<Bone_Length>61.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 L Thigh>
+                
+                <Bip01 R Calf>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>13.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-55.0</Bone_Shift>
+                </Bip01 R Calf>
+ 
+                <Bip01 L Calf>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>13.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-55.0</Bone_Shift>
+                </Bip01 L Calf>
+    
+                <Bip01 R Foot>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>15.5</Bone_Radius>
+                    <Bone_Length>13.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>40.0</Bone_Shift>
+                </Bip01 R Foot>
+    
+                <Bip01 L Foot>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>15.5</Bone_Radius>
+                    <Bone_Length>13.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>40.0</Bone_Shift>
+                </Bip01 L Foot>
+                
+            </BoneDescriptor>
+        </TYPE_2>
+    
+        <!-- Type 3 : Flying Polyp -->
+        <TYPE_3>
+            <Physics_Height>300.0</Physics_Height>
+            <Physics_Radius>90.0</Physics_Radius>
+            <AICollisionRadius>100.0</AICollisionRadius>
+			<LadderOffset>100.0</LadderOffset>
+			<LadderTurnDelay>0.8</LadderTurnDelay>	
+  			<Look_At_Height_Offset>0.0</Look_At_Height_Offset>
+	    <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+    
+            <BoneDescriptor>
+                <!-- Bone description -->
+    
+                <Bip01 Head>				
+                    <Body_Part>0</Body_Part>			<!-- the head (suprisingly)-->
+                    <Bone_Radius>145.0</Bone_Radius>
+                    <Bone_Length>270.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-145.0</Bone_Shift>
+                </Bip01 Head>
+                
+                <Bip01 R Finger0>				
+                    <Body_Part>1</Body_Part>			<!-- top of main mouth -->
+                    <Bone_Radius>40.0</Bone_Radius>
+                    <Bone_Length>80.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>110.0</Bone_Shift>
+                </Bip01 R Finger0>
+                
+                <Bip01 L Finger0>						<!-- bottom of main mouth -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>30.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>30.0</Bone_Shift>
+                </Bip01 L Finger0>
+                
+                <Bip01 L Finger4>						<!-- second mouth down -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>50.0</Bone_Radius>
+                    <Bone_Length>130.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>150.0</Bone_Shift>
+                </Bip01 L Finger4>
+                
+                <Bip01>							
+                    <Body_Part>1</Body_Part>			<!-- neck -->
+                    <Bone_Radius>95.0</Bone_Radius>
+                    <Bone_Length>240.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>0.0</Bone_Shift>
+                </Bip01>
+    
+                <Bip01 R Finger4>						<!-- third mouth -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>70.0</Bone_Radius>
+                    <Bone_Length>140.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-50.0</Bone_Shift>
+                </Bip01 R Finger4>
+    
+                <Bip01 Spine>					
+                    <Body_Part>1</Body_Part>			<!-- middle-ish going sideways -->
+                    <Bone_Radius>135.0</Bone_Radius>
+                    <Bone_Length>110.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-60.0</Bone_Shift>
+                </Bip01 Spine>
+                
+                <Bip01 L Finger1>				
+                    <Body_Part>1</Body_Part>			<!-- just above tail -->
+                    <Bone_Radius>70.0</Bone_Radius>
+                    <Bone_Length>196.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>55.0</Bone_Shift>
+                </Bip01 L Finger1>
+                     
+                <Bip01 Spine1>				
+                    <Body_Part>1</Body_Part>			<!-- tail -->
+                    <Bone_Radius>103.0</Bone_Radius>
+                    <Bone_Length>400.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-200.0</Bone_Shift>
+                </Bip01 Spine1>
+                
+                <Bip01 R Hand>					
+                    <Body_Part>1</Body_Part>			<!-- right tentacle-ish -->
+                    <Bone_Radius>60.0</Bone_Radius>
+                    <Bone_Length>130.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>15.0</Bone_Shift>
+                </Bip01 R Hand>
+                
+            </BoneDescriptor>
+        </TYPE_3>
+        
+        <!-- Type 4 : Father Dagon -->
+        <TYPE_4>
+            <Physics_Height>1900.0</Physics_Height>
+            <Physics_Radius>900.0</Physics_Radius>
+            <AICollisionRadius>1000.0</AICollisionRadius>
+			<LadderOffset>100.0</LadderOffset>
+			<LadderTurnDelay>0.8</LadderTurnDelay>	
+ 			<Look_At_Height_Offset>0.0</Look_At_Height_Offset>
+           <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+    
+            <BoneDescriptor>
+                <!-- Bone description -->
+    
+                <Bip01dagon Head>				<!-- doesn't seem to be used -->
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>220.0</Bone_Radius>
+                    <Bone_Length>300.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-320.0</Bone_Shift>
+                </Bip01dagon Head>
+    
+                <Bip01dagon Neck>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>220.0</Bone_Radius>
+                    <Bone_Length>350.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>160.0</Bone_Shift>
+                </Bip01dagon Neck>
+        
+                <Bip01dagon Spine2>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>440.0</Bone_Radius>
+                    <Bone_Length>500.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-470.0</Bone_Shift>
+                </Bip01dagon Spine2>
+        
+                <Bip01dagon Spine1>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>440.0</Bone_Radius>
+                    <Bone_Length>440.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-300.0</Bone_Shift>
+                </Bip01dagon Spine1>
+                
+                <Bip01dagon Spine>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>440.0</Bone_Radius>
+                    <Bone_Length>440.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-250.0</Bone_Shift>
+                </Bip01dagon Spine>
+                
+                <Bip01dagon Pelvis>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>500.0</Bone_Radius>
+                    <Bone_Length>200.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>50.0</Bone_Shift>
+                </Bip01dagon Pelvis>
+                
+                <Bip01dagon R UpperArm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>380.0</Bone_Radius>
+                    <Bone_Length>260.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-150.0</Bone_Shift>
+                </Bip01dagon L UpperArm>
+                
+                <Bip01dagon L UpperArm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>380.0</Bone_Radius>
+                    <Bone_Length>260.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-150.0</Bone_Shift>
+                </Bip01dagon L UpperArm>
+    
+                <Bip01dagon R Forearm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>180.0</Bone_Radius>
+                    <Bone_Length>930.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>0.0</Bone_Shift>
+                </Bip01dagon R Forearm>
+    
+                <Bip01dagon L Forearm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>180.0</Bone_Radius>
+                    <Bone_Length>930.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>0.0</Bone_Shift>
+                </Bip01dagon L Forearm>
+    
+                <Bip01dagon R Hand>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>160.0</Bone_Radius>
+                    <Bone_Length>540.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-700.0</Bone_Shift>
+                </Bip01dagon R Hand>
+    
+                <Bip01dagon L Hand>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>160.0</Bone_Radius>
+                    <Bone_Length>540.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-700.0</Bone_Shift>
+                </Bip01dagon L Hand>
+                        
+            </BoneDescriptor>
+        </TYPE_4>
+        
+        <!-- Type 5 - Deep One Sorcerer -->
+        <TYPE_5>
+            <Physics_Height>190.0</Physics_Height>
+            <Physics_Radius>70.0</Physics_Radius>
+            <AICollisionRadius>100.0</AICollisionRadius>
+			<LadderOffset>100.0</LadderOffset>
+			<LadderTurnDelay>0.8</LadderTurnDelay>	
+ 			<Look_At_Height_Offset>-50.0</Look_At_Height_Offset>
+           <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+       
+            <BoneDescriptor>
+                <!-- Bone description -->
+                <Bip01 Head>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>16.0</Bone_Radius>
+                    <Bone_Length>40.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>6.0</Bone_Shift>
+                </Bip01 Head>
+                
+                <Bip01 Neck>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                </Bip01 Neck>
+    
+                <Bip01 Spine2>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                    <Bone_Length>36.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>12.0</Bone_Shift>
+                </Bip01 Spine2>
+    
+                <Bip01 R UpperArm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>13.0</Bone_Radius>
+                    <Bone_Length>68.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-26.0</Bone_Shift>
+                </Bip01 R UpperArm>
+                                
+                <Bip01 L UpperArm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>13.0</Bone_Radius>
+                    <Bone_Length>68.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-26.0</Bone_Shift>
+                </Bip01 L UpperArm>
+    
+                <Bip01 R Forearm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>54.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-5.0</Bone_Shift>
+                </Bip01 R Forearm>
+    
+                <Bip01 L Forearm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>54.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-5.0</Bone_Shift>
+                </Bip01 L Forearm>
+    
+                <Bip01 R Hand>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>12.0</Bone_Radius>
+                    <Bone_Length>36.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>8.0</Bone_Shift>
+                </Bip01 R Hand>
+                
+                <Bip01 L Hand>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>36.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>8.0</Bone_Shift>
+                </Bip01 L Hand>
+                
+                <Bip01 Spine1>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>40.0</Bone_Radius>
+                    <Bone_Length>63.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-45.0</Bone_Shift>
+                </Bip01 Spine1>
+                 
+                 <Bip01 Pelvis>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>34.0</Bone_Radius>
+                    <Bone_Length>58.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-26.0</Bone_Shift>
+                </Bip01 Pelvis>
+                
+                <Bip01 Spine>		<!-- this is the weird angled one -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>30.0</Bone_Radius>
+                    <Bone_Length>34.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-10.0</Bone_Shift>
+                </Bip01 Spine>
+    
+                <Bip01 R Thigh>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+					<Bone_Length>61.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>15.0</Bone_Shift>
+                </Bip01 R Thigh>    
+                
+                <Bip01 L Thigh>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>21.0</Bone_Radius>
+					<Bone_Length>61.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>14.0</Bone_Shift>
+                </Bip01 L Thigh>
+                
+                <Bip01 R Calf>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                    <Bone_Length>86.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-55.0</Bone_Shift>
+                </Bip01 R Calf>
+ 
+                <Bip01 L Calf>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>18.0</Bone_Radius>
+                    <Bone_Length>90.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-55.0</Bone_Shift>
+                </Bip01 L Calf>
+    
+                <Bip01 R Foot>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>15.5</Bone_Radius>
+                    <Bone_Length>13.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>60.0</Bone_Shift>
+                </Bip01 R Foot>
+    
+                <Bip01 L Foot>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>15.5</Bone_Radius>
+                    <Bone_Length>13.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>70.0</Bone_Shift>
+                </Bip01 L Foot>
+                
+            </BoneDescriptor>
+        </TYPE_5>
+    
+    <!-- Type 6 : JOSIAH BENTLEY-->
+        <TYPE_6>
+            <Physics_Height>300.0</Physics_Height>
+            <Physics_Radius>110.0</Physics_Radius>
+            <AICollisionRadius>60.0</AICollisionRadius>
+			<LadderOffset>100.0</LadderOffset>
+			<LadderTurnDelay>0.8</LadderTurnDelay>	
+  			<Look_At_Height_Offset>-20.0</Look_At_Height_Offset>
+            <Orientation_Slow>3.0</Orientation_Slow>
+            <Orientation_Fast>6.0</Orientation_Fast>
+            
+            <BoneDescriptor>
+                <!-- Bone description -->
+                <Bip01 Head>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>14.0</Bone_Radius>
+                    <Bone_Length>33.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>18.0</Bone_Shift>
+                </Bip01 Head>
+                
+                <Bip01 Neck>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>20.0</Bone_Radius>
+                </Bip01 Neck>
+    
+                <Bip01 Spine2>
+                    <Body_Part>0</Body_Part>
+                    <Bone_Radius>22.0</Bone_Radius>
+                    <Bone_Length>35.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-4.0</Bone_Shift>
+                </Bip01 Spine2>
+    
+                <Bip01 R UpperArm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>14.4</Bone_Radius>
+                    <Bone_Length>56.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-27.0</Bone_Shift>
+                </Bip01 R UpperArm>
+                                
+                <Bip01 L UpperArm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>14.4</Bone_Radius>
+                    <Bone_Length>56.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-23.0</Bone_Shift>
+                </Bip01 L UpperArm>
+    
+                <Bip01 R Forearm>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>53.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-5.0</Bone_Shift>
+                </Bip01 R Forearm>
+    
+                <Bip01 L Forearm>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>53.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-5.0</Bone_Shift>
+                </Bip01 L Forearm>
+    
+                <Bip01 R Hand>
+                    <Body_Part>5</Body_Part>
+                    <Bone_Radius>7.0</Bone_Radius>
+                    <Bone_Length>30.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>8.0</Bone_Shift>
+                </Bip01 R Hand>
+                
+                <Bip01 L Hand>
+                    <Body_Part>4</Body_Part>
+                    <Bone_Radius>7.0</Bone_Radius>
+                    <Bone_Length>30.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>8.0</Bone_Shift>
+                </Bip01 L Hand>
+                
+                <Bip01 Spine1>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>32.0</Bone_Radius>
+                    <Bone_Length>42.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-28.0</Bone_Shift>
+                </Bip01 Spine1>
+                 
+                 <Bip01 Pelvis>
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>31.0</Bone_Radius>
+                    <Bone_Length>47.0</Bone_Length>
+                </Bip01 Pelvis>
+                
+                <Bip01 Spine>		<!-- this is the weird angled one -->
+                    <Body_Part>1</Body_Part>
+                    <Bone_Radius>27.0</Bone_Radius>
+                    <Bone_Length>34.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-10.0</Bone_Shift>
+                </Bip01 Spine>
+    
+                <Bip01 R Thigh>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>16.5</Bone_Radius>
+					<Bone_Length>61.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 R Thigh>    
+                
+                <Bip01 L Thigh>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>16.5</Bone_Radius>
+					<Bone_Length>61.0</Bone_Length>
+					<Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>10.0</Bone_Shift>
+                </Bip01 L Thigh>
+                
+                <Bip01 R Calf>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-55.0</Bone_Shift>
+                </Bip01 R Calf>
+ 
+                <Bip01 L Calf>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>11.0</Bone_Radius>
+                    <Bone_Length>70.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>-55.0</Bone_Shift>
+                </Bip01 L Calf>
+    
+                <Bip01 R Foot>
+                    <Body_Part>3</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>10.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>40.0</Bone_Shift>
+                </Bip01 R Foot>
+    
+                <Bip01 L Foot>
+                    <Body_Part>2</Body_Part>
+                    <Bone_Radius>10.0</Bone_Radius>
+                    <Bone_Length>10.0</Bone_Length>
+                    <Bone_Extend>1</Bone_Extend>
+                    <Bone_Shift>40.0</Bone_Shift>
+                </Bip01 L Foot>
+                
+            </BoneDescriptor>
+        </TYPE_6>
+
+    </AI_Character_Type>
+
+
+    <!-- Animation settings have been moved to AnimSettings.xml -->
+    
+</AI_Settings>

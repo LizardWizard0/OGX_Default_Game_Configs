@@ -1,0 +1,672 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+
+loaddlg male1.dlg
+loaddlg male3.dlg
+
+SetDefaultSurface 08_13fnttop.sur
+
+/// MUSIC ///
+
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_sighting_02.wav Tension
+AddMusic m_sighting_03.wav Tension
+AddMusic m_tension_02.wav Tension 
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_victory_03.wav Battle
+AddMusic m_victory_04.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_13_lp.wav  m_battle_12_win.wav  m_battle_13_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+startMusicManager
+
+/// GLOBAL ACTORS ///
+
+actor Qui A_Qui-Gon_01
+
+/// GLOBAL VARS ///
+
+int QuiCanContinue 0                /// CONNECTS "QUIFIGHTS" WITH "LOADPARTC" ///
+
+///////////////////////
+/// BEGIN FUNCTIONS ///
+///////////////////////
+
+/// QUI FUNCTIONS ///
+
+function "StrongArm" (actor Gumby, int GumbyDamage)
+{
+    childscript "LoopDaLoop"
+    {
+        waituntildamagedby Gumby Qui
+        deducthitpoints Gumby GumbyDamage
+        loop
+    }
+    
+    waituntilkilled Gumby
+    endfunction
+}
+
+/// ENEMY FUNCTIONS ///
+
+function "RuntoNodeControl" (Actor Roadrunner, Node goto_Roadrunner)
+{
+	takepartialcontrolof Roadrunner
+	runtonodeandwait Roadrunner goto_Roadrunner
+    returncontrolto Roadrunner
+    addpatrolstate roadrunner
+}
+
+/// ALARM FUNCTIONS ///
+
+function "RaiseTheAlarm" (actor Commander, actor alarm_Commander, node goto_Commander)
+{
+    int ObiHasNudged_Alarm 0
+    
+    childscript "ObiNudges"
+    {
+        child waituntilnudgedby alarm_Commander obi
+        child waituntildamaged alarm_Commander
+        waitforany
+        
+        set ObiHasNudged_Alarm 1
+    }
+    
+    waituntilsees Commander Obi 10.0
+    
+    childscript "TerminateAlarmMode"
+    {
+        waituntilequal ObiHasNudged_Alarm 1
+        endscript "RaiseTheRoof"
+        ReturnControlTo Commander
+    }
+    
+    childscript "CommanderFailsafe"
+    {
+        waituntilkilled Commander
+        endscript "RaiseTheRoof"
+    }
+    
+    childscript "RaiseTheRoof"
+    {
+        if (= ObiHasNudged_Alarm 0)
+        {
+            takecontrolof Commander
+            runtonodeandwait Commander goto_Commander
+            turntonodeorientationandwait Commander goto_Commander
+            
+            if (= ObiHasNudged_Alarm 0)
+            {
+                PlayGesture Commander typing 10
+                pause 3.0
+                SayLineNonPositional Commander "/BattleDroidInfantry6_12/Send reinforcements!"
+                nudge Commander alarm_Commander
+                ReturnControlTo Commander
+            }
+            else
+            {
+                ReturnControlTo Commander
+            }
+        }
+    }
+    waitforall
+}
+
+function "CallingAllCars" (actor BackUp, actor alarm_BackUp, node goto_BackUp)
+{
+    waituntilnudged alarm_BackUp
+    
+    script "AlarmOn"
+    {
+        PlayAudioCueandwait alarm_BackUp PointSoundOneshot_01
+        loop
+    }
+    
+    childscript "AlarmOff"
+    {
+        waituntilkilled alarm_BackUp
+        endscript "AlarmOn"
+    }
+    childscript "BackUpActions"
+    {
+        takepartialcontrolof BackUp
+        runtonodeandwait BackUp goto_BackUp
+        returncontrolto BackUp
+        addpatrolstate BackUp
+    }
+    waitforall
+}
+
+/////////////////////
+/// END FUNCTIONS ///
+/////////////////////
+
+setmissioncritical Qui
+
+script "Checkpoint01" 20
+{
+	SetStartPosition 0
+    waituntilenteredregion obi RGN_QuiFights
+    removegroup 20
+    SetStartPosition 1
+    Save
+}
+/*
+script "LoadPartA"
+{
+    waituntilenteredregion obi RGN_Load_L03_8a
+
+    begincutscene
+    CameraTrack camera_leveltransitionA Obi
+    walktonode Obi goto_loadA
+    FadeDownandWait
+    EndCutScene
+    
+    setstartposition 0
+    
+    nextpart L03_8a
+}
+*/
+script "LoadPartC"
+{
+    waituntilequal QuiCanContinue 1
+    
+    waituntilstateactivated qui Idle
+	 PlayMusic Victory
+	 StartMusicManager
+    
+    takecontrolof Qui
+    lookat Qui Obi
+    sayline Qui "/Qui-Gon_540/Whew.  Those droids were a nuisance."
+    sayline qui "/Qui-Gon_1130/Follow Me!"
+    stopactions Qui
+    runtonodeandwait qui goto_qui_helpernode
+    runtonodeandwait Qui goto_waitforobi
+    
+    waituntilnear Qui Obi 2.0
+    
+    begincutscene
+    
+    CameraTrack camera_leveltransitionC Qui
+    
+    opendoor A_03_8_door01_01
+    
+    childscript "QuiThroughDoor" 
+    {
+        sayline qui "/Qui-Gon_1130/Follow Me!"
+        walktonodeandwait qui goto_loadC
+    }        
+    childscript "ObiFollows"
+    {
+        pause 0.5
+        walktonodeandwait obi goto_loadC
+    }
+    
+    pause 2.0
+    
+    fadedownandwait
+    endcutscene
+
+    nextpart L03_8c
+}
+
+script "InvincibleForceFields"
+{
+    invincibilityon A_5-5_ff_generator_01
+    invincibilityon A_5-5_ff_generator_07
+}
+
+//////////////////
+/// BEGIN MAIN ///
+//////////////////
+
+/// SOLDIERS FIGHTING BADS ///
+
+function "GetItOn" (actor PunchingBag, region RGN_PunchingBag)
+{
+    invincibilityon PunchingBag    
+    waituntilenteredregion obi RGN_PunchingBag
+    invincibilityoff PunchingBag
+    clearaiboundary PunchingBag
+}
+
+script "FirstEncounter" 1
+{
+    actor Naboo01 A_naboo-soldier_2_01
+    actor Naboo02 A_naboo-soldier_3_01
+    
+    call GetItOn (Naboo01, RGN_FirstEncounter)
+    call GetItOn (Naboo02, RGN_FirstEncounter)
+    call GetItOn (A_Battledroid-Security_08, RGN_FirstEncounter)
+    call GetItOn (A_Battledroid-Security_09, RGN_FirstEncounter)
+    call GetItOn (A_Battledroid-Security_10, RGN_FirstEncounter)
+    
+    childscript "Naboo01assist"
+    {
+        waituntilnear Naboo01 Obi 5.0
+        saylineandcontinue Naboo01 "/male1_669/Jedi, are  we ever glad to see you"
+        followstate Naboo01 Obi 5.0
+    }
+    childscript "Naboo02assist"
+    {
+        waituntilnear Naboo02 Obi 5.0
+        saylineandcontinue Naboo02 "/male3_531/Thank goodness you're here, Jedi!"
+        followstate Naboo02 Obi 5.0
+    } 
+    waitforall
+}
+
+script "CommanderAlarm01" 2
+{
+    call RaiseTheAlarm (A_Battledroid-Commander_02, A_5-3_alarm_01, goto_alarm01)
+}
+
+script "Group03_Enemies" 3
+{
+    setpatroltypes A_Battledroid-Infantry_04 2
+    setpatroltypes A_Battledroid-Infantry_10 2
+    setpatroltypes A_Battledroid-Infantry_11 2
+    setpatroltypes A_Battledroid-Infantry_12 2
+    setpatroltypes A_Battledroid-Infantry_13 2
+}
+
+script "RespondToAlarm01" 3
+{  
+    call CallingAllCars (A_Battledroid-Infantry_04, A_5-3_alarm_01, goto_alarm01)
+    call CallingAllCars (A_Battledroid-Infantry_10, A_5-3_alarm_01, goto_alarm01)
+    call CallingAllCars (A_Battledroid-Infantry_11, A_5-3_alarm_01, goto_alarm01)
+    call CallingAllCars (A_Battledroid-Infantry_12, A_5-3_alarm_01, goto_alarm01)
+    call CallingAllCars (A_Battledroid-Infantry_13, A_5-3_alarm_01, goto_alarm01)
+    
+    call CallingAllCars (A_Battledroid-Infantry_04, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_10, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_11, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_12, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_13, A_5-3_alarm_03, goto_alarm03)
+}
+
+script "CommanderAlarm02" 4
+{
+    setpatroltypes A_Battledroid-Commander_05 3
+    call RaiseTheAlarm (A_Battledroid-Commander_05, A_5-3_alarm_02, goto_alarm02)
+}
+    
+script "Group05_Enemies" 5
+{
+    setpatroltypes A_Battledroid-Infantry_16 2
+    setpatroltypes A_Battledroid-Infantry_17 2
+    setpatroltypes A_Battledroid-Infantry_18 2
+    setpatroltypes A_Battledroid-Infantry_19 2
+    setpatroltypes A_Battledroid-Infantry_20 2
+}
+
+script "RespondToAlarm02" 5
+{  
+    call CallingAllCars (A_Battledroid-Infantry_16, A_5-3_alarm_02, goto_alarm02)
+    call CallingAllCars (A_Battledroid-Infantry_17, A_5-3_alarm_02, goto_alarm02)
+    call CallingAllCars (A_Battledroid-Infantry_18, A_5-3_alarm_02, goto_alarm02)
+    call CallingAllCars (A_Battledroid-Infantry_19, A_5-3_alarm_02, goto_alarm02)
+    call CallingAllCars (A_Battledroid-Infantry_20, A_5-3_alarm_02, goto_alarm02)
+    
+    call CallingAllCars (A_Battledroid-Infantry_16, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_17, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_18, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_19, A_5-3_alarm_03, goto_alarm03)
+    call CallingAllCars (A_Battledroid-Infantry_20, A_5-3_alarm_03, goto_alarm03)
+}
+
+script "CommanderAlarm03" 6
+{
+    setpatroltypes A_Battledroid-Commander_01 3 2
+    call RaiseTheAlarm (A_Battledroid-Commander_01, A_5-3_alarm_03, goto_alarm03)
+}
+    
+/// SECOND BRIDGE MELEE PATROLS ///
+
+script "Group07_Enemies" 7
+{
+    actor Mace02 A_AssassinDroid-Mace_02
+    takepartialcontrolof Mace02
+    waituntilenteredregion obi RGN_Mace01
+    runtonodeandwait Mace02 goto_mace01
+    returncontrolto Mace02
+    setpatroltypes Mace02 1
+}
+
+script "Group08_Enemies" 8
+{
+    setpatroltypes A_AssassinDroid-Mace_05 3
+}
+
+script "Group09_Enemies" 9
+{
+    setpatroltypes A_Battledroid-Sniper_01 3
+}
+
+script "Group10_Enemies" 10
+{
+    setpatroltypes A_Battledroid-Sniper_02 1
+}
+
+script "Group11_Enemies" 11
+{
+    setpatroltypes A_Battledroid-Infantry_15 2
+    setpatroltypes A_Battledroid-Infantry_14 1
+}
+
+script "Group12_Enemies" 12
+{
+    setpatroltypes A_Battledroid-Sniper_03 2
+    setpatroltypes A_Battledroid-Security_03 1
+    setpatroltypes A_Battledroid-Security_11 1
+    setpatroltypes A_Battledroid-Security_12 1
+}
+
+//////////////////////
+/// BEGIN HOSTAGE1 ///
+//////////////////////
+
+int Captive01GrenadesOn 0
+
+script "Group13_Enemies" 13
+{
+    actor Captive01 A_Naboo_Civilian_Male_1_01
+    
+    script "Hostage1"
+    {
+        actor Captor01 A_AssassinDroid-Mace_04
+        actor Commander04 A_Battledroid-Commander_04
+        
+        SetHostageSituation Captive01 Captor01 Commander04
+        SetHostageAlertDistance Commander04 8.0
+        SetHostageAlertDistance Captor01 8.0
+    
+        setpatroltypes Commander04 1
+        
+        waituntilstateactivated Captive01 BeHostage
+        waituntilstateshutdown Captive01 BeHostage
+        set Captive01GrenadesOn 1
+    }
+    
+    script "GiveObiGrenades_Captive01"
+    {
+        waituntilequal Captive01GrenadesOn 1
+        waituntilnudgedby Captive01 Obi
+        takecontrolof Captive01
+        addinventoryitem obi equipbadgrenadecon.dsc
+        sayline Captive01 "Here are more grenades."
+        returncontrolto Captive01
+        loop
+    }
+}
+
+////////////////////
+/// END HOSTAGE1 ///
+////////////////////
+
+///////////////////////////////
+/// BEGIN QUI PRELUDE FIGHT ///
+///////////////////////////////
+
+Actor Melee05 A_AssassinDroid-Sword_03
+Actor Melee06 A_AssassinDroid-Sword_04
+
+call strongarm (Melee05, 200)
+call strongarm (Melee06, 200)
+
+script "QuiFights"
+{
+    takecontrolof Melee05
+    takecontrolof Melee06
+    takecontrolof Qui
+
+    invincibilityon Qui
+    invincibilityon Melee05
+    invincibilityon Melee06
+       
+    waituntilenteredregion obi RGN_QuiFights
+
+    StopMusicManager
+    PlayBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+
+    forcetargetandattack Melee05 Qui
+    forcetargetandattack Melee06 Obi
+        
+    returncontrolto Qui
+    
+    childscript "Melee05Returns"
+    {
+        invincibilityoff Melee05
+        pause 3.0
+        forcetargetandattackoff Melee05
+        returncontrolto Melee05
+    }
+    
+    childscript "Melee06Returns"
+    {
+        invincibilityoff Melee06
+        pause 20.0
+        forcetargetandattackoff Melee06
+        returncontrolto Melee06
+    }
+    
+    childscript "QuiContinueCondition"
+    {
+        child waituntilkilled Melee05
+        child waituntilkilled Melee06
+        waitforall
+        set QuiCanContinue 1
+    }
+    
+    waitforall
+}
+
+/////////////////////////////
+/// END QUI PRELUDE FIGHT ///
+/////////////////////////////
+
+//////////////////////////////
+/// BEGIN GROUPING SCRIPTS ///
+//////////////////////////////
+
+function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+/// EXPLORATION MARKER COUNT ///
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 32)
+
+/// ENEMY COUNT ///
+
+script "GroupCount01" 1
+{
+    int NumKilled_Group01 0
+    
+    function "RemoveGroupCount01" (actor Groupie01)
+    {
+        waituntilkilled Groupie01
+        increment NumKilled_Group01 1
+    }
+    
+    call RemoveGroupCount01 (A_naboo-soldier_2_01)
+    call RemoveGroupCount01 (A_naboo-soldier_3_01)
+    call RemoveGroupCount01 (A_Battledroid-Security_08)
+    call RemoveGroupCount01 (A_Battledroid-Security_09)
+    call RemoveGroupCount01 (A_Battledroid-Security_10)
+    
+    waituntilequal NumKilled_Group01 3
+    removegroup 1
+}
+
+script "GroupCount02" 2
+{
+    waituntilkilled A_Battledroid-Commander_02
+    removegroup 2
+}
+
+script "GroupCount03" 3
+{
+    int NumKilled_Group03 0
+    
+    function "RemoveGroupCount03" (actor Groupie03)
+    {
+        waituntilkilled Groupie03
+        increment NumKilled_Group03 1
+    }
+    
+    call RemoveGroupCount03 (A_Battledroid-Infantry_04)
+    call RemoveGroupCount03 (A_Battledroid-Infantry_10)
+    call RemoveGroupCount03 (A_Battledroid-Infantry_11)
+    call RemoveGroupCount03 (A_Battledroid-Infantry_12)
+    call RemoveGroupCount03 (A_Battledroid-Infantry_13)
+    
+    waituntilequal NumKilled_Group03 3
+    removegroup 3
+}
+
+script "GroupCount04" 4
+{
+    waituntilkilled A_Battledroid-Commander_05
+    removegroup 4
+}
+
+script "GroupCount05" 5
+{
+    int NumKilled_Group05 0
+    
+    function "RemoveGroupCount05" (actor Groupie05)
+    {
+        waituntilkilled Groupie05
+        increment NumKilled_Group05 1
+    }
+    
+    call RemoveGroupCount05 (A_Battledroid-Infantry_16)
+    call RemoveGroupCount05 (A_Battledroid-Infantry_17)
+    call RemoveGroupCount05 (A_Battledroid-Infantry_18)
+    call RemoveGroupCount05 (A_Battledroid-Infantry_19)
+    call RemoveGroupCount05 (A_Battledroid-Infantry_20)
+    
+    waituntilequal NumKilled_Group05 3
+    removegroup 5
+}
+
+script "GroupCount06" 6
+{
+    waituntilkilled A_Battledroid-Commander_01
+    removegroup 6
+}
+
+script "GroupCount07" 7
+{
+    waituntilkilled A_AssassinDroid-Mace_02
+    removegroup 7
+}
+
+script "GroupCount08" 8
+{
+    waituntilkilled A_AssassinDroid-Mace_05
+    removegroup 8
+}
+
+script "GroupCount09" 9
+{
+    waituntilkilled A_Battledroid-Sniper_01
+    removegroup 9
+}
+
+script "GroupCount10" 10
+{
+    waituntilkilled A_Battledroid-Sniper_02
+    removegroup 10
+}
+
+script "GroupCount11" 11
+{
+    int NumKilled_Group11 0
+    
+    function "RemoveGroupCount11" (actor Groupie11)
+    {
+        waituntilkilled Groupie11
+        increment NumKilled_Group11 1
+    }
+    
+    call RemoveGroupCount11 (A_Battledroid-Infantry_14)
+    call RemoveGroupCount11 (A_Battledroid-Infantry_15)
+    
+    waituntilequal NumKilled_Group11 2
+    removegroup 11
+}
+
+script "GroupCount12" 12
+{
+    int NumKilled_Group12 0
+    
+    function "RemoveGroupCount12" (actor Groupie12)
+    {
+        waituntilkilled Groupie12
+        increment NumKilled_Group12 1
+    }
+    
+    call RemoveGroupCount12 (A_Battledroid-Sniper_03)
+    call RemoveGroupCount12 (A_Battledroid-Security_03)
+    call RemoveGroupCount12 (A_Battledroid-Security_11)
+    call RemoveGroupCount12 (A_Battledroid-Security_12)
+    
+    waituntilequal NumKilled_Group12 2
+    removegroup 12
+}
+
+script "GroupCount13" 13
+{
+    int NumKilled_Group13 0
+    
+    function "RemoveGroupCount13" (actor Groupie13)
+    {
+        waituntilkilled Groupie13
+        increment NumKilled_Group13 1
+    }
+    
+    call RemoveGroupCount13 (A_Naboo_Civilian_Male_1_01)
+    call RemoveGroupCount13 (A_AssassinDroid-Mace_04)
+    call RemoveGroupCount13 (A_Battledroid-Commander_04)
+    
+    waituntilequal NumKilled_Group13 2
+    removegroup 13
+}
+
+////////////////////////////
+/// END GROUPING SCRIPTS ///
+////////////////////////////
+
+

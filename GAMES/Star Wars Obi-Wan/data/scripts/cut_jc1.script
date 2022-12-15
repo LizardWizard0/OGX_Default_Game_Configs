@@ -1,0 +1,110 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor MaceWindu A_DuelMaceWindu_01
+Actor QuiGon A_Qui-Gon_01
+Actor Yoda	A_Yoda_civilian_01
+
+UnEquipWeapon	MaceWindu
+UnEquipWeapon	QuiGon
+
+// TakeControlOf has a slight delay in it, so do these concurrently to avoid problems.
+
+Child TakeControlOf	MaceWindu
+Child TakeControlOf	QuiGon
+Child TakeControlOf	Yoda
+
+WaitForAll
+BeginCutScene
+
+CameraFixed First
+
+Pause 0 5
+
+SetAnimTableIndex MaceWindu 1
+SetAnimTableIndex QuiGon 1
+SetAnimTableIndex Yoda 1
+
+UnEquipWeapon	Obi
+Pause 0 5
+
+SetAnimTableIndex Obi 2
+Pause 0 5
+
+PlayAnimation Obi human_cut-jc1_obi_masterpose.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc1_mace_masterpose.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc1_qui_masterpose.anim 1.0 0.0
+PlayAnimation Yoda yad_cut-jc1_yoda_masterpose.anim 1.0 0.0
+
+Pause 0 5
+
+FadeUp
+
+PlayFlourish cut_jc1_m.wav
+
+PlayAnimation Obi human_cut-jc1_obi1_156shot1.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc1_qui1_156shot1.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc1_mace1_156shot1.anim 1.0 0.0
+
+Pause 2
+
+// MaceWindu_202 = MWCSx036.wav
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_202/ We have identified the group that attacked you as the Black Heth. According to the authorities they are a group of wanted criminals, who up to this point have been involved in petty crime. This sudden escalation in their criminal activity is most concerning."  //macewindu.dlg
+
+Pause 3 5
+
+CameraOff
+CameraFixed Second
+
+PlayAnimation MaceWindu human_cut-jc1_mace97_251shot2.anim 1.0 0.0
+
+Pause 4 26
+
+// Show Yoda.
+PlayAnimation Yoda yad_cut-jc1_yoda252_401shot3.anim 2.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Third
+
+Pause 4 28
+
+PlayAnimation Obi human_cut-jc1_obi402_569shot4.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc1_mace402_569shot4.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Fourth
+
+// Obi-Wan_203 = OBCSx037.wav
+SayLineNonPositionalAndContinue Obi "/Obi-Wan_203/ Masters, I felt something behind their attack.  Something more complicated, sinister..."  //obi.dlg
+
+Pause 5 16
+
+PlayAnimation Obi human_cut-jc1_obi570_719shot5.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc1_qui570_719shot5.anim 1.0 0.0
+Pause 0 1
+CameraOff
+CameraFixed Fifth
+
+// Qui-Gon_1103 = QGCSx742.wav
+SayLineNonPositionalAndContinue QuiGon "/Qui-Gon_1103/ Then you must prepare yourself Obi Wan. Let us proceed to the Trial Arena" //QuiGon.dlg
+
+Pause 4 0
+
+FadeDownAndWait 1
+PreEndCutScene  // If the player hits the start button, it will jump to here
+
+// Better do this before call to NextLevel, because the NextLevel command deletes this script!
+
+FadeDown 0  // Force the a full fade to black even if the player hits the start button
+
+SetAnimTableIndex Obi 0  
+SetAnimTableIndex MaceWindu 0
+SetAnimTableIndex QuiGon 0
+SetAnimTableIndex Yoda 0
+
+EndCutScene
+
+NextLevel sa_01
+

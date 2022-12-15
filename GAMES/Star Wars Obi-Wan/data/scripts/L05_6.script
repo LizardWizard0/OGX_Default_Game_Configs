@@ -1,0 +1,883 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/// script for L05_6 ///
+// last modified 10-11-01 //
+/// hey Darren and Brendan. Thanks for the work on the script.  Would you guys mind putting slashes at the end of comment? That's how my txt editor parses colors, thanks!///
+
+SetDefaultSurface 02_mtt_ramp.sur
+
+
+actor quig A_Qui-Gon_01
+SetMissionCritical quig
+actor nab5 
+Int snap 1
+
+MissionObjective 1 "/Mission25Objective1/"
+MissionObjective 2 "/Mission25Objective2/"
+MissionTitle "/Mission25Title/Valuable Assistance"
+SetExplorationNum 4
+SetForceUsesNeeded 10
+SetTimeToBeat 240 /// this is a complete guess ///
+
+
+AddBattleLoop  m_battle_12_lp.wav  cut_5_6extro_m.wav  m_battle_12_lose.wav
+
+
+function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+waituntilremoved ExplorationMarker
+removegroup ExplorationMarkerGroup
+}
+
+/// EXPLORATION MARKER COUNT ///
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 2)
+call PowerupRemoval (A_powerupexplorationmarker_02, 3)
+call PowerupRemoval (A_powerupexplorationmarker_03, 4)
+call PowerupRemoval (A_powerupexplorationmarker_04, 5)
+call PowerupRemoval (A_powerupexplorationmarker_05, 6)
+
+script "dummy"
+{
+pause 9999
+}
+
+/// global variables here ///
+Int NumGeneratedGuysAlive 5 // this reflects the number of guys that start in the world //
+Actor queen A_Queen_Amadala_Royal_Outfit_01
+SetTeam queen 3
+InvincibilityOn queen
+MakeResurrectable queen
+Actor res1 A_naboo-resistance3_01
+Actor res2 A_naboo-resistance3_02
+Actor res3 A_naboo-resistance3_03
+Actor res4 A_naboo-resistance3_04
+SetIdleScript A_naboo-resistance3_02 Idle_5_6_guard1.script
+SetIdleScript A_naboo-resistance3_03 Idle_5_6_guard2.script
+SetIdleScript A_naboo-resistance3_04 Idle_5_6_guard3.script
+
+SetHitPoints res1 500
+SetHitPoints res2 500
+SetHitPoints res3 500
+SetHitPoints res4 500
+
+Actor cspd1 A_naboo-starfighterpilotfemale1_01
+Actor cspd2 A_naboo-starfighterpilotfemale1_02
+Actor cspd3 A_naboo-starfighterpilotmale1_01
+Actor cspd4 A_naboo-starfighterpilotmale1_02
+Actor cspd5 A_naboo-starfighterpilotmale1_03
+Actor cspd6 A_naboo-starfighterpilotmale2_01
+Actor cspd7 A_naboo-starfighterpilotmale2_02
+Actor cspd8 A_naboo-starfighterpilotmale2_03
+
+SetTeam cspd1 0
+SetTeam cspd2 0
+SetTeam cspd3 0
+SetTeam cspd4 0
+SetTeam cspd5 0
+SetTeam cspd6 0
+SetTeam cspd7 0
+SetTeam cspd8 0   
+
+InvincibilityOn cspd1
+InvincibilityOn cspd2
+InvincibilityOn cspd3
+InvincibilityOn cspd4
+InvincibilityOn cspd5
+InvincibilityOn cspd6
+InvincibilityOn cspd7
+InvincibilityOn cspd8
+
+LoadDLG  squadleader.dlg
+
+LockDoor A_05_6_door_02
+
+script "dontjump"
+{
+WaitUntilEnteredRegion Obi nab_spd40
+BeginCutScene 
+pause 2
+kill obi
+endcutscene
+}
+
+script "hall_secure1"  // makes the guy in the hall tell obi not to worry about the hall//
+{
+ PlayGesture A_naboo-soldier_01 gunup 20
+setteam A_naboo-soldier_02 0
+TakeControlOf A_naboo-soldier_02
+InvincibilityOn A_naboo-soldier_02
+WaitUntilNear A_naboo-soldier_02 obi 3
+sayline A_naboo-soldier_02 "/SquadLeader_1493/ I have this hall secured Obi-Wan"
+pause 10
+loop
+}
+
+script "hall_secure2" // makes the guy in the hall tell obi not to worry about the hall//
+{
+PlayGesture A_naboo-soldier_02 gunup 20
+setteam A_naboo-soldier_01 0
+TakeControlOf A_naboo-soldier_01
+InvincibilityOn A_naboo-soldier_01
+WaitUntilNear A_naboo-soldier_01 obi 3
+sayline A_naboo-soldier_01 "/SquadLeader_1493/ I have this hall secured Obi-Wan"
+pause 10
+loop
+}
+
+script "qui-gon"  // makes qui stay in the middle of the floor near the console for the duration of the level //
+{
+neverdisableweapon quig
+InvincibilityOn quig
+}  
+
+script "baron_droid1" // this keeps Obi from missing the baron droid and makin the level go on ofrever //
+{
+WaitUntilEnteredRegion obi door_se
+    childscript "dodo"
+    {
+    pause 60
+    TakePartialControlOf A_BaronDroid_01
+    ForceTarget A_BaronDroid_01 obi
+    }
+    child WaitUntilKilled A_BaronDroid_01
+waitforany
+endscript "baron_droid1"
+}
+
+/// begining of elev script function thing ///
+    function "uberelev"  (Actor gen1, Actor gen2, Region killreg, Actor door, Actor elevator, Actor switch)
+    {
+    actor dude1
+    actor dude2
+    PauseRandom 1 4
+
+        childscript "going_good"
+        {
+        PauseScript "fuggedup"
+        WaitUntilLessThan NumGeneratedGuysAlive 7
+        ContinueScript "fuggedup"
+        TriggerUberGenAndWait gen1 dude1 
+        Call "obey" (dude1, h1a, h2a, h3a, h4a, h5a)
+        TriggerUberGenAndWait gen2 dude2
+        Call "obey" (dude2, h1b, h2b, h3b, h4b, h5b)
+        OpenDoorAndWait door 
+        MoveElevatorToFloor elevator 1
+        Pause  5
+        CloseDoorAndWait door 
+        endscript "fuggedup"
+        endscript "elevsafe1"
+        endscript "switchkilled"
+        MoveElevatorToFloor elevator 0
+        }
+    
+        childScript "elevsafe1"
+        {
+        WaitUntilEnteredRegion Obi killreg
+        endscript "going_good"
+        OpenDoorAndWait door
+        MoveElevatorToFloor elevator 1
+        CloseDoorAndWait door 
+        MoveElevatorToFloor elevator 0
+        endscript "switchkilled"
+        endscript "fuggedup"
+        }
+
+        childscript "fuggedup"
+        {
+        pause 45
+        endscript "going_good"
+        kill dude1
+        kill dude2
+        OpenDoorAndWait door 
+        MoveElevatorToFloor elevator 1
+        CloseDoorAndWait door 
+        MoveElevatorToFloor elevator 0
+        WaitUntilArrivedAtKeyFrame elevator 0
+        pause 1
+        endscript "elevsafe1"
+        endscript "switchkilled"
+        }
+        
+        childscript "switchkilled"
+        {
+        WaitUntilKilled switch
+        endfunction
+        }
+    waitforall
+    Loop 
+    }
+///end of elev script function thing ///
+
+/// begining of door function thing ///
+    function "uberdoor"  (Actor gen1, Actor gen2, Actor gen3, Actor gen4, Region killreg, Actor switch, Actor door)
+    {
+    actor dude1
+    actor dude2
+    actor dude3
+    actor dude4
+    PauseRandom 1 3
+    
+        childscript "makedudes"
+        {
+        WaitUntilLessThan NumGeneratedGuysAlive 7
+        TriggerUberGenAndWait gen1 dude1 
+        Call "obey" (dude1, h1a, h2a, h3a, h4a, h5a)
+        pause 1
+        WaitUntilLessThan NumGeneratedGuysAlive 7
+        TriggerUberGenAndWait gen2 dude2
+        Call "obey" (dude2, h1b, h2b, h3b, h4b, h5b)
+        pause 1
+        WaitUntilLessThan NumGeneratedGuysAlive 7
+        TriggerUberGenAndWait gen3 dude3
+        Call "obey" (dude3, h1c, h2c, h3c, h4c, h5c)
+        pause 1
+        WaitUntilLessThan NumGeneratedGuysAlive 7
+        TriggerUberGenAndWait gen4 dude4
+        Call "obey" (dude4, h1d, h2d, h3d, h4d, h5d)
+        endscript "switchkilled"
+        pause 1
+        }
+    
+        childscript "switchkilled"
+        {
+        WaitUntilKilled switch
+        endscript "makedudes"
+        
+            script "safedoor"
+            {
+             pause .5
+             CloseDoorAndWait door
+
+                 if isinregion Obi killreg
+                {
+                ResetScript "safedoor"
+                }
+                
+                if IsNotInRegion Obi Killreg
+                {
+                lockdoor door
+                }
+            }
+         
+        WaitForScriptToEnd "safedoor"   
+        kill dude1
+        kill dude2
+        kill dude3
+        kill dude4
+        endfunction
+        }
+
+    waitforall      
+    Loop 
+    }
+///end of door function thing///
+
+
+
+script "opening_cutscene"  // *** This should be in a group.  Maybe 32?//
+{
+BeginCutScene
+int exitedEarly 1
+Teleport res1 conref
+TakeControlOf res1
+UnEquipWeapon res1
+PlayGesture res1 Typing 10
+fadeup
+PlayFlourish cut_5_6intro_m.wav
+CameraFixed concam1
+pause 2
+CommunicatorMessageAndWait "/SquadLeader_1308/ Obi-wan, we've been discovered! Battledroids are closing in on our position."
+pause 1
+CommunicatorOff
+pause 2
+CameraFixed cutcam1
+OpenDoor A_ForceField_04 // SE Elev //
+InvincibilityOff A_05_6_nab_switch_01
+
+    script "honk1"
+    {
+    PlayAudioCue A_05_6_nab_switch_01 PointSoundOneshot_01
+    pause 1
+        childscript "unhonk1"
+        {
+        WaitUntilKilled A_05_6_nab_switch_01
+        endscript "honk1"
+        }
+    loop
+    }
+
+CommunicatorMessageAndWait "/SquadLeader_715/ A shield has dropped, cut the power to that door!" 
+CommunicatorOff
+Teleport Obi obi1
+pause .1
+
+Set exitedEarly 0
+
+PreEndCutscene
+
+if (= exitedEarly 1)
+{
+	StopMusic  // Stop intro music //
+}
+
+PlayMusicOverlap BattleLoop
+
+Teleport res1 conref
+OpenDoor A_ForceField_04 // SE Elev //
+InvincibilityOff A_05_6_nab_switch_01
+CommunicatorOff
+Teleport Obi obi1
+EndCutScene
+/// end of openeing cut scene ///
+
+// *** We should save so they don't have to watch the cutscene again.//
+// I just wasn't sure if the cutscene did anything that the rest of the level depended on//
+
+//RemoveGroup 32//
+//Save//
+}
+
+
+Script "AlternateOpening"
+{
+	if (IsGroupRemoved 32)
+	{
+		FadeUp
+		PlayMusic BattleLoop
+	}
+}
+
+
+Function "obey" (Actor dude, Node h1, Node h2, Node h3, Node h4, Node h5)
+{
+    script "suicide"
+    {
+    WaitForScriptToEnd "powerthing"
+    pause 3
+    kill dude
+    }
+    
+    Script "EndWhenDead"
+    {
+    WaitUntilKilled dude
+    EndFunction
+    }
+
+    script "snappy1"
+    {
+    WaitUntilEqual snap 1
+    TakePartialControlOf dude .35 false
+    WalkToNode dude h1
+    WaitUntilEnteredRegion dude reg_hold01
+    ReturnControlTo dude
+    SetAIBoundaryAndNode dude reg_hold01 h1
+    //WaitUntilKilled A_05_6_nab_switch_03//
+    }
+    
+    script "snappy2"
+    {
+    WaitUntilEqual snap 2
+    ClearAIBoundary dude
+    TakePartialControlOf dude .35 false
+    WalkToNode dude h2
+    WaitUntilEnteredRegion dude reg_hold02
+    ReturnControlTo dude
+    SetAIBoundaryAndNode dude reg_hold02 h2
+    //WaitUntilKilled A_05_6_nab_switch_05//
+    }
+    
+    script "snappy3"
+    {
+    WaitUntilEqual snap 3
+    ClearAIBoundary dude
+    TakePartialControlOf dude .35 false
+    WalkToNode dude h3
+    WaitUntilEnteredRegion dude reg_hold03
+    ReturnControlTo dude
+    SetAIBoundaryAndNode dude reg_hold03 h3
+    //WaitUntilKilled A_05_6_nab_switch_04//
+    }
+    
+    script "snappy4"
+    {
+    WaitUntilEqual snap 4
+    ClearAIBoundary dude
+    TakePartialControlOf dude .35 false
+    WalkToNode dude h4
+    WaitUntilEnteredRegion dude reg_hold04
+    ReturnControlTo dude
+    SetAIBoundaryAndNode dude reg_hold04 h4
+    //WaitUntilKilled A_05_6_nab_switch_06//
+    }
+    
+    script "snappy5"
+    {
+    WaitUntilEqual snap 5
+    ClearAIBoundary dude
+    TakePartialControlOf dude .35 false
+    WalkToNode dude h5
+    WaitUntilEnteredRegion dude reg_hold05
+    ReturnControlTo dude
+    SetAIBoundaryAndNode dude reg_hold05 h5
+    }
+}
+///end of obey function///
+
+Function  "bad_again" (Actor bad)  //tells the bd's what to do if they break out of the "bad dude" script.//
+{
+    script "suicide"
+    {
+    WaitForScriptToEnd "powerthing"
+    kill bad
+    }
+    
+    childscript "abort2"
+    {
+    WaitUntilKilled bad
+    endfunction "bad_again"
+    }
+WaitUntilStateActivated bad Attack
+WaitUntilStateShutdown bad Attack
+PauseRandom 5 15
+RunToNode bad console
+}
+
+Script  "bads"  // sets up the initial bd's in the level //
+{
+WaitUntilEnteredRegion obi door_se
+SetSeeingDistance A_Battledroid-Security_04 25
+SetSeeingDistance A_Battledroid-Security_05 20
+SetSeeingDistance A_Battledroid-Security_06 20
+SetSeeingDistance A_Battledroid-Security_08 15
+FollowStateDirectional A_Battledroid-Security_04 A_Battledroid-Security_08 2.83 225
+FollowStateDirectional A_Battledroid-Security_05 A_Battledroid-Security_08 2.0 180
+FollowStateDirectional A_Battledroid-Security_06 A_Battledroid-Security_08 2.83 135
+pause 5
+TakePartialControlOf A_Battledroid-Security_08
+WalkToNode A_Battledroid-Security_08 console
+Call  "bad_again" A_Battledroid-Security_04
+Call  "bad_again" A_Battledroid-Security_05
+Call  "bad_again" A_Battledroid-Security_06
+}
+
+Script  "f_field"  //when any of the resistance are at the console this script will run.  as the script runs the shields surrounding the power suplies will drop and the power suply will be vonurable//
+{
+InvincibilityOn A_05_6_nab_switch_01
+InvincibilityOn A_05_6_nab_switch_02
+InvincibilityOn A_05_6_nab_switch_03
+InvincibilityOn A_05_6_nab_switch_04
+InvincibilityOn A_05_6_nab_switch_05
+InvincibilityOn A_05_6_nab_switch_06
+WaitUntilKilled A_05_6_nab_switch_01
+Pause 15
+OpenDoor A_ForceField_03 // SW Elev //
+InvincibilityOff A_05_6_nab_switch_03
+    script "honk3"
+    {
+    PlayAudioCue A_05_6_nab_switch_03 PointSoundOneshot_01
+    pause 1
+        childscript "unhonk3"
+        {
+        WaitUntilKilled A_05_6_nab_switch_03
+        endscript "honk3"
+        }
+    loop
+    }
+CommunicatorMessageAndWait "/SquadLeader_716/ Another shield has dropped, cut the power to that door!" 
+CommunicatorOff
+Pause 10
+WaitUntilKilled A_05_6_nab_switch_03
+Increment snap 1
+Pause 10
+OpenDoor A_ForceField_05 // E door //
+InvincibilityOff A_05_6_nab_switch_05
+    script "honk5"
+    {
+    PlayAudioCue A_05_6_nab_switch_05 PointSoundOneshot_01
+    pause 1
+        childscript "unhonk5"
+        {
+        WaitUntilKilled A_05_6_nab_switch_05
+        endscript "honk5"
+        }
+    loop
+    }
+CommunicatorMessageAndWait "/SquadLeader_716/ Another shield has dropped, cut the power to that door!" 
+CommunicatorOff
+Pause 10
+WaitUntilKilled A_05_6_nab_switch_05
+Increment snap 1
+Pause 10
+OpenDoor A_ForceField_01 // NE Elev //
+InvincibilityOff A_05_6_nab_switch_04
+    script "honk4"
+    {
+    PlayAudioCue A_05_6_nab_switch_04 PointSoundOneshot_01
+    pause 1
+        childscript "unhonk4"
+        {
+        WaitUntilKilled A_05_6_nab_switch_04
+        endscript "honk4"
+        }
+    loop
+    }
+CommunicatorMessageAndWait "/SquadLeader_716/ Another shield has dropped, cut the power to that door!" 
+CommunicatorOff
+Pause 8
+WaitUntilKilled A_05_6_nab_switch_04
+Increment snap 1
+Pause 8
+OpenDoor A_ForceField_06 // W Door //
+InvincibilityOff A_05_6_nab_switch_06
+    script "honk6"
+    {
+    PlayAudioCue A_05_6_nab_switch_06 PointSoundOneshot_01
+    pause 1
+        childscript "unhonk6"
+        {
+        WaitUntilKilled A_05_6_nab_switch_06
+        endscript "honk6"
+        }
+    loop
+    }
+CommunicatorMessageAndWait "/SquadLeader_716/ Another shield has dropped, cut the power to that door!" 
+CommunicatorOff
+Pause 7
+WaitUntilKilled A_05_6_nab_switch_06
+Increment snap 1
+Pause 7
+InvincibilityOff A_05_6_nab_switch_02
+OpenDoorAndWait A_ForceField_02 // NW Elev //
+    script "honk2"
+    {
+    PlayAudioCue A_05_6_nab_switch_02 PointSoundOneshot_01
+    pause 1
+        childscript "unhonk2"
+        {
+        WaitUntilKilled A_05_6_nab_switch_02
+        endscript "honk2"
+        }
+    loop
+    }
+CommunicatorMessageAndWait "/SquadLeader_716/ Another shield has dropped, cut the power to that door!" 
+//EndScript "the_helpers"//
+pause 2
+CommunicatorOff
+/// end of win condition script ///
+}
+
+
+script "badguyz"
+{
+    script "1stguy"
+    {
+    WaitUntilEnteredRegion obi door_se
+    TriggerUberGenAndWait A_z_UberGen_07 dudese2
+    OpenDoorAndWait A_05_6_ElevatorDoor_02
+    MoveElevatorToFloor A_05_6_Elevpltfrm_02 1
+    Pause  5
+    CloseDoorAndWait A_05_6_ElevatorDoor_02
+    MoveElevatorToFloor A_05_6_Elevpltfrm_02 0
+    }
+//BeginScript overflow//
+WaitUntilEnteredRegion obi door_se
+call "uberelev" A_z_UberGen_01, A_z_UberGen_02, reg_kill_all04, A_05_6_ElevatorDoor_01, A_05_6_Elevpltfrm_01, A_05_6_nab_switch_03 // sw_elev //
+pause 5
+call "uberelev" A_z_UberGen_03, A_z_UberGen_31, reg_kill_all02, A_05_6_ElevatorDoor_03, A_05_6_Elevpltfrm_03, A_05_6_nab_switch_02 //nw_elev //
+pause 5
+call "uberelev" A_z_UberGen_14, A_z_UberGen_29, reg_kill_all05, A_05_6_ElevatorDoor_04, A_05_6_Elevpltfrm_04, A_05_6_nab_switch_04 //ne_elev //
+call "uberdoor" A_z_UberGen_05, A_z_UberGen_06, A_z_UberGen_15, A_z_UberGen_16, reg_kill_all01, A_05_6_nab_switch_05, A_05_6_door_03
+call "uberdoor" A_z_UberGen_09, A_z_UberGen_10, A_z_UberGen_11, A_z_UberGen_13, reg_kill_all02, A_05_6_nab_switch_06, A_05_6_door_04
+waitforscripttoend "1stguy"
+call "uberelev" A_z_UberGen_32, A_z_UberGen_07, reg_kill_all03, A_05_6_ElevatorDoor_02, A_05_6_Elevpltfrm_02, A_05_6_nab_switch_01 //se_elev //
+pause 5
+}
+
+//uberdoor(Actor gen1, Actor gen2, Actor gen3, Actor gen4, Region killreg, Actor switch, Actor door)//
+//uberelev(Actor gen1, Actor gen2, Region killreg, Actor door, Actor elevator, Actor switch)//
+
+Function  "ffield" (Actor Dude)  //tells the resistance what to do if it is their turn to man the console//
+{
+//TakeControlOf Dude//
+//RunToNode Dude console //
+//WaitUntilNearNode Dude console 3//
+AddWorkEvent Dude console 60 Typing "/Squadleader_724/Just a little more time!"
+ForceState Dude Work
+ContinueScript "f_field"
+WaitUntilKilled Dude
+PauseScript "f_field"
+}
+
+Script  "the_helpers"  //sets up what the resistance is doing throughout the level//
+{
+PauseScript "f_field"
+WaitUntilEnteredRegion obi door_se
+Call "ffield" res1
+WaitUntilKilled res1
+Call "ffield" res2
+WaitUntilKilled res2
+Call "ffield" res2 
+WaitUntilKilled res3
+Call "ffield" res4
+WaitUntilKilled res4
+//InvincibilityOff queen//
+//SetTeam queen 1//
+//call "ffield" queen//
+//waituntilkilled queen//
+
+    /// failure cut scene ///
+    BeginCutScene
+    CameraFixed deadqueen
+    CommunicatorMessageAndWait "The resistance has been destroyed!" /// revisit may need to be removed ///
+    CommunicatorOff
+    FadeDownAndWait 5
+    EndCutScene
+    FailMission
+}
+
+Function "CountUberGenGuys" (Actor UG)  //this script should track every generated enemy in the level at all times//
+{
+actor dude
+WaitUntilGenerated UG dude
+Increment NumGeneratedGuysAlive 1
+// printint NumGeneratedGuysAlive 
+Call "CountUberGenGuysKilled" dude
+Loop
+}
+
+Function "CountUberGenGuysKilled" (Actor dude)
+{
+WaitUntilKilled dude
+Decrement NumGeneratedGuysAlive 1
+// printint NumGeneratedGuysAlive 
+// println
+}
+
+Script "WaitUntilEveryoneIsDead"  // tells all the ubergens in the level to use the enemy counter//
+{
+Call CountUberGenGuys A_z_UberGen_01 
+Call CountUberGenGuys A_z_UberGen_02 
+Call CountUberGenGuys A_z_UberGen_03 
+Call CountUberGenGuys A_z_UberGen_04 
+Call CountUberGenGuys A_z_UberGen_05 
+Call CountUberGenGuys A_z_UberGen_06 
+Call CountUberGenGuys A_z_UberGen_07 
+Call CountUberGenGuys A_z_UberGen_09 
+Call CountUberGenGuys A_z_UberGen_10 
+Call CountUberGenGuys A_z_UberGen_11 
+Call CountUberGenGuys A_z_UberGen_13 
+Call CountUberGenGuys A_z_UberGen_14 
+Call CountUberGenGuys A_z_UberGen_15 
+Call CountUberGenGuys A_z_UberGen_16 
+Call CountUberGenGuys A_z_UberGen_29 
+Call CountUberGenGuys A_z_UberGen_31 
+Call CountUberGenGuys A_z_UberGen_32 
+Call CountUberGenGuys A_z_UberGen_35 
+
+Call CountUberGenGuysKilled( A_Battledroid-Security_04 )
+Call CountUberGenGuysKilled( A_Battledroid-Security_05 )
+Call CountUberGenGuysKilled( A_Battledroid-Security_06 )
+Call CountUberGenGuysKilled( A_Battledroid-Security_08 )
+Call CountUberGenGuysKilled( A_BaronDroid_01 )
+}
+
+script "finalboss"
+{
+WaitUntilKilled A_05_6_nab_switch_06
+CreateActor starfighterdroid.dsc trumpy1 star1
+CreateActor starfighterdroid.dsc trumpy2 star2
+}
+
+/*
+Script  "overflow"  // this script keeps the total number of enemies in the level to near a specified number, currently 9-10//
+{
+WaitUntilGreaterThan NumGeneratedGuysAlive 10
+pausescript "uberdoor"
+pausescript "uberelev"
+WaitUntilLessThan NumGeneratedGuysAlive 9
+ContinueScript "uberdoor"
+ContinueScript "uberelev"
+Loop
+}
+*/
+
+
+Script "powerthing"
+{
+child     WaitUntilKilled A_05_6_nab_switch_01
+child     WaitUntilKilled A_05_6_nab_switch_02
+child     WaitUntilKilled A_05_6_nab_switch_03
+child     WaitUntilKilled A_05_6_nab_switch_04
+child     WaitUntilKilled A_05_6_nab_switch_05
+child     WaitUntilKilled A_05_6_nab_switch_06
+WaitForAll
+endscript "uberelev"
+endscript "uberdoor"
+}
+
+Script "endcutscene"
+{
+WaitForScriptToEnd "powerthing"
+endscript "the_helpers"
+UnLockDoor A_05_6_door_02
+HudOff
+InvincibilityOn Obi
+SetTeam quig 0
+pause .5
+CommunicatorMessageAndWait "/SquadLeader_718/Great work Obi-Wan! down with the Trade Federation!"
+pause 1
+CommunicatorOff
+
+BeginCutScene
+
+PlayMusic Victory   // *** Is this the right spot?  looks good to me-Dax//
+
+RemoveActor A_PowerupFullHealth_03
+RemoveActor Queen
+CameraFixed cut1
+UnEquipWeapon obi
+UnEquipWeapon quig
+TakeControlOf quig
+InvincibilityOn Obi
+InvincibilityOn Quig
+DisallowAIShooting
+
+TakeControlOf cspd1
+TakeControlOf cspd2
+TakeControlOf cspd3
+TakeControlOf cspd4
+TakeControlOf cspd5
+TakeControlOf cspd6
+TakeControlOf cspd7
+TakeControlOf cspd8
+RunToNode cspd1 csp1
+RunToNode cspd2 csp2
+RunToNode cspd3 csp3
+RunToNode cspd4 csp4
+RunToNode cspd5 csp5
+RunToNode cspd6 csp6
+RunToNode cspd7 csp7
+RunToNode cspd8 csp8
+
+pause 8
+CameraFixed flyoutcam1
+
+RemoveActor A_naboofighterflying_01
+RemoveActor A_naboofighterflying_02
+RemoveActor A_naboofighterflying_03
+RemoveActor A_naboofighterflying_04
+
+RemoveActor cspd1
+RemoveActor cspd2
+RemoveActor cspd3
+RemoveActor cspd4
+RemoveActor cspd5
+RemoveActor cspd6
+RemoveActor cspd7
+RemoveActor cspd8
+
+Actor nab2
+Actor nab3
+Actor nab4
+Actor nab5
+
+TriggerUberGenAndWait A_z_UberGen_22 nab2
+TriggerUberGenAndWait A_z_UberGen_23 nab3
+TriggerUberGenAndWait A_z_UberGen_24 nab4
+TriggerUberGenAndWait A_z_UberGen_25 nab5
+
+///DO NOT DELETE!!!!!!///
+//TAKEN CARE OF BY CALL nabSounds
+
+            SetSplineSpeed nab2 30
+		PlayAudioCue nab2 Idle
+		PlayAudioCue nab2 NSFMove
+		WaitUntilEnteredRegion nab2 nab_spd20
+		PlayAudioCue nab2 NSFThrust
+		SetSplineSpeed nab2 60
+            
+            SetSplineSpeed nab3 15
+		PlayAudioCue nab3 Idle
+		PlayAudioCue nab3 NSFMove
+		WaitUntilEnteredRegion nab3 nab_spd20
+		PlayAudioCue nab3 NSFThrust
+		SetSplineSpeed nab3 60
+            
+
+            SetSplineSpeed nab4 15
+		PlayAudioCue nab4 Idle
+		PlayAudioCue nab4 NSFMove
+		WaitUntilEnteredRegion nab4 nab_spd20
+		PlayAudioCue nab4 NSFThrust
+		SetSplineSpeed nab4 60
+
+            
+            SetSplineSpeed nab5 30
+		PlayAudioCue nab5 Idle
+		PlayAudioCue nab5 NSFMove
+		WaitUntilEnteredRegion nab5 nab_spd20
+		PlayAudioCue nab5 NSFThrust
+		SetSplineSpeed nab5 60
+
+///DO NOT DELETE!!!!!!///
+
+
+//call nabSounds nab2 30 60
+//call nabSounds nab3 15 60
+//call nabSounds nab4 15 60
+//call nabSounds nab5 30 60
+
+
+
+
+
+
+
+
+
+endscript "dummy"
+///end of flyships///
+pause 8
+CameraFixed endcam3
+pause 1
+CreateActor darthmaul.dsc maul maulref
+setteam maul 0
+TakeControlOf maul
+EquipWeapon obi
+EquipWeapon quig
+pause 2
+CameraFixed maulclose
+pause 5
+PreEndCutscene
+AllowAIShooting
+endcutscene
+NextLevel L05_7
+}
+
+Function "nabSounds" (actor nab, int speed1, int speed2)
+{
+	PlayAudioCue nab Idle
+	PlayAudioCue nab NSFMove
+	SetSplineSpeed nab speed1
+	WaitUntilEnteredRegion nab nab_spd20
+	PlayAudioCue nab NSFThrust
+	SetSplineSpeed nab speed2
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

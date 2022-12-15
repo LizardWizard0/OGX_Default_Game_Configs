@@ -1,0 +1,67 @@
+[MenuSettingsAudio]
+OptionLabels[0].Text="MUSIC VOLUME"
+OptionLabels[1].Text="EFFECTS VOLUME"
+OptionLabels[2].Text="VOICE VOLUME"
+OptionLabels[3].Text="PLAY TAUNTS"
+OptionLabels[4].Text="MESSAGE BEEP"
+OptionLabels[5].Text="AUTO-TAUNT"
+OptionLabels[6].Text="MATURE TAUNTS"
+Options[0].Items=("0","1","2","3","4","5","6","7","8","9","10")
+Options[1].Items=("0","1","2","3","4","5","6","7","8","9","10")
+Options[2].Items=("0","1","2","3","4","5","6","7","8","9","10")
+Options[3].Items=("OFF","ON")
+Options[4].Items=("OFF","ON")
+Options[5].Items=("OFF","ON")
+Options[6].Items=("OFF","ON")
+MenuTitle.Text="AUDIO SETTINGS"
+
+[MenuSettingsInput]
+OptionLabels[0].Text="DODGING"
+OptionLabels[1].Text="AUTO AIM"
+OptionLabels[2].Text="LOOK X SENSITIVITY"
+OptionLabels[3].Text="LOOK Y SENSITIVITY"
+OptionLabels[4].Text="INVERT LOOK Y"
+OptionLabels[5].Text="SPRING LOOK Y"
+Options[0].Items=("OFF","ON")
+Options[1].Items=("OFF","ON")
+Options[2].Items=("500","750","1000","1250","1500","1750","2000","2250","2500","2750","3000","3250","3500","3750","4000","4250","4500","4750","5000","5250","5500","5750","6000")
+Options[3].Items=("500","750","1000","1250","1500","1750","2000","2250","2500","2750","3000","3250","3500","3750","4000","4250","4500","4750","5000","5250","5500","5750","6000")
+Options[4].Items=("OFF","ON")
+Options[5].Items=("OFF","ON")
+MenuTitle.Text="INPUT SETTINGS"
+
+[MenuSettingsInputAdvanced]
+PresetOptionLabel.Text="LOOK PRESET"
+PresetOptions.Items=("a","b","c","d")
+OptionLabels[0].Text="LOOK X EXPONENT"
+OptionLabels[1].Text="LOOK X SLOPE"
+OptionLabels[2].Text="LOOK Y EXPONENT"
+OptionLabels[3].Text="LOOK Y SLOPE"
+Options[0].Items=("1.0","2.0","3.0","4.0","5.0","5.0","6.0","7.0","8.0","9.0","10.0")
+Options[1].Items=("0.0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0","1.1","1.2","1.3","1.4","1.5","1.6","1.7","1.8","1.9","2.0")
+Options[2].Items=("1.0","2.0","3.0","4.0","5.0","5.0","6.0","7.0","8.0","9.0","10.0")
+Options[3].Items=("0.0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0","1.1","1.2","1.3","1.4","1.5","1.6","1.7","1.8","1.9","2.0")
+MenuTitle.Text="ADVANCED INPUT SETTINGS (WILL NOT SHIP!!!)"
+
+[MenuSettingsMain]
+Options[0].Blurred.Text="AUDIO"
+Options[0].HelpText="ADJUST MUSIC AND GAME SOUNDS"
+Options[1].Blurred.Text="CONTROLLER"
+Options[1].HelpText="REMAP YOUR CONTROLLER"
+Options[2].Blurred.Text="INPUT"
+Options[2].HelpText="FINE-TUNE YOUR CONTROLLER'S BEHAVIOR"
+Options[3].Blurred.Text="MISC"
+Options[3].HelpText="ADJUST MISCELLANEOUS OPTIONS"
+Options[4].Blurred.Text="LIVE"
+Options[4].HelpText="ADJUST XBOX LIVE OPTIONS"
+MenuTitle.Text="SETTINGS"
+
+[MenuSettingsMisc]
+OptionLabels[0].Text="NO GORE"
+OptionLabels[1].Text="AUTO SWITCH WEAPON"
+OptionLabels[2].Text="VIBRATION"
+Options[0].Items=("OFF","ON")
+Options[1].Items=("OFF","ON")
+Options[2].Items=("OFF","ON")
+MenuTitle.Text="MISCELLANEOUS"
+

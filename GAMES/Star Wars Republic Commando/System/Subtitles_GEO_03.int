@@ -1,0 +1,693 @@
+
+[Subtitles_GEO_03]
+
+SubtitleSound[2928]="CA1G3100"
+SubtitleText[2928]="Clone Advisor 1: An analysis of the data reveals two targets that can cripple the factory's production capablities."
+
+SubtitleSound[2929]="CA1G3101"
+SubtitleText[2929]="Clone Advisor 1: You'll need to take them both out to cut the factory's power."
+
+SubtitleSound[2930]="CA1G3102"
+SubtitleText[2930]="Clone Advisor 1: The first conduit is just outside the control room you are standing in."
+
+SubtitleSound[2931]="CA1G3103"
+SubtitleText[2931]="Clone Advisor 1: The second conduit is at the end of the assembly line on the production floor."
+
+SubtitleSound[2932]="CA1G3104"
+SubtitleText[2932]="Clone Advisor 1: You're heading the wrong direction, Delta."
+
+SubtitleSound[2933]="CA1G3106"
+SubtitleText[2933]="Clone Advisor 1: My readings are unable to find a way across the spire to the factory."
+
+SubtitleSound[2934]="CA1G3107"
+SubtitleText[2934]="Clone Advisor 1: You're going to have to get creative with this one."
+
+SubtitleSound[2935]="CA1G3108"
+SubtitleText[2935]="Clone Advisor 1: You have passed the power conduit."
+
+SubtitleSound[2936]="CA1G3109"
+SubtitleText[2936]="Clone Advisor 1: I'm still reading power to the factory."
+
+SubtitleSound[2937]="CA1G3110"
+SubtitleText[2937]="Clone Advisor 1: Your current position is beyond the target conduit."
+
+SubtitleSound[2938]="CA1G3111"
+SubtitleText[2938]="Clone Advisor 1: I will be providing you with support and tactical information as necessary."
+
+SubtitleSound[2939]="CA1G3112"
+SubtitleText[2939]="Clone Advisor 1: Tactical information will be displayed on your heads up display as holographic projections."
+
+SubtitleSound[2940]="CA1G3113"
+SubtitleText[2940]="Clone Advisor 1: Each holographic projection represents a maneuver that you can assign to a squadmate."
+
+SubtitleSound[2941]="CA1G3114"
+SubtitleText[2941]="Clone Advisor 1: To assign a squadmate to a maneuver press the use command while the hologram is active."
+
+SubtitleSound[2942]="CA1G3115"
+SubtitleText[2942]="Clone Advisor 1: This door is locked.  You will need to destroy the locking mechanism."
+
+SubtitleSound[2943]="CA1G3116"
+SubtitleText[2943]="Clone Advisor 1: My scans indicate multiple hostiles on the other side of this door."
+
+SubtitleSound[2944]="CA1G3117"
+SubtitleText[2944]="Clone Advisor 1: I advise entering and clearing the room quickly by executing a door breach maneuver with your squad."
+
+SubtitleSound[2945]="CA1G3118"
+SubtitleText[2945]="Clone Advisor 1: Once the charge is set, get clear."
+
+SubtitleSound[2946]="CA1G3120"
+SubtitleText[2946]="Clone Advisor 1: Three-Eight, this is a good location to set up a sniper."
+
+SubtitleSound[2947]="CA1G3121"
+SubtitleText[2947]="Clone Advisor 1: Assign a squadmate to that snipe position."
+
+SubtitleSound[2948]="CA1G3122"
+SubtitleText[2948]="Clone Advisor 1: There should be a terminal close to your location that controls power to the shield."
+
+SubtitleSound[2949]="CA1G3123"
+SubtitleText[2949]="Clone Advisor 1: Slice this terminal to lower the shield."
+
+SubtitleSound[2950]="CA1G3132"
+SubtitleText[2950]="Clone Advisor 1: It looks like the only route to the factory is straight through an enemy hot spot."
+
+SubtitleSound[2951]="CA1G3134"
+SubtitleText[2951]="Clone Advisor 1: Readings indicate a passage is at the opposite end of the room."
+
+SubtitleSound[2952]="CA1G3136"
+SubtitleText[2952]="Clone Advisor 1: You should be able to plant a charge and get through."
+
+SubtitleSound[2953]="CA1G3137"
+SubtitleText[2953]="Clone Advisor 1: Stay alert.  I'm reading a sudden surge of activity in your area."
+
+SubtitleSound[2954]="CA1G3138"
+SubtitleText[2954]="Clone Advisor 1: There's an opening at the end of this chamber that you can exit through."
+
+SubtitleSound[2955]="CA1G3139"
+SubtitleText[2955]="Clone Advisor 1: Delta squad, there's an opening at the end of this chamber"
+
+SubtitleSound[2956]="CA1G3140"
+SubtitleText[2956]="Clone Advisor 1: From there you can jump down to the next level."
+
+SubtitleSound[2957]="CA1G3141"
+SubtitleText[2957]="Clone Advisor 1: You should be nearing a large chamber."
+
+SubtitleSound[2958]="CA1G3142"
+SubtitleText[2958]="Clone Advisor 1: Nothing,…. No wait…"
+
+SubtitleSound[2959]="CA1G3143"
+SubtitleText[2959]="Clone Advisor 1: Continue down this path."
+
+SubtitleSound[2960]="CA1G3144"
+SubtitleText[2960]="Clone Advisor 1: There is an opening in the wall at the rear of this chamber.  "
+
+SubtitleSound[2961]="CA1G3145"
+SubtitleText[2961]="Clone Advisor 1: Geonosian elite.  Watch out for their lasers."
+
+SubtitleSound[2962]="CA1G3146"
+SubtitleText[2962]="Clone Advisor 1: You're only a few hundred meters from the factory."
+
+SubtitleSound[2963]="CA1G3147"
+SubtitleText[2963]="Clone Advisor 1: The factory is directly across from your current position, Deltas."
+
+SubtitleSound[2964]="CA1G3148"
+SubtitleText[2964]="Clone Advisor 1: Intelligence suggests you use the vents on the opposite side of the spire to reach the factory"
+
+SubtitleSound[2965]="CA1G3149"
+SubtitleText[2965]="Clone Advisor 1: The factory is at the other end of this ventilation shaft.  Hurry!"
+
+SubtitleSound[2966]="CA1G3150"
+SubtitleText[2966]="Clone Advisor 1: Affirmative, three-eight.  Alpha Wing just took out a class 3 cruiser.  Carry on."
+
+SubtitleSound[2967]="CA1G3151"
+SubtitleText[2967]="Clone Advisor 1: Battle droids are outflanking our surface battalions, Deltas.  Move on to that factory, now!"
+
+SubtitleSound[2968]="D07G3100"
+SubtitleText[2968]="Delta 07: Nice work 62"
+
+SubtitleSound[2969]="D07G3101"
+SubtitleText[2969]="Delta 07: Nice work 40"
+
+SubtitleSound[2970]="D07G3102"
+SubtitleText[2970]="Delta 07: Move, move, move…"
+
+SubtitleSound[2971]="D07G3103"
+SubtitleText[2971]="Delta 07: Clear, go"
+
+SubtitleSound[2972]="D07G3104"
+SubtitleText[2972]="Delta 07: I have the target.  Waiting for snipe order."
+
+SubtitleSound[2973]="D07G3105"
+SubtitleText[2973]="Delta 07: Creepier and creepier…"
+
+SubtitleSound[2974]="D07G3109"
+SubtitleText[2974]="Delta 07: We're a long way from Kamino"
+
+SubtitleSound[2975]="D07G3115"
+SubtitleText[2975]="Delta 07: What was that?"
+
+SubtitleSound[2976]="D07G3116"
+SubtitleText[2976]="Delta 07: We'll get right on that."
+
+SubtitleSound[2977]="D07G3117"
+SubtitleText[2977]="Delta 07: Now I know why you're the leader, sir."
+
+SubtitleSound[2978]="D40G3101"
+SubtitleText[2978]="Delta 40: Nice work 62"
+
+SubtitleSound[2979]="D40G3102"
+SubtitleText[2979]="Delta 40: Nice work 07"
+
+SubtitleSound[2980]="D40G3103"
+SubtitleText[2980]="Delta 40: Move, move, move…"
+
+SubtitleSound[2981]="D40G3104"
+SubtitleText[2981]="Delta 40: Clear, go"
+
+SubtitleSound[2982]="D40G3106"
+SubtitleText[2982]="Delta 40: I have the target.  Waiting for snipe order."
+
+SubtitleSound[2983]="D40G3107"
+SubtitleText[2983]="Delta 40: Creepier and creepier…"
+
+SubtitleSound[2984]="D40G3111"
+SubtitleText[2984]="Delta 40: We're a long way from Kamino"
+
+SubtitleSound[2985]="D62G3100"
+SubtitleText[2985]="Delta 62: Figures."
+
+SubtitleSound[2986]="D62G3101"
+SubtitleText[2986]="Delta 62: Nice work 40"
+
+SubtitleSound[2987]="D62G3102"
+SubtitleText[2987]="Delta 62: Nice work 07"
+
+SubtitleSound[2988]="D62G3103"
+SubtitleText[2988]="Delta 62: Move, move, move…"
+
+SubtitleSound[2989]="D62G3104"
+SubtitleText[2989]="Delta 62: Clear, go"
+
+SubtitleSound[2990]="D62G3106"
+SubtitleText[2990]="Delta 62: Warriors!"
+
+SubtitleSound[2991]="D62G3109"
+SubtitleText[2991]="Delta 62: I have the targets. Moving to snipe position."
+
+SubtitleSound[2992]="D62G3111"
+SubtitleText[2992]="Delta 62: I have the target.  Waiting for snipe order."
+
+SubtitleSound[2993]="D62G3112"
+SubtitleText[2993]="Delta 62: Creepier and creepier…"
+
+SubtitleSound[2994]="D62G3116"
+SubtitleText[2994]="Delta 62: We're a long way from Kamino"
+
+SubtitleSound[2995]="D62G3120"
+SubtitleText[2995]="Delta 62: Whoa!"
+
+SubtitleSound[2996]="D62G3122"
+SubtitleText[2996]="Delta 62: We'll get right on that."
+
+SubtitleSound[2997]="D62G3123"
+SubtitleText[2997]="Delta 62: Now I know why you're the leader, sir."
+
+SubtitleSound[2998]="CA1G3003"
+SubtitleText[2998]="Clone Advisor 1: Intelligence indicates that there are several factories buried deep underground, but they are impenetrable to our large assault forces."
+
+SubtitleSound[2999]="CA1G3005"
+SubtitleText[2999]="Clone Advisor 1: Heat signatures emanating from this spire tell us there is a factory below."
+
+SubtitleSound[3000]="CA1G3004"
+SubtitleText[3000]="Clone Advisor 1: Neutralizing one of these factories will tip the scales in our favor for the surface battle."
+
+SubtitleSound[3001]="CA1G3006"
+SubtitleText[3001]="Clone Advisor 1: Our scanners cannot pinpoint the factory's exact location because of a jamming device located near your current position."
+
+SubtitleSound[3002]="CA1G3007"
+SubtitleText[3002]="Clone Advisor 1: First, disable the jamming device."
+
+SubtitleSound[3003]="CA1G3008"
+SubtitleText[3003]="Clone Advisor 1: Once that is accomplished, I can guide you to your main target."
+
+SubtitleSound[3004]="CA1G3009"
+SubtitleText[3004]="Clone Advisor 1: Our communica….. will be sporadic …. you're inside, so you're on your own until tha….. ... is disabled."
+
+SubtitleSound[3005]="D62G3105"
+SubtitleText[3005]="Delta 62: Signal lost, sir.  Too bad, it was just getting interesting."
+
+SubtitleSound[3006]="D62G3001"
+SubtitleText[3006]="Delta 62: I think we're gonna need a bigger squad."
+
+SubtitleSound[3007]="D07G3001"
+SubtitleText[3007]="Delta 07: Or bigger guns."
+
+SubtitleSound[3008]="D40G3001"
+SubtitleText[3008]="Delta 40: Cut the chatter, squad."
+
+SubtitleSound[3009]="D38G3001"
+SubtitleText[3009]="Delta 38: We got our orders, let's move out!"
+
+SubtitleSound[3010]="D38G3100"
+SubtitleText[3010]="Delta 38: Focus on your objectives, deltas.  This isn't a training holo."
+
+SubtitleSound[3011]="D07G3002"
+SubtitleText[3011]="Delta 07: Right behind you, squad leader."
+
+SubtitleSound[3012]="D62G3002"
+SubtitleText[3012]="Delta 62: Will you look at this place…"
+
+SubtitleSound[3013]="CA1G3011"
+SubtitleText[3013]="Clone Advisor 1: Nice work. Communications coming back on line."
+
+SubtitleSound[3014]="CA1G3012"
+SubtitleText[3014]="Clone Advisor 1: Initial scans show a large complex one level below your current location."
+
+SubtitleSound[3015]="D62G3003"
+SubtitleText[3015]="Delta 62: Look out!"
+
+SubtitleSound[3016]="D40G3002"
+SubtitleText[3016]="Delta 40: Flank the new target!"
+
+SubtitleSound[3017]="D07G3003"
+SubtitleText[3017]="Delta 07: Find cover!"
+
+SubtitleSound[3018]="CA1G3017"
+SubtitleText[3018]="Clone Advisor 1: Vent shafts leading to the factory are located on the opposite side of the spire from your location."
+
+SubtitleSound[3019]="CA1G3018"
+SubtitleText[3019]="Clone Advisor 1: This vent leads directly to factory's main ventilation system."
+
+SubtitleSound[3020]="D40G3003"
+SubtitleText[3020]="Delta 40: Accessing computer."
+
+SubtitleSound[3021]="D07G3005"
+SubtitleText[3021]="Delta 07: Transmitting link to advisor."
+
+SubtitleSound[3022]="D40G3004"
+SubtitleText[3022]="Delta 40: Transmitting link to advisor."
+
+SubtitleSound[3023]="D62G3005"
+SubtitleText[3023]="Delta 62: Accessing computer."
+
+SubtitleSound[3024]="D62G3006"
+SubtitleText[3024]="Delta 62: Transmitting link to advisor…like stealing molmar from a jugbat."
+
+SubtitleSound[3025]="CA1G3023"
+SubtitleText[3025]="Clone Advisor 1: There are two main conduits supplying power to the droid assembly."
+
+SubtitleSound[3026]="D38G3008"
+SubtitleText[3026]="Delta 38: This shield is blocking our path."
+
+SubtitleSound[3027]="D38G3009"
+SubtitleText[3027]="Delta 38: Shields down, let's blow that jamming device"
+
+SubtitleSound[3028]="D38G3010"
+SubtitleText[3028]="Delta 38: Three-eight to Advisor:  power is cut."
+
+SubtitleSound[3029]="D40G3007"
+SubtitleText[3029]="Delta 40: What happened? Power's back on?"
+
+SubtitleSound[3030]="D40G3008"
+SubtitleText[3030]="Delta 40: Enemies pouring in, squad. Look alive!"
+
+SubtitleSound[3031]="D62G3009"
+SubtitleText[3031]="Delta 62: Look out, they're everywhere!"
+
+SubtitleSound[3032]="D07G3008"
+SubtitleText[3032]="Delta 07: These bugs are everywhere!"
+
+SubtitleSound[3033]="D38G3013"
+SubtitleText[3033]="Delta 38: Three-eight to advisor."
+
+SubtitleSound[3034]="D38G3014"
+SubtitleText[3034]="Delta 38: We need to get out of here fast."
+
+SubtitleSound[3035]="D38G3015"
+SubtitleText[3035]="Delta 38: What's your location?"
+
+SubtitleSound[3036]="CA1G3029"
+SubtitleText[3036]="Clone Advisor 1: Right here…"
+
+SubtitleSound[3037]="D62G3010"
+SubtitleText[3037]="Delta 62: Nice of you to show up."
+
+SubtitleSound[3038]="CA1G3030"
+SubtitleText[3038]="Clone Advisor 1: There is a ledge at the end of this shaft."
+
+SubtitleSound[3039]="CA1G3031"
+SubtitleText[3039]="Clone Advisor 1: You can rappel to the lower level from that ledge."
+
+SubtitleSound[3040]="D38G3017"
+SubtitleText[3040]="Delta 38: That's our exit.  Let's move out."
+
+SubtitleSound[3041]="CA1G3034"
+SubtitleText[3041]="Clone Advisor 1: Reading multiple lifeforms converging on your location."
+
+SubtitleSound[3042]="D07G3009"
+SubtitleText[3042]="Delta 07: I don't see them…"
+
+SubtitleSound[3043]="D38G3018"
+SubtitleText[3043]="Delta 38: They've set up a barricade on the bridge!"
+
+SubtitleSound[3044]="D38G3019"
+SubtitleText[3044]="Delta 38: Let's get a charge set on that crate!"
+
+SubtitleSound[3045]="D38G3020"
+SubtitleText[3045]="Delta 38: No way across..."
+
+SubtitleSound[3046]="D38G3021"
+SubtitleText[3046]="Delta 38: Looks like we're gonna have to make our own bridge."
+
+SubtitleSound[3047]="CA1G3037"
+SubtitleText[3047]="Clone Advisor 1: Find a computer and upload the factory schematics."
+
+SubtitleSound[3048]="CA1G3038"
+SubtitleText[3048]="Clone Advisor 1: I will analyze them for a weakness."
+
+SubtitleSound[3049]="CA1G3039"
+SubtitleText[3049]="Clone Advisor 1: Use this console to access the factory's main computer."
+
+SubtitleSound[3050]="CA1G3040"
+SubtitleText[3050]="Clone Advisor 1: I should have access to unlock doors once a link is established."
+
+SubtitleSound[3051]="D07G3106"
+SubtitleText[3051]="Delta 07: Phidna resin. Explosive stuff.  Stupid bugs."
+
+SubtitleSound[3052]="D40G3108"
+SubtitleText[3052]="Delta 40: Phinda resin. Explosive stuff."
+
+SubtitleSound[3053]="D40G3109"
+SubtitleText[3053]="Delta 40: That smell.  They're harvesting Phinda Resin."
+
+SubtitleSound[3054]="D40G3110"
+SubtitleText[3054]="Delta 40: Highly explosive in its raw form."
+
+SubtitleSound[3055]="D62G3113"
+SubtitleText[3055]="Delta 62: Phinda resin. Explosive stuff.  "
+
+SubtitleSound[3056]="D62G3114"
+SubtitleText[3056]="Delta 62: Smell that?  They're harvesting Phinda Resin."
+
+SubtitleSound[3057]="D62G3115"
+SubtitleText[3057]="Delta 62: Highly explosive in its raw form."
+
+SubtitleSound[3058]="D62G3107"
+SubtitleText[3058]="Delta 62: Where'd it go!?"
+
+SubtitleSound[3059]="D07G3107"
+SubtitleText[3059]="Delta 07: That smell.  They're harvesting Phinda Resin."
+
+SubtitleSound[3060]="D07G3108"
+SubtitleText[3060]="Delta 07: Highly explosive in its raw form.  Stupid bugs."
+
+SubtitleSound[3061]="D38G3023"
+SubtitleText[3061]="Delta 38: I hear machinery below.  Looks like we are on the right track."
+
+SubtitleSound[3062]="D07G3113"
+SubtitleText[3062]="Delta 07: That means we get to kill some more bugs, right?"
+
+SubtitleSound[3063]="D62G3121"
+SubtitleText[3063]="Delta 62: That means we're almost done, right?"
+
+SubtitleSound[3064]="D38G3116"
+SubtitleText[3064]="Delta 38: Keep moving down towards the factory, Deltas."
+
+SubtitleSound[3065]="D38G3139"
+SubtitleText[3065]="Delta 38: That doesn't sound good."
+
+SubtitleSound[3066]="D38G3138"
+SubtitleText[3066]="Delta 38: Must be the battle upstairs."
+
+SubtitleSound[3067]="D62G3011"
+SubtitleText[3067]="Delta 62: This place gives me the creeps"
+
+SubtitleSound[3068]="D07G3110"
+SubtitleText[3068]="Delta 07: Ugh, haven't these bugs ever heard of bathing?"
+
+SubtitleSound[3069]="D40G3112"
+SubtitleText[3069]="Delta 40: Ugh.  What's that smell?"
+
+SubtitleSound[3070]="D62G3117"
+SubtitleText[3070]="Delta 62: Shh.  You smell that?"
+
+SubtitleSound[3071]="D07G3111"
+SubtitleText[3071]="Delta 07: What are these things?"
+
+SubtitleSound[3072]="D40G3113"
+SubtitleText[3072]="Delta 40: What are these things?"
+
+SubtitleSound[3073]="D62G3118"
+SubtitleText[3073]="Delta 62: What are these strange egg-like things?"
+
+SubtitleSound[3074]="D62G3110"
+SubtitleText[3074]="Delta 62: Waddaya know, they ARE eggs!"
+
+SubtitleSound[3075]="D07G3112"
+SubtitleText[3075]="Delta 07: Just when you think they can't get any more disgusting..."
+
+SubtitleSound[3076]="D38G3117"
+SubtitleText[3076]="Delta 38: Let's give 'em a wide berth, just to be safe."
+
+SubtitleSound[3077]="D40G3114"
+SubtitleText[3077]="Delta 40: Looks like we're in some sort of Geonosian birthing chamber, gentlemen…"
+
+SubtitleSound[3078]="D62G3119"
+SubtitleText[3078]="Delta 62: I'd hate to run into the Nuna that laid these…"
+
+SubtitleSound[3079]="D38G3024"
+SubtitleText[3079]="Delta 38: Don't get too close to those eggs."
+
+SubtitleSound[3080]="CA1G3127"
+SubtitleText[3080]="Clone Advisor 1: You shou… fin.. controls to slice….near b.."
+
+SubtitleSound[3081]="D38G3025"
+SubtitleText[3081]="Delta 38: The jamming device is shielded."
+
+SubtitleSound[3082]="D38G3119"
+SubtitleText[3082]="Delta 38: There's the jamming device, but its shielded."
+
+SubtitleSound[3083]="D38G3118"
+SubtitleText[3083]="Delta 38: The jamming device is interfering with my visuals…"
+
+SubtitleSound[3084]="D38G3120"
+SubtitleText[3084]="Delta 38: There's a computer console at the opposite end of this room."
+
+SubtitleSound[3085]="D40G3105"
+SubtitleText[3085]="Delta 40: Sir, there's a shield control at the end of this room."
+
+SubtitleSound[3086]="D07G3114"
+SubtitleText[3086]="Delta 07: I've spotted a control panel near the end of this room."
+
+SubtitleSound[3087]="D62G3108"
+SubtitleText[3087]="Delta 62: Shield controls spotted near the back of the cave, sir."
+
+SubtitleSound[3088]="D38G3121"
+SubtitleText[3088]="Delta 38: It must control the sheild to the jamming device."
+
+SubtitleSound[3089]="D38G3101"
+SubtitleText[3089]="Delta 38: We'll need to shut down that shield before we can disable that jamming device."
+
+SubtitleSound[3090]="D38G3102"
+SubtitleText[3090]="Delta 38: They must have rerouted power through the other conduit."
+
+SubtitleSound[3091]="D38G3026"
+SubtitleText[3091]="Delta 38: The controls to that shield must be near by."
+
+SubtitleSound[3092]="D38G3127"
+SubtitleText[3092]="Delta 38: Let's return to the jamming device and plant that bomb"
+
+SubtitleSound[3093]="D38G3125"
+SubtitleText[3093]="Delta 38: Lets get that shield down before more Geonosians show up."
+
+SubtitleSound[3094]="D38G3104"
+SubtitleText[3094]="Delta 38: The shield is down.  Let's get a charge planted on that jamming device."
+
+SubtitleSound[3095]="D38G3128"
+SubtitleText[3095]="Delta 38: Place a charge on the jamming device."
+
+SubtitleSound[3096]="D38G3129"
+SubtitleText[3096]="Delta 38: 4-0 get a charge placed on the jamming device."
+
+SubtitleSound[3097]="D38G3130"
+SubtitleText[3097]="Delta 38: 6-2 place a charge on the jamming device."
+
+SubtitleSound[3098]="D38G3131"
+SubtitleText[3098]="Delta 38: 0-7 set a charge on the jamming device."
+
+SubtitleSound[3099]="D38G3123"
+SubtitleText[3099]="Delta 38: I can see a exit behind the jamming device."
+
+SubtitleSound[3100]="D38G3028"
+SubtitleText[3100]="Delta 38: Let's get that shield down so we can place the charge."
+
+SubtitleSound[3101]="CA1G3125"
+SubtitleText[3101]="Clone Advisor 1: According to my scans, the opening behind the jamming device leads to a large chamber."
+
+SubtitleSound[3102]="CA1G3126"
+SubtitleText[3102]="Clone Advisor 1: From the chamber, there are several passageways that lead to the factory."
+
+SubtitleSound[3103]="CA1G3131"
+SubtitleText[3103]="Clone Advisor 1: I'm reading a labyrinth of passages below.  "
+
+SubtitleSound[3104]="CA1G3130"
+SubtitleText[3104]="Clone Advisor 1: Return to the jamming device.  There is an exit in the wall behind it."
+
+SubtitleSound[3105]="CA1G3129"
+SubtitleText[3105]="Clone Advisor 1: You can exit this room through an opening behind the jamming device."
+
+SubtitleSound[3106]="CA1G3128"
+SubtitleText[3106]="Clone Advisor 1: Make your way through the opening behind the jamming device."
+
+SubtitleSound[3107]="CA1G3041"
+SubtitleText[3107]="Clone Advisor 1: …jamming device…. Sti….acitv…."
+
+SubtitleSound[3108]="CA1G3042"
+SubtitleText[3108]="Clone Advisor 1: …oing  th… wrong wa….."
+
+SubtitleSound[3109]="D38G3031"
+SubtitleText[3109]="Delta 38: That jamming device has to be destroyed before we can get through here."
+
+SubtitleSound[3110]="CA1G3043"
+SubtitleText[3110]="Clone Advisor 1: I can guide you from there."
+
+SubtitleSound[3111]="CA1G3044"
+SubtitleText[3111]="Clone Advisor 1: Continue down this shaft."
+
+SubtitleSound[3112]="CA1G3045"
+SubtitleText[3112]="Clone Advisor 1: Delta squad, take cover now!"
+
+SubtitleSound[3113]="D38G3034"
+SubtitleText[3113]="Delta 38: Take cover!  Sonic turret at the end of the bridge!"
+
+SubtitleSound[3114]="D38G3035"
+SubtitleText[3114]="Delta 38: Let's blow this spire."
+
+SubtitleSound[3115]="D38G3036"
+SubtitleText[3115]="Delta 38: That will do nicely."
+
+SubtitleSound[3116]="CA1G3046"
+SubtitleText[3116]="Clone Advisor 1: Nice work, deltas."
+
+SubtitleSound[3117]="D38G3037"
+SubtitleText[3117]="Delta 38: There's the first power conduit."
+
+SubtitleSound[3118]="D38G3200"
+SubtitleText[3118]="Delta 38: No place to set a bomb on the target here."
+
+SubtitleSound[3119]="D38G3039"
+SubtitleText[3119]="Delta 38: Lets get down to the lower level."
+
+SubtitleSound[3120]="D38G3040"
+SubtitleText[3120]="Delta 38: There's the second power conduit."
+
+SubtitleSound[3121]="D38G3041"
+SubtitleText[3121]="Delta 38: Planting a charge here should do the trick."
+
+SubtitleSound[3122]="D38G3042"
+SubtitleText[3122]="Delta 38: There's our target on the other side of the shield."
+
+SubtitleSound[3123]="CA1G3200"
+SubtitleText[3123]="Clone Advisor 1: Um, Three-Eight, you've passed your target."
+
+SubtitleSound[3124]="CA1G3048"
+SubtitleText[3124]="Clone Advisor 1: Get that power off line."
+
+SubtitleSound[3125]="CA1G3049"
+SubtitleText[3125]="Clone Advisor 1: Good work, deltas."
+
+SubtitleSound[3126]="CA1G3050"
+SubtitleText[3126]="Clone Advisor 1: I am reading a complete factory shut down."
+
+SubtitleSound[3127]="CA1G3201"
+SubtitleText[3127]="Clone Advisor 1: The factory's still on-line!"
+
+SubtitleSound[3128]="CA1G3052"
+SubtitleText[3128]="Clone Advisor 1: Get back there and finish the job."
+
+SubtitleSound[3129]="CA1G3202"
+SubtitleText[3129]="Clone Advisor 1: You've passed the target, Three-Eight."
+
+SubtitleSound[3130]="CA1G3054"
+SubtitleText[3130]="Clone Advisor 1: Take out that power source!"
+
+SubtitleSound[3131]="CA1G3203"
+SubtitleText[3131]="Clone Advisor 1: Delta Squad, your brothers in Theta Squad failed their objective."
+
+SubtitleSound[3132]="D62G3124"
+SubtitleText[3132]="Delta 62: What happened?  Couldn't hack it?"
+
+SubtitleSound[3133]="CA1G3204"
+SubtitleText[3133]="Clone Advisor 1: Heavy casualties sustained watching YOUR back, Delta.  So, I'm giving you their objective:  Sabotage the droid factory."
+
+SubtitleSound[3134]="CA1G3205"
+SubtitleText[3134]="Clone Advisor 1: This door leads to the factory control room."
+
+SubtitleSound[3135]="CA1G3206"
+SubtitleText[3135]="Clone Advisor 1: The doors are unlocked.  Effect rapid entry and advance to your target."
+
+SubtitleSound[3136]="D38G3201"
+SubtitleText[3136]="Delta 38: Move out, squad.  Let's get out of here."
+
+SubtitleSound[3137]="CA1G3207"
+SubtitleText[3137]="Clone Advisor 1: Updating location to objective tracker."
+
+SubtitleSound[3138]="CA1G3208"
+SubtitleText[3138]="Clone Advisor 1: I am still reading power to the factory"
+
+SubtitleSound[3139]="CA1G3209"
+SubtitleText[3139]="Clone Advisor 1: Delta Squad, the Republic is relying on you to take out that factory."
+
+SubtitleSound[3140]="CA1G3210"
+SubtitleText[3140]="Clone Advisor 1: Check the third position on your Deece.  You'll notice you now have a sniper attachment."
+
+SubtitleSound[3141]="D40G3115"
+SubtitleText[3141]="Delta 40: Lead, looks like a good place for a little sniper action."
+
+SubtitleSound[3142]="D38G3105"
+SubtitleText[3142]="Delta 38: I've got a feeling we've reached the center of the hive."
+
+SubtitleSound[3143]="D38G3106"
+SubtitleText[3143]="Delta 38: Keep moving, Deltas!"
+
+SubtitleSound[3144]="D38G3108"
+SubtitleText[3144]="Delta 38: Cover the ceilings."
+
+SubtitleSound[3145]="D38G3109"
+SubtitleText[3145]="Delta 38: Multiple targets on the bridge"
+
+SubtitleSound[3146]="D38G3110"
+SubtitleText[3146]="Delta 38: Snipe targets."
+
+SubtitleSound[3147]="D38G3111"
+SubtitleText[3147]="Delta 38: Niiice shooting..."
+
+SubtitleSound[3148]="D38G3112"
+SubtitleText[3148]="Delta 38: We've been spotted."
+
+SubtitleSound[3149]="D38G3113"
+SubtitleText[3149]="Delta 38: Good shot 6-2"
+
+SubtitleSound[3150]="D38G3114"
+SubtitleText[3150]="Delta 38: Good shot 4-0"
+
+SubtitleSound[3151]="D38G3115"
+SubtitleText[3151]="Delta 38: Good shot 0-7"
+
+SubtitleSound[3152]="D38G3132"
+SubtitleText[3152]="Delta 38: Keep all quadrants covered. I have a bad feeling about this place."
+
+SubtitleSound[3153]="D38G3133"
+SubtitleText[3153]="Delta 38: We've got a negative visual on the exit."
+
+SubtitleSound[3154]="D38G3134"
+SubtitleText[3154]="Delta 38: I think I can hear the factory beyond this opening."
+
+SubtitleSound[3155]="D38G3135"
+SubtitleText[3155]="Delta 38: Advisor, are you getting any readings here?"
+
+SubtitleSound[3156]="D38G3136"
+SubtitleText[3156]="Delta 38: What in death was that?"
+
+SubtitleSound[3157]="D38G3137"
+SubtitleText[3157]="Delta 38: A well-placed bomb at the bottom of this spire might create a bridge."
+

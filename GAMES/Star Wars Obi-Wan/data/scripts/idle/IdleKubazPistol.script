@@ -1,0 +1,8 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+AddGesture me None 2
+AddGesture me pointforward .5
+AddGesture me palmupleft .5
+//AddGesture me shakehead  //add after fixed
+WaitUntilFinishedGesture me

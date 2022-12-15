@@ -1,0 +1,10 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+AddGesture me None 1
+AddGesture me scratchhead
+AddGesture me none 1
+AddGesture me attractattention
+//AddGesture me none 2
+// add "ort ort" thing
+WaitUntilFinishedGesture me

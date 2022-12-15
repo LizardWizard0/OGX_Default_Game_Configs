@@ -1,0 +1,480 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+LoadDLG Credits.dlg
+
+Child TakeControlOf A_Naboo_gov_official_01
+Child TakeControlOf A_Panaka_01
+Child TakeControlOf A_Queen_Amadala_Royal_Outfit_01
+Child TakeControlOf A_anakin_01
+Child TakeControlOf A_r2_01
+Child TakeControlOf A_tc14_01
+Child TakeControlOf A_wookie_01
+Child TakeControlOf pilot2_06
+
+
+//fadeup
+
+Script "Ship it"
+{
+	BeginCutscene
+
+	int exitedEarly 1
+
+	CameraTrack watchFrom Obi
+	FadeUp
+	PlayFlourish m_hangar.wav
+	
+	ChildScript "Obi talks"
+	{
+		Pause 2
+		SayLine2D Obi "/Obi-Wan_1527/ Master Qui-Gon, I failed you."
+		SayLine2D Obi "/Obi-Wan_1529/ But I won't fail you again.  I will train this boy, to honor you, to honor your name."
+		SayLine2D Obi "/Obi-Wan_1528/ His future is clouded, but I will guide his destiny.  I will raise him to be the most powerful Jedi in the galaxy..."
+		SayLine2D Obi "/Obi-Wan_1530/ I promise you."
+	}
+	ChildScript
+	{
+		Pause 4
+		RunToNode A_anakin_01 onShip
+	}
+	WalkToNodeAndWait Obi onShip
+	FadeDownAndWait
+
+	PreEndCutscene
+	FadeDown 0
+	RemoveActor A_anakin_01
+
+	EndScript "Obi talks"
+	Teleport Obi obi_end
+	// Teleport A_anakin_01 ??
+	EndCutscene
+
+
+	BeginCutscene
+	Pause 1
+	CreditsOn
+	FadeUp 0
+
+	PlayFlourish m_credits.wav
+
+	CreditsPlacard "/Credits2/Game Design" "/Credits3/The Obi X Team"
+	Pause 4
+
+	CreditsPlacard "/Credits5/Director" "/Credits6/Dan Connors"
+	Pause 4
+
+	CreditsPlacardFor3 "/Credits8/Lead Programmer" "/Credits9/Kevin Bruner" "/Credits11/Lead Artist" "/Credits12/Ian Milham" "/Credits14/Lead Animator" "/Credits15/Graham Annable"
+	Pause 5
+
+	CreditsPlacardFor3 "/Credits17/Lead Level Design" "/Credits18/Chris Ross" "/Credits20/Lead Sound Designer" "/Credits21/J. White" "/Credits150/Lead Tester" "/Credits151/Andy Alamano"
+	Pause 5
+
+
+	CreditsAddTitle "/Credits23/Producer"
+	CreditsAddName "/Credits24/Michael Gallo"
+
+
+	CreditsAddHeader "/Credits26/Programming"
+
+	CreditsAddTitle "/Credits37/Artificial Intelligence"
+	CreditsAddName "/Credits38/John Hancock"
+
+	CreditsAddTitle "/Credits40/Cutscene Scripting"
+	CreditsAddName "/Credits41/Charlie Smith"
+
+	CreditsAddTitle "/Credits28/Game Engine"
+	CreditsAddName "/Credits29/Kevin Bruner"
+
+	CreditsAddTitle "/Credits31/Graphics and Visual Effects"
+	CreditsAddName "/Credits32/Mike Malakhov"
+
+	CreditsAddTitle "/Credits43/Physics System"
+	CreditsAddName "/Credits44/Michael Mounier"
+
+	CreditsAddTitle "/Credits34/Scripting Language for Obi-Wan (S.L.O.W.)"
+	CreditsAddName "/Credits35/Brendan Ferguson"
+
+	CreditsAddTitle "/Credits49/Sound Engine"
+	CreditsAddName "/Credits50/Geoff Gates"
+
+	CreditsAddTitle "/Credits46/Sound, Scripting"
+	CreditsAddName "/Credits47/Darren Johnson"
+
+	CreditsAddTitle "/Credits52/Sound Tools"
+	CreditsAddName "/Credits53/Mike Mandel"
+
+
+	CreditsAddHeader "/Credits56/Art"
+
+	CreditsAddTitle "/Credits58/3D Characters"
+	CreditsAddName "/Credits59/Chris Weakley"
+
+	CreditsAddTitle "/Credits61/3D Level Geometry"
+	CreditsAddName "/Credits59/Chris Weakley"
+	CreditsAddName "/Credits263/Christopher Williams"
+	CreditsAddName "/Credits62/Duncan Brown"
+	CreditsAddName "/Credits63/Greg Sarjeant"
+	CreditsAddName "/Credits64/Ian Milham"
+	CreditsAddName "/Credits65/Jeffrey ^QPinecone^Q Sondin-Kung"
+	CreditsAddName "/Credits66/Jeremy War"
+	CreditsAddName "/Credits67/Karin Nestor"
+	CreditsAddName "/Credits124/Michael Cheng"
+	CreditsAddName "/Credits400/Mike Wu"
+	CreditsAddName "/Credits68/Nicholas Harter"
+	CreditsAddName "/Credits69/Xiang Dong Zou"
+
+	CreditsAddTitle "/Credits71/3D Objects"
+	CreditsAddName "/Credits72/Suzanne Onodera"
+	CreditsAddName "/Credits73/Nicholas Harter"
+	CreditsAddName "/Credits74/Karin Nestor"
+
+	CreditsAddTitle "/Credits76/Animation"
+	CreditsAddName "/Credits77/David Bogan "
+	CreditsAddName "/Credits78/Graham Annable"
+
+	CreditsAddTitle "/Credits80/Character Set-up / Teching"
+	CreditsAddName "/Credits81/Chad Morgan"
+
+	CreditsAddTitle "/Credits83/Character Textures"
+	CreditsAddName "/Credits84/Kevin Evans"
+	CreditsAddName "/Credits85/Jason Ethington"
+
+	CreditsAddTitle "/Credits87/Conceptual Art"
+	CreditsAddName "/Credits267/Greg Knight"
+	CreditsAddName "/Credits88/Ian Milham"
+	CreditsAddName "/Credits89/Molly Mendoza"
+	CreditsAddName "/Credits283/Paul Topolos"
+
+	CreditsAddTitle "/Credits91/Level Textures"
+	CreditsAddName "/Credits267/Greg Knight"
+	CreditsAddName "/Credits94/Ian Milham"
+	CreditsAddName "/Credits92/Kim Balestreri"
+	CreditsAddName "/Credits283/Paul Topolos"
+	CreditsAddName "/Credits93/Sean McNally"
+
+	CreditsAddTitle "/Credits96/Object and Level Teching"
+	CreditsAddName "/Credits97/Corrine Wong"
+	CreditsAddName "/Credits98/Nicholas Harter"
+
+	CreditsAddTitle "/Credits100/Object Textures"
+	CreditsAddName "/Credits101/Suzanne Onodera"
+	CreditsAddName "/Credits102/Jason Ethington"
+
+	CreditsAddTitle "/Credits104/Special Effects"
+	CreditsAddName "/Credits105/Mark Manfrey"
+
+	CreditsAddTitle "/Credits107/User Interface Design, Art and Animation"
+	CreditsAddName "/Credits108/George Rodgers"
+
+
+	CreditsAddText "\n"
+	CreditsAddText "/Credits110/Shell screen interface powered by the SECRET LEVEL TOOLS, INC. Player SDK with Macromedia FLASH technology used under license from Macromedia, Inc."
+	CreditsAddText "\n"
+
+
+	CreditsAddHeader "/Credits112/Cutscenes"
+
+	CreditsAddTitle "/Credits114/Animation"
+	CreditsAddName "/Credits115/David Bogan"
+	CreditsAddName "/Credits116/Graham Annable"
+
+	CreditsAddTitle "/Credits118/Scripting"
+	CreditsAddName "/Credits119/Charlie Smith"
+	CreditsAddName "/Credits47/Darren Johnson"
+	CreditsAddName "/Credits120/Duncan Brown"
+	CreditsAddName "/Credits121/Dax Gazaway "
+	CreditsAddName "/Credits122/Jeffrey ^QPinecone^Q Sondin-Kung"
+	CreditsAddName "/Credits123/Jeremy War"
+	CreditsAddName "/Credits124/Michael Cheng"
+	CreditsAddName "/Credits125/Xiang Dong Zou"
+
+
+	CreditsAddHeader "/Credits128/Levels"
+
+	CreditsAddTitle "/Credits130/Level Designers"
+	CreditsAddName "/Credits131/Christopher Ross"
+	CreditsAddName "/Credits132/Dax Gazaway "
+	CreditsAddName "/Credits133/Duncan Brown"
+	CreditsAddName "/Credits134/Greg Sarjeant aka ^QTheed Master^Q"
+	CreditsAddName "/Credits135/Jeffrey ^QPinecone^Q Sondin-Kung"
+	CreditsAddName "/Credits136/Jeremy War"
+	CreditsAddName "/Credits137/Michael Cheng"
+	CreditsAddName "/Credits138/Xiang Dong Zou"
+
+
+	CreditsAddHeader "/Credits140/Production"
+
+	CreditsAddTitle "/Credits142/Assistant Producer"
+	CreditsAddName "/Credits143/Julio Torres"
+
+	CreditsAddTitle "/Credits145/Production Department Assistant"
+	CreditsAddName "/Credits146/Peggy Stok"
+
+
+	CreditsAddHeader "/Credits148/Quality Assurance"
+
+	CreditsAddTitle "/Credits153/Assistant Lead Tester"
+	CreditsAddName "/Credits154/Dave Felton"
+
+	CreditsAddTitle "/Credits156/Testers / Gameplay Consultants"
+	CreditsAddName "/Credits401/Alice Henderson"
+	CreditsAddName "/Credits160/Hugh Moore"
+	CreditsAddName "/Credits157/Jared Sorensen"
+	CreditsAddName "/Credits158/K.C. Coleman"
+	CreditsAddName "/Credits161/Mark Montuya"
+	CreditsAddName "/Credits159/Maximilian Alexander Roghi"
+
+
+	CreditsAddHeader "/Credits163/Sound"
+
+	CreditsAddTitle "/Credits172/Music Editing"
+	CreditsAddName "/Credits173/J. White"
+	CreditsAddName "/Credits174/David Levison"
+	CreditsAddName "/Credits175/Mark Griskey"
+
+	CreditsAddTitle "/Credits165/Sound Designers"
+	CreditsAddName "/Credits166/David Wayne Collins"
+	CreditsAddName "/Credits167/David Levison"
+	CreditsAddName "/Credits168/J. White"
+	CreditsAddName "/Credits169/Jeff Kliment"
+	CreditsAddName "/Credits170/Michael Frayne"
+
+
+	CreditsAddHeader "/Credits177/Voice"
+
+	CreditsAddTitle "/Credits179/Script"
+	CreditsAddName "/Credits180/Dan Connors"
+	CreditsAddName "/Credits181/Ryan Kaufman"
+
+	CreditsAddTitle "/Credits183/Voice Director/Producer"
+	CreditsAddName "/Credits184/Darragh O'Farrell"
+
+	CreditsAddTitle "/Credits186/Voice Editing"
+	CreditsAddName "/Credits187/Will Beckman, lead"
+	CreditsAddName "/Credits188/Cindy Wong"
+	CreditsAddName "/Credits189/Burke Pemberton"
+
+
+	CreditsAddHeader "/Credits191/Voice Cast"
+
+	CreditsAddTitle "/Credits193/Amanda Moody"
+	CreditsAddName "/Credits194/Depa Billaba"
+
+	CreditsAddTitle "/Credits196/Clint Bajakian"
+	CreditsAddName "/Credits197/Bith Band Member"
+	CreditsAddName "/Credits198/Jin'ha Warrior"
+
+	CreditsAddTitle "/Credits200/Gregg Berger"
+	CreditsAddName "/Credits201/Battle droid infantry"
+	CreditsAddName "/Credits202/Male Citizen 2"
+	CreditsAddName "/Credits203/Plo Koon"
+
+	CreditsAddTitle "/Credits205/Grey Delisle"
+	CreditsAddName "/Credits206/Asha"
+	CreditsAddName "/Credits207/Trainstation Announcer"
+	CreditsAddName "/Credits208/Female Citizen 1"
+
+	CreditsAddTitle "/Credits210/James Warwick"
+	CreditsAddName "/Credits211/Qui-Gon Jinn"
+
+	CreditsAddTitle "/Credits213/Jess Harnell"
+	CreditsAddName "/Credits214/Gran Thug"
+	CreditsAddName "/Credits215/Ki-Adi-Mundi"
+	CreditsAddName "/Credits216/Wounded Naboo Soldier"
+
+	CreditsAddTitle "/Credits218/Joe Paulino"
+	CreditsAddName "/Credits219/Naboo Prisoner"
+	CreditsAddName "/Credits220/Coruscant Informant"
+	CreditsAddName "/Credits221/Saesee Tinn"
+
+	CreditsAddTitle "/Credits223/Kevin Michael Richardson"
+	CreditsAddName "/Credits224/Eeth Koth"
+	CreditsAddName "/Credits225/Mace Windu"
+	CreditsAddName "/Credits226/Male Citizen 1"
+
+	CreditsAddTitle "/Credits228/Lewis MacLeod"
+	CreditsAddName "/Credits229/Obi-Wan Kenobi"
+
+	CreditsAddTitle "/Credits231/Masasa"
+	CreditsAddName "/Credits232/Adi Gallia"
+
+	CreditsAddTitle "/Credits234/Matt Levin"
+	CreditsAddName "/Credits235/Anakin"
+
+	CreditsAddTitle "/Credits237/Nick Jamison"
+	CreditsAddName "/Credits238/VS. Battle Announcer"
+	CreditsAddName "/Credits239/Squad Leader"
+	CreditsAddName "/Credits240/Training Robot"
+	CreditsAddName "/Credits241/Rodian Thug"
+	CreditsAddName "/Credits242/Male Citizen 3"
+
+
+	CreditsAddTitle "/Credits244/Voices Recorded at:"
+	CreditsAddText "/Credits245/SMS Studios, Studio City, CA"
+	CreditsAddText "/Credits246/Sound Company, New York, NY"
+	CreditsAddText "/Credits247/LucasArts Entertainment Company"
+
+	CreditsAddText "\n"
+	CreditsAddText "/Credits249/Original Star Wars music composed by John Williams"
+	CreditsAddText "\n"
+	CreditsAddText "/Credits250/(c) Warner-Tamerlane Publishing Corp. & Bantha Music.  All rights administered by Warner-Tamerlane Publishing Corp.  All rights reserved.  Used by permission."
+	CreditsAddText "\n"
+	CreditsAddText "/Credits252/Original Star Wars sound effects by Ben Burtt"
+	CreditsAddText "\n"
+
+
+	CreditsAddHeader "/Credits254/Additional Development"
+
+	CreditsAddTitle "/Credits256/Thanks to the Obi-Wan PC team"
+
+	CreditsAddTitle "/Credits258/Original Obi-Wan PC Design"
+	CreditsAddName "/Credits259/Stephen R. Shaw"
+
+	CreditsAddTitle "/Credits261/Obi-Wan PC Development Team"
+	CreditsAddName "/Credits402/Ashot Melkumov"
+	CreditsAddName "/Credits403/Buddy Hannon"
+	CreditsAddName "/Credits404/Chris Barnhouse"
+	CreditsAddName "/Credits405/Chris Purvis"
+	CreditsAddName "/Credits406/Derek Sakai"
+	CreditsAddName "/Credits270/Hans Winold"
+	CreditsAddName "/Credits272/John Kathrein"
+	CreditsAddName "/Credits407/Karen Peterson"
+	CreditsAddName "/Credits408/Karen Purdy"
+	CreditsAddName "/Credits275/Kevin Schmitt"
+	CreditsAddName "/Credits276/Larry The O"
+	CreditsAddName "/Credits278/Linda Grisanti"
+	CreditsAddName "/Credits409/Mark Overney"
+	CreditsAddName "/Credits281/Mike Dacko"
+	CreditsAddName "/Credits282/Nate Schaumberg"
+	CreditsAddName "/Credits410/Richard Fife"
+	CreditsAddName "/Credits285/Ryan Kaufman"
+	CreditsAddName "/Credits411/Sandy Christenson"
+	CreditsAddName "/Credits286/Stephen McManus"
+	CreditsAddName "/Credits287/Steve Dykes"
+	CreditsAddName "/Credits288/Tim Miller"
+	CreditsAddName "/Credits289/Troy Molander"
+
+
+	CreditsAddHeader "/Credits292/International Localization"
+
+	CreditsAddTitle "/Credits330/Manager of International Production"
+	CreditsAddName "/Credits331/Darren Hedges"
+
+	CreditsAddTitle "/Credits297/International Production "
+	CreditsAddName "/Credits298/Bryan Davis"
+
+	CreditsAddTitle "/Credits300/International Testing"
+	CreditsAddName "/Credits301/Erik Ellicock"
+
+
+	CreditsAddHeader "/Credits303/Marketing and Public Relations"
+
+	CreditsAddTitle "/Credits305/Product Marketing Manager"
+	CreditsAddName "/Credits306/Joel Dreskin"
+
+	CreditsAddTitle "/Credits412/Public Relations Director"
+	CreditsAddName "/Credits311/Tom Sarris"
+
+	CreditsAddTitle "/Credits308/Public Relations "
+	CreditsAddName "/Credits309/Alexis Mervin"
+	CreditsAddName "/Credits310/Heather Twist Phillips"
+
+	CreditsAddTitle "/Credits313/International Marketing / PR"
+	CreditsAddName "/Credits314/Kathy Apostoli-Green"
+
+	CreditsAddTitle "/Credits316/Manual Editors"
+	CreditsAddName "/Credits317/Mollie Boero"
+	CreditsAddName "/Credits318/Logan Parr"
+
+	CreditsAddTitle "/Credits320/Manual Design"
+	CreditsAddName "/Credits321/Cassia Dominguez"
+
+	CreditsAddTitle "/Credits323/Package Design"
+	CreditsAddName "/Credits324/Blind Mice Studios"
+
+	CreditsAddTitle "/Credits326/DVD / CD Burning Goddesses"
+	CreditsAddName "/Credits327/Kellie Walker"
+	CreditsAddName "/Credits328/Wendy Kaplan"
+
+	CreditsAddTitle "/Credits333/Manager of Quality Services"
+	CreditsAddName "/Credits334/Paul Purdy"
+
+	CreditsAddTitle "/Credits336/Quality Assurance Supervisor"
+	CreditsAddName "/Credits337/Chip Hinnenberg"
+
+	CreditsAddTitle "/Credits339/Product Support Supervisor"
+	CreditsAddName "/Credits340/Jay Geraci"
+
+	CreditsAddTitle "/Credits342/Sound Department Coordinators"
+	CreditsAddName "/Credits343/Katy Evans"
+	CreditsAddName "/Credits344/Malena Slettom"
+
+	CreditsAddTitle "/Credits346/Director of Sales"
+	CreditsAddName "/Credits347/Meredith Cahill "
+
+	CreditsAddTitle "/Credits349/Sales Coordinator"
+	CreditsAddName "/Credits350/Mike Maguire"
+
+	CreditsAddTitle "/Credits352/Sales Analyst"
+	CreditsAddName "/Credits353/Greg Robles"
+
+	CreditsAddTitle "/Credits355/Channel Marketing Manager"
+	CreditsAddName "/Credits356/Tim Moore"
+
+	CreditsAddTitle "/Credits358/Channel Marketing Specialist"
+	CreditsAddName "/Credits359/Katy Walden"
+
+	CreditsAddTitle "/Credits361/LucasArts I.S. team"
+	CreditsAddText "/Credits362/Chad Williams, Chris Brody, Chris McAllister, Daryll Jacobson, Jim Carpenter, Joe Shum, John Doak, John ^QGrandpa^Q Hannon, Richard Quinones, Victor Tancredi-Ballugera, Gary Pfeiffer"
+
+	CreditsAddTitle "/Credits365/Lucasfilm Licensing"
+	CreditsAddName "/Credits366/Chris Gollaher"
+	CreditsAddName "/Credits367/Kristi Kaufman"
+	CreditsAddName "/Credits368/Stacy Cheregotis"
+
+	CreditsAddTitle "/Credits370/Special Thanks"
+	CreditsAddText "/Credits371/Allison Purdy, Andre Bremer, Anne Barker, Brent Oster, Brett Schnepf, Camela B. Martin, Chuck McFadden, Clint Young, Dan Martinez, Donna Czerwinski, Emily Duval, Eric Johnston, Haden Blackman, Hal Barwood, Jason Horstman, Jannett Shirley-Paul, Jeff Kliment, Jeremy Gordon, Jim Passalacqua, John von Eichhorn, Jon Knowles, Karen Chelini, Kevin Boyle, Kim Malone, LEC-RPM, Leland Chee, Linda Grisanti, Lisa Swart, Malcolm Johnson, Mark Barbolak, Mark Cartwright, Mary Bihr, Matt White, Matthew Fillbrandt, Mike Swanson, Nate Schaumberg, Peggy Bartlett, Randy Breen, Reed Knight, Reeve Thompson, RJ Berg, Seth Steinberg, Simon Jeffery, Tim Longo, Tom Byron, Wayne Cline"
+	
+	CreditsAddTitle "/Credits374/Personal Thanks"
+	CreditsAddText	"/Credits375/Yvonne Thompson, Susan McKinley Ross, Ewan McGregor, Jennifer Kloepping, Ben Ferry-Connors, Jennifer Yoon, The Relatives, Bodega House, Judy Yeung, Steve Johnson, Ryan, Michelle and Max Kaufman, Kristi Kaufman, Larissa Twardy, LEC-3AM, Lucy Liu, Varian Pierce, Tari Karkanen, Jacob Greenberg, Lisa, Olive, Gus, Zola, Lucy, M.B., Kiko and Blue, ^QJersey^Q Jim Nestor, Tyler, Lucy and Spooch (RIP), Ksenia and Gosha, The Family Harter plus Adam Baxmeyer, Andy Konieczny, Patrick Wheeland and Clyde Yan, Qing Xu and Jonathon Zou, SGT_Angry, PODboy, Jane Snider, Monkey Pants, Gray the Rat, Seb and Alicia, Joanna, Shaft, Maggie Tsang, Melanie and Mazzy Gazaway, Marilyn - proop mode, toggled on! A big ^QThanks!^Q to Roma's."
+
+	CreditsAddTitle "/Credits377/Very Special Thanks"
+	CreditsAddName "/Credits378/George Lucas"
+
+
+	CreditsStartScroll 50  // scroll up at 50 pixels per second
+
+	Pause 208
+
+
+	FadeDownAndWait 1
+	Set exitedEarly 0
+
+	PreEndCutscene  // If the player hits start, it will skip straight to this line
+
+	if (= exitedEarly 1)
+	{
+		StopMusic  // Stop the credits music
+	}
+
+	FadeDown 0
+	CreditsOff
+
+	EndCutscene
+	
+	BeginCutscene
+
+	FadeAudioUpAndWait 0.5
+	SayLine2D Obi "/Obi-Wan_1531/ Choose the Force.  Choose a job.  Choose the Dark Side. Choose the Council.  Choose a flubbing big lightsaber, choose protocol droids, holoprojectors, and R2 units.  Choose Watto, Tatooine, and Alderaan.  Choose fixed-interest credit payments to Sebulba.  Choose a Corellian freighter that did the Kessel Run in less than 12 parsecs.  Choose a Wookiee.  Choose sitting in Jabba's throne room, watching mind-numbing dancers, stuffing green chubas into your mouth.  Choose rotting away at the end of it all, disappearing into thin air, nothing more than an embarrasment to the whiny kid you trained on the way to Alderaan.  Choose your destiny.  Choose the Force.  But why would I want to do a thing like that?  I chose not to choose the Dark Side.  I chose something else.  And the reasons?  There are no reasons.  Who needs reasons when you've got a lightsaber?"
+	EquipWeapon Obi
+	Pause 2
+	FadeAudioDownAndWait
+
+	PreEndCutscene
+
+	MainMenu
+
+	EndCutscene
+}
+

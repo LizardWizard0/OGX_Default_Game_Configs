@@ -1,0 +1,54 @@
+PARAM 0 visibility 999
+PARAM 1 shootrange 999
+PARAM 2 maxdownangle -60
+
+state Base {
+	Conditions {
+		if GotTriggerArea == 1 goto SnipeWithTrigger
+		if PreviousResult == 0 goto Snipe
+	}
+	Actions {
+	}
+}
+
+state SnipeWithTrigger {
+	Conditions {
+	if OpponentInTriggerArea == 1 and
+	if OpponentRange < visibility and
+	if ElevationToOpponent > maxdownangle goto EngageWithTrigger
+	}
+	Actions {
+		GoToOrigin
+	}
+}
+
+state EngageWithTrigger {
+	Conditions {
+		if OpponentInTriggerArea == 0 goto SnipeWithTrigger
+		if OpponentRange > visibility goto SnipeWithTrigger
+		if ElevationToOpponent < maxdownangle goto SnipeWithTrigger
+	}
+	Actions {
+		EngageOpponent "static" "firerange shootrange"
+	}
+}
+
+state Snipe {
+	Conditions {
+	if OpponentRange < visibility and
+	if ElevationToOpponent > maxdownangle goto Engage
+	}
+	Actions {
+		GoToOrigin
+	}
+}
+
+state Engage {
+	Conditions {
+		if OpponentRange > visibility goto Snipe
+		if ElevationToOpponent < maxdownangle goto Snipe
+	}
+	Actions {
+		EngageOpponent "static" "firerange shootrange"
+	}
+}

@@ -1,0 +1,183 @@
+[Public]
+Object=(Class=Class,MetaClass=Engine.GameInfo,Name=XGame.xDeathMatch)
+Object=(Class=Class,MetaClass=Engine.GameInfo,Name=XGame.xSurvival)
+Object=(Class=Class,MetaClass=Engine.GameInfo,Name=XGame.xTeamGame)
+Object=(Class=Class,MetaClass=Engine.GameInfo,Name=XGame.xCTFGame)
+Object=(Class=Class,MetaClass=Engine.GameInfo,Name=XGame.xBombingRun)
+Object=(Class=Class,MetaClass=Engine.GameInfo,Name=XGame.xDoubleDom)
+
+Object=(Name=XGame.DumpGameListCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=XGame.DumpMapListCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=XGame.DumpMutatorListCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=XGame.DumpWeaponListCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutInstaGib)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutRegen)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutSlowTeam)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutSpeciesStats)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutVampire)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutTeamRegen)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutSlomoDeath)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutHeliumCorpses)
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=XGame.MutNoAdrenaline)
+
+[DecoText]
+AllGameTypes="All game types."
+Deathmatch="No allies. No rules. It's every man, woman, and mutant alien freak for themselves. The player with the most frags wins.||"
+Survival="One on one DeathMatch - gladiator style.||"
+TeamGame="Join your teammates in a struggle for battlefield supremacy against bloodthirsty foes. The team that neutralizes the most enemy players wins the match. The losing team gets scraped off the walls.||"
+CTFGame="Advance on the enemy stronghold and take their flag while defending your own. Should your flag be taken, your team will be powerless to make a successful capture until it is returned, so defend it with your lives.||"
+BombingRun="Do what it takes to get the ball through the goal portal. Fight enemies, throw passes, run interceptions, and defend your own portal as your team claws its way to victory.||"
+DoubleDom="Attempt to secure and hold both Domination points to score. As the countdown commences fight off the frantic waves of resurrected opponents seeking to steal victory from your grasp, and crush them under your heel.||"
+
+[ComboBerserk]
+ExecMessage="Berserk!"
+
+[ComboInvis]
+ExecMessage="Invisible!"
+
+[ComboSpeed]
+ExecMessage="Agility!"
+
+[ComboSuperjump]
+ExecMessage="Super Jump!"
+
+[LavaVolume]
+LocationName="in lava"
+
+[MultiKillMessage]
+DoubleKillString="Double Kill!"
+MultiKillString="Multi Kill!"
+UltraKillString="ULTRA KILL!!"
+MonsterKillString="M O N S T E R  K I L L !!!"
+
+[MutHeliumCorpses]
+FriendlyName="Floaty Cadavers"
+Description="Your kills weigh lightly on your conscience."
+
+[MutInstaGib]
+FriendlyName="InstaGib"
+Description="Instant-kill combat with modified Shock Rifles."
+
+[MutNoAdrenaline]
+FriendlyName="No Adrenaline"
+Description="Adrenaline pickups are removed from the map."
+
+[MutRegen]
+FriendlyName="Regeneration"
+Description="All players regenerate health."
+
+[MutSlomoDeath]
+FriendlyName="Slow Motion Corpses"
+Description="Death should not be rushed."
+
+[MutSlowTeam]
+FriendlyName="Slow Enemy"
+Description="Reduces the enemy team's movement speed."
+
+[MutSpeciesStats]
+FriendlyName="Competition Mode"
+Description="Disable each race's unique combat statistics and each character's weapon affinities."
+
+[MutTeamRegen]
+FriendlyName="Team Regeneration"
+Description="All members of your team renegerate health. That's still no excuse to shoot them."
+
+[MutVampire]
+FriendlyName="Vampire"
+Description="Suck the life from your opponents and add it to your own."
+
+[SpecialKillMessage]
+DecapitationString="Head Shot!!"
+
+[xBlueFlagBase]
+ObjectiveName="Blue Flag Base"
+
+[xBombHUDMessage]
+YouHaveFlagString="You have the ball, deliver it to enemy base!"
+EnemyHasFlagString="The enemy has the ball, recover it!"
+
+[xBombMessage]
+ReturnBlue="returns the ball!"
+ReturnRed="returns the ball!"
+ReturnedBlue="The ball was returned!"
+ReturnedRed="The ball was returned!"
+CaptureBlue="delivered the ball!  The red team scores!"
+CaptureRed="delivered the ball!  The blue team scores!"
+DroppedBlue="dropped the ball!"
+DroppedRed="dropped the ball!"
+HasBlue="has the ball!"
+HasRed="has the ball!"
+
+[xBombSpawn]
+ObjectiveName="UC BombBase"
+
+[xBombingRun]
+GameName="Bombing Run"
+
+[xBotPlayerList]
+mDefaultName="XGame.xPawn"
+
+[xDeathMessage]
+KilledString="was killed by"
+SomeoneString="someone"
+
+[xDomMessage]
+YouControlBothPointsString="Your team controls both points!"
+EnemyControlsBothPointsString="The enemy controls both points!"
+
+[xDomPointA]
+PointName="A"
+
+[xDomPointB]
+PointName="B"
+
+[xDoubleDom]
+GameName="Double Domination"
+
+[xFallingVolume]
+LocationName="in air"
+
+[xKillerMessagePlus]
+YouKilledMessage="You killed %name."
+
+[xRedFlagBase]
+ObjectiveName="Red Flag Base"
+
+[xRewards]
+DescriptionPrefix="You've earned"
+MutatorRewardDesc="the mutator powerup"
+SkillRewardDesc="a bot skill increase of"
+NoRewardDesc="None"
+
+[xSurvival]
+GameName="Survival"
+
+[xSurvivalMessage]
+mGameName="Survival"
+mCurrentMatch="vs."
+mSignalStart="Press START to begin"
+mMatchStart="The round has begun!"
+mWinner="wins the round!"
+mDiedToo="died a tragic death."
+mWonMatch="You have won the match!"
+mLostMatch="You have lost the match!"
+
+[xTeamList]
+maNames=("Mob_Mentality","Supernova","Crossfire","Deviants","Cutthroats","Gunrunners","Bloodfists","Apocalypse","Firestorm","Area_51","Warcry","NightWatch","Pain_Machine","Surgical_Steel","Tin_Soldiers","Dustwalkers","Sunblades","Storm's_Fury","Rockpounders","Soulcrushers","Razorbacks","Shellshock","Triggermen","Crusaders","Hellspawn","Violators","Inquisition")
+mDefaultName="Team"
+
+[xTimerMessage]
+CountDownTrailer="..."
+
+[xTutorialInfo]
+MoveKeyString[0]="Move Forward"
+MoveKeyString[1]="Move Backward"
+MoveKeyString[2]="Strafe Left"
+MoveKeyString[3]="Strafe Right"
+MoveKeyString[4]="Jump"
+
+[xVictimMessage]
+YouWereKilledBy="You were killed by"
+KilledByTrailer="!"
+

@@ -1,0 +1,160 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+MissionObjective 1 "/Mission3Objective1/Defeat the Training Robot."
+MissionTitle "/Mission3Title/Saber Arena"
+SetExplorationNum 1
+SetForceUsesNeeded 4
+SetTimeToBeat 40
+SetDefaultSurface 09_mz_mrbl_d.sur
+
+CreateActor powerupexplorationmarker.dsc bob pu
+
+AddBattleLoop  m_saberArena_01_lp.wav  m_saberArena_01_end.wav  m_saberArena_01_lose.wav
+
+
+// human_brace-deathfallback.anim
+// human_deathfallback-getupslow_brace.anim
+
+actor jedi A_dueltrainingrobot_01	// SA_01
+
+// actor jedi A_dueldepabilaba_01	// SA_05
+// actor jedi A_DuelSaeseeTiin_01	// SA_02
+// actor jedi A_DuelKiAdiMundi_01	// SA_06 which comes after SA_02
+// actor jedi A_DuelAdiGallia_01	// SA_07
+// actor jedi A_DuelPloKoon_01		// SA_03 which comes after SA_07
+// actor jedi A_DuelEethKoth_01		// SA_08 which is after SA_03
+// actor jedi A_duelmacewindu_01	// SA_04 which is after SA_08
+
+// Be sure to set: unlimited_respawn 0
+
+DisableDeathMessages
+MakeResurrectable jedi
+
+Teleport jedi dude
+LoadDLG Qui-Gon.dlg
+
+
+script "Start_Cutscene" 1
+{
+	TakeControlOf jedi
+	UnEquipWeapon jedi
+
+	WaitForAll
+	
+	BeginCutScene
+	int exitedEarly 1
+	FadeUpAndWait
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_206/You did well in escaping the lower sector, Padawan. Practice your skills here in the arena. You still have much to learn." Qui-Gon.dlg
+	CommunicatorOff
+
+	WalkToNode jedi start_1
+    Pause 3
+	SayLineNonPositional jedi "/TrainingRobot_1495/ Hello, welcome Obi Wan." //trainingrobot.dlg
+
+	WaitUntilArrived jedi start_1
+//	Pause 1
+	Set exitedEarly 0
+	PreEndCutScene
+	
+	if (= exitedEarly 1)
+	{
+		Teleport jedi bogan1	
+	}
+
+	StopTalking jedi
+	EndCutScene
+        FadeUp
+
+    LockDoor A_SA-Door_01
+	PlayMusic BattleLoop
+	EnemyHealthMeter jedi
+	EquipWeapon	jedi
+	Pause 0.5
+	ReturnControlTo jedi
+	ForceTarget jedi obi
+
+	RemoveGroup 1
+	Save
+}
+
+script "The_Fight"
+{
+ConsoleCommand "r_maxshadows 2"
+CastShadows jedi true
+
+	if (IsGroupRemoved 1)
+	{
+		BeginCutScene
+		FadeUp
+		TakeControlOf jedi
+		WalkToNode jedi start_1
+		WaitUntilDoorOpen A_SA-Door_01
+		Pause 0.5
+		SayLineNonPositional jedi "/TrainingRobot_1511/ Would you like to try again?"		// trainingrobot.dlg //
+		WaitUntilArrived jedi start_1
+		PreEndCutScene
+		Teleport jedi bogan1	
+		EndCutScene
+		FadeUp
+		SetHitPointRatio obi 1	
+		
+		PlayMusic BattleLoop
+		EnemyHealthMeter jedi
+		EquipWeapon	jedi
+		Pause 0.5
+		ReturnControlTo jedi
+		ForceTarget jedi obi
+	}
+}
+
+script "Obi_Loses"
+{
+	ContinueWhenPlayerDies  // Make sure this script is not automatically ended when the player dies
+
+	WaitUntilKilled Obi
+	Pause 3
+
+	SayLineNonPositional jedi "/TrainingRobot_1512/ Padawan Defeated." 				// trainingrobot.dlg //
+	Pause 0 5
+		
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_1104/You are not ready Obi Wan, You must defeat the Training Robot before we send you against these thugs." Qui-Gon.dlg
+	CommunicatorOff
+
+	Pause 0 5
+
+	DisplayMessagePlayerDied
+}
+
+script "Obi_Wins"
+{
+	WaitUntilKilled jedi 
+	PlayMusic Victory
+	Pause 3
+	BeginCutScene
+	
+	LookAt obi jedi
+	Resurrect jedi
+	TakeControlOf jedi
+	ChildScript
+	{
+		PlayAnimationAndWait jedi human_deathfallback-getupslow_brace.anim 1.0 0.0
+		Follow jedi obi 2
+	}
+   
+	CommunicatorOn
+   CommunicatorMessageAndWait "/Qui-Gon_207/Well done, Obi-Wan.  Your training is progressing well." Qui-Gon.dlg
+   CommunicatorOff
+	
+  	SetTeam obi 0
+   Pause 0 1
+
+	Fadedownandwait
+	PreEndCutscene
+	FadeDown 0
+	
+	NextLevel l01_4a
+}

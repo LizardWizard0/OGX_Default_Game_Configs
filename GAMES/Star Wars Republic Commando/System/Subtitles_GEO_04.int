@@ -1,0 +1,576 @@
+
+[Subtitles_GEO_04]
+
+SubtitleSound[2928]="CA1G4001"
+SubtitleText[2928]="Clone Advisor 1: The Separatists are evacuating. We need to take out any Core ships we can before they take off.  "
+
+SubtitleSound[2929]="CA1G4002"
+SubtitleText[2929]="Clone Advisor 1: Our only chance is for your team to get onboard a ship before it lifts-off and download the launch codes."
+
+SubtitleSound[2930]="CA1G4003"
+SubtitleText[2930]="Clone Advisor 1: This won’t be easy.  "
+
+SubtitleSound[2931]="D07G4001"
+SubtitleText[2931]="Delta 07: That's why we're here, sir."
+
+SubtitleSound[2932]="CA1G4004"
+SubtitleText[2932]="Clone Advisor 1: We've identified an entrance, but it's protected by an Anti-Aircraft gun."
+
+SubtitleSound[2933]="CA1G4005"
+SubtitleText[2933]="Clone Advisor 1: You'll be deployed in the canyons a few clicks away.  "
+
+SubtitleSound[2934]="CA1G4006"
+SubtitleText[2934]="Clone Advisor 1: Your primary objective is to destroy the Anti Aircraft Turret protecting the Core ship Entrance."
+
+SubtitleSound[2935]="CA1G4007"
+SubtitleText[2935]="Clone Advisor 1: Once the Turret is destroyed, our gunship will help you onboard."
+
+SubtitleSound[2936]="CA1G4008"
+SubtitleText[2936]="Clone Advisor 1: Destroy any enemy forces along the way."
+
+SubtitleSound[2937]="D62G4001"
+SubtitleText[2937]="Delta 62: I like the sound of that."
+
+SubtitleSound[2938]="CA1G4009"
+SubtitleText[2938]="Clone Advisor 1: We must prevent these Core ships from evacuating the Droid Army."
+
+SubtitleSound[2939]="GP1G4001"
+SubtitleText[2939]="Gunship Pilot 1: This is as close as I can get to that Anti Aircraft Turret.  "
+
+SubtitleSound[2940]="GP1G4002"
+SubtitleText[2940]="Gunship Pilot 1: You're on your own until you take out that turret."
+
+SubtitleSound[2941]="D38G4001"
+SubtitleText[2941]="Delta 38: We'll take it from here, boys."
+
+SubtitleSound[2942]="D40G4001"
+SubtitleText[2942]="Delta 40: That wreckage- that was one of ours."
+
+SubtitleSound[2943]="D07G4002"
+SubtitleText[2943]="Delta 07: This place reeks of bugs."
+
+SubtitleSound[2944]="D62G4002"
+SubtitleText[2944]="Delta 62: Stupid bug people.."
+
+SubtitleSound[2945]="D07G4003"
+SubtitleText[2945]="Delta 07: Those rocks look a little shaky, sir."
+
+SubtitleSound[2946]="D40G4002"
+SubtitleText[2946]="Delta 40: Mind the rocks, sir."
+
+SubtitleSound[2947]="D62G4003"
+SubtitleText[2947]="Delta 62: Those rocks look about as unsteady as Seven's aim, boss."
+
+SubtitleSound[2948]="D38G4002"
+SubtitleText[2948]="Delta 38: The Anti Aircraft Turret is just beyond this wreckage."
+
+SubtitleSound[2949]="D38G4003"
+SubtitleText[2949]="Delta 38: We've got to blast this wreckage to get any farther."
+
+SubtitleSound[2950]="D40G4003"
+SubtitleText[2950]="Delta 40: I can plant a charge here."
+
+SubtitleSound[2951]="D40G4004"
+SubtitleText[2951]="Delta 40: Cover me."
+
+SubtitleSound[2952]="D07G4004"
+SubtitleText[2952]="Delta 07: I can plant a charge here."
+
+SubtitleSound[2953]="D07G4005"
+SubtitleText[2953]="Delta 07: Cover me."
+
+SubtitleSound[2954]="D62G4004"
+SubtitleText[2954]="Delta 62: I can plant a charge here."
+
+SubtitleSound[2955]="D62G4005"
+SubtitleText[2955]="Delta 62: Cover me."
+
+SubtitleSound[2956]="D38G4004"
+SubtitleText[2956]="Delta 38: Let's get clear and blow this thing."
+
+SubtitleSound[2957]="D40G4005"
+SubtitleText[2957]="Delta 40: There's the turret."
+
+SubtitleSound[2958]="D38G4005"
+SubtitleText[2958]="Delta 38: We've got to get inside."
+
+SubtitleSound[2959]="D07G4006"
+SubtitleText[2959]="Delta 07: Droid Dispensers incoming!"
+
+SubtitleSound[2960]="D38G4006"
+SubtitleText[2960]="Delta 38: Take out the dispenser before it finishes unloading."
+
+SubtitleSound[2961]="D38G4007"
+SubtitleText[2961]="Delta 38: We've got to get up top to plant our charges."
+
+SubtitleSound[2962]="D40G4006"
+SubtitleText[2962]="Delta 40: Super Battle Droids sir!"
+
+SubtitleSound[2963]="D07G4007"
+SubtitleText[2963]="Delta 07: Super battle droids joining the party!"
+
+SubtitleSound[2964]="D62G4006"
+SubtitleText[2964]="Delta 62: Look sir, Heavy battle droids!"
+
+SubtitleSound[2965]="D38G4008"
+SubtitleText[2965]="Delta 38: This is the spot, let's get those charges planted."
+
+SubtitleSound[2966]="D62G4007"
+SubtitleText[2966]="Delta 62: I think we should get out of here!"
+
+SubtitleSound[2967]="D38G4009"
+SubtitleText[2967]="Delta 38: The gunship should be able to come in now."
+
+SubtitleSound[2968]="D40G4007"
+SubtitleText[2968]="Delta 40: Heads up squad, spider droid!"
+
+SubtitleSound[2969]="D62G4008"
+SubtitleText[2969]="Delta 62: A spider droid?  Here?"
+
+SubtitleSound[2970]="D07G4008"
+SubtitleText[2970]="Delta 07: Heads up squad, spider droid!"
+
+SubtitleSound[2971]="D40G4008"
+SubtitleText[2971]="Delta 40: Nice work, deltas!"
+
+SubtitleSound[2972]="D62G4009"
+SubtitleText[2972]="Delta 62: Well, there goes my arachnaphobia."
+
+SubtitleSound[2973]="D07G4009"
+SubtitleText[2973]="Delta 07: Back to the scrap heap, clanker!"
+
+SubtitleSound[2974]="GP1G4003"
+SubtitleText[2974]="Gunship Pilot 1: How about a little help with that entrance?"
+
+SubtitleSound[2975]="GP1G4004"
+SubtitleText[2975]="Gunship Pilot 1: Stay clear, deltas!"
+
+SubtitleSound[2976]="D38G4010"
+SubtitleText[2976]="Delta 38: Clear away from the Core ship Entrance!"
+
+SubtitleSound[2977]="D62G4010"
+SubtitleText[2977]="Delta 62: Nice shooting, flyboy."
+
+SubtitleSound[2978]="GP1G4005"
+SubtitleText[2978]="Gunship Pilot 1: Get those Launch Codes and I'll come pick you up."
+
+SubtitleSound[2979]="D38G4011"
+SubtitleText[2979]="Delta 38: We can get in through these pipes."
+
+SubtitleSound[2980]="D07G4010"
+SubtitleText[2980]="Delta 07: Look at the size of that thing."
+
+SubtitleSound[2981]="D38G4012"
+SubtitleText[2981]="Delta 38: This is Delta three-eight.  I'm in."
+
+SubtitleSound[2982]="D38G4511"
+SubtitleText[2982]="Delta 38: Ready harnesses, Deltas.  Down we go!"
+
+SubtitleSound[2983]="D07G4509"
+SubtitleText[2983]="Delta 07: Just point me at the enemy and stay outta my way."
+
+SubtitleSound[2984]="D40G4503"
+SubtitleText[2984]="Delta 40: Cut the chatter, Sev."
+
+SubtitleSound[2985]="D62G4506"
+SubtitleText[2985]="Delta 62: Sev.  How many kills you got today, psycho?"
+
+SubtitleSound[2986]="D07G4510"
+SubtitleText[2986]="Delta 07: More than you, wiseguy."
+
+SubtitleSound[2987]="D40G4504"
+SubtitleText[2987]="Delta 40: Keep this comm clear, you two."
+
+SubtitleSound[2988]="D62G4507"
+SubtitleText[2988]="Delta 62: Calm down, Fixer.  Just a having a little fun."
+
+SubtitleSound[2989]="D40G4505"
+SubtitleText[2989]="Delta 40: Heads up, enemy aircraft!"
+
+SubtitleSound[2990]="D38G4512"
+SubtitleText[2990]="Delta 38: Don't worry.  They're not looking for us."
+
+SubtitleSound[2991]="D62G4508"
+SubtitleText[2991]="Delta 62: These bugs just won't quit!"
+
+SubtitleSound[2992]="D38G4514"
+SubtitleText[2992]="Delta 38: Secure the blast shield on that window.  Lock them out!"
+
+SubtitleSound[2993]="D38G4515"
+SubtitleText[2993]="Delta 38: The window!  Get that window shut!"
+
+SubtitleSound[2994]="D40G4506"
+SubtitleText[2994]="Delta 40: Somebody secure that window!"
+
+SubtitleSound[2995]="D40G4507"
+SubtitleText[2995]="Delta 40: Console over here, sir!  Window controls!"
+
+SubtitleSound[2996]="D62G4509"
+SubtitleText[2996]="Delta 62: More bugs!  "
+
+SubtitleSound[2997]="D38G4516"
+SubtitleText[2997]="Delta 38: Looks like we've got to shut these windows too."
+
+SubtitleSound[2998]="D38G4517"
+SubtitleText[2998]="Delta 38: Let's hit it, Deltas."
+
+SubtitleSound[2999]="D62G4510"
+SubtitleText[2999]="Delta 62: What the---?"
+
+SubtitleSound[3000]="D62G4511"
+SubtitleText[3000]="Delta 62: Poor sod…"
+
+SubtitleSound[3001]="D40G4508"
+SubtitleText[3001]="Delta 40: Battle droids are trying to let in more Geonosians!"
+
+SubtitleSound[3002]="D62G4512"
+SubtitleText[3002]="Delta 62: No help for you, ya tin soldiers!"
+
+SubtitleSound[3003]="D38G4518"
+SubtitleText[3003]="Delta 38: You know the drill, Deltas. Let's shut them out."
+
+SubtitleSound[3004]="D62G4513"
+SubtitleText[3004]="Delta 62: Finally, some peace and quiet."
+
+SubtitleSound[3005]="D38G4519"
+SubtitleText[3005]="Delta 38: It's still kicking.  I think we need to hit this thing again… "
+
+SubtitleSound[3006]="D62G4514"
+SubtitleText[3006]="Delta 62: Boss, that looks like a good spot to plant a charge."
+
+SubtitleSound[3007]="D62G4515"
+SubtitleText[3007]="Delta 62: Good eye, Scorch."
+
+SubtitleSound[3008]="D62G4516"
+SubtitleText[3008]="Delta 62: That's done the trick."
+
+SubtitleSound[3009]="D07G4511"
+SubtitleText[3009]="Delta 07: They just keep coming!"
+
+SubtitleSound[3010]="D62G4517"
+SubtitleText[3010]="Delta 62: Looks like the battle hasn't slowed down yet."
+
+SubtitleSound[3011]="D07G4512"
+SubtitleText[3011]="Delta 07: That's what we're here to do!"
+
+SubtitleSound[3012]="D40G4509"
+SubtitleText[3012]="Delta 40: Sir, this gunship turret is still functional.  We could use it against those droids."
+
+SubtitleSound[3013]="D62G4518"
+SubtitleText[3013]="Delta 62: They never had a chance…"
+
+SubtitleSound[3014]="D07G4513"
+SubtitleText[3014]="Delta 07: Now we've made them mad.  Good!"
+
+SubtitleSound[3015]="D40G4510"
+SubtitleText[3015]="Delta 40: Let's put that turret to good use!"
+
+SubtitleSound[3016]="CA1G4522"
+SubtitleText[3016]="Clone Advisor 1: Three-Eight, now that you've disabled the Anti-Air turret, we're making a supply drop near your current position."
+
+SubtitleSound[3017]="CA1G4523"
+SubtitleText[3017]="Clone Advisor 1: Keep an eye out for it.  Payload includes a special anti-armor attachment for your DC-17."
+
+SubtitleSound[3018]="CA1G4524"
+SubtitleText[3018]="Clone Advisor 1: You're going to need it."
+
+SubtitleSound[3019]="D62G4519"
+SubtitleText[3019]="Delta 62: Yes! More explosives!  You just made my day, Advisor."
+
+SubtitleSound[3020]="CTPG4001"
+SubtitleText[3020]="Clone Trooper: We are taking heavy fire.  Any Republic forces!  We need assistance!"
+
+SubtitleSound[3021]="D38G4520"
+SubtitleText[3021]="Delta 38: Hang tight, trooper.  Delta Squad, on our way."
+
+SubtitleSound[3022]="CTPG4002"
+SubtitleText[3022]="Clone Trooper: I thought we were nerf meat for sure.  Down to our last power cells."
+
+SubtitleSound[3023]="D38G4521"
+SubtitleText[3023]="Delta 38: Don't get too excited.  We've got our own objective. Just passing through."
+
+SubtitleSound[3024]="D40G4511"
+SubtitleText[3024]="Delta 40: This door is shielded sir, looks like we have to go around."
+
+SubtitleSound[3025]="D07G4514"
+SubtitleText[3025]="Delta 07: Damn droids! Let us through!"
+
+SubtitleSound[3026]="D62G4520"
+SubtitleText[3026]="Delta 62: Debris blocking our path here, Boss.  We need to detonate the rocks to get through."
+
+SubtitleSound[3027]="D62G4521"
+SubtitleText[3027]="Delta 62: And I'm not just saying that because I love to blow stuff up."
+
+SubtitleSound[3028]="D07G4515"
+SubtitleText[3028]="Delta 07: Yes you are."
+
+SubtitleSound[3029]="D40G4512"
+SubtitleText[3029]="Delta 40: This way looks to be shielded as well, sir."
+
+SubtitleSound[3030]="D07G4516"
+SubtitleText[3030]="Delta 07: Blasted droids!"
+
+SubtitleSound[3031]="D38G4522"
+SubtitleText[3031]="Delta 38: All right squad, back out again."
+
+SubtitleSound[3032]="GP1G4503"
+SubtitleText[3032]="Gunship Pilot 1: Delta squad, this is Gunship wing Delta 42, we're closing in on your position now.  Stand back from the entryway."
+
+SubtitleSound[3033]="D07G4517"
+SubtitleText[3033]="Delta 07: You're late to the party, pilot!"
+
+SubtitleSound[3034]="GP1G4504"
+SubtitleText[3034]="Gunship Pilot 1: You should be happy I got here at all.  It's a nightmare out there."
+
+SubtitleSound[3035]="GP1G4505"
+SubtitleText[3035]="Gunship Pilot 1: We've got a visual on the target area.  Initiating firing run now."
+
+SubtitleSound[3036]="GP1G4506"
+SubtitleText[3036]="Gunship Pilot 1: You boys are gonna want to stand back."
+
+SubtitleSound[3037]="D40G4513"
+SubtitleText[3037]="Delta 40: Take cover!!!"
+
+SubtitleSound[3038]="D62G4522"
+SubtitleText[3038]="Delta 62: So much for boarding this thing undetected!"
+
+SubtitleSound[3039]="D62G4523"
+SubtitleText[3039]="Delta 62: I thought this was a covert op."
+
+SubtitleSound[3040]="D38G4523"
+SubtitleText[3040]="Delta 38: I sure hope we don't encounter many more of those."
+
+SubtitleSound[3041]="D38G4524"
+SubtitleText[3041]="Delta 38: Hmm… an Anti-Armor attachment.  This should come in handy against all these droids."
+
+SubtitleSound[3042]="D38G4526"
+SubtitleText[3042]="Delta 38: Set up a grenade position here, Delta."
+
+SubtitleSound[3043]="D38G4527"
+SubtitleText[3043]="Delta 38: This looks like a good spot to set up a grenade position, Deltas!"
+
+SubtitleSound[3044]="D62G4524"
+SubtitleText[3044]="Delta 62: Anti-Armor… oh this is nice, Boss.  A very nice piece of ordnance here…"
+
+SubtitleSound[3045]="CA1G4527"
+SubtitleText[3045]="Clone Advisor 1: Deltas, pay attention!  You may have only one shot at this! "
+
+SubtitleSound[3046]="CA1G4528"
+SubtitleText[3046]="Clone Advisor 1: The CG-A dwarf spider droid has one exploitable weak spot: A sensitive infrared optics cluster on its body."
+
+SubtitleSound[3047]="D38G4528"
+SubtitleText[3047]="Delta 38: I need an anti-armor position, on the double!"
+
+SubtitleSound[3048]="D38G4530"
+SubtitleText[3048]="Delta 38: We need to set up an anti-armor position now!  "
+
+SubtitleSound[3049]="CA1G4529"
+SubtitleText[3049]="Clone Advisor 1: The cluster is protected by front armor panels, mounted on the legs."
+
+SubtitleSound[3050]="D38G4529"
+SubtitleText[3050]="Delta 38: Anti-armor!  Mark that position!  Go!"
+
+SubtitleSound[3051]="D38G4531"
+SubtitleText[3051]="Delta 38: There, that looks like a good spot!"
+
+SubtitleSound[3052]="CA1G4530"
+SubtitleText[3052]="Clone Advisor 1: Tough as nails, but you can punch through these with enough ordnance."
+
+SubtitleSound[3053]="CA1G4531"
+SubtitleText[3053]="Clone Advisor 1: You're looking at a dwarf spider droid, one of the Commerce Guild's nastiest anti-infantry units."
+
+SubtitleSound[3054]="CA1G4532"
+SubtitleText[3054]="Clone Advisor 1: Its durasteel plating is rated for starship hulls, and is nearly invulnerable to small arms fire."
+
+SubtitleSound[3055]="CA1G4533"
+SubtitleText[3055]="Clone Advisor 1: Only its optical cluster, the red orb on its abdomen, is unshielded and vulnerable."
+
+SubtitleSound[3056]="D07G4518"
+SubtitleText[3056]="Delta 07: Then I guess we'll have to poke out its eye!"
+
+SubtitleSound[3057]="D38G4525"
+SubtitleText[3057]="Delta 38: Focus on that Optical Cluster, Delta!"
+
+SubtitleSound[3058]="D62G4525"
+SubtitleText[3058]="Delta 62: In other words -- shoot the big red spot!"
+
+SubtitleSound[3059]="CA1G4534"
+SubtitleText[3059]="Clone Advisor 1: Also be aware that while it is somewhat vulnerable to your EC Detonators, it will not be immobilized the way other targets will."
+
+SubtitleSound[3060]="D40G4514"
+SubtitleText[3060]="Delta 40: Look sir, here comes the supply drop now."
+
+SubtitleSound[3061]="D40G4515"
+SubtitleText[3061]="Delta 40: Look, there's the Anti Armor supplies sir!"
+
+SubtitleSound[3062]="GP1G4500"
+SubtitleText[3062]="Gunship Pilot 1: Deltas, there's a large anti-air turret up ahead.   This is as close as I can get you to your target... good luck!"
+
+SubtitleSound[3063]="GP1G4501"
+SubtitleText[3063]="Gunship Pilot 1: I'm out of here, it's too hot for me to stay any longer."
+
+SubtitleSound[3064]="CA1G4500"
+SubtitleText[3064]="Clone Advisor 1: Delta, a few clicks down this canyon is a disabled droid core ship."
+
+SubtitleSound[3065]="CA1G4501"
+SubtitleText[3065]="Clone Advisor 1: We need you to infiltrate the core ship and retrieve its launch codes, giving us the edge we need to halt the evacuation of the separatist fleet."
+
+SubtitleSound[3066]="CA1G4517"
+SubtitleText[3066]="Clone Advisor 1: Advance via the canyon and effect entry any way you can."
+
+SubtitleSound[3067]="CA1G4502"
+SubtitleText[3067]="Clone Advisor 1: As you may have noticed, the core ship is protected by an anti-air turret, limiting our intelligence on the nature of the core ship's ground defenses."
+
+SubtitleSound[3068]="D38G4509"
+SubtitleText[3068]="Delta 38: Any intel on the enemy forces in this area?"
+
+SubtitleSound[3069]="CA1G4503"
+SubtitleText[3069]="Clone Advisor 1: We advise taking out the turret first, then proceeding through the canyon to the core ship entrance."
+
+SubtitleSound[3070]="CA1G4518"
+SubtitleText[3070]="Clone Advisor 1: The core ship is protected by a large anti-air turret, and initial scans reveal a substantial droid presence.  Also, expect to encounter local resistance."
+
+SubtitleSound[3071]="D07G4508"
+SubtitleText[3071]="Delta 07: Good.  More bugs, more kills."
+
+SubtitleSound[3072]="CA1G4504"
+SubtitleText[3072]="Clone Advisor 1: There's a passage up ahead that should lead to the next canyon."
+
+SubtitleSound[3073]="D38G4510"
+SubtitleText[3073]="Delta 38: Alright, let's get to it, squad!"
+
+SubtitleSound[3074]="CA1G4505"
+SubtitleText[3074]="Clone Advisor 1: Good luck, Delta, and don't come back without those launch codes!"
+
+SubtitleSound[3075]="D07G4500"
+SubtitleText[3075]="Delta 07: Looks like we'll have to blow through that wreckage, sir."
+
+SubtitleSound[3076]="D07G4501"
+SubtitleText[3076]="Delta 07: Looks like we'll have to blow through that rockslide, sir."
+
+SubtitleSound[3077]="D38G4500"
+SubtitleText[3077]="Delta 38: Entering passage now."
+
+SubtitleSound[3078]="CA1G4506"
+SubtitleText[3078]="Clone Advisor 1: Roger that three-eight, proceed to the anti-air turret."
+
+SubtitleSound[3079]="D40G4500"
+SubtitleText[3079]="Delta 40: There's the turret, squad leader."
+
+SubtitleSound[3080]="D38G4501"
+SubtitleText[3080]="Delta 38: We're at the turret now, It looks like there's an opening below it."
+
+SubtitleSound[3081]="CA1G4519"
+SubtitleText[3081]="Clone Advisor 1: Copy that. Acquire target and destroy."
+
+SubtitleSound[3082]="CA1G4520"
+SubtitleText[3082]="Clone Advisor 1:   That thing's been giving us heavy casualties all day."
+
+SubtitleSound[3083]="D38G4513"
+SubtitleText[3083]="Delta 38: There's an entrance below it."
+
+SubtitleSound[3084]="CA1G4521"
+SubtitleText[3084]="Clone Advisor 1: Understood, updating mission paramaters now…  "
+
+SubtitleSound[3085]="CA1G4507"
+SubtitleText[3085]="Clone Advisor 1: Three-Eight, make your way inside and disable the turret."
+
+SubtitleSound[3086]="D38G4502"
+SubtitleText[3086]="Delta 38: Alright squad, let's get in there and start breaking things."
+
+SubtitleSound[3087]="D62G4500"
+SubtitleText[3087]="Delta 62: That wreckage - it's one of ours…talk about a bad landing."
+
+SubtitleSound[3088]="D38G4503"
+SubtitleText[3088]="Delta 38: Bunker penetrated."
+
+SubtitleSound[3089]="CA1G4508"
+SubtitleText[3089]="Clone Advisor 1: Roger that, squad leader.  Locate turret controls and commence disabling maneuvers."
+
+SubtitleSound[3090]="D07G4502"
+SubtitleText[3090]="Delta 07: "Disabling maneuvers?""
+
+SubtitleSound[3091]="D62G4501"
+SubtitleText[3091]="Delta 62: Blowing things up."
+
+SubtitleSound[3092]="D07G4503"
+SubtitleText[3092]="Delta 07: Oh.  I knew that."
+
+SubtitleSound[3093]="D38G4504"
+SubtitleText[3093]="Delta 38: I think we've found a loading mechanism here."
+
+SubtitleSound[3094]="CA1G4509"
+SubtitleText[3094]="Clone Advisor 1: Affirmative Delta.  See if you can find a weak spot to plant some charges."
+
+SubtitleSound[3095]="D07G4504"
+SubtitleText[3095]="Delta 07: There's the spot, let's set our charges and do some damage."
+
+SubtitleSound[3096]="D38G4505"
+SubtitleText[3096]="Delta 38: Turret Disabled!"
+
+SubtitleSound[3097]="CA1G4510"
+SubtitleText[3097]="Clone Advisor 1: Good job three-eight.  Now find an exit and make your way to the core ship."
+
+SubtitleSound[3098]="D40G4501"
+SubtitleText[3098]="Delta 40: There's the core ship, sir."
+
+SubtitleSound[3099]="D62G4502"
+SubtitleText[3099]="Delta 62: Are you sure, Forty?  Maybe there's another one around the corner."
+
+SubtitleSound[3100]="D38G4506"
+SubtitleText[3100]="Delta 38: We've reached the entrance to the core ship, but it appears to be shielded."
+
+SubtitleSound[3101]="CA1G4511"
+SubtitleText[3101]="Clone Advisor 1: Affirmative Delta, hold position.  We're bringing in some air support now."
+
+SubtitleSound[3102]="D07G4505"
+SubtitleText[3102]="Delta 07: Here it comes…"
+
+SubtitleSound[3103]="D62G4503"
+SubtitleText[3103]="Delta 62: And there it goes."
+
+SubtitleSound[3104]="D38G4507"
+SubtitleText[3104]="Delta 38: Shield destroyed!  Thanks for the assist, Four-Two."
+
+SubtitleSound[3105]="GP1G4502"
+SubtitleText[3105]="Gunship Pilot 1: Glad to be of service, Delta."
+
+SubtitleSound[3106]="CA1G4512"
+SubtitleText[3106]="Clone Advisor 1: Now get into that core ship, and secure those launch codes."
+
+SubtitleSound[3107]="D40G4502"
+SubtitleText[3107]="Delta 40: What's that?!"
+
+SubtitleSound[3108]="D07G4506"
+SubtitleText[3108]="Delta 07: It's a spider droid! Look out!"
+
+SubtitleSound[3109]="D62G4504"
+SubtitleText[3109]="Delta 62: That was a lot more intense than the simulations."
+
+SubtitleSound[3110]="D62G4505"
+SubtitleText[3110]="Delta 62: Look at the size of that thing."
+
+SubtitleSound[3111]="CA1G4513"
+SubtitleText[3111]="Clone Advisor 1: Good job, Delta Squad!"
+
+SubtitleSound[3112]="CA1G4514"
+SubtitleText[3112]="Clone Advisor 1: Now that you've reached the core ship, it's time for you to split up."
+
+SubtitleSound[3113]="CA1G4515"
+SubtitleText[3113]="Clone Advisor 1: Each of you is tasked with disabling a different critical system within the ship."
+
+SubtitleSound[3114]="CA1G4525"
+SubtitleText[3114]="Clone Advisor 1: Taking out these critical systems will weaken the ship defense components, and make achieving your ultimate objective easier."
+
+SubtitleSound[3115]="CA1G4526"
+SubtitleText[3115]="Clone Advisor 1: Remember, it is imperative that you retrieve those launch codes!"
+
+SubtitleSound[3116]="CA1G4516"
+SubtitleText[3116]="Clone Advisor 1: Good luck Deltas!"
+
+SubtitleSound[3117]="D07G4507"
+SubtitleText[3117]="Delta 07: Alright sir, in you go.  Happy hunting."
+
+SubtitleSound[3118]="D38G4508"
+SubtitleText[3118]="Delta 38: This is Delta 38, I'm in."
+

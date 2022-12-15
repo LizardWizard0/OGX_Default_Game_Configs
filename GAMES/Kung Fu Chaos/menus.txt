@@ -1,0 +1,684 @@
+
+Objects
+{
+CMenu AttackMenu
+{
+	NinjaAttackStrings 
+	LamAttackStrings 
+	SamuraiAttackStrings 
+	LucyAttackStrings 
+	SpankyAttackStrings 
+	CaptainAttackStrings 
+	XuiAttackStrings 
+	MonkeyAttackStrings
+	ShaoAttackStrings
+	FodderNinjaAttackStrings
+	MiddleNinjaAttackStrings
+	SuperNinjaAttackStrings
+	ThrowingNinjaAttackStrings 
+	BlindNinjaAttackStrings
+	ObjectHitAttack 
+	ObjectKickAttack 
+	PlayerHitAttack 
+	PlayerKickAttack
+}
+
+CMenu CharactersMenu
+{
+	LamTemplate 
+	NinjaTemplate 
+	ChopTemplate 
+	LucyTemplate 
+	SpankyTemplate 
+	ChikiTemplate 
+	CaptainTemplate 
+	XuiTemplate 
+	FodderNinjaTemplate 
+	MiddleNinjaTemplate 
+	SuperNinjaTemplate 
+	ThrowingNinjaTemplate 
+	BlindNinjaTemplate 
+}
+
+CMenu AIMenu
+{
+	CharacterAITemplate_Easy 
+	CharacterAITemplate_Med
+	CharacterAITemplate_Hard 
+	CharacterAIGoalTemplate_Easy 
+	CharacterAIGoalTemplate_Med
+	CharacterAIGoalTemplate_Hard 
+	CharacterAICombatTemplate_Easy 
+	CharacterAICombatTemplate_Med
+	CharacterAICombatTemplate_Hard 
+}
+
+CMenu StateMenu
+{
+	StatePlayerHeldTemplate 
+	StatePlayerKODTemplate 
+}
+
+CMenu ArenasMenu
+{
+	AngWooTemplate 
+	LevelGlobalTemplate 
+	TitanicTemplate
+	TitanicCSTemplate_Med 
+	TitanicCSTemplate_Easy 
+	TitanicCSTemplate_Hard 
+	TitanicDeletedSceneTemplate 
+	DinosaurSceneTemplate 
+	DinosaurCSTemplate_Med 
+	DinosaurCSTemplate_Easy 
+	DinosaurCSTemplate_Hard 
+	DinosaurDeletedSceneTemplate 
+	SciFiTemplate
+	SciFiCSTemplate_Med 
+	SciFiCSTemplate_Easy 
+	SciFiCSTemplate_Hard 
+	SciFiDSTemplate 
+	AdventureTemplate 
+	AdventureCSTemplate_Med
+	AdventureCSTemplate_Easy
+	AdventureCSTemplate_Hard
+	AdventureDSTemplate
+	ForestTemplate 
+	ForestCSTemplate_Med 
+	ForestCSTemplate_Easy 
+	ForestCSTemplate_Hard 
+	ForDSTemplate_Med 
+	ForDSTemplate_Easy 
+	ForDSTemplate_Hard 
+	DojoTemplate 
+	KungFuDSTemplate
+	KungFuCSTemplate_Hard
+	WarehouseTemplate 
+}
+
+CMenu CamerasMenu
+{
+	GameCameraTemplate
+	Camera_stadium
+	Camera_stadium_deleted_scene
+	Camera_titanic
+	Camera_titanic_deleted_scene
+	Camera_dinosaur
+	Camera_dinosaur_deleted_scene
+	Camera_scifi
+	Camera_scifi_closing_scene
+	Camera_scifi_deleted_scene
+	Camera_adventure
+	Camera_adventure_closing_scene
+	Camera_adventure_deleted_scene
+	Camera_dojo
+	Camera_dojo_deleted_scene
+	Camera_kungfu
+	Camera_forest
+	Camera_forest_closing_scene
+	Camera_mystic
+	Camera_warehouse
+	Camera_survival1
+	Camera_survival2
+	Camera_survival3
+}
+
+CMenu GameTypeMenu
+{
+	BattleGameTemplate
+	ChampionshipGameTemplate
+	StoryGameTemplate
+	VarietyGameTemplate
+	TrainingGameTemplate
+	TestGameTemplate
+	StylePointsTemplate
+}
+
+CMenu LamBaseAttackStrings
+{
+	LamTripAttack
+	LamC1PreTripAttack
+	LamC3PreTripAttack
+	LamC4PreTripAttack
+	LamJumpKickAttack
+	LamRunningJumpKickAttack
+	LamSpecialRunningKickAttack
+	LamC1Medium
+	LamC2Medium
+	LamC3Medium
+	LamC4Medium
+	LamC1Slow
+	LamC3Slow
+	LamC4Slow
+	LamC1Fast
+	LamC3Fast
+	LamC4Fast
+	LamC1Wide
+}
+
+CMenu NinjaBaseAttackStrings
+{
+	NinjaTripAttack
+	NinjaC1PreTripAttack
+	NinjaC3PreTripAttack
+	NinjaC4PreTripAttack
+	NinjaJumpKickAttack
+	NinjaRunningJumpKickAttack
+	NinjaSpecialRunningKickAttack
+	NinjaC1Medium
+	NinjaC2Medium
+	NinjaC3Medium
+	NinjaC4Medium
+	NinjaC1Slow
+	NinjaC3Slow
+	NinjaC4Slow
+	NinjaC1Fast
+	NinjaC3Fast
+	NinjaC4Fast
+	NinjaC1Wide
+}
+
+CMenu ChopBaseAttackStrings
+{
+	SamuraiTripAttack
+	SamuraiC1PreTripAttack
+	SamuraiC3PreTripAttack
+	SamuraiC4PreTripAttack
+	SamuraiJumpKickAttack
+	SamuraiRunningJumpKickAttack
+	SamuraiSpecialRunningKickAttack
+	SamuraiC1Medium
+	SamuraiC2Medium
+	SamuraiC3Medium
+	SamuraiC4Medium
+	SamuraiC1Slow
+	SamuraiC3Slow
+	SamuraiC4Slow
+	SamuraiC1Fast
+	SamuraiC3Fast
+	SamuraiC4Fast
+	SamuraiC1Wide
+}
+
+CMenu LucyBaseAttackStrings
+{
+	LucyTripAttack
+	LucyC1PreTripAttack
+	LucyC3PreTripAttack
+	LucyC4PreTripAttack
+	LucyJumpKickAttack
+	LucyRunningJumpKickAttack
+	LucySpecialRunningKickAttack
+	LucyC1Medium
+	LucyC2Medium
+	LucyC3Medium
+	LucyC4Medium
+	LucyC1Slow
+	LucyC3Slow
+	LucyC4Slow
+	LucyC1Fast
+	LucyC3Fast
+	LucyC4Fast
+	LucyC1Wide
+}
+
+CMenu SpankyBaseAttackStrings
+{
+	SpankyTripAttack
+	SpankyC1PreTripAttack
+	SpankyC3PreTripAttack
+	SpankyC4PreTripAttack
+	SpankyJumpKickAttack
+	SpankyRunningJumpKickAttack
+	SpankySpecialRunningKickAttack
+	SpankyC1Medium
+	SpankyC2Medium
+	SpankyC3Medium
+	SpankyC4Medium
+	SpankyC1Slow
+	SpankyC3Slow
+	SpankyC4Slow
+	SpankyC1Fast
+	SpankyC3Fast
+	SpankyC4Fast
+	SpankyC1Wide
+}
+
+CMenu ChikiBaseAttackStrings
+{
+	MonkeyTripAttack
+	MonkeyC1PreTripAttack
+	MonkeyC3PreTripAttack
+	MonkeyC4PreTripAttack
+	MonkeyJumpKickAttack
+	MonkeyRunningJumpKickAttack
+	MonkeySpecialRunningKickAttack
+	MonkeyC1Medium
+	MonkeyC2Medium
+	MonkeyC3Medium
+	MonkeyC4Medium
+	MonkeyC1Slow
+	MonkeyC3Slow
+	MonkeyC4Slow
+	MonkeyC1Fast
+	MonkeyC3Fast
+	MonkeyC4Fast
+	MonkeyC1Wide
+}
+
+CMenu CaptainBaseAttackStrings
+{
+	CaptainTripAttack
+	CaptainC1PreTripAttack
+	CaptainC3PreTripAttack
+	CaptainC4PreTripAttack
+	CaptainJumpKickAttack
+	CaptainRunningJumpKickAttack
+	CaptainSpecialRunningKickAttack
+	CaptainC1Medium
+	CaptainC2Medium
+	CaptainC3Medium
+	CaptainC4Medium
+	CaptainC1Slow
+	CaptainC3Slow
+	CaptainC4Slow
+	CaptainC1Fast
+	CaptainC3Fast
+	CaptainC4Fast
+	CaptainC1Wide
+}
+
+CMenu XuiBaseAttackStrings
+{
+	XuiTripAttack
+	XuiC1PreTripAttack
+	XuiC3PreTripAttack
+	XuiC4PreTripAttack
+	XuiJumpKickAttack
+	XuiRunningJumpKickAttack
+	XuiSpecialRunningKickAttack
+	XuiC1Medium
+	XuiC2Medium
+	XuiC3Medium
+	XuiC4Medium
+	XuiC1Slow
+	XuiC3Slow
+	XuiC4Slow
+	XuiC1Fast
+	XuiC3Fast
+	XuiC4Fast
+	XuiC1Wide
+}
+
+CMenu ShaoBaseAttackStrings
+{
+	ShaoTripAttack
+	ShaoC1PreTripAttack
+	ShaoC3PreTripAttack
+	ShaoC4PreTripAttack
+	ShaoJumpKickAttack
+	ShaoRunningJumpKickAttack
+	ShaoSpecialRunningKickAttack
+	ShaoC1Medium
+	ShaoC2Medium
+	ShaoC3Medium
+	ShaoC4Medium
+	ShaoC1Slow
+	ShaoC3Slow
+	ShaoC4Slow
+	ShaoC1Fast
+	ShaoC3Fast
+	ShaoC4Fast
+	ShaoC1Wide
+}
+
+CMenu NinjaClanBaseAttackStrings
+{
+	ClanTripAttack
+	ClanC1PreTripAttack
+	ClanC3PreTripAttack
+	ClanC4PreTripAttack
+	ClanJumpKickAttack
+	ClanRunningJumpKickAttack
+	ClanSpecialRunningKickAttack
+	ClanC1Medium
+	ClanC2Medium
+	ClanC3Medium
+	ClanC4Medium
+	ClanC1Slow
+	ClanC3Slow
+	ClanC4Slow
+	ClanC1Fast
+	ClanC3Fast
+	ClanC4Fast
+//	ClanC1Wide
+}
+
+CMenu LamSounds
+{
+	LamBaseAttackStrings
+	LamCharacterSounds
+}
+
+CMenu NinjaSounds
+{
+	NinjaBaseAttackStrings
+	NinjaCharacterSounds
+}
+
+CMenu ChopSounds
+{
+	ChopBaseAttackStrings
+	ChopCharacterSounds
+}
+
+CMenu LucySounds
+{
+	LucyBaseAttackStrings
+	LucyCharacterSounds
+}
+
+CMenu SpankySounds
+{
+	SpankyBaseAttackStrings
+	SpankyCharacterSounds
+}
+
+CMenu ChikiSounds
+{
+	ChikiBaseAttackStrings
+	ChikiCharacterSounds
+}
+
+CMenu CaptainSounds
+{
+	CaptainBaseAttackStrings
+	CaptainCharacterSounds
+}
+
+CMenu XuiSounds
+{
+	XuiBaseAttackStrings
+	XuiCharacterSounds
+}
+
+CMenu ShaoSounds
+{
+	ShaoBaseAttackStrings
+	ShaoCharacterSounds
+}
+
+CMenu MonkSounds
+{
+	NinjaClanBaseAttackStrings
+	NinjaClanCharacterSounds
+}
+
+CMenu NinjaClanSounds
+{
+	NinjaClanBaseAttackStrings
+	NinjaClanCharacterSounds
+}
+
+CMenu CharacterSound
+{
+	LamSounds
+	NinjaSounds
+	ChopSounds
+	LucySounds
+	SpankySounds
+	ChikiSounds
+	CaptainSounds
+	XuiSounds
+	ShaoSounds
+	MonkSounds
+	NinjaClanSounds
+}
+
+CMenu MixerTemplates1.0
+{
+	Mixer10_UI
+
+	Mixer10_KunMF
+	Mixer10_KunCS
+	Mixer10_KunDS
+	Mixer10_ForMF
+	Mixer10_ForCS
+	Mixer10_ForDS
+	Mixer10_AdvMF
+	Mixer10_AdvCS
+	Mixer10_AdvDS
+	Mixer10_TitMF
+	Mixer10_TitCS
+	Mixer10_TitDS
+	Mixer10_DinMF
+	Mixer10_DinCS
+	Mixer10_DinDS
+	Mixer10_SciMF
+	Mixer10_SciCS
+	Mixer10_SciDS
+
+	Mixer10_Dojo
+	Mixer10_Mystic
+	Mixer10_Warehouse
+	Mixer10_Island
+}
+
+CMenu MixerTemplates2.0
+{
+	Mixer20_UI
+
+	Mixer20_KunMF
+	Mixer20_KunCS
+	Mixer20_KunDS
+	Mixer20_ForMF
+	Mixer20_ForCS
+	Mixer20_ForDS
+	Mixer20_AdvMF
+	Mixer20_AdvCS
+	Mixer20_AdvDS
+	Mixer20_TitMF
+	Mixer20_TitCS
+	Mixer20_TitDS
+	Mixer20_DinMF
+	Mixer20_DinCS
+	Mixer20_DinDS
+	Mixer20_SciMF
+	Mixer20_SciCS
+	Mixer20_SciDS
+
+	Mixer20_Dojo
+	Mixer20_Mystic
+	Mixer20_Warehouse
+	Mixer20_Island
+}
+
+CMenu MixerTemplates4.0
+{
+	Mixer40_UI
+
+	Mixer40_KunMF
+	Mixer40_KunCS
+	Mixer40_KunDS
+	Mixer40_ForMF
+	Mixer40_ForCS
+	Mixer40_ForDS
+	Mixer40_AdvMF
+	Mixer40_AdvCS
+	Mixer40_AdvDS
+	Mixer40_TitMF
+	Mixer40_TitCS
+	Mixer40_TitDS
+	Mixer40_DinMF
+	Mixer40_DinCS
+	Mixer40_DinDS
+	Mixer40_SciMF
+	Mixer40_SciCS
+	Mixer40_SciDS
+
+	Mixer40_Dojo
+	Mixer40_Mystic
+	Mixer40_Warehouse
+	Mixer40_Island
+}
+
+CMenu MixerTemplates5.1
+{
+	Mixer51_UI
+
+	Mixer51_KunMF
+	Mixer51_KunCS
+	Mixer51_KunDS
+	Mixer51_ForMF
+	Mixer51_ForCS
+	Mixer51_ForDS
+	Mixer51_AdvMF
+	Mixer51_AdvCS
+	Mixer51_AdvDS
+	Mixer51_TitMF
+	Mixer51_TitCS
+	Mixer51_TitDS
+	Mixer51_DinMF
+	Mixer51_DinCS
+	Mixer51_DinDS
+	Mixer51_SciMF
+	Mixer51_SciCS
+	Mixer51_SciDS
+
+	Mixer51_Dojo
+	Mixer51_Mystic
+	Mixer51_Warehouse
+	Mixer51_Island
+}
+
+CMenu SoundMenu
+{
+	SoundTemplate
+	SoundMasterVolumes
+	MixerTemplates1.0
+	MixerTemplates2.0
+	MixerTemplates4.0
+	MixerTemplates5.1
+	CharacterSound
+	SoundBrowser
+	StreamBrowser
+	EntityBrowser
+	PlayList
+	PeakMonitorTemplate
+}
+
+CMenu ImpactTemplatesMenu
+{
+	ImpactBuilderBlock1
+	ImpactBuilderBlock2
+	ImpactBuilderBlock3
+	ImpactBuilderBlock4
+	ImpactBuilder_C1M
+	ImpactBuilder_C2M
+	ImpactBuilder_C3M
+	ImpactBuilder_C4M
+	ImpactBuilder_C1F
+	ImpactBuilder_C3F
+	ImpactBuilder_C4F
+	ImpactBuilder_C1S
+	ImpactBuilder_C3S
+	ImpactBuilder_C4S
+
+	ImpactBuilderSplat
+	ImpactBuilderGround
+	ImpactBuilderBounce
+	ImpactBuilderLightningStart
+	ImpactBuilderSignatureStart
+	ImpactBuilderKnifeStart
+	ImpactBuilderShotgun
+	ImpactBuilderInsult
+	ImpactBuilderInsultTrail
+	ImpactBuilderBlockShield
+}
+
+CMenu SignatureMenu
+{
+	ImpactTemplatesMenu
+	NinjaSignatureTemplate
+	XuiTanSignatureTemplate
+	WasabiSignatureTemplate
+	CandiSignatureTemplate
+	ChikiSignatureTemplate
+	LucySignatureTemplate
+	CaptainSignatureTemplate
+	ChopSignatureTemplate
+	AngWooSignatureTemplate
+}
+
+CMenu NinjaChallenge
+{
+	AWaveCreatureTemplate
+	AngWooAITemplate_Hard
+	FodderAITemplate_Easy
+	FodderAITemplate_Med
+	FodderAITemplate_Hard
+	MiddleAITemplate_Easy
+	MiddleAITemplate_Med
+	MiddleAITemplate_Hard
+	SuperAITemplate_Easy
+	SuperAITemplate_Med
+	SuperAITemplate_Hard
+	ThrowingAITemplate_Easy
+	ThrowingAITemplate_Med
+	ThrowingAITemplate_Hard
+	BlindAITemplate_Easy
+	BlindAITemplate_Med
+	BlindAITemplate_Hard
+}
+
+CMenu TauntMenu
+{
+	Insult1.1
+	Insult1.2
+	Insult1.3
+	Insult1.4
+	Insult1.5
+	Insult1.6
+	Insult1.7
+	Insult1.8
+	Insult2.1
+	Insult2.2
+	Insult2.3
+	Insult2.4
+	Insult2.5
+	Insult2.6
+	Insult2.7
+	Insult2.8	
+	InsultTrail1.1
+	ImpactShockTemplate
+	PlayerPoweredTemplate
+}
+
+
+CMenu MainMenu
+{
+	AttackMenu 
+	SoundMenu
+	CharactersMenu 
+	StateMenu 
+	CharacterGlobalTemplate 
+	CharacterMovementTemplate 
+	ObjectGlobalTemplate 
+	DebugTemplate 
+	DynamicsTemplate 
+	AIMenu 
+	ArenasMenu 
+	CamerasMenu
+	TestMenu 
+	GameTypeMenu
+	GameOptions
+	NinjaChallenge
+	UnlockableMenu
+	HudTemplate
+	EntityBrowser
+	SignatureMenu
+	FireFlyTemplate
+	TauntMenu
+	CombatTest
+}
+} 

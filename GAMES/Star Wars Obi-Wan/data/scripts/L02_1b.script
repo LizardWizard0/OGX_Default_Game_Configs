@@ -1,0 +1,444 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor QuiGon A_Qui-Gon_01
+SetMissionCritical QuiGon
+SetNodeHeightTolerance 0.4
+
+//ConsoleCommand "r_3dlights 0"
+ConsoleCommand "r_fogstart 0.01"
+ConsoleCommand "r_rain 1"
+ConsoleCommand "r_rainbubbles 1.2"
+SetForceUsesNeeded 20
+InvincibilityOn Quigon
+
+RunToNode QuiGon qg_node14
+
+Actor kaadu3 A_kaadu_03
+AddWorkEvent kaadu3 kaadu3_1
+AddWorkEvent kaadu3 kaadu3_2
+AddWorkEvent kaadu3 kaadu3_3
+
+Actor kaadu4 A_kaadu_04
+AddWorkEvent kaadu4 kaadu4_01
+AddWorkEvent kaadu4 kaadu4_02
+AddWorkEvent kaadu4 kaadu4_03
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_17.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_06.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+
+AddMusic m_tension_01.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle_06.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_tension_13.wav Battle
+
+AddBattleLoop  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 10 20
+
+//script "Quigon died"
+//{
+//	waituntilkilled Quigon
+//	begincutscene
+//	cameraplayer Quigon 0 2.5 -5.0
+//	pause 0.5
+//	communicatoron
+//	CommunicatorMessageAndWait "Good going Obi-Wan." quigonjinn.dlg
+//	CommunicatorMessageAndWait "You LOSE." quigonjinn.dlg
+//	fadedownandwait
+//	endcutscene
+//	NextLevel L02_1a
+//}
+
+Script "Impatient Quigon"
+{
+	WaitUntilStateActivated Quigon Puppet
+	WaitUntilStateShutDown Quigon Puppet
+	WaitUntilStateActivated Quigon FollowPlayer
+	PlayAudioCue Quigon "FollowMe" 30.0 //don't play more often than every 30 seconds
+	PlayGesture Quigon AttractAttention
+	Pause 10
+	Loop
+}
+
+////////////////////
+// Respawn Points //
+////////////////////
+
+//Deleted
+
+Script "QuiGon Respawn"
+{
+    if (= StartPosition 1)
+    {
+        Teleport Quigon qrespawn6
+    }
+        if (= StartPosition 2)
+    {
+        Teleport Quigon qrespawn7
+    }
+}    
+
+////Save Points
+
+Script "SavePoint1"
+{
+   WaitUntilEnteredRegion Obi region_11
+   SetStartPosition 1
+   Save
+}
+
+Script "SavePoint2"
+{
+   WaitUntilEnteredRegion Obi region_14
+   RemoveGroup 1
+   SetStartPosition 2
+   Save
+}
+
+////Enemy Functions////
+
+Function "FollowBuddy" (Actor Leader, Actor  Follower, Int  Distance, Int  Angle)
+{
+	AddPatrolState Leader
+    SetIdleAttentionSpan Leader 1
+    FollowStateDirectional Follower Leader Distance Angle
+}
+
+Function  "HurtEnemy" (actor Hurt, actor Attacker)
+{
+    WaitUntilDamaged Hurt
+    ForceTarget Attacker obi
+}
+
+Function  "KilledEnemy" (actor Dead, actor Angry)
+{
+    WaitUntilKilled  Dead 
+    ForceTarget Angry obi
+}
+
+Function "MeleeAmbush" (Node TooClose, Actor Ambush)
+{
+   float NodeProximity 0
+   DistanceBetweenActorAndNode Obi TooClose NodeProximity
+   if (<= NodeProximity 20)
+   {
+      ForceTarget Ambush Obi
+   }
+   loop
+}
+
+Function  "Patrol" (actor Patroller)
+{
+    AddPatrolState Patroller
+    SetIdleAttentionSpan Patroller 1
+}
+
+////End Enemy Functions////
+
+FadeUp
+LoadDLG Qui-Gon.dlg
+SetDefaultSurface 03_dirt1.sur
+
+Script "QuiGon Start B"
+{
+      takepartialcontrolof QuiGon 0.35 false
+    
+	SetFollowPlayer Quigon
+}
+
+StartMusicManager //jw 8.21.01
+
+///// Exploration Markers
+function "ExplorationMarkerRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_04, 24)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_05, 25)
+
+/// The Break ///
+
+///deleted.
+
+Script "Start Patrol 7"
+{
+////WaitUntilEnteredRegion Obi region_07
+
+////Snipers at left cliff - A_jin'ha-sniper_08, A_jin'ha-sniper_09
+
+////Enemies below left cliff
+////Back up moves from center
+	Call FollowBuddy(A_jin'ha-mace_18, A_jin'ha-dagger_26, 4, 120)
+
+    Call  HurtEnemy (A_jin'ha-mace_18, A_jin'ha-mace_12)
+    Call  HurtEnemy (A_jin'ha-dagger_26, A_jin'ha-mace_12)
+    
+    Call MeleeAmbush (mace12_ambush, A_jin'ha-mace_12)    
+    Call MeleeAmbush (dagger23_ambush, A_jin'ha-dagger_23)
+    
+    Call FollowBuddy(A_jin'ha-blaster_09, A_jin'ha-rod_06, 3, 120)
+
+////Blaster guys at first right - A_jin'ha-blaster_03, A_jin'ha-blaster_04   
+////Back up moves from center
+    Call  HurtEnemy (A_jin'ha-blaster_03, A_jin'ha-dagger_23)
+    Call  HurtEnemy (A_jin'ha-blaster_04, A_jin'ha-dagger_23)
+    
+    Call  HurtEnemy (A_jin'ha-dagger_23, A_jin'ha-blaster_06)
+    Call  HurtEnemy (A_jin'ha-blaster_06, A_jin'ha-dagger_12)
+    
+////At the turret
+////SetAIBoundaryAndNode A_jin'ha-sniper_17 region_aibound_03 sniper17
+    Call  HurtEnemy (A_jin'ha-blaster_05, A_jin'ha-dagger_14)
+    
+////In front of the cliff face center
+    Call FollowBuddy(A_jin'ha-blaster_10, A_jin'ha-rod_02, 3, 120)
+    Call MeleeAmbush (qg_node07, A_jin'ha-blaster_10)
+    Call MeleeAmbush (qg_node07, A_jin'ha-rod_02)
+    
+////At the cliff face right - first tier
+    Call  HurtEnemy (A_jin'ha-blaster_08, A_jin'ha-mace_22)
+    Call  HurtEnemy (A_jin'ha-mace_22, A_jin'ha-blaster_08)
+    
+    Call MeleeAmbush (dagger12_ambush, A_jin'ha-dagger_12)
+    Call  HurtEnemy (A_jin'ha-dagger_12, A_jin'ha-blaster_11)
+    
+    Call FollowBuddy(A_jin'ha-blaster_11, A_jin'ha-rod_04, 4, 120)
+    Call MeleeAmbush (dagger12_ambush, A_jin'ha-blaster_11)
+    Call MeleeAmbush (dagger12_ambush, A_jin'ha-rod_04)
+
+////At the cliff face right - second tier
+    Call  HurtEnemy (A_jin'ha-mace_23, A_jin'ha-blaster_07)
+    Call  HurtEnemy (A_jin'ha-blaster_07, A_jin'ha-mace_23)
+
+////On the ramp - A_jin'ha-mace_14, A_jin'ha-dagger_13, A_jin'ha-blaster_12
+////On the ramp - A_jin'ha-mace_20, A_jin'ha-mace_21
+    Call  HurtEnemy (A_jin'ha-mace_14, A_jin'ha-dagger_13)
+    Call  HurtEnemy (A_jin'ha-mace_14, A_jin'ha-blaster_12)
+    
+    Call  HurtEnemy (A_jin'ha-blaster_12, A_jin'ha-mace_20)
+    Call  HurtEnemy (A_jin'ha-blaster_12, A_jin'ha-mace_21)   
+}
+
+Script  "Nuna Backup"
+{
+	WaitUntilEnteredRegion Quigon region_07
+    Call FollowBuddy (A_nuna_male_07, A_nuna_male_08, 2, 90)
+    Call FollowBuddy (A_nuna_male_07, A_nuna_female_08, 3, 270)
+    Call  HurtEnemy (A_nuna_male_07, A_jin'ha-mace_11)
+    Call  HurtEnemy (A_nuna_male_08, A_jin'ha-mace_11)
+    Call  HurtEnemy (A_nuna_female_08, A_jin'ha-mace_11)
+}
+
+Script "Quigon speaks 1"
+{
+	WaitUntilEnteredRegion Quigon region_07
+    AiAudioOff QuiGon
+    Pause  2.0
+	SayLineNonPositional QuiGon "/Qui-Gon_1138/Hurry up, we have to find that ship!"
+    Pause  2.0
+    AiAudioOn QuiGon
+}
+
+//Script "Quigon Invincible"
+//{
+//  WaitUntilEnteredRegion Quigon region_battle_07
+//   InvincibilityOn Quigon
+//}
+
+Script "Start Patrol 11"
+{
+	WaitUntilEnteredRegion Obi region_11
+
+////First guy at top of ramp
+    Call Patrol (A_jin'ha-mace_17)
+
+    SetPatrolTypes A_jin'ha-dagger_03 2    
+    Call Patrol (A_jin'ha-dagger_03)
+
+    SetPatrolTypes A_jin'ha-dagger_09 3
+    Call Patrol (A_jin'ha-dagger_09)
+
+    Call HurtEnemy (A_jin'ha-mace_17, A_jin'ha-dagger_03)
+    Call HurtEnemy (A_jin'ha-dagger_03, A_jin'ha-dagger_09)
+    
+////guy patrolling at center
+    Call Patrol (A_jin'ha-mace_15)
+    
+////Snipers left barricades - A_jin'ha-sniper_16, A_jin'ha-sniper_10
+    Call KilledEnemy(A_jin'ha-sniper_16, A_jin'ha-blaster_01)
+    Call KilledEnemy(A_jin'ha-sniper_10, A_jin'ha-blaster_01)  
+
+////Snipers center barricades - A_jin'ha-sniper_15, A_jin'ha-sniper_14 
+////Snipers right barricades - A_jin'ha-sniper_13
+    Call KilledEnemy(A_jin'ha-sniper_13, A_jin'ha-blaster_02)     
+
+////Four Final Guys to Kill  
+    SetPatrolTypes A_jin'ha-dagger_10 2
+    Call Patrol (A_jin'ha-dagger_10)
+        
+    SetPatrolTypes A_jin'ha-mace_16 3
+    Call FollowBuddy (A_jin'ha-mace_16, A_jin'ha-mace_25, 3, 120)
+
+    Call Patrol (A_jin'ha-mace_26)
+    
+////Last patrol added
+    Call FollowBuddy (A_jin'ha-mace_24, A_jin'ha-mace_13, 4, 90)
+}
+
+Script "Start NunaPatrol 11"
+{
+	WaitUntilEnteredRegion Obi region_11
+    Call FollowBuddy (A_nuna_male_05, A_nuna_male_06, 3, 180)
+    Call FollowBuddy (A_nuna_male_05, A_nuna_female_05, 2, 120)
+}
+
+Script "Ending Cutscene"
+{
+   Int shouldEndLevel 0
+
+      If (IsAlive Obi)
+      {
+         If (IsInRegion Obi region_endlevel)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi region_endlevel02)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi region_endlevel03)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi region_endlevel04)
+         {
+            Set shouldEndLevel 1
+         }
+      }
+    
+   If (= shouldEndLevel 1)
+   {
+    MissionObjectiveAchieved 1
+    InvincibilityOn Obi
+    
+    //Pause 1.0
+    
+	 DisableAudioFades
+    FadeDown 0.5
+    
+    ChildScript "Last of the Bad Guys"
+    {
+    RemoveActor A_jin'ha-blaster_01
+    RemoveActor A_jin'ha-blaster_02
+    RemoveActor A_jin'ha-blaster_03
+    RemoveActor A_jin'ha-blaster_04
+    RemoveActor A_jin'ha-blaster_05
+    RemoveActor A_jin'ha-blaster_06
+    RemoveActor A_jin'ha-blaster_07
+    RemoveActor A_jin'ha-blaster_08
+    RemoveActor A_jin'ha-blaster_09
+    RemoveActor A_jin'ha-blaster_10
+    RemoveActor A_jin'ha-blaster_11
+    RemoveActor A_jin'ha-blaster_12
+    RemoveActor A_jin'ha-dagger_03
+    RemoveActor A_jin'ha-dagger_09
+    RemoveActor A_jin'ha-dagger_10
+    RemoveActor A_jin'ha-dagger_12
+    RemoveActor A_jin'ha-dagger_13
+    RemoveActor A_jin'ha-dagger_14
+    RemoveActor A_jin'ha-dagger_23
+    RemoveActor A_jin'ha-dagger_26
+    RemoveActor A_jin'ha-mace_11
+    RemoveActor A_jin'ha-mace_12
+    RemoveActor A_jin'ha-mace_13
+    RemoveActor A_jin'ha-mace_14
+    RemoveActor A_jin'ha-mace_15
+    RemoveActor A_jin'ha-mace_16
+    RemoveActor A_jin'ha-mace_17
+    RemoveActor A_jin'ha-mace_18
+    RemoveActor A_jin'ha-mace_20
+    RemoveActor A_jin'ha-mace_21
+    RemoveActor A_jin'ha-mace_22
+    RemoveActor A_jin'ha-mace_23
+    RemoveActor A_jin'ha-mace_24
+    RemoveActor A_jin'ha-mace_25
+    RemoveActor A_jin'ha-mace_26
+    RemoveActor A_jin'ha-rod_02
+    RemoveActor A_jin'ha-rod_04
+    RemoveActor A_jin'ha-rod_06
+    RemoveActor A_jin'ha-sniper_01
+    RemoveActor A_jin'ha-sniper_02
+    RemoveActor A_jin'ha-sniper_08
+    RemoveActor A_jin'ha-sniper_09
+    RemoveActor A_jin'ha-sniper_10
+    RemoveActor A_jin'ha-sniper_13
+    RemoveActor A_jin'ha-sniper_14
+    RemoveActor A_jin'ha-sniper_15
+    RemoveActor A_jin'ha-sniper_16
+    RemoveActor A_jin'ha-sniper_17  
+    }
+
+	takecontrolof QuiGon
+    Pause 0 5
+    StopActions QuiGon
+    Pause 0 5
+    UnEquipWeapon  QuiGon
+    Pause 0 5
+    UnEquipWeapon  Obi
+    Pause 0 5
+    Teleport QuiGon quigon_end
+	Teleport Obi obi_end
+    AddState QuiGon Idle
+
+	BeginCutScene
+
+	StopMusicManager
+    PlayFlourish cut_2_1bextro_m.wav
+
+    FadeUp
+	EnableAudioFades
+  	CameraFixed endcamera
+    Pause 2.0
+	SayLineNonPositional Obi "/Obi-Wan_323/They can't have survived, Master...."
+   SayLineNonPositional QuiGon "/Qui-Gon_324/No, Padawan, I sense both Jedi somewhere nearby. I will go and find them. I want you to find the jin'ha facility, and discover the source of their weapons technology. We can still turn defeat into victory."
+  	FadeDownAndWait
+  
+  //Commands to execute if player exits cutscene early
+    PreEndCutscene
+    FadeDown 0
+    StopTalking Obi
+    StopTalking QuiGon
+    
+	EndCutscene
+	NextLevel L02_3
+    }
+    loop
+}

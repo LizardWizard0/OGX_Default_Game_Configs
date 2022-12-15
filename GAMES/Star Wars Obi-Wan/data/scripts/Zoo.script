@@ -1,0 +1,449 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+/// Initialize Level ///
+
+
+/*
+Script "Stupid sculpture"
+{
+	GetAttachment A_5-5_badmojo_base_01 wedge 5-5_badmojo_wedge.dsc
+	WaitUntilDamaged wedge
+	PrintLn "Damaged Wedge, now play animation!"
+}
+
+Script "GarbageOut"
+{
+WaitUntilExitedRegion A_1-1_garbage06_01 RegionGarbage
+SayLineAndContinue Obi "Garbage Out Of Region"
+Pause 1.0
+Loop
+}
+
+Script "GarbageIn"
+{
+WaitUntilEnteredRegion A_1-1_garbage06_01 RegionGarbage
+SayLineAndContinue Obi "Garbage In Region"
+Pause 1.0
+Loop
+}
+*/
+
+
+/*
+Script "invincible"
+{
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #1"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #2"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #3"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #4"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #5"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #6"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #7"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #8"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLineAndContinue Obi "Obi hit #9"
+WaitUntilDamaged Obi
+HealHitPoints Obi 1000
+SayLine Obi "Obi hit #10"
+SayLineAndContinue Obi "Obid damge counter looping"
+loop
+}
+*/
+
+Script "Initializer"
+{
+	Pause 1.0
+	Call RespawnEnemy A_z_UberGen_11
+	Call RespawnEnemy A_z_UberGen_12
+	Call RespawnEnemy A_z_UberGen_13
+	Call RespawnEnemy A_z_UberGen_14
+	Call RespawnEnemy A_z_UberGen_15
+	Call RespawnEnemy A_z_UberGen_16
+	Call RespawnEnemy A_z_UberGen_17
+	Call RespawnEnemy A_z_UberGen_18
+	Call RespawnEnemy A_z_UberGen_19
+	Call RespawnEnemy A_z_UberGen_20
+	Call RespawnEnemy A_z_UberGen_23
+	Call RespawnEnemy A_z_UberGen_24
+	Call RespawnEnemy A_z_UberGen_25
+	Call RespawnEnemy A_z_UberGen_26
+	Call RespawnEnemy A_z_UberGen_27
+	Call RespawnEnemy A_z_UberGen_44
+	Call RespawnEnemy A_z_UberGen_45
+	Call RespawnEnemy A_z_UberGen_46
+	Call RespawnEnemy A_z_UberGen_47
+	Call RespawnEnemy A_z_UberGen_54
+	Call RespawnEnemy A_z_UberGen_55
+	Call RespawnEnemy A_z_UberGen_56
+	Call RespawnEnemy A_z_UberGen_57
+	Call RespawnEnemy A_z_UberGen_58
+	Call RespawnEnemy A_z_UberGen_59
+	Call RespawnEnemy A_z_UberGen_61
+	Call RespawnEnemy A_z_UberGen_62
+	Call RespawnEnemy A_z_UberGen_63
+	Call RespawnEnemy A_z_UberGen_64
+	Call RespawnEnemy A_z_UberGen_65
+	Call RespawnEnemy A_z_UberGen_66
+	Call RespawnEnemy A_z_UberGen_69
+	Call RespawnEnemy A_z_UberGen_70
+	Call RespawnEnemy A_z_UberGen_71
+	Call RespawnEnemy A_z_UberGen_74
+	Call RespawnEnemy A_z_UberGen_75
+	Call RespawnEnemy A_z_UberGen_76
+	Call RespawnEnemy A_z_UberGen_77
+	Call RespawnEnemy A_z_UberGen_79
+	Call RespawnEnemy A_z_UberGen_80
+	Call RespawnEnemy A_z_UberGen_81
+	Call RespawnEnemy A_z_UberGen_82
+	Call RespawnEnemy A_z_UberGen_83
+	Call RespawnEnemy A_z_UberGen_Tank
+	Pause 2.0
+	Child FadeUp	
+}
+
+
+/*
+/// Respawn Points ///
+
+Function SetStartPosition (Region r, Int n)
+{
+	WaitUntilEnteredRegion Obi r
+	Set StartPosition n
+	Loop
+}
+
+
+Script "Set Respawn Points"
+{
+	Set StartPosition 0
+	Call SetStartPosition RegionStart00 0
+	Call SetStartPosition RegionStart01 1
+	//Call SetStartPosition RegionStart02 2
+	Call SetStartPosition RegionStart03 3
+	Call SetStartPosition RegionStart04 4
+}
+*/
+
+
+/// Respawn Single Enemies ///
+
+Function RespawnEnemy (Actor UberGen)
+{
+	actor Enemy
+	TriggerUberGenAndWait UberGen Enemy
+	
+/*
+	Script "nudge fight"
+	{
+	Setteam Enemy 0
+	WaitUntilNudged Enemy
+	Setteam Enemy 8
+	}
+*/
+	
+	script "takin flack"
+	{
+	waituntildamaged Enemy
+	sayline Enemy "hit #1"
+	waituntildamaged Enemy
+	sayline Enemy "hit #2"
+	waituntildamaged Enemy
+	sayline Enemy "hit #3"
+	waituntildamaged Enemy
+	sayline Enemy "hit #4"
+	waituntildamaged Enemy
+	sayline Enemy "hit #5"
+	waituntildamaged Enemy
+	sayline Enemy "hit #6"
+	waituntildamaged Enemy
+	sayline Enemy "hit #7"
+	waituntildamaged Enemy
+	sayline Enemy "hit #8"
+	waituntildamaged Enemy
+	sayline Enemy "hit #9"
+	waituntildamaged Enemy
+	sayline Enemy "hit #10"
+	sayline Enemy "looping damage counter"
+	loop
+	}
+
+
+	WaitUntilKilled Enemy
+	Pause 5.0
+	Display "Enemy respawned" 1.5
+	Loop
+}
+
+/// Respawn Fight 1 ///
+
+Script "RespawnFight1"
+{
+	TriggerUberGenAndWait A_z_UberGen_05 Enemy1
+	TriggerUberGenAndWait A_z_UberGen_06 Enemy2
+	TriggerUberGenAndWait A_z_UberGen_07 Enemy3
+	TriggerUberGenAndWait A_z_UberGen_08 Enemy4
+	TriggerUberGenAndWait A_z_UberGen_09 Enemy5
+	TriggerUberGenAndWait A_z_UberGen_10 Enemy6
+	WaitUntilKilled Enemy1
+	WaitUntilKilled Enemy2
+	WaitUntilKilled Enemy3
+	WaitUntilKilled Enemy4
+	WaitUntilKilled Enemy5
+	WaitUntilKilled Enemy6
+	Pause 3.0
+	Display "Enemies respawning in 7" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 6" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 5" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 4" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 3" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 2" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 1" 1.0
+	Pause 1.0
+	Loop
+}
+
+
+
+/// Respawn Fight 2 ///
+
+Script "RespawnFight2"
+{
+	TriggerUberGenAndWait A_z_UberGen_01 Enemy1
+	TriggerUberGenAndWait A_z_UberGen_02 Enemy2
+	TriggerUberGenAndWait A_z_UberGen_03 Enemy3
+	TriggerUberGenAndWait A_z_UberGen_04 Enemy4
+	WaitUntilKilled Enemy1
+	WaitUntilKilled Enemy2
+	WaitUntilKilled Enemy3
+	WaitUntilKilled Enemy4
+	Pause 3.0
+	Display "Enemies respawning in 7" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 6" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 5" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 4" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 3" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 2" 1.0
+	Pause 1.0
+	Display "Enemies respawning in 1" 1.0
+	Pause 1.0
+	Loop
+}
+
+
+
+
+/// Respawn Fight 3 ///
+
+Script "RespawnFight3"
+{
+	TriggerUberGenAndWait A_z_UberGen_28 Naboo1
+	Setteam Naboo1 0
+	TriggerUberGenAndWait A_z_UberGen_29 Naboo2
+	Setteam Naboo2 0
+	TriggerUberGenAndWait A_z_UberGen_30 Naboo3
+	Setteam Naboo3 0
+	TriggerUberGenAndWait A_z_UberGen_31 Naboo4
+	Setteam Naboo4 0
+	TriggerUberGenAndWait A_z_UberGen_32 Naboo5
+	Setteam Naboo5 0
+	TriggerUberGenAndWait A_z_UberGen_33 Enemy1
+	TriggerUberGenAndWait A_z_UberGen_34 Enemy2
+	TriggerUberGenAndWait A_z_UberGen_35 Enemy3
+	TriggerUberGenAndWait A_z_UberGen_36 Enemy4
+	TriggerUberGenAndWait A_z_UberGen_37 Enemy5
+	WaitUntilEnteredRegion Obi RegionFight3
+	ForceTargetAndAttack Enemy1 Obi
+	ForceTargetAndAttack Enemy2 Obi
+	ForceTargetAndAttack Enemy3 Obi
+	ForceTargetAndAttack Enemy4 Obi
+	ForceTargetAndAttack Enemy5 Obi
+	Display "Fight!" 2.0
+	Pause 2.0
+	Setteam Naboo1 5
+	Setteam Naboo2 5
+	Setteam Naboo3 5
+	Setteam Naboo4 5
+	Setteam Naboo5 5
+	Childscript "Naboo Win"
+	{
+		WaitUntilKilled Enemy1
+		WaitUntilKilled Enemy2
+		WaitUntilKilled Enemy3
+		WaitUntilKilled Enemy4
+		WaitUntilKilled Enemy5
+		Display "Naboo win!" 3.0
+		Pausescript "BAD win"
+	}
+	Childscript "BAD Win"
+	{
+		WaitUntilKilled Naboo1
+		WaitUntilKilled Naboo2
+		WaitUntilKilled Naboo3
+		WaitUntilKilled Naboo4
+		WaitUntilKilled Naboo5
+		Display "Battledroids win!" 3.0
+		Pausescript "Naboo win"
+	}
+	WaitForAny
+	Pause 5.0
+	Display "Killing all remaining in 5" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 4" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 3" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 2" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 1" 1.0
+	Pause 1.0
+	Kill Naboo1
+	Kill Naboo2
+	Kill Naboo3
+	Kill Naboo4
+	Kill Naboo5
+	Kill Enemy1
+	Kill Enemy2
+	Kill Enemy3
+	Kill Enemy4
+	Kill Enemy5
+	Pause 2.0
+	Display "Respawning in 7" 1.0
+	Pause 1.0
+	Display "Respawning in 6" 1.0
+	Pause 1.0
+	Display "Respawning in 5" 1.0
+	Pause 1.0
+	Display "Respawning in 4" 1.0
+	Pause 1.0
+	Display "Respawning in 3" 1.0
+	Pause 1.0
+	Display "Respawning in 2" 1.0
+	Pause 1.0
+	Display "Respawning in 1" 1.0
+	Pause 1.0
+	Loop
+}
+
+
+
+/// Respawn Fight 4 ///
+
+Script "RespawnFight4"
+
+{
+	TriggerUberGenAndWait A_z_UberGen_38 Quigon
+    	Setteam Quigon 0 
+	TriggerUberGenAndWait A_z_UberGen_40 Enemy2
+	TriggerUberGenAndWait A_z_UberGen_41 Enemy3
+	TriggerUberGenAndWait A_z_UberGen_42 Enemy4
+	TriggerUberGenAndWait A_z_UberGen_43 Enemy5
+
+	setteam enemy2 0
+	setteam enemy3 0
+	setteam enemy4 0
+	setteam enemy5 0
+
+    WaitUntilEnteredRegion Obi RegionFight4
+	Display "Fight!" 2.0
+	Pause 2.0
+	Setteam Quigon 1
+	setteam enemy2 11
+	setteam enemy3 11
+	setteam enemy4 11
+	setteam enemy5 11
+
+/// Forcetargetandattack Quigon enemy1 ///
+
+	Childscript "Quigon Wins"
+	{
+
+		WaitUntilKilled Enemy2
+		WaitUntilKilled Enemy3
+		WaitUntilKilled Enemy4
+		WaitUntilKilled Enemy5
+		Display "Qui-Gon wins!" 3.0
+		endscript "BAD win"
+	}
+	Childscript "BAD Win"
+	{
+		WaitUntilKilled Quigon
+		Display "Battledroids win!" 3.0
+		endscript "Quigon wins"
+	}
+	WaitForAny
+	Pause 5.0
+	Display "Killing all remaining in 5" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 4" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 3" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 2" 1.0
+	Pause 1.0
+	Display "Killing all remaining in 1" 1.0
+	Pause 1.0
+	Kill Quigon
+	Kill Enemy2
+	Kill Enemy3
+	Kill Enemy4
+	Kill Enemy5
+	Pause 2.0
+	Display "Respawning in 7" 1.0
+	Pause 1.0
+	Display "Respawning in 6" 1.0
+	Pause 1.0
+	Display "Respawning in 5" 1.0
+	Pause 1.0
+	Display "Respawning in 4" 1.0
+	Pause 1.0
+	Display "Respawning in 3" 1.0
+	Pause 1.0
+	Display "Respawning in 2" 1.0
+	Pause 1.0
+	Display "Respawning in 1" 1.0
+	Pause 1.0
+	Loop
+}
+
+/*
+script "mortal"
+{
+takecontrolof A_Qui-Gon_01
+WaitUntilNudged A_Qui-Gon_01
+sayline A_Qui-Gon_01 "Qui-gon: nudge me again to become mortal, if yer man enough"
+WaitUntilNudged A_Qui-Gon_01
+endscript "invincible"
+sayline A_Qui-Gon_01 "Qui-gon: You can now be killed.  Good luck, sucker!"
+}
+*/
+

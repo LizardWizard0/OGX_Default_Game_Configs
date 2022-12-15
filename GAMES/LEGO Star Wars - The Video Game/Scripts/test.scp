@@ -1,0 +1,54 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto Wait
+		if PlayerRange < 2.75 goto Wait
+	}
+	Actions {	
+		FollowPlayer "2.75"
+	}
+}
+
+state Wait {
+	Conditions {
+		if OpponentRange < 1.5 goto Retreat
+		if GotOpponent == 0 and
+		if PlayerRange > 4.75 goto Base
+		if CameraObstruct == -1 and
+		if PlayerRange < 3.0 goto CircleClockwise
+		if CameraObstruct == 1 and
+		if PlayerRange < 3.0 goto CircleAntiClockwise
+	}
+	Actions {	
+		Idle
+	}
+}
+
+state CircleAntiClockwise {
+	Conditions {
+		if CameraObstruct == 0 goto Base
+		if PlayerRange > 3.0 goto Base
+	}
+	Actions {
+		CirclePlayer "2.75" "WALK" "ANTICLOCKWISE"
+	}
+}
+
+state CircleClockwise {
+	Conditions {
+		if CameraObstruct == 0 goto Base
+		if PlayerRange > 3.0 goto Base
+	}
+	Actions {
+		CirclePlayer "2.75" "WALK" "CLOCKWISE"
+	}
+}
+
+state Retreat {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if OpponentRange > 2 goto Wait
+	}
+	Actions {	
+		RetreatFromOpponent "3"
+	}
+}

@@ -1,0 +1,9 @@
+[Public]
+GameType=(GameName="DeathMatch",ClassName="MPGame.DMGame",MapPrefix="DM",Acronym="DM",MapListType="MPGame.MapListDeathMatch",Screenshot="MapThumbnails.ShotDeathmatch",DecoTextName="XGames.Deathmatch",DefaultGoalScore=30,MinGoalScore=10,DefaultTimeLimit=60,DefaultMaxLives=0,DefaultRemainingRounds=0,bTeamGame=0)
+
+GameType+=(GameName="Team Deathmatch",ClassName="MPGame.TDGame",MapPrefix="TD",Acronym="TDM",MapListType="MPGame.MapListTeamDeathMatch",Screenshot="MapThumbnails.ShotTeamGame",DecoTextName="XGames.TeamGame",DefaultGoalScore=30,MinGoalScore=10,DefaultTimeLimit=60,DefaultMaxLives=0,DefaultRemainingRounds=0,bTeamGame=1)
+
+GameType+=(GameName="Capture the Flag",ClassName="MPGame.CTFGame",MapPrefix="CTF",Acronym="CTF",MapListType="MPGame.MapListCaptureTheFlag",Screenshot="MapThumbnails.ShotCTFGame",DecoTextName="XGames.CTFGame",DefaultGoalScore=5,MinGoalScore=1,DefaultTimeLimit=60,DefaultMaxLives=0,DefaultRemainingRounds=0,bTeamGame=1)
+
+GameType+=(GameName="Assault",ClassName="MPGame.ASGame",MapPrefix="AS",Acronym="AS",MapListType="MPGame.MapListAssault",Screenshot="MapThumbnails.ShotASGame",DecoTextName="XGames.ASGame",DefaultGoalScore=0,MinGoalScore=0,DefaultTimeLimit=60,DefaultMaxLives=0,DefaultRemainingRounds=3,bTeamGame=1)
+

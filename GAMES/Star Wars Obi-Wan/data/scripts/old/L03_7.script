@@ -1,0 +1,1330 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic l01_m_intro1.wav Suspense 
+AddMusic l14_m_tomb_2.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_15.wav Tension
+
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+
+SetMusicInterval Suspense 30 50
+SetMusicInterval Tension 20 40
+SetMusicInterval Battle 10 20
+
+SetDefaultSurface 08_13fnttop.sur
+
+FadeUp
+
+/////////////////////
+/// GLOBAL ACTORS ///
+/////////////////////
+
+actor Guide A_naboo-resistance_leader_royal_outfit_02
+actor Door1_DED3 A_DestroyerDroid_03
+actor Door2_Melee1 A_AssassinDroid-Mace_05
+actor Door4_Melee1 A_AssassinDroid-Mace_03
+actor Door4_Melee2 A_AssassinDroid-Mace_04
+actor Door5_Melee1 A_AssassinDroid-Sword_02
+actor Door6_Melee1 A_AssassinDroid-Mace_06
+actor Door6_Melee2 A_AssassinDroid-Mace_07
+actor Door6_Melee3 A_AssassinDroid-Sword_06
+actor WoundedSoldier A_Naboo-Resistance1_01
+
+setpainregion RGN_InstantKillBox 5000
+
+////////////////////
+/// BEGIN CHEATS ///
+////////////////////
+
+//invincibilityon Guide
+unequipweapon Guide
+
+/*
+script "UnlockAllDoors"			/// USE IF YOU NEED FREE ACCESS TO ROOMS ///
+{
+	unlockdoor A_09_D_banq_01
+	unlockdoor A_09_D_palace_01_09
+	unlockdoor A_09_D_palace_01_03
+	unlockdoor A_09_D_Z01_Z02_01
+	unlockdoor A_09_D_palace_01_11
+	unlockdoor A_09_D_palace_01_13
+}
+*/
+
+//////////////////
+/// END CHEATS ///
+//////////////////
+
+//////////////////////
+/// RESPAWN POINTS ///
+//////////////////////
+
+Function SetStartPosition (Region r, Int n)
+{
+	WaitUntilEnteredRegion Obi r
+	set StartPosition n
+}
+
+Script "Set_Respawn_Points"
+{
+	set StartPosition 0
+	Call SetStartPosition RGN_Start01 1
+	Call SetStartPosition RGN_Start02 2
+	Call SetStartPosition RGN_Start03 3
+	Call SetStartPosition RGN_Start04 4
+	Call SetStartPosition RGN_Start05 5
+	Call SetStartPosition RGN_Start06 6
+	Call SetStartPosition RGN_Start07 7
+	Call SetStartPosition RGN_Start08 8
+	Call SetStartPosition RGN_Start09 9
+}
+
+///////////////////////
+/// BEGIN FUNCTIONS ///
+///////////////////////
+
+/// ENEMY FUNCTIONS ///
+
+function "Electrofried" (Actor FriedEggs, region WaterRGN)
+{
+	waituntilenteredregion FriedEggs WaterRGN
+	takecontrolof FriedEggs
+	pause 2.0
+	kill FriedEggs
+}
+
+function "EnterRGNandRunToandPatrol" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	takepartialcontrolof Camby
+	waituntilenteredregion obi RGN_Camby
+	runtonode Camby goto_Camby
+	waituntilarrived Camby goto_Camby
+	returncontrolto Camby
+	addpatrolstate Camby
+}
+
+function "EnterRGNandAttack" (Actor Grimreaper, Region RGN_attack)
+{
+	waituntilenteredregion Obi RGN_attack
+	takepartialcontrolof Grimreaper
+	forcetarget Grimreaper Obi
+	waituntilexitedregion Obi RGN_attack
+	forcetargetoff Grimreaper
+	returncontrolto Grimreaper
+	loop
+}
+
+function "RuntoNodeControl" (Actor Roadrunner, Node goto_Roadrunner)
+{
+	takepartialcontrolof Roadrunner
+	runtonodeandwait Roadrunner goto_Roadrunner
+}
+
+function "DEDrunto" (Actor DEDhead, node goto_DEDhead)
+{
+	takecontrolof DEDhead
+	dedroll DEDhead
+	walktonodeandwait DEDhead goto_DEDhead
+	dedrolloff DEDhead
+	returncontrolto DEDhead
+}
+
+function "TriggerAndRuntoNode" (Actor UG_Taz, Node goto_Taz)
+{
+	Actor Taz
+	TriggerUberGenAndWait UG_Taz Taz
+	TakePartialControlOf Taz
+	RunToNodeandwait Taz goto_Taz
+}
+
+function "ShutDownMode" (Actor Hitler, Actor Pawn)
+{
+	waituntilkilled Hitler
+	takecontrolof Pawn
+	pause 2.0
+	kill Pawn
+}
+
+function "LocalKillCounter" (actor BodyBag, int BodyCount)
+{
+    waituntilkilled BodyBag
+    increment BodyCount 1    
+}
+
+/// OBI FUNCTIONS ///
+
+function "ForceFieldCheck" (region RGN_trig_ForceField, actor Flipper, actor Switch_ForceField, int EndForceFieldCheckLoop)
+{
+    if (= EndForceFieldCheckLoop 0)
+    {
+        waituntilenteredregion Obi RGN_trig_ForceField
+        pause 0.15
+        if (isinregion obi RGN_trig_ForceField)
+        {
+            nudge Flipper Switch_ForceField
+            set EndForceFieldCheckLoop 1
+        }
+    }
+    else
+    {
+        endfunction
+    }
+    loop
+}
+
+/// GUIDE FUNCTIONS ///
+
+function "OpenSesame" (Actor DoorName1, Node goto_UnlockDoor1)
+{
+	waituntilnearnode Guide goto_UnlockDoor1 1.0
+    crouch Guide
+    playgestureandwait Guide Typing 2.5
+	unlockdoor DoorName1
+	sayline Guide "The door is unlocked now."
+    stand Guide
+}
+
+function "RememberMe"
+{
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Asha_492/Follow me.  I can open the door for you." servant.dlg
+    CommunicatorOff
+}
+
+function "GuideWaitsForObi" (Actor DoorName2, Node goto_UnlockDoor2, int z)
+{
+    callandwait RememberMe
+	takecontrolof Guide
+	runtonodeandwait Guide goto_UnlockDoor2
+	callandwait OpenSesame (DoorName2, goto_UnlockDoor2)
+	returncontrolto Guide
+	setpatroltypes Guide z
+}
+
+int CanIgo 0	/// Global Var used in FUNCTION DEADCHECK ///
+
+function "DeadCheck" (int y)
+{
+	childscript "WaitingForYou"
+	{
+		waituntilnudgedby Guide Obi
+		sayline Guide "/Asha_481/Are you sure you want me to go out there?"
+		sayline Guide "/Asha_482/I'll be killed and that won't help anyone."
+		loop
+	}
+
+	waituntilequal CanIgo y
+	endscript "WaitingForYou"	
+}
+
+/////////////////////
+/// END FUNCTIONS ///
+/////////////////////
+
+script "YouLose_Guide"
+{
+	waituntilkilled Guide
+	begincutscene
+	cameraplayer Guide 0 2.5 -5.0
+	zoom 0.75 3.0
+	pause 0.5
+	communicatoron
+	CommunicatorMessageAndWait "Good going Obi-Wan." quigonjinn.dlg
+	CommunicatorMessageAndWait "You've let down the resistance by letting the servant girl die." quigonjinn.dlg
+	CommunicatorMessageAndWait "She is the only one who can unlock the palace doors." quigonjinn.dlg
+	CommunicatorMessageAndWait "Without her there is no way to get to the queen." quigonjinn.dlg
+	CommunicatorMessageAndWait "You LOSE." quigonjinn.dlg
+	fadedown
+	pause 1.0
+	endcutscene
+}
+
+////////////////
+///BEGIN MAIN///
+////////////////
+
+Actor BAD_Elevator01 A_Battledroid-Infantry_43
+Actor BAD_Elevator02 A_Battledroid-Infantry_44
+actor Security04 A_Battledroid-Infantry_07
+
+int PreludeKillCount 0
+
+function "PreludeKillCounter" (actor BodyBag_Prelude)
+{
+    waituntilremoved BodyBag_Prelude
+    increment PreludeKillCount 1    
+}
+
+Int KitchenTable_Down 0
+
+script "KitchenTableCheck"
+{
+    waituntilarrivedatkeyframe A_09_kitchen_table 1
+    set KitchenTable_Down 1
+    waituntilarrivedatkeyframe A_09_kitchen_table 0
+    set KitchenTable_Down 0
+    loop
+}
+
+script "Prelude"
+{
+    actor WilyCoyote A_Battledroid-Commander_07
+
+    child call PreludeKillCounter (Security04)
+    child call PreludeKillCounter (WilyCoyote)
+    child call PreludeKillCounter (BAD_Elevator01)
+    child call PreludeKillCounter (BAD_Elevator02)`
+    
+    setdeadonaimfraction Security04 0
+    
+    setpatroltypes A_Battledroid-Commander_07 2
+    
+    takecontrolof Guide
+    
+    childscript "Security04retreat"
+    {
+        forcetargetandattack Security04 Guide
+        waituntilnear Security04 Obi 12.0
+        forcetargetandattackoff Security04
+        takecontrolof Security04
+        runtonodeandwait Security04 goto_guide_flee3
+        returncontrolto Security04
+        setpatroltypes Security04 2
+    }
+    
+    childscript "SaveMeObi"
+    {
+        invincibilityon Guide
+        runtonodeandwait Guide goto_guide_flee1
+        forcestate Guide Retreat
+    }
+
+    childscript "CommunicatorDialogue"
+    {
+        pause 0.5
+    	
+        BeginCutscene
+        waituntilnearnode Guide goto_guide_safety 1.0
+        lookat Obi Guide
+        forcestateoff Guide
+        sayline Obi "/Obi-Wan_460/You there, what's going on?"
+        lookat Guide Obi
+        sayline Guide "/Asha_461/Protect me!  I can help you!"
+        sayline Obi "/Obi-Wan_462/I'm looking for the Queen.  Have you seen her?"
+        sayline Guide "/Asha_463/The palace is locked down, but I can crack the codes.  I can get you to the Throne Room."
+        sayline Obi "/Obi-Wan_464/Of course, but..."
+        forcestate Guide Retreat
+        //waituntilnear WilyCoyote Guide 10.0
+        sayline WilyCoyote "/BattleDroidInfantry_465/There she is.  Get her."
+        sayline Obi "/Obi-Wan_466/I'll handle this."
+        endcutscene
+        invincibilityoff Guide
+    }
+
+    childscript "SecurityDash"
+    {
+        takepartialcontrolof BAD_Elevator01
+        takepartialcontrolof BAD_Elevator02
+        child runtonodeandwait BAD_Elevator01 goto_topside_table_BR
+        child runtonodeandwait BAD_Elevator02 goto_topside_table_BL
+        waitforall
+        childscript "BAD_Elevator01" 
+        {
+            wakeup BAD_Elevator01
+            waituntilequal KitchenTable_Down 1
+            forcetarget BAD_Elevator01 Obi
+        }
+        
+        childscript "BAD_Elevator02" 
+        {
+            wakeup BAD_Elevator02
+            waituntilequal KitchenTable_Down 1
+            forcetarget BAD_Elevator02 Obi
+        }
+        
+        pause 1.5
+        
+        nudge A_Battledroid-Infantry_02 A_09_table_swtch_01
+        waitforall
+    }
+    
+    childscript "SecurityPatrols"
+    {
+        childscript "BAD_Elevator01_Patrol"
+        {
+            waituntilenteredregion BAD_Elevator01 RGN_Killzone_Kitchen
+            pause 2.0
+            setpatroltypes BAD_Elevator01 1
+        }
+        
+        childscript "BAD_Elevator02_Patrol"
+        {
+            waituntilenteredregion BAD_Elevator02 RGN_Killzone_Kitchen
+            pause 2.0
+            setpatroltypes BAD_Elevator02 1
+        }
+    }
+
+    waituntilequal PreludeKillCount 4
+    
+    forcestateoff Guide
+    stopactions Guide
+
+    script "GuideIntro"
+    {    
+        childscript "ForgetMeNot" 
+        {
+            waituntilfar Obi Guide 15.0
+            //sayline Guide "Hey wait for me, Obi!"
+            pausescript "GuideIntro"
+            child waituntilnear Obi Guide 15.0
+            child waituntilnudgedby A_09_table_swtch_01 Obi
+            waitforany
+            continuescript "GuideIntro"            
+            loop
+        }
+        
+        runtonodeandwait Guide goto_guide_flee2
+        
+        childscript "NearNodeCheck01_goto_guide_flee2"
+        {
+            waituntilfarfromnode Guide goto_guide_flee2 1.0
+            walktonodeandwait Guide goto_guide_flee2
+            loop
+        }
+
+        waituntilnear Guide Obi 10.0
+        lookat Guide Obi    
+    
+        sayline Guide "/Asha_467/What's your name, Jedi?"
+        sayline Obi "/Obi-Wan_468/I'm actually just a Padawan."
+        sayline Guide "/Asha_469/A what?"
+        sayline obi "/Obi-Wan_470/Never mind.  My name is Obi-Wan Kenobi."
+        sayline Guide "/Asha_471/Pleased to meet you.  I'm Asha.  Thanks for saving my life."
+        sayline Guide "/Asha_483/Thanks for saving me Obi."
+        sayline Guide "/Asha_484/I owe you one."
+        sayline Guide "/Asha_485/You won't be able to get very far without me in this palace."
+        sayline Guide "/Asha_486/We must save the Queen.  She is the one hope of the Naboo people.  I will come with you to help crack the door codes.."
+        
+        stopactions Guide
+    
+        sayline Guide "/Asha_617/Obi-Wan! This way!"
+        endscript "NearNodeCheck01_goto_guide_flee2"
+        
+        walktonodeandwait Guide goto_oven
+        
+        childscript "NearNodeCheck_goto_oven"
+        {
+            waituntilfarfromnode Guide goto_oven 1.0
+            walktonodeandwait Guide goto_oven
+            loop
+        }
+        
+        playgesture Guide PointForward 2.0
+        endscript "NearNodeCheck_goto_oven"
+        sayline Guide "/Asha_490/If I remember correctly, you can access the dining room through the oven shaft up there."
+        stopaction Guide
+        
+        childscript "NearNodeCheck02_goto_guide_flee2"
+        {
+            waituntilfarfromnode Guide goto_guide_flee2 1.0
+            walktonodeandwait Guide goto_guide_flee2
+            loop
+        }
+   
+        if (= KitchenTable_Down 0)
+        {
+            sayline Guide "/Asha_491/I'll wait for you to bring me up.  There is a switch to raise the table to the next floor.  Ingenious huh?.."
+            waituntilequal KitchenTable_Down 1
+            endscript "NearNodeCheck02_goto_guide_flee2"
+            script "NearNodeCheck01"
+            {
+                waituntilfarfromnode Guide goto_kitchen_ontable 1.0
+                takecontrolof Guide
+                walktonodeandwait Guide goto_kitchen_ontable
+                returncontrolto Guide
+                loop
+            }
+            waituntilnudgedby A_09_table_swtch_01 Obi
+            endscript "NearNodeCheck01"
+        }
+        else
+        {
+            waituntilequal KitchenTable_Down 1
+            endscript "NearNodeCheck02_goto_guide_flee2"
+            childscript "NearNodeCheck02"
+            {
+                waituntilfarfromnode Guide goto_kitchen_ontable 1.0
+                takecontrolof Guide
+                walktonodeandwait Guide goto_kitchen_ontable
+                returncontrolto Guide
+                loop
+            }
+            sayline Guide "/Asha_491/I'll wait for you to bring me up.  There is a switch to raise the table to the next floor.  Ingenious huh?.."
+            waituntilnudgedby A_09_table_swtch_01 Obi
+            endscript "NearNodeCheck02"
+        }    
+    }
+}
+
+script "QuiGonCommunicator"
+{
+    waituntilenteredregion obi RGN_CommunicatorOn
+    loaddlg Qui-Gon.dlg
+    CommunicatorOn
+    CommunicatorMessageAndWait "/Qui-Gon_472/Obi-Wan, is everything okay?"
+    CommunicatorMessageAndWait "/Qui-Gon_473/Obi-Wan, is everything okay?"
+    CommunicatorMessageAndWait "/Qui-Gon_474/Obi-Wan, I fear the Queen is in grave danger.  I'm unable to get to the throne room.  It's up to you, Padawan."
+    CommunicatorMessageAndWait "/Obi-Wan_475/I won't let you down."
+    CommunicatorMessageAndWait "/Obi-Wan_476/I'll contact you once I get to the throne room."
+    CommunicatorOff
+}
+
+script "Topside_Alert"
+{
+	setpatroltypes A_Battledroid-Infantry_01 3
+	setpatroltypes A_Battledroid-Infantry_02 2
+}
+
+script "Guide_Topside"
+{
+	waituntilenteredRegion Guide RGN_TopSide
+	takecontrolof Guide
+	lookat Guide Obi
+	sayline Guide "/Asha_492/Follow me... I can open the door for you."
+	stopaction Guide
+	runtonodeandwait Guide goto_door1_unlock
+	callandwait OpenSesame (A_09_D_banq_01, goto_door1_unlock)
+	sayline Guide "/Asha_493/I'll wait here for you until you've secured the area."
+	returncontrolto Guide
+	Setpatroltypes Guide 3
+
+	setteam Guide 0
+}
+
+//////////////////////////
+/// BEGIN BEYOND_DOOR1 ///
+//////////////////////////
+
+actor Door1_Commander A_Battledroid-Commander_06
+
+int BADboyPatrol 0
+
+function "Procession" (actor BADboy, node goto_BADboy)
+{
+    takepartialcontrolof BADboy
+    walktonodeandwait BADboy goto_BADboy
+    lookat BADboy Door1_Commander
+    pause 30.0
+    stopactions BADboy
+    
+    randomint BADboyPatrol 1 8
+    
+    if (= BADboyPatrol 1)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_01
+    }
+    
+    if (= BADboyPatrol 2)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_02
+    }
+    
+    if (= BADboyPatrol 3)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_03
+    }
+    
+    if (= BADboyPatrol 4)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_04
+    }
+    
+    if (= BADboyPatrol 5)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_05
+    }
+    
+    if (= BADboyPatrol 6)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_06
+    }
+    
+    if (= BADboyPatrol 7)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_07
+    }
+    
+    if (= BADboyPatrol 8)
+    {
+        walktonodeandwait BADboy goto_Door1_randomBAD_08
+    }
+    
+    returncontrolto BADboy
+    addpatrolstate BADboy
+}
+
+function "ScoobyDoobyDoo" (actor Scooby, node goto_Scooby, actor ScoobySnack, node goto_ScoobySnack, int ScoobyPatrol)
+{
+    waituntilnearnode ScoobySnack goto_ScoobySnack 3.0
+    pause 10.0
+    takepartialcontrolof Scooby
+    walktonodeandwait Scooby goto_Scooby
+    returncontrolto Scooby
+    setpatroltypes Scooby ScoobyPatrol
+}
+
+actor BAD_R_Patrol A_Battledroid-Infantry_05
+actor BAD_L_Patrol A_Battledroid-Infantry_10
+actor BAD_R_01 A_Battledroid-Infantry_35
+actor BAD_R_02 A_Battledroid-Infantry_36
+actor BAD_R_03 A_Battledroid-Infantry_37
+actor BAD_R_04 A_Battledroid-Infantry_38
+actor BAD_L_01 A_Battledroid-Infantry_42
+actor BAD_L_02 A_Battledroid-Infantry_41
+actor BAD_L_03 A_Battledroid-Infantry_40
+actor BAD_L_04 A_Battledroid-Infantry_39
+
+script "Beyond_Door1"
+{
+    call Electrofried (Door1_DED3, W_Z94)
+
+    setpatroltypes BAD_R_Patrol 2  
+    setpatroltypes BAD_L_Patrol 2  
+    setpatroltypes Door1_Commander 2  
+
+    waituntilenteredregion obi RGN_Start02
+
+    child call Procession (BAD_R_01, goto_Door1_BAD_R_01)
+    child call Procession (BAD_R_02, goto_Door1_BAD_R_02)
+    child call Procession (BAD_R_03, goto_Door1_BAD_R_03)
+    child call Procession (BAD_R_04, goto_Door1_BAD_R_04)
+    child call Procession (BAD_L_01, goto_Door1_BAD_L_01)
+    child call Procession (BAD_L_02, goto_Door1_BAD_L_02)
+    child call Procession (BAD_L_03, goto_Door1_BAD_L_03)
+    child call Procession (BAD_L_04, goto_Door1_BAD_L_04)
+    
+    child call ScoobyDoobyDoo (BAD_R_Patrol, goto_Door1_BAD_R_Patrol, BAD_R_04, goto_Door1_BAD_R_04, 3)
+    child call ScoobyDoobyDoo (BAD_L_Patrol, goto_Door1_BAD_L_Patrol, BAD_L_04, goto_Door1_BAD_L_04, 2)
+
+    childscript "Door1_Commander_Behavior"
+    {
+        waituntilnear Door1_Commander BAD_R_01 10.0
+        walktonodeandwait Door1_Commander goto_Door1_Commander
+    }
+
+    childscript "DED3_Behavior"
+    {
+        pause 25.0
+        setpatroltypes Door1_DED3 3
+    }
+
+	waitforall
+}
+
+/// SET GRENADIER ATTACK RANGES ///
+
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_02, RGN_attackObi_05)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_01, RGN_attackObi_04)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_04, RGN_attackObi_03)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_05, RGN_attackObi_02)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_06, RGN_attackObi_01)
+
+script "Guide_Beyond_Door1"
+{
+	waitforscripttoend "Guide_Topside"
+
+	call DeadCheck (1)
+
+    child waituntilkilled BAD_R_Patrol
+    child waituntilkilled BAD_L_Patrol
+    child waituntilkilled BAD_R_01
+    child waituntilkilled BAD_R_02
+    child waituntilkilled BAD_R_03
+    child waituntilkilled BAD_R_04
+    child waituntilkilled BAD_L_01
+    child waituntilkilled BAD_L_02
+    child waituntilkilled BAD_L_03
+    child waituntilkilled BAD_L_04
+    child waituntilkilled Door1_DED3
+    child waituntilkilled A_Battledroid-Commander_06
+
+	waitforall
+
+	set CanIgo 1
+
+	setteam Guide 5
+
+	call GuideWaitsForObi (A_09_D_palace_01_09, goto_door2_unlock, 3)
+
+	waituntildooropen A_09_D_palace_01_09
+	takecontrolof Guide
+	walktonodeandwait Guide goto_door2_past
+	fireat Guide A_Battledroid-Infantry_19 0.1
+	walktonodeandwait Guide goto_FField4
+	sayline Guide "/Asha_494/I'll wait here until you secure the upper level."
+	returncontrolto Guide
+	setpatroltypes Guide 2
+}
+
+////////////////////////
+/// END BEYOND_DOOR1 ///
+////////////////////////
+
+//////////////////////////
+/// BEGIN BEYOND_DOOR2 ///
+//////////////////////////
+
+function "LynchMob" (actor UG_Lemming)
+{
+	actor Lemming
+	triggerubergenandwait UG_Lemming Lemming
+	takepartialcontrolof Lemming
+
+	childscript "IfObiBackTracks"
+	{
+        waituntilenteredregion obi RGN_attackObi_01
+        forcetarget Lemming Obi
+	}
+
+    childscript "ReturnControl"
+    {
+        waituntilnearnode Guide goto_door3_unlock 5.0
+        wakeup Lemming
+        runtonodeandwait Lemming goto_door3_unlock
+    }
+    waitforany
+}
+
+int HelpObiOut 0
+
+function "TrapAttack" (actor Tricky, node goto_Tricky)
+{
+    stopactions Tricky
+	takecontrolof Tricky
+    runtonodeandwait Tricky goto_Tricky
+
+	script "FiringLine"
+	{
+		fireat Tricky Obi 1.0
+		pauserandom 1.0 2.5
+		loop
+	}
+	
+	waituntilnear Tricky Obi 6.0
+	endscript "FiringLine"
+	returncontrolto Tricky
+
+    pause 0.25
+    
+    if (isopen A_ForceField_06)
+    {
+        endfunction
+    }
+    else
+    {
+        nudge Tricky A_3-7_ff_cstand_03
+    }    
+}
+
+script "Beyond_Door2"
+{
+	actor Commander A_Battledroid-Commander_04
+	actor BAD19 A_Battledroid-Infantry_19
+	actor BAD20 A_Battledroid-Infantry_20
+	actor BAD21 A_Battledroid-Infantry_21
+	actor BAD22 A_Battledroid-Infantry_22
+	actor BAD23 A_Battledroid-Infantry_23
+
+	nudge Commander A_3-7_ff_cstand_01
+	nudge Commander A_3-7_ff_cstand_02
+	nudge Commander A_3-7_ff_cstand_03
+
+	addpatrolstate BAD19
+
+	childscript "BAD19_Actions"
+	{
+    	waituntildooropen A_09_D_palace_01_09
+		takecontrolof BAD19
+		runtonodeandwait BAD19 goto_UG_BAD01
+		returncontrolto BAD19
+	}
+
+    setpatroltypes Commander 3
+	setpatroltypes Door2_Melee1 3
+	setpatroltypes BAD20 2
+	setpatroltypes BAD21 2
+	setpatroltypes BAD22 1
+	setpatroltypes BAD23 1
+
+    //int MicCheck_Door2 0
+    
+    //callandwait ForceFieldCheck (RGN_trig_FField01, Commander, A_3-7_ff_cstand_02, MicCheck_Door2)
+	
+    waituntilenteredregion obi RGN_trig_FField01
+    
+    nudge Commander A_3-7_ff_cstand_02
+    nudge Commander A_3-7_ff_cstand_01
+	nudge Commander A_3-7_ff_cstand_03
+
+	setteam Guide 0
+
+	child call TrapAttack (BAD22, goto_BAD22)
+	child call TrapAttack (BAD23, goto_BAD23)
+
+    child callandwait LynchMob (A_UG_BAD_01)
+    pause 1.0
+    child callandwait LynchMob (A_UG_BAD_02)
+    pause 1.0
+    child callandwait LynchMob (A_UG_BAD_03)
+    pause 1.0
+    child callandwait LynchMob (A_UG_BAD_04)
+    pause 1.0
+    child callandwait LynchMob (A_UG_Commander_01)
+    pause 1.0
+    child callandwait LynchMob (A_UG_BAD_05)
+    pause 1.0
+    child callandwait LynchMob (A_UG_BAD_06)
+    pause 1.0
+    child callandwait LynchMob (A_UG_BAD_07)
+	
+	waitforall
+}
+
+script "Guide_Beyond_Door2"
+{
+    actor Commander08 A_Battledroid-Commander_08
+    actor BAD45 A_Battledroid-Infantry_45
+    actor BAD46 A_Battledroid-Infantry_46
+    actor BAD47 A_Battledroid-Infantry_47
+    
+    takecontrolof Commander08
+    takecontrolof BAD45
+    takecontrolof BAD46
+    takecontrolof BAD47
+    
+    call electrofried (Door2_Melee1, W_Z17)
+
+	waitforscripttoend "Guide_Beyond_Door1"
+	call DeadCheck (2)
+
+	childscript "Reset_Guide_Team"
+	{
+		waituntilnudgedby A_3-7_ff_cstand_02 Obi
+		setteam Guide 5
+	}
+
+	child waituntilremoved Door2_Melee1
+
+    waitforall
+    
+	set CanIgo 2
+
+    callandwait RememberMe
+	stopactions Guide
+	takecontrolof Guide
+	runtonodeandwait Guide goto_door3_unlock_check1
+	runtonodeandwait Guide goto_door3_unlock_check2
+	runtonodeandwait Guide goto_door3_unlock
+	crouch Guide
+	playgesture Guide Typing 40.0
+	sayline Guide "/Asha_495/Blast.  This one's going to take a little longer.  They've reset the code."
+	
+	childscript "Trigger_Downstair_BADs"
+	{
+        returncontrolto Commander08
+        returncontrolto BAD45
+        returncontrolto BAD46
+        returncontrolto BAD47
+        
+        unlockdoor A_09_D_palace_01_15
+        
+        child call RuntoNodeControl (Commander08, goto_door3_unlock)
+        child call RuntoNodeControl (BAD45, goto_door3_unlock)
+        child call RuntoNodeControl (BAD46, goto_door3_unlock)
+        child call RuntoNodeControl (BAD47, goto_door3_unlock)
+        waitforall
+	}
+
+	pause 35.0
+
+    sayline Guide "/Asha_496/Just a few more seconds..."
+
+    pause 5.0
+
+	callandwait OpenSesame (A_09_D_palace_01_03, goto_door3_unlock)
+	stand Guide
+	sayline Guide "/Asha_502/Let's go Obi-Wan!"
+	runtonodeandwait Guide goto_door3_after
+	returncontrolto Guide
+	setpatroltypes Guide 3
+	waituntilnear Guide Obi 7.0
+    stopactions Guide
+	takecontrolof Guide
+	lookat Guide Obi
+	sayline Guide "/Asha_503/Whew!  That was a close one.  Let's keep moving..."
+	sayline Guide "/Asha_504/I'll follow you, Jedi.  Lead the way"
+	stopaction Guide
+    follow Guide Obi 2.0
+
+	waituntilenteredregion Guide RGN_Guide_Stop
+
+	stopaction Guide
+	walktonodeandwait Guide goto_guide_ffield1_before
+	takepartialcontrolof Guide
+	setpatroltypes Guide 2
+}
+
+////////////////////////
+/// END BEYOND_DOOR2 ///
+////////////////////////
+
+//////////////////////////
+/// BEGIN BEYOND_DOOR3 ///
+//////////////////////////
+
+actor NabooGuard01 A_naboo-soldier_01
+actor NabooGuard02 A_naboo-soldier_02
+actor NabooGuard03 A_naboo-soldier_03
+
+actor DED1 A_DestroyerDroid_01
+actor Commander1 A_Battledroid-Commander_02
+actor Commander2 A_Battledroid-Commander_03
+actor Commander5 A_Battledroid-Commander_05
+
+actor BAD12 A_Battledroid-Infantry_12
+actor BAD13 A_Battledroid-Infantry_13
+actor BAD14 A_Battledroid-Infantry_14
+actor BAD15 A_Battledroid-Infantry_15
+actor BAD18 A_Battledroid-Infantry_18
+
+int Door3_Dead_DEDs 0
+int Door3KillCount 0
+
+function "Door3KillCounter" (actor BodyBag_Door3)
+{
+    waituntilremoved BodyBag_Door3
+    increment Door3KillCount 1    
+}
+
+script "Beyond_Door3_KillTracker"
+{
+    child call Door3KillCounter (BAD12)
+    child call Door3KillCounter (BAD13)
+    child call Door3KillCounter (BAD14)
+    child call Door3KillCounter (BAD15)
+    child call Door3KillCounter (Commander1)
+    child call Door3KillCounter (Commander2)
+    child call Door3KillCounter (Commander5)
+    child call Door3KillCounter (DED1)
+    
+    waituntilequal Door3KillCount 8
+    set Door3_Dead_DEDs 1
+}
+
+script "Beyond_Door3"
+{
+    ClearAIBoundary DED1
+    
+	setpatroltypes BAD18 1
+
+    childscript "BAD18_Retreat"
+    {
+        waituntilstateactivated BAD18 Retreat
+        takecontrolof BAD18
+        runtonodeandwait BAD18 goto_BAD18
+        returncontrolto BAD18
+    }
+
+	addpatrolstate Commander2	
+	addpatrolstate BAD12
+	addpatrolstate BAD13
+	addpatrolstate BAD14
+	addpatrolstate BAD15
+
+    takecontrolof Commander5
+	takecontrolof DED1
+
+	nudge Commander1 A_3-7_ff_cstand_06
+	nudge Commander1 A_3-7_ff_cstand_05
+	nudge Commander1 A_3-7_ff_cstand_04
+
+    setpatroltypes Commander1 3
+
+    //int MicCheck_Door3 0
+
+    //callandwait ForceFieldCheck (RGN_Start05, Commander5, A_3-7_ff_cstand_06, MicCheck_Door3)
+
+    waituntilenteredregion obi RGN_Start05
+    nudge Commander5 A_3-7_ff_cstand_06
+    
+	child call DEDrunto (DED1, goto_DED2)
+
+	childscript "Commander1_Switches"
+	{
+        waituntilnear Obi Commander1 25.0
+        takecontrolof Commander1
+        runtonodeandwait Commander1 goto_FFbox3
+        pause 0.25
+        
+        if (isalive Commander1)
+        {
+            nudge Commander1 A_3-7_ff_cstand_04
+            pause 0.25
+            returncontrolto Commander1
+        }
+	}
+
+    childscript "Commander5_Switches"
+    {
+        waituntilenteredregion DED1 RGN_LocationCheck01
+        setdeadonaimfraction Commander5 0.1
+        nudge Commander5 A_3-7_ff_cstand_05
+        runtonodeandwait Commander5 goto_FFbox2
+        returncontrolto Commander5
+    }
+    
+    childscript "IfDEDkilled"
+    {
+        	waituntilkilled DED1
+    
+        	script "Commander2_Actions"
+        	{
+        		takecontrolof Commander2
+        		runtonodeandwait Commander2 goto_FFbox3
+        		nudge Commander2 A_3-7_ff_cstand_04
+        		returncontrolto Commander2
+        		returncontrolto Commander1
+        	}
+        
+        	pause 2.5
+        
+        	child call RuntoNodeControl (BAD12, goto_DED1)
+        	child call RuntoNodeControl (BAD13, goto_DED1)
+        	child call RuntoNodeControl (BAD14, goto_DED1)
+        	child call RuntoNodeControl (BAD15, goto_DED1)
+    }
+
+    waitforall
+}
+
+script "NabooGuards"
+{
+    takecontrolof NabooGuard01
+    takecontrolof NabooGuard02
+    takecontrolof NabooGuard03
+    
+    invincibilityon NabooGuard03
+    
+    waituntilenteredregion obi RGN_LocationCheck01
+    
+    returncontrolto NabooGuard01
+    returncontrolto NabooGuard02
+    
+    child call RuntoNodeControl (nabooGuard01, goto_FFbox2)
+    child call RuntoNodeControl (nabooGuard02, goto_FFbox2)
+    
+    childscript "OpenForceField"
+    {
+        pause 1.0
+        runtonodeandwait NabooGuard03 goto_FFbox2
+        nudge NabooGuard03 A_3-7_ff_cstand_05
+        returncontrolto NabooGuard03
+        invincibilityoff NabooGuard03
+    }
+   
+    waitforall
+}
+
+script "Guide_Beyond_Door3"
+{
+	waitforscripttoend "Guide_Beyond_Door2"
+	call DeadCheck (3)
+
+    child waituntilnudgedby A_3-7_ff_cstand_06 Obi
+    child waituntilequal Door3_Dead_DEDs 1
+    waitforall
+
+    set CanIgo 3
+
+    callandwait GuideWaitsForObi (A_09_D_Z01_Z02_01, goto_door4_unlock, 2)
+}
+
+////////////////////////
+/// END BEYOND_DOOR3 ///
+////////////////////////
+
+//////////////////////////
+/// BEGIN BEYOND_DOOR4 ///
+//////////////////////////
+
+call Electrofried (A_Battledroid-GrenadeCon_09, W_Z01)
+call Electrofried (A_Battledroid-GrenadeCon_10, W_Z01)
+call Electrofried (A_Battledroid-GrenadeCon_11, W_Z01)
+
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_07, RGN_attackObi_07)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_08, RGN_attackObi_06)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_09, RGN_attackObi_09)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_10, RGN_attackObi_08)
+call EnterRGNandAttack (A_Battledroid-GrenadeCon_11, RGN_attackObi_10)
+
+int StairRunDeathCheck1 0				/// Variable check to trigger BADs on other side of stairs to attack Obi ///
+
+function "StairRun" (Actor Genjuro, Node goto_Genjuro)
+{
+	childscript "HurtGenjuro"
+	{
+		WaitUntilDamagedBy Genjuro Obi
+		set StairRunDeathCheck1 1
+	}
+
+	childscript "ForceGenjuro"
+	{
+		waituntilequal StairRunDeathCheck1 1
+		forcetargetandattack Genjuro Obi
+	}
+
+	takepartialcontrolof Genjuro
+	waituntildooropen A_09_D_Z01_Z02_01
+	RunToNodeandwait Genjuro goto_Genjuro
+	AddPatrolState Genjuro
+}
+
+script "Beyond_Door4"
+{
+    call electrofried (Door4_Melee1, W_Z01)
+    call electrofried (Door4_Melee2, W_Z01)
+
+	setpatroltypes Door4_Melee1 2
+	setpatroltypes Door4_Melee2 3
+
+    ClearAIBoundary A_Battledroid-Infantry_24
+    ClearAIBoundary A_Battledroid-Infantry_25
+    ClearAIBoundary A_Battledroid-Infantry_26
+    ClearAIBoundary A_Battledroid-Infantry_27
+    ClearAIBoundary A_Battledroid-Infantry_28
+    ClearAIBoundary A_Battledroid-Infantry_29
+    ClearAIBoundary A_Battledroid-Infantry_30
+    ClearAIBoundary A_Battledroid-Infantry_31
+   
+	childscript "RightSideAttack"
+	{
+		call StairRun (A_Battledroid-Infantry_24, goto_stairs2_R)
+		call StairRun (A_Battledroid-Infantry_25, goto_stairs2_R)
+		call StairRun (A_Battledroid-Infantry_26, goto_stairs2_R)
+		call StairRun (A_Battledroid-Infantry_27, goto_stairs2_R)
+	}
+
+	childscript "LeftSideAttack"
+	{
+		call StairRun (A_Battledroid-Infantry_28, goto_stairs2_L)
+		call StairRun (A_Battledroid-Infantry_29, goto_stairs2_L)
+		call StairRun (A_Battledroid-Infantry_30, goto_stairs2_L)
+		call StairRun (A_Battledroid-Infantry_31, goto_stairs2_L)
+	}
+
+	waitforall
+}
+
+script "Guide_Beyond_Door4"
+{
+	waitforscripttoend "Guide_Beyond_Door3"
+	call DeadCheck (4)
+
+	child waituntilremoved Door4_Melee1
+	child waituntilremoved Door4_Melee2
+	waitforall
+
+	set CanIgo 4
+
+	callandwait GuideWaitsForObi (A_09_D_palace_01_11, goto_door5_unlock, 1)
+}
+
+////////////////////////
+/// END BEYOND_DOOR4 ///
+////////////////////////
+
+//////////////////////////
+/// BEGIN BEYOND_DOOR5 ///
+//////////////////////////
+
+script "Beyond_Door5"
+{
+    addpatrolstate Door5_Melee1
+    waituntildooropen A_09_D_palace_01_11
+    //call runtonodecontrol (Door5_Melee1, goto_attack_door5)
+}
+
+script "Guide_Beyond_Door5"
+{
+    call electrofried (Door5_Melee1, hall_pool05)
+
+	waitforscripttoend "Guide_Beyond_Door4"
+	call DeadCheck (5)
+
+	waituntilremoved Door5_Melee1
+
+	set CanIgo 5
+
+    callandwait RememberMe
+    
+	stopactions Guide
+	takecontrolof Guide
+	runtonodeandwait Guide goto_door6_unlock
+	sayline Guide "/Asha_505/Beyond these doors is the throne room."
+	sayline Guide "/Asha_506/Let's hope Queen Amidala is still here..."
+	callandwait OpenSesame (A_09_D_palace_01_13, goto_door6_unlock)
+	returncontrolto Guide
+	setpatroltypes Guide 1
+}
+
+////////////////////////
+/// END BEYOND_DOOR5 ///
+////////////////////////
+
+//////////////////////////
+/// BEGIN BEYOND_DOOR6 ///
+//////////////////////////
+
+int WindowCrash_True 0
+
+function "WindowCrash" (actor BruceWillis, actor Window)
+{
+    invincibilityon Window
+    takecontrolof BruceWillis
+    
+    waituntilequal WindowCrash_True 1
+    returncontrolto BruceWillis
+    takepartialcontrolof BruceWillis
+    invincibilityoff Window
+    
+    child runtonodeandwait BruceWillis goto_attack_door6
+    
+    childscript "KillWindowTimer"
+    {
+    	pause 1.0
+    	kill Window
+    }
+    
+    waitforall
+}
+
+script "Beyond_Door6"
+{
+    child call WindowCrash (Door6_Melee1, A_09_window_tr_01)
+    child call WindowCrash (Door6_Melee2, A_09_window_tr_02)
+    child call WindowCrash (Door6_Melee3, A_09_window_tr_03)
+    
+    waituntilenteredregion obi RGN_Start09
+    
+    takecontrolof WoundedSoldier
+    follow WoundedSoldier Obi 2.0
+    waituntilsees Obi WoundedSoldier 5.0
+    stopactions WoundedSoldier
+    lookat WoundedSoldier Obi
+    sayline WoundedSoldier "/male1_508/Jedi, you arrived too late."
+    sayline WoundedSoldier "/male1_509/She was just taken by the Federation droids!"
+    sayline WoundedSoldier "/male1_510/I'll lead you to her."
+    
+    set WindowCrash_True 1
+      
+    lookat WoundedSoldier Door6_Melee2
+    pause 1.0
+    playgesture WoundedSoldier PointForward 1.5
+    
+    child RumbleLeft 0.6 2.0
+    child RumbleRight 0.6 2.0
+
+    sayline WoundedSoldier "/male1_507/Oh no!  Look out!"
+    stopactions WoundedSoldier
+    forcestate WoundedSoldier Retreat
+    
+    waitforall
+}
+
+////////////////////////
+/// END BEYOND_DOOR6 ///
+////////////////////////
+
+script "YouLose_WoundedSoldier"
+{
+	waituntilkilled WoundedSoldier
+	begincutscene
+	cameraplayer WoundedSoldier 0 2.5 -5.0
+	zoom 0.75 3.0
+	pause 0.5
+	communicatoron
+	CommunicatorMessageAndWait "Good going Obi-Wan." quigonjinn.dlg
+	CommunicatorMessageAndWait "You've let down the resistance by letting the soldier die." quigonjinn.dlg
+	CommunicatorMessageAndWait "He is the only one who can lead you to the queen." quigonjinn.dlg
+	CommunicatorMessageAndWait "Without him there is no way to get to the queen." quigonjinn.dlg
+	CommunicatorMessageAndWait "You LOSE." quigonjinn.dlg
+	fadedown
+	pause 1.0
+	endcutscene
+}
+
+script "TheEnd"
+{
+    child waituntilkilled Door6_Melee1
+    child waituntilkilled Door6_Melee2
+    child waituntilkilled Door6_Melee3
+    waitforall
+
+    forcestateoff WoundedSoldier
+
+    pause 0.5
+
+    BeginCutScene
+    pause 0.5
+
+    stopactions WoundedSoldier
+    takecontrolof Obi
+    stopactions obi
+    unequipweapon Obi
+       
+    follow Obi WoundedSoldier 1.0
+    waituntilnear Obi WoundedSoldier 3.0
+    
+    fadedown
+    pause 0.5
+    cameraplayer WoundedSoldier 0 2.5 -5.0
+    fadeup
+    
+   
+    child lookat WoundedSoldier Obi
+    child lookat Obi WoundedSoldier
+    waitforall
+    
+    sayline WoundedSoldier "/male1_511/Good going, Jedi.  Thanks for saving my hide."
+    sayline Obi "/Obi-Wan_519/Where are they taking her?"
+    sayline WoundedSoldier "/male1_520/Camp Four, I think.  They want her to sign some kind of treaty."
+    sayline Obi "/Obi-Wan_521/I'd better contact Master Qui-Gon."
+    sayline WoundedSoldier "/male1_522/Hey Jedi... don't let them hurt her..."
+    sayline Obi "/Obi-Wan_523/I'll do my best."
+    stopactions WoundedSoldier
+    follow Obi WoundedSoldier 1.0
+    runtonode WoundedSoldier goto_woundedSoldier_end
+    sayline WoundedSoldier "/male1_513/Let's get out of here!"
+   
+    pause 3.0
+
+    FadeDownAndWait
+    EndCutScene
+    nextlevel L03_8
+}	

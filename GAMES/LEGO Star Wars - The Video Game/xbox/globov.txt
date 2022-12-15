@@ -1,0 +1,71 @@
+txname=zipup_base_01.tga
+txname=dookuenvirclouds128b.tga
+txname=sunbeam128a.tga
+txname=lensflares32a.tga
+txname=window_light_01.tga
+txname=OBWanKenobi_Face.tga
+txname=Zam_Face_Nougat_000.tga
+txname=Zam_Face_Nougat_001.tga
+txname=zam_eyebrows_01.tga
+txname=yoda_tooth.tga
+txname=Mouth.tga
+txname=quigon_jinn_face_overlay_nougat_0.tga
+txname=quigon_jinn_face_overlay_nougat_1.tga
+txname=quigon_jinn_face_02.tga
+txname=Palpatine_face.tga
+txname=Padme_Eyes_nougat.tga
+txname=OBWanKenobi_Face_Nougat.tga
+txname=ObiWanKenobi_JediMaster_Beard2.tga
+txname=Mouth.tga
+txname=Brows02.tga
+txname=ObiWanKenobi_JediMaster_Face_02.tga
+txname=ObiWanKenobi_JediMaster_Hair_02.tga
+txname=ObiWanKenobi_JediMaster_HairFront_01.tga
+txname=MaceWinduEp3_Face_.tga
+txname=light_circle.tga
+txname=Jango_eyes.tga
+txname=darth_sidious_face.tga
+txname=CountDooku_Face_Nougart-010.t
+txname=Mouth.tga
+txname=CountDooku_Eyes_Nougart.tga
+txname=Anakin_Face_Nougat.tga
+txname=Anakin_Face_01.tga
+txname=Mouth.tga
+txname=OBWanKenobi_Face_Nougat.tga
+txname=anakin_boy_Eyes_Nougat.tga
+txname=anakin_boy_Face_Nougat.tga
+txname=EyeBrows.tga
+0: neg_lightrefa.tga
+10: neg_glow1b.tga
+11: neg_shadowb.tga
+16: neg_alphagrill.tga
+31: mag_shadow_02.tga
+32: mag_shadow_01.tga
+39: hangar_shadow_01.tga
+43: mtt_shadow_01.tga
+7: neg_alpha_light_02a.tga
+9: neg_alpha_light_02b.tga
+txname=anakins_planetglow1.tga
+txname=mini_e4_runner_shadow_01.tga
+txname=fence_shad.tga
+txname=decor_0.tga
+txname=mini_e3_dropship_shadow_01.tga
+txname=mini_e3_emergency_shadow_01.tga
+txname=mini_e3_jedi_starfighter_shadow_01.tga
+txname=mini_e3_wookie_cat_shadow_01.tga
+txname=mini_e3_Xwing_shadow_01.tga
+txname=mini_e2_Jedi_starfighter_shadow_01.tga
+txname=mini_e2_deka_shadow_01.tga
+txname=mini_e2_gunship_shadow_01.tga
+txname=mini_e2_solar_shadow_01.tga
+txname=mini_e1_sith_shadow_01.tga
+txname=mini_e1_naboo_startfighter_shadow_01.tga
+txname=mini_e1_pod_racer_shadow_01.tga
+txname=mini_e1_royal_naboo_shadow_01.tga
+txname=mini_e1_gungan_bongo_shadow_01.tga
+txname=mini_e1_republic_shadow_01.tga
+txname=mini_e3_Vwing_shadow_01.tga
+txname=mini_e2_ATTE_shadow_01.tga
+txname=decor_00.tga
+txname=decor_01.tga
+txname=lazer_tower_shadow_01.tga

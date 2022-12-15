@@ -1,0 +1,45 @@
+[LavaVolume4]
+LocationName="Burn Baby!"
+
+[LavaVolume5]
+LocationName="Burn Baby!"
+
+[LevelInfo0]
+Title="Molten"
+
+[LevelSummary]
+Title="Molten"
+
+[ZoneInfo0]
+LocationName="Cooler Caverns"
+
+[ZoneInfo1]
+LocationName="Portcullis Junction"
+
+[ZoneInfo10]
+LocationName="Cooler Caverns"
+
+[ZoneInfo11]
+LocationName="Molten Hallways"
+
+[ZoneInfo2]
+LocationName="Adrenaline Alley"
+
+[ZoneInfo3]
+LocationName="Rocket Corner"
+
+[ZoneInfo5]
+LocationName="Hellish Hallways"
+
+[ZoneInfo6]
+LocationName="Molten Hallways"
+
+[ZoneInfo7]
+LocationName="Portcullis Junction"
+
+[ZoneInfo8]
+LocationName="Portcullis Junction"
+
+[ZoneInfo9]
+LocationName="Portcullis Junction"
+

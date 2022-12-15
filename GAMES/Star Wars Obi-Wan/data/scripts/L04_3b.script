@@ -1,0 +1,255 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+SetNodeHeightTolerance 0.4
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_06.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_08.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_16.wav Suspense
+AddMusic m_suspense_17.wav Suspense
+AddMusic l11_m_intro1.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_08.wav Tension
+AddMusic m_tension_10.wav Tension
+AddMusic m_tension_11.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_l01_8_cs_02.wav Tension
+
+AddMusic m_tension_01.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle_06.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_tension_13.wav Battle
+AddMusic l14_m_battle1.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+SetDefaultSurface 11_canyon06.sur
+
+SetNodeHeightTolerance 0.4
+
+
+Script "l04_3 continues"
+{
+	//TakeControlOf Obi  // *** This won't work because Obi does not have an AI
+
+	startMusicManager
+	FadeUpAndWait
+
+	//ReturnControlTo Obi
+}
+
+Script "checkpoint1"
+{
+	SetStartPosition 0
+	WaitUntilEnteredRegion Obi tusken_tomb_raiderer
+	SetStartPosition 1
+	Save
+}
+
+Script "checkpoint2"
+{
+	WaitUntilEnteredRegion Obi amb_tuskenhall3
+	SetStartPosition 2
+	Save
+}
+
+///////////////////////////
+//  Exploration Markers  //
+///////////////////////////
+
+Function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 32)
+
+
+/////////////////////
+//Tombish Raiderish//
+/////////////////////
+
+Script "Tusken Tombs"
+{
+	WaitUntilEnteredRegion Obi tusken_tomb_raiderer
+	Sayline obi "/Obi-Wan_570/This looks to me like some sort of Tusken Tomb."
+	TriggerUberGenAndWait A_z_Tusken-BlasterTomb_01 Tomb01
+	Pause 1.0
+	TriggerUberGenAndWait A_z_Tusken-BlasterTomb_02 Tomb02
+	Pause 0.1
+	TriggerUberGenAndWait A_z_Tusken-BlasterTomb_03 Tomb03
+	Pause 0.5
+	TriggerUberGenAndWait A_z_Tusken-BlasterTomb_04 Tomb04
+	
+	Child TakePartialControlOf Tomb01
+	Child EquipWeapon Tomb01
+	Child RunToNode Tomb01 goto_tomb2
+	Child ForceTargetAndAttack Tomb01 Obi
+
+	Child TakePartialControlOf Tomb02
+	Child EquipWeapon Tomb02
+	Child RunToNode Tomb02 goto_tomb2
+	Child ForceTargetAndAttack Tomb02 Obi
+
+	Child TakePartialControlOf Tomb03
+	Child EquipWeapon Tomb03
+	Child RunToNode Tomb03 goto_tomb2
+	Child ForceTargetAndAttack Tomb03 Obi
+
+	Child TakePartialControlOf Tomb04
+	Child EquipWeapon Tomb04
+	Child RunToNode Tomb04 goto_tomb2
+	Child ForceTargetAndAttack Tomb04 Obi
+}
+
+
+Script "Sniper City"
+{
+	WaitUntilEnteredRegion Obi city_sniper
+	TriggerUberGenAndWait A_z_Tusken-SniperCity_01 SnipeCity1
+	Pause 0.15
+	TriggerUberGenAndWait A_z_Tusken-SniperCity_02 SnipeCity2
+	Pause 0.15
+	// TriggerUberGenAndWait A_z_Tusken-SniperCity_03 SnipeCity3
+
+	Child TakeControlOf SnipeCity1
+	Child SetSniperAttackFlag SnipeCity1
+
+	Child TakeControlOf SnipeCity2
+	Child SetSniperAttackFlag SnipeCity2 Obi
+
+	// Child TakeControlOf SnipeCity3
+	WaitUntilEnteredRegion Obi 2nd_bridge
+	// ImpulseTowardsEntity A_14_sheet_metal_move05_01 10 A_14_sheet_metal_move03_01
+	// Child SetSniperAttackFlag SnipeCity3 Obi
+	
+	SetSniperAttackFlag A_Tusken-Sniper_05
+	SetSniperAttackFlag A_Tusken-Sniper_06
+	SetSniperAttackFlag A_Tusken-Sniper_07
+	
+}
+
+Script "Interior Room Fight"
+{
+	Actor TFG01 A_z_Tusken-FlamingGaffiIntRm_01 
+	Actor TFG02 A_z_Tusken-FlamingGaffiIntRm_02 
+	Actor TFG03 A_z_Tusken-FlamingGaffiIntRm_03 
+	Actor TFG04 A_z_Tusken-FlamingGaffiIntRm_04 
+	Actor TFG05 A_z_Tusken-FlamingGaffiIntRm_05 
+	Actor TFG06 A_z_Tusken-FlamingGaffiIntRm_06 
+
+	WaitUntilEnteredRegion Obi int_trigger_fight
+	Child ForceTargetAndAttack TFG03 Obi
+	Child ForceTargetAndAttack TFG04 Obi
+	Child ForceTargetAndAttack TFG05 Obi
+	Child ForceTargetAndAttack TFG06 Obi
+	WaitUntilEnteredRegion Obi int_trigger_fight2
+	Child ForceTargetAndAttack TFG01 Obi
+	Child ForceTargetAndAttack TFG02 Obi
+}
+
+Script "Grenade reinforcements"
+{
+	WaitUntilEnteredRegion Obi final_grenade
+
+	SetSniperAttackFlag A_Tusken-Sniper_01
+	SetSniperAttackFlag A_Tusken-Sniper_02
+	SetSniperAttackFlag A_Tusken-Sniper_03
+	SetSniperAttackFlag A_Tusken-Sniper_04
+
+	ForceTargetAndAttack A_Tusken-Grenade_02 Obi
+	ForceTargetAndAttack A_Tusken-Grenade_03 Obi
+	ForceTargetAndAttack A_Tusken-Grenade_04 Obi
+	ForceTargetAndAttack A_Tusken-Grenade_05 Obi
+	ForceTargetAndAttack A_Tusken-Sniper_01 Obi
+	ForceTargetAndAttack A_Tusken-Sniper_02 Obi
+	ForceTargetAndAttack A_Tusken-Sniper_03 Obi
+	ForceTargetAndAttack A_Tusken-Sniper_04 Obi
+
+	Child WaitUntilKilled A_Tusken-Grenade_02
+	Child WaitUntilKilled A_Tusken-Grenade_03
+	Child WaitUntilKilled A_Tusken-Grenade_04
+	Child WaitUntilKilled A_Tusken-Grenade_05
+	Child WaitUntilKilled A_Tusken-Sniper_01
+	Child WaitUntilKilled A_Tusken-Sniper_02
+	Child WaitUntilKilled A_Tusken-Sniper_03
+	Child WaitUntilKilled A_Tusken-Sniper_04
+	WaitForAll
+	WaitUntilSees Obi A_14_torch01_03 3.0
+	Sayline obi "/Obi-Wan_571/This is ancient script.  It says Hall of Elders." 
+
+	WaitUntilEnteredRegion Obi gauntlet1
+	Sayline obi "/Obi-Wan_572/The Force tells me this ramp will lead me to the Queen somehow, but I’m not sure why.  Well, Master Qui-Gon always tells me to trust my feelings…. Here goes nothing."
+	TriggerUberGenAndWait A_z_Tusken-BlasterLast_01 BlastLast01
+	Pause .5
+	TriggerUberGenAndWait A_z_Tusken-BlasterLast_02 BlastLast02
+	Pause .5
+	TriggerUberGenAndWait A_z_Tusken-FlamingGaffiLast_01 FlameLast01
+	Pause .5
+	TriggerUberGenAndWait A_z_Tusken-FlamingGaffiLast_02 FlameLast02
+
+	Child TakePartialControlOf BlastLast01
+	Actor BlastLast01
+	Child RunToNode BlastLast01 goto_last01
+	ForceTargetAndAttack BlastLast01 Obi	
+
+	Child TakePartialControlOf BlastLast02
+	Actor BlastLast02
+	Child RunToNode BlastLast02 goto_last02
+	ForceTargetAndAttack BlastLast02 Obi
+
+	Child TakePartialControlOf FlameLast01
+	Actor BlastLast03
+	Child RunToNode FlameLast01 goto_last03
+	ForceTargetAndAttack BlastLast03 Obi
+
+	Child TakePartialControlOf FlameLast02
+	Actor BlastLast04
+	Child RunToNode FlameLast02 goto_last04
+	ForceTargetAndAttack BlastLast04 Obi
+}
+
+	
+///////////////////
+//ENDING CUTSCENE//
+///////////////////
+
+
+Script "Ending Cutscene" //This is temp.  Make multiple "ending" regions to trigger any camera refpos that's closest.  
+{
+	WaitUntilEnteredRegion Obi ending
+	UnEquipWeapon Obi
+	BeginCutScene
+	StopMusicManager
+	PlayFlourish cut_4_3bextro_m.wav
+	TakeControlOf Obi
+	CameraTrack tusken_endcam Obi
+	Child RunToNode Obi goto_obi_end
+	SayLineNonPositional Obi "/Obi-Wan_573/I must return the Queen safely to the ship."
+	SayLineNonPositional Obi "/Obi-Wan_574/I just hope I'm not too late."	
+	WaitUntilEnteredRegion Obi fadedown1
+	FadeDownAndWait 3.0
+	EndCutScene	
+	NextLevel L04_7
+}
+

@@ -1,0 +1,49 @@
+[LevelSummary]
+Title="Untitled"
+
+[ZoneInfo0]
+LocationName="Adrenaline Combo Area"
+
+[ZoneInfo17]
+LocationName="Shield Gun and Translocator Area"
+
+[ZoneInfo18]
+LocationName="Shield Gun and Translocator Area"
+
+[ZoneInfo19]
+LocationName="HUD and Pickups Area"
+
+[ZoneInfo20]
+LocationName="Adrenaline Combo Area"
+
+[xTutorialInfo0]
+Seq[2].Text="In this section I will explain the various Heads Up Display (HUD) elements you see on your screen that are common to each of the game types."
+Seq[6].Text="The most important element to keep track of is the number in the lower left corner of your screen.  That is your health, and once it reaches 0, you will die and need to respawn."
+Seq[7].Text="The number on the lower right corner is the ammunition count for the gun you have selected."
+Seq[8].Text="The number in the lower middle is your shield count."
+Seq[10].Text="On the floor in front of you are several 'pickups' that you will need to keep an eye out for when playing in the tournament.  "
+Seq[11].Text="The green cross is a health pickup that will increase your health by 25 points"
+Seq[12].Text="The yellow shield will increase your shield count by 50"
+Seq[13].Text="and the ammo pickup will replenish your ammo count for the assault rifle."
+Seq[14].Text="Run over top of them to pick them up and replenish yourself for the next area of the Guide!"
+
+[xTutorialInfo1]
+Seq[5].Text="Along with the Assault Rifle, there are now two weapons in your inventory that you will start with during the tournament: the Translocator, and the Shield Gun."
+Seq[6].Text="This is the Translocator.  Along with being your personal teleportation device, the translocation module also has an onboard camera that allows you to scout wherever you shoot it."
+Seq[9].Text="Fire the translocator module onto the platform in front of you by aiming above it and pressing the primary fire button. You can switch to the onboard camera by pressing fire again and you can recall the module by pressing the primary fire a third time, if you miss."
+Seq[10].Text="Finish your translocation up to the platform by hitting alt-fire once your module is safely on the ledge.  "
+Seq[11].Text="Now select the Shield Gun by hitting the 'next weapon' button."
+Seq[12].Text="Pressing and holding the alternate fire of this gun will bring up a shield that will guard you from incoming fire in front of you."
+Seq[13].Text="Pressing and holding the primary fire loads up a sonic blast that will automatically release when you run into another player, delivering a large amount of damage."
+Seq[15].Text="Charge up the primary fire, run over and collide with the nearby player."
+Seq[17].Text="Nice work! Now head through the open door to the next Survival Guide area."
+
+[xTutorialInfo2]
+Seq[1].Text="The number in the top right corner of your HUD is your Adrenaline count.  As your score increases, your amount of Adrenaline slowly increases."
+Seq[3].Text="When your Adrenaline count reaches 100, it will flash and you will have the option of doing one of 4 Adrenaline combos."
+Seq[4].Text="The different button-press combinations are displayed on your screen now."
+Seq[5].Text="The four combos include: the Agility Combo, the Berserk Combo, the Regeneration Combo, and the Invisibility Combo."
+Seq[9].Text="You have been given a constantly full Adrenaline count to allow you to try out these combos."
+Seq[10].Text="When you feel you have mastered them, head through the open door to the final section of the Survival Guide."
+Seq[12].Text="."
+

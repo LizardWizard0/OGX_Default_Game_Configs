@@ -1,0 +1,17 @@
+FadeDownAndWait .5
+Pause .1
+VictoryScreenOff
+BeginCutscene
+Pause .01
+SetGameSpeed 1000
+Pause .01
+PreEndCutscene
+SetGameSpeed 1
+Pause .01
+EndCutscene
+Pause .01
+
+FadeUpAndWait 1
+DisembodiedVoiceNoSubtitles announcer.dlg /Announcer_1515/  // final round
+Pause 2
+PlayMusic BattleLoop

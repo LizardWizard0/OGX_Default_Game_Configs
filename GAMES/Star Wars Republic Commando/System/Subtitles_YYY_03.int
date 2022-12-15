@@ -1,0 +1,300 @@
+
+[Subtitles_YYY_03]
+
+SubtitleSound[2928]="CA1Y3500"
+SubtitleText[2928]="Clone Advisor 1: Delta Team, do you copy?  Repeat, Delta, do you copy?"
+
+SubtitleSound[2929]="D38Y3500"
+SubtitleText[2929]="Delta 38: Ugh, this is Three-Eight, we copy."
+
+SubtitleSound[2930]="CA1Y3501"
+SubtitleText[2930]="Clone Advisor 1: What's your situation?"
+
+SubtitleSound[2931]="D38Y3501"
+SubtitleText[2931]="Delta 38: Our ship's hanging from a tree.  It's useless, and the pilot's dead."
+
+SubtitleSound[2932]="CA1Y3502"
+SubtitleText[2932]="Clone Advisor 1: Four-Two's dead?  That's… a shame.  He served the Republic well."
+
+SubtitleSound[2933]="D38Y3502"
+SubtitleText[2933]="Delta 38: The remainder of Delta is... accounted for."
+
+SubtitleSound[2934]="CA1Y3503"
+SubtitleText[2934]="Clone Advisor 1: Understood, proceed with your mission."
+
+SubtitleSound[2935]="CA1Y3504"
+SubtitleText[2935]="Clone Advisor 1: Investigate Trandoshan activity in the area."
+
+SubtitleSound[2936]="CA1Y3505"
+SubtitleText[2936]="Clone Advisor 1: We'll send a ship for you when we can."
+
+SubtitleSound[2937]="D38Y3503"
+SubtitleText[2937]="Delta 38: You heard the man, let's get going."
+
+SubtitleSound[2938]="D07Y3500"
+SubtitleText[2938]="Delta 07: That was bumpier than usual."
+
+SubtitleSound[2939]="D62Y3500"
+SubtitleText[2939]="Delta 62: Rule 45, Sev:  Any crash you can walk away from is a good one."
+
+SubtitleSound[2940]="D62Y3501"
+SubtitleText[2940]="Delta 62: Something must have spooked those crits."
+
+SubtitleSound[2941]="D40Y3500"
+SubtitleText[2941]="Delta 40: It's a Trandoshan patrol!"
+
+SubtitleSound[2942]="D38Y3504"
+SubtitleText[2942]="Delta 38: Take 'em out!"
+
+SubtitleSound[2943]="D40Y3501"
+SubtitleText[2943]="Delta 40: Looks like a textbook perimeter defense of a Trando camp."
+
+SubtitleSound[2944]="D62Y3502"
+SubtitleText[2944]="Delta 62: Either that or the Wookiees have taken up landscaping."
+
+SubtitleSound[2945]="D38Y3505"
+SubtitleText[2945]="Delta 38: Sir, the Trandos have set up a camp here."
+
+SubtitleSound[2946]="CA1Y3506"
+SubtitleText[2946]="Clone Advisor 1: Understood, continue your recon."
+
+SubtitleSound[2947]="D38Y3506"
+SubtitleText[2947]="Delta 38: Grenades!  Take cover!"
+
+SubtitleSound[2948]="D07Y3501"
+SubtitleText[2948]="Delta 07: It's a Slaver rush!"
+
+SubtitleSound[2949]="D38Y3507"
+SubtitleText[2949]="Delta 38: Drop 'em!"
+
+SubtitleSound[2950]="D40Y3502"
+SubtitleText[2950]="Delta 40: Looks like they've dug themselves in."
+
+SubtitleSound[2951]="D38Y3508"
+SubtitleText[2951]="Delta 38: Droids?  What are they doing here?"
+
+SubtitleSound[2952]="D07Y3502"
+SubtitleText[2952]="Delta 07: Look out!  It's a missile turret!"
+
+SubtitleSound[2953]="D38Y3509"
+SubtitleText[2953]="Delta 38: Sir, we've eliminated the Trando's perimeter defenses."
+
+SubtitleSound[2954]="D40Y3503"
+SubtitleText[2954]="Delta 40: Looks a little large for a camp, sir."
+
+SubtitleSound[2955]="CA1Y3507"
+SubtitleText[2955]="Clone Advisor 1: Good work, Deltas."
+
+SubtitleSound[2956]="CA1Y3508"
+SubtitleText[2956]="Clone Advisor 1: Proceed inside and ascertain the nature of the camp."
+
+SubtitleSound[2957]="D38Y3510"
+SubtitleText[2957]="Delta 38: It LOOKS like a Trando compound, but they've got droids guarding it."
+
+SubtitleSound[2958]="CA1Y3509"
+SubtitleText[2958]="Clone Advisor 1: Continue your recon of the compound."
+
+SubtitleSound[2959]="D38Y3511"
+SubtitleText[2959]="Delta 38: Those look like Separatist supply crates."
+
+SubtitleSound[2960]="D62Y3503"
+SubtitleText[2960]="Delta 62: This place is lousy with droids!"
+
+SubtitleSound[2961]="D38Y3512"
+SubtitleText[2961]="Delta 38: These supplies are too good for the Trandos.  Let's take 'em out."
+
+SubtitleSound[2962]="D07Y3503"
+SubtitleText[2962]="Delta 07: It's a droid dispenser!"
+
+SubtitleSound[2963]="D62Y3504"
+SubtitleText[2963]="Delta 62: Bloody perfect."
+
+SubtitleSound[2964]="D40Y3504"
+SubtitleText[2964]="Delta 40: Take cover!"
+
+SubtitleSound[2965]="D38Y3513"
+SubtitleText[2965]="Delta 38: Hmmm.  More Separatist supplies."
+
+SubtitleSound[2966]="D62Y3505"
+SubtitleText[2966]="Delta 62: One's and anomaly, two's a trend.  Rule 89, boss."
+
+SubtitleSound[2967]="D38Y3514"
+SubtitleText[2967]="Delta 38: Sir, I think we've stumbled across a Separatist supply base."
+
+SubtitleSound[2968]="CA1Y3510"
+SubtitleText[2968]="Clone Advisor 1: They must be using it as a staging area for their assault on Kashyyyk."
+
+SubtitleSound[2969]="CA1Y3511"
+SubtitleText[2969]="Clone Advisor 1: Understood, Three-Eight.  We'll start conducting more thorough scans of the compound."
+
+SubtitleSound[2970]="CA1Y3512"
+SubtitleText[2970]="Clone Advisor 1: In the meantime, disrupt their operations by any means possible."
+
+SubtitleSound[2971]="D38Y3515"
+SubtitleText[2971]="Delta 38: That droid is activating a minefield down there."
+
+SubtitleSound[2972]="D38Y3516"
+SubtitleText[2972]="Delta 38: Let's see if we can arrange a little surprise for them."
+
+SubtitleSound[2973]="D07Y3504"
+SubtitleText[2973]="Delta 07: That was fulfilling."
+
+SubtitleSound[2974]="D07Y3505"
+SubtitleText[2974]="Delta 07: It's a Trando dropship!"
+
+SubtitleSound[2975]="D40Y3505"
+SubtitleText[2975]="Delta 40: They're bringing in reinforcements!"
+
+SubtitleSound[2976]="D38Y3517"
+SubtitleText[2976]="Delta 38: Destroy that landing pad!"
+
+SubtitleSound[2977]="D62Y3506"
+SubtitleText[2977]="Delta 62: Oh look.  The base has ANOTHER level."
+
+SubtitleSound[2978]="CA1Y3513"
+SubtitleText[2978]="Clone Advisor 1: Delta Squad, proceed to the lower level of the base."
+
+SubtitleSound[2979]="CA1Y3514"
+SubtitleText[2979]="Clone Advisor 1: Scans indicate more ships in the vicinity."
+
+SubtitleSound[2980]="CA1Y3515"
+SubtitleText[2980]="Clone Advisor 1: There must be another landing pad in the base."
+
+SubtitleSound[2981]="CA1Y3516"
+SubtitleText[2981]="Clone Advisor 1: Put the base out of commission, once and for all!"
+
+SubtitleSound[2982]="CA1Y3517"
+SubtitleText[2982]="Clone Advisor 1: We'll provide air support as soon as possible."
+
+SubtitleSound[2983]="D38Y3518"
+SubtitleText[2983]="Delta 38: Take out that missile turret!"
+
+SubtitleSound[2984]="D62Y3507"
+SubtitleText[2984]="Delta 62: Another missile turret.  Brilliant."
+
+SubtitleSound[2985]="D40Y3506"
+SubtitleText[2985]="Delta 40: Try to flank them!"
+
+SubtitleSound[2986]="D07Y3506"
+SubtitleText[2986]="Delta 07: That Merc couldn't hit the broadside of an assault ship."
+
+SubtitleSound[2987]="D62Y3508"
+SubtitleText[2987]="Delta 62: Did you see that?!"
+
+SubtitleSound[2988]="D40Y3507"
+SubtitleText[2988]="Delta 40: Looks like we've got our hands full."
+
+SubtitleSound[2989]="D07Y3507"
+SubtitleText[2989]="Delta 07: He's slower than a Gungan tree sloth!"
+
+SubtitleSound[2990]="D62Y3509"
+SubtitleText[2990]="Delta 62: You've got to be kidding me."
+
+SubtitleSound[2991]="D40Y3508"
+SubtitleText[2991]="Delta 40: Droid dispensers!  Kill 'em all!"
+
+SubtitleSound[2992]="D62Y3510"
+SubtitleText[2992]="Delta 62: Well, it's about time!"
+
+SubtitleSound[2993]="D07Y3508"
+SubtitleText[2993]="Delta 07: There's our ride."
+
+SubtitleSound[2994]="D38Y3519"
+SubtitleText[2994]="Delta 38: Deltas, let's get out of here!"
+
+SubtitleSound[2995]="CA1Y3518"
+SubtitleText[2995]="Clone Advisor 1: We're not going far, Delta!  The Separatists are planting their flag in Kashyyyk, and it's up to us to yank it out!"
+
+SubtitleSound[2996]="D62Y3511"
+SubtitleText[2996]="Delta 62: Berserkers!  They're coming through their own mine field!"
+
+SubtitleSound[2997]="D62Y3512"
+SubtitleText[2997]="Delta 62: Are they stupid or crazy??!"
+
+SubtitleSound[2998]="D38Y3520"
+SubtitleText[2998]="Delta 38: Trenches…Trandoshans have really dug in here.  Not good."
+
+SubtitleSound[2999]="D07Y3509"
+SubtitleText[2999]="Delta 07: Berserkers!"
+
+SubtitleSound[3000]="CA1Y3519"
+SubtitleText[3000]="Clone Advisor 1: Scans indicate more hostiles on your vector."
+
+SubtitleSound[3001]="CA1Y3520"
+SubtitleText[3001]="Clone Advisor 1: Prepare yourselves for hard contact."
+
+SubtitleSound[3002]="D62Y3513"
+SubtitleText[3002]="Delta 62: Here they come!"
+
+SubtitleSound[3003]="D38Y3521"
+SubtitleText[3003]="Delta 38: Get the one on the tower!"
+
+SubtitleSound[3004]="D38Y3522"
+SubtitleText[3004]="Delta 38: Watch it.  That minefield is active and engaged."
+
+SubtitleSound[3005]="D38Y3523"
+SubtitleText[3005]="Delta 38: Fixer, there's a droid up there controlling the minefield."
+
+SubtitleSound[3006]="D40Y3509"
+SubtitleText[3006]="Delta 40: Roger that."
+
+SubtitleSound[3007]="D38Y3524"
+SubtitleText[3007]="Delta 38: That droid is deactivating the minefield."
+
+SubtitleSound[3008]="D40Y3510"
+SubtitleText[3008]="Delta 40: Watch for enemy droids!"
+
+SubtitleSound[3009]="D38Y3525"
+SubtitleText[3009]="Delta 38: The minefield is active!"
+
+SubtitleSound[3010]="D38Y3526"
+SubtitleText[3010]="Delta 38: The mines have been deactivated!"
+
+SubtitleSound[3011]="D38Y3527"
+SubtitleText[3011]="Delta 38: Someone get to the controls and reactivate them!"
+
+SubtitleSound[3012]="D07Y3510"
+SubtitleText[3012]="Delta 07: There they go!"
+
+SubtitleSound[3013]="D07Y3511"
+SubtitleText[3013]="Delta 07: Heh heh heh… stupid droids."
+
+SubtitleSound[3014]="D38Y3528"
+SubtitleText[3014]="Delta 38: You heard him:  Annihilate this base!"
+
+SubtitleSound[3015]="D40Y3511"
+SubtitleText[3015]="Delta 40: Hostile reinforcements:  Rappelling in! "
+
+SubtitleSound[3016]="D62Y3514"
+SubtitleText[3016]="Delta 62: Keep your eyes on the skies!"
+
+SubtitleSound[3017]="D38Y3529"
+SubtitleText[3017]="Delta 38: Advisor:  I believe the Separatists are using this base as a staging area for their attack on the Wookiees."
+
+SubtitleSound[3018]="CA1Y3521"
+SubtitleText[3018]="Clone Advisor 1: Copy that.  I'll alert Command."
+
+SubtitleSound[3019]="D38Y3530"
+SubtitleText[3019]="Delta 38: This place is more than just a Trando supply base."
+
+SubtitleSound[3020]="D38Y3531"
+SubtitleText[3020]="Delta 38: The Separatists are definitely involved here."
+
+SubtitleSound[3021]="D40Y3512"
+SubtitleText[3021]="Delta 40: Sir, maybe we can drop that crate on the spider droid!"
+
+SubtitleSound[3022]="D38Y3532"
+SubtitleText[3022]="Delta 38: Good idea, Fixer.  Find the controls to that crane!"
+
+SubtitleSound[3023]="D40Y3513"
+SubtitleText[3023]="Delta 40: Crane interface over near those supply crates, sir!"
+
+SubtitleSound[3024]="D62Y3515"
+SubtitleText[3024]="Delta 62: Man, this place gives me the creeps."
+
+SubtitleSound[3025]="D07Y3512"
+SubtitleText[3025]="Delta 07: Ah, Scorch...  Nothing better than a jungle hunt.  Hiding in the bush, putting a plasma bolt through a hostile's cranium… makes me feel alive."
+
+SubtitleSound[3026]="D62Y3516"
+SubtitleText[3026]="Delta 62: Okay, now Oh-Seven's giving me the creeps."
+

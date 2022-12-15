@@ -1,0 +1,36 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto StartAttack
+	}
+	Actions {
+		BreakFormation
+	}
+}
+
+state StartAttack {
+	Conditions {
+	}
+	Actions {
+		KeepWeaponOut
+		SetState "Attack"
+	}
+}
+
+state Attack {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if IAmA "BattleDroid_Commander" == 1 goto CommanderFight
+	}
+	Actions {
+		EngageOpponent "goalrange 1.5" "firerange 3"
+	}
+}
+
+state CommanderFight {
+	Conditions {
+		if GotOpponent == 0 goto Approach
+	}
+	Actions {
+		EngageOpponent "goalrange 2" "firerange 3"
+	}
+}

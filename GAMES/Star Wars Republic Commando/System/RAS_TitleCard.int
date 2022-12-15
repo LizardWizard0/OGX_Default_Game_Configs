@@ -1,0 +1,33 @@
+[TitleCard]
+
+BackgroundMusic="RAS_Music.RAS_episodes.musRAS_titleCard_ep"
+
+FadeInStartTime[0]=1
+FullOnStartTime[0]=2
+FadeOutStartTime[0]=7
+FadeOutEndTime[0]=8
+Text[0]="OVER A YEAR OF SUSTAINED FIGHTING HAS STRETCHED THE REPUBLIC’S FORCES DANGEROUSLY THIN."
+
+FadeInStartTime[1]=9
+FullOnStartTime[1]=10
+FadeOutStartTime[1]=16
+FadeOutEndTime[1]=17
+Text[1]="DELTA SQUAD FINDS ITSELF IN CONSTANT DEMAND FOR INCREASINGLY HAZARDOUS MISSIONS."
+
+FadeInStartTime[2]=18
+FullOnStartTime[2]=19
+FadeOutStartTime[2]=25
+FadeOutEndTime[2]=26
+Text[2]="ON THE OUTSKIRTS OF SEPARATIST SPACE, A MISSING REPUBLIC ASSAULT SHIP HAS REAPPEARED."
+
+FadeInStartTime[3]=27
+FullOnStartTime[3]=28
+FadeOutStartTime[3]=34
+FadeOutEndTime[3]=35
+Text[3]="THE VETERAN COMMANDOS OF DELTA SQUAD ARE DISPATCHED TO INVESTIGATE..."
+
+FadeInStartTime[4]=36
+FullOnStartTime[4]=37
+FadeOutStartTime[4]=41
+FadeOutEndTime[4]=44
+Text[4]="DAY 367 – CLONE WARS - CHAYKIN CLUSTER"

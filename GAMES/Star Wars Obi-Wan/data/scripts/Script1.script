@@ -1,0 +1,90 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+
+Script "Opening Text"
+{
+	Display "/SCRIPT1_01/" 3.0 
+}
+
+Script "AAT movement"
+{
+	Actor AAT A_AAT_01
+	Actor Switch A_08_door_switch02_01
+	
+	WaitUntilNudged Switch
+	RunToNodeAndWait AAT "AAT1" 
+	RunToNode AAT "AAT2" 
+	//Move AAT somehow!
+}
+
+Script "Birds Action"
+{
+	AddInventoryItem Obi EquipBADBlaster.dsc   // *** Is this right? 
+	WaitUntilBoltHitSomethingInRegion "RGN_Birds2"
+	CreateParticleGen "peko_MTT.GEN" "gen_birds2" "A_RP_Birds02"
+}
+
+Script "Birds Region"
+{
+	WaitUntilEnteredRegion Obi "RGN_Birds1"
+	CreateParticleGen "peko_MTT.GEN" "gen_birds1" "A_RP_Birds1" 
+}
+
+Script "Burning Bush and Pain"
+{
+	WaitUntilBoltHitSomethingInRegion "RGN_Pain"
+	SetPainRegion "RGN_Pain" 10.0
+	//Trigger burning bush somehow!
+}
+
+Script "Falling Rocks"
+{
+	WaitUntilEnteredRegion Obi "RGN_FallingRocks"
+	
+	ImpulseTowardsEntity A_11_rock3_1m_01 10 Obi
+	ImpulseTowardsEntity A_11_rock4_3m_02 10 Obi
+	ImpulseTowardsNode A_11_rock3_1m_02 10 "Node_Rock"
+	ImpulseTowardsRefPos A_11_rock4_3m_01 10 "A_RP_Rocks"
+	ImpulseTowardsXYZ A_11_rock1_1m_01 10 169 14 -480
+	
+	WaitUntilExitedRegion Obi "RGN_FallingRocks"
+	
+	Loop //This probably shouldn't loop, but it's so much fun!
+}
+
+Script "Thugs"
+{
+	Actor Gaffi A_Tusken_gaffi_01
+	Actor Saber A_Tusken_saber_01
+	Actor Spear A_Tusken_spear_01
+	Actor Sith1 A_Sith_Agent1_01
+	Actor Rodian A_Rodian_Tat_01
+	Actor Sith2 A_Sith_Agent2_01
+	
+	Call "Run Thug" Gaffi
+	Call "Run Thug" Saber
+	Call "Run Thug" Spear
+	Call "Run Thug" Sith1
+	Call "Run Thug" Rodian
+	Call "Run Thug" Sith2
+
+	WaitUntilEnteredRegion Obi "RGN_Thugs"
+	
+	SayLine Gaffi "You're going to die!"
+	SayLine Saber "No, YOU'RE going to die!"
+	SayLine Spear "No, YOU!"
+	SayLine Sith1 "How about HIM?"
+	SayLine Rodian "All of you!"
+	SayLine Sith2 "DIE!!!!!!!!!!!!!!!!!!!!!!!!!!"
+}
+
+Function "Run Thug" (Actor Thug)
+{
+	Sleep Thug
+	WaitUntilEnteredRegion Obi "RGN_Thugs"
+	WakeUp Thug
+	ReturnControlTo Thug  
+}
+

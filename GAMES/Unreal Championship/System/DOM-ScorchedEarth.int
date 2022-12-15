@@ -1,0 +1,54 @@
+[LevelInfo0]
+Title="Scorched Earth"
+
+[LevelSummary]
+Title="Scorched Earth"
+
+[ZoneInfo0]
+LocationName="Middle Grounds"
+
+[ZoneInfo1]
+LocationName="Point 'B' Back Hallway"
+
+[ZoneInfo14]
+LocationName="Outside"
+
+[ZoneInfo15]
+LocationName="Middle Grounds"
+
+[ZoneInfo16]
+LocationName="Blue Spawn Room"
+
+[ZoneInfo17]
+LocationName="Point 'A' Front Hallway"
+
+[ZoneInfo18]
+LocationName="Point 'A' Front Hallway"
+
+[ZoneInfo19]
+LocationName="Dom Point 'A'"
+
+[ZoneInfo20]
+LocationName="Point 'A' Back Hallway"
+
+[ZoneInfo3]
+LocationName="Middle Grounds"
+
+[ZoneInfo4]
+LocationName="Middle Grounds"
+
+[ZoneInfo5]
+LocationName="Middle Grounds"
+
+[ZoneInfo6]
+LocationName="Point 'B' Front Hallway"
+
+[ZoneInfo7]
+LocationName="Red Spawn Room"
+
+[ZoneInfo8]
+LocationName="Point 'B' Front Hallway"
+
+[ZoneInfo9]
+LocationName="Dom Point 'B'"
+

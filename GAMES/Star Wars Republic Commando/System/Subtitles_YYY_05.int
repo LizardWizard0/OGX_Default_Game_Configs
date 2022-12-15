@@ -1,0 +1,393 @@
+
+[Subtitles_YYY_05]
+
+SubtitleSound[2928]="CA1Y5003"
+SubtitleText[2928]="Clone Advisor 1: I am picking up multiple signals heading towards your area. Trandoshans."
+
+SubtitleSound[2929]="D38Y5003"
+SubtitleText[2929]="Delta 38: We need to take them out."
+
+SubtitleSound[2930]="D62Y5002"
+SubtitleText[2930]="Delta 62: They are dropping in from the sky!"
+
+SubtitleSound[2931]="D38Y5005"
+SubtitleText[2931]="Delta 38: We’ll need to draw its fire."
+
+SubtitleSound[2932]="CA1Y5013"
+SubtitleText[2932]="Clone Advisor 1: I am picking up signals. Looks like an ambush."
+
+SubtitleSound[2933]="CA1Y5001"
+SubtitleText[2933]="Clone Advisor 1: Heads up troops, this is occupied territory. Keep a sharp eye out for Trandoshans and battle droids."
+
+SubtitleSound[2934]="D07Y5001"
+SubtitleText[2934]="Delta 07: It’s quiet."
+
+SubtitleSound[2935]="D38Y5001"
+SubtitleText[2935]="Delta 38: Too quiet, watch your back."
+
+SubtitleSound[2936]="D40Y5001"
+SubtitleText[2936]="Delta 40: Looks like a dead end."
+
+SubtitleSound[2937]="CA1Y5002"
+SubtitleText[2937]="Clone Advisor 1: Schematics show a maintenance shaft in the back corner. "
+
+SubtitleSound[2938]="D38Y5002"
+SubtitleText[2938]="Delta 38: We need to clear those crates"
+
+SubtitleSound[2939]="CA1Y5200"
+SubtitleText[2939]="Clone Advisor 1: I'm picking up multiple signals heading towards your area. Trandoshans."
+
+SubtitleSound[2940]="CA1Y5004"
+SubtitleText[2940]="Clone Advisor 1: You're in the maintenance area in the lower levels of the bridge. There should be little resistance, but you will have to slice your way through those doors."
+
+SubtitleSound[2941]="D62Y5001"
+SubtitleText[2941]="Delta 62: Grenadiers!"
+
+SubtitleSound[2942]="D38Y5200"
+SubtitleText[2942]="Delta 38: Take 'em out!"
+
+SubtitleSound[2943]="D38Y5004"
+SubtitleText[2943]="Delta 38: Keep moving squad,  Tarfful is just up ahead."
+
+SubtitleSound[2944]="CA1Y5005"
+SubtitleText[2944]="Clone Advisor 1: Now that you’ve located Tarfful, we need to reunite him with the rest of his soldiers who are pinned down at the end of the bridge."
+
+SubtitleSound[2945]="CA1Y5006"
+SubtitleText[2945]="Clone Advisor 1: Escort Tarfful through the rest of the bridge."
+
+SubtitleSound[2946]="D40Y5002"
+SubtitleText[2946]="Delta 40: Droid dispensers!"
+
+SubtitleSound[2947]="D62Y5200"
+SubtitleText[2947]="Delta 62: They're dropping in from the sky!"
+
+SubtitleSound[2948]="D07Y5200"
+SubtitleText[2948]="Delta 07: They're shielded!"
+
+SubtitleSound[2949]="D38Y5201"
+SubtitleText[2949]="Delta 38: Draw its fire!"
+
+SubtitleSound[2950]="D62Y5003"
+SubtitleText[2950]="Delta 62: Bugs?! What are they doing here!?!"
+
+SubtitleSound[2951]="CA1Y5008"
+SubtitleText[2951]="Clone Advisor 1: Looks like the Separatists are more serious about this attack than we thought. They've got all hands on deck."
+
+SubtitleSound[2952]="CA1Y5009"
+SubtitleText[2952]="Clone Advisor 1: They must really want Kashyyyk."
+
+SubtitleSound[2953]="CA1Y5010"
+SubtitleText[2953]="Clone Advisor 1: Good job, squad. Proceed."
+
+SubtitleSound[2954]="D40Y5003"
+SubtitleText[2954]="Delta 40: We need cover fire."
+
+SubtitleSound[2955]="CA1Y5012"
+SubtitleText[2955]="Clone Advisor 1: Excellent job, squad."
+
+SubtitleSound[2956]="D07Y5003"
+SubtitleText[2956]="Delta 07: Bottom floor is all closed up. We need to get up to that catwalk."
+
+SubtitleSound[2957]="CA1Y5201"
+SubtitleText[2957]="Clone Advisor 1: I'm picking up signals. Looks like an ambush."
+
+SubtitleSound[2958]="D38Y5006"
+SubtitleText[2958]="Delta 38: We need sniper cover."
+
+SubtitleSound[2959]="CA1Y5014"
+SubtitleText[2959]="Clone Advisor 1: Tarfful is too important to lose. Find a way to get him out of there."
+
+SubtitleSound[2960]="D38Y5007"
+SubtitleText[2960]="Delta 38: Looks like there is a control panel at the end of the catwalk."
+
+SubtitleSound[2961]="D38Y5008"
+SubtitleText[2961]="Delta 38: We need to get over there and close the blast doors on these windows!"
+
+SubtitleSound[2962]="CA1Y5015"
+SubtitleText[2962]="Clone Advisor 1: Three-eight! Get back in there."
+
+SubtitleSound[2963]="CA1Y5016"
+SubtitleText[2963]="Clone Advisor 1: We need Tarfful alive!"
+
+SubtitleSound[2964]="D40Y5004"
+SubtitleText[2964]="Delta 40: Almost there..."
+
+SubtitleSound[2965]="D40Y5005"
+SubtitleText[2965]="Delta 40: Got it!"
+
+SubtitleSound[2966]="D40Y5006"
+SubtitleText[2966]="Delta 40: Here comes Tarfful."
+
+SubtitleSound[2967]="D07Y5004"
+SubtitleText[2967]="Delta 07: Almost there…."
+
+SubtitleSound[2968]="D07Y5005"
+SubtitleText[2968]="Delta 07: Got it!"
+
+SubtitleSound[2969]="D07Y5006"
+SubtitleText[2969]="Delta 07: Here comes Tarfful."
+
+SubtitleSound[2970]="D62Y5004"
+SubtitleText[2970]="Delta 62: Almost there…."
+
+SubtitleSound[2971]="D62Y5005"
+SubtitleText[2971]="Delta 62: Got it!"
+
+SubtitleSound[2972]="D62Y5006"
+SubtitleText[2972]="Delta 62: Here comes Tarfful."
+
+SubtitleSound[2973]="CA1Y5017"
+SubtitleText[2973]="Clone Advisor 1: Scans indicate that the Wookiees have secured this loading dock. Tarfful says the hangar is occupied. He also informs us that the Separatists control the shield jammer at the top of the hangar. Delta Squad, proceed to the hangar and help secure it for the Wookiees."
+
+SubtitleSound[2974]="CA1Y5018"
+SubtitleText[2974]="Clone Advisor 1: Alright Squad. Now that we have blown the center span and stopped the forward progress of the Separatists, we need to finish the job."
+
+SubtitleSound[2975]="CA1Y5019"
+SubtitleText[2975]="Clone Advisor 1: We will likely encounter heavy resistance since the Separatists have had time to occupy this area of the bridge."
+
+SubtitleSound[2976]="CA1Y5020"
+SubtitleText[2976]="Clone Advisor 1: Advance forward to the hangar and keep an eye out for pockets of Wookiee resistance, the will need your help."
+
+SubtitleSound[2977]="CA1Y5021"
+SubtitleText[2977]="Clone Advisor 1: Droid Dispensers are landing in your area."
+
+SubtitleSound[2978]="D38Y5009"
+SubtitleText[2978]="Delta 38: They are trying to hold them off with these turrets."
+
+SubtitleSound[2979]="D62Y5007"
+SubtitleText[2979]="Delta 62: A Wookiee's been hit!"
+
+SubtitleSound[2980]="D40Y5007"
+SubtitleText[2980]="Delta 40: Wookiee down!"
+
+SubtitleSound[2981]="D07Y5007"
+SubtitleText[2981]="Delta 07: They got a Wookiee!"
+
+SubtitleSound[2982]="D62Y5008"
+SubtitleText[2982]="Delta 62: Look out!"
+
+SubtitleSound[2983]="D40Y5008"
+SubtitleText[2983]="Delta 40: Keep sharp, squad!"
+
+SubtitleSound[2984]="D07Y5008"
+SubtitleText[2984]="Delta 07: Watch your backs!"
+
+SubtitleSound[2985]="D07Y5501"
+SubtitleText[2985]="Delta 07: Detecting motion.  Rifles up."
+
+SubtitleSound[2986]="D38Y5202"
+SubtitleText[2986]="Delta 38: Mercs! They’re in the vents!!"
+
+SubtitleSound[2987]="D40Y5501"
+SubtitleText[2987]="Delta 40:  Look out! They’re behind us!!"
+
+SubtitleSound[2988]="D62Y5501"
+SubtitleText[2988]="Delta 62: They’re everywhere!"
+
+SubtitleSound[2989]="D62Y5502"
+SubtitleText[2989]="Delta 62: Here they come again!"
+
+SubtitleSound[2990]="D62Y5503"
+SubtitleText[2990]="Delta 62: Lizards give me the creeps!"
+
+SubtitleSound[2991]="D07Y5502"
+SubtitleText[2991]="Delta 07: Everything gives you the creeps."
+
+SubtitleSound[2992]="CA1Y5526"
+SubtitleText[2992]="Clone Advisor 1: Delta, you're approaching the medical concourse.  Tarfful is pinned down on the far side.  It doesn’t look like he’s going to be able to hold them off much longer."
+
+SubtitleSound[2993]="D38Y5203"
+SubtitleText[2993]="Delta 38: Looks like he’s holding back the whole Separatist army by himself!"
+
+SubtitleSound[2994]="D38Y5204"
+SubtitleText[2994]="Delta 38: Tarfful.  It's a pleasure to see you alive, sir."
+
+SubtitleSound[2995]="CA1Y5527"
+SubtitleText[2995]="Clone Advisor 1: Great job, Delta. The Medical Concourse is secure. Now get Tarfful out of there."
+
+SubtitleSound[2996]="CA1Y5528"
+SubtitleText[2996]="Clone Advisor 1: Tarfful's warriors are ahead of you at a rendezvous on the far side of the bridge. They are massing for a counter-attack on the main Citadel."
+
+SubtitleSound[2997]="CA1Y5529"
+SubtitleText[2997]="Clone Advisor 1:  New objective:  Escort Tarfful to the RV."
+
+SubtitleSound[2998]="CA1Y5530"
+SubtitleText[2998]="Clone Advisor 1: Delta Lead:  I’m reading Separatist demo-locks on those ammo crates. You’ll need to slice those locks to secure the ammo. "
+
+SubtitleSound[2999]="D38Y5205"
+SubtitleText[2999]="Delta 38: Ammo crates.  We need that ordnance."
+
+SubtitleSound[3000]="D40Y5502"
+SubtitleText[3000]="Delta 40: Hold on, sir.  Those are Separatist demo-locks on the ammo crates.  Be careful."
+
+SubtitleSound[3001]="D40Y5503"
+SubtitleText[3001]="Delta 40: I can slice them, if you don't want to risk it."
+
+SubtitleSound[3002]="CA1Y5531"
+SubtitleText[3002]="Clone Advisor 1: Good job, Delta! The locks have been deactivated. Now get to the next loading dock."
+
+SubtitleSound[3003]="CA1Y5532"
+SubtitleText[3003]="Clone Advisor 1: Good job, Delta! The locks have been deactivated. Now get to the next loa…"
+
+SubtitleSound[3004]="CA1Y5533"
+SubtitleText[3004]="Clone Advisor 1: Hold on, Delta! I'm reading multiple hostiles incoming! Protect that ammo!"
+
+SubtitleSound[3005]="CA1Y5534"
+SubtitleText[3005]="Clone Advisor 1: Delta Lead, the demo-locks on these crates are activate. Secure the area and slice the locks before they detonate.  I suggest you hurry!"
+
+SubtitleSound[3006]="D38Y5206"
+SubtitleText[3006]="Delta 38: Damn Separatist tech!  Nearly took my finger off!"
+
+SubtitleSound[3007]="CA1Y5535"
+SubtitleText[3007]="Clone Advisor 1: Delta Lead, you're running out of time."
+
+SubtitleSound[3008]="D38Y5207"
+SubtitleText[3008]="Delta 38: You’d better look for cover."
+
+SubtitleSound[3009]="D38Y5208"
+SubtitleText[3009]="Delta 38: Stay here.   "
+
+SubtitleSound[3010]="D38Y5209"
+SubtitleText[3010]="Delta 38: Stay down."
+
+SubtitleSound[3011]="D38Y5210"
+SubtitleText[3011]="Delta 38: Our orders are to protect you, sir.  Let us take care of this."
+
+SubtitleSound[3012]="D38Y5211"
+SubtitleText[3012]="Delta 38: Let us handle this.  It's what we do."
+
+SubtitleSound[3013]="D38Y5212"
+SubtitleText[3013]="Delta 38: Stay down. Let us clear a path here."
+
+SubtitleSound[3014]="D38Y5213"
+SubtitleText[3014]="Delta 38: Sorry about the mess. "
+
+SubtitleSound[3015]="D38Y5214"
+SubtitleText[3015]="Delta 38: OK. Looks like the coast is clear."
+
+SubtitleSound[3016]="CA1Y5536"
+SubtitleText[3016]="Clone Advisor 1: Tarfful's health is seriously compromised!"
+
+SubtitleSound[3017]="D38Y5215"
+SubtitleText[3017]="Delta 38: Cover Tarfful, Squad!"
+
+SubtitleSound[3018]="D40Y5504"
+SubtitleText[3018]="Delta 40: The Wookiee's taking a lot of punishment, sir"
+
+SubtitleSound[3019]="CA1Y5537"
+SubtitleText[3019]="Clone Advisor 1: I’m reading hostiles headed for Tarfful. Better give him some cover."
+
+SubtitleSound[3020]="CA1Y5538"
+SubtitleText[3020]="Clone Advisor 1: Tarfful needs support!  Get in there, Deltas!"
+
+SubtitleSound[3021]="D40Y5505"
+SubtitleText[3021]="Delta 40: Heavy casualties, sir.  Lots of small-arms damage."
+
+SubtitleSound[3022]="D62Y5504"
+SubtitleText[3022]="Delta 62: Sorry, fellas, we got here as fast as we could."
+
+SubtitleSound[3023]="D07Y5503"
+SubtitleText[3023]="Delta 07: Musta been a massacre…"
+
+SubtitleSound[3024]="CA1Y5539"
+SubtitleText[3024]="Clone Advisor 1: Lead, this is the remnant of Tarfful’s personal guard. They’ll escort him to the War Room. "
+
+SubtitleSound[3025]="CA1Y5540"
+SubtitleText[3025]="Clone Advisor 1: Delta, this is the remnant of Tarfful’s personal guard. They’ll escort him to the War Room. You make your way to the upper levels of the Citadel and continue the assault on the Separatist forces. "
+
+SubtitleSound[3026]="CA1Y5541"
+SubtitleText[3026]="Clone Advisor 1: Your new objective is to advance to the upper levels of the Citadel.  Eliminate all hostiles. If we can take back this tree we can cut off their supply lines and stop them cold."
+
+SubtitleSound[3027]="CA1Y5542"
+SubtitleText[3027]="Clone Advisor 1: Separatist forces are using the upper levels of the Citadel as a staging area for their assault on the city.  If we can take back this tree we can cut off their supply lines and stop them cold."
+
+SubtitleSound[3028]="D62Y5505"
+SubtitleText[3028]="Delta 62:  Let’s shake these branches and see what falls out!"
+
+SubtitleSound[3029]="CA1Y5500"
+SubtitleText[3029]="Clone Advisor 1: Advance to the end of the bridge and keep an eye out for signs of Wookiee resistance - they'll need your help."
+
+SubtitleSound[3030]="CA1Y5501"
+SubtitleText[3030]="Clone Advisor 1: Three-Eight, your forward progress appears to be blocked.  You'll have to look for an alternate exit."
+
+SubtitleSound[3031]="CA1Y5502"
+SubtitleText[3031]="Clone Advisor 1: The next sector has been heavily fortified. You should be able to bypass it through this maintenance shaft."
+
+SubtitleSound[3032]="CA1Y5503"
+SubtitleText[3032]="Clone Advisor 1: Delta, you're in the maintenance area in the lower levels of the bridge. In order to access the next sector you'll need to make your way back to the upper level."
+
+SubtitleSound[3033]="CA1Y5504"
+SubtitleText[3033]="Clone Advisor 1: The Wookiee says that Tarfful is cutoff in sector three. It's just ahead of you. They've been unable to reach his location. Any assistance you can give them would be appreciated."
+
+SubtitleSound[3034]="D62Y5500"
+SubtitleText[3034]="Delta 62: Are you sure he's not just asking for directions?"
+
+SubtitleSound[3035]="CA1Y5505"
+SubtitleText[3035]="Clone Advisor 1: Looks like another warehouse ahead.  Multiple targets detected.  You'll need to break through to reach sector 3."
+
+SubtitleSound[3036]="CA1Y5506"
+SubtitleText[3036]="Clone Advisor 1: Sector 3 is just ahead, Delta. Expect heavy resistance."
+
+SubtitleSound[3037]="CA1Y5507"
+SubtitleText[3037]="Clone Advisor 1: You still need to get to him out of there. See if you can find a way up to his level."
+
+SubtitleSound[3038]="D40Y5500"
+SubtitleText[3038]="Delta 40: He seems anxious about something."
+
+SubtitleSound[3039]="CA1Y5508"
+SubtitleText[3039]="Clone Advisor 1: Tarfful indicates that separatists have overrun the ammo dumps on the nearby loading docks. We'll need to liberate that ammo if they're going to have any chance of beating back the separatists."
+
+SubtitleSound[3040]="CA1Y5509"
+SubtitleText[3040]="Clone Advisor 1: The first loading dock is just ahead.  It's imperative that you secure those munitions."
+
+SubtitleSound[3041]="CA1Y5510"
+SubtitleText[3041]="Clone Advisor 1: Multiple hostiles incoming! Protect that ammo!"
+
+SubtitleSound[3042]="CA1Y5511"
+SubtitleText[3042]="Clone Advisor 1: We've lost the ammo. There's nothing more you can do here. Move on to second loading dock."
+
+SubtitleSound[3043]="CA1Y5512"
+SubtitleText[3043]="Clone Advisor 1: We still have a chance to secure some ammo. Move on to the next dock."
+
+SubtitleSound[3044]="CA1Y5513"
+SubtitleText[3044]="Clone Advisor 1: Great job! Now get to the second loading dock!"
+
+SubtitleSound[3045]="CA1Y5514"
+SubtitleText[3045]="Clone Advisor 1: The second loading dock is just ahead. "
+
+SubtitleSound[3046]="CA1Y5515"
+SubtitleText[3046]="Clone Advisor 1: You'll need to take out those sentries and secure the ammo dump."
+
+SubtitleSound[3047]="CA1Y5516"
+SubtitleText[3047]="Clone Advisor 1: Be careful. Let's try to preserve as much of that ammo as possible."
+
+SubtitleSound[3048]="CA1Y5517"
+SubtitleText[3048]="Clone Advisor 1: Get back there, Three-Eight. You need to secure that loading dock."
+
+SubtitleSound[3049]="CA1Y5518"
+SubtitleText[3049]="Clone Advisor 1: I'm reading active charges. Looks like the droids have rigged those ammo crates to explode. You'll have to secure the area AND slice those charges before they go off."
+
+SubtitleSound[3050]="D07Y5500"
+SubtitleText[3050]="Delta 07: We can do that.  We got two hands."
+
+SubtitleSound[3051]="CA1Y5519"
+SubtitleText[3051]="Clone Advisor 1: Careful, Squad! We can't afford to lose that ammo!"
+
+SubtitleSound[3052]="CA1Y5520"
+SubtitleText[3052]="Clone Advisor 1: Great job! The loading dock is secure. Now reunite Tarfful with his troops."
+
+SubtitleSound[3053]="CA1Y5521"
+SubtitleText[3053]="Clone Advisor 1: The loading dock is secure, but we've lost the ammo. Now get Tarfful to his troops!"
+
+SubtitleSound[3054]="CA1Y5522"
+SubtitleText[3054]="Clone Advisor 1: Good job! The loading dock is secure, and it looks like you managed to save some of the ammo. Now get Tarfful to his troops!"
+
+SubtitleSound[3055]="CA1Y5523"
+SubtitleText[3055]="Clone Advisor 1: You're almost to the end of the bridge. Tarfful's soldiers should be just ahead."
+
+SubtitleSound[3056]="CA1Y5524"
+SubtitleText[3056]="Clone Advisor 1: Scans indicate that Tarfful's troops are on the loading dock just past this pumping station. Proceed with caution."
+
+SubtitleSound[3057]="CA1Y5525"
+SubtitleText[3057]="Clone Advisor 1: Delta!  Grievous' Guards are headed your way! Get Tarfful out of there!"
+

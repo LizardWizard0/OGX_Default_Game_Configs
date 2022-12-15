@@ -1,0 +1,60 @@
+[LevelInfo0]
+Title="Endagra"
+
+[LevelSummary]
+Title="Endagra"
+
+[SkyZoneInfo1]
+LocationName="skyzone"
+
+[Volume0]
+LocationName="Blue Sniper Nest"
+
+[Volume1]
+LocationName="Red Sniper Nest"
+
+[ZoneInfo1]
+LocationName="Blue Front Room"
+
+[ZoneInfo12]
+LocationName="Red Front Room"
+
+[ZoneInfo13]
+LocationName="Outside"
+
+[ZoneInfo14]
+LocationName="Red Hallway"
+
+[ZoneInfo15]
+LocationName="Red Bomb Room"
+
+[ZoneInfo16]
+LocationName="Blue Hallway"
+
+[ZoneInfo17]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo2]
+LocationName="Red Bomb Room"
+
+[ZoneInfo4]
+LocationName="Blue Hallway"
+
+[ZoneInfo5]
+LocationName="Red Hallway"
+
+[ZoneInfo6]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo7]
+LocationName="Red Entrance"
+
+[ZoneInfo9]
+LocationName="Blue Entrance"
+
+[xBombDelivery0]
+DestructionMessage="Red Team Scores!"
+
+[xbombdelivery1]
+DestructionMessage="Blue Team Scores!"
+

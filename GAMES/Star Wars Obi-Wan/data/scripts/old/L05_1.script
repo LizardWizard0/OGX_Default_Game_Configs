@@ -1,0 +1,209 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////////
+//Global Variables//
+////////////////////
+
+Int MissionCompleted    0
+
+
+////////////////////
+//Functions       //
+////////////////////
+
+Function "Walk" (Actor Droid, Node GotoNode)
+{
+	TakePartialControlOf Droid
+	WalkToNode Droid GotoNode
+}	
+
+Function "Run" (Actor Droid, Node GotoNode)
+{
+	TakePartialControlOf Droid
+	RunToNode Droid GotoNode
+}	
+
+
+////////////////////
+//Cutscenes       //
+////////////////////
+/*
+Script "Opening Cutscene"
+{
+ 	Actor QuiGon A_Qui-Gon_01
+ 	Actor NabooGuy A_Naboo-Resistance2_01
+ 
+ 	BeginCutScene
+ 	FadeUpAndWait
+ 
+ 	TakeControlOf QuiGon
+ 	TakeControlOf NabooGuy
+ 
+ 	Child WalkToNodeAndWait QuiGon QuiGon_Start_01
+ 	Child WalkToNodeAndWait NabooGuy BossNass_Start_01
+ 
+ 	WaitForAll
+ 
+ 	LookAtAndWait QuiGon ObiWan
+ 	LookAtAndWait NabooGuy ObiWan
+ 	
+	EndCutScene
+}
+*/
+
+Script "Opening Cutscene"
+{
+ 	Actor QuiGon A_Qui-Gon_01
+ 	Actor NabooGuy A_Naboo-Resistance2_01
+//	Actor Leader 
+//	Actor Soldier
+ 
+ 	BeginCutScene
+ 	FadeUpAndWait
+ 
+ 	TakeControlOf QuiGon
+ 
+ 	LookAtAndWait QuiGon ObiWan
+	SayLine QuiGon "We seem fairly safe while in the protection of these Gungans.  I will act as the Queen's bodyguard alone.  I want you to meet up with the Naboo resistance in the tunnels below Theed.  They will need your assistance in a counter-attack they have planned.  I will meet up with you later."
+	SayLine Obi "Yes, Master."
+	SayLine QuiGon "And Obi-Wan-"
+	SayLine Obi "Yes, Master.  'Be careful,' I know..."
+	SayLine QuiGon "Hmpf."
+	
+	FadeDownAndWait
+	
+	//Teleport Obi
+	
+	FadeUpAndWait
+	
+	SayLine NabooGuy "Hold it right there.  Hands up."
+	SayLine Obi "I'm here to help you."
+	SayLine Soldier "Who are you?  What's your name?"
+	SayLine Leader "Obi-Wan Kenobi."
+	SayLine Obi "Asha?"
+	SayLine Leader "Welcome to the Resistance, Jedi."
+	
+	FadeDownAndWait
+	FadeUpAndWait
+ 	
+	EndCutScene
+}
+
+Script "Closing Cutscene"
+{
+    WaitUntilEqual MissionCompleted 1
+    
+	BeginCutScene
+
+    LookAt ResistanceLeader Obi
+/*
+    Sayline ResistanceLeader "Obiwan! Over here, you've found us."
+    Sayline ResistanceLeader "Thank you for getting back our pilots."
+    Sayline ResistanceLeader "However, we now have a bigger threat to deal with."
+    Sayline ResistanceLeader "Come with me, I'll tell you on the way."    
+*/    
+    FadeDownAndWait
+    EndCutscene
+    
+    NextLevel L05_3
+}
+
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Catacomb Demolition"
+{
+	Actor Gen01 A_z_UberGen_07
+	Actor Gen02 A_z_UberGen_08
+	Actor Gen03 A_z_UberGen_09
+	Actor Gen04 A_z_UberGen_10
+	Actor Gen05 A_z_UberGen_11
+	Actor Gen06 A_z_UberGen_12
+
+
+	WaitUntilEnteredRegion ObiWan Rgn_04
+
+	TriggerUberGenAndWait Gen01 BAD01
+	TriggerUberGenAndWait Gen02 BAD02
+	TriggerUberGenAndWait Gen03 BAD03
+	TriggerUberGenAndWait Gen04 BAD04
+	TriggerUberGenAndWait Gen05 BAD05
+	TriggerUberGenAndWait Gen06 BAD06
+
+    Call "Run" (BAD01, Ambush_Point_01)
+    Call "Run" (BAD02, Ambush_Point_01)
+    Call "Run" (BAD03, Ambush_Point_01)
+    Call "Run" (BAD04, Ambush_Point_01)
+    Call "Run" (BAD05, Ambush_Point_01)
+    Call "Run" (BAD06, Ambush_Point_01)
+}
+
+Script "Catacomb Dead End Ambush"
+{
+	Actor Gen01 A_z_UberGen_14
+	Actor Gen02 A_z_UberGen_15
+	Actor Gen03 A_z_UberGen_16
+	Actor Gen04 A_z_UberGen_17
+	Actor Gen05 A_z_UberGen_18
+	Actor Gen06 A_z_UberGen_19
+
+
+	WaitUntilEnteredRegion ObiWan Rgn_05
+
+	TriggerUberGenAndWait Gen01 BAD01
+	TriggerUberGenAndWait Gen02 BAD02
+	TriggerUberGenAndWait Gen03 BAD03
+	TriggerUberGenAndWait Gen04 BAD04
+	TriggerUberGenAndWait Gen05 BAD05
+	TriggerUberGenAndWait Gen06 BAD06
+
+    Call "Run" (BAD01, Ambush_Point_02)
+    Call "Run" (BAD02, Ambush_Point_02)
+    Call "Run" (BAD03, Ambush_Point_02)
+    Call "Run" (BAD04, Ambush_Point_02)
+    Call "Run" (BAD05, Ambush_Point_02)
+    Call "Run" (BAD06, Ambush_Point_02)
+}
+
+Script "Tunnel Ambush"
+{
+	Actor Gen01 A_z_UberGen_01
+	Actor Gen02 A_z_UberGen_02
+	Actor Gen03 A_z_UberGen_03
+	Actor Gen04 A_z_UberGen_04
+
+
+	WaitUntilEnteredRegion ObiWan Rgn_08
+
+	TriggerUberGenAndWait Gen01 BAD01
+	TriggerUberGenAndWait Gen02 BAD02
+	TriggerUberGenAndWait Gen03 BAD03
+	TriggerUberGenAndWait Gen04 BAD04
+
+    Call "Run" (BAD01, Tunnel_Ambush_Left)
+    Call "Run" (BAD02, Tunnel_Ambush_Right)
+    Call "Run" (BAD03, Tunnel_Ambush_Left)
+    Call "Run" (BAD04, Tunnel_Ambush_Right)
+}
+
+Script "BAD Bridge Ambush"
+{
+	Actor Gen01 A_z_UberGen_05
+	Actor Gen02 A_z_UberGen_06
+	Actor Gen03 A_z_UberGen_13
+
+
+	WaitUntilEnteredRegion ObiWan Rgn_STAP_Ambush_Bridge
+
+	TriggerUberGenAndWait Gen01 BAD01
+	TriggerUberGenAndWait Gen02 BAD02
+	TriggerUberGenAndWait Gen03 BAD03
+
+    Call "Run" (BAD01, Bridge_Patrol_01)
+    Call "Run" (BAD02, Bridge_Patrol_01)
+    Call "Run" (BAD03, Bridge_Patrol_01)        
+}

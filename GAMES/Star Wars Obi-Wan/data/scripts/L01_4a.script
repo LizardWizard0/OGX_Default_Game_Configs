@@ -1,0 +1,1147 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+////////////////
+//  PDA Info  //
+////////////////
+
+MissionTitle "/Mission5Title/The Informant"
+MissionObjective 1 "/Mission5Objective1/Infiltrate the lower levels without setting off the alarm."
+MissionObjective 2 "/Mission5Objective2/Locate the informant and free him from his thug captors."
+
+SetDefaultSurface 08_13fnttop.sur
+
+SetTimeToBeat 3 45
+SetForceUsesNeeded 20
+SetExplorationNum 2
+
+RenderAlways A_1-4_pal_tube_high_01
+RenderAlways A_1-4_pal_tarp_high_01
+RenderAlways A_1-4_pal_tarp_low_01
+RenderAlways A_1-4_pal_tube_low_01
+
+FadeUp
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_15.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_15.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_17.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_10.wav Battle
+AddMusic m_battle_11.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+
+
+//////////////////
+//  Patrollers  //
+//////////////////
+
+AddPatrolState A_1st_Kubaz-Pistol_01
+AddPatrolState A_Gran-Club_01
+AddPatrolState A_warn_Aqualish-Dagger_01
+AddPatrolState A_push_Kubaz-Pistol_02
+AddPatrolState A_inside_Aqualish-Dagger_02
+AddPatrolState A_pipe_Aqualish-Pipe_02
+AddPatrolState A_patrola_Aqualish-Dagger_01
+AddPatrolState A_patrola_Kubaz-Pistol_01
+AddPatrolState A_patrolb_Aqualish-Pipe_01
+AddPatrolState A_patrolb_Kubaz-Dagger_01
+AddPatrolState A_patrolb_Kubaz-Dagger_01
+
+///////////////////////////
+//  Exploration Markers  //
+///////////////////////////
+
+Function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 31)
+call PowerupRemoval (A_powerupexplorationmarker_01, 30)
+
+///////////////////////
+// Save/Load Points  //
+///////////////////////
+
+Script "Save Point0"
+{
+	SetStartPosition 0
+	WaitUntilExitedRegion Obi obi_rgn_start_0
+	RemoveGroup 32
+	Save
+
+}
+
+Script "Save Point1"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start01 
+	SetStartPosition 1
+	RemoveGroup 32
+  	// RemoveGroup 1
+	Save
+}
+
+Script "Save Point1 Addendum"
+{
+    if (= StartPosition 1)
+    {
+        Teleport A_Naboo_Protocol_Droid_3 droid1
+    }
+}
+
+////////////////////
+////////////////////
+
+Script "Group2"
+{
+	Child WaitUntilKilled A_Gran-Club_01 2
+	Child WaitUntilKilled A_1st_Kubaz-Pistol_01 2
+	Child WaitUntilKilled A_1b_Kubaz-Dagger_01 2
+	Child WaitUntilKilled A_con_Aqualish-Pipe_01 2
+	Child WaitUntilKilled A_supcrane_Kubaz-Pistol_01 2
+	Child WaitUntilKilled A_supcrane_Aqualish-Pipe_01 2
+	Child WaitUntilKilled A_1st_Kubaz-Dagger_01 2
+	WaitForAll
+	RemoveGroup 2
+}
+
+Script "Save Point2"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start02
+	SetStartPosition 2
+	RemoveGroup 32
+	Save
+}
+
+////////////////////
+////////////////////
+
+Script "Group3"
+{
+	Child WaitUntilKilled AlarmGran02 3
+	Child WaitUntilKilled A_Naboo_Protocol_Droid_1 3
+	Child WaitUntilKilled AlarmGran01 3
+	Child WaitUntilKilled AlarmGran03 3
+	Child WaitUntilKilled A_barrel_1b_Aqualish-Blaster 3
+	Child WaitUntilKilled A_barrel_1b_Kubaz-Pistol 3
+	WaitForAll
+	RemoveGroup 3
+}
+
+Script "Save Point3"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start03
+	SetStartPosition 3
+	RemoveGroup 32
+	Save
+}
+
+////////////////////
+////////////////////
+
+Script "Group4"
+{
+	Child WaitUntilKilled A_2b_Gran-Blaster_03
+	Child WaitUntilKilled A_2b_Kubaz-Pistol_02
+	Child WaitUntilKilled A_2b_Kubaz-Dagger_01
+	Child WaitUntilKilled A_2b_Aqualish-Pipe_02
+	Child WaitUntilKilled A_2b_Aqualish-Dagger_02
+	Child WaitUntilKilled A_2b_Kubaz-Pistol_03
+	Child WaitUntilKilled A_2b_Aqualish-Pipe_01
+	Child WaitUntilKilled A_2b_Kubaz-Pistol_04
+	Child WaitUntilKilled A_2b_Gran-Blaster_01
+	Child WaitUntilKilled A_warn_Aqualish-Dagger_01
+	WaitForAll
+	RemoveGroup 4
+	RemoveGroup 3
+	RemoveGroup 2
+	RemoveGroup 1
+}
+
+Script "Save Point4"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start04
+	SetStartPosition 4
+	RemoveGroup 32
+	Save
+}
+
+////////////////////
+////////////////////
+
+Script "Group5"
+{
+	Child WaitUntilKilled A_Naboo_Protocol_Droid_2
+	Child WaitUntilKilled AlarmGran02_02
+	Child WaitUntilKilled A_push_Aqualish-Blaster_01
+	Child WaitUntilKilled A_push_Kubaz-Pistol_02
+	Child WaitUntilKilled A_pipe_Aqualish-Pipe_02
+	Child WaitUntilKilled A_push_Kubaz-Pistol_01
+	Child WaitUntilKilled A_push_Kubaz-Pistol_01
+	Child WaitUntilKilled AlarmGran02_01
+	Child WaitUntilKilled A_push_Aqualish-Pipe_01
+	Child WaitUntilKilled A_inside_Aqualish-Dagger_02 
+	WaitForAll
+	RemoveGroup 5
+}
+
+Script "Save Point5"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start05
+	SetStartPosition 5
+	RemoveGroup 32
+	Save
+}
+
+Script "Save Point5elev"
+{
+	WaitUntilEnteredRegion Obi RegionStart09
+	SetStartPosition 6
+	RemoveGroup 32
+	Save
+}
+
+////////////////////
+////////////////////
+
+Script "Group6"
+{
+	Child WaitUntilKilled A_3b_Aqualish-Blaster_02
+	Child WaitUntilKilled A_mixer_Aqualish-Dagger_02
+	Child WaitUntilKilled A_mixer_Aqualish-Dagger_01
+	Child WaitUntilKilled A_3b_Rodian-Blaster_01
+	Child WaitUntilKilled A_mixer_Aqualish-Blaster_01
+	Child WaitUntilKilled A_Gran-Grenade_01
+	Child WaitUntilKilled A_3b_Aqualish-Dagger_01
+	Child WaitUntilKilled A_3b_Kubaz-Pistol_01
+	WaitForAll
+	RemoveGroup 6
+}
+
+Script "Save Point6"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start06
+	SetStartPosition 7
+	RemoveGroup 32
+	Save
+}
+
+Script "Save Point6elev"
+{
+	WaitUntilEnteredRegion Obi RegionStart11
+	SetStartPosition 8
+	RemoveGroup 32
+	Save
+}
+
+////////////////////
+////////////////////
+
+Script "Group7"
+{
+	Child WaitUntilKilled A_ambush_Aqualish-Dagger_02
+	Child WaitUntilKilled A_3b_Aqualish-Blaster_01
+	Child WaitUntilKilled A_4_Kubaz-Pistol_01
+	Child WaitUntilKilled A_4_Rodian-Blaster_01
+	Child WaitUntilKilled A_4_Rodian-Pistol_01
+	Child WaitUntilKilled A_ambush_Aqualish-Pipe_01
+	Child WaitUntilKilled A_4_Aqualish-Dagger_01
+	Child WaitUntilKilled A_ambush_Aqualish-Blaster_01
+	Child WaitUntilKilled A_inside_Kubaz-Pistol_02
+	Child WaitUntilKilled A_ambush_Kubaz-Pistol_01
+	Child WaitUntilKilled A_4_Aqualish-Dagger_02
+	Child WaitUntilKilled A_Gran-Grenade_03
+	Child WaitUntilKilled A_4_Rodian_BlasterCS_01
+	Child WaitUntilKilled A_Gran-Grenade_02
+	Child WaitUntilKilled A_ambush_Aqualish-Dagger_01
+	WaitForAll
+	RemoveGroup 7
+}
+
+Script "Save Point7"
+{
+	WaitUntilEnteredRegion Obi obi_rgn_start07
+	SetStartPosition 9
+	RemoveGroup 32
+	Save
+}
+
+
+////////////////////////
+//  Opening Cutscene  //
+////////////////////////
+
+
+Script "Opening Cutscene" 32
+{
+	LoadDLG Qui-Gon.dlg
+
+//Coruscant Traffic
+	TriggerUberGen A_z_Cor_Taxi_4ever_01a
+	TriggerUberGen A_z_traffic_01a
+	TriggerUberGen A_z_traffic_02a
+	TriggerUberGen A_z_traffic_03a
+	TriggerUberGen A_z_traffic_04a
+	TriggerUberGen A_z_traffic_05a
+	TriggerUberGen A_z_traffic_06a
+	TriggerUberGen A_z_traffic_07a
+	TriggerUberGen A_z_traffic_01b 
+	TriggerUberGen A_z_traffic_02b
+	TriggerUberGen A_z_traffic_03b
+	TriggerUberGen A_z_traffic_04b
+	TriggerUberGen A_z_traffic_05b
+	TriggerUberGen A_z_traffic_06b
+	TriggerUberGen A_z_traffic_07b
+	TriggerUberGen A_z_traffic_01c
+	TriggerUberGen A_z_traffic_02c
+	TriggerUberGen A_z_traffic_03c
+	TriggerUberGen A_z_traffic_04c
+	TriggerUberGen A_z_traffic_05c
+	TriggerUberGen A_z_traffic_06c
+	TriggerUberGen A_z_traffic_07c
+	TriggerUberGen A_z_overhead_bus_01
+	TriggerUbergen A_z_overhead_flyby_02
+//Coruscant Traffic
+
+	BeginCutscene
+
+	Int exitedEarly 1
+	PlayFlourish cut_1-4aIntro_m.wav
+
+	CameraFixed opencut01
+	FadeUpAndWait
+	Pause 0.5
+
+	//CommunicatorOn
+	TakeControlOf A_Naboo_Protocol_Droid_3
+	LookAt A_Naboo_Protocol_Droid_3 A_15_elvtr_btn_lobby_03
+	Crouch Obi
+	Child SayLineNonPositional Obi "/Obi-Wan_208/I am at the site where they are holding the informant."
+	MoveCameraAndWait opencut02 10 3 7
+	WaitForAll
+
+	CameraFixed opencut04
+	Child CommunicatorMessageAndWait "/Qui-Gon_209/Be careful Obi-Wan. If you raise the alarm they will surely kill our brave friend." Qui-Gon.dlg
+	Child WalkToNode A_Naboo_Protocol_Droid_3 goto_alarmswitch03
+	//Pause 2.0
+	MoveCameraAndWait opencut03 6 2 4
+	WaitForAll
+
+	Child SayLineNonPositional Obi "/Obi-Wan_210/Yes master."
+	MoveCameraAndWait opencut05 5 2 2
+	WaitForAll
+	
+	Child CommunicatorMessageAndWait "/Qui-Gon_224/You can monitor the informant on your communicator." Qui-Gon.dlg
+	ChildScript
+	{
+		Stand Obi
+		Pause .25
+		WalkToNodeAndWait Obi goto_obistart
+		//Crouch obi  // *** I couldn't tell if this was supposed to be here
+	}
+	WaitForAll
+	
+	CommunicatorMessageAndWait "/Qui-Gon_270/May the Force be with you." Qui-Gon.dlg
+
+	DisableAudioFades
+	FadeDownAndWait
+
+	Set exitedEarly 0
+
+	PreEndCutscene
+
+	if (= exitedEarly 1)
+	{
+		StopMusic
+	}
+
+	Teleport A_Naboo_Protocol_Droid_3 droid1
+	FadeDown 0
+
+	EndCutscene
+
+	Pause .25
+
+	FadeUp
+	EnableAudioFades
+
+	startMusicManager
+}
+
+
+Script "AlternateOpening"
+{
+	if (IsGroupRemoved 32)
+	{
+		StartMusicManager
+		Teleport A_Naboo_Protocol_Droid_3 droid1
+	}
+}
+
+//////////////////////
+//  End Save Point  //
+//////////////////////
+
+Script "savepoint_final"
+{
+	WaitUntilEnteredRegion Obi savepoint_final 
+	SetStartPosition 11
+	RemoveGroup 32
+	Save
+}
+
+
+/////////////////////////////
+//  Pallet Elevator/Doors  //
+/////////////////////////////
+
+
+Function "Pallet Aud" (Actor Pallet)
+{
+	Child WaitUntilNudgedBy A_01_contrl_sphere_01 Obi
+	Child WaitUntilNudgedBy A_01_contrl_sphere_02 Obi
+	Child WaitUntilNudgedBy A_01_contrl_sphere_03 Obi
+	Child WaitUntilNudgedBy A_01_contrl_sphere_04 Obi
+	WaitForAny
+	PlayAudioCue Pallet RepulsorPalletRaise
+
+	WaitUntilArrivedAtKeyFrame Pallet
+	PlayAudioCue Pallet Startup
+
+	WaitUntilArrivedAtKeyFrame Pallet
+	PlayAudioCue Pallet Running
+
+	WaitUntilArrivedAtKeyFrame Pallet
+	PlayAudioCue Pallet Arrived
+}
+
+Call "Pallet Aud" (A_1-4_pal_tarp_low_01)
+Call "Pallet Aud" (A_1-4_pal_tube_low_01)
+Call "Pallet Aud" (A_1-4_pal_tarp_high_01)
+
+
+Script "Pallets1"
+{
+	DisablePortalsBetween 1aa 2a
+	DisablePortalsBetween 1a 2a
+
+	Child WaitUntilNudgedBy A_01_contrl_sphere_01 Obi
+	Child WaitUntilNudgedBy A_01_contrl_sphere_02 Obi
+	WaitForAny
+	PlayAudioCue A_1-4_pal_tube_high_01 RepulsorPalletRaise
+
+	EnablePortalsBetween 1aa 2a
+	EnablePortalsBetween 1a 2a
+
+	WaitUntilArrivedAtKeyFrame A_1-4_pal_tube_high_01
+	ActivateSwitch A_01_contrl_sphere_01
+	PlayAudioCue A_1-4_pal_tube_high_01 Startup
+
+	WaitUntilArrivedAtKeyFrame A_1-4_pal_tube_high_01
+	ActivateSwitch A_01_contrl_sphere_01
+	PlayAudioCue A_1-4_pal_tube_high_01 Running
+
+	WaitUntilArrivedAtKeyFrame A_1-4_pal_tube_high_01
+	PlayAudioCue A_1-4_pal_tube_high_01 Arrived
+
+	Loop
+}
+
+Script "Pallets2"
+{
+	DisablePortalsBetween 2a 2bb1
+	DisablePortalsBetween 2a 2bb2
+
+	Child WaitUntilNudgedBy A_01_contrl_sphere_03 Obi
+	Child WaitUntilNudgedBy A_01_contrl_sphere_04 Obi
+	WaitForAny
+	PlayAudioCue A_1-4_pal_tube_high_01 RepulsorPalletRaise
+
+	EnablePortalsBetween 2a 2bb1
+	EnablePortalsBetween 2a 2bb2
+
+	WaitUntilArrivedAtKeyFrame A_1-4_pal_tube_high_01
+	ActivateSwitch A_01_contrl_sphere_01
+	PlayAudioCue A_1-4_pal_tube_high_01 Startup
+	WaitUntilArrivedAtKeyFrame A_1-4_pal_tube_high_01
+	ActivateSwitch A_01_contrl_sphere_01
+	PlayAudioCue A_1-4_pal_tube_high_01 Running
+	WaitUntilArrivedAtKeyFrame A_1-4_pal_tube_high_01
+	PlayAudioCue A_1-4_pal_tube_high_01 Arrived
+
+	Loop
+}
+
+
+//////////////////////
+//  Alarm Triggers  //
+//////////////////////
+
+Script "Alarm Alert 1"
+{
+	LoadDLG gran.dlg
+	LoadDLG informant.dlg	
+
+	AddPatrolState AlarmGran01
+	AddPatrolState AlarmGran02
+	AddPatrolState AlarmGran03
+
+ 	WaitUntilEnteredRegion Obi alarm_trig01a
+	TriggerUberGen A_z_Falcon_01
+
+	Child TakePartialControlOf AlarmGran01
+	Child TakePartialControlOf AlarmGran02
+	Child TakePartialControlOf AlarmGran03
+	Child TakeControlOf A_Naboo_Protocol_Droid_1
+
+	Child ForceTargetAndAttack AlarmGran01 obi
+	Child ForceTargetAndAttack AlarmGran02 obi
+	Child ForceTargetAndAttack AlarmGran03 obi
+	SayLineNonPositional AlarmGran01 "/Gran_211/Sound the alarm! Intruder!"
+	SayLineNonPositional AlarmGran01 "/Gran_212/I’ll cover you!"
+	WalkToNodeAndWait A_Naboo_Protocol_Droid_1 goto_alarmswitch01
+	
+	PlayGestureAndWait A_Naboo_Protocol_Droid_1 Typing 2.0
+	InvincibilityOn A_Naboo_Protocol_Droid_1
+	InvincibilityOn A_15_elvtr_btn_lobby_01
+
+	Nudge A_Naboo_Protocol_Droid_1 A_15_elvtr_btn_lobby_01
+	PlayAudioCue L01_4.aud PointSoundLoop_02
+	Pause 1.0
+
+	BeginCutscene
+	TakeControlOf Obi
+	SetTeam Obi 0
+	InvincibilityOn Obi
+	Pause 1.0
+	CameraPlayer A_Naboo_Protocol_Droid_1 2 2.5 -4
+	CommunicatorMessageAndWait "/Gran_213/Kill the snitch!!" Gran.dlg
+	CommunicatorMessageAndWait "/Informant_234/No please don’t shoot ahhhh!!!" informant.dlg
+	Pause 1.75
+
+	CommunicatorMessageAndWait "/Qui-Gon_225/Something’s wrong. We’ve lost contact with him. " Qui-Gon.dlg
+	FadeDownAndWait
+
+	PreEndCutScene
+	FadeDown 0
+	Pause 0.5
+	EndCutscene
+
+	FailMission
+	MissionObjectiveFailed 1
+}
+
+Script "Alarm Damage 1"
+{
+	WaitUntilKilled A_15_elvtr_btn_lobby_01
+	EndScript "Alarm Alert 1"
+	SayLineNonPositional A_Naboo_Protocol_Droid_1 "/TC-14_57/Oh, dear!"
+	ReturnControlTo A_Naboo_Protocol_Droid_1
+	ForceState A_Naboo_Protocol_Droid_1 Retreat
+}
+
+Script "Protocol1FailSafe"
+{
+	WaitUntilKilled A_Naboo_Protocol_Droid_1
+	EndScript "Alarm Alert 1"
+}
+
+////////////////////////////////
+////////////////////////////////
+
+Script "Alarm Alert 2"
+{
+	LoadDLG gran.dlg
+	LoadDLG informant.dlg	
+	LoadDLG Qui-Gon.dlg
+
+	TakePartialControlOf AlarmGran02_01
+	TakePartialControlOf AlarmGran02_02
+	TakeControlOf A_Naboo_Protocol_Droid_2
+
+	ChildScript "Kill Last Droid"
+	(
+		WaitUntilKilled A_Naboo_Protocol_Droid_2
+		MissionObjectiveAchieved 1
+	}
+
+	WaitUntilEnteredRegion Obi AlarmTrig02
+	TakePartialControlOf AlarmGran02_01
+	TakePartialControlOf AlarmGran02_02
+	TakeControlOf A_Naboo_Protocol_Droid_2
+	
+	Child ForceTargetAndAttack AlarmGran02_01 obi
+	SayLineNonPositional AlarmGran02_01 "/Gran_211/Sound the alarm! Intruder!"
+	SayLineNonPositional AlarmGran02_01 "/Gran_212/I’ll cover you!"
+	ForceTargetAndAttackOff AlarmGran02_01
+	TakePartialControlOf AlarmGran02_01
+
+	Child RunToNodeAndWait AlarmGran02_01 goto_alarmswitch02
+	WalkToNodeAndWait A_Naboo_Protocol_Droid_2 goto_alarmswitch02
+	
+	Child PlayGestureAndWait A_Naboo_Protocol_Droid_2 Typing 2.0
+
+	InvincibilityOn A_Naboo_Protocol_Droid_2
+	InvincibilityOn A_15_elvtr_btn_lobby_02
+
+	Nudge A_Naboo_Protocol_Droid_2 A_15_elvtr_btn_lobby_02
+	PlayAudioCue L01_4.aud PointSoundLoop_02
+	Pause 1.0
+
+	BeginCutscene
+	TakeControlOf Obi
+	SetTeam Obi 0
+	InvincibilityOn Obi
+	Pause 1.0
+	CameraPlayer A_Naboo_Protocol_Droid_2 2 2.5 -4 
+	CommunicatorMessageAndWait "/Gran_213/Kill the snitch!!" Gran.dlg
+	CommunicatorMessageAndWait "/Informant_234/No please don’t shoot ahhhh!!!" informant.dlg
+	Pause 1.75
+
+	CommunicatorMessageAndWait "/Qui-Gon_225/Something’s wrong. We’ve lost contact with him. " Qui-Gon.dlg
+	FadeDownAndWait
+
+	PreEndCutScene
+	FadeDown 0
+	Pause 0.5
+	EndCutscene
+
+	FailMission
+	MissionObjectiveFailed 1
+}
+
+
+Script "Alarm Damage 2"
+{
+	WaitUntilKilled A_15_elvtr_btn_lobby_02
+	EndScript "Alarm Alert 2"
+	MissionObjectiveAchieved 1
+	SayLineNonPositional A_Naboo_Protocol_Droid_2 "/TC-14_57/Oh, dear!"
+	ReturnControlTo A_Naboo_Protocol_Droid_2
+	ForceState A_Naboo_Protocol_Droid_2 Retreat	
+}
+
+Script "Protocol2FailSafe"
+{
+	WaitUntilKilled A_Naboo_Protocol_Droid_2
+	EndScript "Alarm Alert 2"
+}
+
+
+////////////////////////////////
+////////////////////////////////
+
+Script "Alarm Alert TopSide"
+{
+	LoadDLG gran.dlg
+	LoadDLG informant.dlg	
+	LoadDLG Qui-Gon.dlg	
+	
+	WaitUntilEnteredRegion Obi alarmtrig_prime
+	TakeControlOf A_Gran-Blaster_01
+	TakeControlOf A_Naboo_Protocol_Droid_3
+	Child LookAtAndWait A_Gran-Blaster_01 A_Naboo_Protocol_Droid_3
+	Child PlayGestureAndWait A_Gran-Blaster_01 PointForward
+	SayLineNonPositional  A_Gran-Blaster_01 "/Gran_211/Sound the alarm! Intruder!"
+	ForceTargetAndAttack A_Gran-Blaster_01 obi
+	Child SayLineNonPositional A_Gran-Blaster_01 "/Gran_212/I’ll cover you!"
+	WalkToNodeAndWait A_Naboo_Protocol_Droid_3 goto_alarmswitch03
+
+	PlayGestureAndWait A_Naboo_Protocol_Droid_3 Typing 2.0
+
+	InvincibilityOn A_Naboo_Protocol_Droid_3
+	InvincibilityOn A_15_elvtr_btn_lobby_03
+
+	Nudge A_Naboo_Protocol_Droid_3 A_15_elvtr_btn_lobby_03
+	PlayAudioCue L01_4.aud PointSoundLoop_02
+	Pause 1.0
+	
+	BeginCutscene
+	TakeControlOf Obi
+	SetTeam Obi 0
+	InvincibilityOn Obi
+	CameraPlayer A_Naboo_Protocol_Droid_3 2 2.5 -4	
+	CommunicatorMessageAndWait "/Gran_213/Kill the snitch!!" Gran.dlg
+	CommunicatorMessageAndWait "/Informant_234/No please don’t shoot ahhhh!!!" informant.dlg
+	Pause 1.75
+
+	CommunicatorMessageAndWait "/Qui-Gon_225/Something’s wrong. We’ve lost contact with him." Qui-Gon.dlg
+	CameraPlayer Obi 0 1 4
+	Pause 1.0
+	FadeDownAndWait
+
+	PreEndCutScene
+	FadeDown 0
+	Pause 0.5
+	EndCutscene
+
+	FailMission
+	MissionObjectiveFailed 1
+}
+
+Script "Alarm Damage 3"
+{
+	WaitUntilKilled A_15_elvtr_btn_lobby_03
+	EndScript "Alarm Alert TopSide"
+	SayLineNonPositional A_Naboo_Protocol_Droid_3 "/TC-14_57/Oh, dear!"
+	ReturnControlTo A_Naboo_Protocol_Droid_3
+	ForceState A_Naboo_Protocol_Droid_3 Retreat
+}
+
+Script "Protocol3FailSafe"
+{
+	WaitUntilKilled A_Naboo_Protocol_Droid_3
+	EndScript "Alarm Alert TopSide"
+	ReturnControlTo A_Gran-Blaster_01
+}
+///////////////////
+//  Crane Thugs  //
+///////////////////
+
+
+Script "Surprise Crane Thugs"
+{
+	Actor Thug1 A_supcrane_Kubaz-Pistol_01
+	Actor Thug2 A_supcrane_Aqualish-Pipe_01
+	Actor Crane A_15_sm_crane_03
+
+	TakePartialControlOf Thug1
+	TakePartialControlOf Thug2
+
+	LookAt Thug1 Crane
+	LookAt Thug2 Crane
+
+	ChildScript "Looking at crane"  // *** Should they have alien saylines?
+	{
+		PlayGesture Thug1 PalmUpRight
+		PauseRandom 0.2 1.0
+		PlayGestureAndWait Thug2 Think
+		PlayGesture Thug1 TurnHeadLeft
+		Pause 0.5
+		PlayGestureAndWait Thug2 PointForward
+		PlayGesture Thug2 TurnHeadRight
+		Pause 0.5
+		PlayGestureAndWait Thug1 HandsOnHips
+		PlayGesture Thug2 Talk
+		Pause 0.5
+		PlayGestureAndWait Thug1 TurnHeadLeft
+		Pause 0.5
+
+		Crouch Thug1
+		PauseRandom 0.2 1.0
+		Crouch Thug2
+
+		PlayGesture Thug1 PointForward
+		PauseRandom 0.2 1.0
+		PlayGestureAndWait Thug2 Think
+		PlayGesture Thug1 TurnHeadLeft
+		Pause 0.5
+		PlayGestureAndWait Thug2 PointForward
+		PlayGestureAndWait Thug2 TurnHeadRight
+		Stand Thug2
+		PauseRandom 0.2 1.0
+		Stand Thug1
+		PauseRandom 0.2 1.0
+
+		Loop
+	}
+
+	ChildScript "They see Obi"
+	{
+		Child WaitUntilEnteredRegion Obi RegionSurpriseCraneThugs  // Really close to the thugs
+		Child WaitUntilRegainedControl Thug1
+		Child WaitUntilRegainedControl Thug2
+		WaitForAny
+
+		EndScript "Looking at crane"
+
+		TakePartialControlOf Thug1
+		TakePartialControlOf Thug2
+
+		Stand Thug1
+		Stand Thug2
+
+		LookAt Thug1 Obi
+		LookAt Thug2 Obi
+		Pause 0.5
+		EquipWeapon Thug1
+		EquipWeapon Thug2
+		Pause 0.5
+		ReturnControlTo Thug1
+		ReturnControlTo Thug2
+		ForceTarget Thug1 ObiWan
+		ForceTarget Thug2 ObiWan
+	}
+
+	WaitForAll
+}
+	
+
+
+
+
+/////////////////////////
+//  Explosive Barrels  //
+/////////////////////////
+
+/*
+Script "Barrel1A"
+{
+	Actor Thug1 A_barrel_1b_Aqualish-Blaster
+	Actor Barrel1 A_15_plasma_tank_01
+	Actor Barrel2 A_15_plasma_tank_20
+
+	WaitUntilEnteredRegion Obi RegionBarrel1A
+
+	Call "Attack barrel" (Barrel1, Thug1)
+	Call "Attack barrel" (Barrel2, Thug1)
+}
+
+Script "Barrel1B"
+{
+	Actor Thug2 A_barrel_1b_Kubaz-Pistol
+	Actor Barrel1 A_15_plasma_tank_19
+	Actor Barrel2 A_15_plasma_tank_03
+
+	WaitUntilEnteredRegion Obi RegionBarrel1B
+
+	Call "Attack barrel" (Barrel1, Thug2)
+	Call "Attack barrel" (Barrel2, Thug2)
+}
+
+Function "Attack barrel" (Actor barrel, Actor Thug1, Actor Thug2)
+{
+	ChildScript "If the barrel gets blown up early"
+	{
+		WaitUntilKilled barrel
+		ReturnControlTo Thug1
+		ReturnControlTo Thug2
+		EndFunction
+	}
+
+	WaitUntilNear Obi barrel 8
+	Child TakePartialControlOf Thug1
+	Child TakePartialControlOf Thug2
+	SetDeadOnAimFraction Thug1 1
+	SetDeadOnAimFraction Thug2 1
+	Pause 0.5
+	FireAt Thug1 barrel
+	FireAt Thug2 barrel
+	ReturnControlTo Thug1
+	ReturnControlTo Thug2
+}
+*/
+
+////////////////////////
+//  Baddies Converge  //
+////////////////////////
+
+Script "Perimeter Baddies Converge"
+{
+	Actor 2bThug1 A_2b_Aqualish-Dagger_02
+	Actor 2bThug2 A_2b_Aqualish-Pipe_01 //guys in center
+	Actor 2bThug3 A_2b_Aqualish-Pipe_02
+	Actor 2bThug4 A_2b_Gran-Blaster_01
+	Actor 2bThug5 A_2b_Gran-Blaster_03
+	Actor 2bThug6 A_2b_Kubaz-Dagger_01
+	Actor 2bThug7 A_2b_Kubaz-Pistol_02
+	Actor 2bThug8 A_2b_Kubaz-Pistol_03 //guys in center
+	Actor 2bThug9 A_2b_Kubaz-Pistol_04
+
+	TakePartialControlof 2bThug1 
+	TakePartialControlof 2bThug2
+	TakePartialControlof 2bThug3 
+	TakePartialControlof 2bThug4 
+	TakePartialControlof 2bThug5 
+	TakePartialControlof 2bThug6 
+	TakePartialControlof 2bThug7 
+	TakePartialControlof 2bThug8 
+	TakePartialControlof 2bThug9 
+
+Function "Crouching Baddies" (Actor baddie)
+{
+	TakePartialControlOf baddie
+	Crouch baddie 
+	WaitUntilStateActivated baddie Attack
+	ReturnControlTo baddie
+}
+
+Call "Crouching Baddies" 2bThug2
+Call "Crouching Baddies" 2bThug6
+
+	WaitUntilEnteredRegion obi PerimeterConverge
+	Child LookAtAndWait 2bThug2 Obi
+	Child LookAtAndWait 2bThug8 Obi
+	Child SaylineAndContinue 2bThug2 "/Gran_214/Get that Jedi!"
+	PlayGestureAndWait 2bThug8 PointForward
+	RunToNode 2bThug1 goto_converge01
+	Pause 2.0
+	RunToNode 2bThug3 goto_converge02
+	Pause 3.0
+	RunToNode 2bThug4 goto_converge03
+	Pause 1.0
+	RunToNode 2bThug5 goto_converge04
+	Pause 3.0
+	RunToNode 2bThug6 goto_converge05
+	Pause .5
+	RunToNode 2bThug7 goto_converge01
+	Pause 1.0
+	RunToNode 2bThug9 goto_converge07
+}
+
+Script "No Push to rescue"
+{
+	WaitUntilEnteredRegion Obi ProtectAlarm02
+	
+	Actor Thug1 A_push_Aqualish-Blaster_01
+	Actor Thug2 A_push_Kubaz-Pistol_01
+	Actor Thug3 A_push_Kubaz-Pistol_02
+	Actor Thug4 A_push_Aqualish-Pipe_01
+	Actor Thug5 A_inside_Aqualish-Dagger_02
+	Actor Thug6 A_pipe_Aqualish-Pipe_02
+
+	TakePartialControlOf Thug1
+	TakePartialControlOf Thug2
+	TakePartialControlOf Thug3
+	TakePartialControlOf Thug4
+	TakePartialControlOf Thug5
+	TakePartialControlOf Thug6
+
+	RunToNode Thug1 goto_alarmswitch02
+	ForceTargetAndAttack Thug1 Obi
+	RunToNode Thug2 goto_alarmswitch02
+	ForceTargetAndAttack Thug2 Obi
+	RunToNode Thug3 goto_alarmswitch02
+	ForceTargetAndAttack Thug3 Obi
+	RunToNode Thug4 goto_alarmswitch02
+	ForceTargetAndAttack Thug4 Obi
+	RunToNode Thug5 goto_alarmswitch02
+	ForceTargetAndAttack Thug5 Obi
+	RunToNode Thug6 goto_alarmswitch02
+	ForceTargetAndAttack Thug6 Obi
+}
+
+
+///////////////////
+//  CementMixer  //
+///////////////////
+
+
+Script "CementMixer"
+{
+	Actor Thug1 A_mixer_Aqualish-Blaster_01
+	Actor Thug2 A_mixer_Aqualish-Dagger_01
+	Actor Thug3 A_mixer_Aqualish-Dagger_02
+	Actor Mixer A_15_cementmixer_02
+
+	TakePartialControlOf Thug1
+	TakePartialControlOf Thug2
+	TakePartialControlOf Thug3
+
+	LookAt Thug1 Mixer
+	LookAt Thug2 Mixer
+	LookAt Thug3 Mixer
+
+	ChildScript "Looking at mixer"  // *** Should they have alien saylines?
+	{
+		PlayGesture Thug1 PalmUpRight
+		PauseRandom 0.2 1.0
+		PlayGesture Thug3 Talk
+		PlayGestureAndWait Thug2 Think
+		PlayGesture Thug1 TurnHeadLeft
+		Pause 0.5
+		PlayGesture Thug3 TurnHeadRight
+		PlayGestureAndWait Thug2 PointForward
+		PlayGesture Thug2 TurnHeadRight
+		Pause 0.25
+		PlayGestureAndWait Thug1 PalmUpBoth
+		PlayGesture Thug1 Talk
+		Pause 0.25
+		PlayGestureAndWait Thug3 HandsOnHips
+
+		PlayGesture Thug1 TurnHeadLeft
+		PlayGestureAndWait Thug3 ScratchHead
+		PauseRandom 0.1 0.5
+
+		PlayGesture Thug1 PointForward
+		PauseRandom 0.5 1.0
+		PlayGesture Thug3 PalmUpBoth
+		PlayGestureAndWait Thug2 Talk
+		PlayGesture Thug1 TurnHeadLeft
+		Pause 0.5
+		PlayGestureAndWait Thug2 PointForward
+		PlayGesture Thug2 TurnHeadRight
+		PauseRandom 0.2 0.6
+		PlayGesture Thug3 TurnHeadRight
+		Pause 0.8
+		Loop
+	}
+
+	ChildScript "They see Obi"
+	{
+		WaitUntilNear Obi Thug2 9
+		EndScript "Looking at mixer"
+
+		LookAt Thug1 Obi
+		LookAt Thug2 Obi
+		LookAtAndWait Thug3 Obi
+		Pause 0.25
+		EquipWeapon Thug1
+		EquipWeapon Thug3
+		Pause 0.25
+
+		ReturnControlTo Thug1
+		ReturnControlTo Thug3
+
+		ForceTarget Thug1 ObiWan
+		ForceTarget Thug3 ObiWan
+		WaitForAll
+
+		EquipWeapon Thug2
+		ReturnControlTo Thug2
+		ForceTarget Thug2 ObiWan
+	}
+
+	WaitForAll
+}
+
+Script "Grenade Trap"
+{
+	WaitUntilEnteredRegion Obi trig_grenade
+	ForceTargetAndAttack A_Gran-Grenade_01 Obi
+	ForceTargetAndAttack A_3b_Rodian-Blaster_01 Obi
+}
+
+
+////////////////
+//  Shootout  //
+////////////////
+
+Script "Shootout"
+{
+	Actor Thug1 A_3b_Aqualish-Blaster_01
+	Actor Thug2 A_3b_Kubaz-Pistol_01
+	Actor Thug3 A_3b_Aqualish-Blaster_02
+	Actor Thug4 A_3b_Aqualish-Dagger_01
+
+	TakePartialControlOf Thug1
+	TakePartialControlOf Thug2
+	TakePartialControlOf Thug3
+	TakePartialControlOf Thug4
+
+	SetSniperAttackFlag Thug3
+	WaitUntilEnteredRegion Obi RegionShootout
+
+	ReturnControlTo Thug3  // Sniper
+	ReturnControlTo Thug4  // Melee
+	ForceTarget Thug3 Obi
+	ForceTarget Thug4 Obi
+	ReturnControlTo Thug2
+	ForceTarget Thug2 Obi
+}
+
+
+
+
+//////////////
+//  Ambush  //
+//////////////
+
+Script "Ambush"
+{
+	Crouch A_ambush_Aqualish-Pipe_01
+	WaitUntilEnteredRegion Obi RegionStart12
+	RunToNodeAndWait A_3b_Aqualish-Blaster_01 NodeHide1
+	ReturnControlTo A_3b_Aqualish-Blaster_01 
+	Call AmbushWhenNear A_ambush_Aqualish-Dagger_01
+	Call AmbushWhenNear A_ambush_Aqualish-Pipe_01
+	Call AmbushWhenNear A_ambush_Aqualish-Dagger_02
+	Call AmbushWhenNear A_ambush_Kubaz-Pistol_01
+	Call AmbushWhenNear A_ambush_Aqualish-Blaster_01
+	Call AmbushWhenNear A_ambush_Aqualish-Dagger_01
+}
+
+Function AmbushWhenNear (Actor Thug)
+{
+	WaitUntilNear Obi Thug 7
+	ForceTarget Thug Obi
+}
+
+
+
+////////////////////////////////////////
+//  Crouching sniper (hidden dragon)  //
+////////////////////////////////////////
+
+Script "Crouching sniper"
+{
+	Actor sniper A_4_Rodian_BlasterCS_01
+	Actor grenade01 A_Gran-Grenade_02
+	Actor grenade02 A_Gran-Grenade_03
+	TakePartialControlOf sniper
+	Crouch sniper
+	WaitUntilEnteredRegion Obi RegionCrouchingSniper
+	ForceTargetAndAttack grenade01 Obi
+	ForceTargetAndAttack grenade02 Obi
+	Stand sniper
+	Pause 0.4
+	FireAt sniper Obi
+	FireAt sniper Obi
+	Pause 0.4
+	Crouch sniper
+	PauseRandom .5 1
+	Stand sniper
+	Pause 0.4
+	FireAt sniper Obi
+	FireAt sniper Obi
+	ReturnControlTo sniper
+	ForceTargetAndAttack sniper Obi
+}
+
+script "LoadPoint NextPart"
+{
+	WaitUntilEnteredRegion obi rgn_load_L01_4b
+	MissionObjectiveAchieved 1
+	
+	BeginCutscene
+	CameraPlayer Obi 0 2.5 4
+	FadeDownandWait
+	PreEndCutscene
+	FadeDown 0
+	EndCutScene
+
+	NextPart L01_4b
+}	

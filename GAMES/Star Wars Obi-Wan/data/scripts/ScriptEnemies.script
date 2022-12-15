@@ -1,0 +1,59 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+FadeUp
+
+Script "Opening Text"
+{
+//	Display "/DARREN01/" 3.0 
+}
+
+Script "Chicken's Script"
+{
+	TakeControlOf Chicken
+	
+	ChildScript
+	{
+		WaitUntilNear Chicken Obi 5.0 
+		SayLine Chicken "Please!  Don't hurt me!"
+		PauseRandom 20 30
+		
+		WaitUntilNear Chicken Obi 5.0 
+		SayLine Chicken "Stay away!"
+		PauseRandom 20 30
+		
+		Loop
+	}
+	
+	ChildScript
+	{
+		WaitUntilNear Chicken Obi 5.0 
+		WaitUntilNotBeingRendered Chicken 2.0
+		Hide Chicken	
+		SayLine Chicken "Ha ha!  You'll never see me again!"
+		EndScript "Chicken's Script"
+	}
+	
+	ChildScript
+	{
+		WaitUntilNear Chicken Obi 5.0 
+		RunToNodeAndWait Chicken "Chicken_upstairs"
+		WaitUntilNear Chicken Obi 5.0 
+		RunToNodeAndWait Chicken "Chicken_downstairs"
+		
+		Loop
+	}
+	
+	WaitForAll
+}
+
+Script "Fighting Aquas"
+{
+	SetTeam AquaMan 6
+	ForceTarget AquaMan AquaBoy
+	ForceTarget AquaBoy AquaMan
+	InvincibilityOn AquaMan
+	InvincibilityOn AquaBoy
+}
+

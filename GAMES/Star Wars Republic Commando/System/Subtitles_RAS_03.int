@@ -1,0 +1,465 @@
+
+[Subtitles_RAS_03]
+
+SubtitleSound[2928]="D62R3019"
+SubtitleText[2928]="Delta 62: Wait!  Do you hear that?"
+
+SubtitleSound[2929]="D62R3008"
+SubtitleText[2929]="Delta 62: Who are these guys?!"
+
+SubtitleSound[2930]="CA1R3006"
+SubtitleText[2930]="Clone Advisor 1: Don't take these guys lightly."
+
+SubtitleSound[2931]="D62R3009"
+SubtitleText[2931]="Delta 62: They're gonna hand over the ship??"
+
+SubtitleSound[2932]="D62R3015"
+SubtitleText[2932]="Delta 62: This ship would buy a lot of droids…"
+
+SubtitleSound[2933]="D62R3010"
+SubtitleText[2933]="Delta 62: Well… it doesn't work…"
+
+SubtitleSound[2934]="D07R3007"
+SubtitleText[2934]="Delta 07: That turret is shielded."
+
+SubtitleSound[2935]="D62R3016"
+SubtitleText[2935]="Delta 62: Regular shots won't take it out.  At least from this angle."
+
+SubtitleSound[2936]="RSCR3015"
+SubtitleText[2936]="RAS Ship computer: Lockdown initiating. All personnel, clear the area."
+
+SubtitleSound[2937]="D38R3008"
+SubtitleText[2937]="Delta 38: Squad, poison gas. Secure helmets!"
+
+SubtitleSound[2938]="D62R3011"
+SubtitleText[2938]="Delta 62: That was useful…. But now we're locked in here…."
+
+SubtitleSound[2939]="CA1R3021"
+SubtitleText[2939]="Clone Advisor 1: That clone trooper signature is coming from a position below you."
+
+SubtitleSound[2940]="D62R3012"
+SubtitleText[2940]="Delta 62: Let's go, squad.  Down the hatch!"
+
+SubtitleSound[2941]="D62R3013"
+SubtitleText[2941]="Delta 62: Something just moved past my leg!"
+
+SubtitleSound[2942]="D62R3017"
+SubtitleText[2942]="Delta 62: They're tossin' em out with the trash!"
+
+SubtitleSound[2943]="D62R3014"
+SubtitleText[2943]="Delta 62: Up there!  Grenadier on the catwalk!  "
+
+SubtitleSound[2944]="CA1R3024"
+SubtitleText[2944]="Clone Advisor 1: You'll need to control those rocket turrets to get through the shielding."
+
+SubtitleSound[2945]="CA1R3030"
+SubtitleText[2945]="Clone Advisor 1: Delta three-eight, assign your squad to the rocket turrets.  They're the only way to take out the ship.  "
+
+SubtitleSound[2946]="D62R3018"
+SubtitleText[2946]="Delta 62: The door's stuck.  We're trapped in here!"
+
+SubtitleSound[2947]="D38R3001"
+SubtitleText[2947]="Delta 38: Sir, this is Delta three eight.  We've reached the bridge and shut down the signal jamming device.  Do you read?"
+
+SubtitleSound[2948]="CA1R3001"
+SubtitleText[2948]="Clone Advisor 1: Loud and clear three eight.  I'm patching into the ship's systems to determine her status."
+
+SubtitleSound[2949]="CA1R3004"
+SubtitleText[2949]="Clone Advisor 1: Alert!  Sensors are picking up more life forms!  On the bridge!"
+
+SubtitleSound[2950]="D38R3200"
+SubtitleText[2950]="Delta 38: They're below us!  Look out for grenades!"
+
+SubtitleSound[2951]="CA1R3002"
+SubtitleText[2951]="Clone Advisor 1: You're fighting Trandoshans.  They're slavers and thugs, with no known connection to the Separatists."
+
+SubtitleSound[2952]="D40R3027"
+SubtitleText[2952]="Delta 40: Then what are they doing here?"
+
+SubtitleSound[2953]="D62R3201"
+SubtitleText[2953]="Delta 62: And where'd they get all those droids?"
+
+SubtitleSound[2954]="CA1R3026"
+SubtitleText[2954]="Clone Advisor 1: Keep going, I'll see what I can find out."
+
+SubtitleSound[2955]="CA1R3204"
+SubtitleText[2955]="Clone Advisor 1: Sensors show a Trandoshans dropship in Hangar 13-C.   It must be their command center."
+
+SubtitleSound[2956]="CA1R3003"
+SubtitleText[2956]="Clone Advisor 1: Get down to the hangar and take it out."
+
+SubtitleSound[2957]="CA1R3200"
+SubtitleText[2957]="Clone Advisor 1: Thirty-eight, I'm reading a slaver ship in Hangar A.  Have you run into any Trandoshans?"
+
+SubtitleSound[2958]="D62R3200"
+SubtitleText[2958]="Delta 62: Have we run into any droids he says…"
+
+SubtitleSound[2959]="D38R3201"
+SubtitleText[2959]="Delta 38: Lots of 'em.  And they've been throwing battle droids at us. "
+
+SubtitleSound[2960]="CA1R3201"
+SubtitleText[2960]="Clone Advisor 1: The Trandoshans have been more concerned with acquiring Wookiee pelts than taking sides in this war."
+
+SubtitleSound[2961]="D38R3202"
+SubtitleText[2961]="Delta 38: What would they want with an assault ship?"
+
+SubtitleSound[2962]="D07R3200"
+SubtitleText[2962]="Delta 07: And why would the Seps be selling clankers to slavers?"
+
+SubtitleSound[2963]="CA1R3202"
+SubtitleText[2963]="Clone Advisor 1: I'll keep analyzing the logs.   In the meantime, get down to Hangar A and shut them down."
+
+SubtitleSound[2964]="D40R3001"
+SubtitleText[2964]="Delta 40: Sounds like… a door breach?"
+
+SubtitleSound[2965]="CA1R3203"
+SubtitleText[2965]="Clone Advisor 1: I've put the ship under slave-circuit control.  I'll be able to manipulate key systems from here."
+
+SubtitleSound[2966]="CA1R3005"
+SubtitleText[2966]="Clone Advisor 1: Trandoshan Mercenaries.  They've got military training and the hardware to match."
+
+SubtitleSound[2967]="CA1R3205"
+SubtitleText[2967]="Clone Advisor 1: Don't take them lightly."
+
+SubtitleSound[2968]="D38R3203"
+SubtitleText[2968]="Delta 38: We'll have to seal off the bridge.  Everyone out!"
+
+SubtitleSound[2969]="D38R3004"
+SubtitleText[2969]="Delta 38: There's an access panel here.  We can use it to lockdown the bridge."
+
+SubtitleSound[2970]="CA1R3008"
+SubtitleText[2970]="Clone Advisor 1: Delta three-eight, I've been analyzing ship communication logs.  "
+
+SubtitleSound[2971]="CA1R3009"
+SubtitleText[2971]="Clone Advisor 1: The Trandoshans have arranged a rendezvous with the Separatists at this location."
+
+SubtitleSound[2972]="D07R3201"
+SubtitleText[2972]="Delta 07: They're giving the ship to the Seps?  Over my dead body!"
+
+SubtitleSound[2973]="CA1R3010"
+SubtitleText[2973]="Clone Advisor 1: I'm contacting the Republic for assistance.  "
+
+SubtitleSound[2974]="CA1R3011"
+SubtitleText[2974]="Clone Advisor 1: In the meantime, get down to the hangar and take out -- "
+
+SubtitleSound[2975]="D07R3001"
+SubtitleText[2975]="Delta 07: Look out!"
+
+SubtitleSound[2976]="D40R3002"
+SubtitleText[2976]="Delta 40: Ambush!"
+
+SubtitleSound[2977]="D38R3005"
+SubtitleText[2977]="Delta 38: They booby trapped the elevator.  We're stuck in the detention area."
+
+SubtitleSound[2978]="CA1R3012"
+SubtitleText[2978]="Clone Advisor 1: Keep moving, squad.  I'll search for alternate routes."
+
+SubtitleSound[2979]="CA1R3013"
+SubtitleText[2979]="Clone Advisor 1: Delta three-eight, the detention area has an automated lockdown system."
+
+SubtitleSound[2980]="CA1R3028"
+SubtitleText[2980]="Clone Advisor 1: The detention area has an automated lockdown system."
+
+SubtitleSound[2981]="CA1R3014"
+SubtitleText[2981]="Clone Advisor 1: I'm reading damage on several circuits.  "
+
+SubtitleSound[2982]="CA1R3015"
+SubtitleText[2982]="Clone Advisor 1: Find and fix those circuits, then lockdown will kick in automatically."
+
+SubtitleSound[2983]="CA1R3016"
+SubtitleText[2983]="Clone Advisor 1: There's a damaged circuit in your area.  Get over there and fix it. "
+
+SubtitleSound[2984]="D38R3006"
+SubtitleText[2984]="Delta 38: That's a start.  Let's look for more circuits, squad."
+
+SubtitleSound[2985]="D38R3007"
+SubtitleText[2985]="Delta 38: Rocket turret!  Take cover!"
+
+SubtitleSound[2986]="D07R3202"
+SubtitleText[2986]="Delta 07: That turret's shielded."
+
+SubtitleSound[2987]="D62R3202"
+SubtitleText[2987]="Delta 62: Regular shots won't take it out.  Not from this angle, anyway!"
+
+SubtitleSound[2988]="D07R3008"
+SubtitleText[2988]="Delta 07: A few grenades might do the trick."
+
+SubtitleSound[2989]="CA1R3017"
+SubtitleText[2989]="Clone Advisor 1: Almost there.  One more circuit to go."
+
+SubtitleSound[2990]="D40R3003"
+SubtitleText[2990]="Delta 40: Sir, I'm detecting a transmission signature… from clone troopers."
+
+SubtitleSound[2991]="CA1R3018"
+SubtitleText[2991]="Clone Advisor 1: I'll check it out.  Don't get distracted, four-oh."
+
+SubtitleSound[2992]="CA1R3019"
+SubtitleText[2992]="Clone Advisor 1: Fix that last circuit to initiate lockdown."
+
+SubtitleSound[2993]="D38R3204"
+SubtitleText[2993]="Delta 38: Posion gas!. Squad, secure helmets!"
+
+SubtitleSound[2994]="CA1R3020"
+SubtitleText[2994]="Clone Advisor 1: I've tracked down the source of that transmission signature.  Head back and look for it."
+
+SubtitleSound[2995]="D40R3020"
+SubtitleText[2995]="Delta 40: This way."
+
+SubtitleSound[2996]="D40R3021"
+SubtitleText[2996]="Delta 40: It was close to that rocket turret."
+
+SubtitleSound[2997]="D40R3022"
+SubtitleText[2997]="Delta 40: We're close.  Keep looking."
+
+SubtitleSound[2998]="CA1R3206"
+SubtitleText[2998]="Clone Advisor 1: That clone trooper signature is coming from a position below yours."
+
+SubtitleSound[2999]="D38R3009"
+SubtitleText[2999]="Delta 38: Look for a grating nearby and plant a bomb there.  "
+
+SubtitleSound[3000]="D38R3010"
+SubtitleText[3000]="Delta 38: I'll head in first."
+
+SubtitleSound[3001]="D07R3002"
+SubtitleText[3001]="Delta 07: Where are we?"
+
+SubtitleSound[3002]="D38R3011"
+SubtitleText[3002]="Delta 38: Lights on, squad."
+
+SubtitleSound[3003]="D40R3004"
+SubtitleText[3003]="Delta 40: Forget it, it's your imagination."
+
+SubtitleSound[3004]="D07R3009"
+SubtitleText[3004]="Delta 07: Lousy Trando scum..."
+
+SubtitleSound[3005]="CA1R3022"
+SubtitleText[3005]="Clone Advisor 1: Get out of there squad.  The Trandoshan dropship is nearby."
+
+SubtitleSound[3006]="D62R3203"
+SubtitleText[3006]="Delta 62: So that's how they got here."
+
+SubtitleSound[3007]="D38R3012"
+SubtitleText[3007]="Delta 38: How do we get these turrets firing?"
+
+SubtitleSound[3008]="D07R3003"
+SubtitleText[3008]="Delta 07: There's got to be a control panel nearby."
+
+SubtitleSound[3009]="D07R3004"
+SubtitleText[3009]="Delta 07: Watch it!  They've got concussion rifles!"
+
+SubtitleSound[3010]="D40R3005"
+SubtitleText[3010]="Delta 40: They haven't spotted us.  Let's do this by the book."
+
+SubtitleSound[3011]="D38R3013"
+SubtitleText[3011]="Delta 38: We can make use of that turret over there."
+
+SubtitleSound[3012]="D07R3005"
+SubtitleText[3012]="Delta 07: Rocket turrets!"
+
+SubtitleSound[3013]="CA1R3023"
+SubtitleText[3013]="Clone Advisor 1: Delta three-eight,  all remaining Trandoshans are converging on your position."
+
+SubtitleSound[3014]="D38R3015"
+SubtitleText[3014]="Delta 38: Keep an eye on that catwalk for more arrivals."
+
+SubtitleSound[3015]="D38R3014"
+SubtitleText[3015]="Delta 38: That ship's got heavy shielding.  We'll need more firepower to take it out."
+
+SubtitleSound[3016]="D07R3010"
+SubtitleText[3016]="Delta 07: The rocket's are barely scratching it!"
+
+SubtitleSound[3017]="CA1R3207"
+SubtitleText[3017]="Clone Advisor 1: Take control of those rocket turrets to get through the shielding."
+
+SubtitleSound[3018]="CA1R3029"
+SubtitleText[3018]="Clone Advisor 1: That ship's shielding is too tough.  You'll need to use both rocket turrets.  "
+
+SubtitleSound[3019]="CA1R3208"
+SubtitleText[3019]="Clone Advisor 1: Delta 38, assign your squad to the rocket turrets.  "
+
+SubtitleSound[3020]="D40R3006"
+SubtitleText[3020]="Delta 40: Enemy in retreat!"
+
+SubtitleSound[3021]="CA1R3025"
+SubtitleText[3021]="Clone Advisor 1: Squad, get on those turrets and take her down!"
+
+SubtitleSound[3022]="D07R3006"
+SubtitleText[3022]="Delta 07: They're clamming up!"
+
+SubtitleSound[3023]="D40R3023"
+SubtitleText[3023]="Delta 40: The dropship is clamming up!"
+
+SubtitleSound[3024]="D07R3011"
+SubtitleText[3024]="Delta 07: Is that was those scavengers are for…."
+
+SubtitleSound[3025]="D38R3016"
+SubtitleText[3025]="Delta 38: Six-two, four-oh, where are you?"
+
+SubtitleSound[3026]="D40R3024"
+SubtitleText[3026]="Delta 40: Ugh… the trash bin.  We must have gotten separated on the way down."
+
+SubtitleSound[3027]="CA1R3031"
+SubtitleText[3027]="Clone Advisor 1: Get out of there and find your squadmates."
+
+SubtitleSound[3028]="D07R3012"
+SubtitleText[3028]="Delta 07: You two, stay clear of the door."
+
+SubtitleSound[3029]="CA1R3032"
+SubtitleText[3029]="Clone Advisor 1: Delta three-eight, be advised!  I've got a Separatist battleship on long-range sensors!"
+
+SubtitleSound[3030]="D40R3025"
+SubtitleText[3030]="Delta 40: Let's finish the job before those Trandos get reinforcements!"
+
+SubtitleSound[3031]="D40R3026"
+SubtitleText[3031]="Delta 40: Look out, their guns are online!"
+
+SubtitleSound[3032]="D07R3203"
+SubtitleText[3032]="Delta 07: These guys can hide anywhere"
+
+SubtitleSound[3033]="D38R3205"
+SubtitleText[3033]="Delta 38: Let's keep it slow and careful."
+
+SubtitleSound[3034]="D40R3028"
+SubtitleText[3034]="Delta 40: … and watch for ambush."
+
+SubtitleSound[3035]="D07R3204"
+SubtitleText[3035]="Delta 07: What is that thing, Scorch?"
+
+SubtitleSound[3036]="D62R3204"
+SubtitleText[3036]="Delta 62: I'm thinking...  A trap."
+
+SubtitleSound[3037]="D07R3205"
+SubtitleText[3037]="Delta 07: I'm getting that big "NO" feeling again…"
+
+SubtitleSound[3038]="D40R3029"
+SubtitleText[3038]="Delta 40: Found their weapons cache, sir!"
+
+SubtitleSound[3039]="D40R3030"
+SubtitleText[3039]="Delta 40: I don't like the looks of this."
+
+SubtitleSound[3040]="CA1R3209"
+SubtitleText[3040]="Clone Advisor 1: Delta, this ship has enormous stores of data about the Trandoshans."
+
+SubtitleSound[3041]="D38R3206"
+SubtitleText[3041]="Delta 38: I noticed.  It's been recording everything that happens on board."
+
+SubtitleSound[3042]="CA1R3210"
+SubtitleText[3042]="Clone Advisor 1: Every weapon, every maneuver… The Republic could spend months analyzing this data."
+
+SubtitleSound[3043]="D07R3206"
+SubtitleText[3043]="Delta 07: And the Wookiees could use it to get an edge on the slavers."
+
+SubtitleSound[3044]="D62R3205"
+SubtitleText[3044]="Delta 62: Yeah!  Wookiee life-debts for everyone!"
+
+SubtitleSound[3045]="CA1R3211"
+SubtitleText[3045]="Clone Advisor 1: We've gotta get this ship back to Coruscant in one piece."
+
+SubtitleSound[3046]="CA1R3212"
+SubtitleText[3046]="Clone Advisor 1: I've patched into the RAS control grid.  I'll be able to manipulate some of the ship's functions from here."
+
+SubtitleSound[3047]="CA1R3213"
+SubtitleText[3047]="Clone Advisor 1: I'm seeing exotic weaponry on the recordings you recovered."
+
+SubtitleSound[3048]="CA1R3214"
+SubtitleText[3048]="Clone Advisor 1: A rocket turret.  And some sort of concussion weapon.  Looks nasty."
+
+SubtitleSound[3049]="D62R3206"
+SubtitleText[3049]="Delta 62: So let me get this straight…."
+
+SubtitleSound[3050]="D62R3207"
+SubtitleText[3050]="Delta 62: The Trandos have stolen this ship... to give to the Separatists… to buy battle droids?"
+
+SubtitleSound[3051]="D07R3207"
+SubtitleText[3051]="Delta 07: Makes sense.  They're probably tired of risking their own hides.  Cowards."
+
+SubtitleSound[3052]="D38R3207"
+SubtitleText[3052]="Delta 38: Enough, you two. Leave the politics to Coruscant."
+
+SubtitleSound[3053]="D62R3208"
+SubtitleText[3053]="Delta 62: When we get to that lizard dropship I'm gonna…."
+
+SubtitleSound[3054]="D07R3208"
+SubtitleText[3054]="Delta 07: Why do I feel like a nerf in a gurrcat lair?"
+
+SubtitleSound[3055]="D62R3209"
+SubtitleText[3055]="Delta 62: You certainly smell like one."
+
+SubtitleSound[3056]="CA1R3215"
+SubtitleText[3056]="Clone Advisor 1: My scans show most of the remaining Trandoshans are in the detention area. "
+
+SubtitleSound[3057]="D40R3031"
+SubtitleText[3057]="Delta 40: Why are they so fond of the detention block?"
+
+SubtitleSound[3058]="D38R3208"
+SubtitleText[3058]="Delta 38: Maybe it's the heat?"
+
+SubtitleSound[3059]="D07R3209"
+SubtitleText[3059]="Delta 07: I'll give 'em heat."
+
+SubtitleSound[3060]="D40R3032"
+SubtitleText[3060]="Delta 40: They're coming from all sides!"
+
+SubtitleSound[3061]="D07R3210"
+SubtitleText[3061]="Delta 07: Somebody watch our six."
+
+SubtitleSound[3062]="D40R3033"
+SubtitleText[3062]="Delta 40: Here's another one of those panels."
+
+SubtitleSound[3063]="D38R3209"
+SubtitleText[3063]="Delta 38: That would be kill number seventeen thousand, four hundred and…"
+
+SubtitleSound[3064]="D62R3210"
+SubtitleText[3064]="Delta 62: C'mon, Boss…  I'm TRYING to catch up."
+
+SubtitleSound[3065]="CA1R3216"
+SubtitleText[3065]="Clone Advisor 1: Hold position, Delta."
+
+SubtitleSound[3066]="CA1R3217"
+SubtitleText[3066]="Clone Advisor 1: Reviewing ship schematics..."
+
+SubtitleSound[3067]="CA1R3218"
+SubtitleText[3067]="Clone Advisor 1: More coming from behind, squad.  Watch your back."
+
+SubtitleSound[3068]="D62R3211"
+SubtitleText[3068]="Delta 62: Poison gas.  That sort of thing really messes up a kill count."
+
+SubtitleSound[3069]="D62R3212"
+SubtitleText[3069]="Delta 62: The gas got the last of 'em.  Guess we know how long Trandoshans can hold their breath."
+
+SubtitleSound[3070]="D07R3211"
+SubtitleText[3070]="Delta 07: That last one put me at two hundred."
+
+SubtitleSound[3071]="D62R3213"
+SubtitleText[3071]="Delta 62: I was there five minutes ago."
+
+SubtitleSound[3072]="D62R3214"
+SubtitleText[3072]="Delta 62: That's a wrap.  This assault ship is clean."
+
+SubtitleSound[3073]="D07R3212"
+SubtitleText[3073]="Delta 07: There's our objective."
+
+SubtitleSound[3074]="D40R3034"
+SubtitleText[3074]="Delta 40: Trandoshan dropship in view."
+
+SubtitleSound[3075]="CA1R3219"
+SubtitleText[3075]="Clone Advisor 1: This dropship is their base camp, and they'll put all hands on deck to protect it."
+
+SubtitleSound[3076]="D38R3210"
+SubtitleText[3076]="Delta 38: Heavy Merc!  And he's guarding that E-web Turret."
+
+SubtitleSound[3077]="D38R3211"
+SubtitleText[3077]="Delta 38: More of those blasted turrets!"
+
+SubtitleSound[3078]="CA1R3220"
+SubtitleText[3078]="Clone Advisor 1: Squad, I'm reading one more of those Heavy Mercs.  Somewhere in the hangar."
+
+SubtitleSound[3079]="D40R3035"
+SubtitleText[3079]="Delta 40: Let's get a hold of that concussion rifle."
+
+SubtitleSound[3080]="D07R3213"
+SubtitleText[3080]="Delta 07: Hey, what's that Trando up to?"
+
+SubtitleSound[3081]="D40R3036"
+SubtitleText[3081]="Delta 40: Squad!  Get him off that console!"
+

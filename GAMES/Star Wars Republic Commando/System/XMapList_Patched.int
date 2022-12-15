@@ -1,0 +1,40 @@
+[Public]
+Map=(FileName="DM_Canyon",LongName="Gunship",Screenshot="MapThumbnails.DM_Canyon",Text="Xmaps.GEO_CanyonSmall",IdealPlayerCountMin=4,IdealPlayerCountMax=8,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=1,bNetworkOK=1)
+
+Map+=(FileName="DM_POWSmall",LongName="Depot",Screenshot="MapThumbnails.YYY_POWSmall",Text="Xmaps.YYY_POWSmall",IdealPlayerCountMin=4,IdealPlayerCountMax=8,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=1,bNetworkOK=1)
+
+Map+=(FileName="DM_ZeroG",LongName="Arena G9",Screenshot="MapThumbnails.KAM_ZeroG",Text="Xmaps.KAM_ZeroG",IdealPlayerCountMin=4,IdealPlayerCountMax=8,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=1,bNetworkOK=1) 
+
+Map+=(FileName="CTF_ZeroG",LongName="Arena G9",Screenshot="MapThumbnails.KAM_ZeroG",Text="Xmaps.KAM_ZeroG",IdealPlayerCountMin=4,IdealPlayerCountMax=8,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=1,bNetworkOK=1) 
+
+Map+=(FileName="CTF_HangingGarden",LongName="Garden",Screenshot="MapThumbnails.YYY_HangingGarden",Text="Xmaps.YYY_HangingGarden",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="DM_HangingGarden",LongName="Garden",Screenshot="MapThumbnails.YYY_HangingGarden",Text="Xmaps.YYY_HangingGarden",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="DM_POW",LongName="Garrison",Screenshot="MapThumbnails.YYY_POW",Text="Xmaps.YYY_POW",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="CTF_POW",LongName="Garrison",Screenshot="MapThumbnails.YYY_POW",Text="Xmaps.YYY_POW",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="DM_Underpass",LongName="Kachirho",Screenshot="MapThumbnails.YYY_Underpass",Text="Xmaps.YYY_Underpass",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="CTF_Underpass",LongName="Kachirho",Screenshot="MapThumbnails.YYY_Underpass",Text="Xmaps.YYY_Underpass",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="DM_Detention",LongName="Lockdown",Screenshot="MapThumbnails.RAS_Detention",Text="Xmaps.RAS_Detention",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="CTF_Detention",LongName="Lockdown",Screenshot="MapThumbnails.RAS_Detention",Text="Xmaps.RAS_Detention",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="DM_Siege",LongName="Arena A17",Screenshot="MapThumbnails.MP_KAM_Siege",Text="Xmaps.KAM_Siege",IdealPlayerCountMin=4,IdealPlayerCountMax=8,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=1,bNetworkOK=1)
+
+Map+=(FileName="CTF_Siege",LongName="Arena A17",Screenshot="MapThumbnails.MP_KAM_Siege",Text="Xmaps.KAM_Siege",IdealPlayerCountMin=4,IdealPlayerCountMax=8,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=1,bNetworkOK=1)
+
+Map+=(FileName="DM_Engine",LongName="Engine",Screenshot="MapThumbnails.RAS_Engine",Text="Xmaps.RAS_Engine",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=1,bNetworkOK=1)
+
+Map+=(FileName="CTF_Engine",LongName="Engine",Screenshot="MapThumbnails.RAS_Engine",Text="Xmaps.RAS_Engine",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=1,bNetworkOK=1)
+
+Map+=(FileName="DM_Trando",LongName="Ghostship",Screenshot="MapThumbnails.RAS_Trando",Text="Xmaps.RAS_Trando",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="CTF_Trando",LongName="Ghostship",Screenshot="MapThumbnails.RAS_Trando",Text="Xmaps.RAS_Trando",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="DM_Hangar",LongName="Hangar",Screenshot="MapThumbnails.RAS_Hangar",Text="Xmaps.RAS_Hangar",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="DM,TD",bSplitScreenOK=0,bNetworkOK=1)
+
+Map+=(FileName="CTF_Hangar",LongName="Hangar",Screenshot="MapThumbnails.RAS_Hangar",Text="Xmaps.RAS_Hangar",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames="CTF,AS",bSplitScreenOK=0,bNetworkOK=1)

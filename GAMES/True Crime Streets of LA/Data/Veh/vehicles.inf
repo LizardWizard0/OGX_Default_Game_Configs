@@ -1,0 +1,304 @@
+COMMON TEXTURES
+P:\Vehicles\Licence plate system\LicPlate.psd
+p:\Vehicles\Reflection_Cars.psd
+p:\Vehicles\wheels\tiretread3.psd
+p:\Vehicles\wheels\wheelback.psd
+p:\Vehicles\wheels\tiretread1.psd
+p:\Vehicles\wheels\brake1.psd
+p:\Vehicles\wheels\wheel6.psd
+p:\Vehicles\wheels\truck wheel.psd
+p:\Vehicles\wheels\tiretread2.psd
+p:\Vehicles\Civic\TPage_Civic_Exterior.psd
+p:\Vehicles\wheels\bike_tiretread.psd
+p:\Vehicles\wheels\bike wheel.psd
+p:\Vehicles\wheels\bike_innrwheel.psd
+p:\Vehicles\wheels\bike_rotor.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherBlue_01.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherBlue_02.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherBlue_03.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherBlack.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherRed_01.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherRed_02.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherRed_03.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherGlow_01.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherGlow_02.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherGlow_03.psd
+p:\Vehicles\Police Car\FlasherFX\FlasherGlow_Black.psd
+p:\Vehicles\Flatbed Truck\TPage_MovingTruck_Exterior.psd
+p:\Vehicles\Flatbed Truck\TPage_Flatbed_Lightmap.psd
+p:\Vehicles\Flatbed Truck\TPage_Flatbed_Damage.psd
+p:\Vehicles\Flatbed Truck\TPage_MovingTruck_Interior.psd
+p:\Vehicles\wheels\wheel19.psd
+p:\Vehicles\wheels\tiretread4.psd
+p:\Vehicles\wheels\wheel7.psd
+p:\Vehicles\wheels\Montero_wheel.psd
+MODEL FILES
+Modelfile#0:p:\Vehicles\Lux\CadillacNick.LUX
+Number of Nodes = 129
+Model data = 160508 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4562 bytes
+Texture data = 221712 bytes
+Total: 393600
+Modelfile#1:p:\Vehicles\Lux\Camaro.LUX
+Number of Nodes = 102
+Model data = 192798 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 6050 bytes
+Texture data = 308992 bytes
+Total: 513408
+Modelfile#2:p:\Vehicles\Lux\Viper.LUX
+Number of Nodes = 88
+Model data = 154106 bytes
+Collision data = 276 bytes
+Shadow data (XBox) = 5850 bytes
+Texture data = 221744 bytes
+Total: 386432
+Modelfile#3:p:\Vehicles\Lux\Spider360.LUX
+Number of Nodes = 99
+Model data = 193800 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4498 bytes
+Texture data = 308976 bytes
+Total: 512640
+Modelfile#4:p:\Vehicles\Lux\Ambulance.LUX
+Number of Nodes = 168
+Model data = 186708 bytes
+Collision data = 452 bytes
+Shadow data (XBox) = 3282 bytes
+Texture data = 269664 bytes
+Animation data = 116 bytes
+Total: 468468
+Modelfile#5:p:\Vehicles\Lux\ArmoredTruck.LUX
+Number of Nodes = 146
+Model data = 134724 bytes
+Collision data = 356 bytes
+Shadow data (XBox) = 3582 bytes
+Texture data = 180784 bytes
+Total: 326656
+Modelfile#6:p:\Vehicles\Lux\Aston.LUX
+Number of Nodes = 272
+Model data = 239970 bytes
+Collision data = 308 bytes
+Shadow data (XBox) = 5166 bytes
+Texture data = 311664 bytes
+Total: 570368
+Modelfile#7:p:\Vehicles\Lux\Bentley.LUX
+Number of Nodes = 199
+Model data = 265586 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4310 bytes
+Texture data = 270848 bytes
+Total: 550912
+Modelfile#8:p:\Vehicles\Lux\Bmw.LUX
+Number of Nodes = 169
+Model data = 168354 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4394 bytes
+Texture data = 270864 bytes
+Total: 452352
+Modelfile#9:p:\Vehicles\Lux\Bus.LUX
+Number of Nodes = 242
+Model data = 137490 bytes
+Collision data = 276 bytes
+Shadow data (XBox) = 3360 bytes
+Texture data = 158944 bytes
+Total: 311936
+Modelfile#10:p:\Vehicles\Lux\Cabrio.LUX
+Number of Nodes = 127
+Model data = 145304 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 3938 bytes
+Texture data = 224416 bytes
+Total: 380416
+Modelfile#11:p:\Vehicles\Lux\Cadillac.LUX
+Number of Nodes = 152
+Model data = 161468 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 3074 bytes
+Texture data = 227296 bytes
+Total: 399744
+Modelfile#12:p:\Vehicles\Lux\CadillacEsc.LUX
+Number of Nodes = 153
+Model data = 216548 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 3970 bytes
+Texture data = 270864 bytes
+Total: 499328
+Modelfile#13:p:\Vehicles\Lux\Civic.LUX
+Number of Nodes = 250
+Model data = 188600 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4386 bytes
+Texture data = 227136 bytes
+Total: 432768
+Modelfile#14:p:\Vehicles\Lux\Ducati.LUX
+Number of Nodes = 138
+Model data = 140994 bytes
+Collision data = 196 bytes
+Shadow data (XBox) = 17750 bytes
+Texture data = 229616 bytes
+Total: 395392
+Modelfile#15:p:\Vehicles\Lux\Ferrari.LUX
+Number of Nodes = 131
+Model data = 153594 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4354 bytes
+Texture data = 270864 bytes
+Total: 435712
+Modelfile#16:p:\Vehicles\Lux\Fireeng.LUX
+Number of Nodes = 109
+Model data = 155604 bytes
+Collision data = 468 bytes
+Shadow data (XBox) = 3722 bytes
+Texture data = 180736 bytes
+Animation data = 204 bytes
+Total: 346188
+Modelfile#17:p:\Vehicles\Lux\Flatbed.LUX
+Number of Nodes = 142
+Model data = 156768 bytes
+Collision data = 452 bytes
+Shadow data (XBox) = 5074 bytes
+Texture data = 5648 bytes
+Total: 174976
+Modelfile#18:p:\Vehicles\Lux\FordPickup.LUX
+Number of Nodes = 192
+Model data = 211892 bytes
+Collision data = 980 bytes
+Shadow data (XBox) = 4170 bytes
+Texture data = 311824 bytes
+Total: 538368
+Modelfile#19:p:\Vehicles\Lux\Hummer.LUX
+Number of Nodes = 217
+Model data = 189398 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 3890 bytes
+Texture data = 270848 bytes
+Total: 475136
+Modelfile#20:p:\Vehicles\Lux\Jeep.LUX
+Number of Nodes = 155
+Model data = 135948 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 2786 bytes
+Texture data = 270880 bytes
+Total: 417664
+Modelfile#21:p:\Vehicles\Lux\Limo.LUX
+Number of Nodes = 179
+Model data = 196522 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 5012 bytes
+Texture data = 311776 bytes
+Total: 522496
+Modelfile#22:p:\Vehicles\Lux\MercedesML.LUX
+Number of Nodes = 283
+Model data = 161552 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4546 bytes
+Texture data = 268064 bytes
+Total: 448384
+Modelfile#23:p:\Vehicles\Lux\MercedesS.LUX
+Number of Nodes = 190
+Model data = 154938 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4162 bytes
+Texture data = 314576 bytes
+Total: 483456
+Modelfile#24:p:\Vehicles\Lux\Montero.LUX
+Number of Nodes = 191
+Model data = 163410 bytes
+Collision data = 356 bytes
+Shadow data (XBox) = 3988 bytes
+Texture data = 268016 bytes
+Total: 445184
+Modelfile#25:p:\Vehicles\Lux\MovingTruck.LUX
+Number of Nodes = 155
+Model data = 198688 bytes
+Collision data = 580 bytes
+Shadow data (XBox) = 3858 bytes
+Texture data = 268192 bytes
+Total: 478976
+Modelfile#26:p:\Vehicles\Lux\Mustang.LUX
+Number of Nodes = 181
+Model data = 166472 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4170 bytes
+Texture data = 270880 bytes
+Total: 450816
+Modelfile#27:p:\Vehicles\Lux\Police.LUX
+Number of Nodes = 215
+Model data = 168356 bytes
+Collision data = 452 bytes
+Shadow data (XBox) = 4162 bytes
+Texture data = 224384 bytes
+Animation data = 252 bytes
+Total: 408188
+Modelfile#28:p:\Vehicles\Lux\S2000.LUX
+Number of Nodes = 125
+Model data = 165912 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4834 bytes
+Texture data = 270896 bytes
+Total: 448256
+Modelfile#29:p:\Vehicles\Lux\Taurus.LUX
+Number of Nodes = 172
+Model data = 169314 bytes
+Collision data = 484 bytes
+Shadow data (XBox) = 4240 bytes
+Texture data = 314496 bytes
+Total: 497024
+Modelfile#30:p:\Vehicles\Lux\TriumphBonneville.LUX
+Number of Nodes = 76
+Model data = 175136 bytes
+Collision data = 196 bytes
+Shadow data (XBox) = 14822 bytes
+Texture data = 183344 bytes
+Total: 377344
+Modelfile#31:p:\Vehicles\Lux\TriumphSpeedTriple.LUX
+Number of Nodes = 84
+Model data = 189036 bytes
+Collision data = 196 bytes
+Shadow data (XBox) = 6092 bytes
+Texture data = 235360 bytes
+Total: 434944
+Modelfile#32:p:\Vehicles\Lux\Van.LUX
+Number of Nodes = 155
+Model data = 190870 bytes
+Collision data = 356 bytes
+Shadow data (XBox) = 3988 bytes
+Texture data = 355568 bytes
+Total: 558464
+Modelfile#33:p:\Vehicles\Lux\VWMicrobus.LUX
+Number of Nodes = 251
+Model data = 166898 bytes
+Collision data = 276 bytes
+Shadow data (XBox) = 5394 bytes
+Texture data = 238080 bytes
+Total: 422912
+Modelfile#34:p:\Vehicles\Lux\Winstar.LUX
+Number of Nodes = 189
+Model data = 171548 bytes
+Collision data = 340 bytes
+Shadow data (XBox) = 3970 bytes
+Texture data = 270864 bytes
+Total: 456064
+Modelfile#35:P:\Vehicles\Lux\Bus_prison.LUX
+Number of Nodes = 413
+Model data = 168382 bytes
+Collision data = 276 bytes
+Shadow data (XBox) = 3358 bytes
+Texture data = 137008 bytes
+Total: 329088
+Modelfile#36:P:\Vehicles\Lux\vanmeat.lux
+Number of Nodes = 173
+Model data = 157310 bytes
+Collision data = 788 bytes
+Shadow data (XBox) = 4170 bytes
+Texture data = 268048 bytes
+Total: 438912
+Modelfile#37:p:\Vehicles\Lux\SnoopCar.LUX
+Number of Nodes = 129
+Model data = 160462 bytes
+Collision data = 388 bytes
+Shadow data (XBox) = 4562 bytes
+Texture data = 229968 bytes
+Total: 401792

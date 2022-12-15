@@ -1,0 +1,2239 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SetDefaultSurface 02g_4grate_03.sur
+
+/////////////
+//  Music  //
+/////////////
+
+CopySoundData
+
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_15.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_15.wav Tension
+AddMusic m_tension_16.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_10.wav Battle
+AddMusic m_battle_11.wav Battle
+
+AddMusic cut_1_1intro_m.wav Cutscene  // This is special for the L01_1 intro.  Don't emulate this.
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav  m_saberArena_02_lose.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 30 50
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+Int killedAqualishPipe 0
+Int killedAqualishDagger 0
+Int killedKubazDagger 0
+Int killedKubazPistol 0
+Int killedRodianPipe 0
+Int killedRodianPistol 0
+Int killedCivilian 0
+Int killedObi 0
+Int KilledTrnThug 0
+Int CreatedTrnThug 0
+
+Int killedBads 0
+Int 4aBads 0
+Int alive3kBads 0
+Int openFlag 0
+Int station4 4
+Int openCutFlag 0
+Int openCutGroup 0
+Int bossFlag 0
+Int chickenFlag 0
+
+HitPointTracker ObiHp Obi
+
+
+	SetFarClip 500
+	LoadDLG trainstationvoice.dlg              
+	LoadDLG male1.dlg  
+	LoadDLG male2.dlg 
+	LoadDLG female1.dlg 
+	LoadDLG Qui-Gon.dlg 
+	LoadDLG gran.dlg
+	LoadDLG rodian.dlg
+
+
+/////////////////////////////////////////
+// Exploration Marker Remove Commands  //
+// Added by Chris because Xiang forgot //
+/////////////////////////////////////////
+
+Function "ExplorationRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+
+/////////////////////////////
+//  DeathCounter Function  //
+/////////////////////////////
+
+Function "Aqualish-Pipe DeathCounter" (Actor KilledAp)
+{
+   WaitUntilKilled KilledAp
+   Increment killedAqualishPipe 1
+}
+
+Function "Aqualish-Dagger DeathCounter" (Actor KilledAd)
+{
+   WaitUntilKilled KilledAd
+   Increment killedAqualishDagger 1
+}
+
+Function "Rodian-Pipe DeathCounter" (Actor KilledRpipe)
+{
+   WaitUntilKilled KilledRpipe
+   Increment killedRodianPipe 1
+}
+
+Function "Rodian-Pistol DeathCounter" (Actor KilledRp)
+{
+   WaitUntilKilled KilledRp
+   Increment killedRodianPistol 1
+}
+
+Function "Kubaz-Dagger DeathCounter" (Actor KilledKd)
+{
+   WaitUntilKilled KilledKd
+   Increment killedKubazDagger 1
+}
+
+Function "Kubaz-Pistol DeathCounter" (Actor KilledKp)
+{
+   WaitUntilKilled KilledKp
+   Increment killedKubazPistol 1
+}
+
+Function "Civilian DeathCounter" (Actor KilledCivilian)
+{
+   WaitUntilKilled KilledCivilian
+   Increment killedCivilian 1
+}
+
+Function "AllBads DeathCounter" (Actor Bads)
+{
+   WaitUntilKilled Bads
+   Increment killedBads 1
+   // Print "The number of BADs killed is "
+   // Printint killedBads
+   // Println
+}
+
+Function "3k AliveCounter" (Actor 3kBads)
+{
+   WaitUntilKilled 3kBads
+   Decrement alive3kBads 1
+   // Print "The number of alive3kBads is "
+   // Printint alive3kBads
+   // Println
+}
+
+////////////////////////
+//  General Function  //
+////////////////////////
+
+//"Chicken 5 Points Run" should be reserved for "Hero4" only
+
+Function "Chicken 5 Points Run" (Actor Chicken, Node First, Node Second, Node Third, Node Fouth, Node Fifth)
+{
+   Script "EndChickenFunction"
+   {	
+	WaitUntilEqual chickenFlag 1
+      EndFunction
+	ReturnControlTo Chicken
+   }
+   RandomInt y 1 5
+   if (= y 1)
+   {
+      TakePartialControlOf Chicken 0.35 False
+      RunToNode Chicken First
+      WaitUntilArrived Chicken First
+      RandomInt y 1 5
+   }
+   if (= y 2)
+   {
+      TakePartialControlOf Chicken 0.35 False
+      RunToNode Chicken Second
+      //PlayGesture Chicken Panic 7
+      WaitUntilArrived Chicken Second
+      RandomInt y 1 5
+   }
+   if (= y 3)
+   {
+      TakePartialControlOf Chicken 0.35 False
+      RunToNode Chicken Third
+      //PlayGesture Chicken Panic 7
+      WaitUntilArrived Chicken Third
+      RandomInt y 1 5
+   }
+   if (= y 4)
+   {
+      TakePartialControlOf Chicken 0.35 False
+      RunToNode Chicken Fouth
+      //PlayGesture Chicken Panic 7
+      WaitUntilArrived Chicken Fouth
+      RandomInt y 1 5
+   }
+   if (= y 5)
+   {
+      TakePartialControlOf Chicken 0.35 False
+      RunToNode Chicken Fifth
+      //PlayGesture Chicken Panic 7
+      WaitUntilArrived Chicken Fifth
+      RandomInt y 1 5
+   }
+   Loop
+}
+
+Function "Chicken 5 Points Walk" (Actor ChickenWalker, Node First, Node Second, Node Third, Node Fouth, Node Fifth)
+{
+   Script "EndChickenFunction"
+   {
+      WaitUntilKilled ChickenWalker
+      EndFunction
+   }
+   RandomInt y 1 5
+   if (= y 1)
+   {
+      TakePartialControlOf ChickenWalker 0.35 False
+      WalkToNode ChickenWalker First
+      WaitUntilArrived ChickenWalker First
+      RandomInt y 1 5
+   }
+   if (= y 2)
+   {
+      TakePartialControlOf ChickenWalker 0.35 False
+      WalkToNode ChickenWalker Second
+      WaitUntilArrived ChickenWalker Second
+      RandomInt y 1 5
+   }
+   if (= y 3)
+   {
+      TakePartialControlOf ChickenWalker 0.35 False
+      WalkToNode ChickenWalker Third
+      WaitUntilArrived ChickenWalker Third
+      RandomInt y 1 5
+   }
+   if (= y 4)
+   {
+      TakePartialControlOf ChickenWalker 0.35 False
+      WalkToNode ChickenWalker Fouth
+      WaitUntilArrived ChickenWalker Fouth
+      RandomInt y 1 5
+   }
+   if (= y 5)
+   {
+      TakePartialControlOf ChickenWalker 0.35 False
+      WalkToNode ChickenWalker Fifth
+      WaitUntilArrived ChickenWalker Fifth
+      RandomInt y 1 5
+   }
+   Loop
+}
+
+///////////////////////
+// Chris Gonk Script //
+///////////////////////
+
+Function "GonkMessage" (Actor Messenger)
+{
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	Pause 1.0
+	WaitUntilNudged Messenger
+	AIAudioOff Messenger
+	TakeControlOf Messenger
+	LookAt Messenger Obi
+	Childscript "GonkDead"
+	{
+		WaitUntilKilled Messenger
+		EndScript "Message"
+	}
+	Childscript "Message"
+	{
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0	
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 1.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.0
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 0.5
+		PlayAudioCueAndWait Messenger Investigate // Long
+		Pause 0.5
+		PlayAudioCueAndWait Messenger BumpAgainst // Short
+		Pause 1.5
+		ReturnControlTo Messenger
+		AIAudioOn Messenger
+	}
+	WaitForAll
+}
+
+
+///////////////////////////////////
+//  Bads First Mission Function  //
+///////////////////////////////////
+
+Function "RunToTheFirstNode ChrisKubaz-Dagger" (Actor Kubaz-Dagger, Node Kubaz-Dagger_a)
+{
+    	Call "Kubaz-Dagger DeathCounter" (Kubaz-Dagger)
+	TakePartialControlOf Kubaz-Dagger 0.35 False
+	RunToNodeAndWait Kubaz-Dagger Kubaz-Dagger_a
+      ReturnControlTo Kubaz-Dagger
+      ForceTarget Kubaz-Dagger Obi    
+}
+
+Function "RunToTheFirstNode ChrisRodian-Pistol" (Actor Rodian-Pistol, Node Rodian-Pistol_a)
+{
+      Call "Rodian-Pistol DeathCounter" (Rodian-Pistol)
+	TakePartialControlOf Rodian-Pistol 0.35 False
+	RunToNodeAndWait Rodian-Pistol Rodian-Pistol_a
+      ReturnControlTo Rodian-Pistol
+      ForceTarget Rodian-Pistol Obi    
+}
+
+//////////////////////////////////
+//  Bads Last Mission Function  //
+//////////////////////////////////
+
+Function "CreateThug" (Int Position)
+{
+    RandomInt ThugType 1 4
+
+    If (= CreatedTrnThug 60)
+    {	 
+       EndFunction
+    }
+   
+    If (= ThugType 1)
+    {
+        If (= Position 1)
+        {
+		WaitUntilFarFromRefPos Obi ref_end1 45
+            CreateActor Gran-Club.dsc thug1 ref_end1
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug1, node_4a1)
+            //Call "RunToPatrolAgain" (thug1, node_4a1)
+            Call "Retreat" (thug1, node_rt3)
+        }
+        If (= Position 2)
+        {
+		WaitUntilFarFromRefPos Obi ref_end2 45
+            CreateActor Gran-Club.dsc thug2 ref_end2
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug2, node_4a2)
+            //Call "RunToPatrolAgain" (thug2, node_4a2)
+            Call "Retreat" (thug2, node_rt1)
+        }
+        If (= Position 3)
+        {
+		WaitUntilFarFromRefPos Obi ref_end3 45
+            CreateActor Gran-Club.dsc thug3 ref_end3
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug3, node_4a3)
+            //Call "RunToPatrolAgain" (thug3, node_4a3)
+            Call "Retreat" (thug3, node_rt4)
+        }
+        If (= Position 4)
+        {
+		WaitUntilFarFromRefPos Obi ref_end4 45
+            CreateActor Gran-Club.dsc thug4 ref_end4
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug4, node_4a4)
+            //Call "RunToPatrolAgain" (thug4, node_4a4)
+            Call "Retreat" (thug4, node_rt2)
+        }
+    }
+
+    If (= ThugType 2)
+    {
+        If (= Position 1)
+        {
+		WaitUntilFarFromRefPos Obi ref_end1 45
+            CreateActor Rodian-Blaster.dsc thug1 ref_end1
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug1, node_4a1)
+            //Call "RunToPatrolAgain" (thug1, node_4a1)
+            Call "Retreat" (thug1, node_rt1)
+        }
+        If (= Position 2)
+        {
+		WaitUntilFarFromRefPos Obi ref_end2 45
+            CreateActor Rodian-Blaster.dsc thug2 ref_end2
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug2, node_4a2)
+            //Call "RunToPatrolAgain" (thug2, node_4a2)
+            Call "Retreat" (thug2, node_rt2)
+        }
+        If (= Position 3)
+        {
+		WaitUntilFarFromRefPos Obi ref_end3 45
+            CreateActor Rodian-Blaster.dsc thug3 ref_end3
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug3, node_4a3)
+            //Call "RunToPatrolAgain" (thug3, node_4a3)
+            Call "Retreat" (thug3, node_rt3)
+        }
+        If (= Position 4)
+        {
+		WaitUntilFarFromRefPos Obi ref_end4 45
+            CreateActor Rodian-Blaster.dsc thug4 ref_end4
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug4, node_4a4)
+            //Call "RunToPatrolAgain" (thug4, node_4a4)
+            Call "Retreat" (thug4, node_rt4)
+        }
+    }
+
+    If (= ThugType 3)
+    {
+        If (= Position 1)
+        {
+		WaitUntilFarFromRefPos Obi ref_end1 45
+            CreateActor Kubaz-Dagger.dsc thug1 ref_end1
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug1, node_4a1)
+            //Call "RunToPatrolAgain" (thug1, node_4a1)
+            Call "Retreat" (thug1, node_rt1)
+        }
+        If (= Position 2)
+        {
+		WaitUntilFarFromRefPos Obi ref_end2 45
+            CreateActor Kubaz-Dagger.dsc thug2 ref_end2
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug2, node_4a2)
+            //Call "RunToPatrolAgain" (thug2, node_4a2)
+            Call "Retreat" (thug2, node_rt2)
+        }
+        If (= Position 3)
+        {
+		WaitUntilFarFromRefPos Obi ref_end3 45
+            CreateActor Kubaz-Dagger.dsc thug3 ref_end3
+		Increment CreatedTrnThug 1
+            Call "RunToPatrol" (thug3, node_4a3)
+            //Call "RunToPatrolAgain" (thug3, node_4a3)
+            Call "Retreat" (thug3, node_rt3)
+        }
+        If (= Position 4)
+        {
+		WaitUntilFarFromRefPos Obi ref_end4 45
+            CreateActor Kubaz-Dagger.dsc thug4 ref_end4
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug4, node_4a4)
+            //Call "RunToPatrolAgain" (thug4, node_4a4)
+            Call "Retreat" (thug4, node_rt4)
+        }
+    }
+    
+    If (= ThugType 4)
+    {
+        If (= Position 1)
+        {
+		WaitUntilFarFromRefPos Obi ref_end1 45
+            CreateActor Kubaz-Pistol.dsc thug1 ref_end1
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug1, node_4a1)
+            //Call "RunToPatrolAgain" (thug1, node_4a1)
+            Call "Retreat" (thug1, node_rt1)
+        }
+        If (= Position 2)
+        {
+		WaitUntilFarFromRefPos Obi ref_end2 45
+            CreateActor Kubaz-Pistol.dsc thug2 ref_end2
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug2, node_4a2)
+            //Call "RunToPatrolAgain" (thug2, node_4a2)
+            Call "Retreat" (thug2, node_rt2)
+        }
+        If (= Position 3)
+        {
+		WaitUntilFarFromRefPos Obi ref_end3 45
+            CreateActor Kubaz-Pistol.dsc thug3 ref_end3
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug3, node_4a3)
+            //Call "RunToPatrolAgain" (thug3, node_4a3)
+            Call "Retreat" (thug3, node_rt3)
+        }
+        If (= Position 4)
+        {
+		WaitUntilFarFromRefPos Obi ref_end4 45
+            CreateActor Kubaz-Pistol.dsc thug4 ref_end4
+		Increment CreatedTrnThug 1
+   		// Print "The number of CreatedTrnThug is "
+   		// Printint CreatedTrnThug 
+   		// Println
+            Call "RunToPatrol" (thug4, node_4a4)
+            //Call "RunToPatrolAgain" (thug4, node_4a4)
+            Call "Retreat" (thug4, node_rt4)
+        }
+    }
+}
+Script "LoopedRandomAttack"
+{
+   Child WaitUntilEnteredRegion Obi Region_4a
+   Child WaitUntilEnteredRegion Obi Region_ramp3
+   Child WaitUntilEnteredRegion Obi Region_ramp4
+   WaitForAny
+   NewMissionObjective 2 "/Mission2Objective3/Clear the obstruction that is blocking the Elcor Transport."
+   Script "Check Thug Alive Position 1"
+   {
+      if (= CreatedTrnThug 400)
+      {
+         EndScript "Check Thug Alive Position 1"
+      }
+      CallAndWait "CreateThug" (1)
+      WaitUntilRemoved thug1      
+      Increment KilledTrnThug 1
+      // Print "1 The number of KilledTrnThug is "
+      // Printint KilledTrnThug 
+	// Println
+      Pause 2.0
+      Loop
+   }
+
+   Script "Check Thug Alive Position 2"
+   {
+      if (= CreatedTrnThug 400)
+      {
+         EndScript "Check Thug Alive Position 2"
+      }
+      CallAndWait "CreateThug" (2)
+      WaitUntilRemoved thug2       
+      Increment KilledTrnThug 1
+      // Print "2 The number of KilledTrnThug is "
+      // Printint KilledTrnThug 
+      // Println
+      Pause 2.0
+      Loop    
+   }
+
+   Script "Check Thug Alive Position 3"
+   {
+      if (= CreatedTrnThug 400)
+      {
+         EndScript "Check Thug Alive Position 3"
+      }
+      CallAndWait "CreateThug" (3)
+      WaitUntilRemoved thug3       //Call "TrainThugDeathCounter" 
+      Increment KilledTrnThug 1
+      // Print "3 The number of KilledTrnThug is "
+      // Printint KilledTrnThug 
+      // Println
+      Pause 2.0
+      Loop    
+   }
+
+   Script "Check Thug Alive Position 4"
+   {
+      if (= CreatedTrnThug 400)
+      {
+         EndScript "Check Thug Alive Position 4"
+      }
+      CallAndWait "CreateThug" (4)
+      WaitUntilRemoved thug4      
+      Increment KilledTrnThug 1
+      // Print "4 The number of KilledTrnThug is "
+      // Printint KilledTrnThug 
+      // Println
+      Pause 2.0
+      Loop    
+   }
+}
+Script "FirstMissionObjectiveAchieved"
+{
+   WaitUntilKilled A_trandoshan-spikedclubboss_01
+   MissionObjectiveAchieved 1
+}
+
+Script "SecondMissionObjectiveAchieved"
+{
+   WaitUntilExitedRegion A_1-1_garbage06_03 Region_garbage1
+   MissionObjectiveAchieved 2
+   WaitUntilEnteredRegion A_1-1_garbage06_03 Region_garbage1
+   MissionObjectiveFailed 2
+   Pause 0.2
+   Loop
+}
+
+Script "Ending Cut Scene Starts"
+{
+	WaitUntilKilled A_trandoshan-spikedclubboss_01
+
+	Script "WaitForEnemiesToExit"
+	{
+		//WaitUntilAllEnemiesExitedRegion Region_4a
+
+		//if (NoEnemiesInRegion Region_ramp3)
+		//{
+		//	if (NoEnemiesInRegion Region_ramp4)
+		//	{
+				Pause 0.2
+				if (IsNotInRegion A_1-1_garbage06_03 Region_garbage1)
+				{
+					EndScript "ElcorTrainHornHornHornTheDamnGarbage"						
+					BeginScript "EndThisLevel"
+					EndScript "WaitForEnemiesToExit"
+				}
+		//	}
+		//}
+
+		Loop
+	}
+}
+			
+StoreScript "EndThisLevel"
+{   
+   //Script "PlayCommunicatorLine"
+   //{
+   //	DisembodiedVoice trainstationvoice.dlg "/trainstationvoice_1335/Next Elcor transport arriving at station." 
+   //}
+
+   MissionObjectiveAchieved 1
+   MissionObjectiveAchieved 2
+
+   Int shouldEndLevel 0
+
+      If (IsAlive Obi)
+      {
+         If (IsInRegion Obi Region_4a)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi Region_ramp1)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi Region_ramp2)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi Region_ramp3)
+         {
+            Set shouldEndLevel 1
+         }
+         If (IsInRegion Obi Region_ramp4)
+         {
+            Set shouldEndLevel 1
+         }	
+      }
+
+   If (= shouldEndLevel 1)
+   {	
+	DisableAudioFades
+	FadeDown 1.0
+      If (IsInRegion A_1-1_garbage06_03 Region_temp1)
+      {
+	   Teleport A_1-1_garbage06_03 ref_garbageEnd
+      }
+      If (IsInRegion A_1-1_burncan_02 Region_temp1)
+      {
+	   Teleport A_1-1_burncan_02 ref_burnCanEnd
+      }
+		If (IsInRegion A_1-1_garbage15_02 Region_temp1)
+      {
+	   Teleport A_1-1_garbage15_02 start
+      }
+
+      BeginCutScene
+
+		
+
+	FadeUp 1.0
+	EnableAudioFades
+
+	StopMusicManager
+	PlayFlourish cut_1_1extro_m.wav
+
+      CameraFixed ref_endCamera0      
+	MoveCamera ref_endCamera1 15.0 4.0 4.0
+      ChildScript "EndingObi"
+      {
+	   SetTeam Obi 0
+	   InvincibilityOn Obi
+	   PlayFlourish "cut_1_1extro_m.wav"
+	   //Teleport Obi ref_female2
+	   Teleport Obi ref_obiendcut
+         TakeControlOf Obi
+         RunToNodeAndWait Obi node_end100
+
+         LookAt Obi A_1-1_vehicle_03
+         Pause 1.0
+         LookAt Obi A_1-1_vehicle_03
+         Pause 1.0
+         UnEquipWeapon Obi
+
+         Teleport Obi ref_3a1
+	   PlayAudioCue A_1-1_vehicle_03 PointSoundOneshot_01 
+         DisembodiedVoice trainstationvoice.dlg "/trainstationvoice_173/Elcor Transport Departing." 
+	   MoveElevatorToFloor A_1-1_vehicle_03 2
+	   DisableAnimObjSprite A_1-1_vehicle_03
+      }
+
+      WaitForAll
+
+      Pause 6.0
+      FadeDownAndWait
+      CameraOff  
+      EndCutScene 
+      NextLevel CUT_JC1
+   }
+   Loop
+}
+
+Function "RunToPatrol" (Actor stationPatrol, Node stationPatrolNode)
+{
+    If (= bossFlag 1)
+    {	 
+       EndFunction
+    }
+   TakePartialControlOf stationPatrol 0.35 False
+   RunToNodeAndWait stationPatrol stationPatrolNode
+   ReturnControlTo stationPatrol
+   SetPatrolTypes stationPatrol 1	
+   Loop
+}
+
+Function "Retreat" (Actor RetreatBad, Node RetreatNode)
+{
+	WaitUntilEqual bossFlag 1
+      If (IsAlive RetreatBad)
+	{
+		RemoveState RetreatBad Attack
+		TakeControlOf RetreatBad
+		PlayAudioCue RetreatBad Retreat
+		RunToNodeAndWait RetreatBad RetreatNode
+      	ReturnControlTo RetreatBad   
+	}
+}
+
+Function "RunToPatrolAgain" (Actor stationPatrol2, Node stationPatrolNode2)
+{
+    If (= bossFlag 1)
+    {	 
+       EndFunction
+    }
+   WaitUntilStateActivated stationPatrol2 Attack
+   Pause 0.2
+   WaitUntilStateShutdown stationPatrol2 Attack
+   TakePartialControlOf stationPatrol2 0.35 False
+   RunToNodeAndWait stationPatrol2 stationPatrolNode2
+   ReturnControlTo stationPatrol2
+   SetPatrolTypes stationPatrol2 1	
+   Loop
+}
+Int altOpenFlag 0
+
+//////////////
+// Open Cut //
+//////////////
+
+SetPainRegion Region_death 99999 false
+SetPainRegion Region_death2 99999 false
+SetPainRegion Region_death3 99999 false
+SetPainRegion Region_death4 99999 false
+SetPainRegion Region_death5 99999 false
+SetPainRegion Region_death6 99999 false
+
+SetPainRegion Region_death7 99999 false
+SetPainRegion Region_death8 99999 false
+SetPainRegion Region_death9 99999 false
+SetPainRegion Region_death10 99999 false
+SetPainRegion Region_death11 99999 false
+
+Script "Alternate Opening"
+{
+   if (IsGroupRemoved 1)
+   {
+      FadeUp
+      StartMusicManager
+      Set altOpenFlag 1
+   }
+}
+
+Script "Opening Cutscene"   
+{
+	int newGame 0  // This will be set to 1 only if this is a new game
+	int copyingSoundData 0
+	int playTextCrawl 0
+
+	if (IsNewGame)  // This uses Group 32 internally.  Don't use group 32 elsewhere.
+	{
+		Set newGame 1
+		Set playTextCrawl 1
+	}
+
+	if (IsCopyingSoundData)
+	{
+		Set copyingSoundData 1
+		Set playTextCrawl 1
+	}
+
+	if (= playTextCrawl 1)  
+	{
+		BeginCutScene
+		int exitedEarly 1
+
+		CameraFixed start
+		SetFarClip 2000
+		OpeningCrawlOn
+
+		Pause 1
+		LongAgoOn
+		FadeUpAndWait .5
+		Pause 3
+		FadeDownAndWait .5
+		LongAgoOff
+
+		Pause 2.5
+
+		PlayFlourish "m_mainTitle.wav"
+		Pause 0.05  // The main title has a slight delay at the beginning
+
+		FadeUpAndWait .01
+
+		StartLogo 11 4 .5 6    // display time, fade time, begin velocity, end velocity
+		Pause 9
+
+		SetOpeningTextCoordinates -32 -50
+		SetOpeningTextDistance 85
+		SetOpeningTextScale  0.1  -0.1
+
+		// These lines must be added AFTER the OpeningText info has been set
+		AddOpeningText "/TextCrawlParagraph1/"
+		AddOpeningText "/TextCrawlParagraph2/"
+		AddOpeningText "/TextCrawlParagraph3/"
+
+		StartOpeningText 70 6 3.3 67    // display time, fade time, scroll rate, anglehttp://sports.cn.tom.com/Archive/2001/10/9-71042.html
+
+		Pause 70
+
+		MoveCameraDownAndWait 400 10 3 6
+		Set exitedEarly 0
+
+		PreEndCutscene  // If the player hits start, it will skip straight to this line
+
+		while( IsCopyingSoundData )
+		{
+			Pause 0.01
+		}
+
+		if (= copyingSoundData 1)
+		{
+			if (= newGame 0)
+			{
+//				FadeDownAndWait
+				EndCutScene
+				LoadDesiredWorld
+			}
+		}
+
+		if (= exitedEarly 1)
+		{
+			StopMusic  // Stop the main title flourish
+		}
+
+		FadeUp 0
+		OpeningCrawlOff
+		Save
+		Set openCutGroup 1
+	}
+
+	StoreScript "WookieWalking1"
+	{
+	   TakePartialControlOf A_wookie_01 0.35 False
+         WalkToNodeAndWait A_wookie_01 wookie_1Home       
+         ReturnControlTo A_wookie_01 
+	}
+      Script "JoinTheArmy"
+      {
+         WaitUntilNudged A_wookie_01
+	   EndScript "WookieWalking1"
+	   ReturnControlTo A_wookie_01
+         SetTeam A_wookie_01 1
+         SetFollowPlayer A_wookie_01 5.0
+	}
+
+	Script "Opening Camera One Back Shot of Obi" 1  // Based on Dan's vision
+	{
+		BeginScript "WookieWalking1"		 
+		BeginCutScene
+
+		int exitedEarly 1
+
+		CameraFixed r_openUp1 
+		if (= newGame 1)
+		{
+			FadeAmbienceUp 2
+		}
+		else
+		{
+			Pause .1
+			FadeUp 2
+		}
+
+		// Make the cutscene music overlap the main title theme (if it's playing)
+		PlayMusicOverlap Cutscene
+
+		Script "Obi Walking"
+		{		   
+		   Pause 3.0
+		   TakeControlOf Obi
+		   WalkToNode Obi node_3a0
+		}
+
+		Script "Open Voice"
+		{
+		Pause 1.0
+		SayLineNonPositional Obi "/Obi-Wan_167/ Everything has been quiet Master. Nothing unusual to report. Are you sure my presence here is necessary?"	
+		CommunicatorOn
+		Set openFlag 1
+		CommunicatorMessageAndWait "/Qui-Gon_168/ A Jedi must be patient, young Padawan. All will present itself in good time, but be careful, the hour is late and the Lower sectors are not always safe during the evening." Qui-Gon.dlg
+		CommunicatorOff
+		SayLineNonPositional Obi "/Obi-Wan_169/Yes master. There is an Elcor Transport station nearby." //obi.dlg
+		}
+
+		MoveCameraAndWait r_openUp2 10.0 1.0 4.0
+		CameraOff
+		CameraAttached ObiWan -0.3 1.3 -1.7
+            WaitUntilEqual openCutFlag 1
+     		CameraOff
+	      CameraFixed ref_obiFntCut 
+		MoveCamera ref_obiFntCut 
+		Pause 0.1
+		EnableEquipment Obi   
+		Pause 1.8
+		//CameraAttached ObiWan -0.3 1.3 -1.7
+		//WaitUntilEqual openFlag 2
+
+		Set exitedEarly 0
+	 	//FadeDownAndWait 1
+		PreEndCutScene
+		
+		 
+		EndScript "Obi Walking"
+		EndScript "Open Voice"
+		DisableAudioFades
+
+		if (= exitedEarly 1)
+		{
+			StopMusic
+			EndScript "Let the Game Begins"
+			EndScript "WookieWalking1"
+   			RemoveGroup 1
+  			Save
+			FadeDownAndWait 0.5
+                  Teleport Obi ref_obiOpenCut			
+ 			Set altOpenFlag 1
+			FadeUp
+		}
+
+		EnableAudioFades
+
+		EndCutscene
+  		RemoveGroup 1
+		SetStartPosition 2
+		Save 
+
+		Pause 5
+		StartMusicManager
+	}  
+	
+	//Region_3a
+      Script "Let the Game Begins" 1
+	{
+ 	   Teleport Rodian-Pistol_3a_1 ref_3a1
+         Pause 0.25
+         Teleport Kubaz-Dagger_3a_1 ref_3a2
+   	   Pause 0.25
+  	   Teleport Kubaz-Dagger_3a_2 ref_3a3
+  	   WaitUntilEqual openFlag 1
+	   Pause 7.5
+  	   TakeControlOf Rodian-Pistol_3a_1 
+  	   WalkToNodeAndWait Rodian-Pistol_3a_1 node_3b6  
+	   Pause 0.3 
+ 	   PlayGesture Rodian-Pistol_3a_1 PointForward 3
+         SayLine Rodian-Pistol_3a_1 "/Rodian_1351/Jedi? Jedi are not welcome here."   	   
+ 	   Set openCutFlag 1
+  	   Pause 1.0 
+ 	   RunToNode Rodian-Pistol_3a_1 node_3b0
+         SayLineNoSubtitles Rodian-Pistol_3a_1 "/Rodian_1398/Arrrrhhggg!!"  
+	   Pause 3.0
+	   //WaitForAll
+ 	   //Set openFlag 2 
+
+   	   Script "Attack Obi"
+   	   {
+    	      WaitUntilNear Rodian-Pistol_3a_1 Obi 20.0
+		Call "RunToTheFirstNode ChrisKubaz-Dagger" ( Kubaz-Dagger_3a_1, node_3b6)
+		Pause 0.5
+		Call "RunToTheFirstNode ChrisKubaz-Dagger" ( Kubaz-Dagger_3a_2, node_3b1)
+		Call "RunToTheFirstNode ChrisRodian-Pistol" ( Rodian-Pistol_3a_1, node_3b2)
+  	   }
+	} 
+}
+
+Script "AttackObiOpenCutEscaped"
+{
+   WaitUntilEqual altOpenFlag 1
+   WaitUntilNear Rodian-Pistol_3a_1 Obi 22.0
+   Call "RunToTheFirstNode ChrisKubaz-Dagger" ( Kubaz-Dagger_3a_1, node_3b6)
+   Pause 0.5
+   Call "RunToTheFirstNode ChrisKubaz-Dagger" ( Kubaz-Dagger_3a_2, node_3b1)
+   Call "RunToTheFirstNode ChrisRodian-Pistol" ( Rodian-Pistol_3a_1, node_3b2)
+}
+Script "OpenCutTelepotAll"
+{
+   WaitUntilEqual altOpenFlag 1
+   //SetStartPosition 2
+   Teleport A_wookie_01 ref_wookie1home
+   Teleport Rodian-Pistol_3a_1 ref_3a1
+   Teleport Kubaz-Dagger_3a_1 ref_3a2
+   Teleport Kubaz-Dagger_3a_2 ref_3a3
+}
+
+///////////////////
+//  Main Script  //
+///////////////////
+
+//Region_1f
+
+Script "TreatWithDanger"
+{
+   WaitUntilEnteredRegion Obi Region_1f 
+
+   Teleport Aqualish-Pipe_1f_1 ref_1f1
+   Teleport Aqualish-Pipe_1f_2 ref_1f2 
+   Teleport Aqualish-Pipe_1f_3 ref_1f3  
+   Teleport Aqualish-Pipe_1f_4 ref_1f4
+
+   TakePartialControlOf Aqualish-Pipe_1f_1 0.35 False
+   TakePartialControlOf Aqualish-Pipe_1f_2 0.35 False
+   TakePartialControlOf Aqualish-Pipe_1f_3 0.35 False
+   TakePartialControlOf Aqualish-Pipe_1f_4 0.35 False
+
+   RunToNodeAndWait Aqualish-Pipe_1f_1 node_1f 
+   RunToNodeAndWait Aqualish-Pipe_1f_2 node_2fa
+   RunToNodeAndWait Aqualish-Pipe_1f_3 node_2fb 
+   RunToNodeAndWait Aqualish-Pipe_1f_4 node_2fc 
+
+   ReturnControlTo Aqualish-Pipe_1f_1
+   ReturnControlTo Aqualish-Pipe_1f_2
+   ReturnControlTo Aqualish-Pipe_1f_3
+   ReturnControlTo Aqualish-Pipe_1f_4   
+}
+
+
+//Region_1a
+
+Script "Region_1a Main"
+{
+   AddState Kubaz-Dagger_1a1 Patrol
+   AddState Kubaz-Pistol_1a2 Patrol
+   Teleport A_powerupunlimitedforce_01 ref_force1
+   Teleport A_powerupunlimitedforce_02 ref_force2
+   Teleport A_powerupunlimitedforce_03 ref_force3
+   Teleport A_PowerupHealth_10 ref_power10
+   Teleport A_PowerupHealth_13 ref_power_b1
+   Teleport A_PowerupHealth_14 ref_power_b2
+   Teleport A_PowerupHealth_15 ref_power_b3
+   Teleport A_PowerupHealth_16 ref_power_b4
+   Teleport A_PowerupHealth_17 ref_power_b5
+   Teleport A_PowerupHealth_18 ref_power_b6
+   Teleport A_PowerupHealth_19 ref_power_b7
+   Teleport A_PowerupHealth_20 ref_power_b8
+}
+
+Script "Hero5"
+{
+   WaitUntilNudged A_wookie_02
+   SetFollowPlayer A_wookie_02  
+}
+///////////////////////
+//  SaveGame Script  //
+///////////////////////
+
+Script "SavePoint1"
+{
+   WaitUntilEnteredRegion Obi Region_train
+   SetStartPosition 5
+   RemoveGroup 1
+   Save
+}
+
+Script "SavePoint2"
+{
+   WaitUntilEqual openCutGroup 1
+   SetStartPosition 0
+   RemoveGroup 1
+   Save
+}
+Script "SavePoint3"
+{
+   WaitUntilExitedRegion Obi Region_3a
+   SetStartPosition 0
+   RemoveGroup 1
+   Save
+}
+
+Script "First Time Only" 29
+{
+   MissionTitle "/Mission2Title/The Shadows of Coruscant"
+   MissionObjective 1 "/Mission2Objective2/Leave lower Coruscant using the Elcor Transport."
+   SetExplorationNum 6
+   SetForceUsesNeeded 10
+   SetTimeToBeat 120
+   RemoveGroup 29
+   Save
+}
+
+Script "Marker"
+{
+   // More stuff added by Chris
+   Teleport A_powerupexplorationmarker_01 ref_expo1
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_01, 11)
+   Teleport A_powerupexplorationmarker_02 ref_expo2
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_02, 12)
+   Teleport A_powerupexplorationmarker_03 ref_expo3
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_03, 13)
+   Teleport A_powerupexplorationmarker_04 ref_expo4
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_04, 14)
+   Teleport A_powerupexplorationmarker_05 ref_expo5
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_05, 15)
+   Teleport A_powerupexplorationmarker_06 ref_expo6
+   Call "ExplorationRemoval" (A_powerupexplorationmarker_06, 16)
+}
+
+Script "First 2 Aliens"
+{
+   WaitUntilEnteredRegion Obi Region_3b
+   Teleport Ithorian_1 ref_alien1
+   Teleport modal_node_1 ref_alien2
+}
+
+Script "More Civilians"
+{
+   //WaitUntilEnteredRegion Obi Region_3b
+   WaitUntilEnteredRegion Obi Region_3eStation_a
+   Teleport Ithorian_2 ref_ithorian_2
+   Teleport Ithorian_3 ref_ithorian_3
+   Teleport modal_node_2 ref_modalNode_2
+
+   Teleport gonk1_1  ref_r2_2
+   Call "GonkMessage" (gonk1_1)
+   Teleport gonk2_1 ref_r2_3
+
+   Teleport r4_2 ref_r4_2
+
+   SetPatrolTypes gonk1_1 3
+   SetPatrolTypes gonk2_1 3
+   SetPatrolTypes r4_2 3   
+}
+
+Int killedByHero 0
+
+//Region_2i
+
+Script "Hero4"
+{
+   WaitUntilEnteredRegion Obi Region_3eStation_a
+   //WaitUntilEnteredRegion Obi Region_3eStation_b
+   Teleport Lower_Corusant_Male_1_2i_1 ref_2i1     
+   Teleport Aqualish-Pipe_2i_1 ref_2i2      
+   Script "EndAqualishBastardPursuing1"
+   {
+	WaitUntilKilled Aqualish-Pipe_2i_1
+	EndScript "AqualishBastardPursuing"
+   }
+   Script "AqualishBastardPursuing"
+   {
+	If (IsDead Aqualish-Pipe_2i_1)
+	{
+         EndScript "AqualishBastardPursuing"
+	}
+	If (IsDead Lower_Corusant_Male_1_2i_1)
+	{
+         EndScript "AqualishBastardPursuing"
+	}
+      If (IsAlive Lower_Corusant_Male_1_2i_1)
+      {      
+         Pause 0.5
+	   If (IsAlive Aqualish-Pipe_2i_1)
+	   {	
+		TakeControlOf Aqualish-Pipe_2i_1 
+         	Follow Aqualish-Pipe_2i_1 Lower_Corusant_Male_1_2i_1 3.0
+         	PauseRandom 1 2
+         	Follow Aqualish-Pipe_2i_1 Lower_Corusant_Male_1_2i_1 0.25
+         	PlayGesture Aqualish-Pipe_2i_1 Punch1 4
+         	PauseRandom 1 2
+         	ReturnControlTo Aqualish-Pipe_2i_1  
+	   }        
+	}
+	Loop
+   }
+   Script "SeekingHelpFromObi" 
+   {
+	If (IsAlive Lower_Corusant_Male_1_2i_1)
+	{
+         RandomInt y 1 5
+         if (= y 1)
+         {
+            TakePartialControlOf Lower_Corusant_Male_1_2i_1 0.35 False
+            RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_2i3
+            RandomInt y 1 5
+         }
+         if (= y 2)
+         {
+            TakePartialControlOf Lower_Corusant_Male_1_2i_1 0.35 False
+            RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_2i4
+            RandomInt y 1 5
+         }
+         if (= y 3)
+         {
+            TakePartialControlOf Lower_Corusant_Male_1_2i_1 0.35 False
+            RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_2i2
+            RandomInt y 1 5
+         }
+         if (= y 4)
+         {
+            TakePartialControlOf Lower_Corusant_Male_1_2i_1 0.35 False
+            RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_2i5
+            RandomInt y 1 5
+         }
+         if (= y 5)
+         {
+            TakePartialControlOf Lower_Corusant_Male_1_2i_1 0.35 False
+            RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_2i1         
+            RandomInt y 1 5
+         }         
+      }
+      If (IsDead Lower_Corusant_Male_1_2i_1)
+	{
+	   EndScript "SeekingHelpFromObi"
+	}
+      If (IsDead Aqualish-Pipe_2i_1)
+	{
+	   EndScript "SeekingHelpFromObi"
+	}
+	Loop
+   }
+
+   Script "Male_1_2i_1Help"
+   {
+      If (IsAlive Lower_Corusant_Male_1_2i_1)
+	{
+         WaitUntilNear Lower_Corusant_Male_1_2i_1 Obi 10.0
+	   PlayGesture Lower_Corusant_Male_1_2i_1 Panic 2
+         SayLineNoSubtitles Lower_Corusant_Male_1_2i_1 "/male1_182/Help!"
+	   PauseRandom 2 5
+	}
+	If (IsDead Lower_Corusant_Male_1_2i_1)
+      {
+	   EndScript "Male_1_2i_1Help"
+      } 
+	If (IsDead Aqualish-Pipe_2i_1)
+      {
+	   EndScript "Male_1_2i_1Help"
+      }
+      Loop
+   }
+   If (IsAlive Aqualish-Pipe_2i_1)
+   {
+      WaitUntilKilled Aqualish-Pipe_2i_1
+      If (IsAlive Lower_Corusant_Male_1_2i_1)
+      {
+         If (< ObiHp 999)
+	   {
+	      EndScript "Male_1_2i_1Help"
+	      TakeControlOf Lower_Corusant_Male_1_2i_1      
+            LookAtAndWait Lower_Corusant_Male_1_2i_1 Obi 
+      	SayLine Lower_Corusant_Male_1_2i_1 "/male1_185/Thank you, Jedi"
+	      Pause 0.5
+      	SayLine Lower_Corusant_Male_1_2i_1 "/male1_449/Let's go!"
+		RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_hide_2i_male1
+		WaitUntilNear Lower_Corusant_Male_1_2i_1 Obi 5.0
+		Teleport A_PowerupHealth_04 ref_thanks2
+		LookAtAndWait Lower_Corusant_Male_1_2i_1 A_PowerupHealth_04
+	      PlayGesture Lower_Corusant_Male_1_2i_1 PointForward 1
+      	SayLine Lower_Corusant_Male_1_2i_1 "/male1_1286/Take a health pack."
+		Pause 5.0
+      	ReturnControlTo Lower_Corusant_Male_1_2i_1 
+		EndScript "Hero4"
+	   }
+	}
+      If (IsAlive Lower_Corusant_Male_1_2i_1)
+      {
+         If (PlayerHasFullHealth)
+	   {
+	      EndScript "Male_1_2i_1Help"
+	      TakeControlOf Lower_Corusant_Male_1_2i_1  
+            LookAtAndWait Lower_Corusant_Male_1_2i_1 Obi 
+      	SayLine Lower_Corusant_Male_1_2i_1 "/male1_185/Thank you, Jedi"
+	      StopAction Lower_Corusant_Male_1_2i_1
+	      RunToNodeAndWait Lower_Corusant_Male_1_2i_1 node_hide_2i_male1
+      	ReturnControlTo Lower_Corusant_Male_1_2i_1 
+	      WaitUntilFar Obi Lower_Corusant_Male_1_2i_1 50
+	      RemoveActor Lower_Corusant_Male_1_2i_1
+	      EndScript "Hero4"
+	      
+	   }
+      }
+   }
+   If (IsAlive Lower_Corusant_Male_1_2i_1)
+   {
+      WaitUntilKilled Lower_Corusant_Male_1_2i_1
+      If (IsAlive Aqualish-Pipe_2i_1)
+	{
+		ReturnControlTo Aqualish-Pipe_2i_1
+      	ForceTarget Aqualish-Pipe_2i_1 Obi
+		EndScript "Hero4"
+		EndScript "Male_1_2i_1Help"
+	}
+   }
+}
+
+Script "Hero1"
+{
+   WaitUntilEnteredRegion Obi Region_3b
+
+   Teleport A_lower_corusant_male_1_00 ref_female
+   Teleport A_kubaz-dagger_02 ref_bad1
+   Teleport A_rodian-pistol_01 ref_bad2
+
+   TakeControlOf A_kubaz-dagger_02
+   TakeControlOf A_rodian-pistol_01
+
+   WaitUntilNear A_rodian-pistol_01 Obi 30
+
+   BeginScript "Bastard1"
+   BeginScript "Bastard2"
+   BeginScript "Male1"
+
+   StoreScript "Bastard1"
+   {
+	If (IsAlive A_lower_corusant_male_1_00)
+      {
+         LookAtAndWait A_rodian-pistol_01 A_lower_corusant_male_1_00 
+         PlayGesture A_rodian-pistol_01 Taunt 10 
+         PauseRandom 1 3
+	   ReturnControlTo A_rodian-pistol_01
+      }
+	Script "Bastard1End1"
+	{
+         If (IsDead A_lower_corusant_male_1_00)
+	   {
+	      ReturnControlTo A_rodian-pistol_01
+	      ForceTarget A_rodian-pistol_01 Obi
+	      EndScript "Bastard1"
+	   }
+      }   
+	Script "BastardEnd2"
+	{
+         If (IsDead A_rodian-pistol_01)
+	   {
+	      EndScript "Bastard1"
+         } 
+	}
+      Loop
+   }
+
+   StoreScript "Bastard2"
+   {
+	If (IsAlive A_lower_corusant_male_1_00)
+      {
+         LookAtAndWait A_kubaz-dagger_02 A_lower_corusant_male_1_00 
+         PlayGesture A_kubaz-dagger_02 HandsOnHips 3 
+         LookAtAndWait A_kubaz-dagger_02 A_lower_corusant_male_1_00 
+         PlayGestureAndWait A_kubaz-dagger_02 PointForward 1
+         RunToNodeAndWait A_kubaz-dagger_02 kubaz0
+         LookAtAndWait A_kubaz-dagger_02 A_lower_corusant_male_1_00 
+         PlayGestureAndWait A_kubaz-dagger_02 Punch1 2
+         PauseRandom 0 1
+         RunToNodeAndWait A_kubaz-dagger_02 kubaz1
+         LookAtAndWait A_kubaz-dagger_02 A_lower_corusant_male_1_00 
+	   ReturnControlTo A_kubaz-dagger_02
+	}
+	Script "Bastard2End1"
+      {
+         If (IsDead A_lower_corusant_male_1_00)
+	   {
+	      ReturnControlTo A_kubaz-dagger_02
+	      ForceTarget A_kubaz-dagger_02 Obi
+	      EndScript "Male1"
+	      EndScript "Bastard2"
+	      
+         }
+	} 
+	Script "Bastard2End2"
+	{
+           If (IsDead A_kubaz-dagger_02)
+	   {
+	      EndScript "Male1"
+	      EndScript "Bastard2"
+	   }
+	}
+      Loop
+   }
+
+   StoreScript "Male1"
+   {
+      If (IsDead A_lower_corusant_male_1_00)
+	{
+	   ReturnControlTo A_kubaz-dagger_02
+	   ForceTarget A_kubaz-dagger_02 Obi
+	   EndScript "Male1"
+	}       
+      If (IsDead A_kubaz-dagger_02)
+	{
+	   TakeControlOf A_lower_corusant_male_1_00
+         RunToNodeAndWait A_lower_corusant_male_1_00 kubaz0
+         LookAt A_lower_corusant_male_1_00 A_rodian-pistol_01
+	   StopAction A_lower_corusant_male_1_00
+         PlayGesture A_lower_corusant_male_1_00 Cower 
+         SayLineNoSubtitles A_lower_corusant_male_1_00 "/male1_182/Help!"
+         WaitUntilKilled A_rodian-pistol_01
+         ReturnControlTo A_lower_corusant_male_1_00	
+	   EndScript "Male1"
+      }
+      If (IsAlive A_kubaz-dagger_02)
+	{
+	   TakeControlOf A_lower_corusant_male_1_00
+         LookAt A_lower_corusant_male_1_00 A_kubaz-dagger_02 
+	   StopAction A_lower_corusant_male_1_00
+         PlayGesture A_lower_corusant_male_1_00 Cower 
+         SayLineNoSubtitles A_lower_corusant_male_1_00 "/male1_182/Help!"
+         PauseRandom 1 3
+         SayLineNoSubtitles A_lower_corusant_male_1_00 "/male1_182/Help!"
+         LookAt A_lower_corusant_male_1_00 A_kubaz-dagger_02 
+	   StopAction A_lower_corusant_male_1_00
+         PlayGesture A_lower_corusant_male_1_00 Cower 
+         PauseRandom 1 2
+         ReturnControlTo A_lower_corusant_male_1_00
+      }
+      Loop
+   }
+
+   Script "Hero1DeathCounter1"
+   {
+      WaitUntilKilled A_kubaz-dagger_02    
+      Increment killedByHero 1
+   }
+   Script "Hero1DeathCounter2"
+   {
+      WaitUntilKilled A_rodian-pistol_01
+      Increment killedByHero 1
+   }
+   
+   Script "ComboReaction"
+   {
+      WaitUntilNear A_rodian-pistol_01 Obi 10
+      EndScript "Bastard1"
+	TakeControlOf A_rodian-pistol_01
+      LookAt A_rodian-pistol_01 Obi
+      StopAction A_rodian-pistol_01
+      SayLine A_rodian-pistol_01 "/Rodian_1345/Iducha Grubo Buengo !" 	
+      RunToNodeAndWait A_rodian-pistol_01 kubaz2
+      LookAt A_rodian-pistol_01 Obi 
+	StopAction A_rodian-pistol_01
+	ReturnControlTo A_rodian-pistol_01
+      ForceTargetAndAttack A_rodian-pistol_01 Obi   
+	EndScript "Bastard1"    
+      EndScript "Bastard2"
+	ReturnControlTo A_kubaz-dagger_02
+      ForceTargetAndAttack A_kubaz-dagger_02 Obi
+	EndScript "Male1"
+   }
+   Script "PetR4_01"
+   {	
+      WaitUntilNear A_rodian-pistol_01 Obi 15.0   
+      TakePartialControlOf A_r4_01 0.35 False
+      RunToNodeAndWait A_r4_01 node_r4_01
+      LookAtAndWait A_r4_01 Obi
+      ReturnControlTo A_r4_01
+      WaitUntilEqual killedByHero 2
+      FollowState A_r4_01 A_lower_corusant_male_1_00 1.5
+   }   
+   Script "EndTreat"
+   {
+      WaitUntilKilled A_lower_corusant_male_1_00
+	EndScript "TreatForHero1"
+	EndScript "PetR4_01"
+   }
+   Script "TreatForHero1"
+   {
+	   WaitUntilEqual killedByHero 2
+	   If (IsDead A_lower_corusant_male_1_00)
+	   {
+	      EndScript "TreatForHero1"
+		EndScript "PetR4_01"
+	   }
+         If (< ObiHp 999)
+         {
+            Pause 1.0
+            TakeControlOf A_lower_corusant_male_1_00
+            LookAtAndWait A_lower_corusant_male_1_00 Obi 
+            SayLine A_lower_corusant_male_1_00 "/male1_185/Thank you, Jedi"
+	      Pause 0.5
+	      WaitUntilNear A_lower_corusant_male_1_00 Obi 30.0tuscene
+            Teleport A_PowerupHealth_03 ref_thanks1
+	      LookAtAndWait A_lower_corusant_male_1_00 A_PowerupHealth_03
+	      PlayGesture A_lower_corusant_male_1_00 PointForward 1
+            SayLine A_lower_corusant_male_1_00 "/male1_1286/Take a health pack."
+		Pause 3.0
+            LookAt A_lower_corusant_male_1_00 Obi
+     	      SayLine A_lower_corusant_male_1_00 "/male1_1196/be careful"
+     	      Pause 1.0
+            SayLine A_lower_corusant_male_1_00 "/male1_1195/Its not safe"
+            Pause 1.0
+            SayLine A_lower_corusant_male_1_00 "/male1_187/These Thugs have been terrorizing us for weeks"			
+            ReturnControlTo A_lower_corusant_male_1_00
+	      EndScript "Hero1"
+	   }
+         If (PlayerHasFullHealth)
+         {
+            Pause 1.0
+            TakePartialControlOf A_lower_corusant_male_1_00 0.35 False      
+            LookAtAndWait A_lower_corusant_male_1_00 Obi 
+            SayLine A_lower_corusant_male_1_00 "/male1_185/Thank you, Jedi"
+	      WaitUntilNear Obi A_lower_corusant_male_1_00 2.0
+            LookAtAndWait A_lower_corusant_male_1_00 Obi
+     	      SayLine A_lower_corusant_male_1_00 "/male1_1196/be careful"
+     	      Pause 1.0
+            SayLine A_lower_corusant_male_1_00 "/male1_1195/Its not safe"
+            Pause 1.0
+            SayLine A_lower_corusant_male_1_00 "/male1_187/These Thugs have been terrorizing us for weeks"
+	      StopAction A_lower_corusant_male_1_00
+            ReturnControlTo A_lower_corusant_male_1_00
+	      WaitUntilFar Obi A_lower_corusant_male_1_00 50
+	      RemoveActor A_lower_corusant_male_1_00
+	      EndScript "Hero1"
+         }
+   } 
+}
+
+Script "Hero2"
+{
+   WaitUntilEnteredRegion Obi Region_3eStation_a
+   Teleport A_lower_corusant_female_1_01 ref_female1 
+   Teleport Kubaz-Dagger_3f_1 ref_kubazBastard 
+   Script "EndH2FemalCryingForHelp1"
+   {
+	WaitUntilKilled A_lower_corusant_female_1_01
+	EndScript "H2FemalCryingForHelp"
+	EndScript "H2KubazBastardPursuing"
+	EndScript "H2FemaleRun"
+	EndScript "AqualishBastardPursuing"
+	EndScript "H2FemalCryingForHelp"
+   }
+   Script "EndH2KubazBastardPursuing1"
+   {
+	WaitUntilKilled Kubaz-Dagger_3f_1
+	EndScript "H2KubazBastardPursuing"
+   }
+   Script "H2KubazBastardPursuing"
+   {
+      If (IsDead A_lower_corusant_female_1_01)
+	{
+         EndScript "H2KubazBastardPursuing"
+	}
+	If (IsDead Kubaz-Dagger_3f_1)
+	{
+         EndScript "H2KubazBastardPursuing"
+	}
+	If (IsAlive A_lower_corusant_female_1_01)
+      {      
+         TakeControlOf Kubaz-Dagger_3f_1 
+         Follow Kubaz-Dagger_3f_1 A_lower_corusant_female_1_01 3.0
+         PauseRandom 1 2
+         Follow Kubaz-Dagger_3f_1 A_lower_corusant_female_1_01 0.25
+         PlayGesture Kubaz-Dagger_3f_1 Punch1 4
+         PauseRandom 1 2
+         ReturnControlTo Kubaz-Dagger_3f_1          
+	}
+
+	Loop
+   }
+   Script "H2FemaleRun" 
+   {
+      If (IsDead Kubaz-Dagger_3f_1)
+	{
+	   EndScript "H2FemaleRun"
+	}
+      If (IsDead A_lower_corusant_female_1_01)
+	{
+	   EndScript "H2FemaleRun"
+	}
+	If (IsAlive A_lower_corusant_female_1_01)
+	{
+         TakeControlOf A_lower_corusant_female_1_01 
+         RunToNodeAndWait A_lower_corusant_female_1_01 node_3f_female
+	   ReturnControlTo A_lower_corusant_female_1_01 
+	   ReturnControlTo Kubaz-Dagger_3f_1  
+      }
+	Loop
+   }
+
+   Script "H2FemalCryingForHelp"
+   {
+	If (IsDead A_lower_corusant_female_1_01)
+      {
+	   EndScript "H2FemalCryingForHelp"
+      }
+	If (IsDead Kubaz-Dagger_3f_1)
+      {
+	   EndScript "H2FemalCryingForHelp"
+      } 
+      If (IsAlive A_lower_corusant_female_1_01)
+	{
+         WaitUntilNear A_lower_corusant_female_1_01 Obi 20.0
+	   PlayGesture A_lower_corusant_female_1_01 Panic 2
+         SayLineNoSubtitles A_lower_corusant_female_1_01 "/female1_190/Help me!"
+	   PauseRandom 2 5
+	}
+      Loop
+   }
+   If (IsAlive Kubaz-Dagger_3f_1)
+   {
+      WaitUntilKilled Kubaz-Dagger_3f_1
+      If (IsAlive A_lower_corusant_female_1_01)
+      {
+         If (< ObiHp 999)
+	   {
+		EndScript "H2FemalCryingForHelp"
+	      TakeControlOf A_lower_corusant_female_1_01      
+            LookAtAndWait A_lower_corusant_female_1_01 Obi 
+      	SayLine A_lower_corusant_female_1_01 "/female1_659/Thank you, Jedi!"
+	      Pause 0.5
+      	SayLine A_lower_corusant_female_1_01 "/female1_191/Over Here!"
+		RunToNodeAndWait A_lower_corusant_female_1_01 node_hero2treat
+		WaitUntilNear A_lower_corusant_female_1_01 Obi 5.0
+		Teleport A_PowerupHealth_08 ref_hero2treat
+		LookAtAndWait A_lower_corusant_female_1_01 A_PowerupHealth_08
+	      PlayGesture A_lower_corusant_female_1_01 PointForward 1
+      	SayLine A_lower_corusant_female_1_01 "/female1_196/Take this"
+		Pause 5.0
+      	ReturnControlTo A_lower_corusant_female_1_01 
+		EndScript "Hero2"
+	   }
+      }
+      If (IsAlive A_lower_corusant_female_1_01)
+      {
+         If (PlayerHasFullHealth)
+	   {
+		EndScript "H2FemalCryingForHelp"
+	      TakePartialControlOf A_lower_corusant_female_1_01 0.35 False      
+            LookAtAndWait A_lower_corusant_female_1_01 Obi 
+      	SayLine A_lower_corusant_female_1_01 "/female1_659/Thank you, Jedi!"
+		StopAction A_lower_corusant_female_1_01
+		RunToNodeAndWait A_lower_corusant_female_1_01 node_hero2treat
+      	ReturnControlTo A_lower_corusant_female_1_01 
+	      WaitUntilFar Obi A_lower_corusant_female_1_01 50
+	      RemoveActor A_lower_corusant_female_1_01
+		EndScript "Hero2"
+	   }
+      }
+   }
+   If (IsAlive A_lower_corusant_female_1_01)
+   {
+      WaitUntilKilled A_lower_corusant_female_1_01
+      ReturnControlTo Kubaz-Dagger_3f_1
+      ForceTarget Kubaz-Dagger_3f_1 Obi
+	EndScript "Hero2"
+	EndScript "H2FemalCryingForHelp"
+   }
+}
+
+Script "Poster"
+{
+   WaitUntilEnteredRegion Obi Region_3c
+   TakePartialControlOf A_aqualish-blaster_02 
+   LookAt A_aqualish-blaster_02 Obi
+   FireAt A_aqualish-blaster_02 Obi
+   ReturnControlTo A_aqualish-blaster_02
+}
+
+Script "Ambo_lookAtMe1"
+{
+   WaitUntilEnteredRegion Obi Region_lookAtMe1
+   EndScript "Ambo_lookAtme2"
+   Teleport A_kubaz-dagger_05  ref_ambo1
+   Teleport A_kubaz-dagger_06  ref_ambo2
+   Teleport A_aqualish-blaster_03  ref_ambo3
+   TakeControlOf A_kubaz-dagger_05 
+   TakeControlOf A_kubaz-dagger_06 
+   TakeControlOf A_aqualish-blaster_03
+   LookAt A_kubaz-dagger_05 Obi 
+   LookAt A_kubaz-dagger_06 Obi 
+   LookAt A_aqualish-blaster_03 Obi 
+   ReturnControlTo A_kubaz-dagger_05
+   ReturnControlTo A_kubaz-dagger_06
+   ReturnControlTo A_aqualish-blaster_03
+}
+
+Script "Ambo_lookAtMe2"
+{
+   WaitUntilEnteredRegion Obi Region_lookAtMe2
+   EndScript "Ambo_lookAtme1"
+   Teleport A_kubaz-dagger_05  ref_ambo1
+   Teleport A_kubaz-dagger_06  ref_ambo2
+   Teleport A_aqualish-blaster_03  ref_ambo3
+   TakeControlOf A_kubaz-dagger_05 
+   TakeControlOf A_kubaz-dagger_06 
+   TakeControlOf A_aqualish-blaster_03 
+   LookAt A_kubaz-dagger_05 Obi 
+   LookAt A_kubaz-dagger_06 Obi 
+   LookAt A_aqualish-blaster_03 Obi 
+   ReturnControlTo A_kubaz-dagger_05
+   ReturnControlTo A_kubaz-dagger_06
+   ReturnControlTo A_aqualish-blaster_03
+}
+
+Script "Ambo_lookAtMe3"
+{
+   WaitUntilEnteredRegion Obi Region_3eStation_a
+   EndScript "Ambo_lookAtme1"
+   EndScript "Ambo_lookAtme2"
+}
+
+Script "BridgeCatWalk1"
+{
+   WaitUntilEnteredRegion Obi Region_temp3
+   Teleport A_aqualish-blaster_07 ref_3k1
+   TakeControlOf A_aqualish-blaster_07
+   RunToNodeAndWait A_aqualish-blaster_07 node_3h1
+   ReturnControlTo A_aqualish-blaster_07
+   ForceTarget A_aqualish-blaster_07 Obi
+}
+Script "BridgeCatWalk2"
+{
+   WaitUntilEnteredRegion Obi Region_temp3
+   Teleport A_gran-club_04 ref_3k3
+   TakeControlOf A_gran-club_04
+   RunToNodeAndWait A_gran-club_04 node_3h2
+   ReturnControlTo A_gran-club_04
+   ForceTarget A_gran-club_04 Obi
+}
+Script "BridgeCatWalk3"
+{
+   WaitUntilEnteredRegion Obi Region_temp7
+   Teleport A_kubaz-dagger_09 ref_end4
+   TakeControlOf A_kubaz-dagger_09
+   RunToNodeAndWait A_kubaz-dagger_09 node_3h1
+   ReturnControlTo A_kubaz-dagger_09
+   ForceTarget A_kubaz-dagger_09 Obi
+}
+Script "BridgeCatWalk4"
+{
+   WaitUntilEnteredRegion Obi Region_temp7
+   Teleport A_kubaz-pistol_02 ref_attackEnd1
+   TakeControlOf A_kubaz-pistol_02
+   RunToNodeAndWait A_kubaz-pistol_02 node_3h2
+   ReturnControlTo A_kubaz-pistol_02
+   ForceTarget A_kubaz-pistol_02 Obi
+}
+Script "Ambo_007"
+{
+   WaitUntilEnteredRegion Obi Region_temp5
+   EndScript "Ambo_008"
+   Teleport A_aqualish-blaster_08  ref_duck1
+   Teleport A_rodian-pistol_03  ref_duck2
+   TakeControlOf A_aqualish-blaster_08 
+   TakeControlOf A_rodian-pistol_03 
+   LookAt A_aqualish-blaster_08 Obi 
+   LookAt A_rodian-pistol_03 Obi 
+   ReturnControlTo A_aqualish-blaster_08
+   ReturnControlTo A_rodian-pistol_03
+}
+Script "Ambo_008"
+{
+   WaitUntilEnteredRegion Obi Region_temp6
+   EndScript "Ambo_007"
+   Teleport A_aqualish-blaster_08  ref_duck1
+   Teleport A_rodian-pistol_03  ref_duck2
+   TakeControlOf A_aqualish-blaster_08 
+   TakeControlOf A_rodian-pistol_03 
+   LookAt A_aqualish-blaster_08 Obi 
+   LookAt A_rodian-pistol_03 Obi 
+   ReturnControlTo A_aqualish-blaster_08
+   ReturnControlTo A_rodian-pistol_03
+}
+
+Script "Ambo_010"
+{
+   WaitUntilEnteredRegion Obi Region_temp10
+   EndScript "Ambo_011"
+   Teleport A_aqualish-blaster_09  ref_duk10
+   Teleport A_gran-club_05  ref_duk11
+   TakeControlOf A_aqualish-blaster_09 
+   TakeControlOf A_gran-club_05 
+   LookAt A_aqualish-blaster_09 Obi 
+   LookAt A_gran-club_05 Obi 
+   ReturnControlTo A_aqualish-blaster_09
+   ReturnControlTo A_gran-club_05
+}
+Script "Ambo_011"
+{
+   WaitUntilEnteredRegion Obi Region_temp11
+   EndScript "Ambo_010"
+   Teleport A_aqualish-blaster_09  ref_duk11
+   Teleport A_gran-club_05  ref_duk10
+   TakeControlOf A_aqualish-blaster_09 
+   TakeControlOf A_gran-club_05 
+   LookAt A_aqualish-blaster_09 Obi 
+   LookAt A_gran-club_05 Obi 
+   ReturnControlTo A_aqualish-blaster_09
+   ReturnControlTo A_gran-club_05
+}
+
+//Region_3d
+
+Script "Region_3d Patroling"
+{
+   //AddState Gran-Club_3d_1 Patrol
+   SetPatrolTypes Gran-Club_3d_1 Patrol 1  
+}
+
+//Region_3e
+
+Script "Region_3e Patroling"
+{
+   SetPatrolTypes Aqualish-Pipe_3e_1 Patrol 2
+   SetPatrolTypes Aqualish-Pipe_3e_2 Patrol 1  
+}
+
+//Train
+
+Script "Train Garbage"
+{
+   WaitUntilEnteredRegion Obi Region_3eStation_a
+   //WaitUntilEnteredRegion Obi Region_3eStation_b
+   DisembodiedVoice trainstationvoice.dlg "/trainstationvoice_1335/Next Elcor transport arriving at station." 
+   Pause 1.0
+   PlayAudioCue A_1-1_vehicle_03 PointSoundOneshot_01
+   PlayAudioCue A_1-1_vehicle_03 trainHorn
+   MoveElevatorToFloorAndWait A_1-1_vehicle_03 1
+   BeginScript "ElcorTrainHornHornHornTheDamnGarbage"
+}
+
+Script "Boss"
+{
+   WaitUntilEnteredRegion Obi Region_3eStation_a
+   //WaitUntilEnteredRegion Obi Region_3eStation_b
+   Teleport A_trandoshan-spikedclubboss_01 ref_obiendcut
+   TakeControlOf A_trandoshan-spikedclubboss_01 
+   Pause 2.0
+   WalkToNodeAndWait A_trandoshan-spikedclubboss_01 node_boss
+   Pause 2.0
+   // ReturnControlTo A_trandoshan-spikedclubboss_01
+   
+   Script "Extra"
+   {
+	Pause 2.0
+	WalkToNodeAndWait A_trandoshan-spikedclubboss_01 node_boss
+	BeginScript "BossGuarding"  
+   }
+       Script "Garbage has been Moved"
+   {
+      WaitUntilExitedRegion A_1-1_garbage06_03 Region_garbage1
+	EndScript "BossGuarding"
+      EnemyHealthMeter A_trandoshan-spikedclubboss_01
+      //RunToNodeAndWait A_trandoshan-spikedclubboss_01 node_fight
+      ReturnControlTo A_trandoshan-spikedclubboss_01
+	ForceTarget A_trandoshan-spikedclubboss_01 Obi
+   }
+   Script "Boss Found By Obi"
+   {
+      WaitUntilEnteredRegion Obi Region_trainTop
+	EndScript "BossGuarding"
+      EnemyHealthMeter A_trandoshan-spikedclubboss_01
+      ReturnControlTo A_trandoshan-spikedclubboss_01
+	ForceTarget A_trandoshan-spikedclubboss_01 Obi
+   }
+   Script "Boss Guard the Train"
+   {
+      WaitUntilExitedRegion A_trandoshan-spikedclubboss_01 Region_4a
+      TakeControlOf A_trandoshan-spikedclubboss_01
+      RunToNodeAndWait A_trandoshan-spikedclubboss_01 node_boss
+      ReturnControlTo A_trandoshan-spikedclubboss_01
+      Loop   
+   }
+   Script "End Boss Guard"
+   {
+      WaitUntilKilled A_trandoshan-spikedclubboss_01
+      EndScript "Boss Guard the Train"
+	EndScript "Garbage has been Moved"
+	Set bossFlag 1
+   }
+   StoreScript "BossGuarding"
+   {
+      TakeControlOf A_trandoshan-spikedclubboss_01 
+      LookAt A_trandoshan-spikedclubboss_01 Obi
+      PlayGestureAndWait A_trandoshan-spikedclubboss_01 Talk2 2
+	// Pause 1.0
+      // ReturnControlTo A_trandoshan-spikedclubboss_01 
+	Loop
+   }
+}
+ 
+StoreScript "ElcorTrainHornHornHornTheDamnGarbage"
+{
+   PlayAudioCue A_1-1_vehicle_03 trainHorn
+   PauseRandom 2 8
+   PlayAudioCue A_1-1_vehicle_03 trainHorn
+   PauseRandom 1 3
+   PauseRandom 2.0 70.0
+   DisembodiedVoice trainstationvoice.dlg "/trainstationvoice_175/Elcor transport to upper sector transfer at council stop."       
+   PauseRandom 5.0 20.0   
+   DisembodiedVoice trainstationvoice.dlg "/trainstationvoice_174/Keep valuables secure while at the Elcor Station." 
+   Loop
+}
+
+//Dancing
+Script "Thug Party"
+{
+   Script "Dancer1"
+   {
+	If (IsDead A_gran-club_03)
+      {
+	   EndScript "Dancer1"
+      }
+	TakeControlOf A_gran-club_03
+	PlayGestureAndWait A_gran-club_03 Talk2 2000
+	Loop
+   }
+   Script "Dancer2"
+   {
+	If (IsDead A_kubaz-dagger_08)
+      {
+	   EndScript "Dancer2"
+      }
+	TakeControlOf A_kubaz-dagger_08 
+	PlayGestureAndWait A_kubaz-dagger_08 Talk2 2000
+	Loop
+   }
+   Script "Dancer3"
+   {
+	If (IsDead A_aqualish-blaster_05)
+      {
+	   EndScript "Dancer3"
+      }
+	TakeControlOf A_aqualish-blaster_05 
+	PlayGestureAndWait A_aqualish-blaster_05 Talk2 2000
+	Loop
+   }
+   WaitUntilNear A_kubaz-dagger_08 Obi 10
+   EndScript "Dancer1"
+   EndScript "Dancer2"
+   EndScript "Dancer3"
+   ReturnControlTo A_gran-club_03
+   ReturnControlTo A_kubaz-dagger_08
+   ReturnControlTo A_aqualish-blaster_05
+}
+
+//Region_3eStation_a_to_b
+
+Script "Region_3eStation Attack"
+{
+   Teleport Rodian-Blaster_3f_6 ref_3f6     
+   Teleport A_gran-club_02 ref_3f2   
+   Teleport A_rodian-pistol_02 ref_3f5  
+   Teleport Rodian-Blaster_3f_7 ref_3f7
+   Teleport Kubaz-Dagger_3f_8 ref_3f8
+
+   Script "3f_7 ambo"
+   {
+      WaitUntilNear Rodian-Blaster_3f_7 Obi 30
+      TakePartialControlOf Rodian-Blaster_3f_7
+      LookAtAndWait Rodian-Blaster_3f_7 Obi
+      WaitUntilNear Rodian-Blaster_3f_7 Obi 5.0
+      ReturnControlTo Rodian-Blaster_3f_7
+   }   
+   Script "3f_8 ambo"
+   {
+      WaitUntilNear Kubaz-Dagger_3f_8 Obi 30
+      TakePartialControlOf Kubaz-Dagger_3f_8
+      LookAtAndWait Kubaz-Dagger_3f_8 Obi
+      WaitUntilNear Kubaz-Dagger_3f_8 Obi 5.0
+      ReturnControlTo Kubaz-Dagger_3f_8
+   }  
+}
+
+
+//Region_2j
+
+Script "Region_4a Kubaz-Pistol"
+{
+   WaitUntilEnteredRegion Obi Region_4a
+   ForceTarget A_kubaz-pistol_05 Obi
+   ForceTarget A_kubaz-pistol_06 Obi
+   ForceTarget A_kubaz-dagger_07 Obi
+   ForceTarget A_aqualish-blaster_04 Obi
+   Call "Retreat" (A_kubaz-pistol_05, node_rt1)
+   Call "Retreat" (A_kubaz-pistol_06, node_rt2)
+   Call "Retreat" (A_aqualish-blaster_04, node_rt3)
+   Call "Retreat" (A_kubaz-dagger_07, node_rt4)
+}
+
+Script "Male2WalkAroundLooped" 
+{
+   Script "m2walk"
+   {
+      TakePartialControlOf A_lower_corusant_male_2_02
+      WalkToNodeAndWait A_lower_corusant_male_2_02 node_john2
+      WalkToNodeAndWait A_lower_corusant_male_2_02 node_john1
+      ReturnControlTo A_lower_corusant_male_2_02
+      Loop
+   }
+   Script "Male2GivingPowerHealth"
+   {
+      WaitUntilNear A_lower_corusant_male_2_02 Obi 3.0
+      If (< ObiHp 999)
+      EndScript "m2walk" 
+      SayLine A_lower_corusant_male_2_02 "/male2_451/Come on.  Let's go."
+      TakeControlOf A_lower_corusant_male_2_02
+      RunToNodeAndWait A_lower_corusant_male_2_02 node_take3_4
+      WaitUntilNear A_lower_corusant_male_2_02 Obi 8.0
+      Teleport A_PowerupHealth_01 ref_take3  		   //waiting for the Teleport bug fixed
+      LookAt A_lower_corusant_male_2_02 A_PowerupHealth_01 
+      PlayGestureAndWait A_lower_corusant_male_2_02 PointForward 1
+      SayLine A_lower_corusant_male_2_02 "/male2_1288/Take a health pack." 
+      Pause 1.0 
+      ReturnControlTo A_lower_corusant_male_2_02
+      BeginScript "m2walk2"  
+   }
+   StoreScript "m2walk2"
+   {
+      TakePartialControlOf A_lower_corusant_male_2_02
+      WalkToNodeAndWait A_lower_corusant_male_2_02 node_john2
+      WalkToNodeAndWait A_lower_corusant_male_2_02 node_john4
+      ReturnControlTo A_lower_corusant_male_2_02
+      Loop
+   }
+   child WaitUntilKilled A_lower_corusant_male_2_02	
+   EndScript "Male2WalkAroundLooped"
+}
+Script "Female1WalkAroundLooped" 
+{
+   Script "FemaleDeadFailsafe"
+   {
+      WaitUntilKilled A_lower_corusant_female_1_04
+      EndScript "fm1walk"
+      EndScript "Female1GivingPowerHealth"
+      EndScript "fm2walk2"	
+   }
+   Script "fm1walk"
+   {
+      TakePartialControlOf A_lower_corusant_female_1_04
+      WalkToNodeAndWait A_lower_corusant_female_1_04 node_john5
+      WalkToNodeAndWait A_lower_corusant_female_1_04 node_john3
+      ReturnControlTo A_lower_corusant_female_1_04
+      Loop
+   }
+   Script "Female1GivingPowerHealth"
+   {
+      WaitUntilNear A_lower_corusant_female_1_04 Obi 3.0
+      If (< ObiHp 999)
+      EndScript "fm1walk" 
+      SayLine A_lower_corusant_female_1_04 "/female1_191/Over Here!"
+      TakeControlOf A_lower_corusant_female_1_04
+      RunToNodeAndWait A_lower_corusant_female_1_04 node_take7_8
+      WaitUntilNear A_lower_corusant_female_1_04 Obi 3.0
+      SayLine A_lower_corusant_female_1_04 "/female1_196/Take this"
+      Teleport A_PowerupHealth_05 ref_take7  		   
+      LookAt A_lower_corusant_female_1_04 A_PowerupHealth_05 
+      PlayGestureAndWait A_lower_corusant_female_1_04 PointForward 1 
+      Pause 1.0 
+      ReturnControlTo A_lower_corusant_female_1_04
+      BeginScript "fm2walk2"  
+   }
+   StoreScript "fm2walk2"
+   {
+      TakePartialControlOf A_lower_corusant_female_1_04
+      WalkToNodeAndWait A_lower_corusant_female_1_04 node_john3
+      WalkToNodeAndWait A_lower_corusant_female_1_04 node_john5
+      ReturnControlTo A_lower_corusant_female_1_04
+      Loop
+   }
+   
+}
+
+//end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

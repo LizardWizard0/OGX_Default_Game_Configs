@@ -1,0 +1,261 @@
+<Category>
+	<Entry>
+		<ID>0</ID>
+		<EntryName>6236</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 3.1				       -->
+		<!-- Pnakotica picked up in house	       -->
+		<!-- 14.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6607</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6608</Content>
+				</Text>
+			</Page>
+			<Page>	
+				<Text>
+					<ID>1</ID>
+					<Content>6804</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6609</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>1</ID>
+		<EntryName>6237</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 3.2				       -->
+		<!-- Book of Dagon			       -->
+		<!-- 14.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6610</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6618</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6611</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6805</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6806</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6807</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6612</Content>
+				</Text>
+
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>2</ID>
+		<EntryName>6238</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 3.3				       -->
+		<!-- Oaths of Dagon			       -->
+		<!-- o6.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6595</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6596</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6597</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6598</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>3</ID>
+					<Content>6599</Content>
+				</Text>
+				<Text>
+					<ID>4</ID>
+					<Content>6600</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6601</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6602</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>3</ID>
+		<EntryName>6239</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 3.4				       -->
+		<!-- Prayer to Dagon			       -->
+                <!-- o6.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6603</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6604</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6605</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6606</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>4</ID>
+		<EntryName>6240</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 3.5				       -->
+		<!-- Ponape Scripture			       -->
+                <!-- 14.july.2oo5 .:mSg:.                      -->
+
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6613</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6614</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6808</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6809</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6810</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6811</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6812</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6813</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6814</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>5</ID>
+		<EntryName>6241</EntryName>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 3.6				       -->
+		<!-- Tablets of Dagon			       -->
+                <!-- 14.july.2oo5 .:mSg:.                      -->
+
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6615</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6815</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6616</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6619</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+</Category>

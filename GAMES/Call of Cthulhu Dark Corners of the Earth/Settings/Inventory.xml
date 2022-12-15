@@ -1,0 +1,451 @@
+<Inventory>
+
+	<coltsemiammo>
+		<Name>coltsemiammo</Name>
+		<Max_Quantity>50</Max_Quantity>
+		<Description_ID>2294</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>0</Texture_Id>
+	</coltsemiammo>
+
+	<coltrevolverammo>
+		<Name>coltrevolverammo</Name>
+		<Max_Quantity>50</Max_Quantity>
+		<Description_ID>225</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>1</Texture_Id>
+	</coltrevolverammo>
+	
+	<shotgundoubleammo>
+		<Name>shotgundoubleammo</Name>
+		<Max_Quantity>30</Max_Quantity>
+		<Description_ID>224</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>2</Texture_Id>
+	</shotgundoubleammo>
+
+	<springfieldrifleammo>
+		<Name>springfieldrifleammo</Name>
+		<Max_Quantity>30</Max_Quantity>
+		<Description_ID>786</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>3</Texture_Id>
+	</springfieldrifleammo>
+
+	<tommygunammo>
+		<Name>tommygunammo</Name>
+		<Max_Quantity>200</Max_Quantity>
+		<Description_ID>788</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>4</Texture_Id>
+	</tommygunammo>
+
+	<WATCH>
+		<Name>WATCH</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>3914</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>46</Texture_Id>
+	</WATCH>
+
+	<WHISTLE>
+		<Name>WHISTLE</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1548</Description_ID>
+		<Null_Script>04_JAIL_BREAK/Use/UseWhistle.hfs</Null_Script>
+		<Texture_Id>16</Texture_Id>
+	</WHISTLE>
+
+	<CROWBAR_USE>
+		<Name>CROWBAR_USE</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>226</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>13</Texture_Id>
+	</CROWBAR_USE>
+
+	<BOOZEBOTTLE1>
+		<Name>BOOZEBOTTLE1</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>425</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>6</Texture_Id>
+	</BOOZEBOTTLE1>
+	
+	<NPC_MACHINE_GUNNER_AMMO>
+		<Name>NPC_MACHINE_GUNNER_AMMO</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>2375</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>27</Texture_Id>
+	</NPC_MACHINE_GUNNER_AMMO>
+
+	<MEDICALKITFORNPC>
+		<Name>MEDICALKITFORNPC</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>789</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>26</Texture_Id>
+	</MEDICALKITFORNPC>
+
+	<DYNAMITE>
+		<Name>DYNAMITE</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>791</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>25</Texture_Id>
+	</DYNAMITE>
+
+	<WELDINGKIT>
+		<Name>WELDINGKIT</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>793</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>28</Texture_Id>
+	</WELDINGKIT>
+
+	<YITHIANCRYSTAL>
+		<Name>YITHIANCRYSTAL</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1917</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>5</Texture_Id>
+	</YITHIANCRYSTAL>
+
+	<BOOK_OF_DAGON>
+		<Name>BOOK_OF_DAGON</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>989</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>9</Texture_Id>
+	</BOOK_OF_DAGON>
+
+	<BRIAN_PHOTO>
+		<Name>BRIAN_PHOTO</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>993</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>8</Texture_Id>
+	</BRIAN_PHOTO>
+
+	<DRIVE_BELT>
+		<Name>DRIVE_BELT</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1034</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>19</Texture_Id>
+	</DRIVE_BELT>
+
+	<SPANNER>
+		<Name>SPANNER</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1085</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>21</Texture_Id>
+	</SPANNER>
+
+	<FUSE>
+		<Name>FUSE</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1171</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>20</Texture_Id>
+	</FUSE>
+
+	<METAL_BAR>
+		<Name>METAL_BAR</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1140</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>12</Texture_Id>
+	</METAL_BAR>
+
+	<DECODER_POSTCARD>
+		<Name>DECODER_POSTCARD</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1236</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>10</Texture_Id>
+	</DECODER_POSTCARD>
+
+	<STONE_CROSS>
+		<Name>STONE_CROSS</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1238</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>11</Texture_Id>
+	</STONE_CROSS>s
+
+	<JAILKEYS>
+		<Name>JAILKEYS</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>227</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>14</Texture_Id>
+	</JAILKEYS>
+
+	<DEADRAT>
+		<Name>DEADRAT</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>235</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>18</Texture_Id>
+	</DEADRAT>
+
+	<CEREMONIAL_DISC>
+		<Name>CEREMONIAL_DISC</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1141</Description_ID>
+		<Null_Script>09_REEF/Scene1/UseDisc.hfs</Null_Script>
+		<Texture_Id>29</Texture_Id>
+	</CEREMONIAL_DISC>
+
+	<GREEN_GEM>
+		<Name>GREEN_GEM</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1142</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>32</Texture_Id>
+	</GREEN_GEM>
+
+	<LEVER>
+		<Name>LEVER</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1143</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>31</Texture_Id>
+	</LEVER>
+
+	<PULLEY>
+		<Name>PULLEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1144</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>30</Texture_Id>
+	</PULLEY>
+
+	<RED_GEM>
+		<Name>RED_GEM</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1145</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>22</Texture_Id>
+	</RED_GEM>
+
+	<ESO_DYNAMITE>
+		<Name>ESO_DYNAMITE</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1234</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>23</Texture_Id>
+	</ESO_DYNAMITE>
+	
+	<HOUSELIBRARYKEY>
+		<Name>HOUSELIBRARYKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>502</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>43</Texture_Id>
+	</HOUSELIBRARYKEY>
+	
+	<HOUSESTUDYKEY>
+		<Name>HOUSESTUDYKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>501</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>42</Texture_Id>
+	</HOUSESTUDYKEY>
+	
+	<BOATSMALLSTORAGEKEY>
+		<Name>BOATSMALLSTORAGEKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>784</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>44</Texture_Id>
+	</BOATSMALLSTORAGEKEY>
+	
+	<BOATARMOURYKEY>
+		<Name>BOATARMOURYKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>790</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>44</Texture_Id>
+	</BOATARMOURYKEY>
+	
+	<BOATLOWERSTORAGEHOLDKEY>
+		<Name>BOATLOWERSTORAGEHOLDKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>792</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>45</Texture_Id>
+	</BOATLOWERSTORAGEHOLDKEY>
+	
+	<1STNATIONALGROCERYKEY>
+		<Name>1STNATIONALGROCERYKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>420</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>40</Texture_Id>
+	</1STNATIONALGROCERYKEY>
+	
+	<POORHOUSEKEY>
+		<Name>POORHOUSEKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>422</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>40</Texture_Id>
+	</POORHOUSEKEY> 
+	
+	<WAITESSTOREKEY>
+		<Name>WAITESSTOREKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>423</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>40</Texture_Id>
+	</WAITESSTOREKEY>
+	
+	<GILMAN_OFFICE_KEY>
+		<Name>GILMAN_OFFICE_KEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1047</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>40</Texture_Id>
+	</GILMAN_OFFICE_KEY>
+	
+	<BROOCH>
+		<Name>BROOCH</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>238</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>17</Texture_Id>
+	</BROOCH>
+	
+	<HANDLE>
+		<Name>HANDLE</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>991</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>7</Texture_Id>
+	</HANDLE>
+	
+	<WINECELLARKEY>
+		<Name>WINECELLARKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1233</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>40</Texture_Id>
+	</WINECELLARKEY>
+	
+	<STOREROOMKEY>
+		<Name>STOREROOMKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1271</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>41</Texture_Id>
+	</STOREROOMKEY>
+	
+	<PONAPESCRIPTURES>
+		<Name>PONAPESCRIPTURES</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>2408</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>24</Texture_Id>
+	</PONAPESCRIPTURES>
+	
+	<CELLKEY>
+		<Name>CELLKEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1272</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>15</Texture_Id>
+	</CELLKEY>
+			
+	<COLD_ROOM_KEY>
+		<Name>COLD_ROOM_KEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1974</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>40</Texture_Id>
+	</COLD_ROOM_KEY>
+			
+	<CHISEL>
+		<Name>CHISEL</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>2410</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>37</Texture_Id>
+	</CHISEL>
+			
+	<HAMMER>
+		<Name>HAMMER</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1914</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>36</Texture_Id>
+	</HAMMER>
+			
+	<CHARM_OF_DAGON>
+		<Name>CHARM_OF_DAGON</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1913</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>38</Texture_Id>
+	</CHARM_OF_DAGON>
+			
+	<PRISONER_FOOD>
+		<Name>PRISONER_FOOD</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1916</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>33</Texture_Id>
+	</PRISONER_FOOD>
+			
+	<TUNNELS_LAB_KEY>
+		<Name>TUNNELS_LAB_KEY</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1918</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>39</Texture_Id>
+	</TUNNELS_LAB_KEY>
+			
+	<WEEDKILLER>
+		<Name>WEEDKILLER</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>1919</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>35</Texture_Id>
+	</WEEDKILLER>
+			
+	<POISONOUS_PLANT>
+		<Name>POISONOUS_PLANT</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>3907</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>34</Texture_Id>
+	</POISONOUS_PLANT>
+			
+	<POISONOUS_PLANT_FULL_DESC>
+		<Name>POISONOUS_PLANT_FULL_DESC</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>2409</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>34</Texture_Id>
+	</POISONOUS_PLANT_FULL_DESC>
+			
+	<SATCHEL>
+		<Name>SATCHEL</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>2409</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>34</Texture_Id>
+	</SATCHEL>	
+	
+	<LUCAS_MACKEY_GUN>
+		<Name>LUCAS_MACKEY_GUN</Name>
+		<Max_Quantity>1</Max_Quantity>
+		<Description_ID>5717</Description_ID>
+		<Null_Script>null.hfs</Null_Script>
+		<Texture_Id>48</Texture_Id>
+	</LUCAS_MACKEY_GUN>
+
+</Inventory>

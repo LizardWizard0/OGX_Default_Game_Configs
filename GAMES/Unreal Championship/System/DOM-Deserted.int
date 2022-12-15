@@ -1,0 +1,81 @@
+[LevelInfo0]
+Title="Deserted"
+
+[LevelSummary]
+Title="Deserted"
+
+[ZoneInfo0]
+LocationName="Outside"
+
+[ZoneInfo1]
+LocationName="Point 'B' Entrance"
+
+[ZoneInfo10]
+LocationName="Dom Point 'B'"
+
+[ZoneInfo11]
+LocationName="Point 'A' Entrance"
+
+[ZoneInfo12]
+LocationName="Point 'B' Entrance"
+
+[ZoneInfo13]
+LocationName="Point 'A' Entrance"
+
+[ZoneInfo14]
+LocationName="Point 'B' Entrance"
+
+[ZoneInfo15]
+LocationName="Point 'A' Front Room"
+
+[ZoneInfo16]
+LocationName="Point 'A' Side Hallway"
+
+[ZoneInfo17]
+LocationName="Point 'A' Side Hallway"
+
+[ZoneInfo18]
+LocationName="Dom Point 'A'"
+
+[ZoneInfo19]
+LocationName="Dom Point 'A'"
+
+[ZoneInfo2]
+LocationName="Point 'B' Entrance"
+
+[ZoneInfo20]
+LocationName="Dom Point 'A'"
+
+[ZoneInfo21]
+LocationName="Point 'A' Entrance"
+
+[ZoneInfo22]
+LocationName="Point 'A' Entrance"
+
+[ZoneInfo3]
+LocationName="Red Spawn Room"
+
+[ZoneInfo4]
+LocationName="Blue Spawn Room"
+
+[ZoneInfo5]
+LocationName="Point 'B' Front Room"
+
+[ZoneInfo6]
+LocationName="Point 'B' Side Hallway"
+
+[ZoneInfo7]
+LocationName="Dom Point 'B'"
+
+[ZoneInfo8]
+LocationName="Point 'B' Side Hallway"
+
+[ZoneInfo9]
+LocationName="Dom Point 'B'"
+
+[xDomPointA1]
+ObjectiveName="A"
+
+[xDomPointB0]
+ObjectiveName="B"
+

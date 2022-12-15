@@ -1,0 +1,11 @@
+txname=Shield.tga
+txname=Specular.tga
+txname=SabreFaceOns_Grey.tga
+txname=heart_full_02.tga
+txname=force_03a.tga
+txname=force_03b.tga
+txname=Shield_red.tga
+txname=zip_up_04.tga
+txname=new_force_04.tga
+txname=new_force_05.tga
+txname=new_force_06.tga

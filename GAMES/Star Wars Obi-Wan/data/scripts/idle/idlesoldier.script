@@ -1,0 +1,16 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+PauseRandom .01 2
+
+AddGesture me TurnHeadLeft 2
+AddGesture me none 2
+AddGesture me HandsBehindBack 5
+AddGesture me none 2
+AddGesture me TurnHeadRight 2
+AddGesture me HandsOnHips 3
+AddGesture me none 2
+AddGesture me HandsBehindBack 5
+WaitUntilFinishedGesture me
+
+

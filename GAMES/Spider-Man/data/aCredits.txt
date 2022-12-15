@@ -1,0 +1,627 @@
+EXECUTIVE PRODUCER
+Dr. Peter T. Akemann
+
+SENIOR PRODUCER
+Gregory John
+ 
+CREATIVE DIRECTOR
+Chris Soares
+ 
+LEAD PROGRAMMER
+James Fristrom
+ 
+LEAD GAME DESIGNER
+Tomo Moriwaki
+ 
+AUDIO DIRECTOR
+Sergio Bustamante II
+ 
+LEAD ENGINEER
+Jason Bare
+ 
+LEAD ENVIRONMENT MODELER
+Alex Bortoluzzi
+ 
+PRODUCER
+Jonathan Zamkoff
+ 
+PRODUCTION ASSISTANT
+Roberto Sanchez
+ 
+GAME DESIGNERS
+Aki Akaike
+Joel Burgess
+Winnie Lee
+Eric Pavone
+Rey Samonte
+
+GAME DESIGNER/EFFECTS ARTIST
+James Chao
+ 
+GAME DESIGNER/WRITER
+Matthew B. Rhoades
+
+ENGINEER
+Jeremy Parker
+ 
+ENGINEER/PLATFORM PROGRAMMER
+Greg Taylor
+ 
+PLATFORM PROGRAMMERS
+Dmitry Belay
+Andy "The Ruggy" Chien
+Martin Donlon
+Kevin Schmidt
+Edik Sereda
+Michael Vance
+ 
+FRONT END PROGRAMMERS
+Matt Altman
+John Hall
+Petrus Santoso
+ 
+TOOLS/FRONT END PROGRAMMER
+Bob Parkinson Jr.
+ 
+LEAD ANIMATOR
+James Zachary
+ 
+ANIMATORS
+Ryan Duffin
+Jeff Hayes
+Sung-hyun Kim
+
+ANIMATOR/MODELER
+Joerg Fiederer
+ 
+CHARACTER MODELERS
+Arnold Agraviador
+Miranda Collins
+Brad Grace
+Kevin Pasko
+ 
+CHARACTER/LEVEL TEXTURE ARTIST
+Michael McMahan
+ 
+CONCEPT ARTIST
+Chuck Wadey
+ 
+ENVIRONMENT MODELERS
+Travis Eastepp
+Brian Morrisroe
+Tony Kwok
+Jake Santa Ana
+ 
+LEVEL TEXTURE ARTISTS
+Peter Chen
+Wendy Davis
+Chris Erdman
+Peter Diesen Hosfeld
+ 
+USER INTERFACE ARTIST
+Andrew Swihart
+ 
+CINEMATICS
+Jon Lauf
+Tim Smilovitch
+
+CINEMATICS TEXTURE ARTIST
+Dusty Peterson
+
+SENIOR SOUND DESIGNER
+Douglas Rappaport
+
+SOUND DESIGNER
+Kris Giampa
+
+NGL PRODUCER
+Derek Tarvin
+
+NGL ARCHITECT
+Wade Brainerd
+
+NEXT GENERATION LIBRARIES (NGL)
+Slava Dzhavadov
+Florent Gluck "GFS"
+Srini Aouie Lakshmanan
+Michael Montague
+Krassimir Touevsky
+
+ADDITIONAL PROGRAMMING
+Ryan Broner
+Paul Edelstein
+Asen Kovachev
+Matthias Schill
+
+ADDITIONAL ART
+Allan Cabal
+Christopher Peacock
+Letty Samonte
+Eliot Cail-Sirota
+Diego Torroija
+Casto Vocal
+Michael Wikan  
+
+ADDITIONAL SOUND
+Tom Hays
+
+QUALITY ASSURANCE LEADS
+Al Barasch
+Sean Johnson
+
+QUALITY ASSURANCE TESTERS
+Ian Doss
+Marc Droudian
+
+ON-SITE ACTIVISION TESTERS
+Carlos Monroy
+Hans Wakelin
+
+
+PUBLISHED BY 
+Activision Publishing, Inc.
+
+PRODUCER
+Matt Powers
+
+ASSOCIATE PRODUCER
+Brian Pass
+
+PRODUCTION COORDINATOR
+Jay Gordon
+
+SENIOR PRODUCER
+Marc Turndorf
+
+VICE PRESIDENT NA STUDIOS
+Murali Tegulapalle
+
+STORY WRITTEN BY
+T.Q. Jefferson
+Matt Powers
+Marc Turndorf
+
+EXECUTIVE VICE PRESIDENT
+WORLD WIDE STUDIOS
+Larry Goldberg
+
+DIRECTOR OF MARKETING
+John Heinecke
+
+MARKETING ASSOCIATE
+Matt Geyer
+
+TRADE MARKETING MANAGER
+Elisabeth Noyes
+
+VICE PRESIDENT OF MARKETING
+Tricia Bertero
+
+EXECUTIVE VICE PRESIDENT
+GLOBAL PUBLISHING AND BM
+Kathy Vrabeck
+
+PUBLICIST
+Lisa Fields
+
+LEGAL
+Michael Walker
+
+V.P., CREATIVE SERVICES
+Denise Walsh
+
+Mgr., CREATIVE SERVICES
+Jill Barry
+
+ADDITIONAL DESIGN
+Trey Watkins
+
+LOCALIZATION PRODUCER
+T.Q. Jefferson
+
+BUSINESS AFFAIRS
+Kelly D’Angelo
+
+QUALITY ASSURANCE
+
+PROJECT LEAD 
+Henry Peter Villanueva
+
+SENIOR PROJECT LEADS
+Juan Valdez
+Marilena Rixford
+
+QA MANAGER, XBOX TESTING
+Sam Nouriani
+
+FLOOR LEAD/DATABASE MANAGERS
+Saam “Ricky Roma” Shabahang
+Lip Ho
+
+QA TESTERS
+Ian "IZA" Flores
+Keefe Kwan
+Mike "Malibu" Muravez
+Ryan "Cypher" Ramsey
+Christopher "Chief Geek" Sobrito
+Timothy "T Diddy" Toledo
+Lip Ho
+Jason Jackson
+Matt Conley
+Jerrod Jenkens
+Ricjuane Jenkins
+Leonel Zuinga
+Paul Fortin
+Hunter Phelan 
+Terry Winston 
+Daniel Jawed
+Derek Faraci
+Marc Villanueva
+Edward Vernon
+Drew Koupal
+Vicente Sison III
+Frank So
+Jeffry Moxley
+Frank DiModica
+Nick Valencia
+Hubert Cheng
+Mishelle Moross 
+Jessie Rutowski 
+Kenneth Hartman
+Ryan Ramsey
+Jason Sylvester
+
+CUSTOMER SUPPORT
+
+CS MANAGER
+Bob McPherson
+
+CS INFORMATION/ESCALATION LEAD
+Rob Lim 
+
+CS PHONE LEAD
+Gary Bolduc
+
+CS EMAIL LEAD
+Michael Hill
+
+
+VOICE TALENTS
+
+Spider-Man/Peter Parker
+Tobey Maguire
+
+Green Goblin/Norman Osborn
+Willem Dafoe
+
+Tour Guide
+Bruce Campbell
+
+Harry Osborn
+Josh Keaton
+
+Mary Jane
+Cat O'Connor
+
+Vulture
+Dwight Schultz
+
+Shocker
+Michael Beattie
+
+Scorpion
+Mike McColl
+
+J. Jonah Jameson
+Jay Gordon
+
+Kraven
+Peter Lurie
+
+Voice over recorded at
+Woodholly Studios
+Hollywood, CA
+ 
+
+SONY PICTURES INC. 
+
+Spider-Man Production 
+Sam Raimi
+Laura Ziskin 
+Grant Curtis
+Tracey Hill 
+
+Spider-Man Theatrical 
+Sound Design 
+Stephen Hunter-Flick 
+
+Sony Pictures 
+Consumer Products 
+Mark Caplan
+Eric Thomsen 
+Laetitia May
+Paige Brown 
+
+
+MARVEL ENTERPRISES
+www.marvel.com 
+
+Special Projects 
+Mike Farah 
+
+Legal Affairs 
+Seth Lehman 
+
+Sr. VP Consumer Products
+Promotions and Media Sales 
+Russ Brown 
+
+Special Thanks 
+Ben Abernathy 
+Axel Alonso 
+Bill Jemas 
+Joe Quesada 
+Andrew Leibowitz 
+Avi Arod 
+
+Spider-Man and 
+Green Goblin Concept Suits by
+Alex Ross and Dave Williams 
+www.alexrossart.com 
+
+
+MUSIC
+
+Music Composed and Conducted By
+Michael McCuistion
+
+Principle Orchestrator
+Nerida Tyson-Chew
+
+Additional Orchestration
+Larry Rench
+
+Recorded at 
+Smecky Studio in
+Prague, Czech Republic
+
+Engineer and Coordinator
+Juraj Durovic 
+
+Music Preparation
+Greg Ellis Music
+
+Synthesizer Programming
+Michael McCuistion
+
+Music Mixer
+Mark Mattson
+
+Music Support Services
+Paul Chew
+Katherine Dixon
+David Wilson
+
+ADDITIONAL SOUND DESIGN
+Keith Arem (PCB Productions)
+
+ADDITIONAL CINEMATICS
+Blur
+
+BLUR STUDIO INC. 
+
+Creative Director/Editor
+Tim Miller
+
+CG Supervisor
+Aaron Powell
+
+CG Producer
+Sherry Wallace
+
+Animation Team
+Tom Dillon
+Sam Gebhardt
+Asier Lavina
+Marlon Nowe
+
+Concept Work/ Storyboards
+Chuck Wojtkiewicz
+
+Green Goblin Model Courtesy of Blur Studio
+
+FORWARD NEVER STRAIGHT PRODUCTIONS
+
+Studio President
+Chris Hepburn
+
+Studio Engineer
+Mattt Stubbs
+
+PACKAGING AND MANUAL
+
+Ignited Minds, LLC
+Belinda M. Van Sickle,
+Erik Jensen
+
+
+~bink_logo
+
+Uses Bink Video. 
+Copyright © 1997-2002 
+by RAD Game Tools, Inc. 
+
+
+Dolby and the double-D symbol 
+are registered trademarks of 
+Dolby Laboratories.   
+© 2002 Dolby Laboratories.  
+All rights reserved.
+
+
+MetLife® and the MetLife® Building 
+are the exclusive property of  
+The Metropolitan Life Insurance Company, 
+used under license
+
+
+TREYARCH SPECIAL THANKS TO
+
+Don Likeness
+Eric Steinmann
+Christopher A. Busse
+Nick Doran
+Nigel Mills
+Charles Tolman
+Pascal Sahuc
+Christian Busic
+Larry Forkner
+John De Lancie
+Larry Hummel
+Tom Lawless
+Jane McDaniel
+Steve Nafshun
+Bethany Rhoades
+Tara Strong
+John Andrunas
+Doris Argoud
+Shawn Capistrano
+Faye Ku
+Terri McAlpine
+Kevin Tomatani
+Rose Villasenor
+Paul Whitehead
+Brenda Alfakey
+Gagandeep Sidhu
+Brooke Slavik
+Neversoft
+
+
+ACTIVISION THANKS
+
+Mom
+Dad
+Neversoft
+Chad Findley
+Bobby Kotick
+Brian Kelly
+Gene Bahng
+Brian Bright 
+Nicholas Favazza
+Nathan Lum
+George Rose
+Stacey Drellishak
+Alex Coleman
+Omari Valentine
+Johnny Rossner
+Benjamin Deguzman
+Jeanine Hayes
+Clarence Bell
+Jennifer Vitiello
+Geoff Olsen
+Sam Nouriani
+Marco Scataglini
+Chris Keim
+Kelly Wand
+Chris Archer
+Eric Grossman
+Christian Astillero
+Seth and Rachel Flaum
+Joe Shackleford
+Jim Summers
+Jason Wong 
+Indra Gunawan
+Suzy Luko
+Catharine Stebbins
+Tanya Langston
+Kristina Starlin
+Bobby Berger
+Bryant Bustamante
+Murali Tegulapalle
+Jeanine Hayes
+Tim Vanlaw
+Nadine Theuzillot
+Marco Scataglini
+Chris Keim
+Neil Barizo
+Jason Kim
+Willie Bolton
+Jennifer Vitiello
+Chad Siedhoff
+Brian Clarke
+The Rubel Twins
+Nicole Willick
+Marilena Rixford
+Kelly D’Angelo
+Mike Larson
+Greg Goldstein
+Dave and Michelle Popowitz
+Christine Potter
+Alexander Watkins
+Henry Villaneueva
+Trey Smith
+Steve Rosenthal
+Kip and Cathy Bollin
+Greg and Fiona Rubel
+Dave Stohl
+David Dalzell
+James Mayeda
+Blaine “Doug” Christine
+Peter “Scooter” Muravez
+Stacy Sooter
+Lindsay Hayes
+Michael Hand
+Ryan and Taylor Pass
+Shelley Oberlin
+Maggie
+
+
+TREYARCH CHEERS TO
+
+Stan Lee
+Steve Ditko
+Sam Raimi
+Mom & Dad
+Heather Anderson
+Angelique, Doug/Rob, and Brian
+Angry Panda
+Sir Argyle of Sock
+The Cuse
+Dr. Dave - The Windy Guy
+Ed Del Castillo
+Fluffy_White_Bunny 
+(for taking the red pill)
+James & Dianne Fristrom
+Friends at Gaming-Age
+Gloria Garcia
+Ripp T. Griffon
+Kyle Houchens for turning me digital
+Azure Wei Ju
+The Kennedy Family
+Mom Pam Koeul for the donuts
+Candie Kwok
+The Labmasters
+Emma Lai
+The Lee & Hewish Families
+Sean McCloskey
+(for sunny days climbing fences 
+you will be missed)
+Frankie Manning
+Joe, Katie, Isabel, and The Mumper Family
+Lillian "Yu Yam Guppy" Opolski
+Margaret "Supa Kitty" Opolski
+Angel & Ricky Palma
+Catherine Pascual
+The Shirley Family
+Jen Sieck
+Tati, Gato & Gata
+Jessica-Anne Torseld
+The Woodbury Crew
+Kevin Yockey
+Tami Hellewell Zachary
+The Zachary Family
+The Zamkoff Family
+
+
+www.treyarch.com
+

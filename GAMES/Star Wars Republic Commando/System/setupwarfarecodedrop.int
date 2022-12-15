@@ -1,0 +1,75 @@
+[Setup]
+LocalProduct=Unreal Engine
+DefaultFolder=C:\UnrealEngine
+ReadMe=Help\ReadMe.htm
+SetupWindowTitle=Unreal Engine Setup
+AutoplayWindowTitle=Unreal Engine Options
+ProductURL=http://www.unreal.com/
+VersionURL=http://unreal.epicgames.com/versions.htm
+Developer=Epic Games, Inc.
+DeveloperURL=http://www.epicgames.com/
+Logo=Help\UnrealTournamentSetupLogo.bmp
+License=License.int
+
+[General]
+PlayLevelCommand=&Play this Unreal level
+OpenLinkCommand=&Open this Unreal link
+InstallModuleCommand=&Install this Unreal module
+EditLevelCommand=&Edit this Unreal level
+
+[UnrealGameContentGroup]
+Caption=Game Content
+Description=Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space.
+
+[GameGroup]
+Caption=Unreal Game
+Description=Installation is required.
+
+[NetGamesGroup]
+Caption=NetGames USA Stat Utils
+Description=These tools can be used to generate HTML statistics about your Unreal Engine games. You can also view your global ranking online!
+
+[DirectXGroup]
+Caption=DirectX 8.1
+Description=Optional Microsoft DirectX 8.1 drivers for enhanced graphics, sound, and joystick support.
+
+[OpenALGroup]
+Caption=OpenAL
+Description=OpenAL sound drivers required for audio.
+
+[EditorGroup]
+Caption=Unreal Editor
+Description=Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional.
+
+[PlayShortcut]
+Caption=Play Unreal
+
+[SafeModeShortcut]
+Caption=Unreal Safe Mode
+
+[EditorShortcut]
+Caption=Unreal Editor
+
+[DocumentationShortcut]
+Caption=Documentation
+
+[WebShortcut]
+Caption=Unreal Web Page
+
+[NetGamesShortcut]
+Caption=NetGames USA
+
+[LocalStatsShortcut]
+Caption=View my local game stats. [ngStats]
+
+[GlobalStatsShortcut]
+Caption=View my global game stats. [ngWorldStats]
+
+[MPlayerShortcut]
+Caption=Play Unreal on mplayer.com
+
+[HeatShortcut]
+Caption=Play Unreal on HEAT
+
+[UninstallShortcut]
+Caption=Uninstall Unreal 

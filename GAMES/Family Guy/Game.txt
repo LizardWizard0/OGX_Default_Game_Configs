@@ -1,0 +1,41 @@
+// vim: ts=8 sw=8 sts=8 et ft=cpp
+
+COLLISION       164   64      64      // No-Climb
+COLLISION       20    88      0       // Grass
+COLLISION       3255  207     55      // Gravel
+COLLISION       565   42      9       // Wood (Rough) - half of Wood (Polished)
+COLLISION       6130  83      18      // Wood (Polished)
+COLLISION       725   97      216     // Stone
+COLLISION       100   0       179     // Metal (Solid)
+COLLISION       110   0       89      // Metal (Hollow) - half of Metal (Solid)
+COLLISION       120   255     255     // Glass
+
+NAME                    XBOXPROJECT             // Name of game
+WAD                     99_99                   // First WAD to read
+START_LEVEL             10_01                    // WAD to load for "New Game"
+LOAD_TO_START_LEVEL	OFF			// run straight to the start level bypassing the UI
+LANGUAGE                ENGLISH                 // Territory or language
+STRATDBGPATH            D:\StratBin\
+PAL                     OFF                     // PAL or NTSC
+DEBUG_CHEATS            OFF                      // Are debug cheats on/off
+DEBUG_TEXT              OFF                      // Display debug text/gfx
+DEBUG_FLY               OFF                     // Fly-through mode on/off
+LEVEL_SELECT            OFF                      // Level select on/off
+DEMO_LEVEL_SELECT       OFF                     // Only show * levels in level select
+SOUND                   ON                      // Sound on/off
+DEBUG_SOUND		OFF			// Debug Sound info
+HEAPSIZE                18.5                    // Size of game heap in MB
+GEOMSTRATS              0                       // Number of geometry strats
+PARTICLES               8192                    // Number of particles
+SCREENPRINT_YPOS        -220                    // ASL screenprint start y position
+ASSERT_YPOS             -100                    // ASL assert start y position
+KEYCODE                 BA                      // Region Code from Xbox
+PRODUCT_NUMBER          XBOX-12345              // Product Code from Xbox
+VIDEO_ALLOC_METHOD      STRAT
+PSP                     ON
+DISABLE_PSP             OFF                     // xbox mode
+ARGONAUT_LOGO           ON
+DEMO_BUILD		OFF
+MUSIC_TOGGLE		OFF
+VIEWER_APPROVAL		OFF			// for character or animation viewer approval access
+SAVE_NAME               FAMILY GUY

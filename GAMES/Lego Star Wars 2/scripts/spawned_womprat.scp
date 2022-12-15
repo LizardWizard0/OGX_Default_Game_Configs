@@ -1,0 +1,93 @@
+state Base {
+	Conditions {
+		if NumInSetAlive "16" > 3 and
+		if OffScreenTimer > 1 goto Kill
+	}
+	Actions {	
+		//SetTaggable for Map.
+		SetTaggable "FALSE"
+		AddToSet "16"
+		SetSide "Baddie"
+		SetLastAttacker "attacker=player"
+		SetState "TakenHit"
+	}
+}
+
+state ChooseLocator {
+	Conditions {
+		if GotLocator == 1 goto GoToLocator
+		if AlwaysTrue == 1 goto Wander
+	}
+	Actions {	
+		SetHitpoints "2"
+		GetLocatorFromGroup "name=WompRat" "random"
+	}
+}
+
+state GoToLocator {
+	Conditions {
+		if NumInSetAlive "16" > 3 and
+		if OffScreenTimer > 1 goto Kill
+	}
+	Actions {	
+		GoToLocator "WALK"
+		SetState "Nibble"
+	}
+}
+
+state Wander {
+	Conditions {
+		if NumInSetAlive "16" > 3 and
+		if OffScreenTimer > 1 goto Kill
+		
+		if Timer > 20 goto Nibble
+	}
+	Actions {	
+		ResetTimer "mintime=5" "maxtime=10"
+		FollowPath "WALK"
+	}
+}
+
+state Nibble {
+	Conditions {
+		if NumInSetAlive "16" > 3 and
+		if OffScreenTimer > 1 goto Kill
+		
+		if Timer > 20 goto ChooseLocator
+	}
+	Actions {	
+		ResetTimer "mintime=5" "maxtime=10"
+	}
+}
+
+state TakenHit {
+	Conditions {
+		if Timer > 3 and
+		if LastAttackerRange > 2.5 goto WaitForAWhile
+	}
+	Actions {	
+		ResetTimer
+		MoveAwayFromLastAttacker "99"
+	}
+}
+
+state WaitForAWhile {
+	Conditions {
+		if Timer < 3 and 
+		if LastAttackerRange < 1.5 goto TakenHit
+		
+		if Timer > 3 goto ChooseLocator
+	}
+	Actions {	
+		ResetTimer
+		FacePlayer
+	}
+}
+
+state Kill {
+	Conditions {
+	}
+	Actions {	
+		Kill
+	}
+}

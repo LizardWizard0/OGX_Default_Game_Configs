@@ -1,0 +1,14 @@
+<DebugCulling>
+
+	<!-- Nodes to cull on the house level -->
+	<01_HOUSE>
+		<Cull>51099</Cull>
+		<Cull>52239</Cull>
+	</01_HOUSE>
+
+	<08_BOAT>
+		<Cull>51098</Cull>
+		<Cull>51157</Cull>
+	</08_BOAT>
+
+</DebugCulling>

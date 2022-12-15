@@ -1,0 +1,99 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+Actor Panaka A_Panaka_Tat_01
+
+InvincibilityOn Panaka
+FadeUp
+
+
+Script "Panaka Dialogue1"
+{
+	WaitUntilEnteredRegion Obi "panaka_qs_trigger_01"
+	Event "Make Panaka Follow Obi"
+	SayLine Panaka "/CaptainPanaka_842/Obi-Wan!  Down here!"
+	Pause 4.0
+	SayLine Panaka "/CaptainPanaka_843/Over here..."
+}
+
+
+Script "Panaka Obi Conversation1"
+{
+	Actor POTusken1
+	Actor POTusken2
+
+	WaitUntilGenerated "A_z_UberGen_Tusken_Pursuit_01"  POTusken1
+	WaitUntilGenerated "A_z_UberGen_Tusken_Pursuit_01"  POTusken2
+	WaitUntilNear Panaka Obi 4.0
+
+	WaitUntilKilled POTusken1
+	WaitUntilKilled POTusken2
+	SayLine Panaka "/CaptainPanaka_844/I took a shot on the head.  Can you help me out?"
+	// InvincibilityOff Panaka
+	// WaitUntilNudged Panaka
+	Pause 1
+	// InvincibilityOn Panaka
+
+	SayLine Obi "/Obi-WanKenobi_845/There you go."
+	Pause 1
+	SayLine Panaka "/CaptainPanaka_846/Thank you, and now if I many have a few choice words about you leaving the ship unguarded!"
+	Pause 0.5
+	SayLine Obi "/Obi-WanKenobi_847/What?!!  YOU'RE the Queen's bodyguard!"
+	Pause 0.6
+	SayLine Panaka "/CaptainPanaka_848/There's no time for that.  The Queen has been kidnapped by those Sand People!  Her handmaiden is missing as well."
+	Pause 0.7
+	SayLine Obi "/Obi-WanKenobi_849/We'll have to call Master Qui-Gon back from Mos Espa."
+	Pause 0.5
+	SayLine Panaka "/CaptainPanaka_850/We'll nothing of the kind!  You and I are going after those things.  Get your weapons together."
+	Pause 0.8
+	SayLine Obi "/Obi-WanKenobi_851/I need only my lightsaber."
+	Pause 0.6
+	SayLine Panaka "/CaptainPanaka_852/So be it."
+	Pause 0.5
+}
+
+
+
+Script "Panaka And Obi Take Down Some Tuskens"
+{
+	Actor LastTusken
+	WaitUntilGenerated "A_z_UberGen_Tusken_Attack_01"  LastTusken
+	WaitForScriptToEnd  "Panaka Obi Conversation1"
+	WaitUntilNear Panaka Obi 4.0
+	Pause 0.5
+	WaitUntilKilled LastTusken
+	SayLine Panaka "/CaptainPanaka_855/What are these things, Obi-Wan?"
+	Pause 1.0
+	SayLine Obi "/Obi-WanKenobi_856/I'm not sure."
+	Pause 0.8
+	SayLine Panaka "/CaptainPanaka_827/We'll use this tracker to find her.  There's a homing implant in her bracelet for just such an occasion."
+	Pause 0.5
+
+	TakeControlOf Panaka 0.55
+	RunToNode Panaka "panaka_01"
+	WaitUntilEnteredRegion Obi "canyon_head_ambush"
+	ReturnControlTo Panaka
+
+	WaitUntilEnteredRegion Obi "pass_ambush_trigger_01"
+	TakeControlOf Panaka 0.55
+	SayLine Panaka "/CaptainPanaka_837/"
+	RunToNode Panaka "panaka_02"
+
+	WaitUntilEnteredRegion Obi "panaka_follow"
+	ReturnControlTo Panaka
+	SayLine Panaka "/CaptainPanaka_834/"
+
+	WaitUntilEnteredRegion Obi "roadblock_trigger"
+	TakeControlOf Panaka 0.55
+	SayLine Panaka "/CaptainPanaka_831/"
+	RunToNode Panaka "panaka_03"
+
+	WaitUntilKilled "A_Tusken_rifle_10"
+	WaitUntilKilled "A_Tusken_rifle_23"
+	WaitUntilKilled "A_Tusken_rifle_24"
+	WaitUntilKilled "A_Tusken_rifle_25"
+	WaitUntilKilled "A_Tusken_rifle_26"
+
+	ReturnControlTo Panaka
+}

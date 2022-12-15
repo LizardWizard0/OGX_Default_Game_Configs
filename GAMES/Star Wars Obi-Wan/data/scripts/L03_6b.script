@@ -1,0 +1,661 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+FadeUp
+
+loaddlg SquadLeader.dlg
+
+SetDefaultSurface 08_13fnttop.sur
+
+/// MUSIC ///
+
+AddMusic l08_m_intro1.wav Suspense
+AddMusic l08_m_intro2.wav Suspense
+AddMusic m_suspense_04.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_15.wav Suspense 
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension 
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_victory_03.wav Battle
+AddMusic m_victory_04.wav Battle
+
+AddBattleLoop  m_battle_05_lp.wav  m_battle_05_win.wav  m_battle_05_lose.wav
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+startMusicManager
+
+ConsoleCommand "thinwaterfalls"
+ConsoleCommand "thinwaterfalls"
+
+/// GLOBAL VARS ///
+
+int FinalFight 0
+int DoItNow 0
+int AddendumAlreadyDisplayed 0
+
+///////////////////////
+/// BEGIN FUNCTIONS ///
+///////////////////////
+
+/// ENEMY FUNCTIONS ///
+
+function "RuntoNodeControl" (Actor Roadrunner, Node goto_Roadrunner)
+{
+	takepartialcontrolof Roadrunner
+	runtonodeandwait Roadrunner goto_Roadrunner
+    returncontrolto RoadRunner
+    addpatrolstate RoadRunner
+}
+
+function "EnterRGNForceTarget" (Actor Anubis, Region KillObiBox)
+{
+	WaitUntilEnteredRegion Obi KillObiBox
+	ForceTarget Anubis Obi
+	WaitUntilExitedRegion Obi KillObiBox
+	ForceTargetOff Anubis Obi
+	loop
+}
+
+function "EnterRGNandRunTo" (Actor Camby, Node goto_Camby, Region RGN_Camby)
+{
+	takepartialcontrolof Camby
+	waituntilenteredregion obi RGN_Camby
+	runtonodeandwait Camby goto_Camby
+	returncontrolto Camby
+    addpatrolstate Camby
+}
+
+function "AmbushObi" (actor Ares, node goto_Ares, int AresPatrol)
+{
+    setpatroltypes Ares AresPatrol
+    waituntilnear Ares Obi 30.0
+    Takepartialcontrolof Ares
+    runtonodeandwait Ares goto_Ares
+    returncontrolto Ares
+    forcetarget Ares Obi
+}
+
+/// TELEPORT FUNCTIONS ///
+
+function "BeamMeUpAndPatrol" (actor Ichiro, refpos refpos_Ichiro, region RGN_Ichiro, int numIchiro, float floatIchiro)
+{
+    childscript "ResetAtFinalStart"
+    {
+        waituntilequal DoItNow 1
+        teleport Ichiro refpos_Ichiro
+        pause 0.25
+        setpatroltypes Ichiro numIchiro
+    }
+    childscript "Normalcy"
+    {
+        waituntilenteredregion obi RGN_Ichiro
+        pause floatIchiro
+        teleport Ichiro refpos_Ichiro
+        pause 0.25
+        setpatroltypes Ichiro numIchiro
+    }
+    waitforall
+}
+
+/////////////////////
+/// END FUNCTIONS ///
+/////////////////////
+
+script "LAME"
+{
+    lockdoor A_03_6_door02_01
+}
+
+script "MissionObjectiveAddendum" 12
+{
+    waituntilnear obi A_naboo_h20switch_01 2.5
+    
+    if (= AddendumAlreadyDisplayed 0)
+    {
+        NewMissionObjective 1 "/Mission17Objective2/Shut down the waterfall in order to access the stairs to the palace."
+        set AddendumAlreadyDisplayed 1
+        removegroup 12
+    }        
+}
+
+script "Checkpoint01" 20
+{
+    SetStartPosition 0
+    waituntilenteredregion obi RGN_Start02
+    set DoItNow 1
+    SetStartPosition 1
+    removegroup 20
+    removegroup 21
+    removegroup 11
+    save
+}
+
+script "TheEnd"
+{
+	CreateAudioCue snd_waterfallloop l03_6b.aud LoopingAmbience_11 RP_waterfall 
+
+    waituntilnudgedby A_naboo_h20switch_01 obi
+    
+    pause 0.5
+    
+    StopAudioCue snd_waterfallloop 0.1
+    PlayAudioCue l03_6b.aud PointSoundOneshot_08 RP_waterfall
+    
+    ParticleGenOff A_Waterfall1p4_h24_01
+    ParticleGenOff A_Waterfall1p4_h24_02
+    
+    set FinalFight 1
+    
+    opendoor A_03_6_trog2_01
+
+    changeregionheight RGN_Water13 -5.5 15.0
+    
+    waituntilenteredregion obi RGN_Load_L03_7a
+    
+    missionobjectiveachieved 1
+    
+    begincutscene
+    
+    removeactor A_AssassinDroid-Mace_02
+    removeactor A_Battledroid-Infantry_06
+    removeactor A_Battledroid-Infantry_07
+    removeactor A_Battledroid-Infantry_08
+    removeactor A_Battledroid-Infantry_09
+    removeactor A_Battledroid-Infantry_10
+    
+    teleport obi teleport_obi_endcutscene
+    
+    cameratrack camera_end obi
+    
+    StopMusicManager
+    playflourish cut_3_6bextro_m.WAV
+
+    unequipweapon Obi
+    walktonode obi goto_obi_theend
+    
+    pause 4.0
+    
+    fadedownandwait
+    endcutscene
+    
+    nextlevel L03_7a
+}
+
+/// MISC ENVIRONMENT SCRIPTS ///
+
+script "ElevatorOnOff"
+{
+    actor Elevate A_03_6b_elevator_01
+    
+    script "Loopy"
+    {
+        waituntilenteredregion obi RGN_ElevatorTrigger
+        moveelevatortofloor elevate 1
+        waituntilarrivedatkeyframe elevate 1
+        pause 3.0
+        moveelevatortofloor elevate 0
+        loop
+    }
+}
+
+script "BitchAssTesterDoor"
+{
+    waituntilenteredregion obi RGN_OpenSesame01
+    opendoor A_03_6_trog2_01
+}
+
+//////////////////
+/// BEGIN MAIN ///
+//////////////////
+
+//////////////////////////////
+/// BEGIN BRIDGE ENCOUNTER ///
+//////////////////////////////
+
+script "Bridge_Encounter" 11
+{
+    
+    actor DeerInHeadlights1 A_naboo-soldier_2_01
+    actor DeerInHeadlights2 A_naboo-soldier_3_01
+    actor Cannon01 A_Battledroid-Cannon_01
+
+    Actor Zone71_BAD01
+    actor Starfighter01
+    
+    takecontrolof Cannon01
+    
+    childscript "BridgeExplodes"
+    {
+        triggerubergenandwait A_UG_Starfighter01 Starfighter01
+	  childscript {
+	  	pause 1.0
+        	playaudiocue Starfighter01 DSFAttack
+	  }
+        pause 0.1
+        fireat Starfighter01 A_09_bridge_explode_01
+        pause 0.25
+        fireat Starfighter01 A_09_bridge_explode_01
+        pause 0.25
+        fireat Starfighter01 A_09_bridge_explode_01
+    }
+    childscript "StarFighterMusicCue"
+    {
+        pause 1.0
+        playflourish m_tension_14.wav
+    }
+    childscript "BridgeExplosion"
+    {
+        pause 3.1
+        
+        child playanimationandwait A_09_bridge_explode_01 09_bridge_explode.anim
+        child kill A_09_bridge_explode_01
+        waitforall
+        
+        returncontrolto Cannon01
+        kill DeerInHeadlights1
+        kill DeerInHeadlights2
+    }
+    waitforall
+}
+
+script "MosesSpeaks" 7
+{
+    Actor Moses A_Naboo-Resistance2_01
+    
+    setteam Moses 0
+    
+    takecontrolof Moses
+    runtonode Moses goto_nabooSoldier03_meetObi
+    WaitUntilnear Obi Moses 5.0
+    StopActions Moses
+    LookAt Moses Obi
+    SayLine Moses "/female1_434/Thank goodness you're here!  The Republic hasn't forgotten us!"
+    SayLine Moses "/female1_435/We can't break the Federation's blockade on the bridge."
+    SayLine Moses "/female1_439/We've got to find a way to the other side by going around..."
+    sayline Moses "/female1_442/Keep your eyes out for more droids.  They're everywhere."
+    
+    setteam Moses 5
+    
+    ReturnControlTo Moses
+    followstate Moses Obi 5.0
+}
+
+function "InvincibleSwitch" (actor theTick)
+{
+    invincibilityon theTick
+    waituntilnear Obi theTick 15.0
+    invincibilityoff theTick
+}
+
+function "TheRock" (actor daRock)
+{
+    randomint num_daRock 1 2
+    
+    invincibilityon daRock
+    
+    if (= num_daRock 1)
+    {
+        forcetarget daRock A_09_rock4_01
+    }
+    if (= num_daRock 2)
+    {
+        forcetarget daRock A_09_rock4_01
+    }
+    
+    waituntilnear Obi daRock 25.0
+    forcetargetoff daRock
+    invincibilityoff daRock
+}
+
+script "Group01_Enemies" 1
+{
+    call TheRock (A_Battledroid-Security_08)
+    call TheRock (A_Battledroid-Security_09)
+    call TheRock (A_Battledroid-Security_12)
+}
+
+script "Group08_Enemies" 8
+{
+    call InvincibleSwitch (A_naboo-soldier_3_02)
+}
+    
+script "Group09_Enemies" 9
+{
+    actor NabooGren01 A_naboo-grenade_01
+    
+    call InvincibleSwitch (NabooGren01)
+    
+    waituntilstateactivated NabooGren01 Idle
+    
+    waituntilnear NabooGren01 Obi 5.0
+    
+    if (= AddendumAlreadyDisplayed 0)
+    {
+        takecontrolof NabooGren01
+        runtonodeandwait NabooGren01 goto_naboogren01
+        waituntilnear NabooGren01 Obi 8.0
+        turntonodeorientationandwait NabooGren01 goto_naboogren01
+        sayline NabooGren01 "/SquadLeader_1494/We are trying to get across this bridge to the drain room up there. There is a secret passage way under the pools. We can access it by draining the pool." PointForward
+        NewMissionObjective 1 "/Mission17Objective2/Shut down the waterfall in order to access the stairs to the palace."
+        set AddendumAlreadyDisplayed 1
+        returncontrolto NabooGren01
+    }
+    
+    followstate NabooGren01 Obi 5.0
+}    
+
+
+////////////////////////////
+/// END BRIDGE ENCOUNTER ///
+////////////////////////////
+
+script "STAPattack"
+{
+    actor STAP01
+    waituntilenteredregion obi RGN_StapAttack
+    triggerubergenandwait A_UG_STAP_01 STAP01
+    
+    script "FiringLoop"
+    {
+        fireat STAP01 Obi
+        pauserandom 0.2 0.6
+        loop
+    }
+    
+    waituntilkilled STAP01
+    endscript "FiringLoop"
+}
+
+/// BADs ON THE UPPER EAST SIDE OF THE PALACADE ///
+
+script "Group02_Enemies" 2
+{
+    setpatroltypes A_Battledroid-Infantry_03 1
+    setpatroltypes A_Battledroid-Infantry_04 1
+    setpatroltypes A_Battledroid-Infantry_24 1
+    setpatroltypes A_battledroid-kamikaze_02 3
+    setpatroltypes A_Battledroid-Security_11 2
+}
+
+script "Group03_Enemies" 3
+{
+    setpatroltypes A_battledroid-kamikaze_01 3
+
+    call AmbushObi (A_Battledroid-Security_10, goto_ambush4, 2)
+
+    script "Hostage4"
+    {
+        actor Captor4 A_Battledroid-Infantry_02
+        actor Commander4 A_Battledroid-Commander_01
+        actor Captive4 A_Naboo_Civilian_Male_1_01
+
+        SetHostageSituation Captive4 Captor4 Commander4
+        SetHostageAlertDistance Commander4 12.0
+        SetHostageAlertDistance Captor4 8.0
+    
+        setpatroltypes Commander4 2
+    
+        waituntilkilled Captor4
+        waituntilstateshutdown Captive4 BeHostage
+        takecontrolof Captive4
+        walktonodeandwait Captive4 goto_captive3
+        lookat Captive4 A_Battledroid-Infantry_05
+        playgesture Captive4 PointForward 1.0
+        sayline Captive4 "/male1_443/There are more battledroids down below."
+        stopactions Captive4
+        returncontrolto Captive4
+    }
+}
+
+/// BADs BY THE BRIDGE IN FRONT OF THE WATERFALL ///
+
+script "Group10_Enemies" 10
+{
+    call BeamMeUpAndPatrol (A_Battledroid-Infantry_27, teleport_BAD03a, RGN_TunnelBADs, 1, 0)
+    call BeamMeUpAndPatrol (A_Battledroid-Infantry_28, teleport_BAD03b, RGN_TunnelBADs, 1, 0.1)
+    call BeamMeUpAndPatrol (A_Battledroid-Infantry_29, teleport_BAD03c, RGN_TunnelBADs, 1, 0.2)
+    call BeamMeUpAndPatrol (A_Battledroid-Infantry_30, teleport_BAD03d, RGN_TunnelBADs, 1, 0.3)
+    
+    waituntilenteredregion obi RGN_TunnelBADs
+    opendoor A_05_3_door_01_02
+}
+
+script "Group04_Enemies" 4
+{
+    SetPatroltypes A_Battledroid-Infantry_05 1
+    setpatroltypes A_Battledroid-Infantry_01 3
+    
+}
+
+script "AssassinDroid1_Attack" 5
+{
+	Actor AssassinDroid01 A_AssassinDroid-Mace_01
+
+    call BeamMeUpAndPatrol (AssassinDroid01, teleport_mace02, RGN_TunnelBADs, 2, 0.4)
+
+	WaitUntilEnteredRegion Obi RGN_trig_AssassinDroid_roll
+	TakePartialControlOf AssassinDroid01
+	RuntoNodeandwait AssassinDroid01 goto_AssassinDroid01
+    returncontrolto AssassinDroid01
+}
+
+/// SETPATROL TO BADS AFTER CLIMBING UP FROM WATERFALL AREA ///
+
+setpatroltypes A_Battledroid-Security_01 3
+setpatroltypes A_Battledroid-Security_02 3
+setpatroltypes A_Battledroid-Security_03 3
+setpatroltypes A_Battledroid-Security_04 3
+
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_11, teleport_BAD01a, RGN_Start02, 2, 0)
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_12, teleport_BAD01b, RGN_Start02, 2, 0.1)
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_13, teleport_BAD01c, RGN_Start02, 1, 0.2)
+
+call BeamMeUpAndPatrol (A_AssassinDroid-Mace_02, teleport_Mace01, RGN_trig_AssassinDroid_roll, 1, 0)
+call BeamMeUpAndPatrol (A_Battledroid-Sniper_02, teleport_GrenBAD01, RGN_trig_AssassinDroid_roll, 2, 0.1)
+call BeamMeUpAndPatrol (A_Battledroid-Sniper_03, teleport_GrenBAD02, RGN_trig_AssassinDroid_roll, 2, 0.1)
+call BeamMeUpAndPatrol (A_Battledroid-Sniper_01, teleport_Sniper01, RGN_trig_AssassinDroid_roll, 1, 0.3)
+
+/// SETPATROL TO BADS IN THE DOME ///
+
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_17, teleport_BAD02a, RGN_trig_UG_08, 1, 0)
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_18, teleport_BAD02b, RGN_trig_UG_08, 1, 0.1)
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_19, teleport_BAD02c, RGN_trig_UG_08, 1, 0.2)
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_20, teleport_BAD02d, RGN_trig_UG_08, 1, 0.3)
+call BeamMeUpAndPatrol (A_Battledroid-Infantry_21, teleport_BAD02e, RGN_trig_UG_08, 1, 0.4)
+    
+/// STAIRWAY ATTACKS ///
+
+setpatroltypes A_Battledroid-Infantry_25 3
+setpatroltypes A_Battledroid-Infantry_26 3
+
+setpatroltypes A_Battledroid-Infantry_15 2
+setpatroltypes A_Battledroid-Infantry_16 2
+
+//////////////////////
+////// PART III //////
+//////////////////////
+
+function "EndAttack" (actor EndAttacker, node goto_EndAttacker)
+{
+    waituntilequal FinalFight 1
+    clearaiboundary EndAttacker
+    takepartialcontrolof EndAttacker  
+    runtonodeandwait EndAttacker goto_EndAttacker
+    returncontrolto EndAttacker
+    setpatroltypes EndAttacker 1
+}
+
+call EndAttack (A_Battledroid-Infantry_06, goto_FinalFight)
+call EndAttack (A_Battledroid-Infantry_07, goto_FinalFight)
+call EndAttack (A_Battledroid-Infantry_08, goto_FinalFight)
+call EndAttack (A_Battledroid-Infantry_09, goto_FinalFight)
+call EndAttack (A_Battledroid-Infantry_10, goto_FinalFight)
+
+//////////////////////////////
+/// BEGIN GROUPING SCRIPTS ///
+//////////////////////////////
+
+function "ExplorationMarkerRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_01, 32)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_02, 31)
+
+/// ENEMY COUNT ///
+
+script "GroupCount01" 1
+{
+    int NumKilled_Group01 0
+    
+    function "RemoveGroupCount01" (actor Groupie01)
+    {
+        waituntilkilled Groupie01
+        increment NumKilled_Group01 1
+    }
+    
+    call RemoveGroupCount01 (A_Battledroid-Security_09)
+    call RemoveGroupCount01 (A_Battledroid-Security_08)
+    call RemoveGroupCount01 (A_Battledroid-Security_12)
+    
+    waituntilequal NumKilled_Group01 2
+    removegroup 1
+}
+
+script "GroupCount02" 2
+{
+    int NumKilled_Group02 0
+    
+    function "RemoveGroupCount02" (actor Groupie02)
+    {
+        waituntilkilled Groupie02
+        increment NumKilled_Group02 1
+    }
+    
+    call RemoveGroupCount02 (A_battledroid-kamikaze_02)
+    call RemoveGroupCount02 (A_Battledroid-Infantry_03)
+    call RemoveGroupCount02 (A_Battledroid-Infantry_04)
+    call RemoveGroupCount02 (A_Battledroid-Infantry_24)
+    call RemoveGroupCount02 (A_Battledroid-Security_11)
+
+    waituntilequal NumKilled_Group02 3
+    removegroup 2
+}
+
+script "GroupCount03" 3
+{
+    int NumKilled_Group03 0
+    
+    function "RemoveGroupCount03" (actor Groupie03)
+    {
+        waituntilkilled Groupie03
+        increment NumKilled_Group03 1
+    }
+    
+    child call RemoveGroupCount03 (A_Battledroid-Commander_01)
+    child call RemoveGroupCount03 (A_Battledroid-Infantry_02)
+    child call RemoveGroupCount03 (A_Naboo_Civilian_Male_1_01)
+    child call RemoveGroupCount03 (A_battledroid-kamikaze_01)
+    child call RemoveGroupCount03 (A_Battledroid-Security_10)
+    
+    waituntilequal NumKilled_Group03 3
+    removegroup 3
+}
+
+script "GroupCount04" 4
+{
+    int NumKilled_Group04 0
+    
+    function "RemoveGroupCount04" (actor Groupie04)
+    {
+        waituntilkilled Groupie04
+        increment NumKilled_Group04 1
+    }
+    
+    child call RemoveGroupCount04 (A_Battledroid-Infantry_05)
+    child call RemoveGroupCount04 (A_Battledroid-Infantry_01)
+    
+    waituntilequal NumKilled_Group04 2
+    removegroup 4
+}
+
+script "GroupCount05" 5
+{
+    waituntilkilled A_AssassinDroid-Mace_01
+    removegroup 5
+}
+
+script "GroupCount06" 6
+{
+    waituntilkilled A_Battledroid-Cannon_01
+    removegroup 6
+}
+
+script "GroupCount07" 7
+{
+    waituntilkilled A_Naboo-Resistance2_01
+    removegroup 7
+}
+
+script "GroupCount08" 8
+{
+    waituntilkilled A_naboo-soldier_3_02
+    removegroup 8
+}
+
+script "GroupCount09" 9
+{
+    waituntilkilled A_naboo-grenade_01
+    removegroup 9
+}
+
+script "GroupCount10" 10
+{
+    int NumKilled_Group10 0
+    
+    function "RemoveGroupCount10" (actor Groupie10)
+    {
+        waituntilkilled Groupie10
+        increment NumKilled_Group10 1
+    }
+    
+    call RemoveGroupCount10 (A_Battledroid-Infantry_27)
+    call RemoveGroupCount10 (A_Battledroid-Infantry_28)
+    call RemoveGroupCount10 (A_Battledroid-Infantry_29)
+    call RemoveGroupCount10 (A_Battledroid-Infantry_30)
+    
+    waituntilequal NumKilled_Group10 2
+    removegroup 10
+}
+
+////////////////////////////
+/// END GROUPING SCRIPTS ///
+////////////////////////////

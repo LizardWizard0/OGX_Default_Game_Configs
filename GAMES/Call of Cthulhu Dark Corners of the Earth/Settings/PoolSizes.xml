@@ -1,0 +1,481 @@
+<PoolSizes>
+
+	<!-- The memory settings specified for the module in the default section will be used for -->
+	<!-- each module that is not specified per level -->
+
+	<!-- ======================================= TESTOPOLIS ======================================= -->
+
+	<TESTOPOLIS>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>47</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>30</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</TESTOPOLIS>
+
+
+	<!-- ======================================= MISC01_CITY_OF_DREAMS_01 ======================================= -->
+	<MISC01_CITY_OF_DREAMS_01>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>11</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>10</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</MISC01_CITY_OF_DREAMS_01>
+
+	<!-- ======================================= MISC01_CITY_OF_DREAMS_02 ======================================= -->
+	<MISC01_CITY_OF_DREAMS_02>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>10</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>4</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</MISC01_CITY_OF_DREAMS_02>
+
+	<!-- ======================================= MISC01_CITY_OF_DREAMS_03 ======================================= -->
+	<MISC01_CITY_OF_DREAMS_03>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>23</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>11</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</MISC01_CITY_OF_DREAMS_03>
+
+	<!-- ======================================= MISC02_JACKS_OFFICE_CUTSCENE ======================================= -->
+	<MISC02_JACKS_OFFICE_CUTSCENE>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>14</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>7</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</MISC02_JACKS_OFFICE_CUTSCENE>
+
+	<!-- ======================================= MISC03_ASYLUM_CUTSCENE ======================================= -->
+	
+	<MISC03_ASYLUM_CUTSCENE>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>4</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>4</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</MISC03_ASYLUM_CUTSCENE>
+
+
+	<!-- ======================================= MISC03_ASYLUM_CUTSCENE_FEDS ======================================= -->
+	<MISC03_ASYLUM_CUTSCENE_FEDS>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>12</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>5</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</MISC03_ASYLUM_CUTSCENE_FEDS>
+	<!-- ======================================= 01_HOUSE ======================================= -->
+
+	<01_HOUSE>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>96</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>50</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</01_HOUSE>
+
+	<!-- ======================================= 02_STREETS_ONE_PT1 =============================== -->
+
+	<02_STREETS_ONE_PT1>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>50</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>25</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</02_STREETS_ONE_PT1>
+
+	<02_STREETS_ONE_PT2>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>58</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>24</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</02_STREETS_ONE_PT2>
+
+	<02_STREETS_ONE_PT3>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>81</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>29</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</02_STREETS_ONE_PT3>
+
+	<!-- ======================================= 03_STREETS_TWO======================================= -->
+
+	<03_STREETS_TWO_PT1>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>85</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>45</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</03_STREETS_TWO_PT1>
+
+	<03_STREETS_TWO_PT2>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>98</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>30</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</03_STREETS_TWO_PT2>
+	
+	<03_STREETS_TWO_PT3>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>84</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>45</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</03_STREETS_TWO_PT3>
+	
+	<!-- ======================================= 04_JAIL_BREAK ======================================= -->
+
+	<04_JAIL_BREAK>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>64</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>30</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</04_JAIL_BREAK>
+
+
+	<!-- ======================================= 05_STREETS_THREE ======================================= -->
+
+	<05_STREETS_THREE_PT1>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>63</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>36</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</05_STREETS_THREE_PT1>
+
+
+	<05_STREETS_THREE_PT2>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>66</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>46</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</05_STREETS_THREE_PT2>
+
+
+	<!-- ======================================= 06_REFINERY ======================================= -->
+
+	<06_REFINERY_PT1>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>54</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>31</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</06_REFINERY_PT1>
+
+	<06_REFINERY_PT2>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>62</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>40</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</06_REFINERY_PT2>
+
+	<06_REFINERY_PT3>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>140</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>110</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</06_REFINERY_PT3>
+	
+	<06_REFINERY_PT4>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>78</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>30</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</06_REFINERY_PT4>
+	
+	<06_REFINERY_PT5>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>119</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>34</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</06_REFINERY_PT5>
+	
+	<!-- ======================================= 06_REFINERY_EXPLOSION ======================================= -->
+
+	<06_REFINERY_EXPLOSION>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>139</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>36</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+
+	</06_REFINERY_EXPLOSION>
+
+
+	<!-- ======================================= 07_ESOTERIC_ORDER======================================= -->
+
+	<07_ESOTERIC_ORDER_PT1>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>79</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>31</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</07_ESOTERIC_ORDER_PT1>
+
+	<07_ESOTERIC_ORDER_PT2>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>190</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>116</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</07_ESOTERIC_ORDER_PT2>
+	
+	
+	<!-- ======================================= 08_BOAT ======================================= -->
+
+	<08_BOAT>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>140</HfSkeletonAnimPlayer>		<!-- == 95 == -->
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>60</HfSkeletonMixerEaseIn>		<!-- == 48 == -->
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</08_BOAT>
+
+	
+	<!-- ======================================= 09_REEF ======================================= -->
+	<09_REEF>
+
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>62</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>20</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+	</09_REEF>
+	
+	<!-- ======================================= 10_AIR_FILLED_TUNNELS_PT1 ======================================= -->
+
+	<10_AIR_FILLED_TUNNELS_PT1>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>95</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>43</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</10_AIR_FILLED_TUNNELS_PT1>
+
+	<!-- ======================================= 10_AIR_FILLED_TUNNELS_PT2 ======================================= -->
+
+	<10_AIR_FILLED_TUNNELS_PT2>
+	
+		<StaticPools>
+			<HfSkeletonAnim>0</HfSkeletonAnim>
+			<HfSkeletonAnimPlayer>68</HfSkeletonAnimPlayer>
+			<HfSkeletonAnimPrecanned>0</HfSkeletonAnimPrecanned>
+			<HfSkeletonAnimIKFacing4>0</HfSkeletonAnimIKFacing4>
+			<HfSkeletonMixer>0</HfSkeletonMixer>
+			<HfSkeletonMixerEaseIn>35</HfSkeletonMixerEaseIn>
+			<HfSkeletonMixerEaseInOut>0</HfSkeletonMixerEaseInOut>
+			<HfSkeletonMixerEaseInPrecanned>0</HfSkeletonMixerEaseInPrecanned>
+		</StaticPools>
+		
+	</10_AIR_FILLED_TUNNELS_PT2>
+	
+
+</PoolSizes>
+

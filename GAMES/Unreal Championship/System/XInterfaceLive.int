@@ -1,0 +1,338 @@
+[MenuAcceptCrossTitleInvite]
+InviteTitle="PENDING GAME INVITATION"
+JoinTitle="PENDING GAME JOIN"
+InviteQuestion="<INVITED> HAS A PENDING GAME INVITATION FROM <INVITER>. ACCEPT INVITATION?"
+JoinQuestion="<INVITED> WANTS TO JOIN <INVITER>'S GAME. JOIN SESSION?"
+
+[MenuBadNetworkConfirm]
+StringAreYouSure="Do you want to continue?"
+ALabel.Text=": YES"
+BLabel.Text="NO :"
+MenuTitle.Text="PLEASE CONFIRM"
+
+[MenuDHMStats]
+Label[0].Text="NAME:"
+Label[1].Text="AVERAGE PLAYERS:"
+Label[2].Text="UP TIME:"
+Label[3].Text="TOTAL SESSIONS:"
+Label[4].Text="DM SESSIONS:"
+Label[5].Text="CTF SESSIONS:"
+Label[6].Text="BR SESSIONS:"
+Label[7].Text="DD SESSIONS:"
+Label[8].Text="TDM SESSIONS:"
+Label[9].Text="SURVIVAL SESSIONS:"
+PlayerName.Text="Bob"
+AveragePlayers.Text="124245"
+UpTime.Text="232"
+DMSessions.Text="4"
+CTFSessions.Text="53"
+BRSessions.Text="5325"
+DDSessions.Text="5325"
+TDMSessions.Text="5325"
+SVSessions.Text="5325"
+TotalSessions.Text="232"
+MenuTitle.Text="DEDICATED HOST STATISTICS"
+
+[MenuDashboardConfirm]
+StringDashMain="You are about to leave Unreal Championship to load the Xbox Dashboard main menu."
+StringDashError="You are about to leave Unreal Championship to load the Xbox Dashboard diagnostic tool."
+StringDashMemory="You are about to leave Unreal Championship."
+StringDashSettings="You are about to leave Unreal Championship to load the Xbox Dashboard settings."
+StringDashMusic="You are about to leave Unreal Championship to load the Xbox Dashboard music manager."
+StringDashNetwork="You are about to leave Unreal Championship to load the Xbox Network troubleshooter."
+StringDashNewAccount="You are about to leave Unreal Championship to create a new Xbox Live account."
+StringDashManageAccount="You are about to leave Unreal Championship to manage your Xbox Live account."
+StringDashOnlineMenu="You are about to leave Unreal Championship to load the Xbox Live online menu."
+StringAreYouSure="Any unsaved progress will be lost. Do you want to continue?"
+ALabel.Text=": YES"
+BLabel.Text="NO :"
+MenuTitle.Text="PLEASE CONFIRM"
+
+[MenuDedicatedServer]
+SessionInfo.Text="GAMETYPE - MAP"
+InitMsg="Dedicated server started."
+PlayersString="Players"
+PlayerString="Player"
+MenuTitle.Text="DEDICATED SERVER"
+
+[MenuEndDedicatedServer]
+EndDedicated[0]="Shutdown the dedicated server and"
+EndDedicated[1]="disconnect any connected players?"
+
+[MenuFriendList]
+TextEmptyList="YOUR FRIENDS LIST IS EMPTY."
+MenuTitle.Text="FRIENDS"
+
+[MenuGamerConfirm]
+StringGamerTagToken="<GAMER>"
+ALabel.Text=": YES"
+BLabel.Text="NO :"
+MenuTitle.Text="PLEASE CONFIRM"
+
+[MenuGamerDetails]
+Options[0].Blurred.Text="ACCEPT GAME INVITATION"
+Options[1].Blurred.Text="DECLINE GAME INVITATION"
+Options[2].Blurred.Text="SEND GAME INVITATION"
+Options[3].Blurred.Text="CANCEL GAME INVITATION"
+Options[4].Blurred.Text="JOIN FRIEND'S GAME"
+Options[5].Blurred.Text="REMOVE FROM FRIENDS LIST"
+Options[6].Blurred.Text="SEND FRIEND REQUEST"
+Options[7].Blurred.Text="ACCEPT FRIEND REQUEST"
+Options[8].Blurred.Text="DECLINE FRIEND REQUEST"
+Options[9].Blurred.Text="BLOCK FRIEND REQUEST"
+Options[10].Blurred.Text="CANCEL FRIEND REQUEST"
+Options[11].Blurred.Text="MUTE"
+Options[12].Blurred.Text="UNMUTE"
+Options[13].Blurred.Text="SEND FEEDBACK"
+StringCancelFriendRequest[0]="CANCEL THE FRIEND REQUEST YOU SENT"
+StringCancelFriendRequest[1]="TO <GAMER>?"
+StringCancelFriendRequest[2]=" "
+StringBlockFriendRequest[0]="BLOCK ALL FUTURE FRIEND REQUESTS"
+StringBlockFriendRequest[1]="FROM <GAMER>?"
+StringBlockFriendRequest[2]=" "
+StringRemoveFriend[0]="REALLY REMOVE <GAMER>"
+StringRemoveFriend[1]="FROM YOUR FRIENDS LIST?"
+StringRemoveFriend[2]=" "
+StringCancelInvite[0]="REALLY CANCEL THE INVITE"
+StringCancelInvite[1]="TO <GAMER>?"
+StringCancelInvite[2]=" "
+StringGamerTagToken="<GAMER>"
+StringSentRequest="FRIEND REQUEST SENT."
+StringReceivedRequest="FRIEND REQUEST RECEIVED."
+StringSentInvite="INVITATION SENT."
+StringInviteRejected="INVITATION DECLINED."
+StringInviteAccepted="INVITATION ACCEPTED."
+StringReceivedInvite="INVITATION RECEIVED."
+StringIsPlaying="<GAMER> IS PLAYING:"
+
+[MenuGamerList]
+TextReceivedInvite="RECEIVED GAME INVITE."
+TextReceivedRequest="RECEIVED FRIEND REQUEST."
+TextOnline="ONLINE."
+TextFriend="FRIEND."
+TextOffline="OFFLINE."
+TextSentInvite="SENT GAME INVITE."
+TextSentRequest="SENT FRIEND REQUEST."
+TextVoiceOn="VOICE ON."
+TextVoiceOff="VOICE OFF."
+TextVoiceTV="VOICE THROUGH TV."
+TextVoiceMuted="VOICE MUTED."
+TextInviteAccepted="GAME INVITE ACCEPTED."
+TextInviteRejected="GAME INVITE DECLINED."
+TextPlaying="PLAYING."
+
+[MenuInsertDisc]
+Text[0].Text="INSERT GAME DISC FOR"
+BLabel.Text="CANCEL :"
+MenuTitle.Text="GAME DISC REQUIRED"
+
+[MenuLeaderBoard]
+Label[0].Text="NAME"
+Label[1].Text="RANK"
+Label[2].Text="RATING"
+LeaderBoardType.Text="DEATH MATCH - WEEKLY"
+GettingStatsMsg.Text="PLEASE WAIT, DOWNLOADING STATISTICS..."
+LeaderBoardDurations[0]="WEEKLY"
+LeaderBoardDurations[1]="MONTHLY"
+LeaderBoardDurations[2]="TOTAL"
+MenuTitle.Text="LEADERBOARD"
+
+[MenuLiveAutoUpdate]
+ConfirmAutoUpdateText[0]="A more secure version of Unreal Championship"
+ConfirmAutoUpdateText[1]="is available. Would you like to upgrade now?"
+ConfirmAutoUpdateText[2]="(You must upgrade in order to play online.)"
+AutoUpdateFailedText="Auto-update failed. Please try again later."
+
+[MenuLiveContentDownload]
+ConfirmContentDownloadText[0]="Content download allows you to get"
+ConfirmContentDownloadText[1]="new characters and levels for Unreal"
+ConfirmContentDownloadText[2]="Championship as they become available."
+ConfirmContentDownloadText[3]="The new content is downloaded to"
+ConfirmContentDownloadText[4]="your Xbox Hard Disk and appears in"
+ConfirmContentDownloadText[5]="the game as selectable items. Would"
+ConfirmContentDownloadText[6]="you like to see what new content is"
+ConfirmContentDownloadText[7]="currently available for download?"
+ConfirmContentDownloadFailedText="Content download failed. Please try again later."
+
+[MenuLiveErrorMessage]
+ServiceNumber.Text="SERVICE NUMBER:"
+ErrorNumber.Text="ERROR NUMBER:"
+StringDashMain="DASHBOARD"
+StringDashError="DIAGNOSTICS"
+StringDashMemory="MEMORY MANAGER"
+StringDashSettings="SETTINGS"
+StringDashMusic="MUSIC BROWSER"
+StringDashNetwork="NETWORK TROUBLESHOOTER"
+StringDashNewAccount="CREATE NEW ACCOUNT"
+StringDashManageAccount="MANAGE ACCOUNT"
+StringDashOnlineMenu="ONLINE MENU"
+StringReadMessage="READ MESSAGE"
+StringCancelLogin="CANCEL LOGIN"
+StringContinue="CONTINUE"
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="XBOX LIVE ERROR"
+
+[MenuLiveMain]
+Options[0].Blurred.Text="QUICK MATCH"
+Options[1].Blurred.Text="OPTIMATCH"
+Options[2].Blurred.Text="CREATE MATCH"
+Options[3].Blurred.Text="FRIENDS"
+Options[4].Blurred.Text="STATISTICS"
+Options[4].HelpText="VIEW GAMETYPE AND OVERALL STATISTICS"
+Options[5].Blurred.Text="SETTINGS"
+Options[5].HelpText="XBOX LIVE SETTINGS"
+Options[6].Blurred.Text="CONTENT DOWNLOAD"
+Options[6].HelpText="DOWNLOAD NEW GAME CONTENT FROM XBOX LIVE"
+ConfirmSignOutText="Sign out of Xbox Live?"
+BLabel.Text="SIGN OUT :"
+MenuTitle.Text="XBOX LIVE"
+
+[MenuLivePasscode]
+Instructions.Text="ENTER THE PASSCODE FOR <GAMERTAG>:"
+Input[0].Text="#"
+Authenticating.Text="AUTHENTICATING..."
+MenuTitle.Text="ENTER PASSCODE"
+
+[MenuLiveSettings]
+OptionLabels[0].Text="VOICE MASKING"
+OptionLabels[1].Text="APPEAR OFFLINE"
+Options[0].Items=("DISABLED","ANONYMOUS","CARTOON","BIG GUY","CHILD","ROBOT","DARKMASTER","WHISPER")
+Options[1].Items=("YES","NO")
+MenuTitle.Text="XBOX LIVE SETTINGS"
+
+[MenuLiveSignIn]
+NewAccountText="NEW ACCOUNT"
+GuestText="GUEST"
+MenuTitle.Text="SIGN IN"
+
+[MenuLiveUserHasMessage]
+ALabel.Text=": READ NOW"
+BLabel.Text="READ LATER :"
+MenuTitle.Text="MESSAGE WAITING"
+
+[MenuMatchMakingAvailableMatches]
+ServerListHeadings[0].Text="SERVER"
+ServerListHeadings[1].Text="MAP"
+ServerListHeadings[2].Text="GAME"
+ServerListHeadings[3].Text="SIZE"
+ServerListHeadings[4].Text="SPEED"
+PingFriendly[0]="?"
+PingFriendly[1]="****"
+PingFriendly[2]="***"
+PingFriendly[3]="**"
+PingFriendly[4]="*"
+XLabel.Text=": REFRESH"
+MenuTitle.Text="AVAILABLE MATCHES"
+
+[MenuMatchMakingMatchDetails]
+Labels[0].Text="HOST NAME:"
+Labels[1].Text="MAP:"
+Labels[2].Text="GAME TYPE:"
+Labels[3].Text="PLAYERS:"
+Labels[4].Text="DEDICATED SERVER:"
+Labels[5].Text="SPEED:"
+Labels[6].Text="COMPETITION MODE:"
+Labels[7].Text="AVERAGE SKILL:"
+Labels[8].Text="MUTATORS:"
+Labels[9].Text=" "
+PingLabels[0]="?"
+PingLabels[1]="EXCELLENT"
+PingLabels[2]="GOOD"
+PingLabels[3]="FAIR"
+PingLabels[4]="POOR"
+StringNone="NONE"
+XLabel.Text=": FIND ANOTHER"
+MenuTitle.Text="MATCH DETAILS"
+
+[MenuMatchMakingNoMatches]
+Question.Text="CREATE NEW MATCH?"
+MenuTitle.Text="NO MATCHES FOUND"
+
+[MenuMatchMakingOptiMatchOptions]
+OptionLabels[0].Text="MIN PLAYERS"
+OptionLabels[1].Text="MAX PLAYERS"
+OptionLabels[2].Text="ONLY COMPETITION MODE"
+OptionLabels[3].Text="ALLOW MUTATORS"
+OptionLabels[4].Text="ONLY DEDICATED"
+OptionLabels[5].Text="AVERAGE SKILL FILTER"
+Options[0].Items=("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16")
+Options[1].Items=("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16")
+Options[2].Items=("OFF","ON")
+Options[3].Items=("OFF","ON")
+Options[4].Items=("OFF","ON")
+Options[5].Items=("OFF","LOOSE","TIGHT")
+MenuTitle.Text="OPTIMATCH OPTIONS"
+
+[MenuMatchMakingQuery]
+PleaseWaitText.Text="GETTING LIST OF MATCHES. PLEASE STAND BY..."
+BLabel.Text="CANCEL :"
+MenuTitle.Text="PLEASE WAIT"
+
+[MenuPlayerFeedback]
+Info[0].Text="GAMERTAG:"
+Info[1].Text="NICKNAME:"
+Info[2].Text="GAME NAME: UNREAL CHAMPIONSHIP"
+Options[0].Blurred.Text="GREAT SESSION"
+Options[1].Blurred.Text="GOOD ATTITUDE"
+Options[2].Blurred.Text="BAD NAME"
+Options[3].Blurred.Text="CURSING OR LEWDNESS"
+Options[4].Blurred.Text="SPAMMING OR SCREAMING"
+Options[5].Blurred.Text="POOR GAMEPLAY OR CHEATING"
+Options[6].Blurred.Text="THREATS OR HARASSMENT"
+MenuTitle.Text="SEND FEEDBACK"
+
+[MenuPlayerFeedbackConfirm]
+Info[0].Text="COMPLAINT:"
+Info[1].Text="GAMERTAG:"
+Info[2].Text="NICKNAME:"
+Info[3].Text="GAME NAME: UNREAL CHAMPIONSHIP"
+Body[0].Text="The Xbox Live community is managed by"
+Body[1].Text="its users. Multiple reports from other"
+Body[2].Text="users about this Gamer can lead to"
+Body[3].Text="Voice Banning, Lockout, and Account"
+Body[4].Text="Termination."
+Body[5].Text=" "
+confirm.Text="DO YOU WISH TO PROCEED WITH YOUR COMPLAINT?"
+ALabel.Text=": YES"
+BLabel.Text="NO :"
+MenuTitle.Text="FEEDBACK CONFIRMATION"
+
+[MenuPlayerFeedbackDone]
+Text.Text="Your feedback has been sent. Thank you for your time."
+ALabel.Text=": CONTINUE"
+MenuTitle.Text="FEEDBACK SENT"
+
+[MenuPlayerList]
+TextEmptyList="NOBODY HAS PLAYED WITH YOU YET."
+MenuTitle.Text="PLAYERS"
+
+[MenuPlayerStats]
+Label[0].Text="NAME:"
+Label[1].Text="POINTS:"
+Label[2].Text="KILLS:"
+Label[3].Text="DEATHS:"
+Label[4].Text="GAMES PLAYED:"
+Label[5].Text="SPECIALS:"
+Label[6].Text="EFFICIENCY:"
+PlayerName.Text="Bob"
+Points.Text="124245"
+KillsStat.Text="232"
+Deaths.Text="212"
+GamesPlayed.Text="4"
+Specials.Text="53"
+Efficiency.Text="5325"
+MenuTitle.Text="PLAYER STATISTICS"
+
+[MenuSelectStats]
+GettingStatsMsg.Text="PLEASE WAIT, DOWNLOADING STATISTICS..."
+OverallText="OVERALL"
+DedicatedText="DEDICATED HOST"
+MenuTitle.Text="SELECT STATISTICS LISTING"
+
+[MenuTravelConfirm]
+Question.Text="Are you sure that you want to leave your current game?"
+
+[MenuWritingStats]
+Message.Text="UPDATING LIVE STATISTICS..."
+MenuTitle.Text="PLEASE WAIT..."
+

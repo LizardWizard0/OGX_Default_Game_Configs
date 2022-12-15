@@ -1,0 +1,33 @@
+[TitleCard]
+
+BackgroundMusic="YYY_Music.YYY_episodes.musYYY_titleCard_ep"
+
+FadeInStartTime[0]=1
+FullOnStartTime[0]=2
+FadeOutStartTime[0]=8
+FadeOutEndTime[0]=9
+Text[0]="A PLEA FOR HELP FROM THE WOOKIEE HOMEWORLD OF KASHYYYK REACHES THE EARS OF THE REPUBLIC."
+
+FadeInStartTime[1]=10
+FullOnStartTime[1]=11
+FadeOutStartTime[1]=18
+FadeOutEndTime[1]=19
+Text[1]="THE TRANDOSHANS HAVE INVADED THE PLANET AND LAUNCHED A CRUEL SLAVE TRADE, APPARENTLY USING SEPARATIST WEAPONRY."
+
+FadeInStartTime[2]=20
+FullOnStartTime[2]=21
+FadeOutStartTime[2]=27
+FadeOutEndTime[2]=28
+Text[2]="THE IMPLICATION OF AN ALLIANCE BETWEEN THE FACTIONS IS DISTURBING."
+
+FadeInStartTime[3]=29
+FullOnStartTime[3]=30
+FadeOutStartTime[3]=36
+FadeOutEndTime[3]=37
+Text[3]="DELTA SQUAD’S BATTLE-WEARY COMMANDOS ARE SENT ON A DANGEROUS MISSION OF MERCY..."
+
+FadeInStartTime[4]=38
+FullOnStartTime[4]=39
+FadeOutStartTime[4]=43
+FadeOutEndTime[4]=46
+Text[4]="DAY 785 - CLONE WARS - KASHYYYK"

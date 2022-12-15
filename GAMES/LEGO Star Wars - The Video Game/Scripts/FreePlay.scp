@@ -1,0 +1,88 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto GotOpponent
+	}
+	Actions {	
+		FollowPlayer "0.75"
+	}
+}
+
+state GotOpponent {
+	ReferenceScript {
+		Script=Jedi
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "Jedi" == 1
+			}
+		}
+
+	ReferenceScript {
+		Script=NonJedi
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "ZipUp" == 1
+		}
+	}
+
+	ReferenceScript {
+		Script=NonJedi
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "Blaster" == 1
+		}
+	}
+
+	ReferenceScript {
+		Script=NonJedi
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "HighJump" == 1
+		}
+	}
+
+	ReferenceScript {
+		Script=NonJedi
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "Teleport" == 1
+		}
+	}
+
+	ReferenceScript {
+		Script=Droid
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "Astromech" == 1
+		}
+	}
+
+	ReferenceScript {
+		Script=Droid
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if IAmA "Protocol" == 1
+		}
+	}
+
+	ReferenceScript {	//This is a fallback
+		Script=Droid
+		Source=Global
+		ReturnState=Base
+		Conditions {
+		}
+	}
+
+	Conditions {
+		if GotOpponent == 0 goto Base
+	}
+	Actions {	
+	}
+}
+

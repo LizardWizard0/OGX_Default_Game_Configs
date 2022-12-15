@@ -1,0 +1,788 @@
+<Category>
+	<Entry>
+		<ID>0</ID>
+		<EntryName>6206</EntryName>
+		<Date>6242</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.1				       -->
+		<!-- text at beginning of house		       -->
+		<!-- o5.july.2oo5 .:mSg:.  Removed: 6449-52    -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6267</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6442</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6443</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6444</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6445</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6446</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6447</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6448</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>1</ID>
+		<EntryName>6207</EntryName>
+		<Date>6243</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.2				       -->
+		<!-- Missing years text			       -->
+		<!-- o6.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6453</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6454</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6455</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6456</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6617</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>5</ID>
+					<Content>6457</Content>
+				</Text>
+				<Text>
+					<ID>6</ID>
+					<Content>6458</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>2</ID>
+		<EntryName>4020</EntryName>
+		<Date>6244</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.3	                                   -->
+		<!-- Written version of the Jack's office cutscene -->
+		<!-- o8.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4022</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4023</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>4024</Content>
+				</Text>
+				<Text>
+					<ID>4</ID>
+					<Content>4025</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4026</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4027</Content>
+				</Text>
+
+				<Text>
+					<ID>3</ID>
+					<Content>4028</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4029</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4030</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>4031</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4032</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4033</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>4034</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4035</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4036</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>4037</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+	
+	<Entry>
+		<ID>3</ID>
+		<EntryName>4039</EntryName>
+		<Date>6244</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.4	                               -->
+		<!-- text at the end of Jack's office cutscene -->
+		<!--  5.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4040</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4041</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>4042</Content>
+				</Text>
+				<Text>
+					<ID>4</ID>
+					<Content>4043</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4044</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4045</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4046</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4047</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4048</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>4049</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>4050</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>4</ID>
+		<EntryName>6208</EntryName>
+		<Date>6245</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.5	                               -->
+		<!-- before going to sleep at the Gilman       -->
+		<!-- o3.jun.2oo5 .:mSg:.                       -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4022</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6459</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6460</Content>
+				</Text>
+				<Text>
+					<ID>4</ID>
+					<Content>6461</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6462</Content>
+				</Text>
+	 			<Text>
+					<ID>2</ID>
+					<Content>6463</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6464</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6465</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>2</ID>
+					<Content>6466</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6467</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6468</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6469</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6470</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6620</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6621</Content>
+				</Text>
+			</Page>	
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>5</ID>
+		<EntryName>6209</EntryName>
+		<Date>6246</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.6	                               -->
+		<!-- finding the church crypt  		       -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4040</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6471</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6472</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6473</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6474</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6475</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6476</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6477</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>6</ID>
+		<EntryName>6210</EntryName>
+		<Date>6246</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.7	                               -->
+		<!-- before starting the jailbreak section     -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<!-- 500 character test 6633   -->
+				
+				<Text>
+					<ID>1</ID>
+					<Content>6268</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6478</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6479</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6480</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6481</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6482</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>7</ID>
+		<EntryName>6211</EntryName>
+		<Date>6246</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.8	                               -->
+		<!-- after asylum interrogation                -->
+		<!-- o2.aug.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4040</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6483</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6484</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6485</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6486</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6487</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6823</Content>
+				</Text>
+
+				<Text>
+					<ID>1</ID>
+					<Content>6488</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6489</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6824</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6490</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6491</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6492</Content>
+				</Text>
+				<Text>
+					<ID>1</ID>
+					<Content>6493</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6494</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>0</ID>
+					<Content>6495</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>8</ID>
+		<EntryName>6212</EntryName>
+		<Date>6247</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.9	                               -->
+		<!-- before joining troops at order of Dagon   -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4040</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6496</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6497</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6498</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6499</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6500</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6501</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6502</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6503</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6504</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6505</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6506</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6507</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6508</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6509</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>9</ID>
+		<EntryName>6213</EntryName>
+		<Date>6248</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.10	                               -->
+		<!-- after being pulled aboard the Urania      -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6622</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6623</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6624</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6625</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6626</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6627</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>10</ID>
+		<EntryName>6214</EntryName>
+		<Date>6248</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.11	                               -->
+		<!-- washed up on shore on devils reef         -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>4022</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6628</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6629</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6630</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6631</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>11</ID>
+		<EntryName>6215</EntryName>
+		<Date>6248</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.12	                               -->
+		<!-- start of air filled tunnels               -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6269</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6632</Content>
+				</Text>
+
+				<!-- 6633 is the 512 test.-->
+
+				<Text>
+					<ID>3</ID>
+					<Content>6662</Content>
+				</Text>
+			</Page>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6663</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6664</Content>
+				</Text>
+				<Text>
+					<ID>3</ID>
+					<Content>6665</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+	<Entry>
+		<ID>12</ID>
+		<EntryName>6216</EntryName>
+		<Date>6249</Date>
+		<TextureID>0</TextureID>
+		<InventoryObjectName>NULL</InventoryObjectName>
+	
+		<!-- File 1.13	                               -->
+		<!-- suicide note		               -->
+		<!-- o7.july.2oo5 .:mSg:.                      -->
+
+		<PageData>
+			<Page>
+				<Text>
+					<ID>1</ID>
+					<Content>6265</Content>
+				</Text>
+				<Text>
+					<ID>2</ID>
+					<Content>6266</Content>
+				</Text>
+			</Page>
+		</PageData>
+	</Entry>
+
+</Category>

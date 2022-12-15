@@ -1,0 +1,696 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+//AddMusic m_suspense_17.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_06.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic l01_5_m_placard.wav Tension
+
+AddMusic m_tension_01.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle_06.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_tension_13.wav Battle
+
+AddBattleLoop m_battle_09_lp.wav m_battle_09_win.wav m_battle_09_lose.wav
+AddBattleLoop m_battle_12_lp.wav m_battle_12_win.wav m_battle_12_lose.wav
+AddBattleLoop m_saberArena_03_lp.wav m_saberArena_03_end.wav m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 10 20
+
+ConsoleCommand "r_rainbubbles 2.2"
+
+/////Start Up Scripts
+
+LoadDLG Qui-Gon.dlg
+SetDefaultSurface 09_door_c.sur
+SetFarClip 125
+SetExplorationNum 5
+SetForceUsesNeeded 25
+SetTimeToBeat 3 45
+
+Int  Zone5Counter 0
+Int  Zone6Counter 0
+
+ParticleGenOff A_cortosisVaporRising_y_01
+ParticleGenOff A_cortosisVaporRising_y_02
+ParticleGenOff A_cortosisVaporRising_y_03
+ParticleGenOff A_cortosisVaporRising_y_04
+ParticleGenOff A_cortosisVaporRising_y_05
+ParticleGenOff A_cortosisVaporRising_y_06
+
+ConsoleCommand "r_fog 0"
+SkydomeOn
+
+  ActivateAsIfBySwitch A_2-3_minebridge_01
+ActivateAsIfBySwitch A_2-3_minebridge_02      
+
+Script "Fog Box"
+{
+   if(IsInRegion Obi region_fogbox01)
+   {
+       if (IsOpen A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }
+   }
+   if(IsInRegion Obi region_fogbox01)
+   {
+       if (IsClosed A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }
+   }
+   if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsOpen A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }
+   }    
+   if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsOpening A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }    
+   }
+      if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsClosing A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }    
+   }
+   if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsClosed A_mine_bigdoor01_01)
+       {
+       SkydomeOff  
+       }
+   }
+   Loop
+}
+
+Script "Fan sounds"
+{
+	WaitUntilExitedRegion Obi region_ambient_mine_old
+	SetRegionSoundVolume region_ambient_mine_old -100 0.1
+	WaitUntilEnteredRegion Obi region_ambient_mine_old
+	SetRegionSoundVolume region_ambient_mine_old 0 0.1
+	Loop
+}
+
+LockDoor  A_2_03_mine_elev01_01
+LockDoor  A_2_03_mine_elev01_02 
+LockDoor  A_2_03_mine_elev01_03 
+LockDoor  A_2_03_mine_elev01_04
+
+LockDoor A_mine_door01_05
+LockDoor A_mine_door01_11  
+LockDoor A_mine_door01_12
+LockDoor A_mine_door01_13         
+
+///Work Events////
+
+///in the elev lobby
+Actor id1 A_id2_01 
+AddWorkEvent id1 id1_01
+AddWorkEvent id1 id1_02
+AddWorkEvent id1 id1_03
+
+///in the last room
+Actor id2 A_id2_02 
+AddWorkEvent id2 id2_01
+AddWorkEvent id2 id2_02
+AddWorkEvent id2 id2_03
+
+///in the last room
+Actor id3 A_id2_03 
+AddWorkEvent id3 id3_01
+AddWorkEvent id3 id3_02
+AddWorkEvent id3 id3_03
+
+///in the elev hall
+Actor id4 A_id2_04 
+AddWorkEvent id4 id4_01
+AddWorkEvent id4 id4_02
+AddWorkEvent id4 id4_03
+
+///at the old mine
+Actor id5 A_id2_05 
+AddWorkEvent id5 id5_01
+AddWorkEvent id5 id5_02
+AddWorkEvent id5 id5_03
+
+///at the old mine
+Actor id6 A_id2_06 
+AddWorkEvent id6 id6_01
+AddWorkEvent id6 id6_02
+AddWorkEvent id6 id6_03
+///End Work Events///
+
+//Enemy Functions//
+
+Function  "HurtEnemy" (actor Hurt, actor Attacker)
+{
+    WaitUntilDamaged Hurt
+    ForceTarget Attacker obi
+}
+
+Function  "HurtEnemyNode" (actor Hurt, actor Attacker, node runtohere)
+{
+    WaitUntilDamaged  Hurt 
+    TakePartialControlOf Attacker
+    RunToNode Attacker runtohere
+}
+
+Function  "KilledEnemy" (actor Dead, actor Angry)
+{
+    WaitUntilKilled  Dead 
+    ForceTarget Angry obi
+}
+
+Function  "KilledEnemyNode" (actor Dead, actor Angry, node runtohere)
+{
+    WaitUntilKilled  Dead 
+    TakePartialControlOf Angry
+    RunToNode Angry runtohere
+}
+
+Function "FollowBuddy" (Actor Leader, Actor  Follower, Int  Distance, Int  Angle)
+{
+	AddPatrolState Leader
+    SetIdleAttentionSpan Leader 1
+    FollowStateDirectional Follower Leader Distance Angle
+}
+
+Function "MeleeAmbush" (Node TooClose, Actor Ambush)
+{
+   float NodeProximity 0
+   DistanceBetweenActorAndNode Obi TooClose NodeProximity
+   if (<= NodeProximity 20)
+   {
+      ForceTarget Ambush Obi
+   }
+   loop
+}
+
+Function  "Patrol" (actor Patroller)
+{
+    AddPatrolState Patroller
+    SetIdleAttentionSpan Patroller 1
+}
+
+/////Door Check////
+Function "Zone05Doors" (Actor Obi, Region DoorTrigger)
+{
+	WaitUntilEnteredRegion Obi DoorTrigger
+    Increment Zone5Counter 1
+}
+
+Function "Zone06Doors" (Actor Obi, Region DoorTrigger)
+{
+	WaitUntilEnteredRegion Obi DoorTrigger
+    Increment Zone6Counter 1
+}
+
+////////////////////
+// Respawn Points //
+////////////////////
+
+////deleted
+
+////Save Points
+
+Script "SavePoint1"
+{
+   WaitUntilEnteredRegion Obi DoorTrigger01
+   RemoveGroup 1
+   SetStartPosition 1
+   Save
+}
+
+Script "SavePoint2"
+{
+   WaitUntilEnteredRegion Obi region_elev_base
+   RemoveGroup 1
+   RemoveGroup 2
+   SetStartPosition 2
+   Save
+}
+
+Script "SavePoint3"
+{
+   WaitUntilEnteredRegion Obi DoorTrigger07
+   RemoveGroup 1
+   RemoveGroup 2
+   RemoveGroup 3
+   SetStartPosition 3
+   Save
+}
+
+Script "SavePoint4"
+{
+   WaitUntilEnteredRegion Obi DoorTrigger09
+   RemoveGroup 1
+   RemoveGroup 2
+   RemoveGroup 3
+   SetStartPosition 4
+   Save
+}
+
+///// Exploration Markers
+function "ExplorationMarkerRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_01, 21)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_02, 22)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_03, 23)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_04, 24)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_05, 25)
+
+////////////////////////////////////////////////
+Script "Mission Objectives First Time Only" 32
+{
+	MissionTitle "/Mission11Title/The Mines of Obredaan"
+	MissionObjective 1 "/Mission11Objective1/Infiltrate the mines."
+	RemoveGroup 32
+	Save
+}
+
+Script "Opening Cutscene" 31
+{
+   	SetPatrolTypes A_jin'ha-mace_01 3
+	SetPatrolTypes A_jin'ha-mace_02 2
+	AddPatrolState A_jin'ha-mace_01
+	AddPatrolState A_jin'ha-mace_02
+    TakeControlOf A_jin'ha-dagger_13
+    TakeControlOf A_jin'ha-dagger_14
+    
+	BeginCutScene
+    BinocularsOn
+    FadeUp
+    childscript "BinocularMovement"
+    {
+    BinocularsLookAt A_jin'ha-mace_01
+    ZoomAndWait 0.8 4.0 2 2
+    BinocularsLookAtAndWait A_jin'ha-mace_02 4.0 2 2
+    ZoomAndWait 0.9 2.0 1 1
+    Pause 1.0
+    BinocularsLookAtAndWait A_jin'ha-blaster_09 4.0 2 2
+    ZoomAndWait 1.0 3.0 1 1
+    }
+    childscript "OpeningDialogue"
+    {
+    Pause 2.0
+    SayLineNonPositional Obi "/Obi-Wan_326/Master, I've found the entrance to some kind of large mining complex."
+    CommunicatorMessageAndWait "/Qui-Gon_327/Undoubtedly a cortosis mine. I'll wager there's some kind of manufacturing plant inside. See what kind of evidence you can gather down there."
+	CommunicatorOff
+    }
+    waitforall
+
+	cameraoff
+
+    DisableAudioFades
+    FadeDown
+    PreEndCutscene
+    BinocularsOff
+    FadeUp
+    EndCutScene
+    
+	AddPatrolState  A_jin'ha-dagger_02
+    SetIdleAttentionSpan A_jin'ha-dagger_02 1
+	AddPatrolState  A_jin'ha-dagger_01
+    SetIdleAttentionSpan A_jin'ha-dagger_01 1
+
+//Commands to execute if player exits cutscene early
+    FadeDown
+    //PreEndCutscene
+    FadeUp
+	CommunicatorOff
+    BinocularsOff
+    FadeUp
+	EndCutScene
+
+    EnableAudioFades
+    RemoveGroup 31
+    Save
+
+    ReturnControlTo A_jin'ha-mace_01
+    ReturnControlTo A_jin'ha-mace_02
+    AddPatrolState A_jin'ha-mace_01
+    AddPatrolState A_jin'ha-mace_02
+    ReturnControlTo A_jin'ha-dagger_13
+    ReturnControlTo A_jin'ha-dagger_14
+	AddPatrolState  A_jin'ha-dagger_02
+	AddPatrolState  A_jin'ha-dagger_01
+}
+
+Script "Alternate Opening"
+{
+   if (IsGroupRemoved 31)
+   {
+      FadeUp
+   }
+}
+
+StartMusicManager
+
+Call HurtEnemy (A_jin'ha-mace_01, A_jin'ha-dagger_01)
+Call HurtEnemy (A_jin'ha-mace_01, A_jin'ha-dagger_02)
+Call HurtEnemy (A_jin'ha-mace_02, A_jin'ha-dagger_01)
+Call HurtEnemy (A_jin'ha-mace_02, A_jin'ha-dagger_02)
+
+Call  KilledEnemyNode (A_jin'ha-mace_01, A_jin'ha-dagger_17, node_mace_01)
+Call  KilledEnemyNode (A_jin'ha-mace_01, A_jin'ha-dagger_18, node_mace_02)
+Call  KilledEnemyNode (A_jin'ha-mace_02, A_jin'ha-dagger_17, node_mace_01)
+Call  KilledEnemyNode (A_jin'ha-mace_02, A_jin'ha-dagger_18, node_mace_02)
+
+Call MeleeAmbush(dagger13, A_jin'ha-dagger_13)
+Call MeleeAmbush(dagger14, A_jin'ha-dagger_14)
+
+Script "First Save"
+{
+	WaitUntilEnteredRegion Obi region_bigdoor_trigger01
+    //ConsoleCommand "r_fog 1"
+	MissionObjectiveAchieved 1
+	NewMissionObjective 2 "/Mission11Objective2/Discover how they are synthesizing cortosis."
+	Save
+}
+
+Script "Zone 2 / Entry Hall Patrol"
+{
+	WaitUntilEnteredRegion Obi region_bigdoor_trigger02
+    ForceTarget A_jin'ha-blaster_13 obi
+    ForceTarget A_jin'ha-blaster_14 obi
+	AddPatrolState A_jin'ha-mace_03
+    SetIdleAttentionSpan A_jin'ha-mace_03 1
+	AddPatrolState A_jin'ha-mace_04
+    SetIdleAttentionSpan A_jin'ha-mace_04 1
+	//ConsoleCommand "r_fog 0"
+    Call HurtEnemy (A_jin'ha-concussion_01, A_jin'ha-mace_03)
+    Call HurtEnemy (A_jin'ha-concussion_01, A_jin'ha-mace_04)
+    Call KilledEnemyNode (A_jin'ha-mace_03, A_jin'ha-blaster_10, mace03)
+    Call KilledEnemyNode (A_jin'ha-mace_04, A_jin'ha-blaster_10, mace04)
+    
+    Call MeleeAmbush (dagger15, A_jin'ha-dagger_15)
+    Call KilledEnemyNode (A_jin'ha-dagger_15, A_jin'ha-rod_07, rod_001)
+}
+
+Script "Zone 3 Patrol"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger01
+	AddPatrolState A_jin'ha-dagger_03
+    SetIdleAttentionSpan A_jin'ha-dagger_03 1
+	AddPatrolState A_jin'ha-dagger_04
+    SetIdleAttentionSpan A_jin'ha-dagger_04 1
+    Call  HurtEnemy (A_jin'ha-dagger_03, A_jin'ha-mace_11)
+    Call  HurtEnemy (A_jin'ha-dagger_03, A_jin'ha-dagger_04)
+    Call  KilledEnemy (A_jin'ha-mace_11, A_jin'ha-dagger_04)
+    
+    Call MeleeAmbush(mace11, A_jin'ha-mace_11)
+    
+    TakePartialControlOf A_jin'ha-rod_07
+    RunToNode A_jin'ha-rod_07 rod_001
+}
+
+Script "Zone 4 / Elevator Hall Patrol"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger02
+   	ForceTargetAndAttack  A_jin'ha-mace_05 obi
+	ForceTargetAndAttack A_jin'ha-mace_06 obi
+}
+
+Script "Elevator Hall Bottom"
+{
+	WaitUntilEnteredRegion Obi region_elev_base
+    TakePartialControlOf A_jin'ha-blaster_12
+    RunToNode A_jin'ha-blaster_12 bottom4
+}
+
+Script "Zone 5 Patrol 1"
+{
+    WaitUntilEnteredRegion Obi DoorTrigger03
+    if (= Zone5Counter 0)
+    {
+    call Zone05Doors (Obi, DoorTrigger03)
+    ForceTargetAndAttack A_jin'ha-rod_04 obi
+	Call Patrol (A_jin'ha-dagger_05)
+    Call FollowBuddy (A_jin'ha-dagger_06, A_jin'ha-rod_05, 2.0, 120)
+    Call FollowBuddy (A_jin'ha-dagger_08, A_jin'ha-dagger_07, 3.0, 120)
+	Call Patrol (A_jin'ha-sword_07)
+    Call  HurtEnemy (A_jin'ha-blaster_12, A_jin'ha-dagger_08)
+    Call  HurtEnemy (A_jin'ha-dagger_08, A_jin'ha-dagger_07)
+    Call  HurtEnemy (A_jin'ha-dagger_07, A_jin'ha-sword_07)
+    Call  KilledEnemy (A_jin'ha-sword_07, A_jin'ha-dagger_05)
+    Call  KilledEnemy (A_jin'ha-sword_07, A_jin'ha-dagger_06)
+    Call  HurtEnemy (A_jin'ha-dagger_05, A_jin'ha-blaster_11)
+    Call  HurtEnemy (A_jin'ha-dagger_06, A_jin'ha-blaster_11)
+    }
+}
+
+Script "Zone 5 Patrol 2"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger10
+    if (= Zone5Counter 0)
+    {
+    call Zone05Doors (Obi, DoorTrigger10)
+    ForceTargetAndAttack A_jin'ha-blaster_11 obi
+    ForceTargetAndAttack A_jin'ha-rod_06 obi
+	Call Patrol (A_jin'ha-dagger_05)
+    Call FollowBuddy (A_jin'ha-dagger_06, A_jin'ha-rod_05, 3.0, 120)
+	Call Patrol (A_jin'ha-dagger_07)
+    Call FollowBuddy (A_jin'ha-dagger_08, A_jin'ha-rod_04, 2.0, 90)
+	Call Patrol (A_jin'ha-sword_07)
+    Call  HurtEnemy (A_jin'ha-dagger_06, A_jin'ha-dagger_07)
+    Call  HurtEnemy (A_jin'ha-dagger_07, A_jin'ha-sword_07)
+    Call  HurtEnemy (A_jin'ha-blaster_11, A_jin'ha-dagger_05)
+    Call  HurtEnemy (A_jin'ha-dagger_05, A_jin'ha-dagger_06)
+    Call  KilledEnemy (A_jin'ha-sword_07, A_jin'ha-dagger_07)
+    Call  KilledEnemy (A_jin'ha-sword_07, A_jin'ha-dagger_08)
+    Call  HurtEnemy (A_jin'ha-dagger_07, A_jin'ha-blaster_12)
+    Call  HurtEnemy (A_jin'ha-dagger_08, A_jin'ha-blaster_12)
+    }
+}
+
+Script "Zone 6 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger06
+    if (= Zone6Counter 0)
+    {
+    call Zone06Doors (Obi, DoorTrigger06)
+    ForceTarget A_jin'ha-dagger_21 obi
+    ForceTarget A_jin'ha-rod_01 obi
+    
+    Call Patrol (A_jin'ha-blaster_08)
+	Call Patrol (A_jin'ha-blaster_05)
+	Call Patrol (A_jin'ha-blaster_06)
+    Call FollowBuddy (A_jin'ha-blaster_07, A_jin'ha-rod_03, 3.0, 180)
+    
+    Call FollowBuddy (A_jin'ha-dagger_19, A_jin'ha-rod_02, 2.0, 120)
+    
+    Call  HurtEnemy (A_jin'ha-dagger_21, A_jin'ha-blaster_08)
+    Call  HurtEnemy (A_jin'ha-blaster_08, A_jin'ha-blaster_05)
+    Call  HurtEnemy (A_jin'ha-blaster_05, A_jin'ha-blaster_06)
+    
+    Call  HurtEnemy (A_jin'ha-blaster_06, A_jin'ha-blaster_07)
+    Call  HurtEnemy (A_jin'ha-blaster_06, A_jin'ha-rod_03)
+      
+    Call  KilledEnemy (A_jin'ha-blaster_07, A_jin'ha-dagger_19)
+    Call  KilledEnemy (A_jin'ha-blaster_07, A_jin'ha-rod_02)
+
+    ////ramp midlevel
+    Call FollowBuddy (A_jin'ha-dagger_09, A_jin'ha-dagger_10, 3.0, 120)
+    Call  HurtEnemy (A_jin'ha-dagger_09, A_jin'ha-dagger_20)
+    ////bottom before old mine
+    Call FollowBuddy (A_jin'ha-blaster_04, A_jin'ha-dagger_20, 3.0, 60)
+    }
+}
+
+Script "Zone 6 Patrol 2"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger04
+    if (= Zone6Counter 0)
+    {
+    call Zone06Doors (Obi, DoorTrigger04)
+    ForceTarget A_jin'ha-dagger_19 obi
+    ForceTarget A_jin'ha-rod_02 obi
+    
+    Call FollowBuddy (A_jin'ha-blaster_07, A_jin'ha-rod_03, 3, 120)
+    
+    Call Patrol (A_jin'ha-blaster_06)
+    
+    Call FollowBuddy (A_jin'ha-blaster_05, A_jin'ha-rod_01, 2, 180)    
+     
+    Call  HurtEnemy (A_jin'ha-dagger_19, A_jin'ha-blaster_07)
+    Call  KilledEnemy (A_jin'ha-blaster_07, A_jin'ha-blaster_06)
+    Call  HurtEnemy (A_jin'ha-blaster_06, A_jin'ha-blaster_05)
+    
+    Call FollowBuddy (A_jin'ha-blaster_08, A_jin'ha-dagger_21, 2.0, 60)
+    Call  KilledEnemy (A_jin'ha-blaster_05, A_jin'ha-blaster_08)
+    Call  HurtEnemy (A_jin'ha-rod_01, A_jin'ha-dagger_21)
+    ////ramp midlevel
+    Call FollowBuddy (A_jin'ha-dagger_09, A_jin'ha-dagger_10, 3.0, 120)
+    Call  HurtEnemy (A_jin'ha-dagger_09, A_jin'ha-dagger_20)
+    ////bottom before old mine
+    Call FollowBuddy (A_jin'ha-blaster_04, A_jin'ha-dagger_20, 3.0, 60)
+    }
+}
+
+Script "Zone 7 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger07
+    ForceTarget A_jin'ha-mace_07 obi
+    ForceTarget A_jin'ha-blaster_15 obi
+	Call Patrol (A_jin'ha-mace_09)
+	Call Patrol (A_jin'ha-mace_08)
+	Call Patrol (A_jin'ha-mace_10)
+}
+
+int switch1Hit 0
+int switch2Hit 0
+
+Script "Change fansounds"
+{	
+	WaitUntilExitedRegion Obi region_ambient_mine_old
+	if (= switch1Hit 1)
+	{
+		Nudge obi A_td_pedestalswitch_01
+	}
+	if (= switch2Hit 1)
+	{
+		Nudge obi A_td_pedestalswitch_02
+	}
+	Loop	
+}
+
+Script " Cortosis Effects Switch 1"
+{
+	WaitUntilNudgedBy A_td_pedestalswitch_01 obi
+	set switch1Hit 1
+    ParticleGenOn A_cortosisVaporRising_y_01
+    ParticleGenOn A_cortosisVaporRising_y_02
+    ParticleGenOn A_cortosisVaporRising_y_03
+    WaitUntilNudgedBy A_td_pedestalswitch_01 obi
+	set switch1Hit 0
+    ParticleGenOff A_cortosisVaporRising_y_01
+    ParticleGenOff A_cortosisVaporRising_y_02
+    ParticleGenOff A_cortosisVaporRising_y_03
+    Loop
+}
+
+Script " Cortosis Effects Switch 2"
+{
+    WaitUntilNudgedBy A_td_pedestalswitch_02 obi
+	set switch2Hit 1
+    ParticleGenOn A_cortosisVaporRising_y_04
+    ParticleGenOn A_cortosisVaporRising_y_05
+    ParticleGenOn A_cortosisVaporRising_y_06
+    WaitUntilNudgedBy A_td_pedestalswitch_02 obi
+	set switch2Hit 0
+    ParticleGenOff A_cortosisVaporRising_y_04
+    ParticleGenOff A_cortosisVaporRising_y_05
+    ParticleGenOff A_cortosisVaporRising_y_06
+    Loop
+}
+
+
+Script "Zone 8 / Old Mine Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger08
+    ForceTarget A_jin'ha-dagger_11 obi
+    Call FollowBuddy (A_jin'ha-dagger_12, A_jin'ha-dagger_16, 3.0, 180)
+    Call  HurtEnemyNode (A_jin'ha-dagger_11, A_jin'ha-dagger_12, help_me)
+    Call  HurtEnemy (A_jin'ha-dagger_12, A_jin'ha-dagger_16)
+    Call  KilledEnemy (A_jin'ha-blaster_03, A_jin'ha-mace_12)
+    Call  KilledEnemy (A_jin'ha-blaster_03, A_jin'ha-mace_13)
+
+}
+
+Script "Zone 9 / Mine Core Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger09
+    ForceTarget A_jin'ha-mace_12 obi
+    ForceTarget A_jin'ha-mace_13 obi
+    Call Patrol (A_jin'ha-sword_05)
+    Call Patrol (A_jin'ha-sword_06)
+    Call Patrol (A_jin'ha-sword_01)
+    Call Patrol (A_jin'ha-sword_02)
+}
+
+
+Script "Ending Cutscene"
+{
+    WaitUntilKilled A_jin'ha-sword_05
+    WaitUntilKilled A_jin'ha-sword_06
+    MissionObjectiveAchieved 2
+
+    DisableAudioFades
+	Pause 1
+    FadeDownAndWait 1
+	Pause 1
+   	BeginCutScene
+   
+    ChildScript "Last of the Bad Guys"
+    {
+    RemoveActor A_jin'ha-sword_01
+    RemoveActor A_jin'ha-sword_02
+    RemoveActor A_jin'ha-rod_08
+    RemoveActor A_jin'ha-rod_09
+    RemoveActor A_jin'ha-mace_12
+    RemoveActor A_jin'ha-mace_13
+    RemoveActor A_jin'ha-bowcaster_02
+    RemoveActor A_jin'ha-blaster_03
+    RemoveActor A_jin'ha-dagger_11
+    RemoveActor A_jin'ha-dagger_12
+    RemoveActor A_jin'ha-dagger_16
+	}
+
+	Teleport obi obi_start_here
+    UnEquipWeapon  Obi
+	WalkToNode obi end_it_all
+    FadeUp
+	 EnableAudioFades
+    CameraFixed camera_end
+    Pause 0.5
+   	SayLineNonPositional Obi "/Obi-Wan_346/Master, I think I've found the cortosis refinery. There's some strange technology here, some kind of synthesis device."
+	Pause 1.0
+	CommunicatorMessageAndWait "/Qui-Gon_345/Excellent Padawan! See if you can get a sample from one of the computers or something...We’ll have it analyzed on Coruscant."
+	Pause 2.0  
+	CommunicatorOff
+	FadeDown
+    cameraoff
+    
+    //Commands to execute if player exits cutscene early
+    PreEndCutscene
+    FadeDown 0
+    CommunicatorOff
+    StopTalking obi
+    
+   	EndCutScene
+	NextLevel L02_4
+}

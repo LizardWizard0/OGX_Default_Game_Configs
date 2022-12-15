@@ -1,0 +1,60 @@
+//Spawned at locator MissionTarget
+//If exists walks between locators MissionTarget_1 and MissionTarget
+state Base {
+	Conditions {
+	}
+	Actions {
+		CanDefend "FALSE"
+		DontPush
+		SetInvulnerable
+		SetSide "neutral"
+		SetState "Update"
+	}
+}
+
+state Update {
+	Conditions {
+		if MissionWon == 1 goto Captured
+	}
+	Actions {
+		GoToLocator
+		FaceCamera "mintime=1" "maxtime=3"
+		SetState "ChooseLocator" 
+	}
+}
+
+state ChooseLocator {
+	Conditions {
+		if CurrentLocatorIs "MissionTarget" == 1 goto SetLocator_1
+		if AlwaysTrue == 1 goto SetLocator_0
+	}
+	Actions {
+	}
+}
+
+state SetLocator_0 {
+	Conditions {
+	}
+	Actions {
+		SetLocator "name=MissionTarget"
+		SetState "Update"
+	}
+}
+
+state SetLocator_1 {
+	Conditions {
+	}
+	Actions {
+		SetLocator "name=MissionTarget_1"
+		SetState "Update"
+	}
+}
+
+state Captured {
+	Conditions {
+	}
+	Actions {
+		FaceCamera
+	}
+}
+

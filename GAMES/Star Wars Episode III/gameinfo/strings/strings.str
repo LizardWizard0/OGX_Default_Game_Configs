@@ -1,0 +1,1721 @@
+
+#############################
+### START TRANSLATION
+#############################
+
+### INTERNATIONAL (UK) PS2 SPECIFIC STRINGS
+
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_UKPS2]Insert analog controller (DUALSHOCK®2) to controller port 2
+[IDS_SHELL_REINSERT_CONTROLLER_UKPS2]Please reconnect analog controller (DUALSHOCK®2) to controller port #.
+[IDS_SHELL_REINSERT_CONTROLLER_2PLAYER_UKPS2]Please reconnect analog controllers (DUALSHOCK®2) to controller ports # and @.
+[IDS_SHELL_CONTROLLERBOOTCHECK_UKPS2]The analog controller (DUALSHOCK®2) is not detected. Please attach the analog controller (DUALSHOCK®2) to controller port 1.
+
+### INTERNATIONAL (UK) XBOX SPECIFIC STRINGS
+
+### GENERAL STRINGS
+[IDS_SINGLE_PLAYER]Single Player
+[IDS_MULTI_PLAYER]Multi Player
+[IDS_FEATURES]Features
+[IDS_SETTINGS]Settings
+[IDS_NEW_GAME]New Game
+[IDS_DEBUG_SHELL]Shell Debug Menu
+[IDS_LOAD_GAME]Load Game
+[IDS_COOPERATIVE]Cooperative
+[IDS_DUEL]Duel
+[IDS_VERSUS]Versus
+[IDS_ADVENTURE_MISSIONS]Story Missions
+[IDS_CHALLENGE_MISSIONS]Bonus Missions
+[IDS_SHELL_MISSION_COMPLETE]Mission Complete
+[IDS_SOUND]Sound
+[IDS_VIDEO]Video
+[IDS_CONTROLLER]Controls
+[IDS_CODES]Codes
+[IDS_BONUS_MOVIES]Making Of Video
+[IDS_TRAILERS]Trailers
+[IDS_CONCEPT_ART]Concept Art
+[IDS_DELETED_SCENES]Deleted Scenes
+[IDS_CREDITS]Credits
+[IDS_SELECT]Select
+[IDS_REPLAY_MOVIES]Replay Movies
+[IDS_BACK]Back
+[IDS_DELETE]Delete
+[IDS_PROCEED]Proceed
+[IDS_FINISH]Finish
+[IDS_CONFIRM]Confirm
+[IDS_OK]Ok
+[IDS_CANCEL]Cancel
+[IDS_START]Start
+[IDS_RETRY]Retry
+[IDS_ROUNDS]Rounds
+[IDS_BONUS]Bonus
+[IDS_DETAILS]Details
+[IDS_LOCKED]Locked
+[IDS_SHELL_RANDOM]Random
+[IDS_SHELL_RANDOM_ARENA]Random Arena
+[IDS_SHELL_QUESTION_MARKS]?????????
+[IDS_HOLD]Hold
+[IDS_PLUS_SIGN]+
+[IDS_SHELL_COM]Com
+[IDS_SHELL_SELECT_ROUNDS]Select Rounds
+[IDS_PAUSE_GAME_PAUSED]Paused
+[IDS_PAUSE_RESUME_GAME]Continue
+[IDS_PAUSE_CONTINUE_MISSION]Continue Mission
+[IDS_PAUSE_RESTART_MISSION]Restart Mission
+[IDS_PAUSE_QUIT_MISSION]Quit Mission
+[IDS_PAUSE_SETTINGS]Settings
+[IDS_PAUSE_OBJECTIVES]Objectives
+[IDS_PAUSE_PLAYER]Player
+[IDS_SAVE_NAME_YOUR_GAME]Name game
+[IDS_GAME_OVER]Game Over
+[IDS_SHELL_SELECT_CHALLENGE_MISSION]Select Challenge Mission
+[IDS_SHELL_SELECT_BONUS_MISSION]Select Bonus Mission
+[IDS_SHELL_BONUS_MISSION_CLEARED]Bonus Mission Cleared
+[IDS_SHELL_CHALLENGE_MISSION_CLEARED]Challenge Mission Cleared
+[IDS_SHELL_TOTAL_KILLS]Total Kills
+[IDS_SHELL_TIME_ELAPSED]Time Elapsed
+[IDS_SHELL_TOTAL_SCORE]Total Score
+[IDS_SHELL_TARGET_ACHIEVED]Target Achieved
+[IDS_SHELL_POINTS_REQUIRED]Points to Unlock
+[IDS_SHELL_HIGH_SCORE]High Score
+[IDS_SHELL_AND]And
+[IDS_SHELL_BRIEFING]Briefing
+[IDS_SHELL_OVERVIEW]Overview
+[IDS_SEL_SELECT_YOUR_MISSION]Select Story Mission
+[IDS_SEL_EXPERIENCE_EARNED]Experience Earned
+[IDS_SEL_SECRETS_FOUND]Secrets Found
+[IDS_SEL_JEDI]Jedi
+[IDS_SEL_LOCATION]Location
+[IDS_SEL_ANAKIN]Anakin
+[IDS_SEL_OBIWAN]Obi-Wan
+[IDS_SEL_CORUSCANT]Coruscant
+[IDS_SEL_MUSTAFAR]Mustafar
+[IDS_SEL_UTAPAU]Utapau
+[IDS_SEL_CRUISER]Cruiser
+[IDS_SEL_DEATHSTAR]Death Star
+[IDS_ABILITIES_ENHANCE_SKILLS]Enhance Skills
+[IDS_SHELL_EXPERIENCE]Experience
+[IDS_SHELL_FORCE_POWERS]Force Powers
+[IDS_SHELL_COMBAT_SKILLS]Combat Skills
+[IDS_SHELL_SKILLS]Skills
+[IDS_SHELL_FORCE_PUSH]Force Push
+[IDS_SHELL_FORCE_GRASP]Force Grasp
+[IDS_SHELL_FORCE_STUN]Force Stun
+[IDS_SHELL_SABER_THROW]Saber Throw
+[IDS_SHELL_FORCE_HEAL]Force Heal
+[IDS_SHELL_FORCE_LIGHTNING]Force Lightning
+[IDS_SHELL_JUMP_ATTACKS]Jump Attacks
+[IDS_SHELL_GRAPPLES]Grapples
+[IDS_SHELL_LUNGES]Lunges
+[IDS_SHELL_CLEARING_ATTACKS]Clearing Attacks
+[IDS_SHELL_CRITICAL_ATTACKS]Critical Attacks
+[IDS_SHELL_FORCE_PUSH_LONG]Push away enemies and objects
+[IDS_SHELL_FORCE_GRASP_LONG]Grasp and throw enemies and objects
+[IDS_SHELL_FORCE_STUN_LONG]Disable droids or charm organics to fight for you
+[IDS_SHELL_SABER_THROW_LONG]Throw your saber at enemies and objects
+[IDS_SHELL_FORCE_HEAL_LONG]Restore health using Force energy
+[IDS_SHELL_FORCE_LIGHTNING_LONG]Electrocute enemies and objects
+[IDS_SHELL_JUMP_ATTACKS_LONG]Acrobatic airborne saber attacks
+[IDS_SHELL_GRAPPLES_LONG]Powerful grabs, throws and kicks
+[IDS_SHELL_LUNGES_LONG]Intercept and counter saber attacks
+[IDS_SHELL_CLEARING_ATTACKS_LONG]Devastating attacks fueled by the Force
+[IDS_SHELL_CRITICAL_ATTACKS_LONG]Lethal and stylish finishing moves
+[IDS_SHELL_SELECT_A_MEMORY_DEVICE]Select memory device
+[IDS_LOAD_AVAILABLE_MEMORY]Available:
+[IDS_LOAD_TOTAL_MEMORY]Total:
+[IDS_LOAD_SELECT_A_PROFILE]Load Game
+[IDS_SAVE_SELECT_A_PROFILE]Save Game : %s
+[IDS_SHELL_NEW]New
+[IDS_SHELL_EMPTY]<New>
+[IDS_LOAD_ANAKIN_SKYWALKER]Anakin Skywalker
+[IDS_LOAD_OBIWAN_KENOBI]Obi-Wan Kenobi
+[IDS_CHARACTER]Character
+[IDS_JEDI]Jedi
+[IDS_JEDI_KNIGHT]Jedi Knight
+[IDS_JEDI_MASTER]Jedi Master
+[IDS_LOAD_PADAWAN]Padawan
+[IDS_MISSION_END_REWARDS]Mission Rewards
+[IDS_MISSION_END_EXPERIENCE_GAINED]Experience Gained
+[IDS_MISSION_END_SECRETS_FOUND]Secrets Found
+[IDS_SHELL_SELECT_JEDI]Select Duelist
+[IDS_SHELL_SELECT_ARENA]Select Arena
+[IDS_SHELL_ANAKIN]Anakin Skywalker
+[IDS_SHELL_OBIWAN]Obi-Wan Kenobi
+[IDS_SHELL_DOOKU]Count Dooku
+[IDS_SHELL_MACE]Mace Windu
+[IDS_SHELL_CIN_DRALLIG]Cin Drallig
+[IDS_SHELL_SERRA]Serra Keto
+[IDS_SHELL_DARTH_VADER]Darth Vader
+[IDS_SHELL_OLD_OBIWAN]Ben Kenobi
+[IDS_SHELL_GENERAL_GRIEVOUS]General Grievous
+[IDS_SHELL_YODA]Yoda
+[IDS_SHELL_GRIEVOUS_BODYGUARD]Grievous Bodyguard
+[IDS_SHELL_PLAYER2_PUSH_START_XBOX]Press Start to Join
+[IDS_SHELL_PLAYER2_PUSH_START_PS2]Press Start Button to Join
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_XBOX]Connect Controller
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_PS2]Insert DUALSHOCK®2 analog controller to controller port 2
+[IDS_SHELL_PLAYER2]Player
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_PUSH_START1_XBOX]Player 2 connect controller
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_PUSH_START1_PS2]Player 2 insert controller
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_PUSH_START2_XBOX]and Press Start
+[IDS_SHELL_PLAYER2_INSERT_CONTROLLER_PUSH_START2_PS2]and Press Start Button
+[IDS_SHELL_JEDI_KNIGHT]Jedi Knight
+[IDS_SHELL_JEDI_MASTER]Jedi Master
+[IDS_SHELL_SITH_LORD]Sith Lord
+[IDS_SHELL_DARK_SITH_LORD]Sith Lord
+[IDS_SHELL_DROID_COMMANDER]Droid Commander
+[IDS_SHELL_VIEW_ARENA]View Arena
+[IDS_SHELL_VIEW_DUELIST]View Duelist
+[IDS_SHELL_VIEW_MISSIONS]View Missions
+[IDS_SHELL_PRESS_START_XBOX]Press Start
+[IDS_SHELL_PRESS_START_PS2]Press Start Button
+[IDS_SHELL_CONTROLLER]Controls
+[IDS_SHELL_VIBRATION]Vibration
+[IDS_SHELL_SUBTITLES]Subtitles
+[IDS_SHELL_MUSIC_VOLUME]Music Volume
+[IDS_SHELL_EFFECTS_VOLUME]Effects Volume
+[IDS_SHELL_DIALOGUE_VOLUME]Dialogue Volume
+[IDS_SHELL_DIFFICULTY]Difficulty
+[IDS_SHELL_CODES]Codes
+[IDS_SHELL_ENTER_CODE]Enter Code
+[IDS_SHELL_RESTORE_DEFAULTS]Restore Defaults
+[IDS_SHELL_ON]On
+[IDS_SHELL_OFF]Off
+[IDS_SHELL_YES]Yes
+[IDS_SHELL_NO]No
+[IDS_SHELL_EASY]Easy
+[IDS_SHELL_NORMAL]Normal
+[IDS_SHELL_HARD]Hard
+[IDS_SHELL_CHANGE]Change
+[IDS_SHELL_CONFIG_A]Configuration - A
+[IDS_SHELL_CONFIG_B]Configuration - B
+[IDS_SHELL_CONFIG_C]Configuration - C
+[IDS_SHELL_CONFIG_D]Configuration - D
+[IDS_SHELL_SHORT_CONFIG_A]Config. A
+[IDS_SHELL_SHORT_CONFIG_B]Config. B
+[IDS_SHELL_SHORT_CONFIG_C]Config. C
+[IDS_SHELL_SHORT_CONFIG_D]Config. D
+[IDS_PAUSE_SHORT_CONFIG_A]Config.- A
+[IDS_PAUSE_SHORT_CONFIG_B]Config.- B
+[IDS_PAUSE_SHORT_CONFIG_C]Config.- C
+[IDS_PAUSE_SHORT_CONFIG_D]Config.- D
+[IDS_SHELL_MOVE]Move
+[IDS_SHELL_PAUSE]Pause
+[IDS_SHELL_FORCE_TARGET]Force Target
+[IDS_SHELL_JUMP]Jump
+[IDS_SHELL_SABER_THROW]Saber Throw
+[IDS_SHELL_FIERCE_ATTACK]Strong Attack
+[IDS_SHELL_CRITICAL_ATTACK]Critical Attack
+[IDS_SHELL_FAST_ATTACK]Fast Attack
+[IDS_SHELL_STALK_BLOCK]Strafe / Block
+[IDS_SHELL_PUSH_GRASP]Push / Grasp
+[IDS_SHELL_STUN_LIGHTNING]Stun / Lightning
+[IDS_SHELL_SCROLL]Scroll
+[IDS_SHELL_INTERVIEW_LUCAS]George Lucas
+[IDS_SHELL_INTERVIEW_HAYDEN]Hayden Christenson
+[IDS_SHELL_INTERVIEW_BURTT]Ben Burtt
+[IDS_SHELL_NEW]New
+
+###Popup Messages
+[IDS_SHELL_PROFILE_ALREADY_EXISTS]Game Already Exists
+[IDS_SHELL_PROFILE_ALREADY_EXISTS_MESSAGE]A game with that name already exists.  Are you sure you want to overwrite it?
+[IDS_SHELL_OVERWRITE_PROFILE]Overwrite game
+[IDS_SHELL_OVERWRITE_PROFILE_MESSAGE]Are you sure you would like to overwrite that game?
+[IDS_SHELL_MEMORY_CARD_REMOVED]Memory card (PS2)
+[IDS_SHELL_MEMORY_CARD_REMOVED_MESSAGE]Memory card (PS2) not inserted in MEMORY CARD slot 1. Please reinsert the Memory Card (PS2) into MEMORY CARD slot 1 and try again.
+[IDS_SHELL_UNLOAD_PROFILE]Exit to Main Menu
+[IDS_SHELL_UNLOAD_PROFILE_MESSAGE]Are you sure you want to exit to the main menu?  All unsaved progress will be lost.
+[IDS_SHELL_NO_MEMORY_CARD_FOUND]Memory card (PS2)
+[IDS_SHELL_NO_MEMORY_CARD_FOUND_MESSAGE]Memory card (PS2) not found in MEMORY CARD slot 1. At least %d KB is needed to save the game. Do you wish to continue without saving?
+[IDS_SHELL_NO_MEMORY_CARD_FOUND_NOSIZE]Memory card (PS2)
+[IDS_SHELL_NO_MEMORY_CARD_FOUND_NOSIZE_MESSAGE]Memory card (PS2) not found in MEMORY CARD slot 1. Do you want to continue without saving?
+[IDS_SHELL_MEMORY_CARD_NOT_FORMATTED]Memory card (PS2)
+[IDS_SHELL_MEMORY_CARD_NOT_FORMATTED_MESSAGE]Memory card (PS2) in MEMORY CARD slot 1 is unformatted. Do you want to format?
+[IDS_SHELL_MEMORY_CARD_FORMATTING]Memory card (PS2)
+[IDS_SHELL_MEMORY_CARD_FORMATTING_MESSAGE]Formatting Memory Card (PS2) in MEMORY CARD slot 1. Do not remove Memory Card (PS2), controller, or reset/switch off console.
+[IDS_SHELL_NOT_ENOUGH_SPACE]Warning
+[IDS_SHELL_NOT_ENOUGH_SPACE_MESSAGE_PS2]There is insufficient space on Memory card (PS2) in MEMORY CARD slot 1. At least %d KB is needed to save the game.  Do you wish to continue without saving?
+[IDS_SHELL_NOT_ENOUGH_SPACE_MESSAGE_XBOX]Your Xbox doesn't have enough free blocks to save games. At least %d additional blocks are required to save the game.  Would you like to go to the Xbox dashboard to free more blocks?
+[IDS_SHELL_NOT_ENOUGH_SPACE_CONFIRM]Confirm
+[IDS_SHELL_NOT_ENOUGH_SPACE_CONFIRM_MESSAGE]Are you sure you would like to go to the Xbox dashboard?  All unsaved progress will be lost.
+[IDS_SHELL_FINISHED_UPGRADING]Finished Upgrading
+[IDS_SHELL_FINISHED_UPGRADING_MESSAGE]Are you finished upgrading?
+[IDS_SHELL_SAVING]Saving Game
+[IDS_SHELL_SAVING_MESSAGE_XBOX]Saving your game. Please do not turn off your XBOX console.
+[IDS_SHELL_SAVING_MESSAGE_PS2]Saving data. Do not remove the Memory Card (PS2) in MEMORY CARD slot 1, controller, or reset/switch off the console.
+[IDS_SHELL_AUTOSAVING]Autosaving Game
+[IDS_SHELL_AUTOSAVING_MESSAGE_XBOX]Autosaving your game. Please do not turn off your XBOX console.
+[IDS_SHELL_AUTOSAVING_MESSAGE_PS2]Autosaving data. Do not remove the Memory Card (PS2) in MEMORY CARD slot 1, controller, or reset/switch off the console.
+[IDS_SHELL_LOADING]Loading
+[IDS_SHELL_LOADING_MESSAGE_XBOX]Loading your game. Please do not turn off your XBOX console.
+[IDS_SHELL_LOADING_MESSAGE_PS2]Loading data from Memory Card (PS2) in MEMORY CARD slot 1. Do not remove the Memory Card (PS2) in MEMORY CARD slot 1, controller, or reset/switch off the console.
+[IDS_SHELL_LOADING_PREVIEWS_PS2]Memory Card (PS2)
+[IDS_SHELL_LOADING_PREVIEWS_MESSAGE_PS2]Accessing Memory Card (PS2) in MEMORY CARD slot 1. Do not remove the Memory Card (PS2) in MEMORY CARD slot 1, controller, or reset/switch off the console.
+[IDS_SHELL_LOADING_PREVIEWS_MESSAGE_XBOX]Accessing saved games.  Please do not turn off your XBOX console.
+[IDS_SHELL_LOADING_PREVIEWS_NONE_FOUND]No games found
+[IDS_SHELL_LOADING_PREVIEWS_NONE_FOUND_MESSAGE_PS2]No saved games found on Memory Card (PS2) in MEMORY CARD slot 1.
+[IDS_SHELL_LOADING_PREVIEWS_NONE_FOUND_MESSAGE_XBOX]No saved games found.
+[IDS_SHELL_LOADING_PREVIEWS_FAILED]Memory Card (PS2)
+[IDS_SHELL_LOADING_PREVIEWS_FAILED_MESSAGE]Memory Card (PS2) not found in Memory Card slot 1. Please check the Memory Card (PS2) and try again.
+[IDS_SHELL_LOADING_FAILED]Loading failed
+[IDS_SHELL_LOADING_FAILED_MESSAGE_XBOX]This game appears to be damaged. Please delete it using the Xbox Dashboard.  Press A to continue.
+[IDS_SHELL_LOADING_FAILED_MESSAGE_PS2]Saved game data may be corrupt. Please check the Memory Card (PS2) in MEMORY CARD slot 1 and try again.
+[IDS_SHELL_SAVING_FAILED]Saving failed
+[IDS_SHELL_SAVING_FAILED_MESSAGE_XBOX]Save failed. Please try again.
+[IDS_SHELL_SAVING_FAILED_MESSAGE_PS2]Please check the Memory Card (PS2) in MEMORY CARD slot 1 and try again.
+
+[IDS_SHELL_FORMATTING_FAILED_MESSAGE_XBOX]Format failed.  Please try again.
+
+[IDS_SHELL_RESTORE_DEFAULTS]Restore Defaults
+[IDS_SHELL_RESTORE_DEFAULTS_MESSAGE]Are you sure you wish to restore default settings? All previous settings will be lost.
+[IDS_SHELL_SAVE]Save
+[IDS_SHELL_SAVE_MESSAGE]Would you like to save your game?
+[IDS_SHELL_SAVE_SETTINGS]Save Settings?
+[IDS_SHELL_SAVE_SETTINGS_MESSAGE]Would you like to save your game settings?
+[IDS_SHELL_FORMAT_SUCCESSFUL]Success
+[IDS_SHELL_FORMAT_SUCCESSFUL_MESSAGE]Memory Card (PS2) in Memory Card Slot 1 has been formatted successfully.
+[IDS_SHELL_FORMATTING_FAILED]Memory card (PS2)
+[IDS_SHELL_FORMATTING_FAILED_MESSAGE_PS2]Format failed. Please check Memory Card (PS2) in Memory Card Slot 1 and try again.
+[IDS_SHELL_DELETE_SUCCESSFUL]Success
+[IDS_SHELL_DELETE_SUCCESSFUL_MESSAGE_PS2]Save data was deleted successfully from Memory Card (PS2) in MEMORY CARD slot 1.
+[IDS_SHELL_DELETE_SUCCESSFUL_MESSAGE_XBOX]Saved game was deleted successfully.
+[IDS_SHELL_DELETING_FAILED]Delete failed
+[IDS_SHELL_DELETING_FAILED_MESSAGE_PS2]Delete failed. Please check the Memory Card (PS2) in MEMORY CARD slot 1 and try again.
+[IDS_SHELL_DELETING_FAILED_MESSAGE_XBOX]Delete failed. Please try again.
+[IDS_SHELL_MEMCARD_CHANGED]Memory Card (PS2)
+[IDS_SHELL_MEMCARD_CHANGED_MESSAGE_PS2]Memory Card (PS2) in Memory Card slot 1 has changed.
+
+[IDS_SHELL_SETTINGS_SAVE_WARNING]Warning
+[IDS_SHELL_SETTINGS_SAVE_WARNING_MESSAGE]Your settings will be saved at the end of each mission, when you save your game.
+
+[IDS_SHELL_AUTOSAVE_NOTICE]This game uses an autosave feature. Game data is saved automatically on the memory card (PS2) in MEMORY CARD slot 1 as game-play proceeds.
+
+
+[IDS_SHELL_CODE_SUCCESS]Code Accepted
+[IDS_SHELL_CODE_QUIGON]Infinite Health Activated
+[IDS_SHELL_CODE_JOCASTA]Infinite Force Energy Activated
+[IDS_SHELL_CODE_SKYWALKER]Fast Force Energy and Health Regeneration Activated
+[IDS_SHELL_CODE_JEDIMASTER]All Attacks and Force Power upgrades Activated
+[IDS_SHELL_CODE_LORDVADER]All Story Missions Unlocked
+[IDS_SHELL_CODE_SITHLORD]All Bonus Missions Unlocked 
+[IDS_SHELL_CODE_DARTHSIDIOUS]All Duel Arenas Unlocked
+[IDS_SHELL_CODE_DARTHTYRANUS]All Duelists Unlocked
+[IDS_SHELL_CODE_COMLINK]All Movie Clips Unlocked
+[IDS_SHELL_CODE_AAYALASECURA]All Concept Art Unlocked
+
+[IDS_SHELL_SUCCESS]Success
+[IDS_SHELL_SUCCESS_MESSAGE]Your code worked
+[IDS_PAUSE_QUIT]Quit Mission
+[IDS_PAUSE_QUIT_DUEL]Quit Duel
+[IDS_PAUSE_HOLD]Hold
+[IDS_PAUSE_CLICK]Click
+[IDS_PAUSE_QUIT_MESSAGE]Are you sure you would like to quit? Any unsaved progress will be lost.
+[IDS_PAUSE_RESTART]Restart Mission
+[IDS_PAUSE_RESTART_MESSAGE]Are you sure you would like to restart the mission? Any unsaved progress will be lost.
+[IDS_PAUSE_CONTINUE]Continue
+[IDS_PAUSE_CONTINUE_MESSAGE]Are you sure you would like to continue from the last checkpoint?
+[IDS_SHELL_DELETE_PROFILE]Delete game
+[IDS_SHELL_DELETE_PROFILE_MESSAGE]Are you sure you want to delete your game? All saved progress will be lost.
+[IDS_SHELL_NO_PROFILES_FOUND]No saved games found
+[IDS_SHELL_NO_PROFILES_FOUND_MESSAGE]You do not have any saved games available.
+[IDS_SHELL_FORMATTING]Memory Card (PS2)
+[IDS_SHELL_FORMATTING_MESSAGE]Formatting memory card (PS2) in MEMORY CARD slot 1. Do not remove memory card (PS2), controller, or reset/switch off console.
+[IDS_SHELL_DELETING]Deleting Game
+[IDS_SHELL_DELETING_MESSAGE_PS2]Deleting game. Do not remove memory card (PS2), controller, or reset/switch off console.
+[IDS_SHELL_DELETING_MESSAGE_XBOX]Deleting game. Do not turn off the XBOX console.
+[IDS_SHELL_CONTINUE_WITHOUT_SAVING]Continue
+[IDS_SHELL_CONTINUE_WITHOUT_SAVING_MESSAGE]Would you like to continue without saving?
+[IDS_SHELL_NO_PROFILE_CREATED]Save Game
+[IDS_SHELL_NO_PROFILE_CREATED_MESSAGE_XBOX]Would you like to save your game?
+[IDS_SHELL_NO_PROFILE_CREATED_MESSAGE_PS2]Would you like to save your game?
+[IDS_SHELL_PROFILE_NOT_FOUND]Saved Game Not Found
+[IDS_SHELL_PROFILE_NOT_FOUND_MESSAGE]Your saved game was not found on Memory Card (PS2) in MEMORY CARD Slot 1.  Would you like to create it now?
+[IDS_SHELL_REINSERT_CONTROLLER_PS2]Please reconnect DUALSHOCK®2 analog controller to controller port #.
+[IDS_SHELL_REINSERT_CONTROLLER_XBOX]Please reconnect controller to controller port #.
+[IDS_SHELL_REINSERT_CONTROLLER_2PLAYER_PS2]Please reconnect DUALSHOCK®2 analog controllers to controller ports # and @.
+[IDS_SHELL_REINSERT_CONTROLLER_2PLAYER_XBOX]Please reconnect controllers to controller ports # and @.
+[IDS_SHELL_UPGRADE_HELP]Upgrade terminal
+[IDS_SHELL_UPGRADE_HELP_1_PS2]Spend experience earned during combat to improve your force powers and combat skills. \n \n  Press the right directional button in a subcategory to increase its effectiveness, range, and damage.  You must fill the entire bar to move up a skill level and unlock these improvements. \n \n  This menu shows force power upgrades.
+[IDS_SHELL_UPGRADE_HELP_2_PS2]Gain access to additional moves by filling the upgrade bar next to the skill.  You must fill the entire bar to move up a skill level and unlock additional moves. \n\n You can view moves you've unlocked by selecting the Details option. \n\n In game, access your upgrades at any time from the Combat Chart in the Pause menu.
+
+[IDS_SHELL_UPGRADE_HELP_1_XBOX]Spend experience earned during combat to improve your force powers and combat skills. \n \n  Press right on the directional pad in a subcategory to increase its effectiveness, range, and damage.  You must fill the entire bar to move up a skill level and unlock these improvements. \n \n  This menu shows force power upgrades.  
+[IDS_SHELL_UPGRADE_HELP_2_XBOX]Gain access to additional moves by filling the upgrade bar next to the skill.  You must fill the entire bar to move up a skill level and unlock additional moves. \n\n You can view moves you've unlocked by selecting the Details option. \n\n In game, access your upgrades at any time from the Combat Chart in the Pause menu.
+ 
+
+[IDS_SHELL_CONNECT_CONTROLLER_PS2]Please connect DUALSHOCK®2 analog controller to any port.
+[IDS_SHELL_CONNECT_CONTROLLER_XBOX]Please connect a controller to any port.
+# MJM 2-11-05: renamed this to Controller for Ep3 bug 5849 - "analog controller DUALSHOCK®2" wouldn't fit
+# JL 2-15-05: The tag below must remain blank to due tech limitations (see bug 6227)
+[IDS_CONTROLLER_REMOVED_POPUP_TITLE_PS2]  
+[IDS_CONTROLLER_REMOVED_POPUP_TITLE_XBOX]Controller
+[IDS_SHELL_SUCCESS]Success
+[IDS_SHELL_CODE_WORKED]Code worked
+[IDS_SHELL_REINSERT_MEMORY_CARD]Reinsert Memory Card
+[IDS_SHELL_REINSERT_MEMORY_UNIT]Reinsert Memory Unit
+[IDS_SHELL_MEMCARDBOOTCHECK_PS2]There is insufficient space on the Memory Card (PS2) in MEMORY CARD slot 1. At least %d KB is needed to save the game. Do you want to start?
+[IDS_SHELL_CONTROLLERBOOTCHECK_PS2]The DUALSHOCK®2 analog controller is not detected. Please attach the DUALSHOCK®2 analog controller to controller port 1.
+[IDS_SHELL_SETTINGS_WONT_BE_SAVED]Warning
+[IDS_SHELL_SETTINGS_WONT_BE_SAVED_MESSAGE]Your settings will not be saved until you create a saved game.
+[IDS_SHELL_MORE_GAMES_FOUND]Warning
+[IDS_SHELL_MORE_GAMES_FOUND_MESSAGE_PS2]More than 10 saved games have been found on the Memory Card (PS2) in Memory Card Slot 1.  Only the first 10 games will be displayed.
+[IDS_SHELL_MORE_GAMES_FOUND_MESSAGE_XBOX]More than 10 saved games have been found on your xbox hard disk. Only the first 10 games will be displayed.
+[IDS_SHELL_SAVE_SUCCESSFUL]Success
+[IDS_SHELL_SAVE_SUCCESSFUL_MESSAGE]Your game has been saved successfully.
+
+[IDS_SHELL_UNLOCKED_ARENA]Unlocked Duel Arena
+[IDS_SHELL_UNLOCKED_DUELIST]Unlocked Duelist
+[IDS_SHELL_UNLOCKED_CONCEPT_ART]Unlocked Concept Art
+[IDS_SHELL_UNLOCKED_BONUS_MISSION]Unlocked Challenge Mission
+[IDS_SHELL_CONCEPT_ART_UNLOCKED]@ concept art images
+[IDS_SHELL_CONCEPT_ART_UNLOCKED_ONE]@ concept art image
+[IDS_SHELL_BATTLE_EXP]Battle Xp
+[IDS_SHELL_MASTERFUL]Masterful
+[IDS_SHELL_IMPRESSIVE]Impressive
+[IDS_SHELL_GOOD]Good
+[IDS_SHELL_FAIR]Fair
+
+###Concept Art
+[IDS_SHELL_CONCEPTART_SEPARATIST_CRUISER1]JEDI ESCAPE
+[IDS_SHELL_CONCEPTART_SEPARATIST_CRUISER1_LONG]CRUISER - JEDI ESCAPE
+[IDS_SHELL_CONCEPTART_SEPARATIST_CRUISER1_DESC]This sequence was cut from the film but was retained for the game.  We see Anakin and Obi-Wan, surrounded by droids, making a daring escape by cutting a hole in the floor with their lightsabers.
+
+[IDS_SHELL_CONCEPTART_SEPARATIST_CRUISER2]GENERATOR ROOM
+[IDS_SHELL_CONCEPTART_SEPARATIST_CRUISER2_LONG]GENERATOR ROOM
+[IDS_SHELL_CONCEPTART_SEPARATIST_CRUISER2_DESC]More from the cut sequence that remained in the game.  Here Anakin and Obi-Wan navigate the cruiser’s generator room, which is filling up with volatile fuel, pouring in from cracks in the damaged walls.
+
+[IDS_SHELL_CONCEPTART_BUZZDROID]Buzz droid
+[IDS_SHELL_CONCEPTART_BUZZDROID_LONG]Buzz droid
+[IDS_SHELL_CONCEPTART_BUZZDROID_DESC]These insect-like droids are seen in the film dismantling Jedi starfighters during the Battle of Coruscant. The game explores the Buzz Droid’s functionality against Jedi Knights on foot.
+
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID1]Grapple droid
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID1_LONG]Grapple droid
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID1_DESC]Early concept of Grapple Droid which doesn't have the electric shock mechanism. The body and the panel lines show more resemblance to the Super Battle Droid.
+
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID2]Grapple droid - BLUE
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID2_LONG]Grapple droid - BLUE
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID2_DESC]Grapple Droids are the walking tanks of the droid army. They're a variation of the Super Battle Droid, but they lack arm-mounted blasters.  They rely on their melee attacks and grappling techniques.
+
+[IDS_SHELL_CONCEPTART_BUZZDROID_GEN]BUZZ DROID GENERATOR
+[IDS_SHELL_CONCEPTART_BUZZDROID_GEN_LONG]BUZZ DROID GENERATOR (CUT)
+[IDS_SHELL_CONCEPTART_BUZZDROID_GEN_DESC]The final concept image of Buzz Droid Generator. Generators were planned to hover and populate the levels with Buzz Droids. This Separatist unit was cut from the game during the final revision.
+
+[IDS_SHELL_CONCEPTART_AIRBATTLEDROID]Air battle droid
+[IDS_SHELL_CONCEPTART_AIRBATTLEDROID_LONG]Air battle droid
+[IDS_SHELL_CONCEPTART_AIRBATTLEDROID_DESC]Air Battle Droids are the upgraded flying versions of the standard battle droid. Unlike the ground units, the fliers are equipped with a short blade, an arm-mounted blaster and a shield that can block lightsabers.
+
+[IDS_SHELL_CONCEPTART_HALLWAYS1]HALLWAY 1
+[IDS_SHELL_CONCEPTART_HALLWAYS1_LONG]CRUISER - HALLWAY 1
+[IDS_SHELL_CONCEPTART_HALLWAYS1_DESC]Early game concept art of Anakin cutting through battle droids in a Separatist cruiser hallway.  This is based on early cruiser reference and concept work done for the film.
+
+[IDS_SHELL_CONCEPTART_HALLWAYS2]HALLWAY 2
+[IDS_SHELL_CONCEPTART_HALLWAYS2_LONG]CRUISER - HALLWAY 2
+[IDS_SHELL_CONCEPTART_HALLWAYS2_DESC]Another early game concept of Anakin taking on one of the newly created Grapple Droids.  This concept shows the dramatic dismembering effects for the droid characters.
+
+[IDS_SHELL_CONCEPTART_GRENADIERDROID]Grenadier droid
+[IDS_SHELL_CONCEPTART_GRENADIERDROID_LONG]Grenadier droid
+[IDS_SHELL_CONCEPTART_GRENADIERDROID_DESC]Grenadier Droids are effectively short range artillery platforms. This character was created in an early stage of development, but ultimately didn't have enough features to make the game.
+
+[IDS_SHELL_CONCEPTART_BRIDGE1]BRIDGE 1
+[IDS_SHELL_CONCEPTART_BRIDGE1_LONG]CRUISER - BRIDGE 1
+[IDS_SHELL_CONCEPTART_BRIDGE1_DESC]This is another sequence cut from the film that remained a key part of the game.  Here Obi-Wan battles the General Grievous onboard the damaged, and now sideways, Separatist cruiser.  They must now fight on the windows of the ship's bridge.
+
+[IDS_SHELL_CONCEPTART_BRIDGE2]BRIDGE 2
+[IDS_SHELL_CONCEPTART_BRIDGE2_LONG]CRUISER - BRIDGE 2
+[IDS_SHELL_CONCEPTART_BRIDGE2_DESC]As the Separatist cruiser continues its damaged rotation, the bridge is turned fully upside down.  The Jedi must fight Grievous' bodyguards on the ceiling, which has now become the floor.
+
+[IDS_SHELL_CONCEPTART_BRIDGE3]BRIDGE 3
+[IDS_SHELL_CONCEPTART_BRIDGE3_LONG]CRUISER - BRIDGE 3
+[IDS_SHELL_CONCEPTART_BRIDGE3_DESC]This is concept image from the film of the upside down Separatist cruiser bridge.  The bodyguard droids are magnetized to the ceiling, able to fight upside down.  However, they are still no match for the Jedi’s skills.
+
+[IDS_SHELL_CONCEPTART_GRIEVOUS_GUARD]GRIEVOUS BODYGUARD
+[IDS_SHELL_CONCEPTART_GRIEVOUS_GUARD_LONG]GRIEVOUS BODYGUARD
+[IDS_SHELL_CONCEPTART_GRIEVOUS_GUARD_DESC]Conceived originally for the film, the bodyguard droids turned out to be ideal video game characters. Possessing exceptional offensive power, and armed with an electrostaff melee weapon that can block a lightsaber, these droids can really challenge the Jedi.
+
+[IDS_SHELL_CONCEPTART_UTAPAU1]SEPARATIST SPHERE
+[IDS_SHELL_CONCEPTART_UTAPAU1_LONG]UTAPAU - SEPARATIST SPHERE
+[IDS_SHELL_CONCEPTART_UTAPAU1_DESC]Concept art of a Separatist control ship sphere that serves as Grievous's base of operations on the planet Utapau.  The Separatist sphere is wedged into the side of a giant sinkhole.  Its exterior panels are open to reveal its interior levels and machinery.
+
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID3]Grapple droid - RED
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID3_LONG]Grapple droid - RED
+[IDS_SHELL_CONCEPTART_GRAPPLEDROID3_DESC]Unlike the Super battle droids, Grapple droids move quickly to put the enemy into attack range. They have a very powerful claw attack that can easily crush their enemies.  
+[IDS_SHELL_CONCEPTART_CRAB]Crab droid
+[IDS_SHELL_CONCEPTART_CRAB_LONG]Crab droid
+[IDS_SHELL_CONCEPTART_CRAB_DESC]Large enough to directly attack and dismantle most Republic tanks and gunships, the Crab droid uses its many powerful limbs to pound enemy craft and soldiers to scrap. Crab droids are a challenging foe, even for a Jedi. 
+
+[IDS_SHELL_CONCEPTART_UTAPAU2]CLONE ARRIVAL
+[IDS_SHELL_CONCEPTART_UTAPAU2_LONG]UTAPAU - CLONE ARRIVAL
+[IDS_SHELL_CONCEPTART_UTAPAU2_DESC]An artist’s vision of the surprise arrival of the clone army that aids Obi-Wan in the capture of General Grievous.  The clones repel down from the upper levels of the Separatist sphere into the control center, arriving just in the nick of time.
+
+[IDS_SHELL_CONCEPTART_UTAPAU3]THE BATTLE BEGINS
+[IDS_SHELL_CONCEPTART_UTAPAU3_LONG]UTAPAU - THE BATTLE BEGINS
+[IDS_SHELL_CONCEPTART_UTAPAU3_DESC]Obi-Wan leads the charge as more Republic gunships and clone troopers arrive to battle the Separatist army.  The large sinkhole can be seen surrounding the Separatist sphere.
+
+[IDS_SHELL_CONCEPTART_UTAPAU4]LANDING PLATFORM
+[IDS_SHELL_CONCEPTART_UTAPAU4_LONG]UTAPAU - LANDING PLATFORM
+[IDS_SHELL_CONCEPTART_UTAPAU4_DESC]Game concept art of the overall layout to Grievous’s secret landing platform and adjacent structures.  Buildings and caves were added to this area for additional gameplay during the duel.
+
+[IDS_SHELL_CONCEPTART_CORUSCANT1]PALPATINE'S OFFICE
+[IDS_SHELL_CONCEPTART_CORUSCANT1_LONG]CORUSCANT - PALPATINE'S OFFICE
+[IDS_SHELL_CONCEPTART_CORUSCANT1_DESC]An early concept of the pivotal confrontation between Mace Windu and Chancellor Palpatine, who is now revealed to be a Sith Lord.  The struggle between the two powerful characters shatters the window in the office.
+
+[IDS_SHELL_CONCEPTART_ANAKIN]ANAKIN - DARK SIDE
+[IDS_SHELL_CONCEPTART_ANAKIN_LONG]ANAKIN SKYWALKER - DARK SIDE
+[IDS_SHELL_CONCEPTART_ANAKIN_DESC]The feared Dark Lord of the Sith before he is encased in his trademark suit of black armor. This early concept shows him wielding a red lightsaber, which isn’t seen in the game or the film.
+
+[IDS_SHELL_CONCEPTART_TEMPLE1]LIBRARY
+[IDS_SHELL_CONCEPTART_TEMPLE1_LONG]JEDI TEMPLE - LIBRARY
+[IDS_SHELL_CONCEPTART_TEMPLE1_DESC]Darth Vader makes his way through the Jedi Temple confronting all of the Jedi that he now sees as traitors.  Here is the destroyed version of the Temple Library, as seen in Episode II.
+
+[IDS_SHELL_CONCEPTART_TEMPLE2]COURTYARD 1
+[IDS_SHELL_CONCEPTART_TEMPLE2_LONG]JEDI TEMPLE - COURTYARD 1
+[IDS_SHELL_CONCEPTART_TEMPLE2_DESC]Vader confronts more Jedi and topples a huge statue to destroy a sealed doorway. This courtyard and balcony section of the game is based on architecture in the Jedi Temple seen in Episode II.
+
+[IDS_SHELL_CONCEPTART_TEMPLE3]COURTYARD 2
+[IDS_SHELL_CONCEPTART_TEMPLE3_LONG]JEDI TEMPLE - COURTYARD 2
+[IDS_SHELL_CONCEPTART_TEMPLE3_DESC]Concept art of the huge doorway that is locked to prevent Vader’s further entrance to the Temple. The ornate doorway is based on relief sculpture designs seen in other parts of the Jedi Temple.
+
+[IDS_SHELL_CONCEPTART_TEMPLE4]STUDY HALL
+[IDS_SHELL_CONCEPTART_TEMPLE4_LONG]JEDI TEMPLE - STUDY HALL
+[IDS_SHELL_CONCEPTART_TEMPLE4_DESC]The study hall is immediately beyond the locked doorway that Vader destroys with the toppled statue. A hologram projection table can be seen, crushed and malfunctioning, damaged by a chunk of the statue.
+
+[IDS_SHELL_CONCEPTART_JEDI1]JEDI - GROUP 1
+[IDS_SHELL_CONCEPTART_JEDI1_LONG]JEDI - GROUP 1
+[IDS_SHELL_CONCEPTART_JEDI1_DESC]Examples of various characters encountered by the player in the Jedi Temple levels. The image shows different alien species of Jedi.
+
+[IDS_SHELL_CONCEPTART_JEDI2]JEDI - GROUP 2
+[IDS_SHELL_CONCEPTART_JEDI2_LONG]JEDI - GROUP 2
+[IDS_SHELL_CONCEPTART_JEDI2_DESC]Other early concept images of Jedi variations. Featured here are the Jedi Snipers, characters created for the game that specialize in lightsaber throwing skills.
+
+[IDS_SHELL_CONCEPTART_MANNED_GUN]CLONE MANNED GUN
+[IDS_SHELL_CONCEPTART_MANNED_GUN_LONG]CLONE MANNED GUN
+[IDS_SHELL_CONCEPTART_MANNED_GUN_DESC]The design of the Republic Gun Battery found in the game is based on elements from the AT-TE walker from Episode II, as well as the one-man AT-ST walker and the Jedi Cruiser Gun Batteries featured in Episode III.
+
+[IDS_SHELL_CONCEPTART_TRAINING1]TRAINING ARENA 1
+[IDS_SHELL_CONCEPTART_TRAINING1_LONG]JEDI TEMPLE - TRAINING ARENA 1
+[IDS_SHELL_CONCEPTART_TRAINING1_DESC]Seen in the background of the Jedi Temple Training Arena are all sorts of historical and training weapons. The Jedi Training Arena was originally envisioned as both a functioning Dojo and a museum of ancient Jedi artifacts.
+
+[IDS_SHELL_CONCEPTART_TRAINING2]TRAINING ARENA 2
+[IDS_SHELL_CONCEPTART_TRAINING2_LONG]JEDI TEMPLE - TRAINING ARENA 2
+[IDS_SHELL_CONCEPTART_TRAINING2_DESC]An early concept piece of the confrontation between Darth Vader, Jedi Master Cin Drallig, and his apprentice, Serra Keto. Originally the duel combat was envisioned as two-on-one, with Vader having to use all of his dark side power to defeat these two exceptionally skilled Jedi warriors.
+
+[IDS_SHELL_CONCEPTART_TRAINING3]TRAINING ARENA 3
+[IDS_SHELL_CONCEPTART_TRAINING3_LONG]JEDI TEMPLE - TRAINING ARENA 3
+[IDS_SHELL_CONCEPTART_TRAINING3_DESC]This artwork shows the meditating Cin Drallig. One of the original ideas was to show the contrast between the calm and spiritual Jedi Master, and the furious and vengeful Sith Lord, Darth Vader.
+
+[IDS_SHELL_CONCEPTART_TRAINING4]TRAINING ARENA 4
+[IDS_SHELL_CONCEPTART_TRAINING4_LONG]JEDI TEMPLE - TRAINING ARENA 4
+[IDS_SHELL_CONCEPTART_TRAINING4_DESC]Here is the final battle between Cin Drallig and Anakin, set against the powerful background vista of the Coruscant skyline. Early in development the team experimented with clone troopers attacking Cin in this part of the duel, but that was later removed.
+
+[IDS_SHELL_CONCEPTART_SERRA]SERRA KETO
+[IDS_SHELL_CONCEPTART_SERRA_LONG]JEDI APPRENTICE - SERRA KETO
+[IDS_SHELL_CONCEPTART_SERRA_DESC]Serra’s lightsaber style is fast, dynamic and acrobatic. Her unique attack pattern using dual lightsabers is unpredictable and dangerous. Serra is Cin Drallig's trusted apprentice and one of his most gifted students.
+
+[IDS_SHELL_CONCEPTART_CIN]CIN DRALLIG
+[IDS_SHELL_CONCEPTART_CIN_LONG]JEDI MASTER - CIN DRALLIG
+[IDS_SHELL_CONCEPTART_CIN_DESC]Cin Drallig is a Jedi Master and truly talented swordsman. The character is based on stunt coordinator Nick Gillard as he appears in the film, but his costume was redesigned for the game to fit his role as a boss character.
+
+[IDS_SHELL_CONCEPTART_UTAPAU5]BATTLE IN THE CITY
+[IDS_SHELL_CONCEPTART_UTAPAU5_LONG]UTAPAU - BATTLE IN THE CITY
+[IDS_SHELL_CONCEPTART_UTAPAU5_DESC]The action of the battle between the Separatist droid forces and the clone army takes place inside the intricate Utapau City, set deep within the rocky cliffs of the sinkhole.  Early concepts of spider-like droids are seen in the background.
+
+[IDS_SHELL_CONCEPTART_UTAPAU6]CLONE JUGGERNAUT
+[IDS_SHELL_CONCEPTART_UTAPAU6_LONG]UTAPAU - CLONE JUGGERNAUT
+[IDS_SHELL_CONCEPTART_UTAPAU6_DESC]The Clone Juggernaut Tank is a huge, multi-wheeled armored transport.  Its design is an homage to some of the early concept art for the AT-AT walker, first seen in Episode V, and has been part of the expanded universe before its inclusion in Episode III.
+
+[IDS_SHELL_CONCEPTART_SKYTROOPER]SKYTROOPER
+[IDS_SHELL_CONCEPTART_SKYTROOPER_LONG]SKYTROOPER - EARLY CONCEPT
+[IDS_SHELL_CONCEPTART_SKYTROOPER_DESC]An early concept piece for the film that served as inspiration for a flying clone character in the game. It is an example of one of the many ideas that were originally conceived for the film that only came to fruition thanks to the expanded scope of the game.
+
+[IDS_SHELL_CONCEPTART_CLONESNIPER]CLONE SNIPER
+[IDS_SHELL_CONCEPTART_CLONESNIPER_LONG]CLONE SNIPER
+[IDS_SHELL_CONCEPTART_CLONESNIPER_DESC]Special Clone soldier trained solely for long range attacks and assassinations. Clone Snipers are most dangerous when far away from the target.
+
+[IDS_SHELL_CONCEPTART_BLAZETROOPER1]BLAZE TROOPER 1
+[IDS_SHELL_CONCEPTART_BLAZETROOPER1_LONG]BLAZE TROOPER - VERSION 1
+[IDS_SHELL_CONCEPTART_BLAZETROOPER1_DESC]Clone Blaze Troopers are stronger, more heavily armored clone troopers that fly with their specialized jetpacks. Their primary form of attack is an arm-mounted flame thrower, which proves to be an effective attack against Jedi. 
+
+[IDS_SHELL_CONCEPTART_BLAZETROOPER2]BLAZE TROOPER 2
+[IDS_SHELL_CONCEPTART_BLAZETROOPER2_LONG]BLAZE TROOPER - VERSION 2
+[IDS_SHELL_CONCEPTART_BLAZETROOPER2_DESC]This is the Clone Blaze Trooper final concept. The final Blaze Trooper’s modified proportion and added detail made the character more appealing in the game.
+
+[IDS_SHELL_CONCEPTART_BLAZETROOPER3]BLAZE TROOPER 3
+[IDS_SHELL_CONCEPTART_BLAZETROOPER3_LONG]BLAZE TROOPER - VERSION 3
+[IDS_SHELL_CONCEPTART_BLAZETROOPER3_DESC]This early concept image for the Clone Blaze Trooper has the flame thrower as a separate weapon, and a jetpack designed for faster maneuvering.
+
+[IDS_SHELL_CONCEPTART_CLONEGUNNER]CLONE GUNNER
+[IDS_SHELL_CONCEPTART_CLONEGUNNER_LONG]CLONE GUNNER
+[IDS_SHELL_CONCEPTART_CLONEGUNNER_DESC]The Clone Gunner’s primary form of attack is their heavy rifle which they fire periodically at their target as they advance towards or strafe around it.  The blast from this rifle is far more powerful than the standard Republic issue weapon.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR1]LANDING PLATFORM
+[IDS_SHELL_CONCEPTART_MUSTAFAR1_LONG]MUSTAFAR - LANDING PLATFORM
+[IDS_SHELL_CONCEPTART_MUSTAFAR1_DESC]The Mustafar Landing Platform where Darth Vader arrives to finish off the Separatist leaders and end the war.  The facility is built into the side of a volcanic mountain, with a lava river visible below the installation.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR2]LAVA SPOUTS
+[IDS_SHELL_CONCEPTART_MUSTAFAR2_LONG]MUSTAFAR - LAVA SPOUTS
+[IDS_SHELL_CONCEPTART_MUSTAFAR2_DESC]An example of some of the machinery used to direct the lava flow in the Mustafar facility.  The large lava spouts create a dramatic curtain of glowing molten liquid.  It is both a visual element and a dangerous hazard.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR3]LAVA FACILITY 1
+[IDS_SHELL_CONCEPTART_MUSTAFAR3_LONG]MUSTAFAR - LAVA FACILITY 1
+[IDS_SHELL_CONCEPTART_MUSTAFAR3_DESC]The Lava river flows below the exterior of the Mustafar Facility, creating dramatic visuals and lighting.  The hostile environment mirrors and intensifies the rage and merciless anger displayed by Darth Vader completing his murderous mission at the bidding of Darth Sidious.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR4]LAVA FACILITY 2
+[IDS_SHELL_CONCEPTART_MUSTAFAR4_LONG]MUSTAFAR - LAVA FACILITY 2
+[IDS_SHELL_CONCEPTART_MUSTAFAR4_DESC]Some of the elaborate machinery and droids which melt scrap metal and channel the flowing lava for energy production.  Seen here are large hovering droids which act as cranes for transporting and loading the scrap metal.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR5]SCRAP YARD
+[IDS_SHELL_CONCEPTART_MUSTAFAR5_LONG]MUSTAFAR - SCRAP YARD
+[IDS_SHELL_CONCEPTART_MUSTAFAR5_DESC]Early concept art for a confrontation between Vader and droids similar to Grievous’s bodyguards.  The duel was to take place in one of Mustafar's many metal junk yards.  This sequence was later cut from the final game.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR6]BALCONIES
+[IDS_SHELL_CONCEPTART_MUSTAFAR6_LONG]MUSTAFAR - BALCONIES
+[IDS_SHELL_CONCEPTART_MUSTAFAR6_DESC]A view of the Mustafar facility balconies, built into the volcanic rock walls.  The overhangs jut away from the mountain face and hang over the flowing lava river.  They are lit with a dramatic glow from the lava river below.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR7]LAVA REFINEMENT
+[IDS_SHELL_CONCEPTART_MUSTAFAR7_LONG]MUSTAFAR - LAVA REFINEMENT MACHINERY
+[IDS_SHELL_CONCEPTART_MUSTAFAR7_DESC]The Lava Gun Machinery pours lava into huge bucket scoops, which ride along the facility's production line.  The giant machine lowers and rises as it pours lava into the waiting distribution cars.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR8]CARGO ELEVATOR SHAFT
+[IDS_SHELL_CONCEPTART_MUSTAFAR8_LONG]MUSTAFAR - CARGO ELEVATOR SHAFT
+[IDS_SHELL_CONCEPTART_MUSTAFAR8_DESC]A deep lava tunnel that serves as an elevator shaft from the lower sections of the facility's production area, to the upper control and monitoring sections.  On Mustafar, even a simple elevator ride can be a dangerous challenge.
+
+[IDS_SHELL_CONCEPTART_MUSTAFAR9]SHUTTLE BATTLE
+[IDS_SHELL_CONCEPTART_MUSTAFAR9_LONG]MUSTAFAR - NEIMOIDIAN SHUTTLE
+[IDS_SHELL_CONCEPTART_MUSTAFAR9_DESC]Concept art for the facility’s shuttle hangar and secondary landing platform.  Here Vader must destroy the Trade Federation shuttle, to keep its passengers from escaping.  This landing platform also overhangs the lava river below.
+
+[IDS_SHELL_CONCEPTART_NEMBRUTEA]NEIMOIDIAN BRUTE 1
+[IDS_SHELL_CONCEPTART_NEMBRUTEA_LONG]NEIMOIDIAN BRUTE - VERSION 1
+[IDS_SHELL_CONCEPTART_NEMBRUTEA_DESC]An early version of the Neimoidian Brute Soldier. Slower than the regular guard class, the Brutes are much stronger, wielding a heavy axe to stop intruders.
+
+[IDS_SHELL_CONCEPTART_NEMBRUTEB]NEIMOIDIAN BRUTE 2
+[IDS_SHELL_CONCEPTART_NEMBRUTEB_LONG]NEIMOIDIAN BRUTE - VERSION 2
+[IDS_SHELL_CONCEPTART_NEMBRUTEB_DESC]The Brutes are the strongest of the three Neimoidian guard types found on Mustafar.  They have an average to slow movement range, but they attack with a large axe-like staff, which is very heavy and powerful.
+
+[IDS_SHELL_CONCEPTART_JEDI_TEMPLE]TEMPLE ENTRANCE
+[IDS_SHELL_CONCEPTART_JEDI_TEMPLE_LONG]JEDI TEMPLE - MAIN ENTRANCE
+[IDS_SHELL_CONCEPTART_JEDI_TEMPLE_DESC]Early concept art showing the arrival of Obi-Wan and Yoda at the Jedi Temple.  They are confronted by clone troopers disguised as Jedi.  The disguises were later discarded.  The damage to the Jedi Temple, from the attack led by Darth Vader, can be seen on the huge entrance pillars.
+
+[IDS_SHELL_CONCEPTART_CLONEASSASSIN1]CLONE ASSASSIN 1
+[IDS_SHELL_CONCEPTART_CLONEASSASSIN1_LONG]CLONE ASSASSIN - VERSION 1
+[IDS_SHELL_CONCEPTART_CLONEASSASSIN1_DESC]Clone Assassins have been trained in the art of Teras Kasi.  While still soldiers of the Republic, Clone Assassins' missions are usually focused on eliminating individuals. This concept image shows darker body armor as their role requires stealth.
+
+[IDS_SHELL_CONCEPTART_CLONEASSASSIN2]CLONE ASSASSIN 2
+[IDS_SHELL_CONCEPTART_CLONEASSASSIN2_LONG]CLONE ASSASSIN - VERSION 2
+[IDS_SHELL_CONCEPTART_CLONEASSASSIN2_DESC]The final concept of Clone Assassin has a stronger Star Wars feel and conforms with the clone trooper style. Clone Assassins rely on melee attacks with two vibro-blades that sweep out into attack position from arm-mounted sheathes.
+
+##Pause Screen
+[IDS_PAUSE_RESTART_MISSION]Restart Mission
+[IDS_PAUSE_QUIT_MISSION]Quit Mission
+[IDS_PAUSE_CONTINUE_MISSION]Continue Mission
+[IDS_PAUSE_COMPLETE_MISSION]Complete Mission
+[IDS_PAUSE_COMBAT_CHART]Combat Chart
+[IDS_PAUSE_COMBAT_BASIC_CONTROLS]Basic Controls
+[IDS_PAUSE_COMBAT_BASIC_LIGHTSABER]Basic Combos
+[IDS_PAUSE_COMBAT_SHUNTS]Saberlocks / Shunts
+[IDS_PAUSE_COMBAT_JUMP_ATTACKS]Jump Attacks
+[IDS_PAUSE_COMBAT_GRAPPLES]Grapples
+[IDS_PAUSE_COMBAT_DASH_ATTACKS]Dash Attacks
+[IDS_PAUSE_COMBAT_AREA_ATTACKS]Area Attacks
+[IDS_PAUSE_COMBAT_CRITICAL]Critical Attacks
+
+
+[IDS_LOADING]LOADING
+[IDS_OBJECTIVE_ACHIEVED]Objective Achieved:
+[IDS_NEW_OBJECTIVE]New Objective:
+[IDS_SECRET_FOUND]Secret Found:
+[IDS_FORCE_SURGE]Force Surge: Max Force Increased
+[IDS_HEALTH_SURGE]Health Surge: Max Health Increased
+[IDS_BACTA_TANK]Bacta Tank
+[IDS_LARGE_BACTA_TANK]Large Bacta Tank
+[IDS_SABER_CRYSTAL]Saber Crystal
+[IDS_CHECKPOINT_REACHED]Checkpoint Reached
+
+### Subtitle speaker names
+[IDS_SPEAKER_Vader] Darth Vader
+[IDS_SPEAKER_Battledroid] Battle droid
+[IDS_SPEAKER_BattledroidFly] Flying battle droid
+[IDS_SPEAKER_BlazeTrooper] Clone blaze trooper
+[IDS_SPEAKER_Buzzdroid] Buzz droid
+[IDS_SPEAKER_CloneWalker] Clone walker
+[IDS_SPEAKER_SuperBattleDroid] Super battle droid
+[IDS_SPEAKER_GrappleDroid] Grapple droid
+[IDS_SPEAKER_Anakin] Anakin
+[IDS_SPEAKER_Obiwan] Obi-Wan
+[IDS_SPEAKER_OldObiwan] Ben Kenobi
+[IDS_SPEAKER_Dooku] Count Dooku
+[IDS_SPEAKER_Palpatine] Palpatine
+[IDS_SPEAKER_R2D2] R2-D2
+[IDS_SPEAKER_NeimoidianG] Neimoidian Guard
+[IDS_SPEAKER_Grievbguard] Grievous Bodyguard
+[IDS_SPEAKER_Grievous] General Grievous
+[IDS_SPEAKER_GrievousSimple] General Grievous
+[IDS_SPEAKER_Assassin] Clone assassin
+[IDS_SPEAKER_CloneTrooper] Clone trooper
+[IDS_SPEAKER_Destroyer] Destroyer droid
+[IDS_SPEAKER_JediKnight] Jedi Knight
+[IDS_SPEAKER_Padwfem] Jedi Padawan
+[IDS_SPEAKER_Mace] Mace Windu
+[IDS_SPEAKER_JDBrute] Jedi Brute
+[IDS_SPEAKER_NemBrute] Neimoidian Brute
+[IDS_SPEAKER_Nemscout] Neimoidian scout
+[IDS_SPEAKER_CrabDroid] Crab droid
+[IDS_SPEAKER_JDSniper] Jedi Sniper
+[IDS_SPEAKER_nemaide] Neimoidian Aide
+[IDS_SPEAKER_StormTrooper] Storm trooper
+[IDS_SPEAKER_Nuteg] Nute Gunray
+[IDS_SPEAKER_RuneH] Rune Haako
+[IDS_SPEAKER_Wat] Wat Tambor
+[IDS_SPEAKER_C3PO] C3PO
+[IDS_SPEAKER_CommanderCody] Commander Cody
+[IDS_SPEAKER_Serra] Serra
+[IDS_SPEAKER_Cindrallig] Cin
+[IDS_SPEAKER_ImpGuard] Imperial Guard
+[IDS_SPEAKER_Joca] Jocasta Nu
+[IDS_SPEAKER_Poggle] Poggle the Lesser
+[IDS_SPEAKER_Yoda] Yoda
+[IDS_SPEAKER_ShipCaptain] Ship Captain
+[IDS_SPEAKER_Sidious] Darth Sidious
+[IDS_SPEAKER_Bail] Bail Organa
+[IDS_SPEAKER_HAN]Han
+[IDS_SPEAKER_LEI]Leia
+[IDS_SPEAKER_LUK]Luke
+
+
+### Virtual Keyboard
+[IDS_SHELL_DONE]Done
+[IDS_SHELL_SPACEBAR]Space
+[IDS_SHELL_BACK]Back
+[IDS_SHELL_A]A
+[IDS_SHELL_B]B
+[IDS_SHELL_C]C
+[IDS_SHELL_D]D
+[IDS_SHELL_E]E
+[IDS_SHELL_F]F
+[IDS_SHELL_G]G
+[IDS_SHELL_H]H
+[IDS_SHELL_I]I
+[IDS_SHELL_J]J
+[IDS_SHELL_K]K
+[IDS_SHELL_L]L
+[IDS_SHELL_M]M
+[IDS_SHELL_N]N
+[IDS_SHELL_O]O
+[IDS_SHELL_P]P
+[IDS_SHELL_Q]Q
+[IDS_SHELL_R]R
+[IDS_SHELL_S]S
+[IDS_SHELL_T]T
+[IDS_SHELL_U]U
+[IDS_SHELL_V]V
+[IDS_SHELL_W]W
+[IDS_SHELL_X]X
+[IDS_SHELL_Y]Y
+[IDS_SHELL_Z]Z
+[IDS_SHELL_0]0
+[IDS_SHELL_1]1
+[IDS_SHELL_2]2
+[IDS_SHELL_3]3
+[IDS_SHELL_4]4
+[IDS_SHELL_5]5
+[IDS_SHELL_6]6
+[IDS_SHELL_7]7
+[IDS_SHELL_8]8
+[IDS_SHELL_9]9
+
+[IDS_REWARD_FAIR]Fair
+[IDS_REWARD_GOOD]Good
+[IDS_REWARD_IMPRESSIVE]Impressive
+[IDS_REWARD_MASTERFUL]Masterful
+
+### BASIC COMBAT TIPS (these are Alpha)
+[IDS_TIPS_LIGHT_ATTACK] Press \{COMMAND_PUNCH} to perform a Fast Slash
+[IDS_TIPS_HEAVY_ATTACK] Press \{COMMAND_KICK} to perform a Strong Slash
+[IDS_TIPS_BLOCK_XBOX] Pull+Hold \{COMMAND_STALK} to block attacks
+[IDS_TIPS_BLOCK_PS2] Press+Hold \{COMMAND_STALK} to block attacks
+[IDS_TIPS_STALK_XBOX] Pull+Hold \{COMMAND_STALK} to lock on to an enemy
+[IDS_TIPS_STALK_PS2] Press+Hold \{COMMAND_STALK} to lock on to an enemy
+[IDS_TIPS_COMBO_ATTACK] Press \{COMMAND_PUNCH} and \{COMMAND_KICK} in different combinations to vary attacks
+
+### ADVANCED COMBAT TIPS (these are Alpha)
+
+[IDS_TIPS_SABER_THROW] Press \{COMMAND_EXT_1} to perform a Saber Throw
+[IDS_TIPS_TARGET] Move the \{ICON_RSTICK} to manually target objects
+[IDS_TIPS_DODGE] While strafing, press \{COMMAND_JUMP} and move \{ICON_LSTICK} to dodge in that direction
+[IDS_TIPS_SHUNT_PS2] Counterattack by quickly moving \{ICON_LSTICK} away from an incoming attack while pressing \{COMMAND_STALK} to perform a shunt
+[IDS_TIPS_SHUNT_XBOX] Counterattack by quickly moving \{ICON_LSTICK} away from an incoming attack while pulling \{COMMAND_STALK}  to perform a shunt
+[IDS_TIPS_SABER_LOCK] Rapidly press \{COMMAND_PUNCH}+\{COMMAND_KICK} to overpower your opponent
+[IDS_TIPS_GRAPPLE] To grapple press \{COMMAND_PUNCH}+\{COMMAND_KICK} near an opponent
+[IDS_TIPS_CHARGE] Hold \{COMMAND_KICK} to perform a charged attack
+[IDS_TIPS_LUNGE] Press \{COMMAND_USE} to perform a lunge attack
+
+### BASIC FORCE POWER TIPS (these are Alpha)
+[IDS_TIPS_FORCE_JUMP] While standing over the Jump Area. Press+hold \{COMMAND_JUMP} and release to Force Jump 
+[IDS_TIPS_FORCE_PUSH_PS2] Quickly press \{COMMAND_BLOCK} to Force Push enemies
+[IDS_TIPS_FORCE_PUSH_XBOX] Quickly pull \{COMMAND_BLOCK} to Force Push enemies
+[IDS_TIPS_FORCE_GRASP_PS2] Press \{COMMAND_BLOCK} to Force Grasp objects and enemies
+[IDS_TIPS_FORCE_GRASP_XBOX] Pull \{COMMAND_BLOCK} to Force Grasp objects and enemies
+[IDS_TIPS_FORCE_FOCUS_PS2] While standing over the Force icon. Press+hold \{COMMAND_BLOCK} to use the Force
+[IDS_TIPS_FORCE_FOCUS_XBOX] While standing over the Force icon. Pull+hold \{COMMAND_BLOCK} to use the Force
+
+
+### -----------------------------------------------------------------------------------------------------
+### NOTE --- DO NOT EDIT THE LINES BELOW WITHOUT FIRST READING BUG 2923 AND TALKING TO MASON.  Thanks :)
+[IDS_TIPS_FORCE_HEAL_PS2] Press and hold \{COMMAND_LEFT_THUMBSTICK_BUTTON}+\{COMMAND_RIGHT_THUMBSTICK_BUTTON} to Force Heal
+[IDS_TIPS_FORCE_HEAL_XBOX] Click \{ICON_LSTICK}+\{ICON_RSTICK} to Force Heal
+### -----------------------------------------------------------------------------------------------------
+
+
+
+### ADVANCED FORCE POWER TIPS (these are Alpha)
+[IDS_TIPS_FORCE_DEFLECT] While holding \{COMMAND_STALK}, move \{ICON_RSTICK} in circles to Force Deflect
+[IDS_TIPS_DEFLECT] While holding \{COMMAND_STALK}, move \{ICON_RSTICK} in circles to Force Deflect
+[IDS_TIPS_FORCE_SPEED] Move \{ICON_LSTICK} twice in a direction to use Force Speed
+[IDS_TIPS_FORCE_LIGHTENING] Press \{COMMAND_RELOAD} to perform Force Lightning on enemies
+[IDS_TIPS_FORCE_STUN] Press \{COMMAND_RELOAD} to Force Stun opponents
+[IDS_TIPS_MIND_TRICK] Hold \{COMMAND_RELOAD} to Mind Trick an opponent
+
+### INTERACTION TIPS (these are Alpha)
+[IDS_TIPS_USE_PANEL] Press \{COMMAND_USE} to interact with consoles
+[IDS_TIPS_SABER_PLUNGE] Hold \{COMMAND_USE} to initiate Saber Plunge on door
+[IDS_TIPS_SABER_PLUNGE_2] Move \{ICON_LSTICK} left and right to perform Saber Plunge
+[IDS_TIPS_SABER_CUT] Hold \{COMMAND_USE} to initiate Saber Cut. Move \{ICON_LSTICK} to perform Saber Cut
+[IDS_TIPS_POWER_CONDUIT] Slash the Power Conduit to disable automated systems
+[IDS_TIPS_POWER_CABLE] Slash the Power Cable to disable automated systems
+[IDS_TIPS_MOUNT_CANNON] Approach the cannon and press \{COMMAND_USE} to mount
+[IDS_TIPS_MOVE_CANNON] Move \{ICON_LSTICK} to aim the cannon
+[IDS_TIPS_FIRE_CANNON_1] Press \{COMMAND_PUNCH} to fire rapid blasts.  
+[IDS_TIPS_FIRE_CANNON_2] Press \{COMMAND_KICK} to fire charged blasts
+
+### MISC. TIPS (these are Alpha)
+[IDS_TIPS_SECRET_FOUND] You Have Found A Secret!
+[IDS_TIPS_HAZARDS] Beware of environmental hazards and try using them to your advantage in combat
+
+### TIPS FOR GENERAL GRIEVOUS CHALLENGE (these are Alpha)
+[IDS_TIPS_G4SABER_MODE] Press \{COMMAND_EXT_1} to switch to 4 Saber Mode
+[IDS_TIPS_GSHOOT_XBOX] Pull \{COMMAND_BLOCK} to fire blaster. Hold to charge blast
+[IDS_TIPS_GSHOOT_PS2] Press \{COMMAND_BLOCK} to fire blaster. Hold to charge blast
+[IDS_TIPS_GTWIRL] Hold \{COMMAND_KICK} for a special attack
+[IDS_TIPS_GCHARGE] Hold \{COMMAND_RELOAD} to perform special charged attack
+
+### TIPS FOR GRIEVOUS BODYGUARDS CHALLENGE (these are Alpha)
+[IDS_TIPS_CALL] Press \{COMMAND_PUNCH}+\{COMMAND_KICK} to execute tandem attacks with nearby bodyguards
+
+### TIPS FOR MUSTAFAR LAVA CHALLENGE (these are Alpha)
+[IDS_TIPS_LAVA_JUMP] Press \{COMMAND_JUMP} to jump
+[IDS_TIPS_LAVA_FALL] Be careful not to fall into the deadly lava below!
+
+
+### CRAWL TEXT (the yellow text that starts after "A long time ago in a galaxy far far away...")
+[IDS_MOV_M01_CRAWL_01] 
+[IDS_MOV_M01_CRAWL_02] 
+[IDS_MOV_M01_CRAWL_03] 
+[IDS_MOV_M01_CRAWL_04] 
+[IDS_MOV_M01_CRAWL_05] 
+[IDS_MOV_M01_CRAWL_06] 
+[IDS_MOV_M01_CRAWL_07] 
+[IDS_SPEAKER_CRAWL_NA]N/A
+
+### FMV & CIN Subtitle text
+[IDS_MOV_M01_010_AKN1]The general's command ship is dead ahead.
+[IDS_MOV_M01_010_OBW3]Well, have you noticed the shields are still up?
+[IDS_MOV_M01_010_AKN2]Sorry, Master.
+[IDS_MOV_M01_010_OBW4]Artoo, locate the Chancellor.
+[IDS_MOV_M02A_010_GGR2]What's the situation, captain?
+[IDS_MOV_M02A_010_SHC1]Two Jedi have landed in the main hangar bay.
+[IDS_MOV_M02A_010_GGR3]Just as Count Dooku predicted.
+[IDS_MOV_M02B_010_OBW1]Come in, Artoo.
+[IDS_MOV_M02B_010_OBW2]Artoo, do you copy?
+[IDS_MOV_M02B_010_OBW3]Artoo, activate elevator number 31174.
+[IDS_MOV_M02B_010_BDD3]General, we found the Jedi. They're in hallway 328.
+[IDS_MOV_M02B_010_GGR1]Ha ha ha.
+[IDS_MOV_M02B_010_AKN1]Destroyers.
+[IDS_MOV_M03_010_OBW1]Chancellor.
+[IDS_MOV_M03_010_AKN1]You alright?
+[IDS_MOV_M03_010_PLP1]Count Dooku.
+[IDS_MOV_M03_010_OBW2]This time we will do it together.
+[IDS_MOV_M03_010_AKN2]I was about to say that.
+[IDS_MOV_M03_010_DKU1]Your swords, please. We don't want to make a mess of things in front of the Chancellor.
+[IDS_MOV_M03_010_OBW3]You won't get away this time, Dooku.
+[IDS_MOV_M03_010_DKU2]Just because there are two of you, do not assume you have the advantage.
+[IDS_MOV_M03_020_PLP3]You did well, Anakin. 
+[IDS_MOV_M03_020_PLP4]He was too dangerous to be kept alive.
+[IDS_MOV_M03_020_PLP5]Now we must leave.
+[IDS_MOV_M03_020_PLP6]Leave him or we'll never make it.
+[IDS_MOV_M03_020_AKN3]His fate will be the same as ours.
+[IDS_MOV_M04_010_GGR1]Prepare for attack.
+[IDS_MOV_M04_010_SHC1]All batteries fire. Fire!
+[IDS_MOV_M04_010_AKN1]Elevator's not working.
+[IDS_MOV_M04_010_AKN2]Artoo, activate elevator 3224.
+[IDS_MOV_M04_010_OBW1]Let’s find another way around
+[IDS_MOV_M04_010_OBW2]The Chancellor and I will meet you on the other side. 
+[IDS_MOV_M04_020_AKN1]Ray shields.
+[IDS_MOV_M04_020_OBW1]Wait a minute. How did this happen? We're smarter than this.
+[IDS_MOV_M04_020_AKN2]Apparently not.
+[IDS_MOV_M04_020_AKN3]Artoo will be along in a few moments and then he'll release the ray shields.
+[IDS_MOV_M04_020_AKN4]See. No problem.
+[IDS_MOV_M04_020_OBW2]Do you have a plan B?
+[IDS_MOV_M05_010_GGR1]Ah yes. The negotiator.
+[IDS_MOV_M05_010_BDD1]Excuse me.
+[IDS_MOV_M05_010_GGR2]That wasn't much of a rescue.
+[IDS_MOV_M05_010_GGR3]Your lightsabers will make a fine addition to my collection.
+[IDS_MOV_M05_010_OBW1]Not this time.
+[IDS_MOV_M05_010_OBW2]And this time, you won't escape.
+[IDS_MOV_M05_010_AKN1]Artoo.
+[IDS_MOV_M05_010_GGR4]Crush them.
+[IDS_MOV_M05_020_GGR1]You lose, General Kenobi.
+[IDS_MOV_M05_020_GGR2]Ha ha ha. Time to abandon ship.
+[IDS_MOV_M05_020_OBW1]Can you fly a cruiser like this?
+[IDS_MOV_M05_020_AKN1]You mean do I know how to land what's left of this thing.
+[IDS_MOV_M05_020_OBW2]Well?
+[IDS_MOV_M05_020_AKN2]Well, under the circumstances I'd say the ability to pilot this thing is irrelevant.
+[IDS_MOV_M05_020_AKN3]Strap yourselves in.
+[IDS_MOV_M06A_010_AKN1]You're going to need me on this one, Master.
+[IDS_MOV_M06A_010_OBW1]Oh, I agree. However, it may turn out just to be a wild bantha chase.
+[IDS_MOV_M06A_010_AKN2]Master.
+[IDS_MOV_M06A_010_AKN3]I've disappointed you.
+[IDS_MOV_M06A_010_AKN4]I've been arrogant.
+[IDS_MOV_M06A_010_AKN5]I've just been so frustrated with the Council.
+[IDS_MOV_M06A_010_OBW2]You are strong and wise, Anakin, and I am very proud of you.
+##Deleted:MOV_M06A_010_OBW3]And, Anakin, I'm taking enough 
+##clones with me to take three systems the size of Utapau. So please, ##don't worry about me.
+[IDS_MOV_M06A_010_AKN6]Master.
+[IDS_MOV_M06A_010_AKN7]May the Force be with you.
+[IDS_MOV_M06A_010_OBW4]Good-bye, old friend. May the Force be with you.
+[IDS_MOV_M06B_010_OBW1]Hello there.
+[IDS_MOV_M06B_010_GGR1]General Kenobi, ha ha ha ha ha. 
+[IDS_MOV_M06B_010_GGR2]You are a bold one.
+[IDS_MOV_M06B_010_GGR3]Ha ha ha.
+[IDS_MOV_M06B_010_GGR4]Kill him.
+[IDS_MOV_M07_010_GGR1]Here is where you meet your end, Kenobi.
+[IDS_MOV_M07_010_OBW1]We'll see about that.
+[IDS_MOV_M08_010_MWD1]I'm going to end this, once and for all.
+[IDS_MOV_M08_010_AKN1]You can't.
+[IDS_MOV_M08_010_AKN3]He must stand trial.
+[IDS_MOV_M08_010_AKN4]I need him!
+[IDS_MOV_M08_010_AKN5]No!
+[IDS_MOV_M08_010_AKN6]What are you doing?!
+[IDS_MOV_M08_010_MWD2]He's a traitor to the Republic -- Letting him live is too dangerous.
+[IDS_MOV_M08_010_AKN7]Letting you kill him is against our Jedi beliefs.  I won't allow it.
+[IDS_MOV_M08_010_MWD3]Anakin -- come to your senses!
+[IDS_MOV_M08_010_MWD4]So be it.
+[IDS_MOV_M08_020_AKN1]What have I done?
+[IDS_MOV_M08_020_DSD2]You're fulfilling your destiny, Anakin.
+#Deleted: M08_020_DSD3Become my apprentice. Learn to use the dark side of the Force.
+[IDS_MOV_M09_010_DSD1]Every single Jedi, including your friend Obi-Wan Kenobi, is now an enemy of the Republic.
+[IDS_MOV_M09_010_DSD4]Do what must be done, Lord Vader. Do not hesitate. Show no mercy.
+[IDS_MOV_M09_010_AKN1]I want access to the temple's signal beacon.
+[IDS_MOV_M09_010_JNU1]On whose authority?
+[IDS_MOV_M09_010_AKN2]By order of the Supreme Chancellor.
+[IDS_MOV_M09_010_JNU2]That is not within the Chancellor's power.  Only the Jedi Council can authorize access.
+[IDS_MOV_M09_010_AKN3]The Council is no longer in control.
+[IDS_MOV_M09_010_JPL1]You won't get away with this, Skywalker.
+[IDS_MOV_M11_010_DSD2]The time has come.
+[IDS_MOV_M11_010_DSD3]Execute Order 66.
+[IDS_MOV_M11_010_OBW1]You're too late to help me here, troopers. Head up to the next platform.
+[IDS_MOV_M11_010_CLT1]I'm sorry, sir, we are no longer required to follow your orders.
+[IDS_MOV_M11_010_OBW2]What did you say, soldier?
+[IDS_MOV_M11_020_BOG1]Master Kenobi.
+[IDS_MOV_M11_020_OBW1]Senator Organa?
+[IDS_MOV_M11_020_OBW2]My clone troops turned on me. I need help.
+[IDS_MOV_M11_020_BOG2]We have just rescued Master Yoda. It appears this ambush has happened everywhere.
+[IDS_MOV_M11_020_BOG3]We're sending you our coordinates.
+[IDS_MOV_M12_010_AKN1]Artoo, stay with the ship.
+[IDS_MOV_M12_010_NMA1]Lord Vader.  Our masters have been anxiously awaiting your arrival.
+[IDS_MOV_M12_010_AKN2]Good.  And where are they now?
+[IDS_MOV_M12_010_NMA2]In the central Control Room, sir.  
+[IDS_MOV_M12_010_AKN3]Good. I have a message, from Darth Sidious.
+[IDS_MOV_M12_010_NMA3]Message?  What message?
+[IDS_MOV_M12_010_AKN4]This--
+[IDS_MOV_M12_010_RHO1]Darth Sidious has betrayed us!
+[IDS_MOV_M12_010_NGY1]Security!  Get down there and stop the assassin!
+[IDS_MOV_M12_010_POG1]Not to worry. We're quite safe here.
+[IDS_MOV_M12_020_AKN1]The Separatists have been taken care of, my Master.
+[IDS_MOV_M12_020_DSD1]It is finished then.
+[IDS_MOV_M12_020_DSD2]You have restored peace and justice to the galaxy, Lord Vader. 
+[IDS_MOV_M12_020_AKN2]Thank you, my Master.
+[IDS_MOV_M13_010_OBW1]How many other Jedi have managed to survive?
+[IDS_MOV_M13_010_YDA1]Heard from no one, have we.
+[IDS_MOV_M13_010_BOG1]I saw thousands of troops attack the Jedi Temple.
+[IDS_MOV_M13_010_YDA2]Received a coded retreat message, we have.
+[IDS_MOV_M13_010_BOG2]It requests all Jedi to return to the Temple. It says the war is over.
+[IDS_MOV_M13_010_OBW2]Well then we must go back.
+[IDS_MOV_M13_010_YDA3]Hmm. Suggest dismantling the coded signal, do you?
+[IDS_MOV_M13_010_OBW3]I can only hope we're not too late.  I don't wish to be the last of the Jedi. 
+[IDS_MOV_M13_010_YDA4]To the very summit of the temple, we must go.  There shall we find the beacon, and end this deception.
+[IDS_MOV_M13_010_OBW4]Master... I fear for Anakin.
+[IDS_MOV_M13_010_YDA5]Mmmm. Clouded is his fate. Concerned for him, I am. 
+[IDS_MOV_M13_010_YDA6]Quickly, young Obi-Wan.
+[IDS_MOV_M13_020_OBW2]Wait, Master. There is something I must know.
+[IDS_MOV_M13_020_OBW3]I must know the truth, Master.
+[IDS_MOV_M13_020_YDA2]If in to the security recordings you go, only pain will you find.
+[IDS_MOV_M13_020_OBW4]It can't be.
+[IDS_MOV_M13_020_DSD1]You have done well, my new apprentice.
+[IDS_MOV_M13_020_DSD2]Now, Lord Vader, go and bring peace to the Empire.
+[IDS_MOV_M13_020_OBW5]I can't watch anymore.
+[IDS_MOV_M13_020_YDA3]Destroy the Sith, we must.
+[IDS_MOV_M14_010_OBW1]You have allowed this dark lord to twist your mind, until now...
+[IDS_MOV_M14_010_OBW2]Until now you have become the very thing you swore to destroy.
+[IDS_MOV_M14_010_AKN1]Don't lecture me, Obi-Wan.
+[IDS_MOV_M14_010_AKN2]I see through the lies of the Jedi.
+[IDS_MOV_M14_010_AKN3]I do not fear the dark side as you do.
+[IDS_MOV_M14_010_AKN4]Don't make me kill you.
+[IDS_MOV_M14_010_OBW3]I will do what I must.
+[IDS_MOV_M14_010_AKN5]You will try, my old friend.
+[IDS_MOV_M14_020_DSD1]Lord Vader?
+[IDS_MOV_M14_020_DSD2]Can you hear me?
+[IDS_MOV_M14_020_DVD1]Yes, Master.
+[IDS_MOV_M170_STR1]We think they may be splitting up. They may be on levels 5 and 6 now, sir.
+[IDS_MOV_M170_DVD1]I've been waiting for you, Obi-Wan.
+[IDS_MOV_M170_DVD2]We meet again, at last. 
+[IDS_MOV_M170_DVD3]The circle is now complete. When I left you, I was but the learner. Now I am the Master.
+[IDS_CIN_M01_030_AKN1]He says the droids have activated a lockout protocol.
+[IDS_CIN_M01_030_OBW1]Is there any way around it?
+[IDS_CIN_M01_030_AKN2]There's a shut-off in that landing grid over there. I'll take care of it.
+[IDS_CIN_M01_040_OBW1]Anakin -- I could use your help here!
+[IDS_CIN_M01_050_AKN1]Artoo's done it!
+[IDS_CIN_M01_050_OBW1]Let's get moving -- The Chancellor's waiting!
+[IDS_CIN_M01_050_AKN2]We can handle this, Artoo. You stay here with the ships.
+[IDS_MOV_M02A_010_AKN1]Don't worry, Master.
+[IDS_MOV_M02A_010_OBW1]I'm not worried.
+[IDS_MOV_M02A_010_AKN2]This'll be no problem.
+[IDS_MOV_M02A_010_OBW2]Did I say I was worried?
+[IDS_MOV_M02A_010_AKN3]This might be a problem.
+[IDS_MOV_M02A_010_BDD1]Warning: Fuel breach in chamber seven.  Activate containment doors.  Lock-down protocol initiated.
+[IDS_MOV_M02A_010_OBW3]All right.  Now I'm worried.
+[IDS_CIN_M02A_050_AKN1]Do you want this one, or should I take it?
+[IDS_CIN_M02A_050_OBW1]By all means, Anakin.  Help yourself.
+[IDS_CIN_M02A_070_AKN1]Think you can hold it alone?
+[IDS_CIN_M02A_070_OBW1]Let’s find out.
+[IDS_CIN_M02B_010_AKN1]I won't be long, Master.
+[IDS_CIN_M02B_010_OBW1]Be careful.
+[IDS_CIN_M02B_010_OBW2]Always on the move ...
+[IDS_CIN_M02B_030_OBW1]Anakin -- If you're not too busy, we still have to rescue the Chancellor.
+[IDS_CIN_M02B_030_AKN1]Yes, Master -- I've just ... run into some old friends.
+[IDS_CIN_M02B_030_OBW2]Well, when you're finished out there -- 
+[IDS_CIN_M02B_030_OBW3]Now what?
+[IDS_CIN_M02B_040_AKN1]Artoo.  Where is Obi-Wan?
+[IDS_CIN_M02B_040_AKN2]Well, can you open the door?
+[IDS_CIN_M02B_050_AKN1]Master, wait!  This one's not--
+[IDS_CIN_M02B_070_OBW1]We're about to become a lot thinner. 
+[IDS_CIN_M02B_070_OBW2]Quick -- back into the car!
+[IDS_CIN_M02B_070_AKN1]You first, Master!
+[IDS_CIN_M02B_070_OBW3]There's no time to argue -- Go!
+[IDS_CIN_M02B_070_OBW4]Next time we're taking the stairs.
+[IDS_CIN_M04B_020_BDD1]Alert!  Hull Breach in Sector Seven! Alert!
+[IDS_CIN_M04B_020_BDD2]Initiating emergency magnetic shield on Sectors Seven and Eight.
+[IDS_CIN_M04B_020_AKN1]I never thought I'd be so happy to see a ray shield! 
+[IDS_CIN_M04B_020_AKN2]I’m glad you’re safe, Artoo.
+[IDS_CIN_M04B_020_AKN3]Let’s go see how much trouble Obi-Wan’s got himself into now. 
+[IDS_CIN_M04B_030_OBW1]Artoo, we need to get that ray shield deactivated.
+[IDS_CIN_M04B_030_JPL1]Calling all open Jedi channels -- this is Jedi Cruiser 622 requesting immediate assistance!
+[IDS_CIN_M04B_030_JPL2]We're taking heavy fire -- situation critical!  We're going down!
+[IDS_CIN_M04B_030_OBW2]Anakin, quickly -- get into that turret.  We've got to save that Cruiser!
+[IDS_CIN_M04B_040_OBW1]Nice shooting.
+[IDS_CIN_M04B_040_AKN1]You expected less?
+[IDS_CIN_M04B_040_AKN2]Let's get moving, we need to meet up with Artoo.
+[IDS_CIN_M05_030_GGR1]Foolish Jedi!
+[IDS_CIN_M05_030_GGR2]Finish them off.  Bring me their lightsabers ... And their heads!
+[IDS_CIN_M05_040_BDD1]Gyroscopes online.  Orientation normalizing.  Standby.
+[IDS_CIN_M06B_020_OBW1]Commander Cody, this is General Obi-Wan Kenobi!  Do you copy?
+[IDS_CIN_M06B_020_CMC1]Loud and clear, sir.
+[IDS_CIN_M06B_020_OBW2]General Grievous has escaped.  I need you to lock onto his signal, and track him for me.
+[IDS_CIN_M06B_020_CMC2]Understood, sir.  Beginning signal scan.
+[IDS_CIN_M06B_020_CMC3]Sir!  We're taking fire.
+[IDS_CIN_M06B_020_OBW3]I'll take care of those cannons.  You concentrate on finding Grievous.
+[IDS_CIN_M06B_040_BDD1]Activate emergency defense shields.  
+[IDS_CIN_M06B_040_BDD2]Broad-band lockdown activated.  All levels secured.
+[IDS_CIN_M06B_040_OBW1]Ray shields. This just keeps getting better.
+[IDS_CIN_M06B_040_CLT1]Sir.  
+[IDS_CIN_M06B_040_CLT2]The shields have blocked our reinforcements. Disable them and we'll have clear access to the entire stronghold.
+[IDS_CIN_M06B_040_OBW2]Good. Where?
+[IDS_CIN_M06B_040_CLT3]Down there! 
+[IDS_CIN_M06B_040_CLT4]Good luck, sir.
+[IDS_CIN_M06B_040_OBW3]Luck? In my experience, there's no such thing.
+[IDS_CIN_M06B_070_CMC1]General Kenobi!  We've located Grievous!
+[IDS_CIN_M06B_070_OBW1]I'm in.  Let's go.
+[IDS_CIN_M07_010_GGR1]Here is where you meet your end, Kenobi.
+[IDS_CIN_M07_010_OBW1]We'll see about that.
+[IDS_CIN_M07_040_GGR1]What?!
+[IDS_CIN_M07_040_OBW1]You'll have to do better than that.
+[IDS_CIN_M07_040_GGR2]Ha ha ha ha!
+[IDS_CIN_M07_040_GGR3]Let's finish this.
+[IDS_CIN_M08_020_MWD1]He's manipulating you.  Making you betray  the Jedi order.  Can't you see that?
+[IDS_CIN_M08_020_AKN1]The only thing I see is a Jedi trying to assassinate a politician. You're the one who's betraying the Republic!
+[IDS_CIN_M08_025_MWD1]You have been tainted by the dark side...
+[IDS_CIN_M08_025_AKN1]No.
+[IDS_CIN_M08_025_MWD2]... And you have failed the Jedi Order.
+[IDS_CIN_M08_025_AKN2]No!!
+[IDS_CIN_M08_030_MWD1]Your reign of evil ends now. 
+[IDS_CIN_M08_030_AKN1]No -- It's your treachery that's finished.
+[IDS_CIN_M09_060A_CLT1]Sir -- We've breached the beacon control room.  
+[IDS_CIN_M09_060A_CLT2]We're awaiting your access code.
+[IDS_CIN_M09_060B_AKN1]That will bring any surviving Jedi home, where I'll be waiting for them.
+[IDS_CIN_M09_060B_CLT1]Lord Vader, a Jedi has penetrated our upper level defenses.
+[IDS_CIN_M09_060B_AKN2]Yes. I sense ... Cin Drallig. 
+[IDS_CIN_M09_060B_AKN3]I'll deal with him.  You stay and protect the beacon.  Guard it with your lives.
+[IDS_CIN_M10_010_SER1]You shouldn't have come here.
+[IDS_CIN_M10_010_AKN1]Serra.  Cin Drallig's greatest pupil has come to greet me. 
+[IDS_CIN_M10_030_AKN1]Your favorite student is no more.
+[IDS_CIN_M10_040_CIN1]There's one lesson you've yet to learn -- How to become one with the Force.
+[IDS_CIN_M10_040_AKN1]I am no longer the learner. It's your turn now.
+[IDS_CIN_M10_050_AKN1]This will be a day long remembered.  Soon the Jedi will be no more.
+[IDS_CIN_M11_013_CLT1]I've spotted the Jedi!
+[IDS_CIN_M11_013_CLT2]Concentrate fire on the target!
+[IDS_CIN_M11_013_CLT3]Take him down!
+[IDS_CIN_M11_050_OBW1]How do I keep getting myself into these situations?
+[IDS_CIN_M11_050_CLB1]Destroy the Jedi!
+[IDS_CIN_M11_050_OBW2]Well ... Anywhere's better than here.
+[IDS_CIN_M12_090_RHO1]He's locked it!  We're trapped!
+[IDS_CIN_M12_100_RHO1]Stop... 
+[IDS_CIN_M12_100_RHO2]I'm asking you for mercy. 
+[IDS_CIN_M12_100_AKN1]Mercy?
+[IDS_CIN_M12_100_RHO3]Yes... 
+[IDS_CIN_M12_100_RHO4]You won't kill me. 
+[IDS_CIN_M12_100_RHO5]It's not allowed, for a Jedi Knight.
+[IDS_CIN_M12_100_AKN2]There is much you fail to understand.
+[IDS_CIN_M12_100_RHO6]Gaaaah!
+[IDS_CIN_M13_020_OBW1]We seem to have attracted some unwanted attention.
+[IDS_CIN_M13_020_YDA1]Divide that attention we can.  
+[IDS_CIN_M13_020_OBW2]Shall we split up?
+[IDS_CIN_M13_020_YDA2]And may the Force soon bring us together again.
+[IDS_CIN_M13_040_YDA1]A peculiar skill you have, Master Obi-Wan, for finding trouble.
+[IDS_CIN_M13_060_OBW1]I've never seen anything so cruel.  Why would the Clones do this?
+[IDS_CIN_M13_060_YDA1]Responsible for this, the Clones are not.
+[IDS_CIN_M13_060_OBW2]No...
+[IDS_CIN_M13_060_YDA2]An act of hatred this was. Strong is the dark side now. 
+[IDS_CIN_M14_010_OBW1]Anakin -- please! Come back to the light.  Face up to what you've done.  I can help you!
+[IDS_CIN_M14_010_AKN1]It's too late for that.  You're too late.  You only want to help yourself.
+[IDS_CIN_M14_010_OBW2]You know that's not true!
+[IDS_CIN_M14_030_OBW1]I only wanted what was best for you, Anakin.  I wasn't prepared to train ... Someone like you.
+[IDS_CIN_M14_030_AKN1]That's your failing, not mine! 
+[IDS_CIN_M14_030_OBW2]Perhaps I did fail you -- But I won't abandon you to the dark side!
+[IDS_CIN_M14_030_AKN2]That's not your decision to make!
+[IDS_MOV_M14_020_OBW1]It's over, Anakin. I have the high ground.
+[IDS_MOV_M14_020_AKN1]You underestimate the dark side of the Force.
+[IDS_MOV_M14_020_OBW2]Don't try it.
+[IDS_CIN_M15_010_OBW1]It's over, Anakin. I have the high ground.
+[IDS_CIN_M15_010_AKN1]You underestimate the dark side of the Force.
+[IDS_CIN_M15_010_OBW2]Don't try it.
+[IDS_CIN_M15_010_DSD1]Excellent work, my apprentice, there are none left to oppose us. The galaxy is ours now.
+[IDS_CIN_M15_010_DSD2]Your new weapon, Lord Vader.
+[IDS_CIN_M15_010_AKN2]No ... The galaxy belongs to me.
+[IDS_MOV_M170_020_LUK1]No!
+[IDS_MOV_M170_020_LEI1]Come on!
+[IDS_MOV_M170_020_HAN1]Blast the door, kid!
+[IDS_MOV_M170_020_OBW1]Run, Luke, Run.
+
+### Level Names
+[IDS_M01]Rescue Over Coruscant
+[IDS_M02A]An Explosive Development
+[IDS_M02B]Peril in the Elevators
+[IDS_M03]Settling the Score
+[IDS_M04]It's Not Over Yet
+[IDS_M05]The General's Right Hand
+[IDS_M06A]Investigating Utapau
+[IDS_M06B]The Cavalry Arrives
+[IDS_M07]Showdown With Grievous
+[IDS_M08]The Dark Side of the Force
+[IDS_M09A]The Hunt Begins
+[IDS_M10]The Final Lesson
+[IDS_M11A]Attack of the Clones
+[IDS_M12B]Assassination on Mustafar
+[IDS_M13]Aftermath in the Temple
+[IDS_M14]A Friendship in Flames
+[IDS_M15]Revenge of the Sith
+
+### Duel Arena Names
+[IDS_U103_01]Throne Room Main Chamber
+[IDS_U103_02]Throne Room Upper Balcony 
+[IDS_U107_01]Utapau Sinkhole Control Room 
+[IDS_U107_02]Utapau Sinkhole Landing Platform 
+[IDS_U108_01]Palpatine's Office
+[IDS_U108_02]Palpatine's Office Docking bay
+[IDS_U110_00]Temple Training Room 
+[IDS_U110_01]Temple Control Room 
+[IDS_U110_02]Temple Outer Terrace
+[IDS_U140_01]Mustafar Control Room 
+[IDS_U140_02]Mustafar Balcony 
+[IDS_U150_01]Mustafar Control Arm 
+[IDS_U150_02]Mustafar Lava Platform 
+[IDS_U170_02]Episode IV Death Star
+
+### Bonus Mission Names
+[IDS_U106_02]The General’s Protectors
+[IDS_U107]Grievous on the Run
+[IDS_U111]Commander Cody Assault
+[IDS_U112]Mustafar Lava Challenge
+[IDS_U113]Size Matters Not
+[IDS_U170_01]Episode IV Death Star
+
+### Co-op Mission Names
+[IDS_U101]Cruiser Cargo Hold
+[IDS_U105]Cruiser Corridors
+[IDS_U106_01]Control Sphere Survival
+[IDS_U109]The Jedi Strike Back
+
+### Movie Names
+[IDS_M01_INTRO]The Battle of Coruscant
+[IDS_M01_OUTRO]Escaping the Hangar
+[IDS_M02A_INTRO]One Bad Situation to Another
+[IDS_M02A_OUTRO]The Way Out
+[IDS_M02B_INTRO]Never an Elevator When You Need One
+[IDS_M02B_OUTRO]Next Time We Take the Stairs
+[IDS_M03_INTRO]This Time We Do It Together
+[IDS_M03_OUTRO]Sharing the Same Fate
+[IDS_M04_INTRO]Prepare for Attack
+[IDS_M04_OUTRO]Artoo to the Rescue
+[IDS_M05_INTRO]Confronting Grievous
+[IDS_M05_OUTRO]Grievous Escapes
+[IDS_M06A_INTRO]Bidding Farewell
+[IDS_M06A_OUTRO]Next stop, Level 10
+[IDS_M06B_INTRO]A Bold Move
+[IDS_M06B_OUTRO]Getting a Ride
+[IDS_M07_INTRO]Chasing Grievous
+[IDS_M07_OUTRO]So Uncivilized
+[IDS_M08_INTRO]Dark vs. Light
+[IDS_M08_OUTRO]The New Apprentice
+[IDS_M09A_INTRO]Marching on the Temple
+[IDS_M09A_OUTRO]Turning on the Beacon
+[IDS_M10_INTRO]Serra, the Apprentice
+[IDS_M10_OUTRO]The End of Cin Drallig
+[IDS_M11A_INTRO]The Time Has Come
+[IDS_M11A_OUTRO]Escaping Utapau
+[IDS_M12B_INTRO]Arrival on Mustafar
+[IDS_M12B_OUTRO]Taken Care Of
+[IDS_M13_INTRO]Rendezvous in Space
+[IDS_M13_OUTRO]Security Recordings
+[IDS_M14_INTRO]Showdown on Mustafar
+[IDS_M14_OUTRO]The Circle is Now Complete
+[IDS_M15_INTRO]Showdown on Mustafar Revisited
+[IDS_M15_OUTRO]The Ultimate Revenge of the Sith
+
+### Level Descriptions
+###Do not match normal naming convention, just in sequential order
+[IDS_OVERVIEW_01]\left_image:anakin \right_image:obi-wan \b Anakin Skywalker \-b returns from the outer rim to thwart \b General Grievous' \-b kidnapping plot, together with \b Obi-Wan Kenobi \-b \right_image:sepcruiser the two Jedi raid the \b Separatist Flagship \-b to locate and retrieve \b Chancellor Palpatine\-b...
+[IDS_OVERVIEW_02]\left_image:obi-wan \right_image:sepcruiser As the battle rages above \b Coruscant\-b, \b Obi-Wan \-b continues the quest to find \right_image:palpatine the \b Supreme Chancellor \-b aboard the \b Separatist cruiser \-b with help from \b Anakin Skywalker \-b. But the Jedi are unaware that their every move is being tracked \right_image:grievous on the ship's command bridge by the leader of the droid forces, \b General Grievous\-b...  
+[IDS_OVERVIEW_03]\left_image:anakin \right_image:sepcruiser \b Anakin \-b continues to \b Palpatine's \-b location on the cruiser's upper levels, \right_image:palpatine assisted by \b Obi-Wan\-b, determined to retrieve the \b Chancellor \-b from \b Grievous' \-b clutches. Continued pursuit from the ship's patrolling droids \right_image:r2d2 threatens the Jedi, while \b R2-D2 \-b attempts to aid the Jedi in their ascent...
+[IDS_OVERVIEW_04]\left_image:anakin \right_image:r2d2 With some help from \b R2-D2\-b, \b Anakin \-b leads \b Obi-Wan \-b to their final destination and the Jedi are poised to liberate the \b Chancellor\-b.  The only thing blocking their path is \right_image:dooku a stately former Jedi named \b Count Dooku\-b, who is now the Sith Lord known as \b Darth Tyranus\-b...
+[IDS_OVERVIEW_05]\left_image:anakin \right_image:palpatine There is a sinister mood as \b Palpatine \-b witnesses \b Anakin's \-b flirtation with the dark side while getting revenge on \b Count Dooku\-b. The young Jedi must now lead the \b Chancellor \-b and \b Obi-Wan \-b toward the cruiser's hangar.  \right_image:r2d2 But the furious combat outside begins to take its toll on the \right_image:sepcruiser \b Separatist flagship \-b and \b R2-D2 \-b will again need to aid in the rescue...
+[IDS_OVERVIEW_06]\left_image:anakin \right_image:grievous Their escape foiled, the Jedi and \b Palpatine \-b are brought before the dreaded \b General Grievous\-b, \right_image:gbg who is flanked by his formidable droid bodyguards. Down but not out, \b Anakin \-b and \b Obi-Wan \-b still have \right_image:obi-wan a few tricks remaining in their rescue mission. Hopefully, \right_image:sepcruiser the \b Separatist cruiser \-b will stay in orbit long enough for them to be used...
+[IDS_OVERVIEW_07]\left_image:obi-wan \right_image:palpatine \b Obi-Wan \-b and \b Anakin \-b get the \b Chancellor \-b safely back to \b Coruscant\-b, ending the Separatist ploy. With \b Dooku \-b defeated, the \b Jedi Council \-b doubles its efforts \right_image:grievous to bring \b General Grievous \-b to justice.  Tracking \b Grievous \-b to the \b Utapau \-b system, \right_image:utapau the Council sends \b Obi-Wan \-b after the Separatist leader, this time without the aid of \b Anakin \-b. \n Already frustrated by the Council, \right_image:anakin \b Anakin \-b is further dismayed to learn that \b Mace Windu \-b suspects \b Chancellor Palpatine \-b is behind the perpetuation of the Clone Wars.  \right_image:mace The conflicted young Jedi is now stuck on \b Coruscant\-b, faced with the growing divide between his friend and mentor, the \b Chancellor\-b, and the \b Jedi Order\-b, \right_image:utapau without the guidance of \b Obi-Wan\-b, who begins his daring mission on \b Utapau\-b...
+[IDS_OVERVIEW_08]\left_image:obi-wan \right_image:grievous After successfully navigating the Separatist stronghold, \b Obi-Wan Kenobi \-b locates \b Grievous \-b and must apprehend the general to complete his mission and end the Clone Wars. However, in order to flush out \b Grievous\-b, \right_image:gbg Obi-Wan must face not only his bodyguards, but also endless waves of droid forces without the help of his clone army...
+[IDS_OVERVIEW_09]\left_image:obi-wan \right_image:grievous In the chaos of the Separatists' defeat on \b Utapau\-b, \b General Grievous \-b attempts to escape, racing toward his hidden starship. \right_image:cody With help from \bCommander Cody\-b,\bObi-Wan \-b catches sight of the fleeing droid and mounts a pursuit on the back of the native lizard, \right_image:grievous \b Boga\-b, chasing \b Grievous \-b toward their final showdown...
+[IDS_OVERVIEW_10]\left_image:coruscant \right_image:mace Meanwhile on \b Coruscant\-b, \b Mace Windu \-b gathers incriminating information against \b Palpatine \-b and confronts the \b Chancellor \-b in his quarters.  \left_image:palpatine It's there that \b Palpatine \-b reveals his true identity as the Sith Lord that's controlling the \b Galactic Senate\-b.  Just as \b Mace \-b is about to strike \b Palpatine \-b down, \left_image:anakin a bewildered \b Anakin \-b enters the room and sees his friend on the wrong end of what appears to be a Jedi assassination attempt...
+[IDS_OVERVIEW_11]\left_image:anakin \right_image:sidious Having made his choice in striking at \b Mace Windu\-b, \b Anakin \-b places all of his trust with \b Palpatine\-b, who goes to work on \b Anakin\-b, playing on his fears and anxieties. The crafty Sith Lord manipulates \b Anakin \-b into believing that the \right_image:coruscant Jedi Order betrayed the \b Republic \-b and him, and that \b Obi-Wan \-b is equally complicit. The \b Chancellor's \-b words are powerful, and they sway the young Jedi.  \left_image:anakinhood \b Anakin \-b swears his allegiance to \b Palpatine \-b - and to the dark side of the Force.  \n Seduced by his newfound power, \right_image:clonetrooper the newly christened \b Darth Vader \-b is sent to the \b Jedi Temple \-b on a quest to send the traitorous Jedi to their doom...
+[IDS_OVERVIEW_12]\left_image:anakinhood \right_image:coruscant Despite Darth Vader's ferocity throughout the Temple, the Jedi refuse to go quietly.  The harder the Jedi fight against him, the more convinced of their corruption and treachery the young Sith Lord becomes, which only fuels his anger and furthers his descent into the dark side.  \n Deep within the Jedi Temple, \right_image:cindrallig an incredibly skilled swordsman and Jedi Master named Cin Drallig prepares for Vader's coming.  But before Cin can act, his most accomplished apprentice, Serra, \right_image:serra confronts Vader on her own.  With the fate of the Jedi Order at stake, these two Jedi are the Temple's last hope...
+[IDS_OVERVIEW_13]\left_image:obi-wan \right_image:utapau The Separatist armies on \b Utapau \-b are beaten back, falling under the might of \b Obi-Wan Kenobi \-b and his Clone army.  But \b Obi-Wan's \-b victory is short-lived \right_image:cody as \b Clone Commander Cody \-b receives a secret, coded message directly from \b Darth Sidious\-b, implementing \b "Order 66" \-b - a pre-programmed \right_image:sidious directive commanding the Clones to turn on their Jedi leaders!  \n \right_image:clonetrooper Suddenly under fire and running for his life, \b Obi-Wan \-b must evade his former allies and find a way back to \b Coruscant\-b...
+[IDS_OVERVIEW_14]\left_image:anakinhood \right_image:sidious On \b Coruscant\-b, the \b Jedi Order \-b is broken and the Temple is in ruins.  With no one left to oppose him, \b Darth Sidious \-b is ready to declare the \b Clone Wars \-b over and appoint himself Emperor of the galaxy.  The only matter left to attend to is the remaining Separatist leaders, who are in hiding in the \b Mustafar \-b system. \right_image:mustafar \b Sidious \-b dispatches \b Darth Vader \-b to the volcanic world to end their lives with a final betrayal...
+[IDS_OVERVIEW_15]\left_image:obi-wan \right_image:clonetrooper After surviving \b Order 66 \-b, \b Obi-Wan Kenobi \-b endeavors to prevent the \b Jedi Order's \-b devastation.  \right_image:yoda Reunited with \b Yoda \-b aboard \b Senator Bail Organa's \-b personal starship, the Jedi plan a return to \right_image:coruscant \b Coruscant\-b, hoping to find clues to their mysterious and dire situation within the Jedi Temple...
+[IDS_OVERVIEW_16]\left_image:obi-wan \right_image:mustafar Learning of \b Anakin's \-b descent into darkness while inside the \b Jedi Temple\-b, \right_image:anakinhood \b Obi-Wan \-b travels to \b Mustafar \-b for a final confrontation with his old friend and former Padawan.
+[IDS_OVERVIEW_17]\left_image:anakinhood \right_image:mustafar With the Separatist leaders on \b Mustafar \-b now eliminated, \b Darth Vader \-b prepares to return to \b Coruscant \-b \right_image:obi-wan only to find his former friend and master, \b Obi-Wan Kenobi\-b, waiting for him.  Accusations fly between the two, and it becomes clear to the young Sith Lord that \b Palpatine \-b was right: \b Obi-Wan\-b, too, has been tainted by the Jedi’s corruption and must also be destroyed...
+
+###SINGLE PLAYER BONUS MISSIONS
+[IDS_BONUS_OVERVIEW_01]\left_image:gbg \right_image:clonetrooper \b General Grievous’ bodyguards \-b are the deadliest of droids, as the attacking Clone army quickly discovers.
+[IDS_BONUS_OVERVIEW_02]\left_image:grievous \right_image:utapau Seeing his plans of conquest on \b Utapau \-b unravel before him, \b Grievous \-b flees toward his hidden starship, \right_image:clonetrooper cutting down any Clone Trooper foolish enough to stand in his way.
+[IDS_BONUS_OVERVIEW_03]\left_image:anakinhood \right_image:mustafar On his mission to silence the Separatist leaders, \b Darth Vader \-b must navigate \b Mustafar’s \-b constantly moving platform system in order to reach his prey.
+[IDS_BONUS_OVERVIEW_04]\left_image:coruscant \right_image:clonetrooper The Clone Troopers have betrayed the Jedi and overtaken the Temple.  Searching the Temple’s ruins and separated from \b Obi-Wan Kenobi\-b, \left_image:yoda \b Yoda \-b faces an almost overwhelming wave of Clone soldiers.
+[IDS_BONUS_OVERVIEW_05]\left_image:darthvader \right_image:deathstar After many years \b Darth Vader \-b and \b Ben Kenobi \-b come face to face once more. \right_image:oldbenkenobi By engaging \b Darth Vader \-b in combat, \b Ben Kenobi \-b allows \b Luke Skywalker \-b to escape certain death... but at what cost?
+
+###MULTIPLAYER COOP MISSIONS
+[IDS_CHALLENGE_OVERVIEW_01]\left_image:anakin \right_image:sepcruiser The \b Separatist Cruiser’s \-b cargo hold is crawling with droids. Before they can rescue the kidnapped \b Chancellor\-b, \right_image:obi-wan \b Obi-Wan \-b and \b Anakin \-b must combine their Jedi skills to clear the room.
+[IDS_CHALLENGE_OVERVIEW_02]\left_image:r2d2 \right_image:sepcruiser Ever-dependable astromech droid \b R2-D2 \-b comes under fire from the Separatist forces, \left_image:obi-wan \right_image:anakin and only his Jedi protectors \b Obi-Wan Kenobi \-b and \b Anakin Skywalker \-b can lead him to safety.
+[IDS_CHALLENGE_OVERVIEW_03]\left_image:anakin \right_image:obi-wan \b Obi-Wan \-b and \b Anakin \-b must fight through a seemingly endless wave of droid forces on their way to Separatists’ control center.
+[IDS_CHALLENGE_OVERVIEW_04]\left_image:cindrallig \right_image:serra Jedi Master \b Cin Drallig \-b and his apprentice \b Serra Keto \-b engage the invading clone forces in the Jedi Temple, driving back the troopers’ aggression with Jedi strength and skill.
+
+# At the start of versus rounds, we see this onscreen:
+[IDS_ROUND_BEGIN] Round #
+ 
+# At the end of versus rounds, we see this onscreen
+[IDS_ROUND_PLAYER1_END] Player 1 wins!
+[IDS_ROUND_PLAYER2_END] Player 2 wins!
+ 
+# If both players die in versus mode, we see this
+[IDS_ROUND_DRAW] Draw!
+
+### OBJECTIVES FOR MISSION 01
+[IDS_OBJECTIVES_M01_SEP_HANGAR_01_01]Escape the Cruiser Hangar
+[IDS_OBJECTIVES_M01_SEP_HANGAR_01_02]Defeat enemies while R2-D2 extends catwalk.
+[IDS_OBJECTIVES_M01_SEP_HANGAR_01_03]Use the Force to Clear Wreckage
+[IDS_OBJECTIVES_M01_SEP_HANGAR_01_04]Shutdown Lock-Out Protocol
+[IDS_OBJECTIVES_M01_SEP_HANGAR_01_05]Defeat enemies while R2-D2 disables force fields
+[IDS_OBJECTIVES_M02A_SEP_GENERATORS_01]Escape Cruiser Generator Chambers
+[IDS_OBJECTIVES_M02A_SEP_GENERATORS_02]Disable Malfunctioning Power Node
+[IDS_OBJECTIVES_M02A_SEP_GENERATORS_03]Shutdown Electrical Pylons
+[IDS_OBJECTIVES_M02A_SEP_GENERATORS_04]Use the Force to Bridge the Gap
+[IDS_OBJECTIVES_M02A_SEP_GENERATORS_05]Gain Access to Service Depot
+[IDS_OBJECTIVES_M02A_SEP_GENERATORS_06]Disrupt Power to the Electric Pylons
+[IDS_OBJECTIVES_M02B_SEP_ELEVATOR_01]Take Elevator to Cruiser Throne Room
+[IDS_OBJECTIVES_M02B_SEP_ELEVATOR_02]Defeat Destroyer Droids
+[IDS_OBJECTIVES_M02B_SEP_ELEVATOR_03]Enter Elevator
+[IDS_OBJECTIVES_M02B_SEP_ELEVATOR_04]Reunite with Obi-Wan
+[IDS_OBJECTIVES_M02B_SEP_ELEVATOR_05]Locate Controls and Disable Force Field
+[IDS_OBJECTIVES_M03_SEP_THRONEROOM_01]Defeat Count Dooku (Darth Tyrannus)
+[IDS_OBJECTIVES_M03_SEP_THRONEROOM_02]Rescue Chancellor Palpatine
+[IDS_OBJECTIVES_M04_SEP_CORRIDORS_01]Reunite with Obi-wan and Palpatine
+[IDS_OBJECTIVES_M04_SEP_CORRIDORS_02]Escort R2-D2
+[IDS_OBJECTIVES_M04_SEP_CORRIDORS_03]Defeat enemies while R2 disables force fields
+[IDS_OBJECTIVES_M04_SEP_CORRIDORS_04]Locate Controls and Disable Force Field
+[IDS_OBJECTIVES_M04_SEP_CORRIDORS_05]Enter Gun Battery
+[IDS_OBJECTIVES_M04_SEP_CORRIDORS_06]Use Cannon to Defeat Banking Clan Ship
+[IDS_OBJECTIVES_M05_SEP_BRIDGE_01]Defeat Grievous Bodyguards
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_01]Infiltrate Control Sphere
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_02]Shutdown Heat Vents
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_03]Operate lift controls
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_04]Destroy Separatist Opposition
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_05]Destroy Force Field Nodes
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_06]Utilize Separatist Cannon
+[IDS_OBJECTIVES_M06A_UTA_SEPARATISTHQ_07]Defeat Crab Droid
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_01]Capture General Grievous
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_02]Defeat Grievous Bodyguards
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_03]Assist Clone Invasion
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_04]Disable Cannons firing on Clone Gunships
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_05]Locate Shield Controls for Control Sphere
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_06]Destroy Shield Controls with the Force
+[IDS_OBJECTIVES_M06B_UTA_CONTROLROOM_07]Defeat Crab Droid
+[IDS_OBJECTIVES_M07_UTA_GRIEVOUS_01]Defeat General Grievous
+[IDS_OBJECTIVES_M08_COR_PALPATINESOFFICE_01]Defeat Mace Windu
+[IDS_OBJECTIVES_M09A_COR_TEMPLE_01]Exterminate Jedi
+[IDS_OBJECTIVES_M09A_COR_TEMPLE_02]Set Temple Beacon
+[IDS_OBJECTIVES_M09A_COR_TEMPLE_03]Disengage Library Force Fields
+[IDS_OBJECTIVES_M09A_COR_TEMPLE_04]Use the Force to Gain Access to Study Hall
+[IDS_OBJECTIVES_M09A_COR_TEMPLE_05]Shutdown Study Hall Force Fields
+[IDS_OBJECTIVES_M09A_COR_TEMPLE_06]Use Turret to destroy Jedi Starfighters
+[IDS_OBJECTIVES_M10_COR_JEDITRAININGARENA_02]Defeat Jedi Apprentice Serra
+[IDS_OBJECTIVES_M10_COR_JEDITRAININGARENA_03]Defeat Jedi Trainer Cin Drallig
+[IDS_OBJECTIVES_M11A_UTA_ORDER66_01]Escape Clone Ambush
+[IDS_OBJECTIVES_M11A_UTA_ORDER66_02]Defeat Clone Walkers
+[IDS_OBJECTIVES_M11A_UTA_ORDER66_03]Use Force to Clear Debris
+[IDS_OBJECTIVES_M11A_UTA_ORDER66_04]Defeat Clone Gunship
+[IDS_OBJECTIVES_M11A_UTA_ORDER66_05]Disable Clone Juggernaut Defenses
+[IDS_OBJECTIVES_M12B_MUS_ASSASSIN_01]Assassinate Separatist Leaders
+[IDS_OBJECTIVES_M12B_MUS_ASSASSIN_02]Lift magma gun
+[IDS_OBJECTIVES_M12B_MUS_ASSASSIN_03]Disable Force Field
+[IDS_OBJECTIVES_M12B_MUS_ASSASSIN_04]Access Magma Lift Controls
+[IDS_OBJECTIVES_M12B_MUS_ASSASSIN_05]Use the Force to move magma hover platform
+[IDS_OBJECTIVES_M12B_MUS_ASSASSIN_06]Destroy Nute Gunray in Neimoidian Shuttle
+[IDS_OBJECTIVES_M13_COR_TEMPLEAFTERMATH_01]Shutdown Temple Beacon
+[IDS_OBJECTIVES_M13_COR_TEMPLEAFTERMATH_02]Aid Yoda in Moving Debris
+[IDS_OBJECTIVES_M13_COR_TEMPLEAFTERMATH_03]Defeat Library Security Protocol
+[IDS_OBJECTIVES_M13_COR_TEMPLEAFTERMATH_04]Defeat Clone Gunships
+[IDS_OBJECTIVES_M13_COR_TEMPLEAFTERMATH_05]Use Clone Turret to defeat Clone Gunships
+[IDS_OBJECTIVES_M13_COR_TEMPLEAFTERMATH_06]Defeat Clone Assassins
+[IDS_OBJECTIVES_M14_MUS_THEDUELOBI_01]Defeat Darth Vader
+[IDS_OBJECTIVES_M15_MUS_THEDUELANAKIN_01]Defeat Obi-Wan Kenobi
+[IDS_OBJECTIVES_U102_SEP_CARGO_HOLD_01]Destroy Separatist Droids
+[IDS_OBJECTIVES_U105_SEP_ESCORT_01]Defeat Separatist forces
+[IDS_OBJECTIVES_U105_SEP_ESCORT_02]Defeat Grievous Bodyguards
+[IDS_OBJECTIVES_U106_UTA_GBG_01]Defeat Clone Troopers
+[IDS_OBJECTIVES_U106_UTA_GBG_02]Defeat Crab Droid
+[IDS_OBJECTIVES_U106_UTA_Survival_01]Defeat Separatist Attackers
+[IDS_OBJECTIVES_U107_UTA_GrievousSurival_01]Defeat Clone and Separatist Attackers
+[IDS_OBJECTIVES_U107_UTA_GrievousSurival_02]Defeat Obi-Wan Kenobi
+[IDS_OBJECTIVES_U109_COR_JediSurvival_01]Fight Back Clone Trooper Invasion
+[IDS_OBJECTIVES_U109_COR_JediSurvival_02]Disable Electric Power Nodes
+[IDS_OBJECTIVES_U109_COR_JediSurvival_03]Defeat Clone Walkers
+[IDS_OBJECTIVES_U112_MUS_Lava_01]Navigate Lava Processing Trench
+[IDS_OBJECTIVES_U112_MUS_Lava_02]Defeat Neimoidian Opposition
+[IDS_OBJECTIVES_U113_COR_Yoda_01]Defeat Clone Troopers
+[IDS_OBJECTIVES_U113_COR_Yoda_02]Defeat Clone Assassins
+[IDS_OBJECTIVES_U170_EP4_Deathstar_01_02]Defeat Ben Kenobi
+
+### COMBAT MOVES LIST
+###BASIC CONTROLS AND NAVIGATION
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_01]Run|RUN|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_02]Jump|JUMP|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_03]Fast Slash|FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_04]Strong Slash|STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_05]Critical Strike|KILL|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_06]Block|BLOCK|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_07]Saber Throw|THROW|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_11_A]Force Lightning|LIGHTNING|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_13]Force Speed|RUN,RUN|1|
+
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_01]Run|RUN|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_02]Jump|JUMP|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_03]Fast Slash|FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_04]Strong Slash|STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_05]Critical Strike|KILL|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_06]Block|BLOCK|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_07]Saber Throw|THROW|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_13]Force Speed|RUN,RUN|1|
+
+###BASIC LIGHTSABER MOVES
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_01]Standing Rapid Slash Combo|FAST,FAST,FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_02]Standing Rapid Back Strike|FAST,FAST,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_03]Standing Rapid Jung Slash|FAST,STRONG,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_04]Rapid Slash Combo|RUN,+,FAST,FAST,FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_05]Spinning Jung Ma|RUN,+,FAST,STRONG,STRONG,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_06]Double Strike Launcher|RUN,+,FAST,FAST,STRONG,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_07]Double Strike Sai Ma|RUN,+,FAST,FAST,FAST,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_08]Power Slash Combo|RUN,+,STRONG,STRONG,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_09]Power Flurry Combo|RUN,+,STRONG,FAST,FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_BASIC_LIGHTSABER_10]Power Kick Combo|RUN,+,STRONG,STRONG,FAST|1|
+
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_01]Standing Rapid Slash Combo|FAST,FAST,FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_02]Standing Sai Slash|FAST,FAST,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_03]Standing Rapid Sweep|FAST,STRONG,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_04]Standing Power Slash Combo|STRONG,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_05]Rapid Slash Combo|RUN,+,FAST,FAST,FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_06]Slashing Jung Thrust|RUN,+,FAST,STRONG,STRONG,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_07]Slashing Spin Kick|RUN,+,FAST,FAST,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_08]Power Slash Combo|RUN,+,STRONG,STRONG,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_09]Power Flurry Combo|RUN,+,STRONG,FAST,FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_BASIC_LIGHTSABER_10]Power Sweeping Combo|RUN,+,STRONG,STRONG,FAST|1|
+
+###SHUNTS/SABERLOCKS
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_01]Initiate Saber Lock|STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_02]Saber Lock Struggle (press rapidly)|FAST,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_03]Saber Lock Fast Attack|FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_04]Saber Lock Strong Attack|STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_05]Saber Shunt|RUN,+,BLOCK|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_06]Saber Trap Shunt|BACK,+,BLOCK|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_07]Fast Shunt Attack|FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_SHUNTS_08]Strong Shunt Attack|STRONG|1|
+
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_01]Initiate Saber Lock|STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_02]Saber Lock Struggle (press rapidly)|FAST,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_03]Saber Lock Fast Attack|FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_04]Saber Lock Strong Attack|STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_05]Saber Shunt|RUN,+,BLOCK|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_06]Saber Trap Shunt|BACK,+,BLOCK|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_07]Fast Shunt Attack|FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_SHUNTS_08]Strong Shunt Attack|STRONG|1|
+
+###JUMP ATTACKS
+[IDS_COMBAT_ANAKIN_MOVES_JUMPING_01]Rapid Sai Air Combo|JUMP,FAST,FAST,FAST|1|
+[IDS_COMBAT_ANAKIN_MOVES_JUMPING_02]Jumping Roundhouse Kick|FAST,FAST,BACK,+,STRONG|2|
+[IDS_COMBAT_ANAKIN_MOVES_JUMPING_03]Flip Kick (at end of combo)|BACK,+,FAST|2|
+[IDS_COMBAT_ANAKIN_MOVES_JUMPING_04]Dodge Counter|BLOCK,+,JUMP,+,RUN,STRONG|2|
+[IDS_COMBAT_ANAKIN_MOVES_JUMPING_05]Vault Attack|JUMP,+,KILL|3|
+[IDS_COMBAT_ANAKIN_MOVES_JUMPING_06]Soaring Back Kick|RUN,+,JUMP,STRONG|3|
+
+[IDS_COMBAT_OBIWAN_MOVES_JUMPING_01]Rapid Sai Air Combo|JUMP,FAST,FAST,FAST|1|
+[IDS_COMBAT_OBIWAN_MOVES_JUMPING_02]Dodge Counter|BLOCK,+,JUMP,+,RUN,STRONG|2|
+[IDS_COMBAT_OBIWAN_MOVES_JUMPING_03]Flip Kick (at end of combo)|BACK,+,FAST|2|
+[IDS_COMBAT_OBIWAN_MOVES_JUMPING_04]Jumping Double Crescent|FAST,FAST,BACK,+,STRONG|2|
+[IDS_COMBAT_OBIWAN_MOVES_JUMPING_05]Vault Attack|JUMP,+,KILL|3|
+[IDS_COMBAT_OBIWAN_MOVES_JUMPING_06]Soaring Back Kick|RUN,+,JUMP,STRONG|3|
+
+###GRAPPLES
+[IDS_COMBAT_ANAKIN_MOVES_GRAPPLES_01]Grab Opponent|FAST,+,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_GRAPPLES_02]Grapple Judo|FAST,+,STRONG,STRONG|2|
+[IDS_COMBAT_ANAKIN_MOVES_GRAPPLES_03]Grapple Kick|FAST,+,STRONG,FAST|2|
+[IDS_COMBAT_ANAKIN_MOVES_GRAPPLES_04]Grapple Throwdown|FAST,+,STRONG,FAST,FAST|3|
+[IDS_COMBAT_ANAKIN_MOVES_GRAPPLES_05]Grapple Punt|FAST,+,STRONG,STRONG,STRONG|3|
+
+[IDS_COMBAT_OBIWAN_MOVES_GRAPPLES_01]Grab Opponent|FAST,+,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_GRAPPLES_02]Grapple Punch|FAST,+,STRONG,STRONG|2|
+[IDS_COMBAT_OBIWAN_MOVES_GRAPPLES_03]Grapple Kick|FAST,+,STRONG,FAST|2|
+[IDS_COMBAT_OBIWAN_MOVES_GRAPPLES_04]Grapple Judo|FAST,+,STRONG,STRONG,STRONG|3|
+[IDS_COMBAT_OBIWAN_MOVES_GRAPPLES_05]Grapple Throwdown|FAST,+,STRONG,FAST,FAST|3|
+
+###DASH ATTACKS
+[IDS_COMBAT_ANAKIN_MOVES_LUNGES_01]Launcher Slash (at end of a combo)|RUN,+,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_LUNGES_02]Critical Sweeping Lunge|RUN,+,(HOLD),KILL|2|
+[IDS_COMBAT_ANAKIN_MOVES_LUNGES_03]Dashing Uppercut|RUN,RUN,+,FAST|2|
+[IDS_COMBAT_ANAKIN_MOVES_LUNGES_04]Fury Corkscrew|RUN,+,(HOLD),FAST|3|
+[IDS_COMBAT_ANAKIN_MOVES_LUNGES_05]Dashing Lunge|RUN,RUN,+,STRONG|3|
+
+[IDS_COMBAT_OBIWAN_MOVES_LUNGES_01]Launcher Slash (at end of a combo)|RUN,+,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_LUNGES_02]Critical Sweeping Lunge|RUN,+,(HOLD),KILL|2|
+[IDS_COMBAT_OBIWAN_MOVES_LUNGES_03]Dashing Uppercut|RUN,RUN,+,FAST|2|
+[IDS_COMBAT_OBIWAN_MOVES_LUNGES_04]Focus Lunge Strike|RUN,+,(HOLD),FAST|3|
+[IDS_COMBAT_OBIWAN_MOVES_LUNGES_05]Dashing Lunge|RUN,RUN,+,STRONG|3|
+
+###AREA ATTACKS
+[IDS_COMBAT_ANAKIN_MOVES_CLEARING_01]Jumping Sai Smash|JUMP,STRONG|1|
+[IDS_COMBAT_ANAKIN_MOVES_CLEARING_02]Clearing Sweep (at end of combo)|FAST,+,STRONG|2|
+[IDS_COMBAT_ANAKIN_MOVES_CLEARING_03]Fury Whirlwind|RUN,+,(HOLD),STRONG|2|
+[IDS_COMBAT_ANAKIN_MOVES_CLEARING_04]Fury Explosion|(HOLD),STRONG|2|
+[IDS_COMBAT_ANAKIN_MOVES_CLEARING_05]Fury Sai Bomb|JUMP,(HOLD),STRONG|3|
+
+[IDS_COMBAT_OBIWAN_MOVES_CLEARING_01]Jumping Sai Smash|JUMP,STRONG|1|
+[IDS_COMBAT_OBIWAN_MOVES_CLEARING_02]Palm Shock (at end of combo)|FAST,+,STRONG|2|
+[IDS_COMBAT_OBIWAN_MOVES_CLEARING_03]Focus Shockwave|RUN,+,(HOLD),STRONG|2|
+[IDS_COMBAT_OBIWAN_MOVES_CLEARING_04]Focus Slash Combo|(HOLD),STRONG|3|
+[IDS_COMBAT_OBIWAN_MOVES_CLEARING_05]Focus Sai Bomb|JUMP,(HOLD),STRONG|3|
+
+###CRITICAL ATTACKS
+[IDS_COMBAT_ANAKIN_MOVES_CRITICAL_01]Critical Strike|KILL|1|
+[IDS_COMBAT_ANAKIN_MOVES_CRITICAL_02]Critical Choke Impale|KILL,KILL|2|
+[IDS_COMBAT_ANAKIN_MOVES_CRITICAL_03]Force Impale (close range)|(HOLD),GRASP,KILL|2|
+[IDS_COMBAT_ANAKIN_MOVES_CRITICAL_04]Critical Throwdown|(HOLD),KILL|3|
+[IDS_COMBAT_ANAKIN_MOVES_CRITICAL_05]Force Stab (long range)|(HOLD),GRASP,KILL|3|
+
+[IDS_COMBAT_OBIWAN_MOVES_CRITICAL_01]Critical Strike|KILL|1|
+[IDS_COMBAT_OBIWAN_MOVES_CRITICAL_02]Critical Arm Slice|KILL,KILL|2|
+[IDS_COMBAT_OBIWAN_MOVES_CRITICAL_03]Saber Impale (close range)|(HOLD),GRASP,KILL|2|
+[IDS_COMBAT_OBIWAN_MOVES_CRITICAL_04]Critical Sweep|(HOLD),KILL|3|
+[IDS_COMBAT_OBIWAN_MOVES_CRITICAL_05]Neck Strike (long range)|(HOLD),GRASP,KILL|3|
+
+
+###COMBAT SKILL UPGRADES
+###JUMPING ATTACKS
+[IDS_UPGRADES_ANAKIN_JUMPING_01]Rapid Sai Air Combo|JUMP,FAST,FAST,FAST|1|
+[IDS_UPGRADES_ANAKIN_JUMPING_02]Jumping Roundhouse Kick|FAST,FAST,BACK,+,STRONG|2|
+[IDS_UPGRADES_ANAKIN_JUMPING_03]Flip Kick (at end of any combo)|BACK,+,FAST|2|
+[IDS_UPGRADES_ANAKIN_JUMPING_04]Dodge Counter|BLOCK,+,JUMP,+,RUN,STRONG|2|
+[IDS_UPGRADES_ANAKIN_JUMPING_05]Vault Attack|JUMP,+,KILL|3|
+[IDS_UPGRADES_ANAKIN_JUMPING_06]Soaring Back Kick|RUN,+,JUMP,STRONG|3|
+
+[IDS_UPGRADES_OBIWAN_JUMPING_01]Rapid Sai Air Combo|JUMP,FAST,FAST,FAST|1|
+[IDS_UPGRADES_OBIWAN_JUMPING_02]Dodge Counter|BLOCK,+,JUMP,+,RUN,STRONG|2|
+[IDS_UPGRADES_OBIWAN_JUMPING_03]Flip Kick (at end of any combo)|BACK,+,FAST|2|
+[IDS_UPGRADES_OBIWAN_JUMPING_04]Jumping Double Crescent|FAST,FAST,BACK,+,STRONG|2|
+[IDS_UPGRADES_OBIWAN_JUMPING_05]Vault Attack|JUMP,+,KILL|3|
+[IDS_UPGRADES_OBIWAN_JUMPING_06]Soaring Back Kick|RUN,+,JUMP,STRONG|3|
+
+###GRAPPLES
+[IDS_UPGRADES_ANAKIN_GRAPPLE_01]Grab Opponent|FAST,+,STRONG|1|
+[IDS_UPGRADES_ANAKIN_GRAPPLE_02]Grapple Judo|FAST,+,STRONG,STRONG|2|
+[IDS_UPGRADES_ANAKIN_GRAPPLE_03]Grapple Kick|FAST,+,STRONG,FAST|2|
+[IDS_UPGRADES_ANAKIN_GRAPPLE_04]Grapple Throwdown|FAST,+,STRONG,FAST,FAST|3|
+[IDS_UPGRADES_ANAKIN_GRAPPLE_05]Grapple Punt|FAST,+,STRONG,STRONG,STRONG|3|
+
+[IDS_UPGRADES_OBIWAN_GRAPPLE_01]Grab Opponent|FAST,+,STRONG|1|
+[IDS_UPGRADES_OBIWAN_GRAPPLE_02]Grapple Punch|FAST,+,STRONG,STRONG|2|
+[IDS_UPGRADES_OBIWAN_GRAPPLE_03]Grapple Kick|FAST,+,STRONG,FAST|2|
+[IDS_UPGRADES_OBIWAN_GRAPPLE_04]Grapple Judo|FAST,+,STRONG,STRONG,STRONG|3|
+[IDS_UPGRADES_OBIWAN_GRAPPLE_05]Grapple Throwdown|FAST,+,STRONG,FAST,FAST|3|
+
+###DASH ATTACKS
+[IDS_UPGRADES_ANAKIN_LUNGES_01]Launcher Slash (at end of a combo)|BACK,+,STRONG|1|
+[IDS_UPGRADES_ANAKIN_LUNGES_02]Critical Sweeping Lunge|RUN,+,(HOLD),KILL|2|
+[IDS_UPGRADES_ANAKIN_LUNGES_03]Dashing Uppercut|RUN,RUN,+,FAST|2|
+[IDS_UPGRADES_ANAKIN_LUNGES_04]Fury Corkscrew|(HOLD),RUN,+,FAST|3|
+[IDS_UPGRADES_ANAKIN_LUNGES_05]Dashing Lunge|RUN,RUN,+,STRONG|3|
+
+[IDS_UPGRADES_OBIWAN_LUNGES_01]Launcher Slash (at end of a combo)|BACK,+,STRONG|1|
+[IDS_UPGRADES_OBIWAN_LUNGES_02]Critical Sweeping Lunge|RUN,+,(HOLD),KILL|2|
+[IDS_UPGRADES_OBIWAN_LUNGES_03]Dashing Uppercut|RUN,RUN,+,FAST|2|
+[IDS_UPGRADES_OBIWAN_LUNGES_04]Focus Lunge Strike|(HOLD),RUN,+,FAST|3|
+[IDS_UPGRADES_OBIWAN_LUNGES_05]Dashing Lunge|RUN,RUN,+,STRONG|3|
+
+###AREA ATTACKS
+[IDS_UPGRADES_ANAKIN_CLEARING_01]Jumping Sai Smash|JUMP,STRONG|1|
+[IDS_UPGRADES_ANAKIN_CLEARING_02]Clearing Sweep (at end of combo)|FAST,+,STRONG|2|
+[IDS_UPGRADES_ANAKIN_CLEARING_03]Fury Whirlwind|(HOLD),RUN,+,STRONG|2|
+[IDS_UPGRADES_ANAKIN_CLEARING_04]Fury Explosion|(HOLD),STRONG|2|
+[IDS_UPGRADES_ANAKIN_CLEARING_05]Fury Sai Bomb|JUMP,(HOLD),STRONG|3|
+
+[IDS_UPGRADES_OBIWAN_CLEARING_01]Jumping Sai Smash|JUMP,STRONG|1|
+[IDS_UPGRADES_OBIWAN_CLEARING_02]Palm Shock (at end of combo)|FAST,+,STRONG|2|
+[IDS_UPGRADES_OBIWAN_CLEARING_03]Focus Shockwave|(HOLD),RUN,+,STRONG|2|
+[IDS_UPGRADES_OBIWAN_CLEARING_04]Focus Slash Combo|(HOLD),STRONG|3|
+[IDS_UPGRADES_OBIWAN_CLEARING_05]Focus Sai Bomb|JUMP,(HOLD),STRONG|3|
+
+###CRITICAL ATTACKS
+[IDS_UPGRADES_ANAKIN_CRITICAL_01]Critical Strike|KILL|1|
+[IDS_UPGRADES_ANAKIN_CRITICAL_02]Critical Choke Impale|KILL,KILL|2|
+[IDS_UPGRADES_ANAKIN_CRITICAL_03]Force Impale (close range)|(HOLD),GRASP,KILL|2|
+[IDS_UPGRADES_ANAKIN_CRITICAL_04]Critical Trip Lunge|(HOLD),KILL|3|
+[IDS_UPGRADES_ANAKIN_CRITICAL_05]Force Stab (long range)|(HOLD),GRASP,KILL|3|
+
+[IDS_UPGRADES_OBIWAN_CRITICAL_01]Critical Strike|KILL|1|
+[IDS_UPGRADES_OBIWAN_CRITICAL_02]Critical Arm Slice|KILL,KILL|2|
+[IDS_UPGRADES_OBIWAN_CRITICAL_03]Saber Impale (close range)|(HOLD),GRASP,KILL|2|
+[IDS_UPGRADES_OBIWAN_CRITICAL_04]Critical Sweep|(HOLD),KILL|3|
+[IDS_UPGRADES_OBIWAN_CRITICAL_05]Neck Strike (long range)|(HOLD),GRASP,KILL|3|
+
+### Multiplayer Combat Charts
+[IDS_SPECIAL_ATTACKS]Special Attacks
+#ANAKIN
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_11]Force Lightning|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_SPECIAL_01]Fury Whirlwind|(HOLD),RUN,+,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_SPECIAL_02]Fury Explosion|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_SPECIAL_03]Fury Corkscrew|(HOLD),RUN,+,FAST|1|
+[IDS_MULTIPLAYER_COMBAT_ANAKIN_SPECIAL_04]Fury Sai Bomb|JUMP,(HOLD),STRONG|1|
+
+#OBI-WAN
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_SPECIAL_01]Focus Shockwave|(HOLD),RUN,+,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_SPECIAL_02]Focus Slash Combo|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_SPECIAL_03]Focus Lunge Strike|(HOLD),RUN,+,FAST|1|
+[IDS_MULTIPLAYER_COMBAT_OBIWAN_SPECIAL_04]Focus Sai Bomb|JUMP,(HOLD),STRONG|1|
+
+#GENERAL GRIEVOUS
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_07_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_07_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_BASIC_08]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_SPECIAL_01]Force Clear Out|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_SPECIAL_02]Four Arm Mode|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_SPECIAL_03]Fire Blaster (hold to charge)|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_GRIEVOUS_SPECIAL_04]3 Variation Charge-up|LIGHTNING|1|
+
+#MACE WINDU
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_SPECIAL_01]Force Clear Out|(HOLD),FAST|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_SPECIAL_02]Force Charge|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_SPECIAL_03]Back Kick Flip|FAST,+,STRONG,FAST|1|
+[IDS_MULTIPLAYER_COMBAT_MACE_SPECIAL_04]Launching Uppercut|FAST,FAST,RUN,+,STRONG|1|
+
+#OLD OBI-WAN
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_SPECIAL_01]Saber Bump|FAST,+,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_SPECIAL_02]Force Shockwave|(HOLD),RUN,+,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_SPECIAL_03]Clearing Slam|FAST,FAST,STRONG,+,FAST|1|
+[IDS_MULTIPLAYER_COMBAT_OLDOBIWAN_SPECIAL_04]Force Submission|(HOLD),BLOCK,KILL,+,FAST|1|
+
+#DARTH VADER
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_11]Force Lightning|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_SPECIAL_01]Force Choke|FAST,+,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_SPECIAL_02]Fury Slam|(HOLD),RUN,+,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_SPECIAL_03]clearing Spin|FAST,FAST,STRONG,+,FAST|1|
+[IDS_MULTIPLAYER_COMBAT_VADER_SPECIAL_04]Backhand Lunge|(HOLD),RUN,+,KILL|1|
+
+#sERRA KETO
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_SPECIAL_01]Dual Saber Toss|(HOLD),FAST|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_SPECIAL_02]Force Spiral|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_SPECIAL_03]Kick Flip Launch|FAST,+,STRONG,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_SERRA_SPECIAL_04]Clearing Slam|FAST,FAST,STRONG,+,FAST|1|
+
+#CIN DRALLIG
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_11]Force Stun|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_SPECIAL_01]1000 Slashes|(HOLD),FAST|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_SPECIAL_02]Double Force Blast|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_SPECIAL_03]Clearing Slam (at end of combo)|STRONG,+,FAST|1|
+[IDS_MULTIPLAYER_COMBAT_CINDRALLIG_SPECIAL_04]Five Point Strike|FAST,+,STRONG,FAST|1|
+
+#COUNT DOOKU
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_01]Run|RUN|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_02]Jump|JUMP|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_03]Fast Slash|FAST|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_04]Strong Slash|STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_05]Critical Strike|KILL|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_06]Block|BLOCK|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_07]Saber Throw|THROW|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_08]Force Push / Grasp|GRASP|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_09_PS2]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_09_XBOX]Target Select|RSTICK,ARROW|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_10]Strafe|(HOLD),BLOCK,+,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_11]Force Lightning|LIGHTNING|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_12_XBOX]Force Heal|(CLICK),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_12_PS2]Force Heal|(HOLD),HEAL1,+,HEAL2|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_BASIC_13]Force Speed|RUN,RUN|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_SPECIAL_01]Force Lightning Explosion|(HOLD),STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_SPECIAL_02]Whirlwind Strike|(HOLD),FAST|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_SPECIAL_03]Electric Toss|FAST,+,STRONG,STRONG|1|
+[IDS_MULTIPLAYER_COMBAT_DOOKU_SPECIAL_04]Clearing Spin|FAST,FAST,STRONG,+,FAST|1|
+
+
+
+########################
+### END TRANSLATION
+########################

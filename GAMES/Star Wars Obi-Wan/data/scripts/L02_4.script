@@ -1,0 +1,825 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_17.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+AddMusic m_suspense_19.wav Suspense
+
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_06.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_l01_8_cs_02.wav Tension
+
+AddMusic m_tension_01.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle_06.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_tension_13.wav Battle
+
+AddBattleLoop m_battle_09_lp.wav m_battle_09_win.wav m_battle_09_lose.wav
+AddBattleLoop m_battle_12_lp.wav m_battle_12_win.wav m_battle_12_lose.wav
+AddBattleLoop m_saberArena_03_lp.wav m_saberArena_03_end.wav m_saberArena_03_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 10 20
+
+ConsoleCommand "r_rainbubbles 2.2"
+
+//Actor  PloKoon A_z_ubergen_01
+//Actor  EethKoth A_z_ubergen_02
+
+//FadeUp
+LoadDLG Qui-Gon.dlg
+SetDefaultSurface 09_door_c.sur
+SetForceUsesNeeded 20
+SetTimeToBeat 5 45
+
+TriggerUberGenAndWait A_z_ubergen_01 PloKoon
+TriggerUberGenAndWait A_z_ubergen_02 EethKoth
+SetTeam  PloKoon 2
+SetTeam  EethKoth 2
+InvincibilityOn A_Qui-Gon_01
+InvincibilityOn PloKoon
+InvincibilityOn EethKoth
+SetMissionCritical A_Qui-Gon_01
+SetMissionCritical PloKoon
+SetMissionCritical EethKoth
+TakeControlOf A_Qui-Gon_01
+TakeControlOf PloKoon
+TakeControlOf EethKoth
+
+//ConsoleCommand "r_fogstart 0.9"
+SetFarClip  125
+SetExplorationNum 4
+ConsoleCommand "r_fog 0"
+SkyDomeOff
+
+Float  ProximityLeft 0
+Float  ProximityRight 0
+
+Nudge Obi A_08_ff_box_02
+Nudge Obi A_08_ff_box_01
+
+ParticleGenOff A_cortosisVaporRising_y_01
+ParticleGenOff A_cortosisVaporRising_y_02
+ParticleGenOff A_cortosisVaporRising_y_03
+ParticleGenOff A_cortosisVaporRising_y_04
+ParticleGenOff A_cortosisVaporRising_y_05
+ParticleGenOff A_cortosisVaporRising_y_06  
+
+Script "Fog Box"
+{
+   if(IsInRegion Obi region_fogbox01)
+   {
+       if (IsOpen A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }
+   }
+   if(IsInRegion Obi region_fogbox01)
+   {
+       if (IsClosed A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }
+   }
+   if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsOpen A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }
+   }    
+   if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsOpening A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }    
+   }
+      if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsClosing A_mine_bigdoor01_01)
+       {
+       SkydomeOn  
+       }    
+   }
+   if(IsNotInRegion Obi region_fogbox01)
+   {
+       if (IsClosed A_mine_bigdoor01_01)
+       {
+       SkydomeOff  
+       }
+   }
+   Loop
+}
+
+Script "Fan sounds"
+{
+	WaitUntilExitedRegion Obi region_ambient_mine_old
+	SetRegionSoundVolume region_ambient_mine_old -100 0.1
+	WaitUntilEnteredRegion Obi region_ambient_mine_old
+	SetRegionSoundVolume region_ambient_mine_old 0 0.1
+	Loop
+}	
+
+LockDoor A_mine_door01_03
+LockDoor A_mine_door01_10  
+LockDoor A_mine_door01_11  
+LockDoor A_mine_door01_12
+LockDoor A_mine_door01_13     
+
+///Work Events////
+
+///in the old mine
+Actor id1 A_id2_01 
+AddWorkEvent id1 id1_01
+AddWorkEvent id1 id1_02
+AddWorkEvent id1 id1_03
+
+///in the control room
+Actor id2 A_id2_02 
+AddWorkEvent id2 id2_01
+AddWorkEvent id2 id2_02
+AddWorkEvent id2 id2_03
+
+///in the elevator hall
+Actor id3 A_id2_03 
+AddWorkEvent id3 id3_01
+AddWorkEvent id3 id3_02
+AddWorkEvent id3 id3_03
+
+///in the control room
+Actor id4 A_id2_04 
+AddWorkEvent id4 id4_01
+AddWorkEvent id4 id4_02
+AddWorkEvent id4 id4_03
+///End Work Events///
+
+//Enemy Functions//
+
+Function  "HurtEnemy" (actor Hurt, actor Attacker)
+{
+    WaitUntilDamaged Hurt
+    ForceTarget Attacker obi
+}
+
+Function  "HurtEnemyNode" (actor Hurt, actor Attacker, node runtohere)
+{
+    WaitUntilDamaged  Hurt 
+    TakePartialControlOf Attacker
+    RunToNode Attacker runtohere
+}
+
+Function  "RunAttackNode" (actor Attacker, node runtohere)
+{
+    TakePartialControlOf Attacker
+    RunToNode Attacker runtohere
+    ForceTarget Attacker obi
+}
+
+Function  "KilledEnemy" (actor Dead, actor Angry)
+{
+    WaitUntilKilled  Dead 
+    ForceTarget Angry obi
+}
+
+Function  "KilledEnemyNode" (actor Dead, actor Angry, node runtohere)
+{
+    WaitUntilKilled  Dead 
+    TakePartialControlOf Angry
+    RunToNode Angry runtohere
+}
+
+Function "FollowBuddy" (Actor Leader, Actor  Follower, Int  Distance, Int  Angle)
+{
+	AddPatrolState Leader
+    SetIdleAttentionSpan Leader 1
+    FollowStateDirectional Follower Leader Distance Angle
+}
+
+Function "MeleeAmbush" (Node TooClose, Actor Ambush)
+{
+   float NodeProximity 0
+   DistanceBetweenActorAndNode Obi TooClose NodeProximity
+   if (<= NodeProximity 20)
+   {
+      ForceTarget Ambush Obi
+   }
+   loop
+}
+
+Function "RunToNode" (actor Attacker, node runtohere)
+{
+   If (IsAlive Attacker)
+   {
+      TakePartialControlOf Attacker .35 false
+      RunToNodeAndWait Attacker runtohere
+      Pause 1  // Call this at most once every second
+   }
+   else
+   {
+      EndFunction
+   }
+}
+
+Function  "Patrol" (actor Patroller)
+{
+    AddPatrolState Patroller
+    SetIdleAttentionSpan Patroller 1
+}
+
+////////////////////
+// Respawn Points //
+////////////////////
+
+////deleted
+
+////Save Points
+
+Script "SavePoint1"
+{
+   WaitUntilEnteredRegion Obi DoorTrigger08
+   RemoveGroup 1
+   SetStartPosition 1
+   Save
+}
+
+Script "SavePoint2"
+{
+   WaitUntilEnteredRegion Obi region_elev_base
+   RemoveGroup 1
+   RemoveGroup 2
+   SetStartPosition 2
+   Save
+}
+
+Script "SavePoint3"
+{
+   WaitUntilEnteredRegion Obi DoorTrigger01
+   RemoveGroup 1
+   RemoveGroup 2
+   RemoveGroup 3
+   SetStartPosition 3
+   Save
+}
+
+Script "SavePoint4"
+{
+   WaitUntilEnteredRegion Obi region_bigdoor_trigger01
+   RemoveGroup 1
+   RemoveGroup 2
+   RemoveGroup 3
+   SetStartPosition 4
+   Save
+}
+
+Script "SavePoint Force Field Off"
+{
+    if (= StartPosition 4)
+    {
+        Nudge Obi A_08_ff_box_03
+    }
+} 
+
+///// Exploration Markers
+function "ExplorationMarkerRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+}
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_01, 21)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_02, 22)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_03, 23)
+call ExplorationMarkerRemoval (A_powerupexplorationmarker_04, 24)
+
+////////////////////////////////////////////////
+Script "Mission Objectives First Time Only" 32
+{
+	MissionTitle "/Mission12Title/Escape!"
+	MissionObjective 1 "/Mission12Objective1/Escape from the mine."
+	RemoveGroup 32
+	Save
+}
+
+Script "Opening Cutscene" 31
+{
+	BeginCutScene
+
+	Int exitedEarly 1
+	PlayFlourish cut_2_4intro_m.wav
+
+	FadeUp
+	camerafixed camera1
+	CommunicatorMessage "/Qui-Gon_350/Get to the surface Obi-Wan! I sense the Jin'ha tire of our investigations."
+	Pause 7.0
+    	CommunicatorOff
+    
+    	PlayGesture Obi PushButton   
+    	// Nudge Obi A_2-3_core_02
+    Pause 0.5
+    PlayAudioCue A_2-3_core_02 PointSoundOneshot_02 //Only change I made
+    RemoveActor A_2-3_core_02
+    Pause 3.0
+	cameraoff
+
+    DisableAudioFades
+
+	 Set exitedEarly 0
+    
+	//Commands to execute if player exits cutscene early
+    PreEndCutscene
+    FadeUp
+	 EnableAudioFades
+	
+	if (= exitedEarly 1)
+	{
+		StopMusic  // Stop the intro music
+	}
+
+	StartMusicManager
+
+	StopTalking A_Qui-Gon_01
+	RemoveActor A_2-3_core_02
+
+	EndCutScene
+
+    RemoveGroup 31
+    Save
+	TakeControlOf  A_jin'ha-rod_01
+    RunToNodeAndWait A_jin'ha-rod_01 strike01
+    RunToNodeAndWait A_jin'ha-rod_01 strike05
+    ReturnControlTo A_jin'ha-rod_01
+    //ForceTarget A_jin'ha-rod_01 obi 
+    //Call FollowBuddy (A_jin'ha-rod_01, A_jin'ha-rod_02, 2.0, 90)
+    //Call  HurtEnemyNode (A_jin'ha-rod_01, A_jin'ha-rod_03, strike02)
+    //Call  HurtEnemyNode (A_jin'ha-rod_02, A_jin'ha-rod_04, strike22)
+}
+
+Script "Alternate Opening"
+{
+   if (IsGroupRemoved 31)
+   {
+      FadeUp
+      StartMusicManager
+   }
+}
+
+
+
+Script "ForceField On"
+{
+    WaitUntilEnteredRegion obi region_ff_clear01
+    Nudge A_jin'ha-rod_02 A_08_ff_box_01
+    TakePartialControlOf  A_jin'ha-rod_02
+    RunToNode A_jin'ha-rod_02 strike01
+    RunToNode A_jin'ha-rod_02 strike05
+    // Call  MeleeAmbush (strike01, A_jin'ha-rod_03)
+    // Call  MeleeAmbush (strike01, A_jin'ha-rod_04)
+    Call  MeleeAmbush (strike02, A_jin'ha-rod_03)
+    Call  MeleeAmbush (strike02, A_jin'ha-rod_04)
+}
+
+Script "Zone 8 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger09
+    ForceTarget A_jin'ha-blaster_07 obi
+	TakePartialControlOf A_jin'ha-dagger_11
+    RunToNode A_jin'ha-dagger_11 dagger11
+    Call FollowBuddy (A_jin'ha-dagger_11, A_jin'ha-dagger_12, 3.0, 90)
+    Call  KilledEnemy (A_jin'ha-dagger_11, A_jin'ha-dagger_13)
+    Call  KilledEnemy (A_jin'ha-dagger_12, A_jin'ha-dagger_13)
+    Call  KilledEnemy (A_jin'ha-blaster_07, A_jin'ha-dagger_13)
+    Call FollowBuddy (A_jin'ha-dagger_13, A_jin'ha-dagger_16, 3.0, 90)
+    Call  KilledEnemy (A_jin'ha-dagger_16, A_jin'ha-mace_08)
+    Call  HurtEnemyNode (A_jin'ha-mace_08, A_jin'ha-mace_10, help_me1)
+    Call  HurtEnemyNode (A_jin'ha-mace_10, A_jin'ha-blaster_13, blaster13)
+    Call  HurtEnemyNode (A_jin'ha-blaster_13, A_jin'ha-rod_05, strike04)
+    Call  HurtEnemyNode (A_jin'ha-mace_10, A_jin'ha-rod_02, strike04)
+    Call FollowBuddy (A_jin'ha-rod_05, A_jin'ha-rod_06, 2.0, 270)
+    Call FollowBuddy (A_jin'ha-rod_02, A_jin'ha-rod_01, 3.0, 180)      
+}
+
+// MoveElevatorToFloor A_2_03_mine_elev01_01 1
+// MoveElevatorToFloor A_2_03_mine_elev01_02 1
+// MoveElevatorToFloor A_2_03_mine_elev01_03 1
+// MoveElevatorToFloor A_2_03_mine_elev01_04 1
+
+moveelevatortofloorinstantly A_2_03_mine_elev01_01 1
+moveelevatortofloorinstantly A_2_03_mine_elev01_02 1
+moveelevatortofloorinstantly A_2_03_mine_elev01_03 1
+moveelevatortofloorinstantly A_2_03_mine_elev01_04 1
+
+Script "Old Mine / Zone 7 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger08
+    ForceTarget  A_jin'ha-blaster_08 obi
+    ForceTarget  A_jin'ha-rod_07 obi
+    ForceTarget  A_jin'ha-rod_08 obi
+    Call Patrol (A_jin'ha-sword_09)
+    Call  KilledEnemy (A_jin'ha-blaster_08, A_jin'ha-sword_09)
+    Call  KilledEnemy (A_jin'ha-sword_09, A_jin'ha-blaster_05)
+    Call  KilledEnemyNode (A_jin'ha-concussion_01, A_jin'ha-dagger_14, strike06)
+    Call  KilledEnemyNode (A_jin'ha-concussion_01, A_jin'ha-dagger_15, strike06)
+    TakePartialControlOf A_jin'ha-sniper_01
+    RunToNode A_jin'ha-sniper_01 strike06
+    ForceTarget A_jin'ha-sniper_01 obi
+}
+
+int switch1Hit 0
+int switch2Hit 0
+
+Script "Change fansounds"
+{	
+	WaitUntilExitedRegion Obi region_ambient_mine_old
+	if (= switch1Hit 1)
+	{
+		Nudge obi A_td_pedestalswitch_01
+	}
+	if (= switch2Hit 1)
+	{
+		Nudge obi A_td_pedestalswitch_02
+	}
+	Loop	
+}
+
+Script " Cortosis Effects Switch 1"
+{
+	WaitUntilNudgedBy A_td_pedestalswitch_01 obi
+	set switch1Hit 1
+    ParticleGenOn A_cortosisVaporRising_y_01
+    ParticleGenOn A_cortosisVaporRising_y_02
+    ParticleGenOn A_cortosisVaporRising_y_03
+    WaitUntilNudgedBy A_td_pedestalswitch_01 obi
+	set switch1Hit 0
+    ParticleGenOff A_cortosisVaporRising_y_01
+    ParticleGenOff A_cortosisVaporRising_y_02
+    ParticleGenOff A_cortosisVaporRising_y_03
+    Loop
+}
+
+Script " Cortosis Effects Switch 2"
+{
+    WaitUntilNudgedBy A_td_pedestalswitch_02 obi
+	set switch2Hit 1
+    ParticleGenOn A_cortosisVaporRising_y_04
+    ParticleGenOn A_cortosisVaporRising_y_05
+    ParticleGenOn A_cortosisVaporRising_y_06
+    WaitUntilNudgedBy A_td_pedestalswitch_02 obi
+	set switch2Hit 0
+    ParticleGenOff A_cortosisVaporRising_y_04
+    ParticleGenOff A_cortosisVaporRising_y_05
+    ParticleGenOff A_cortosisVaporRising_y_06
+    Loop
+}
+
+Script "Zone 6 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger07
+    Call RunAttackNode (A_jin'ha-blaster_06, blaster06)
+    Call Patrol (A_jin'ha-mace_07)
+    Call Patrol (A_jin'ha-mace_06)
+    Call Patrol (A_jin'ha-mace_04)
+    Call Patrol (A_jin'ha-mace_03)
+    Call Patrol (A_jin'ha-mace_09)
+    Call Patrol (A_jin'ha-mace_05)
+    Call Patrol (A_jin'ha-dagger_09)
+    ForceTarget A_jin'ha-rod_10 obi
+    ////////
+    Call  HurtEnemyNode (A_jin'ha-mace_07, A_jin'ha-mace_06, help_me2)
+    Call  KilledEnemy (A_jin'ha-mace_06, A_jin'ha-blaster_09)
+    Call  HurtEnemyNode (A_jin'ha-blaster_09, A_jin'ha-concussion_04, conc04)
+    Call  HurtEnemyNode (A_jin'ha-concussion_04, A_jin'ha-concussion_03, conc03)
+    Call  KilledEnemy (A_jin'ha-concussion_03, A_jin'ha-blaster_03)
+    // WaitUntilDamagedBy A_jin'ha-blaster_03 obi
+    Script "Left 6 1"
+    {
+	WaitUntilEnteredRegion obi region_trigger_left
+        ForceTarget A_jin'ha-mace_03 obi
+        Call  HurtEnemy (A_jin'ha-mace_03, A_jin'ha-mace_04)
+        Call  KilledEnemy (A_jin'ha-mace_04, A_jin'ha-blaster_10)
+        Call  KilledEnemy (A_jin'ha-mace_03, A_jin'ha-dagger_09)
+        Call  RunAttackNode (A_jin'ha-rod_13, goneleft)
+        //Call  RunAttackNode (A_jin'ha-rod_14, goneleft)
+   }
+   Script "Right 6 1" 
+   {
+        WaitUntilEnteredRegion obi region_trigger_right
+	ForceTarget A_jin'ha-mace_09 obi
+        Call  HurtEnemy (A_jin'ha-mace_09, A_jin'ha-mace_05)
+        Call  KilledEnemy (A_jin'ha-mace_09, A_jin'ha-dagger_10)
+        Call  RunAttackNode (A_jin'ha-rod_13, goneright)
+        //Call  RunAttackNode (A_jin'ha-rod_14, goneright)
+    } 
+}
+
+Script "Elevator Hall / Zone 4 Patrol 1"
+{
+    WaitUntilEnteredRegion Obi region_elev_base
+    //Call Patrol (A_jin'ha-sword_08)
+    Call Patrol (A_jin'ha-sword_07)
+    /*
+    WakeUp A_jin'ha-rod_17
+    WakeUp A_jin'ha-rod_18
+    WakeUp A_jin'ha-rod_19
+    WakeUp A_jin'ha-rod_20
+    WakeUp A_jin'ha-sword_08
+    // MoveElevatorToFloor A_2_03_mine_elev01_01 0
+    // Pause  1.0
+    
+    ForceTarget A_jin'ha-rod_17 obi
+    ForceTarget A_jin'ha-rod_18 obi
+    ForceTarget A_jin'ha-rod_19 obi
+    ForceTarget A_jin'ha-rod_20 obi
+    ForceTarget A_jin'ha-sword_08 obi
+    Pause 3.0
+    MoveElevatorToFloor A_2_03_mine_elev01_01 0
+    Pause 0.5
+    MoveElevatorToFloor A_2_03_mine_elev01_02 0
+    Pause 1.0
+    MoveElevatorToFloor A_2_03_mine_elev01_03 0
+    Pause 5.0
+    MoveElevatorToFloor A_2_03_mine_elev01_04 0
+    */
+    // MoveElevatorToFloor A_2_03_mine_elev01_02 0
+    // Pause  7.0
+    // MoveElevatorToFloor A_2_03_mine_elev01_03 0
+    // Pause  3.0
+    // MoveElevatorToFloor A_2_03_mine_elev01_04 0
+}
+
+Script "Elevator Hall / Zone 4 Patrol 2"
+{
+	WaitUntilEnteredRegion Obi region_elev_top
+    Call RunAttackNode (A_jin'ha-rod_11, strike10)
+    Call RunAttackNode (A_jin'ha-rod_12, strike10)
+    Call  KilledEnemy(A_jin'ha-rod_11, A_jin'ha-dagger_03)
+    Call  KilledEnemy(A_jin'ha-rod_12, A_jin'ha-dagger_04)     
+}
+
+Script "Zone 3 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger02
+	TakePartialControlOf A_jin'ha-dagger_04
+	TakePartialControlOf A_jin'ha-dagger_03
+    RunToNode A_jin'ha-dagger_04 dagger04
+    RunToNode A_jin'ha-dagger_03 dagger03
+    Call Patrol (A_jin'ha-mace_01)
+    Call Patrol (A_jin'ha-mace_02)
+    Call  HurtEnemy (A_jin'ha-dagger_03, A_jin'ha-mace_01)   
+    Call  HurtEnemy (A_jin'ha-dagger_04, A_jin'ha-mace_02)
+    Call  HurtEnemy (A_jin'ha-dagger_03, A_jin'ha-dagger_08)
+    Call  HurtEnemy (A_jin'ha-dagger_08, A_jin'ha-dagger_07)
+    Call  KilledEnemyNode(A_jin'ha-dagger_07, A_jin'ha-sword_04, strike12)
+    Call  KilledEnemyNode(A_jin'ha-mace_01, A_jin'ha-rod_15, strike11)
+    Call  KilledEnemyNode(A_jin'ha-mace_02, A_jin'ha-rod_16, strike11)     
+}
+
+Script "Entrance Hall / Zone 2 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger01
+    ForceTarget  A_jin'ha-sword_05 obi
+    ForceTarget  A_jin'ha-sniper_02 obi
+    Call  KilledEnemy (A_jin'ha-sword_05, A_jin'ha-dagger_05)
+    Call  HurtEnemy (A_jin'ha-dagger_05, A_jin'ha-dagger_06)
+}
+
+Script "Control Room / Zone 10 Patrol 1"
+{
+	WaitUntilEnteredRegion Obi DoorTrigger05
+    ForceTarget A_jin'ha-blaster_12 obi
+    Call Patrol (A_jin'ha-blaster_02)
+    Call Patrol(A_jin'ha-blaster_04)
+    Call RunAttackNode (A_jin'ha-blaster_14, strike14)
+    Call  HurtEnemy (A_jin'ha-blaster_12, A_jin'ha-blaster_02)
+}
+
+Script "The Force-Field is Down"
+{
+    WaitUntilNudgedBy A_08_ff_box_03 obi
+    SayLineNonPositional Obi "/Obi-Wan_1155/Master, I've cleared the Force-Field."
+	Pause 1.0
+    SayLineNonPositional A_Qui-Gon_01 "/Qui-Gon_1156/We are on our Way."
+	Pause 1.0
+    SayLineNonPositional Obi "/Obi-Wan_1157/Not a moment too soon."
+	Pause 1.0		
+}
+
+Script "Fog Set"
+{
+    WaitUntilEnteredRegion Obi region_bigdoor_trigger02
+    //ConsoleCommand "r_fogstart 0.9"
+}
+
+Script "Exterior Battle / Zone 1 Patrol 1"
+{
+    WaitUntilEnteredRegion Obi region_bigdoor_trigger01
+    
+    // ReturnControlTo EethKoth
+    // ReturnControlTo PloKoon
+    // ReturnControlTo A_Qui-Gon_01
+
+    StopMusicManager
+    PlayBattleLoop  m_battle_12_lp.wav  cut_2_4extro_m.wav  m_battle_12_lose.wav
+
+    //ConsoleCommand "r_fogstart 0.001"
+    ForceTarget A_jin'ha-sword_06 obi
+    ForceTarget A_jin'ha-sword_01 obi
+    Call FollowBuddy (A_jin'ha-sword_03, A_jin'ha-dagger_02, 2, 90)
+    Call FollowBuddy (A_jin'ha-sword_02, A_jin'ha-dagger_01, 3, 180)
+    TakePartialControlOf A_jin'ha-concussion_02
+    RunToNode A_jin'ha-concussion_02 plo_end01
+    // TakeControlOf A_Qui-Gon_01
+    // TakeControlOf PloKoon
+    // TakeControlOf EethKoth
+    // TakePartialControlOf EethKoth
+    // TakePartialControlOf PloKoon
+    // TakePartialControlOf A_Qui-Gon_01
+    RunToNode EethKoth eethkoth01
+    RunToNode PloKoon plokoon01
+    RunToNode A_Qui-Gon_01 quigon01
+   
+    /////follow up - teleported guys
+    TakeControlOf A_jin'ha-mace_11
+    Teleport A_jin'ha-mace_11 endguy1
+    RunToNode A_jin'ha-mace_11 tempnode01
+    
+    TakeControlOf A_jin'ha-mace_12
+    Teleport A_jin'ha-mace_12 endguy2
+    RunToNode A_jin'ha-mace_12 eethkoth01
+    
+    TakeControlOf A_jin'ha-mace_13
+    Teleport A_jin'ha-mace_13 endguy3
+    RunToNode A_jin'ha-mace_13 plokoon01
+    
+    TakeControlOf A_jin'ha-mace_14
+    Teleport A_jin'ha-mace_14 endguy4
+    RunToNode A_jin'ha-mace_14 quigon01
+    
+    
+    
+    /////
+    
+    ////rush outside if alive
+    Call  RunToNode (A_jin'ha-sword_04, quigon01)
+    Call  RunToNode (A_jin'ha-sword_05, plokoon01)
+    Call  RunToNode  (A_jin'ha-dagger_05, eethkoth01)
+    Call  RunToNode  (A_jin'ha-dagger_06, tempnode01)
+    Call  RunToNode  (A_jin'ha-blaster_01, plokoon01)
+    Call  RunToNode  (A_jin'ha-blaster_02, quigon01)
+    Call  RunToNode  (A_jin'ha-blaster_04, plokoon01)
+    Call  RunToNode (A_jin'ha-blaster_12, tempnode01)
+    Call  RunToNode  (A_jin'ha-blaster_14, quigon01)
+    Call  RunToNode  (A_jin'ha-sniper_02, plokoon01)
+    Call  RunToNode  (A_jin'ha-bowcaster_02, tempnode01)
+    Call  RunToNode  (A_jin'ha-rod_15, tempnode01)
+    Call  RunToNode  (A_jin'ha-rod_16, eethkoth01)
+    Call  RunToNode  (A_jin'ha-dagger_07, plokoon01)
+    Call  RunToNode  (A_jin'ha-dagger_08, tempnode01)
+    //Call  RunToNode  (A_jin'ha-mace_01, tempnode01)
+    //Call  RunToNode  (A_jin'ha-mace_02, eethkoth01)
+    ////
+    Pause 4
+    ReturnControlTo A_jin'ha-mace_11
+    ReturnControlTo A_jin'ha-mace_12
+    ReturnControlTo A_jin'ha-mace_13
+    ReturnControlTo A_jin'ha-mace_14
+    Pause 4
+    ReturnControlTo A_Qui-Gon_01
+    ReturnControlTo PloKoon
+    ReturnControlTo EethKoth
+}
+
+Script "QuiGonSpeaks"
+{
+	WaitUntilNear A_Qui-Gon_01 Obi 4
+	Sayline A_Qui-Gon_01 "/Qui-Gon_356/ Need some help Obi-Wan?"
+}
+
+
+
+Script "First Goal Achieved"
+{
+	WaitUntilEnteredRegion Obi region_bigdoor_trigger01
+	WaitUntilExitedRegion Obi region_bigdoor_trigger01
+	MissionObjectiveAchieved 1
+	NewMissionObjective 2 "/Mission12Objective2/Return the evidence to the Jedi Council."
+	Save
+}
+
+Script "Ending Cutscene"
+{
+    //WaitUntilEnteredRegion Obi endlevel01
+    WaitUntilKilled A_jin'ha-concussion_02
+    WaitUntilKilled A_jin'ha-sword_06
+    WaitUntilKilled A_jin'ha-sword_01
+    WaitUntilKilled A_jin'ha-sword_02
+    WaitUntilKilled A_jin'ha-sword_03
+    WaitUntilKilled A_jin'ha-dagger_02
+    WaitUntilKilled A_jin'ha-dagger_01
+    WaitUntilKilled A_jin'ha-mace_11
+    WaitUntilKilled A_jin'ha-mace_12
+    WaitUntilKilled A_jin'ha-mace_13
+    WaitUntilKilled A_jin'ha-mace_14
+    MissionObjectiveAchieved 2
+
+/////moved remove actor location to fade down.
+    
+    DisableAudioFades
+	 Pause 1
+    FadeDownAndWait 1
+	 Pause 1
+
+    ////////
+    RemoveActor A_jin'ha-sword_04
+    RemoveActor A_jin'ha-sword_05
+    RemoveActor A_jin'ha-dagger_05
+    RemoveActor A_jin'ha-dagger_06
+    RemoveActor A_jin'ha-blaster_01
+    RemoveActor A_jin'ha-blaster_02
+    RemoveActor A_jin'ha-blaster_04
+    RemoveActor A_jin'ha-blaster_12
+    RemoveActor A_jin'ha-blaster_14
+    RemoveActor A_jin'ha-sniper_02
+    RemoveActor A_jin'ha-bowcaster_02
+    RemoveActor A_jin'ha-rod_15
+    RemoveActor A_jin'ha-rod_16
+    RemoveActor A_jin'ha-mace_01
+    RemoveActor A_jin'ha-mace_02
+    RemoveActor A_jin'ha-dagger_07
+    RemoveActor A_jin'ha-dagger_08       
+    ////////
+    
+	TakeControlOf A_Qui-Gon_01 
+    TakeControlOf PloKoon
+    TakeControlOf EethKoth
+
+    StopActions A_Qui-Gon_01
+    StopActions PloKoon
+    StopActions EethKoth
+
+    UnEquipWeapon A_Qui-Gon_01 
+    UnEquipWeapon PloKoon
+    UnEquipWeapon EethKoth
+
+    SetAnimTableIndex A_Qui-Gon_01 1
+    SetAnimTableIndex Obi 2
+    PlayAnimation Obi human_cut-obi_l02_4extro.anim 0.1 1.0
+
+    Teleport Obi obi_end01
+    Teleport A_Qui-Gon_01 qui_end01
+    Teleport PloKoon plo_end01
+    Teleport EethKoth eeth_end01
+
+    BeginCutScene
+      
+ 
+    PlayMusic Victory
+
+    CameraFixed  endcam1
+    PlaySound fed_ship_passby_01.wav
+    FadeUp
+	 EnableAudioFades
+
+    ////Play large engine sound here....
+    Pause 2.0
+    PlayAnimation Obi human_cut-obi_l02_4extro.anim 1.0 1.0
+    PlayAnimation A_Qui-Gon_01 human_cut-qui_l02_4extro.anim 1.0 1.0
+    Pause 2.0
+    SayLineNonPositional Obi "/Obi-Wan_366/What was that?"
+    Pause 1.0
+    SayLineNonPositional A_Qui-Gon_01 "/Qui-Gon_367/A Trade Federation gunship."
+    Pause 1.0	
+    SayLineNonPositional Obi "/Obi-Wan_368/Well, what's it doing here?"
+    Pause 1.0
+    SayLineNonPositional A_Qui-Gon_01 "/Qui-Gon_369/I don't know..."
+    Pause 1.0
+    FadeDownAndWait
+    cameraoff
+
+//Commands to execute if player exits cutscene early
+    	PreEndCutscene
+    	FadeDown 0
+	StopTalking A_Qui-Gon_01
+	StopTalking Obi
+
+   	EndCutScene
+	NextLevel cut_jc3
+}

@@ -1,0 +1,240 @@
+Copyright c 2000 LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+
+////////////////////////
+//  Opening Cutscene  //
+////////////////////////
+
+Script "Opening Cutscene"
+{
+	BeginCutScene
+	FadeUp
+	Pause 10.0
+	SayLine Obi "/Obi-WanKenobi_221.06/"
+	Pause 0.5
+	SayLine Obi "/Obi-WanKenobi_221.07/"
+	Pause 1.0
+	SayLine Obi "/Obi-WanKenobi_221.08/"
+	Pause 1.5
+	SayLine Obi "/Obi-WanKenobi_221.09/"
+	Pause 0.5
+	SayLine Obi "/Obi-WanKenobi_221.1/"
+	Pause 0.5
+
+	TriggerUberGen "A_z_UberGen_Kaadu_01"
+	TriggerUberGen "A_z_UberGen_Kaadu_02"
+	TriggerUberGen "A_z_UberGen_Kaadu_03"
+	Pause 1.0
+
+	CreateParticleGen "peko_MTT.GEN" "peko_gen_02" "A_RFP_peko_MTT_02"
+	PlayFlourish "l03_m_intro1.wav"
+	Pause 0.5
+	
+	CreateParticleGen "peko_MTT.GEN" "peko_gen_01" "A_RFP_peko_MTT_01"
+	CreateParticleGen "peko_MTT.GEN" "peko_gen_03" "A_RFP_peko_MTT_03"
+	TriggerUberGen "A_z_UberGen_Nuna01"
+	TriggerUberGen "A_z_UberGen_Nuna02"
+	TriggerUberGen "A_z_UberGen_Nuna03"
+	WalkToNode Obi "Obi_Open"
+	Pause 1.0
+
+	CreateParticleGen "peko_MTT.GEN" "peko_gen_04" "A_RFP_peko_MTT_04"
+	TriggerUberGen "A_z_UberGen_NunaM01"
+	TriggerUberGen "A_z_UberGen_NunaM02"
+	TriggerUberGen "A_z_UberGen_NunaM03"
+	Pause 2.0
+
+	CreateParticleGen "peko_MTT.GEN" "peko_gen_05" "A_RFP_peko_MTT_05"
+	TriggerUberGen "A_z_MTT_Gen_01"
+	TriggerUberGen "A_z_MTT_Gen_02"
+	Pause 2.0
+	// Another MTT?
+	Pause 1.0
+	// Another MTT?
+	Pause 3.0
+
+	//ResetCamera *** Need to set a camera first!
+	EndCutScene 
+
+	Pause 3.0
+	// Start BAD Patrol?
+	TriggerUberGen "A_z_STAP_Gen_01"
+	Pause 15.0
+	TriggerUberGen "A_z_STAP_Gen_01"
+	Pause 30.0
+	TriggerUberGen "A_z_STAP_Gen_05"
+}
+
+
+
+
+////////////////
+//  STAMPEDE  //
+////////////////
+
+
+Function Stampede (Actor uberGen, Node node1, Node node2, Node node3)
+{
+	Actor GeneratedEntity
+	WaitUntilGenerated "A_z_UberGen_Kaadu_01" GeneratedEntity
+	TakeControlOf GeneratedEntity
+	RunToNode GeneratedEntity node3
+	RunToNode GeneratedEntity node2
+	RunToNode GeneratedEntity node1
+	WaitUntilArrived GeneratedEntity node3
+	Kill GeneratedEntity
+}
+
+Call Stampede("A_z_UberGen_Kaadu_01", Stampede_Left_2, Stampede_Left_3I, Convoy_End_Left)
+Call Stampede("A_z_UberGen_Kaadu_02", Stampede_Left_1, Stampede_Left_2I, Convoy_End_Right)
+Call Stampede("A_z_UberGen_Kaadu_03", Stampede_Left_3, Stampede_Left_1I, Convoy_End_Left)
+Call Stampede("A_z_UberGen_Nuna01",	  Stampede_Left_1, Stampede_Left_2I, Convoy_End_Left)
+Call Stampede("A_z_UberGen_Nuna02",   Stampede_Left_2, Stampede_Left_3I, Convoy_End_Right)
+Call Stampede("A_z_UberGen_Nuna03",   Stampede_Left_2, Stampede_Left_3I, Convoy_End_Left)
+Call Stampede("A_z_UberGen_NunaM01",  Stampede_Left_3, Stampede_Left_1I, Convoy_End_Left)
+Call Stampede("A_z_UberGen_NunaM02",  Stampede_Left_3, Stampede_Left_1I, Convoy_End_Right)
+Call Stampede("A_z_UberGen_NunaM03",  Stampede_Left_1, Stampede_Left_2I, Convoy_End_Right)
+
+
+
+
+
+//////////////////
+//  BAD Patrol  //
+//////////////////
+
+Function BadPatrol (Actor uberGen, Node destination)
+{
+	Actor BAD
+	// TriggerUberGen uberGen
+	WaitUntilGenerated uberGen BAD
+
+	TakeControlOf BAD 0.3
+
+	ChildScript
+	{
+		WaitUntilRegainedControl BAD
+		EndFunction
+	}
+
+	WalkToNode BAD destination
+	WalkToNode BAD "Stampede_Left_2I"
+	WalkToNode BAD "Stampede_Left_2"
+	WaitUntilArrived BAD destination
+	Kill BAD
+}
+
+
+Call BadPatrol("A_z_Invasion_Gen_01", Convoy_End_Left)
+Call BadPatrol("A_z_Invasion_Gen_02", Convoy_End_Right)
+Call BadPatrol("A_z_Invasion_Gen_03", Convoy_End_Left)
+Call BadPatrol("A_z_Invasion_Gen_04", Convoy_End_Right)
+
+
+
+
+
+
+
+///////////////////////////
+// Broken Saber Dialogue //
+///////////////////////////
+
+Script "Broken Saber Dialogue"
+{
+	WaitUntilEquippedItem ObiWan EquipObiSaber.dsc 
+	SayLine ObiWan "/Obi-WanKenobi_221.08/"
+	WaitUntilEquippedItem ObiWan EquipObiSaber.dsc
+	SayLine ObiWan "/Obi-WanKenobi_221.09/"
+	WaitUntilEquippedItem ObiWan EquipObiSaber.dsc
+	SayLine ObiWan "/Obi-WanKenobi_221.12/"
+
+	Script
+	{
+		WaitUntilEquippedItem ObiWan EquipObiSaber.dsc
+		SayLine ObiWan "/Obi-WanKenobi_221.11/"
+		Loop
+	}
+}
+	
+
+
+
+////////////////////////
+// BAD Rifle Dialogue //
+////////////////////////
+
+Script "BAD Rifle Dialogue"
+{
+	WaitUntilEquippedItem ObiWan EquipBADBlaster.dsc  // *** Is this right?
+	Pause 1
+	SayLine ObiWan "/Obi-WanKenobi_221.29/"
+	Pause 0.5
+	SayLine ObiWan "/Obi-WanKenobi_221.23/"
+}
+
+
+
+
+///////////////
+// Tea Party //
+///////////////
+
+Script "Tea Party"
+{
+	Actor BADCom "A_BAD_commander_03"
+	Actor BADInf "A_BAD_infantry_21"
+
+	TakeControlOf BADCom 0.3
+	TakeControlOf BADInf 0.3
+
+	ChildScript "Stop talking when something interesting happens"
+	{
+		Child WaitUntilRegainedControl BADCom
+		Child WaitUntilRegainedControl BADInf
+		WaitForAny
+		EndScript "Tea Party"
+	}
+
+	WaitUntilEnteredRegion ObiWan quigon_party
+	Kill "A_BAD_DEAD"
+	Pause 0.5
+	SayLine BADCom "/BattleDroidInfantry1_221.36/"
+	Pause 0.5
+	SayLine BADCom "/BattleDroidInfantry1_221.37/"
+	Pause 0.5
+	SayLine BADCom "/BattleDroidInfantry1_221.38/"
+	Pause 0.75
+	SayLine BADCom "/BattleDroidInfantry1_221.39/"
+	Pause 0.75
+	SayLine BADCom "/BattleDroidInfantry1_221.4/"
+	Pause 1.0
+	SayLine BADCom "/BattleDroidInfantry1_221.41/"
+	Pause 0.75
+	SayLine BADCom "/BattleDroidInfantry1_221.42/"
+	Pause 0.5
+	SayLine BADCom "/BattleDroidInfantry1_221.43/"
+	Pause 0.75
+	SayLine BADCom "/BattleDroidInfantry1_221.44/"
+	Pause 0.75
+	SayLine BADCom "/BattleDroidInfantry1_221.45/"
+	Pause 0.75
+}
+
+
+
+
+////////////////////////
+// BAD Radar Dialogue //
+////////////////////////
+
+Script "BAD Radar Dialogue"
+{
+	WaitUntilEnteredRegion ObiWan "radar_insult"
+	Pause 0.5
+	SayLine ObiWan "/Obi-WanKenobi_221.17/"
+	Pause 0.5
+	SayLine ObiWan "/Obi-WanKenobi_221.18/"
+}

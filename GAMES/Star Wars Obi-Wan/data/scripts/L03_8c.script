@@ -1,0 +1,558 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+RemoveInventoryItem Obi equipbadsniper.dsc
+RemoveInventoryItem Obi equipbadgrenadecon.dsc
+RemoveInventoryItem Obi equipiongrenade.dsc
+RemoveInventoryItem Obi equiptuskengrenade.dsc
+
+
+FadeUp
+
+SetDefaultSurface 08_13fnttop.sur
+
+/// MUSIC ///
+
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddBattleLoop  m_battle_15_lp.wav  cut_3_8cextro_m.WAV  m_battle_15_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+startMusicManager
+
+/// GLOBAL ACTORS ///
+
+actor Queen A_Queen_Amadala_Travel_Outfit_01
+actor Qui A_Qui-Gon_01
+MakeResurrectable Queen
+
+/// GLOBAL VARS ///
+
+int BodyBagCount 0
+int isinArcade 1                /// DETECTS IF OBI HAS LEFT THE ARCADE ///
+int TriggerCommenceMarch 0
+int KillThePlan 0
+
+///////////////////////
+/// BEGIN FUNCTIONS ///
+///////////////////////
+
+function "GenBirds" (actor Birdie, refpos gen_birdie)
+{
+    waituntilnearrefpos obi gen_birdie 0.75
+    CreateParticleGen birds.gen Birdie gen_birdie
+    pause 20.0
+    loop
+}
+
+/// QUI FUNCTIONS ///
+
+function "StrongArm" (actor Gumby, int GumbyDamage)
+{
+    childscript "LoopDaLoop"
+    {
+        waituntildamagedby Gumby Qui
+        deducthitpoints Gumby GumbyDamage
+        loop
+    }
+    
+    waituntilkilled Gumby
+    endfunction
+}
+
+/////////////////////
+/// END FUNCTIONS ///
+/////////////////////
+
+setmissioncritical Qui
+SetStartPosition 0
+
+/// WIN-LOSE CONDITIONS ///
+
+script "YouWin"
+{
+    waituntilequal BodyBagCount 8
+
+    missionobjectiveachieved 1
+    
+    pause 1.0
+    
+    begincutscene
+    
+    AIAudioOff Qui
+    PlayMusic Victory
+
+    childscript "ActionJackson"
+    {
+        unequipweapon Obi
+        
+        unequipweapon Qui
+        follow Qui Obi 1.0
+        waituntilnear Qui obi 3.0
+        stopactions Qui
+        lookat Qui Obi
+    }
+    
+    pause 1.0
+        
+    SaylineNonPositional qui "/Qui-Gon_1283/Good job Obi-Wan!"
+    SaylineNonPositional qui "/Qui-Gon_1284/The queen has been saved and we've secured the area."
+    SaylineNonPositional qui "/Qui-Gon_1285/Let's get out of here!"
+    
+    fadedownandwait
+    endcutscene
+
+    nextlevel L04_3a
+}
+
+script "KillTheQueen"
+{
+    waituntilkilled Queen
+	 EndScript "YouWin"
+    
+    set KillThePlan 1
+    
+    pause 0.5
+    
+    PlayMusic Defeat  // *** REVISIT
+    
+    begincutscene
+    
+    unequipweapon Obi
+	 SetTeam Obi 0
+	 SetTeam Qui 0
+    
+    CameraAttachedTrackHead Queen Queen 0 1.5 1.5
+
+    communicatoron
+    CommunicatorMessageAndWait "/Qui-Gon_530/The queen has been killed.  Our mission here is a failure." quigonjinn.dlg
+    communicatoroff
+
+    fadedownandwait
+    endcutscene
+
+    missionobjectivefailed 1
+    failmission
+}
+
+/// MISC ENVIRONMENT SCRIPTS ///
+
+script "InvincibleForceFields"
+{
+    invincibilityon A_5-5_ff_generator_01
+    invincibilityon A_5-5_ff_generator_02
+    invincibilityon A_5-5_ff_generator_03
+    invincibilityon A_5-5_ff_generator_04
+}
+
+//////////////////
+/// BEGIN MAIN ///
+//////////////////
+
+//////////////////////////////////////////////////
+/// BEGIN CHECKS FOR FINAL COURTYARD ENCOUNTER ///
+//////////////////////////////////////////////////
+
+
+script "JumpingTheGun"
+{
+    child waituntilenteredregion obi RGN_trig_AttackTheQueen01
+    child waituntilenteredregion obi RGN_trig_AttackTheQueen02
+    waitforany
+    set isinArcade 0
+}    
+
+int PrematureAttack 0        /// FLAGS WHETHER OR NOT QUI HAS FINISHED FIGHTING ///
+
+script "PrematureCommenceMarch"
+{
+    waituntilequal isinArcade 0
+    sayline Qui "/Qui-Gon_542/Where are you going?!?"
+    //set TriggerCommenceMarch 1
+    set PrematureAttack 1
+}
+
+/// AUDIO CUES ///
+
+script "AudioCue"
+{
+    waituntilequal isinArcade 0
+	 StopMusicManager
+    PlayMusic BattleLoop
+}
+
+////////////////////////////////////////////////
+/// END CHECKS FOR FINAL COURTYARD ENCOUNTER ///
+////////////////////////////////////////////////
+
+/////////////////////////////
+/// BEGIN FINAL COURTYARD ///
+/////////////////////////////
+
+function "FinalCourtyardKillCounter" (actor BodyBag)
+{
+    waituntilkilled BodyBag
+    increment BodyBagCount 1
+}
+
+actor Maiden1 A_Queen_Handmaiden_Travel_01
+actor Maiden2 A_Queen_Handmaiden_Travel_02
+
+actor Melee01 A_AssassinDroid-Sword_01
+actor Melee02 A_AssassinDroid-Sword_02
+actor Melee03 A_AssassinDroid-Mace_09
+
+actor SecurityLeftFlank01 A_Battledroid-Kamikaze_05
+actor SecurityRightFlank01 A_Battledroid-Kamikaze_06
+actor SecurityLeftFlank02 A_Battledroid-Security_02
+actor SecurityRightFlank02 A_Battledroid-Security_01
+actor SecurityLead A_Battledroid-Security_07
+
+actor Commander01 A_Battledroid-Commander_01
+
+/// SET FUNCTIONS FOR LOCAL KILL COUNTER ///
+
+call FinalCourtyardKillCounter (SecurityLead)
+call FinalCourtyardKillCounter (Melee01)
+call FinalCourtyardKillCounter (Melee02)
+call FinalCourtyardKillCounter (Melee03)
+call FinalCourtyardKillCounter (SecurityLeftFlank01)
+call FinalCourtyardKillCounter (SecurityRightFlank01)
+call FinalCourtyardKillCounter (SecurityLeftFlank02)
+call FinalCourtyardKillCounter (SecurityRightFlank02)
+
+call StrongArm (Melee01, 200)
+call StrongArm (Melee02, 200)
+call StrongArm (Melee03, 150)
+
+setteam Queen 0
+setteam Maiden1 0
+setteam Maiden2 0
+
+function "InitialMeleeBehavior" (Actor MethodMan)
+{
+    takepartialcontrolof MethodMan
+    forcetarget MethodMan Qui
+    waituntilnear MethodMan Obi 5.0
+    forcetargetoff MethodMan
+}
+
+script "QuiSpeaks"
+{
+    actor birds01
+    
+    invincibilityon Qui
+    
+    childscript "AWOL"
+    {
+        waituntilequal isinArcade 0
+        endscript "ThePlan"
+        sayline Qui "/Qui-Gon_543/What are you doing!"
+        sayline Qui "/Qui-Gon_544/You are jeapordizing the mission!"
+    }
+    childscript "PrematureEndingOfThePlan"
+    {
+        waituntilequal KillThePlan 1
+        endscript "ThePlan"
+    }
+    
+    script "ThePlan"
+    {
+        takecontrolof Qui
+        walktonode Qui goto_qui_01
+        pause 1.5
+        sayline Qui "/Qui-Gon_545/Follow me Obi."
+        waituntilarrived Qui goto_qui_01 0.5
+        lookat Qui Obi
+        sayline Qui "/Qui-Gon_548/Here's the plan."
+        sayline Qui "/Qui-Gon_549/Wait for my command."
+        sayline Qui "/Qui-Gon_546/There's a convenient bottleneck here.  The Federation escort will have to pass this way."
+
+        CreateParticleGen birds.gen Birds01 gen_birds01
+        //set TriggerCommenceMarch 1
+        
+        unequipweapon Qui
+        sayline Qui "/Qui-Gon_547/Put away your saber for now.  The noise will attract too much attention."
+        sayline Qui "/Qui-Gon_550/We're outnumbered, but these droids have a weakness.  They don't adapt well to new situations.  We can use a classic pincher tactic, attacking from the front and rear, to confuse them."
+        lookatandwait Qui Commander01
+        playgesture Qui PointForward 2.0
+        sayline Qui "/Qui-Gon_551/I'll mount a direct assault from the front."
+        sayline Qui "/Qui-Gon_552/You protect the queen and attack their flank."
+        stopactions Qui
+        //waituntilnearnode SecurityLead goto_queen_escort03 2.0
+        walktonodeandwait Qui goto_qui_02
+        crouch Qui
+        sayline Qui "/Qui-Gon_1281/Get ready!" 
+        waituntilnearnode SecurityLead goto_queen_escort05 2.0
+        endscript "JumpingTheGun"
+        set isinArcade 1
+		  
+		  StopMusicManager
+		  PlayMusic BattleLoop
+        
+		  sayline Qui "/Qui-Gon_1282/Let's go!"
+        stand Qui
+    }
+    
+    waitforscripttoend "ThePlan"
+    
+    runtonode Qui goto_queen_escort05
+    forcetargetandattack Qui Melee01
+    waituntilexitedregion Qui RGN_Stealth01
+    
+    call InitialMeleeBehavior (Melee01)
+    call InitialMeleeBehavior (Melee02)
+    call InitialMeleeBehavior (Melee03)
+    
+    childscript "FreeAttackMode"
+    {
+        waituntildamagedby Melee01 Qui
+        forcetargetandattackoff Qui
+        returncontrolto Qui
+    }
+    
+    waitforall
+}
+
+script "CommenceMarch"
+{
+    actor Birds02
+    
+    //invincibilityon Queen
+    
+    takecontrolof Queen
+    takecontrolof Maiden1
+    takecontrolof Maiden2
+    
+    takepartialcontrolof Melee01
+    takepartialcontrolof Melee02
+    takepartialcontrolof Melee03
+
+    takecontrolof SecurityRightFlank01
+    takecontrolof SecurityLeftFlank01
+    takepartialcontrolof SecurityRightFlank02
+    takepartialcontrolof SecurityLeftFlank02
+    takepartialcontrolof SecurityLead
+    
+    takecontrolof Commander01
+    
+    //waituntilequal TriggerCommenceMarch 1
+
+    child followdirectional Melee01 SecurityLead 2.0 240
+    child followdirectional Melee02 SecurityLead 2.0 120
+    
+    child follow Queen SecurityLead 2.0
+    child follow Maiden1 Queen 2.0
+    child follow Maiden2 Maiden1 2.0
+    
+    child followdirectional SecurityLeftFlank01 Queen 2.0 120
+    child followdirectional SecurityRightFlank01 Queen 2.0 240
+
+    child followdirectional SecurityLeftFlank02 Maiden2 2.0 120
+    child followdirectional SecurityRightFlank02 Maiden2 2.0 240
+
+    child follow Melee03 Maiden2 2.0
+    
+    waitforall
+    
+    childscript "SnipingSafeGuard"
+    {
+        waituntildamaged SecurityLead
+
+        childscript "SecurityLeadInMotion"
+        {
+            forcestateoff SecurityLead
+            stopactions SecurityLead
+            takecontrolof SecurityLead
+            lookat SecurityLead Queen
+            playgestureandwait SecurityLead PointForward 3.0
+            returncontrolto SecurityLead
+        }
+        childscript "KillQueenMelee01"
+        {
+            pause 1.5
+            stopactions Melee01
+            forcetargetandattack Melee01 Queen
+            waituntilkilled Queen
+            forcetargetandattack Melee01 Maiden1
+        }
+        childscript "KillQueenMelee02"
+        {
+            pause 1.5
+            stopactions Melee02
+            forcetargetandattack Melee02 Queen
+            waituntilkilled Queen
+            forcetargetandattack Melee02 Maiden2
+        }
+        childscript "StopHerInHerTracks"
+        {
+            stopactions Queen
+            setteam Queen 6
+        }
+        waitforall
+    }
+    childscript "SecurityLead_Behavior"
+    {      
+        childscript "BringDownForceField"
+        {
+            waituntilnearnode SecurityLead goto_queen_escort_C 5.0
+            lookat Commander01 A_5-5_ff_generator_01
+            nudge Commander01 A_5-5_ff_generator_01
+            CreateParticleGen birds.gen Birds02 gen_birds02
+        }
+
+        child sleepdisallow Melee01
+        child sleepdisallow Melee02
+        child sleepdisallow Melee03
+        child sleepdisallow SecurityRightFlank01
+        child sleepdisallow SecurityLeftFlank01
+        child sleepdisallow SecurityRightFlank02
+        child sleepdisallow SecurityLeftFlank02
+
+        child sleepdisallow SecurityLead
+
+        setpatroltypes SecurityLead 3
+        setpatrolattentionspan SecurityLead 10000
+        
+        forcestate SecurityLead Patrol
+        
+        script "TerminateSecurityLeadPatrol"
+        {
+            childscript "AtTheEndofTheLine"
+            {
+                waituntilnearnode SecurityLead goto_queen_escort_end 5.0
+                forcestateoff SecurityLead
+                forcetarget SecurityLead Obi
+            }
+
+            childscript "ObiIsTooClose"
+            {
+                waituntilsees SecurityLead Obi 20.0
+                forcestateoff SecurityLead
+                forcetarget SecurityLead Obi
+            }
+            waitforany
+        }
+        waitforall
+    }
+    childscript "Commander01_Behavior"
+    {
+        walktonodeandwait Commander01 goto_ffield_switch01
+        waituntilnearnode SecurityLead goto_queen_escort01 2.0
+        lookat Commander01 A_5-5_ff_generator_01
+        nudge Commander01 A_5-5_ff_generator_01
+        pause 1.0
+        lockdoor A_ForceField_01
+        stopaction Commander01
+        walktonodeandwait Commander01 goto_removeactor
+        removeactor Commander01
+    }
+    childscript "KilltheQueen"
+    {
+        if (<> PrematureAttack 1)
+        {
+            waituntilequal isinArcade 0
+        }
+
+        waituntilnear Queen Obi 30.0
+        setteam Queen 3
+		  TakeControlOf Queen
+		  runtonode Queen goto_queen_escape
+
+		  Pause 1
+
+        forcetargetandattack SecurityLeftFlank01 Queen
+        forcetargetandattack SecurityRightFlank01 Queen
+
+        Pause 2
+        Kill SecurityLeftFlank01
+        Kill SecurityRightFlank01
+        Pause .01
+        Kill Queen
+    }
+    childscript "Queen_Behavior"
+    {
+        waituntilenteredregion qui RGN_Stealth01
+        waituntilexitedregion qui RGN_Stealth01
+        stopactions Queen
+        runtonodeandwait Queen goto_queen_escape
+        
+        child setteam Queen 3
+        child setteam Maiden1 5
+        child setteam Maiden2 5
+        
+        childscript "QueenRetreat"
+        {
+            stopactions Queen
+            DisableState Queen Investigate
+            returncontrolto Queen
+        }
+        childscript "Maiden1Retreat"
+        {
+            stopactions Maiden1
+            returncontrolto Maiden1
+        }
+        childscript "Maiden2Retreat"
+        {
+            stopactions Maiden2
+            returncontrolto Maiden2
+        }
+        waitforall
+    }
+    childscript "BridgeSecurity_Disengage"
+    {
+        waituntilnearnode Queen goto_queen_escort01 3.0
+    
+        childscript "RightSideBridge_Security"
+        {
+            stopactions SecurityRightFlank02
+            walktonodeandwait SecurityRightFlank02 goto_BAD_Bridge_R
+            returncontrolto SecurityRightFlank02
+            setpatroltypes SecurityRightFlank02 2
+        }    
+        childscript "LeftSideBridge_Security"
+        {
+            stopactions SecurityLeftFlank02
+            walktonodeandwait SecurityLeftFlank02 goto_BAD_Bridge_L
+            returncontrolto SecurityLeftFlank02
+            setpatroltypes SecurityLeftFlank02 1
+        } 
+        waitforall
+    }
+    childscript "SecurityFlank_Disengage"
+    {
+        waituntilnearnode Queen goto_queen_escort02 3.0
+
+        childscript "RightFlanker"
+        {
+            stopactions SecurityRightFlank01
+            walktonodeandwait SecurityRightFlank01 goto_BAD_Flank_R
+            returncontrolto SecurityRightFlank01
+            setpatroltypes SecurityRightFlank01 2
+        }
+        childscript "LeftFlanker"
+        {
+            stopactions SecurityLeftFlank01
+            walktonodeandwait SecurityLeftFlank01 goto_BAD_Flank_L
+            returncontrolto SecurityLeftFlank01
+            setpatroltypes SecurityLeftFlank01 1
+        }
+        waitforall
+    }
+    waitforall
+}
+
+///////////////////////////
+/// END FINAL COURTYARD ///
+///////////////////////////
+

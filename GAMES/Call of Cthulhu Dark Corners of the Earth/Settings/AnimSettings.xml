@@ -1,0 +1,454 @@
+<Anim_Settings>
+
+<!-- character type - model mapping -->
+    <AI_Model_Mapping>
+        <ModelID_0>0</ModelID_0>
+        <ModelID_1>1</ModelID_1>
+        <ModelID_2>1</ModelID_2>
+        <ModelID_3>1</ModelID_3>
+        <ModelID_4>2</ModelID_4>
+        <ModelID_5>1</ModelID_5>
+        <ModelID_6>1</ModelID_6>
+        <ModelID_7>1</ModelID_7>
+        <ModelID_8>6</ModelID_8> <!-- Josiah Bentley-->
+        <ModelID_9>0</ModelID_9>
+        <ModelID_10>0</ModelID_10>
+        <ModelID_11>0</ModelID_11>
+        <ModelID_12>0</ModelID_12>
+        <ModelID_13>1</ModelID_13>
+        <ModelID_14>0</ModelID_14>
+        <ModelID_15>0</ModelID_15>
+        <ModelID_16>0</ModelID_16>
+        <ModelID_17>0</ModelID_17>
+        <ModelID_18>0</ModelID_18> 
+        <ModelID_19>0</ModelID_19>
+        <ModelID_20>0</ModelID_20>
+        <ModelID_21>0</ModelID_21>
+        <ModelID_22>1</ModelID_22>
+        <ModelID_23>1</ModelID_23>
+        <ModelID_24>1</ModelID_24>
+        <ModelID_25>1</ModelID_25>
+        <ModelID_26>1</ModelID_26>
+        <ModelID_27>0</ModelID_27>
+        <ModelID_28>0</ModelID_28>
+        <ModelID_29>1</ModelID_29>
+        <ModelID_30>0</ModelID_30>
+        <ModelID_31>0</ModelID_31>
+        <ModelID_32>0</ModelID_32>
+        <ModelID_33>0</ModelID_33>
+        <ModelID_34>0</ModelID_34>
+        <ModelID_35>1</ModelID_35>
+        <ModelID_36>5</ModelID_36> <!-- Robert Marsh - previously type 1 (hybrid) -->
+        <ModelID_37>0</ModelID_37>
+        <ModelID_38>0</ModelID_38>
+        <ModelID_39>0</ModelID_39>
+        <ModelID_40>0</ModelID_40>
+        <ModelID_41>0</ModelID_41>
+        <ModelID_42>2</ModelID_42>
+        <ModelID_43>5</ModelID_43> <!-- Deep One Sorcerer -->
+        <ModelID_44>1</ModelID_44>
+        <ModelID_45>1</ModelID_45>
+        <ModelID_46>0</ModelID_46>
+        <ModelID_47>0</ModelID_47>
+        <ModelID_48>3</ModelID_48>
+        <ModelID_49>1</ModelID_49>
+		<ModelID_50>0</ModelID_50>
+		<ModelID_51>1</ModelID_51>
+        <ModelID_52>0</ModelID_52> <!-- Slimed FBI Agent -->
+    </AI_Model_Mapping>
+
+	<!-- Per character fidget settings
+		 0 = generic fidget anim set, 1 = specific fidget anim set.
+		 Specify whether a character type uses generic or specific fidget anim.
+		 
+		 If a character does not use any fidget anims, it should be assigned the generic fidget anim set.
+		 Special cases that use both generic and specific fidgets (i.e. Deep Ones) should have be assigned to
+		 the fidget group they will use for their random fidgets (in the case of Deep Ones this is the generic
+		 set, as the specifics are used to provide variation in melee combat, not as random fidgets). 
+	-->
+	<AI_Fidget_Settings>
+		<ModelID_0>0</ModelID_0>	<!-- Inmate (human) -->
+		<ModelID_1>0</ModelID_1>	<!-- Andrew Martin (hybrid) -->
+		<ModelID_2>0</ModelID_2>	<!-- Nathan Birch (hybrid) -->
+		<ModelID_3>0</ModelID_3>	<!-- Elliot Ropes (hybrid) -->
+		<ModelID_4>0</ModelID_4>		<!-- Deep One -->
+		<ModelID_5>0</ModelID_5>	<!-- Hybrid 1 -->
+		<ModelID_6>0</ModelID_6>	<!-- Hybrid 2 -->
+		<ModelID_7>0</ModelID_7>	<!-- Hybrid 3 -->
+		<ModelID_8>0</ModelID_8>	<!-- Josiah Bentley -->
+    	<ModelID_9>0</ModelID_9>	<!-- Generic human -->
+    	<ModelID_10>0</ModelID_10>	<!-- Cultist (human) -->
+		<ModelID_11>1</ModelID_11>	<!-- Brian Burnham (human) -->
+		<ModelID_12>0</ModelID_12>	<!-- Generic -->
+    	<ModelID_13>0</ModelID_13>	<!-- Hybrid -->
+    	<ModelID_14>0</ModelID_14>	<!-- Lucas Mackey (human) -->
+		<ModelID_15>0</ModelID_15>	<!-- Jack Walters Indoor (human) -->
+    	<ModelID_16>0</ModelID_16>	<!-- Jack Walters Insane (human) -->
+    	<ModelID_17>0</ModelID_17>	<!-- Marine (human) -->
+		<ModelID_18>1</ModelID_18>	<!-- Policeman (human) -->
+		<ModelID_19>0</ModelID_19>	<!-- Sailor (human) -->
+		<ModelID_20>0</ModelID_20>	<!-- Thomas Waite (human) -->
+    	<ModelID_21>0</ModelID_21>	<!-- Zadok Allen (human) -->
+		<ModelID_22>0</ModelID_22>	<!-- Joe Sargent (hybrid) -->
+		<ModelID_23>0</ModelID_23>	<!-- Charles Gilman (hybrid) -->
+		<ModelID_24>0</ModelID_24>	<!-- Fat variant (hybrid) -->
+    	<ModelID_25>0</ModelID_25>	<!-- Female variant (hybrid stage 2) -->
+		<ModelID_26>0</ModelID_26>	<!-- Female variant , sleeping (hybrid) -->
+    	<ModelID_27>0</ModelID_27>	<!-- Rebecca Lawrence (human) -->
+		<ModelID_28>0</ModelID_28>	<!-- Ramona Waites (human) -->
+		<ModelID_29>0</ModelID_29>	<!-- Hybrid 4 -->
+		<ModelID_30>1</ModelID_30>	<!-- Edgar Hoover (human) -->
+		<ModelID_31>1</ModelID_31>	<!-- FBI Agent (human) -->
+		<ModelID_32>0</ModelID_32>	<!-- Female generic (human) -->
+    	<ModelID_33>0</ModelID_33>	<!-- Innsmout Female Misc (human) -->
+		<ModelID_34>0</ModelID_34>	<!-- Innsmouth Male Misc (human) -->
+		<ModelID_35>0</ModelID_35>	<!-- Jacob Marsh (hybrid) -->
+		<ModelID_36>0</ModelID_36>	<!-- Robert Marsh (sorcerer) -->
+		<ModelID_37>0</ModelID_37>	<!-- Shot cultist (cultists) -->
+		<ModelID_38>0</ModelID_38>	<!-- Sailor Captain (human) -->
+		<ModelID_39>1</ModelID_39>	<!-- Ruth Billingham (human) -->
+		<ModelID_40>0</ModelID_40>	<!-- Pensioner female (human) -->
+		<ModelID_41>0</ModelID_41>	<!-- Pensioner male (human) -->
+		<ModelID_42>0</ModelID_42>	<!-- Deep One Alpha -->
+		<ModelID_43>0</ModelID_43>	<!-- Deep One Sorcerer (Deep One) -->
+		<ModelID_44>0</ModelID_44>	<!-- Tainted Man -->
+		<ModelID_45>0</ModelID_45>	<!-- Sebastian Marsh -->
+		<ModelID_46>0</ModelID_46>	<!-- Humanoid -->
+    	<ModelID_47>0</ModelID_47>	<!-- Pensioner -->
+    	<ModelID_48>0</ModelID_48>	<!-- Polyp -->
+    	<ModelID_49>0</ModelID_49>	<!-- Female variant (hybrid stage 1) -->
+		<ModelID_50>0</ModelID_50>	<!-- Jack - Mirror Image -->
+		<ModelID_51>0</ModelID_51>	<!-- Hybrid 1 Longcoat (Hybrid 4) -->
+		<ModelID_52>1</ModelID_52>	<!-- Slimed FBI Agent (human - Federal Agents) -->
+	</AI_Fidget_Settings>
+    
+    <AI_Model_Animation_Offsets>
+    
+    	<!--	The comments identifying the character represented by each model were taken from
+    		C:\cthulhu alpha\CHARACTER ANIMATION CONVERSION\LOADER\npcloader.dcf	-->
+    	
+    	<ModelID_0>	<!-- Inmate (human) -->
+			<SharedHumanoid>-9.0811</SharedHumanoid>
+			<SharedHuman>-2.5918</SharedHuman>
+			<SharedHybrid>-9.0811</SharedHybrid>
+    	</ModelID_0>
+    	
+    	<ModelID_1>	<!-- Andrew Martin (hybrid) -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_1>
+    	
+    	<ModelID_2>	<!-- Nathan Birch (hybrid) -->
+			<SharedHumanoid>2.3889</SharedHumanoid>
+			<SharedHuman>8.8782</SharedHuman>
+			<SharedHybrid>2.3889</SharedHybrid>
+    	</ModelID_2>
+    	
+    	<ModelID_3>	<!-- Elliot Ropes (hybrid) -->
+			<SharedHumanoid>11.7428</SharedHumanoid>
+			<SharedHuman>18.2321</SharedHuman>
+			<SharedHybrid>11.7428</SharedHybrid>
+    	</ModelID_3>
+    	
+    	<ModelID_4>	<!-- Deep One -->
+			<SharedHumanoid>0.0</SharedHumanoid>	<!-- 7.4598 -->
+			<SharedHuman>0.0</SharedHuman>			<!-- 13.9491 -->
+			<SharedHybrid>0.0</SharedHybrid>		<!-- 7.4598 -->
+    	</ModelID_4>
+    	
+    	<ModelID_5>	<!-- Hybrid 1 -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_5>
+    	
+    	<ModelID_6>	<!-- Hybrid 2 -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_6>
+    	
+    	<ModelID_7>	<!-- Hybrid 3 -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_7>
+    	
+    	<ModelID_8>	<!-- Josiah Bentley -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_8>
+    	
+    	<ModelID_9>	<!-- Generic human -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_9>
+    	
+    	<ModelID_10>	<!-- Cultist (human) -->
+			<SharedHumanoid>-2.1663</SharedHumanoid>
+			<SharedHuman>4.3230</SharedHuman>
+			<SharedHybrid>-2.1663</SharedHybrid>
+    	</ModelID_10>
+    	
+    	<ModelID_11>	<!-- Brian Burnham (human) -->
+			<SharedHumanoid>-2.8813</SharedHumanoid>
+			<SharedHuman>3.6080</SharedHuman>
+			<SharedHybrid>-2.8813</SharedHybrid>
+    	</ModelID_11>
+    	
+    	<ModelID_12>	<!-- Generic -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_12>
+    	
+    	<ModelID_13>	<!-- Hybrid -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_13>
+    	
+    	<ModelID_14>	<!-- Lucas Mackey (human) -->
+		<!--	<SharedHumanoid>-0.5666</SharedHumanoid>
+			<SharedHuman>5.9227</SharedHuman>
+			<SharedHybrid>-0.5666</SharedHybrid>  -->
+			<SharedHumanoid>-0.5666</SharedHumanoid>
+			<SharedHuman>5.9227</SharedHuman>
+			<SharedHybrid>-0.5666</SharedHybrid>
+    	</ModelID_14>
+    	
+    	<ModelID_15>	<!-- Jack Walters Indoor (human) -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_15>
+    	
+    	<ModelID_16>	<!-- Jack Walters Insane (human) -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_16>
+    	
+    	<ModelID_17>	<!-- Marine (human) -->
+			<SharedHumanoid>-1.7628</SharedHumanoid>
+			<SharedHuman>4.7265</SharedHuman>
+			<SharedHybrid>-1.7628</SharedHybrid>
+    	</ModelID_17>
+    	
+    	<ModelID_18>	<!-- Policeman (human) -->
+			<SharedHumanoid>-1.6591</SharedHumanoid>
+			<SharedHuman>4.8302</SharedHuman>
+			<SharedHybrid>-1.6591</SharedHybrid>
+    	</ModelID_18>
+    	
+    	<ModelID_19>	<!-- Sailor (human) -->
+			<SharedHumanoid>-6.4893</SharedHumanoid>
+			<SharedHuman>0.0000</SharedHuman>
+			<SharedHybrid>-6.4893</SharedHybrid>
+    	</ModelID_19>
+    	
+    	<ModelID_20>	<!-- Thomas Waite (human) -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_20>
+    	
+    	<ModelID_21>	<!-- Zadok Allen (human) -->
+			<SharedHumanoid>-6.0798</SharedHumanoid>
+			<SharedHuman>0.4095</SharedHuman>
+			<SharedHybrid>-6.0798</SharedHybrid>
+    	</ModelID_21>
+    	
+    	<ModelID_22>	<!-- Joe Sargent (hybrid) -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_22>
+    	
+    	<ModelID_23>	<!-- Charles Gilman (hybrid) -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_23>
+    	
+    	<ModelID_24>	<!-- Fat variant (hybrid) -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_24>
+    	
+    	<ModelID_25>	<!-- Female variant (hybrid stage 2) -->
+			<SharedHumanoid>3.3753</SharedHumanoid>
+			<SharedHuman>9.8646</SharedHuman>
+			<SharedHybrid>3.3753</SharedHybrid>
+    	</ModelID_25>
+    	
+    	<ModelID_26>	<!-- Female variant , sleeping (hybrid) -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_26>
+    	
+    	<ModelID_27>	<!-- Rebecca Lawrence (human) -->
+			<SharedHumanoid>0.0</SharedHumanoid>	<!-- old offset  -1.8016   -->
+			<SharedHuman>0.0</SharedHuman>			<!-- old offset   4.6877   -->
+			<SharedHybrid>0.0</SharedHybrid>		<!-- old offset  -1.8016   -->
+    	</ModelID_27>
+    	
+    	<ModelID_28>	<!-- Ramona Waites (human) -->
+			<SharedHumanoid>-20.6934</SharedHumanoid>
+			<SharedHuman>-14.2041</SharedHuman>
+			<SharedHybrid>-20.6934</SharedHybrid>
+    	</ModelID_28>
+    	
+    	<ModelID_29>	<!-- Hybrid 4 -->
+			<SharedHumanoid>-3.5104</SharedHumanoid>
+			<SharedHuman>2.9789</SharedHuman>
+			<SharedHybrid>-3.5104</SharedHybrid>
+    	</ModelID_29>
+    	
+    	<ModelID_30>	<!-- Edgar Hoover (human) -->
+			<SharedHumanoid>6.5213</SharedHumanoid>
+			<SharedHuman>13.0106</SharedHuman>
+			<SharedHybrid>6.5213</SharedHybrid>
+    	</ModelID_30>
+    	
+    	<ModelID_31>	<!-- FBI Agent (human) -->
+			<SharedHumanoid>6.5213</SharedHumanoid>
+			<SharedHuman>13.0106</SharedHuman>
+			<SharedHybrid>6.5213</SharedHybrid>
+    	</ModelID_31>
+    	
+    	<ModelID_32>	<!-- Femal generic (human) -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_32>
+    
+    	<ModelID_33>	<!-- Innsmout Female Misc (human) -->
+			<SharedHumanoid>-1.0985</SharedHumanoid>		<!-- old offset  -2.9001  -->
+			<SharedHuman>-1.0985</SharedHuman>				<!-- old offset   3.5892  -->
+			<SharedHybrid>-1.0985</SharedHybrid>			<!-- old offset  -2.9001  -->
+    	</ModelID_33>
+    	
+    	<ModelID_34>	<!-- Innsmouth Male Misc (human) -->
+			<SharedHumanoid>-6.0798</SharedHumanoid>
+			<SharedHuman>0.4095</SharedHuman>
+			<SharedHybrid>-6.0798</SharedHybrid>
+    	</ModelID_34>
+    	
+    	<ModelID_35>	<!-- Jacob Marsh (hybrid) -->
+			<SharedHumanoid>0.0000</SharedHumanoid>
+			<SharedHuman>6.4893</SharedHuman>
+			<SharedHybrid>0.0000</SharedHybrid>
+    	</ModelID_35>
+    	
+    	<ModelID_36>	<!-- Robert Marsh (no height offset now as doesn't use any sorcerer anims) -->
+			<SharedHumanoid>0.0</SharedHumanoid>	<!-- 18.3249 -->
+			<SharedHuman>0.0</SharedHuman>			<!-- 24.8142 -->
+			<SharedHybrid>0.0</SharedHybrid>		<!-- 18.3249 -->
+    	</ModelID_36>
+    	
+    	<ModelID_37>	<!-- Shot cultist (cultists) -->
+			<SharedHumanoid>-2.1663</SharedHumanoid>
+			<SharedHuman>4.3230</SharedHuman>
+			<SharedHybrid>-2.1663</SharedHybrid>
+    	</ModelID_37>
+    	
+    	<ModelID_38>	<!-- Sailor Captain (human) -->
+			<SharedHumanoid>-2.1266</SharedHumanoid>
+			<SharedHuman>4.3627</SharedHuman>
+			<SharedHybrid>-2.1266</SharedHybrid>
+    	</ModelID_38>
+   
+    	<ModelID_39>	<!-- Ruth Billingham (human) -->
+			<SharedHumanoid>0.0</SharedHumanoid>	<!--  old offset  -1.8016  -->
+			<SharedHuman>0.0</SharedHuman>			<!--  old offset   4.6877  -->
+			<SharedHybrid>0.0</SharedHybrid>		<!--  old offset  -1.8016  -->
+    	</ModelID_39>
+    	
+    	<ModelID_40>	<!-- Pensioner female (human) -->
+			<SharedHumanoid>-1.8016</SharedHumanoid>
+			<SharedHuman>4.6877</SharedHuman>
+			<SharedHybrid>-1.8016</SharedHybrid>
+    	</ModelID_40>
+    	
+    	<ModelID_41>	<!-- Pensioner male (human) -->
+			<SharedHumanoid>-6.0798</SharedHumanoid>
+			<SharedHuman>0.4095</SharedHuman>
+			<SharedHybrid>-6.0798</SharedHybrid>
+    	</ModelID_41>
+    	
+    	<ModelID_42>	<!-- Deep One Alpha -->
+			<SharedHumanoid>0.0</SharedHumanoid>	<!-- 7.4598 -->
+			<SharedHuman>0.0</SharedHuman>			<!-- 13.9491 -->
+			<SharedHybrid>0.0</SharedHybrid>		<!-- 7.4598 -->
+    	</ModelID_42>
+    	
+    	<ModelID_43>	<!-- Deep One Sorcerer -->
+			<SharedHumanoid>0.0</SharedHumanoid>	<!-- 36.4555 -->
+			<SharedHuman>0.0</SharedHuman>			<!-- 42.9448 -->
+			<SharedHybrid>0.0</SharedHybrid>		<!-- 36.4555 -->
+    	</ModelID_43>
+    	
+    	<ModelID_44>	<!-- Tainted Man -->
+			<SharedHumanoid>-2.5282</SharedHumanoid>
+			<SharedHuman>3.9611</SharedHuman>
+			<SharedHybrid>-2.5282</SharedHybrid>
+    	</ModelID_44>
+    	
+    	<ModelID_45>	<!-- Sebastian Marsh -->
+			<SharedHumanoid>11.7428</SharedHumanoid>
+			<SharedHuman>18.2321</SharedHuman>
+			<SharedHybrid>11.7428</SharedHybrid>
+    	</ModelID_45>
+    	
+    	<ModelID_46>	<!-- Humanoid -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_46>
+    	
+    	<ModelID_47>	<!-- Pensioner -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_47>
+    	
+    	<ModelID_48>	<!-- Polyp -->
+    		<SharedHumanoid>0.0</SharedHumanoid>
+    		<SharedHuman>0.0></SharedHuman>
+    		<SharedHybrid>0.0</SharedHybrid>
+    	</ModelID_48>
+
+    	<ModelID_49>	<!-- Female variant (hybrid stage 1) -->
+			<SharedHumanoid>3.3753</SharedHumanoid>
+			<SharedHuman>9.8646</SharedHuman>
+			<SharedHybrid>3.3753</SharedHybrid>
+    	</ModelID_49>
+
+    	<ModelID_50>	<!-- Jack - Mirror Image -->
+			<SharedHumanoid>2.2403</SharedHumanoid>
+			<SharedHuman>8.7296</SharedHuman>
+			<SharedHybrid>2.2403</SharedHybrid>
+    	</ModelID_50>
+
+   		<ModelID_51>	<!-- Hybrid 1 Longcoat -->
+			<SharedHumanoid>3.3753</SharedHumanoid>
+			<SharedHuman>9.8646</SharedHuman>
+			<SharedHybrid>3.3753</SharedHybrid>
+			
+    	</ModelID_51>
+    	
+    	<ModelID_52>	<!-- Slimed FBI Agent (human - Federal Agents) -->
+			<SharedHumanoid>6.5213</SharedHumanoid>
+			<SharedHuman>13.0106</SharedHuman>
+			<SharedHybrid>6.5213</SharedHybrid>
+    	</ModelID_52>
+
+    </AI_Model_Animation_Offsets>
+
+</Anim_Settings>

@@ -1,0 +1,27 @@
+[TitleCard]
+
+BackgroundMusic="GEO_Music.GEO_episodes.musGEO_titleCard_ep"
+
+FadeInStartTime[0]=1
+FullOnStartTime[0]=2
+FadeOutStartTime[0]=6
+FadeOutEndTime[0]=7
+Text[0]="WAR HAS COME TO THE GALAXY..."
+
+FadeInStartTime[1]=8
+FullOnStartTime[1]=9
+FadeOutStartTime[1]=18
+FadeOutEndTime[1]=19
+Text[1]="THE REPUBLIC’S SECRET WEAPON, A MASSIVE CLONE ARMY, IS DEPLOYED FOR THE FIRST TIME AGAINST THE SEPARATIST DROID FORCES."
+
+FadeInStartTime[2]=20
+FullOnStartTime[2]=21
+FadeOutStartTime[2]=30
+FadeOutEndTime[2]=31
+Text[2]="FAR ABOVE THE CARNAGE, THE ELITE COMMANDOS OF DELTA SQUAD PREPARE FOR THEIR FIRST MISSION..."
+
+FadeInStartTime[3]=32
+FullOnStartTime[3]=33
+FadeOutStartTime[3]=37
+FadeOutEndTime[3]=40
+Text[3]="ZERO HOUR - CLONE WARS - GEONOSIS"

@@ -1,0 +1,1002 @@
+
+[Subtitles_GEO_01]
+
+SubtitleSound[2928]="CA1G1500"
+SubtitleText[2928]="Clone Advisor 1: I will be providing you with support and tactical information as necessary."
+
+SubtitleSound[2929]="CA1G1501"
+SubtitleText[2929]="Clone Advisor 1: Tactical information will be displayed on your heads up display as holographic projections."
+
+SubtitleSound[2930]="CA1G1504"
+SubtitleText[2930]="Clone Advisor 1: Search and Destroy is the standard procedure for moving quickly in a hostile area."
+
+SubtitleSound[2931]="CA1G1505"
+SubtitleText[2931]="Clone Advisor 1: 38, Disable those Anti Air defenses off line so we can assist Gunship Arbusto"
+
+SubtitleSound[2932]="CA1G1506"
+SubtitleText[2932]="Clone Advisor 1: Target uploaded to your objective tracker"
+
+SubtitleSound[2933]="CA1G1507"
+SubtitleText[2933]="Clone Advisor 1: Those canisters will provide good cover to snipe from."
+
+SubtitleSound[2934]="CA1G1508"
+SubtitleText[2934]="Clone Advisor 1: Assign a squad mate to a snipe maneuver."
+
+SubtitleSound[2935]="D62G1500"
+SubtitleText[2935]="Delta 62: Initiating snipe maneuver."
+
+SubtitleSound[2936]="D40G1500"
+SubtitleText[2936]="Delta 40: Initiating snipe maneuver."
+
+SubtitleSound[2937]="D07G1500"
+SubtitleText[2937]="Delta 07: Initiating snipe maneuver."
+
+SubtitleSound[2938]="CA1G1509"
+SubtitleText[2938]="Clone Advisor 1: Use the recall command to cancel all maneuvers."
+
+SubtitleSound[2939]="CA1G1510"
+SubtitleText[2939]="Clone Advisor 1: Once a squad mate is assigned to a maneuver he will stay there until given new orders."
+
+SubtitleSound[2940]="D62G1501"
+SubtitleText[2940]="Delta 62: Sniping until given further orders."
+
+SubtitleSound[2941]="D40G1501"
+SubtitleText[2941]="Delta 40: Sniping until given further orders."
+
+SubtitleSound[2942]="D07G1501"
+SubtitleText[2942]="Delta 07: Sniping until given further orders."
+
+SubtitleSound[2943]="D36G1500"
+SubtitleText[2943]="Delta 36: Delta Squad, this is 01/136."
+
+SubtitleSound[2944]="D36G1501"
+SubtitleText[2944]="Delta 36: I've lost 2 men and my pilot in the crash."
+
+SubtitleSound[2945]="CA1G1511"
+SubtitleText[2945]="Clone Advisor 1: Roger Three-Six, 38's team is on the way."
+
+SubtitleSound[2946]="D38G1502"
+SubtitleText[2946]="Delta 38: Slice those controls commando."
+
+SubtitleSound[2947]="D62G1502"
+SubtitleText[2947]="Delta 62: Roger that 38, moving to the console."
+
+SubtitleSound[2948]="D40G1502"
+SubtitleText[2948]="Delta 40: Roger that 38, moving to the console."
+
+SubtitleSound[2949]="D07G1502"
+SubtitleText[2949]="Delta 07: Roger that 38, moving to the console."
+
+SubtitleSound[2950]="D62G1503"
+SubtitleText[2950]="Delta 62: I'll have this thing sliced in no time, just keep them off my back."
+
+SubtitleSound[2951]="D40G1503"
+SubtitleText[2951]="Delta 40: I'll have this thing sliced in no time, just keep them off my back."
+
+SubtitleSound[2952]="D07G1503"
+SubtitleText[2952]="Delta 07: I'll have this thing sliced in no time, just keep them off my back."
+
+SubtitleSound[2953]="CA1G1515"
+SubtitleText[2953]="Clone Advisor 1: Roger that."
+
+SubtitleSound[2954]="D36G1503"
+SubtitleText[2954]="Delta 36: Stand clear of the fallen pillar, Three-Eight.  I'm going to blast an opening."
+
+SubtitleSound[2955]="CA1G1517"
+SubtitleText[2955]="Clone Advisor 1: 38 proceed to Three-Six's gunship."
+
+SubtitleSound[2956]="D36G1504"
+SubtitleText[2956]="Delta 36: Welcome to Geonosis. Three-Eight."
+
+SubtitleSound[2957]="D36G1505"
+SubtitleText[2957]="Delta 36: Battle droids are holding a position beyond that fallen pillar."
+
+SubtitleSound[2958]="CA1G1518"
+SubtitleText[2958]="Clone Advisor 1: 38, secure your squad's position at the base of the pillar."
+
+SubtitleSound[2959]="D62G1504"
+SubtitleText[2959]="Delta 62: Position secured.  "
+
+SubtitleSound[2960]="D40G1504"
+SubtitleText[2960]="Delta 40: Position secured.  "
+
+SubtitleSound[2961]="D07G1505"
+SubtitleText[2961]="Delta 07: Position secured.  "
+
+SubtitleSound[2962]="CA1G1519"
+SubtitleText[2962]="Clone Advisor 1: Now, take out that pillar with a demolition maneuver"
+
+SubtitleSound[2963]="D62G1505"
+SubtitleText[2963]="Delta 62: Setting demolition charge. "
+
+SubtitleSound[2964]="D40G1505"
+SubtitleText[2964]="Delta 40: Setting demolition charge. "
+
+SubtitleSound[2965]="D07G1506"
+SubtitleText[2965]="Delta 07: Setting demolition charge. "
+
+SubtitleSound[2966]="D62G1506"
+SubtitleText[2966]="Delta 62: Charge placed."
+
+SubtitleSound[2967]="D40G1506"
+SubtitleText[2967]="Delta 40: Charge placed."
+
+SubtitleSound[2968]="D07G1507"
+SubtitleText[2968]="Delta 07: Charge placed."
+
+SubtitleSound[2969]="D62G1507"
+SubtitleText[2969]="Delta 62: Activating detonator"
+
+SubtitleSound[2970]="D40G1507"
+SubtitleText[2970]="Delta 40: Activating detonator"
+
+SubtitleSound[2971]="D07G1508"
+SubtitleText[2971]="Delta 07: Activating detonator"
+
+SubtitleSound[2972]="D62G1508"
+SubtitleText[2972]="Delta 62: Get clear! This thing is live."
+
+SubtitleSound[2973]="D40G1508"
+SubtitleText[2973]="Delta 40: Get clear! This thing is live."
+
+SubtitleSound[2974]="D07G1509"
+SubtitleText[2974]="Delta 07: Get clear! This thing is live."
+
+SubtitleSound[2975]="CA1G1563"
+SubtitleText[2975]="Clone Advisor 1: Ready to detonate whenever you are, Three-Eight."
+
+SubtitleSound[2976]="CA1G1521"
+SubtitleText[2976]="Clone Advisor 1: The spire entrance is 80 meters from your location."
+
+SubtitleSound[2977]="CA1G1522"
+SubtitleText[2977]="Clone Advisor 1: Updating objective tracker now."
+
+SubtitleSound[2978]="CA1G1523"
+SubtitleText[2978]="Clone Advisor 1: Resume Search and Destroy posture, Three-Eight."
+
+SubtitleSound[2979]="D38G1504"
+SubtitleText[2979]="Delta 38: Roger, proceeding in Search and Destroy configuration."
+
+SubtitleSound[2980]="D36G1508"
+SubtitleText[2980]="Delta 36: Take cover!!"
+
+SubtitleSound[2981]="D36G1509"
+SubtitleText[2981]="Delta 36: Spider Droid approaching our location."
+
+SubtitleSound[2982]="D38G1505"
+SubtitleText[2982]="Delta 38: Advisor, we've got some heavy artillery over here."
+
+SubtitleSound[2983]="CA1G1524"
+SubtitleText[2983]="Clone Advisor 1: Gunship Harken, en-route."
+
+SubtitleSound[2984]="CA1G1525"
+SubtitleText[2984]="Clone Advisor 1: Target destroyed."
+
+SubtitleSound[2985]="CA1G1526"
+SubtitleText[2985]="Clone Advisor 1: Looks like you'll have to do some crouching here, Squad Leader."
+
+SubtitleSound[2986]="CA1G1527"
+SubtitleText[2986]="Clone Advisor 1: I will continue to monitor your progress from the gunship and provide you with information as necessary."
+
+SubtitleSound[2987]="CA1G1528"
+SubtitleText[2987]="Clone Advisor 1: Reinforcements are currently unavailable, so watch each others' backs in there.  "
+
+SubtitleSound[2988]="CA1G1529"
+SubtitleText[2988]="Clone Advisor 1: All squad mates are currently assigned to other maneuvers."
+
+SubtitleSound[2989]="CA1G1530"
+SubtitleText[2989]="Clone Advisor 1: This bacta dispenser works the same as those on the drop ship."
+
+SubtitleSound[2990]="CA1G1531"
+SubtitleText[2990]="Clone Advisor 1: This is a Geonosian bacta dispenser, similar to the ones found on the dropship."
+
+SubtitleSound[2991]="CA1G1532"
+SubtitleText[2991]="Clone Advisor 1: A squad mate needs medical attention"
+
+SubtitleSound[2992]="CA1G1533"
+SubtitleText[2992]="Clone Advisor 1: 38 I am reading a drop in your vital signs; apply bacta soon."
+
+SubtitleSound[2993]="CA1G1534"
+SubtitleText[2993]="Clone Advisor 1: Delta squad, 38 is down administer field bacta."
+
+SubtitleSound[2994]="CA1G1535"
+SubtitleText[2994]="Clone Advisor 1: Hang in there 38 help is on the way."
+
+SubtitleSound[2995]="CA1G1536"
+SubtitleText[2995]="Clone Advisor 1: 38 your vital signs are dangerously low find bacta immediately."
+
+SubtitleSound[2996]="CA1G1537"
+SubtitleText[2996]="Clone Advisor 1: This door is locked.  You will need to destroy the locking mechanism."
+
+SubtitleSound[2997]="CA1G1538"
+SubtitleText[2997]="Clone Advisor 1: My scans indicate multiple hostiles on the other side of this door."
+
+SubtitleSound[2998]="CA1G1539"
+SubtitleText[2998]="Clone Advisor 1: I advise entering and clearing the room quickly by executing door breach maneuver with your squad."
+
+SubtitleSound[2999]="CA1G1540"
+SubtitleText[2999]="Clone Advisor 1: Once the charge is set, get clear."
+
+SubtitleSound[3000]="CA1G1541"
+SubtitleText[3000]="Clone Advisor 1: Your primary target is the Geonisian leader Sun Fac "
+
+SubtitleSound[3001]="CA1G1542"
+SubtitleText[3001]="Clone Advisor 1: Intelligence leads us to believe that he is commanding the core ship evacuation from this spire."
+
+SubtitleSound[3002]="CA1G1543"
+SubtitleText[3002]="Clone Advisor 1: The Geonosians have not been fully alerted to your presence.  Try and maintain the element of surprise.  "
+
+SubtitleSound[3003]="CA1G1544"
+SubtitleText[3003]="Clone Advisor 1: Form up the squad and take point."
+
+SubtitleSound[3004]="CA1G1545"
+SubtitleText[3004]="Clone Advisor 1: We are still scanning for Sun Fac's exact location."
+
+SubtitleSound[3005]="CA1G1546"
+SubtitleText[3005]="Clone Advisor 1: You are nearing a secure door leading to the hangar"
+
+SubtitleSound[3006]="CA1G1547"
+SubtitleText[3006]="Clone Advisor 1: Activity in the hangar suggests that they are unaware of your presence."
+
+SubtitleSound[3007]="CA1G1548"
+SubtitleText[3007]="Clone Advisor 1: I advise slicing the controls to this door and entering quietly via a door slice maneuver."
+
+SubtitleSound[3008]="D38G1506"
+SubtitleText[3008]="Delta 38: Advisor, we've located a pair of geonosian fighters in the hangar."
+
+SubtitleSound[3009]="CA1G1549"
+SubtitleText[3009]="Clone Advisor 1: We don't want them to be used against us.  Destroy them."
+
+SubtitleSound[3010]="D38G1507"
+SubtitleText[3010]="Delta 38: This corridor is blocked by a shield"
+
+SubtitleSound[3011]="CA1G1550"
+SubtitleText[3011]="Clone Advisor 1: There should be a control console near by."
+
+SubtitleSound[3012]="CA1G1551"
+SubtitleText[3012]="Clone Advisor 1: 38 move to the console and target the screen."
+
+SubtitleSound[3013]="CA1G1552"
+SubtitleText[3013]="Clone Advisor 1: If you are close enough your HUD will display a slice timer."
+
+SubtitleSound[3014]="CA1G1553"
+SubtitleText[3014]="Clone Advisor 1: I'm reading several lifeforms in your area.  Proceed with caution."
+
+SubtitleSound[3015]="D38G1508"
+SubtitleText[3015]="Delta 38: It's getting a little dark here."
+
+SubtitleSound[3016]="CA1G1554"
+SubtitleText[3016]="Clone Advisor 1: Activate headlamps, Deltas."
+
+SubtitleSound[3017]="CA1G1555"
+SubtitleText[3017]="Clone Advisor 1: Be careful Deltas.  Those head lamps make you easier to target."
+
+SubtitleSound[3018]="CA1G1556"
+SubtitleText[3018]="Clone Advisor 1: We've intercepted communications from Sun Fac planning room"
+
+SubtitleSound[3019]="CA1G1557"
+SubtitleText[3019]="Clone Advisor 1: He's located one level below your current position."
+
+SubtitleSound[3020]="CA1G1558"
+SubtitleText[3020]="Clone Advisor 1: The geonosians are aware of your presence and are on high alert."
+
+SubtitleSound[3021]="CA1G1559"
+SubtitleText[3021]="Clone Advisor 1: Expect heavy resistance."
+
+SubtitleSound[3022]="CA1G1560"
+SubtitleText[3022]="Clone Advisor 1: The opening at the end of this hall is directly above Sun Fac's planning room."
+
+SubtitleSound[3023]="CA1G1561"
+SubtitleText[3023]="Clone Advisor 1: You can rappel down from the ledge."
+
+SubtitleSound[3024]="D38G1509"
+SubtitleText[3024]="Delta 38: Superbattle Droids!!!"
+
+SubtitleSound[3025]="CA1G1562"
+SubtitleText[3025]="Clone Advisor 1: Concentrate your squad's fire on single targets to penetrate their armor."
+
+SubtitleSound[3026]="CA1G1700"
+SubtitleText[3026]="Clone Advisor 1: We've already lost one gunship there's no room for mistakes. "
+
+SubtitleSound[3027]="CA1G1701"
+SubtitleText[3027]="Clone Advisor 1: Ok we're above the LZ, hook in!"
+
+SubtitleSound[3028]="D38G1500"
+SubtitleText[3028]="Delta 38: 07 LOOK OUT!!!!!"
+
+SubtitleSound[3029]="CA1G1702"
+SubtitleText[3029]="Clone Advisor 1: You squad's status and location is displayed here."
+
+SubtitleSound[3030]="CA1G1703"
+SubtitleText[3030]="Clone Advisor 1: Grenade type and inventory is displayed here."
+
+SubtitleSound[3031]="CA1G1704"
+SubtitleText[3031]="Clone Advisor 1: Text communications will be displayed in this area."
+
+SubtitleSound[3032]="CA1G1705"
+SubtitleText[3032]="Clone Advisor 1: The objective tracker will point towards your next target."
+
+SubtitleSound[3033]="CA1G1707"
+SubtitleText[3033]="Clone Advisor 1: Droids approaching your position."
+
+SubtitleSound[3034]="CA1G1708"
+SubtitleText[3034]="Clone Advisor 1: Use these canisters to set up a defensive snipe position."
+
+SubtitleSound[3035]="CA1G1709"
+SubtitleText[3035]="Clone Advisor 1: Good, now use a demo charge to clear the path"
+
+SubtitleSound[3036]="CA1G1710"
+SubtitleText[3036]="Clone Advisor 1: 1136, what's your status?"
+
+SubtitleSound[3037]="CA1G1711"
+SubtitleText[3037]="Clone Advisor 1: Heads up squad! Warriors approaching your position."
+
+SubtitleSound[3038]="CA1G1712"
+SubtitleText[3038]="Clone Advisor 1: Command a snipe maneuver to cover the target area."
+
+SubtitleSound[3039]="CA1G1713"
+SubtitleText[3039]="Clone Advisor 1: Hold tight 36 help is on the way."
+
+SubtitleSound[3040]="CA1G1714"
+SubtitleText[3040]="Clone Advisor 1: 38 get over to that turret and see if you can disable it."
+
+SubtitleSound[3041]="D38G1510"
+SubtitleText[3041]="Delta 38: There's no visible power source."
+
+SubtitleSound[3042]="D38G1511"
+SubtitleText[3042]="Delta 38: We might be able to topple this pillar into the turret."
+
+SubtitleSound[3043]="CA1G1715"
+SubtitleText[3043]="Clone Advisor 1: Roger 38. I'll display the target location on you HUD."
+
+SubtitleSound[3044]="CA1G1716"
+SubtitleText[3044]="Clone Advisor 1: Very impressive 38."
+
+SubtitleSound[3045]="CA1G1717"
+SubtitleText[3045]="Clone Advisor 1: Get over to the crashed gunship."
+
+SubtitleSound[3046]="CA1G1718"
+SubtitleText[3046]="Clone Advisor 1: 38 Secure the area in front of the crashed gunship."
+
+SubtitleSound[3047]="CA1G1720"
+SubtitleText[3047]="Clone Advisor 1: Debris is preventing us from reaching 36's position."
+
+SubtitleSound[3048]="CA1G1721"
+SubtitleText[3048]="Clone Advisor 1: Proceed through the new opening to 36's position."
+
+SubtitleSound[3049]="CA1G1722"
+SubtitleText[3049]="Clone Advisor 1: 38 get clear and detonate the charge."
+
+SubtitleSound[3050]="CA1G1723"
+SubtitleText[3050]="Clone Advisor 1: 07 has been incapacitated.  Administer field bacta immediately."
+
+SubtitleSound[3051]="CA1G1724"
+SubtitleText[3051]="Clone Advisor 1: 40 has been incapacitated.  Administer field bacta immediately."
+
+SubtitleSound[3052]="CA1G1725"
+SubtitleText[3052]="Clone Advisor 1: 62 has been incapacitated.  Administer field bacta immediately."
+
+SubtitleSound[3053]="CA1G1726"
+SubtitleText[3053]="Clone Advisor 1: Sun Fac is making a run for the door.  Stop Him!!"
+
+SubtitleSound[3054]="D38G1512"
+SubtitleText[3054]="Delta 38: He's made it through."
+
+SubtitleSound[3055]="CA1G1727"
+SubtitleText[3055]="Clone Advisor 1: Step it up 38 I am reading a power transfer to Sun Fac's fighter."
+
+SubtitleSound[3056]="CA1G1728"
+SubtitleText[3056]="Clone Advisor 1: 38, the outer parimiter defense shield has been activated."
+
+SubtitleSound[3057]="D38G1513"
+SubtitleText[3057]="Delta 38: There he is, outside the shield."
+
+SubtitleSound[3058]="CA1G1729"
+SubtitleText[3058]="Clone Advisor 1: We can't let Sun Fac get away in his ship."
+
+SubtitleSound[3059]="CA1G1730"
+SubtitleText[3059]="Clone Advisor 1: This elevator leads to the lower levels"
+
+SubtitleSound[3060]="CA1G1731"
+SubtitleText[3060]="Clone Advisor 1: There's no time to celebrate, Deltas."
+
+SubtitleSound[3061]="CA1G1732"
+SubtitleText[3061]="Clone Advisor 1: As you already know 36's squad has been incapacitated."
+
+SubtitleSound[3062]="CA1G1733"
+SubtitleText[3062]="Clone Advisor 1: Their mission was to disable a droid factory in this sector."
+
+SubtitleSound[3063]="CA1G1734"
+SubtitleText[3063]="Clone Advisor 1: Your squad has been retasked for this purpose"
+
+SubtitleSound[3064]="CA1G1735"
+SubtitleText[3064]="Clone Advisor 1: Proceed to the elevator"
+
+SubtitleSound[3065]="CA1G1736"
+SubtitleText[3065]="Clone Advisor 1: 38 my scanners show an explosion."
+
+SubtitleSound[3066]="CA1G1737"
+SubtitleText[3066]="Clone Advisor 1: That's affirmative.  Subject terminated."
+
+SubtitleSound[3067]="D40G1509"
+SubtitleText[3067]="Delta 40: Hostile contact!"
+
+SubtitleSound[3068]="D62G1509"
+SubtitleText[3068]="Delta 62: Boss!  He just grabbed Sev!"
+
+SubtitleSound[3069]="D38G1514"
+SubtitleText[3069]="Delta 38: Getting acquainted with the locals, eh, Sev?"
+
+SubtitleSound[3070]="D07G1510"
+SubtitleText[3070]="Delta 07: Yeah.  One down, two-hundred thousand to go."
+
+SubtitleSound[3071]="D62G1510"
+SubtitleText[3071]="Delta 62: Don't get cocky.  I haven't had my shot yet."
+
+SubtitleSound[3072]="CA1G1564"
+SubtitleText[3072]="Clone Advisor 1: Delta, need a sitrep.  How's your man down?"
+
+SubtitleSound[3073]="D38G1515"
+SubtitleText[3073]="Delta 38: He's fine.  Delta squad is on the ground and moving"
+
+SubtitleSound[3074]="CA1G1565"
+SubtitleText[3074]="Clone Advisor 1: Anti-air defenses are preventing us from landing any closer with the gunship."
+
+SubtitleSound[3075]="CA1G1566"
+SubtitleText[3075]="Clone Advisor 1: …so you're tabbing in on foot."
+
+SubtitleSound[3076]="D38G1516"
+SubtitleText[3076]="Delta 38: There's plenty of ammo around here."
+
+SubtitleSound[3077]="T17G1001"
+SubtitleText[3077]="Trooper 17: Hey Three-Five, check it out:  commandos."
+
+SubtitleSound[3078]="T35G1001"
+SubtitleText[3078]="Trooper 35: If they're anything as good as I hear, they can practically win the war themselves…"
+
+SubtitleSound[3079]="D07G1511"
+SubtitleText[3079]="Delta 07: Look at these poor sods.  They don't have a clue."
+
+SubtitleSound[3080]="D38G1517"
+SubtitleText[3080]="Delta 38: Cut the chatter.  We've got our objective, they've got theirs."
+
+SubtitleSound[3081]="TPRG1001"
+SubtitleText[3081]="Trooper: Medic!  We need a medic over here!"
+
+SubtitleSound[3082]="TPRG1002"
+SubtitleText[3082]="Trooper: Hostiles have broken our lines."
+
+SubtitleSound[3083]="TPRG1003"
+SubtitleText[3083]="Trooper: They're in the trench!  Pull back to Gamma sector!  Pull back!"
+
+SubtitleSound[3084]="TPRG1004"
+SubtitleText[3084]="Trooper: Something big is going down. Look, they brought in the commandos."
+
+SubtitleSound[3085]="TPRG1005"
+SubtitleText[3085]="Trooper: We're glad to have the help.  What's your call sign?"
+
+SubtitleSound[3086]="D38G1518"
+SubtitleText[3086]="Delta 38: Delta Squad.  But we're not your reinforcements."
+
+SubtitleSound[3087]="D07G1512"
+SubtitleText[3087]="Delta 07: Targets spotted on the ridge."
+
+SubtitleSound[3088]="CA1G1567"
+SubtitleText[3088]="Clone Advisor 1: Do not engage the enemy unless absolutely necessary."
+
+SubtitleSound[3089]="D07G1513"
+SubtitleText[3089]="Delta 07: What about for target practice?"
+
+SubtitleSound[3090]="CA1G1568"
+SubtitleText[3090]="Clone Advisor 1: Timing is critical, Delta.  Keep moving."
+
+SubtitleSound[3091]="CA1G1569"
+SubtitleText[3091]="Clone Advisor 1: We don't have much time.  Shift it, Delta!"
+
+SubtitleSound[3092]="D38G1519"
+SubtitleText[3092]="Delta 38: Advisor, we've reached the downed gunship."
+
+SubtitleSound[3093]="D38G1520"
+SubtitleText[3093]="Delta 38: We've got a commando down, here!  He needs medical attention, pronto."
+
+SubtitleSound[3094]="CA1G1570"
+SubtitleText[3094]="Clone Advisor 1: Three-Eight, advance and strike the enemy before they discover your position."
+
+SubtitleSound[3095]="CA1G1571"
+SubtitleText[3095]="Clone Advisor 1: You're the Lead.  Order your squad to proceed in Search and Destroy formation."
+
+SubtitleSound[3096]="TPRG1006"
+SubtitleText[3096]="Trooper: Sir! You're heading into enemy territory.  It’s thick with droids and bugs."
+
+SubtitleSound[3097]="TPRG1007"
+SubtitleText[3097]="Trooper: We're erecting barricades as a makeshift defense perimeter.  "
+
+SubtitleSound[3098]="TPRG1008"
+SubtitleText[3098]="Trooper: Hard contact!  Hostiles incoming!"
+
+SubtitleSound[3099]="TPRG1009"
+SubtitleText[3099]="Trooper: There's too many of them!"
+
+SubtitleSound[3100]="CA1G1572"
+SubtitleText[3100]="Clone Advisor 1: Reading a droid control signal 20 meters northwest from your current vector."
+
+SubtitleSound[3101]="CA1G1573"
+SubtitleText[3101]="Clone Advisor 1: This trench leads to the rear of the enemy lines."
+
+SubtitleSound[3102]="CA1G1574"
+SubtitleText[3102]="Clone Advisor 1: Lead.  Got a droid control signal.  You're right on top of it."
+
+SubtitleSound[3103]="CA1G1575"
+SubtitleText[3103]="Clone Advisor 1: Lead, I have uploaded a demolition placement location to your visor"
+
+SubtitleSound[3104]="D38G1521"
+SubtitleText[3104]="Delta 38: Scorch, I need a big hole, right here."
+
+SubtitleSound[3105]="D62G1511"
+SubtitleText[3105]="Delta 62: Good.  I'm dying to blow something up."
+
+SubtitleSound[3106]="D62G1512"
+SubtitleText[3106]="Delta 62: Would you like a large or small crater sir?"
+
+SubtitleSound[3107]="D38G1522"
+SubtitleText[3107]="Delta 38: Just get us inside with out killing the squad, Scorch."
+
+SubtitleSound[3108]="D62G1513"
+SubtitleText[3108]="Delta 62: One fireball special, coming right up."
+
+SubtitleSound[3109]="D62G1514"
+SubtitleText[3109]="Delta 62: The charge is set and ready to detonate.  It's all yours, Boss."
+
+SubtitleSound[3110]="D62G1515"
+SubtitleText[3110]="Delta 62: Anytime, Boss.  Go ahead and punch it."
+
+SubtitleSound[3111]="D62G1516"
+SubtitleText[3111]="Delta 62: Boss, you're going to have to detonate the ordnance, or we're not going anywhere."
+
+SubtitleSound[3112]="D62G1517"
+SubtitleText[3112]="Delta 62: Whooo-hoo! Yeah, I love that smell!"
+
+SubtitleSound[3113]="D40G1510"
+SubtitleText[3113]="Delta 40: All I smell is burnt Geonosian."
+
+SubtitleSound[3114]="TPRG1010"
+SubtitleText[3114]="Trooper: Ahh!  Take cover!"
+
+SubtitleSound[3115]="CA1G1576"
+SubtitleText[3115]="Clone Advisor 1: We are planning a two-pronged attack."
+
+SubtitleSound[3116]="CA1G1577"
+SubtitleText[3116]="Clone Advisor 1: Theta Squad will disable the droid factory.  Your team will target the Geonosian leader Sun Fac."
+
+SubtitleSound[3117]="CA1G1578"
+SubtitleText[3117]="Clone Advisor 1: Theta Squad is well into enemy territory.  They're working on blowing a door in between you and your objective."
+
+SubtitleSound[3118]="CA1G1579"
+SubtitleText[3118]="Clone Advisor 1: Geonosian warriors on an intercept course.  Set up a sniper to pick them off."
+
+SubtitleSound[3119]="D38G1523"
+SubtitleText[3119]="Delta 38: How's it look, Scorch?"
+
+SubtitleSound[3120]="D62G1518"
+SubtitleText[3120]="Delta 62: Pretty substantial.  We're not blasting through this one."
+
+SubtitleSound[3121]="D40G1511"
+SubtitleText[3121]="Delta 40: Sir, request permission to slice the door terminal."
+
+SubtitleSound[3122]="D38G1524"
+SubtitleText[3122]="Delta 38: Work your magic, Fixer. Get us inside."
+
+SubtitleSound[3123]="CA1G1580"
+SubtitleText[3123]="Clone Advisor 1: Lead, I need an improvised objective.  Anti-air turrets threatening our air superiority."
+
+SubtitleSound[3124]="CA1G1581"
+SubtitleText[3124]="Clone Advisor 1: Get those off line now.  Any means necessary."
+
+SubtitleSound[3125]="D40G1512"
+SubtitleText[3125]="Delta 40: Accessing Anti-Air controls."
+
+SubtitleSound[3126]="D40G1513"
+SubtitleText[3126]="Delta 40: Ooh, this is nice.  I can do much better than just "offline.""
+
+SubtitleSound[3127]="D40G1514"
+SubtitleText[3127]="Delta 40: Separatist turrets now targeting... Separatist craft."
+
+SubtitleSound[3128]="D62G1519"
+SubtitleText[3128]="Delta 62: Fixer, you're sick.  I respect that."
+
+SubtitleSound[3129]="CA1G1582"
+SubtitleText[3129]="Clone Advisor 1: Fantastic work.  Someone's bucking for a promotion."
+
+SubtitleSound[3130]="CA1G1583"
+SubtitleText[3130]="Clone Advisor 1: Press on, commandos."
+
+SubtitleSound[3131]="D38G1525"
+SubtitleText[3131]="Delta 38: Security shield disabled.  We're in."
+
+SubtitleSound[3132]="D40G1515"
+SubtitleText[3132]="Delta 40: This is more like it.  We're commandos, not bloody infantry soldiers."
+
+SubtitleSound[3133]="D07G1514"
+SubtitleText[3133]="Delta 07: Who cares as long as the hostiles keep coming?"
+
+SubtitleSound[3134]="D38G1526"
+SubtitleText[3134]="Delta 38: Anyone else hear that?"
+
+SubtitleSound[3135]="CA1G1584"
+SubtitleText[3135]="Clone Advisor 1: Delta, we've got clone trooper signatures in your area."
+
+SubtitleSound[3136]="CA1G1585"
+SubtitleText[3136]="Clone Advisor 1: Check for prisoners."
+
+SubtitleSound[3137]="TPRG1011"
+SubtitleText[3137]="Trooper: Commandos!  Boy, are we glad to see you guys."
+
+SubtitleSound[3138]="TPRG1012"
+SubtitleText[3138]="Trooper: How about getting us out of here?"
+
+SubtitleSound[3139]="D62G1520"
+SubtitleText[3139]="Delta 62: Well well well, this must be embarrassing."
+
+SubtitleSound[3140]="D40G1516"
+SubtitleText[3140]="Delta 40: Stow it, Six-Two."
+
+SubtitleSound[3141]="CA1G1586"
+SubtitleText[3141]="Clone Advisor 1: Delta Squad.   Switch to visor mode."
+
+SubtitleSound[3142]="CA1G1587"
+SubtitleText[3142]="Clone Advisor 1: Delta Squad, it must be dark down there.  Switch to full spectrum visibility.  Toggle your visors, lads."
+
+SubtitleSound[3143]="D38G1527"
+SubtitleText[3143]="Delta 38: Advisor, we've got a target of opportunity here.  We've found a strategy room.  Shall we capture intel?"
+
+SubtitleSound[3144]="CA1G1588"
+SubtitleText[3144]="Clone Advisor 1: Negative, Delta.  Stick with your primary objective.  Find Sun Fac."
+
+SubtitleSound[3145]="D38G1528"
+SubtitleText[3145]="Delta 38: There's a Geonosian fighter out there.  How much you wanna bet Sun Fac tries to use it to escape?"
+
+SubtitleSound[3146]="D38G1529"
+SubtitleText[3146]="Delta 38: We need to destroy it before he has the chance."
+
+SubtitleSound[3147]="D38G1530"
+SubtitleText[3147]="Delta 38: Target sighted.  But there's a security shield…"
+
+SubtitleSound[3148]="CA1G1589"
+SubtitleText[3148]="Clone Advisor 1: Delta Lead, take control of those AA turrets and shoot that fighter out of the sky."
+
+SubtitleSound[3149]="CA1G1590"
+SubtitleText[3149]="Clone Advisor 1: Terminate with extreme prejudice."
+
+SubtitleSound[3150]="D38G1531"
+SubtitleText[3150]="Delta 38: Fixer, think you can slice these turrets?"
+
+SubtitleSound[3151]="D40G1517"
+SubtitleText[3151]="Delta 40: Affirmative."
+
+SubtitleSound[3152]="CA1G1591"
+SubtitleText[3152]="Clone Advisor 1: Delta Lead, it is absolutely vital that Sun Fac not escape."
+
+SubtitleSound[3153]="CA1G1592"
+SubtitleText[3153]="Clone Advisor 1: Sun Fac's fighter is warming up…. Delta, what are you doing?"
+
+SubtitleSound[3154]="D38G1532"
+SubtitleText[3154]="Delta 38: Hold on, Advisor.  Almost there."
+
+SubtitleSound[3155]="D40G1518"
+SubtitleText[3155]="Delta 40: Did you see that?  That craft didn’t look Geonosian."
+
+SubtitleSound[3156]="CA1G1593"
+SubtitleText[3156]="Clone Advisor 1: Confirmed, it's unidentified.  I'll check the intelligence databanks.  Move on Deltas."
+
+SubtitleSound[3157]="CA1G1738"
+SubtitleText[3157]="Clone Advisor 1: Three-Eight, Delta Lead, remember your immediate objective is to rendezvous with your squadmate.  Keep your eyes open."
+
+SubtitleSound[3158]="CA1G1739"
+SubtitleText[3158]="Clone Advisor 1: Advise you blast that barrel, Delta Lead."
+
+SubtitleSound[3159]="CA1G1740"
+SubtitleText[3159]="Clone Advisor 1: The explosion will clear your path."
+
+SubtitleSound[3160]="CA1G1741"
+SubtitleText[3160]="Clone Advisor 1: Delta Lead, squadmate Six-Two is in your vicinity.  You should be coming up on him shortly."
+
+SubtitleSound[3161]="D38G1533"
+SubtitleText[3161]="Delta 38: Copy that, Advisor.  "
+
+SubtitleSound[3162]="D62G1521"
+SubtitleText[3162]="Delta 62: Wooo-hoo!  Eat plasma, you stupid droids!  Yeah!  Have some of that!"
+
+SubtitleSound[3163]="D62G1522"
+SubtitleText[3163]="Delta 62: Oh, hey, Boss.  Didn't see you there.  "
+
+SubtitleSound[3164]="D38G1534"
+SubtitleText[3164]="Delta 38: Good to see you, Scorch.  What's the situation? "
+
+SubtitleSound[3165]="D62G1523"
+SubtitleText[3165]="Delta 62: Delta Four-Oh has been slicing the Separatist networks.  He's got some intel on Sun Fac.  Let's go find him. "
+
+SubtitleSound[3166]="D62G1524"
+SubtitleText[3166]="Delta 62: I'm linking up to your HUD, Boss."
+
+SubtitleSound[3167]="CA1G1742"
+SubtitleText[3167]="Clone Advisor 1: Delta Lead, advise you task Six-Two with destroying that obstacle.  He's got the ordnance."
+
+SubtitleSound[3168]="D38G1535"
+SubtitleText[3168]="Delta 38: Scorch, I need you to demo that bunker for me."
+
+SubtitleSound[3169]="D62G1525"
+SubtitleText[3169]="Delta 62: I copy.  Music to my ears, Boss."
+
+SubtitleSound[3170]="D62G1526"
+SubtitleText[3170]="Delta 62: What the-- aw, that gunship took my kill!  "
+
+SubtitleSound[3171]="D62G1527"
+SubtitleText[3171]="Delta 62: I do all the work, and some rocket jockey comes in and takes the glory."
+
+SubtitleSound[3172]="D38G1536"
+SubtitleText[3172]="Delta 38: I'd better let Six-Two handle this first job."
+
+SubtitleSound[3173]="CA1G1743"
+SubtitleText[3173]="Clone Advisor 1: Delta Lead, squadmate Four-Oh is now in your vicinity.  You're getting close."
+
+SubtitleSound[3174]="D40G1519"
+SubtitleText[3174]="Delta 40: Three-Eight!  Six-Two!  "
+
+SubtitleSound[3175]="D38G1537"
+SubtitleText[3175]="Delta 38: Ready for action, Fixer?"
+
+SubtitleSound[3176]="D40G1520"
+SubtitleText[3176]="Delta 40: Yes, sir!  I've sliced the network, and given Oh-Seven an advance position.  He's advancing to Sun Fac's location.  We'd better hurry."
+
+SubtitleSound[3177]="D62G1528"
+SubtitleText[3177]="Delta 62: Yeah, if we don't get there fast, might not be anything left!"
+
+SubtitleSound[3178]="D40G1521"
+SubtitleText[3178]="Delta 40: Uploading and linking with your HUD, sir."
+
+SubtitleSound[3179]="CA1G1744"
+SubtitleText[3179]="Clone Advisor 1: Delta Lead, advise you task Four-Oh with slicing that security shield.  He is supremely qualified."
+
+SubtitleSound[3180]="D38G1538"
+SubtitleText[3180]="Delta 38: Fixer, I need you to slice that terminal for me."
+
+SubtitleSound[3181]="D40G1522"
+SubtitleText[3181]="Delta 40: Yes, sir.  It'll only take a minute."
+
+SubtitleSound[3182]="D40G1523"
+SubtitleText[3182]="Delta 40: Clean slice!  We're in!"
+
+SubtitleSound[3183]="D38G1539"
+SubtitleText[3183]="Delta 38: I can't make any sense of this gibberish.  Better let Four-Oh handle the slicing for now."
+
+SubtitleSound[3184]="D38G1542"
+SubtitleText[3184]="Delta 38: Nah.  Sev LIVES to snipe.  Don't want to take that away from him."
+
+SubtitleSound[3185]="CA1G1745"
+SubtitleText[3185]="Clone Advisor 1: Delta Lead, squadmate Oh-Seven is now in your vicinity and remaining covert.  Proceed with caution."
+
+SubtitleSound[3186]="D62G1529"
+SubtitleText[3186]="Delta 62: Good old Sev… See?  Brutality CAN be beautiful!"
+
+SubtitleSound[3187]="D07G1515"
+SubtitleText[3187]="Delta 07: I wish I knew what he was talking about."
+
+SubtitleSound[3188]="D38G1540"
+SubtitleText[3188]="Delta 38: Where's Sun Fac?"
+
+SubtitleSound[3189]="D07G1516"
+SubtitleText[3189]="Delta 07: In the next room, Boss.  And don't worry, I saved some targets for you guys."
+
+SubtitleSound[3190]="D07G1517"
+SubtitleText[3190]="Delta 07: Oh-Seven, locking into your HUD, sir."
+
+SubtitleSound[3191]="CA1G1746"
+SubtitleText[3191]="Clone Advisor 1: Delta Lead, assign Oh-Seven to sniper position.  We need a target on Sun Fac."
+
+SubtitleSound[3192]="D38G1541"
+SubtitleText[3192]="Delta 38: Sev, you ready to put your crosshairs on some hostiles ?"
+
+SubtitleSound[3193]="D07G1518"
+SubtitleText[3193]="Delta 07: I'm always ready, sir.  Always ready…"
+
+SubtitleSound[3194]="D07G1519"
+SubtitleText[3194]="Delta 07: Got a position here.  Feel free to move ahead if you want."
+
+SubtitleSound[3195]="D62G1530"
+SubtitleText[3195]="Delta 62: Just don't get in his crosshairs."
+
+SubtitleSound[3196]="D40G1524"
+SubtitleText[3196]="Delta 40: Shut it, Six-Two.  Deltas ready!"
+
+SubtitleSound[3197]="CA1G1747"
+SubtitleText[3197]="Clone Advisor 1: There's a medical station in your vicinity."
+
+SubtitleSound[3198]="CA1G1748"
+SubtitleText[3198]="Clone Advisor 1: Advise you interface, and get yourself some bacta."
+
+SubtitleSound[3199]="CA1G1749"
+SubtitleText[3199]="Clone Advisor 1: Heal yourself with bacta before you go any further."
+
+SubtitleSound[3200]="CA1G1750"
+SubtitleText[3200]="Clone Advisor 1: Bacta dispenser location uploaded to your objective tracker."
+
+SubtitleSound[3201]="CA1G1751"
+SubtitleText[3201]="Clone Advisor 1: There is a gun position near your location preventing our troops from advancing."
+
+SubtitleSound[3202]="CA1G1752"
+SubtitleText[3202]="Clone Advisor 1: Targeting the gunner's location."
+
+SubtitleSound[3203]="CA1G1753"
+SubtitleText[3203]="Clone Advisor 1: Throw a couple thermal grenades to take them out."
+
+SubtitleSound[3204]="CA1G1754"
+SubtitleText[3204]="Clone Advisor 1: Delta Lead, looks like you'll have to take them out with grenades"
+
+SubtitleSound[3205]="CA1G1755"
+SubtitleText[3205]="Clone Advisor 1: You need to stop that gunner."
+
+SubtitleSound[3206]="CA1G1756"
+SubtitleText[3206]="Clone Advisor 1: The objective indicator is pointing at your target."
+
+SubtitleSound[3207]="CA1G1757"
+SubtitleText[3207]="Clone Advisor 1: The only way to take that gun emplacement out is with grenades."
+
+SubtitleSound[3208]="CA1G1758"
+SubtitleText[3208]="Clone Advisor 1: Your grenade inventory is tracked here on your visor."
+
+SubtitleSound[3209]="CA1G1759"
+SubtitleText[3209]="Clone Advisor 1: Grenades have been added to your inventory."
+
+SubtitleSound[3210]="CA1G1760"
+SubtitleText[3210]="Clone Advisor 1: Recommend you take the thermal detonator grenades from the ammo pallet and destroy that gun position."
+
+SubtitleSound[3211]="CA1G1761"
+SubtitleText[3211]="Clone Advisor 1: Excellent.  Now lob the grenades at that gun position."
+
+SubtitleSound[3212]="CA1G1762"
+SubtitleText[3212]="Clone Advisor 1: You are directly behind the turret emplacement."
+
+SubtitleSound[3213]="CA1G1763"
+SubtitleText[3213]="Clone Advisor 1: Those sonic turrets are tearing our troopers apart."
+
+SubtitleSound[3214]="CA1G1764"
+SubtitleText[3214]="Clone Advisor 1: Scans indicate Republic troops trapped behind this door."
+
+SubtitleSound[3215]="CA1G1765"
+SubtitleText[3215]="Clone Advisor 1: Delta Four-Oh is on the other side of this door."
+
+SubtitleSound[3216]="CA1G1766"
+SubtitleText[3216]="Clone Advisor 1: Place a charge and blow it.  I'll warn him to step back."
+
+SubtitleSound[3217]="CA1G1767"
+SubtitleText[3217]="Clone Advisor 1: Release all the soldiers before you leave this area."
+
+SubtitleSound[3218]="CA1G1768"
+SubtitleText[3218]="Clone Advisor 1: Sun Fac is making a run for it!"
+
+SubtitleSound[3219]="CA1G1769"
+SubtitleText[3219]="Clone Advisor 1: Delta Lead, you need to keep your squad focused and under your direction.  Use your squad commands to get results."
+
+SubtitleSound[3220]="CA1G1770"
+SubtitleText[3220]="Clone Advisor 1: "Form Up" keeps the squad close and observant.  Good for moving through dangerous territory."
+
+SubtitleSound[3221]="CA1G1771"
+SubtitleText[3221]="Clone Advisor 1: "Search and Destroy" will order your squad to advance and fire on all hostiles."
+
+SubtitleSound[3222]="CA1G1772"
+SubtitleText[3222]="Clone Advisor 1: If you want the squad to stop and defend a single spot, then tell them to "Secure Position.""
+
+SubtitleSound[3223]="CA1G1773"
+SubtitleText[3223]="Clone Advisor 1: And finally, if you need to cancel all your commands and get your squad back together, simply use "Recall.""
+
+SubtitleSound[3224]="CA1G1774"
+SubtitleText[3224]="Clone Advisor 1: Remember, they're smart lads, but YOU are their leader.  They WILL need your commands to operate at peak performance."
+
+SubtitleSound[3225]="CA1G1775"
+SubtitleText[3225]="Clone Advisor 1: Delta Lead down!  "
+
+SubtitleSound[3226]="CA1G1776"
+SubtitleText[3226]="Clone Advisor 1: Critical injury to Delta Lead!  Critical injury! "
+
+SubtitleSound[3227]="CA1G1777"
+SubtitleText[3227]="Clone Advisor 1: Delta down! "
+
+SubtitleSound[3228]="CA1G1778"
+SubtitleText[3228]="Clone Advisor 1: Hold on, Three-Eight.  One of your squad is going to administer bacta."
+
+SubtitleSound[3229]="CA1G1779"
+SubtitleText[3229]="Clone Advisor 1: Hang in there, Lead, one of your squadmates is on the way with a medpack."
+
+SubtitleSound[3230]="CA1G1780"
+SubtitleText[3230]="Clone Advisor 1: Hang on, soldier!  We'll have you up again in no time."
+
+SubtitleSound[3231]="CA1G1781"
+SubtitleText[3231]="Clone Advisor 1: A quick word on visor modes.  Your helmets have been upgraded considerably, so listen up."
+
+SubtitleSound[3232]="CA1G1782"
+SubtitleText[3232]="Clone Advisor 1: Tactical visor uses a scanner to highlight objectives, ammunition, and team-mates."
+
+SubtitleSound[3233]="CA1G1783"
+SubtitleText[3233]="Clone Advisor 1: And low-light vision captures extra available light, so you can see in dark environments."
+
+SubtitleSound[3234]="CA1G1784"
+SubtitleText[3234]="Clone Advisor 1: Switch off that visor, Delta.  It's plenty bright in here."
+
+SubtitleSound[3235]="CA1G1785"
+SubtitleText[3235]="Clone Advisor 1: This shield has already been sliced.  Delta Four-Oh has been here already."
+
+SubtitleSound[3236]="CA1G1786"
+SubtitleText[3236]="Clone Advisor 1: Delta Lead!  Are you all right?  "
+
+SubtitleSound[3237]="CA1G1787"
+SubtitleText[3237]="Clone Advisor 1: You just took an anti-infantry round.  Your vitals don't look very good."
+
+SubtitleSound[3238]="CA1G1788"
+SubtitleText[3238]="Clone Advisor 1: Tend those injuries, now!"
+
+SubtitleSound[3239]="CA1G1789"
+SubtitleText[3239]="Clone Advisor 1: Proceed to the next bacta station and plug in.  You'll see a tall device with a cross on it."
+
+SubtitleSound[3240]="CA1G1790"
+SubtitleText[3240]="Clone Advisor 1: You are not to proceed until you have one hundred percent health and shields.  Got that, soldier?"
+
+SubtitleSound[3241]="CA1G1791"
+SubtitleText[3241]="Clone Advisor 1: Lead, your vitals are scanning one hundred percent.  You are ready to proceed."
+
+SubtitleSound[3242]="CA1G1792"
+SubtitleText[3242]="Clone Advisor 1: You're behind enemy lines, now, Delta Lead.  You're on your own."
+
+SubtitleSound[3243]="CA1G1793"
+SubtitleText[3243]="Clone Advisor 1: Delta Lead, those barrels nearby scan as being explosive."
+
+SubtitleSound[3244]="CA1G1794"
+SubtitleText[3244]="Clone Advisor 1: Delta Lead, aim your ordnance at those nearby barrels.  Scans indicate that they could be very explosive."
+
+SubtitleSound[3245]="CA1G1795"
+SubtitleText[3245]="Clone Advisor 1: Remember, Delta Lead, your ultimate objective is Sun Fac, but your IMMEDIATE objective is to rendezvous with Delta Four Oh."
+
+SubtitleSound[3246]="CA1G1796"
+SubtitleText[3246]="Clone Advisor 1: Forget it, Lead!  Your rifle's not accurate from this distance!"
+
+SubtitleSound[3247]="CA1G1797"
+SubtitleText[3247]="Clone Advisor 1: Use your marksman!  Put Oh-Seven on that position and let him do his job!"
+
+SubtitleSound[3248]="CA1G1798"
+SubtitleText[3248]="Clone Advisor 1: Thanks, Delta.  Our troopers have been locked in a stalemate for a good hour now."
+
+SubtitleSound[3249]="CMDG1001"
+SubtitleText[3249]="Clone Medic: Hold up, commando.  You aren't going anywhere til you receive bacta treatment."
+
+SubtitleSound[3250]="CMDG1002"
+SubtitleText[3250]="Clone Medic: I don't care WHAT your rank is; you are not getting past this barricade until you've recovered."
+
+SubtitleSound[3251]="CMDG1003"
+SubtitleText[3251]="Clone Medic: Yeah, all right.  You look okay, for now."
+
+SubtitleSound[3252]="CMDG1004"
+SubtitleText[3252]="Clone Medic: Okay, soldier.  Vitals and shields scan acceptable."
+
+SubtitleSound[3253]="CMDG1005"
+SubtitleText[3253]="Clone Medic: Come on through.  But don't come crawling back to me, when you get your legs blown off.  That's enemy territory.   "
+
+SubtitleSound[3254]="D40G1525"
+SubtitleText[3254]="Delta 40: That's affirmative.  Subject terminated."
+
+SubtitleSound[3255]="D40G1526"
+SubtitleText[3255]="Delta 40: Freight elevator.  I can slice this terminal, raise the elevator, and bridge this gap."
+
+SubtitleSound[3256]="D40G1527"
+SubtitleText[3256]="Delta 40: Oh-Seven, stop playing with him!"
+
+SubtitleSound[3257]="D40G1528"
+SubtitleText[3257]="Delta 40: Stop messing about and put him down!"
+
+SubtitleSound[3258]="D40G1529"
+SubtitleText[3258]="Delta 40: Sev!  Enough!"
+
+SubtitleSound[3259]="D40G1530"
+SubtitleText[3259]="Delta 40: He's taking off!  Now you've lost--- oh.  "
+
+SubtitleSound[3260]="D40G1531"
+SubtitleText[3260]="Delta 40: Eh… Good job, Seven.  "
+

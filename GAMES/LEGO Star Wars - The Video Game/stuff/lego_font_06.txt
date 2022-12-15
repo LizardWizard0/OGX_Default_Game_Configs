@@ -1,0 +1,15 @@
+name xbox_lego_font_06
+height 60
+base 0
+trans 0
+chars "ABCDEFGHIJKLMNO"
+chars "PQRSTUVWXYZ#ÜÅ"
+chars "abcdefghijklmnop"
+chars "qrstuvwxyz©®ı"
+chars "0123456789şûÿ"
+chars ".,:/-?!'_()%$\<>@"
+chars "ºáúñíóéèàÈòß¡¿=+"
+chars "öäüêïîôøæåçùìâëÉ"
+
+
+

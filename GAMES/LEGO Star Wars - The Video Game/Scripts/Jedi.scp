@@ -1,0 +1,47 @@
+state Base {
+	Conditions {
+		if GotOpponent == 1 goto Caution
+	}
+	Actions {	
+		FollowPlayer "0.75"
+	}
+}
+
+state Caution {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if OpponentIsAThreat == 1 and
+		if PlayerRange < 2.5 and
+		if OpponentOnSamePath == 1 goto Defend
+	}
+	Actions {	
+		FollowPlayer "1"
+	}
+}
+
+state Defend {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if OpponentIsAThreat == 0 goto Caution
+		if PlayerRange > 2.5 goto Caution
+		if OpponentOnSamePath == 0 goto Caution
+		if PlayerRange < 1.5 goto Engage
+	}
+	Actions {	
+		Idle
+	}
+}
+
+state Engage {
+	Conditions {
+		if GotOpponent == 0 goto Base
+		if OpponentIsAThreat == 0 goto Caution
+		if PlayerRange > 2.5 goto Defend
+	}
+	Actions {	
+		FollowOpponent "1"
+	}
+}
+
+
+

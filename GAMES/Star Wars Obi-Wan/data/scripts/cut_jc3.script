@@ -1,0 +1,126 @@
+Copyright (c) 2001, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Actor MaceWindu A_DuelMaceWindu_01
+Actor QuiGon A_Qui-Gon_01
+Actor Sassee A_Sassee_Tiin_Civillian_01
+Actor Plo A_plo_civillian_01
+
+UnEquipWeapon	MaceWindu
+UnEquipWeapon	QuiGon
+
+// TakeControlOf has a slight delay in it, so do these concurrently to avoid problems.
+
+Child TakeControlOf	MaceWindu
+Child TakeControlOf	QuiGon
+Child TakeControlOf	Sassee
+Child TakeControlOf	Plo
+
+WaitForAll
+BeginCutScene
+
+CameraFixed First
+
+Pause 0 5
+
+SetAnimTableIndex MaceWindu 1
+SetAnimTableIndex QuiGon 1
+SetAnimTableIndex Sassee 1
+SetAnimTableIndex Plo 1
+
+UnEquipWeapon	Obi
+Pause 0 5
+
+SetAnimTableIndex Obi 2
+Pause 0 5
+
+PlayAnimation Obi human_cut-jc1_obi_masterpose.anim 1.0 0.0
+PlayAnimation MaceWindu human_cut-jc1_mace_masterpose.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc1_qui_masterpose.anim 1.0 0.0
+PlayAnimation Sassee sas_cut-jc3_masterpose.anim 1.0 0.0
+PlayAnimation Plo plo_cut-jc2_masterpose.anim 1.0 0.0
+
+Pause 0 5
+
+FadeUp
+
+PlayFlourish cut_jc3_m.wav
+
+PlayAnimation MaceWindu human_cut-jc3_mace1_102shot1.anim 1.0 0.0
+PlayAnimation Obi human_cut-jc3_obi1_125shot1.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc3_qui1_125shot1.anim 1.0 0.0
+
+Pause 2 23
+
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_371/Excellent work... all of you. The Jin’ha were indeed using technology far beyond their means to produce weapons especially effective against Jedi Knights.  The implications are disturbing, to say the least."
+
+Pause 2 18
+
+PlayAnimation MaceWindu human_cut-jc3_mace103_225shot2.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Second
+
+Pause 4 2
+
+PlayAnimation Sassee sas_cut-jc3_saesee226_396shot3.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Third 
+
+Pause 4 3
+
+SayLineNonPositionalAndContinue Plo "/PloKoon_372/During our imprisonment, Master Koth and I saw evidence of a large-scale production facility, in addition to the cortosis mine that young Obi-Wan uncovered."
+
+Pause 1 18
+
+PlayAnimation Plo plo_cut-jc3_plo397_650shot4.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Fourth
+
+Pause 8 12
+
+PlayAnimation MaceWindu human_cut-jc3_mace651_803shot5.anim 1.0 0.0
+PlayAnimation Obi human_cut-jc3_obi651_803shot5.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc3_qui651_803shot5.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Fifth
+
+SayLineNonPositionalAndContinue MaceWindu "/MaceWindu_373/The Jin’ha will be dealt with by the Council directly.  We thank you, Obi-Wan, and recognize your bravery and resourcefulness.  Now then… proceed to the training arena, where you will receive training vital to your next mission."
+
+Pause 5 2
+
+PlayAnimation Obi human_cut-jc3_obi804_907shot6.anim 1.0 0.0
+PlayAnimation QuiGon human_cut-jc3_qui651_803shot5.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Sixth 
+
+Pause 3 12
+
+PlayAnimation MaceWindu human_cut-jc3_mace908_1077shot7.anim 1.0 0.0
+
+Pause 0 1
+CameraOff
+CameraFixed Seventh
+
+Pause 5 19
+
+FadeDownAndWait 1
+PreEndCutScene  // If the player hits the start button, it will jump to here
+
+// Better do this before call to NextLevel, because the NextLevel command deletes this script!
+
+FadeDown 0  // Force the a full fade to black even if the player hits the start button
+
+SetAnimTableIndex obi 0
+EndCutScene
+
+NextLevel sa_03

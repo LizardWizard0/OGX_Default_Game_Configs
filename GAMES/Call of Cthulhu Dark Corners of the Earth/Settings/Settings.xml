@@ -1,0 +1,423 @@
+<DCoTESettings>
+
+	<!-- Settings for the application startup -->
+	<Application>
+		<WindowXPos>0</WindowXPos>
+		<WindowYPos>0</WindowYPos>
+		<WindowWidth>800</WindowWidth>
+		<WindowHeight>600</WindowHeight>
+		<FullScreen>0</FullScreen>
+		<FullScreenWidth>800</FullScreenWidth>
+		<FullScreenHeight>600</FullScreenHeight>
+		<FullScreenBitDepth>32</FullScreenBitDepth>
+		<AntiAlias>0</AntiAlias>
+		<StartWithBlackScreen>1</StartWithBlackScreen>
+		<UseTestNormalMap>0</UseTestNormalMap>
+                <AttractLoop>0</AttractLoop>
+                <AttractDelayFromMenu>45.0</AttractDelayFromMenu>
+                <AttractDelayFromGame>0.0</AttractDelayFromGame>		
+		<AllowDebugMenu>0</AllowDebugMenu>
+		<TracerSpeed>10100</TracerSpeed>
+        	<TracerLength>350</TracerLength>
+       	 	<TracerWidth>0.75</TracerWidth>
+		<StaminaLossWalking>0.03</StaminaLossWalking>
+		<StaminaLossRunning>-0.0175</StaminaLossRunning>
+		<StaminaLossCrouched>0.04</StaminaLossCrouched>
+		<StaminaLossNotMoving>0.07</StaminaLossNotMoving>
+		<StaminaLossJump>-0.02</StaminaLossJump>
+		<RumbleDisabled>0</RumbleDisabled>
+		<HeartRumbleMaxStrength>1.0</HeartRumbleMaxStrength>
+		<HeartRumbleFirstPulseLength>0.25</HeartRumbleFirstPulseLength>
+		<HeartRumbleSecondPulseLength>0.25</HeartRumbleSecondPulseLength>
+		<HeartRumbleStartPoint>0.25</HeartRumbleStartPoint>
+		<InterfaceVolume>0.5</InterfaceVolume>
+		<SafeAreaEnabled>0</SafeAreaEnabled>
+		<ReleaseMode>1</ReleaseMode>
+		<DisplayMemoryStats>0</DisplayMemoryStats>
+		<DebugAnimatorPools>0</DebugAnimatorPools>
+		<ReachArmTimeCompression>2.0</ReachArmTimeCompression>
+		<InterfaceFadeInTime>0.25</InterfaceFadeInTime>
+		<JournalFadeInTime>0.5</JournalFadeInTime>
+		<SceneryImpactCullDist>3000.0</SceneryImpactCullDist>
+		<ReverbLevel>0.25</ReverbLevel>
+		<Slipperness>3000</Slipperness>
+		<BlockLoadSoundsAtStartUp>1</BlockLoadSoundsAtStartUp>
+		<EngagingScreenDisplayTime>8.5</EngagingScreenDisplayTime>
+		<DebugWalkablePaths>0</DebugWalkablePaths>
+		<LogSanity>0</LogSanity>
+
+		<!-- PC ONLY SETTINGS -->
+		<WinWindowed>1</WinWindowed>
+		<WinWidth>1024</WinWidth>
+		<WinHeight>768</WinHeight>
+	</Application>
+
+    	<BlockTransferAtGameStart>
+		<File>sound\01_House\MusicBank.xwb</File>
+		<File>sound\01_House\LevelVoiceBank.xwb</File>
+		<File>sound\02_Streets_One\MusicBank.xwb</File>
+		<File>sound\02_Streets_One\LevelVoiceBank.xwb</File>
+		<File>sound\03_STREETS_TWO\MusicBank.xwb</File>
+		<File>sound\03_STREETS_TWO\LevelVoiceBank.xwb</File>
+		<File>sound\04_JAIL_BREAK\MusicBank.xwb</File>
+		<File>sound\04_JAIL_BREAK\LevelVoiceBank.xwb</File>
+		<File>sound\05_STREETS_THREE\MusicBank.xwb</File>
+		<File>sound\05_STREETS_THREE\LevelVoiceBank.xwb</File>
+		<File>sound\06_REFINERY\MusicBank.xwb</File>
+		<File>sound\06_REFINERY\LevelVoiceBank.xwb</File>
+		<File>sound\07_ESOTERIC_ORDER\MusicBank.xwb</File>
+		<File>sound\07_ESOTERIC_ORDER\LevelVoiceBank.xwb</File>
+		<File>sound\08_Boat\MusicBank.xwb</File>
+		<File>sound\08_Boat\LevelVoiceBank.xwb</File>
+		<File>sound\09_REEF\MusicBank.xwb</File>
+		<File>sound\09_REEF\LevelVoiceBank.xwb</File>
+		<File>sound\10_Air_Filled_Tunnels\MusicBank.xwb</File>
+		<File>sound\10_Air_Filled_Tunnels\LevelVoiceBank.xwb</File>
+		<File>sound\MISC01_CITY_OF_DREAMS_03\MusicBank.xwb</File>
+		<File>sound\MISC01_CITY_OF_DREAMS_03\LevelVoiceBank.xwb</File>
+		<File>sound\MISC02_JACKS_OFFICE_CUTSCENE\MusicBank.xwb</File>
+		<File>sound\MISC02_JACKS_OFFICE_CUTSCENE\LevelVoiceBank.xwb</File>
+		<File>sound\MISC03_ASYLUM_CUTSCENE\MusicBank.xwb</File>
+		<File>sound\MISC03_ASYLUM_CUTSCENE\LevelVoiceBank.xwb</File>
+		<File>sound\MISC01_CITY_OF_DREAMS_01\MusicBank.xwb</File>
+        	<File>sound\MISC01_CITY_OF_DREAMS_01\LevelVoiceBank.xwb</File>
+        	<File>sound\MISC01_CITY_OF_DREAMS_02\MusicBank.xwb</File>
+        	<File>sound\MISC01_CITY_OF_DREAMS_02\LevelVoiceBank.xwb</File>
+        	<File>sound\MISC03_ASYLUM_CUTSCENE_FEDS\MusicBank.xwb</File>
+        	<File>sound\MISC03_ASYLUM_CUTSCENE_FEDS\LevelVoiceBank.xwb</File>
+	</BlockTransferAtGameStart>
+
+	<SayCommandSettings>
+	        <PlayerSayTimeDelay>0.3</PlayerSayTimeDelay>
+	        <SayCutsceneCullDist>3000.0</SayCutsceneCullDist>
+	</SayCommandSettings>
+
+
+	<!-- Settings to allow debug streams to be enabled and disabled -->
+	<Streams>
+		<EnableProfile>1</EnableProfile>
+		<EnableMemory>1</EnableMemory>
+		<EnableRendererStats>1</EnableRendererStats>
+		<EnableLocalDebug>1</EnableLocalDebug>
+		<LocalDebugTuning>1030.013</LocalDebugTuning>
+		<EnableRemoteDebug>1</EnableRemoteDebug>
+		<RemoteDebugTuning>1</RemoteDebugTuning>
+	</Streams>
+	
+	<!-- Settings controlling the player behaviour -->
+	<Player>
+		<MoveSpeedCrawl>180.0</MoveSpeedCrawl>					<!-- default: 180 -->
+		<MoveSpeedWalk>380.0</MoveSpeedWalk>					<!-- default: 420 -->
+		<MoveSpeedRun>560.0</MoveSpeedRun>						<!-- default: 600 -->
+		<MoveSpeedJump>590.0</MoveSpeedJump>					<!-- default: 590 -->
+		<MoveSpeedModifierInAir>0.75</MoveSpeedModifierInAir>	<!-- default: 0.75 -->
+		<MoveSpeedClimb>25.0</MoveSpeedClimb>					<!-- default: 25 -->
+		<MoveSpeedJumpDeepOne>3.2</MoveSpeedJumpDeepOne>		<!-- multiplier (edit only in consultation with Ed K) -->
+		<MoveSpeedModifierDeepOne>2.7</MoveSpeedModifierDeepOne>
+		<DeepOneCameraBobModifier>3.0</DeepOneCameraBobModifier>	<!-- default: 4.0 -->
+		<JumpHeight>140.0</JumpHeight>							<!-- OBSOLETE -->
+		<JumpHeightDeepOne>240.0</JumpHeightDeepOne>			<!-- OBSOLETE -->
+		<JumpDisableDuration>0.5</JumpDisableDuration>
+		<StrafeSpeedLean>15.0</StrafeSpeedLean>
+		<!-- Initial setting for FieldOfVision was 45.432 -->
+		<FieldOfVision>55.0</FieldOfVision>
+		<FieldOfVisionSneakMode>68.0</FieldOfVisionSneakMode> <!-- 62.0 -->
+		<FieldOfVisionMax>39.5</FieldOfVisionMax>
+		<FieldOfVisionHybrid>62.0</FieldOfVisionHybrid>
+		<FieldOfVisionDeepOne>70.0</FieldOfVisionDeepOne>
+		<FieldOfVisionYithian>80.0</FieldOfVisionYithian>
+		<FieldOfVisionYithianFocus>62.0</FieldOfVisionYithianFocus>
+		<GodMode>0</GodMode> <!-- 1 = God mode, 0 = normal (vulnerable) -->
+		<ControlMethod>4</ControlMethod>
+		<LockingLeanMode>1</LockingLeanMode>
+                <MoveSpeedJumpDeepOne>800.0</MoveSpeedJumpDeepOne>
+                <MoveSpeedModifierDeepOne>2.0</MoveSpeedModifierDeepOne>
+		<UseReachArm>0</UseReachArm>
+		<DefaultAdjustableRange>160.0</DefaultAdjustableRange>
+		<VertigoControlOscillateFrequency>1.5</VertigoControlOscillateFrequency>
+		<VertigoMaxControlRotateInDegrees>20.0</VertigoMaxControlRotateInDegrees>
+
+		<!-- The proportional effect that ambient lighting has on the equation  -->		
+		<!-- 0.5 will make it equal in effect to the diffuse component  -->		
+		<LightingPropForAmbient>0.3</LightingPropForAmbient>
+
+		<!-- Used to tweak door helper -->
+		<!-- If this is a higher value then you are more likely to be pushed through the door -->
+		<DoorPositionTestModifier>0.65</DoorPositionTestModifier>
+
+		<!-- [WARNING]: Edit the following only on consultation with Chris -->		
+
+		<LastDamageForFastDeath>0.1</LastDamageForFastDeath>
+		<CriticalHealthThreshold>0.1</CriticalHealthThreshold>
+		<CriticalHealthTimeBeforeRecovery>8.0</CriticalHealthTimeBeforeRecovery>
+		<TimeBelowCriticalHealthForFastDeath>1.0</TimeBelowCriticalHealthForFastDeath>		
+		<HeavyBloodLossDuration>30.0</HeavyBloodLossDuration>
+		<BloodLossPerSecond>0.0075</BloodLossPerSecond>
+		<DisableActionNodeDuration>0.3</DisableActionNodeDuration>
+		<PlayerHealthRecover>0.04</PlayerHealthRecover>
+		<MovementModifierBrokenBone>0.25</MovementModifierBrokenBone>
+
+		<!-- These control the morphine timers -->
+		<!-- MorphineTime is the duration of the morphine effect -->
+		<!-- MorphineSeverityRecoveryDelay is the time before the severity band will drop a level -->
+		<MorphineTime>20.0</MorphineTime>
+		<MorphineSeverityRecoveryDelay>180.0</MorphineSeverityRecoveryDelay>
+
+		<!-- health loss per second -->
+		<PoisonDamage>0.05</PoisonDamage>
+		<!-- chance of poison spreading every n seconds -->
+		<PoisonChance>100</PoisonChance>
+		<!-- Time in seconds before next chance of poison spreading -->
+		<PoisonTimer>15</PoisonTimer>
+
+		<!-- [WARNING]: Edit the following only in consultation with Chris -->
+	        <!-- Time in seconds for each treatment type to be applied -->
+		<TreatmentTimeBandage>2.0</TreatmentTimeBandage>
+      	  	<TreatmentTimeSplint>2.0</TreatmentTimeSplint>
+        	<TreatmentTimeSutures>2.0</TreatmentTimeSutures>
+        	<TreatmentTimeAntidote>2.0</TreatmentTimeAntidote>
+        	<TreatmentTimeOverhead>2.0</TreatmentTimeOverhead>
+
+		<!-- HEALTH ITEM CAPS -->		
+		<MaximumBandages>10</MaximumBandages>
+		<MaximumSplints>5</MaximumSplints>
+		<MaximumSutures>5</MaximumSutures>
+		<MaximumAntidotes>2</MaximumAntidotes>
+
+	</Player>
+
+	<PlayerArmMain>
+		<!-- Initial setting for OffsetDown was 34.786 -->
+		<OffsetDown>34.786</OffsetDown>
+		<!-- Initial setting for OffsetBack was 18.001 -->
+		<OffsetBack>25.001</OffsetBack>
+	</PlayerArmMain>
+	
+	<!-- Player Stealth Settings... -->
+	<PlayerStealth>
+		<!-- These times define how often npcs will hear sounds -->
+		<SoundTimeoutSuspicious>0.3</SoundTimeoutSuspicious>
+		<SoundTimeoutUrgent>1.5</SoundTimeoutUrgent>
+		<!-- The thresholds configure at which volumes the player generate each footstep type -->
+		<ThresholdQuietFootstep>0.05</ThresholdQuietFootstep>
+		<ThresholdMediumFootstep>0.20</ThresholdMediumFootstep>
+		<ThresholdLoudFootstep>0.46</ThresholdLoudFootstep>
+		<!-- These control the ranges for each suspicious and urgent sound -->		
+		<ePlayerFootstepVeryQuiet>40.0</ePlayerFootstepVeryQuiet>
+		<ePlayerFootstepQuiet>100.0</ePlayerFootstepQuiet>			<!-- 200.0  -->
+		<ePlayerFootstepMedium>200.0</ePlayerFootstepMedium>		<!-- 500.0  -->
+		<ePlayerFootstepLoud>1200.0</ePlayerFootstepLoud>			<!-- 1400.0  -->
+		<ePlayerLandLight>400.0</ePlayerLandLight>					<!-- 600.0  -->
+		<ePlayerLandMedium>600.0</ePlayerLandMedium>				<!-- 800.0  -->
+		<ePlayerLandHeavy>800.0</ePlayerLandHeavy>					<!-- 1000.0  -->
+		<ePlayerArmsStateQuiet>100.0</ePlayerArmsStateQuiet>		<!-- 300.0  -->
+		<ePlayerArmsStateMedium>200.0</ePlayerArmsStateMedium>		<!-- 400.0  -->
+		<ePlayerArmsStateLoud>500.0</ePlayerArmsStateLoud>			<!-- 500.0  -->
+		<ePlayerMuttering>400.0</ePlayerMuttering>
+		<ePlayerGunshot>100000.0</ePlayerGunshot>
+		<ePlayerMovesDoor>600.0</ePlayerMovesDoor>
+		<ePlayerMovesDoorIntoNpc>300.0</ePlayerMovesDoorIntoNpc>
+		<!-- The values below shouldn't be changed since they're currently not in use -->
+		<eNpcGunshot>10000.0</eNpcGunshot>
+		<ePlayerChangeWeapon>150.0</ePlayerChangeWeapon>			<!-- 300.0  -->
+		<ePlayerReloadWeapon>300.0</ePlayerReloadWeapon>			<!-- 400.0  -->
+		<ePlayerMeleeAttack>300.0</ePlayerMeleeAttack>				<!-- 300.0  -->
+	</PlayerStealth>
+
+	<!-- Settings controlling the debug fly mode -->
+	<XboxFlyMode>
+		<MaxFlySpeed>3000</MaxFlySpeed>		<!-- Default: 1000.0 -->
+		<MinFlySpeed>400.0</MinFlySpeed>	<!-- Default: 300.0 -->
+		<FlyRotateSpeed>0.26</FlyRotateSpeed>	<!-- Default: 0.20 -->
+		<RotateSpeed>0.14</RotateSpeed>		<!-- Default: 0.14 -->
+		<StartInFlyMode>0</StartInFlyMode>
+		<StartPosX>0.0</StartPosX>
+		<StartPosY>0.0</StartPosY>
+		<StartPosZ>200.0</StartPosZ>
+	</XboxFlyMode>
+	
+	<!-- Settings controlling the debug fly mode -->
+	<WindowsFlyMode>
+		<FlySpeed>600.0</FlySpeed>
+		<FlyRotateSpeed>400.0</FlyRotateSpeed>
+		<RotateSpeed>400.0</RotateSpeed>
+		<StartInFlyMode>0</StartInFlyMode>
+	</WindowsFlyMode>
+	
+	<StartupLoading>
+		<GameStartLevel>MISC03_ASYLUM_CUTSCENE</GameStartLevel>
+		<DebugLevel>MISC03_ASYLUM_CUTSCENE</DebugLevel>
+		<MenuDebugLevel>MISC03_ASYLUM_CUTSCENE</MenuDebugLevel>
+		<SkipMenu>0</SkipMenu>
+	</StartupLoading>
+
+	<SubTitles>
+		<Width>0.75</Width>
+		<!-- Previously 0.08 -->
+		<BottomMargin>0.125</BottomMargin>
+		<CharacterAspect>0.20</CharacterAspect>
+		<CharacterHeight>0.040</CharacterHeight>
+		<MaxPanelOpacity>0.8</MaxPanelOpacity>
+		<MaxTextOpacity>0.6</MaxTextOpacity>
+		<ScreenBordersSize>0.25</ScreenBordersSize>
+	</SubTitles>
+	
+	<Visualisations>
+		<DrawProjectiles>0</DrawProjectiles>
+		<DrawImpacts>0</DrawImpacts>
+		<DrawCover>0</DrawCover>		
+		<!-- 0 = drawNever, 1 = drawInEditMode, 2 = drawWhenSelected -->
+		<DobTriggerDrawMode>1</DobTriggerDrawMode>
+		<DobLightDrawMode>0</DobLightDrawMode>
+		<DobActionNodeDrawMode>1</DobActionNodeDrawMode>
+		<FpsCounter>0</FpsCounter>
+		<DebugActionNodeManager>0</DebugActionNodeManager>
+	        <DebugDrawRealtimeEditData>1</DebugDrawRealtimeEditData>
+		<DebugDrawSounds>0</DebugDrawSounds>
+		<DebugDrawDoorHelpers>0</DebugDrawDoorHelpers>
+		<DebugDrawReachTargets>0</DebugDrawReachTargets>
+		<ReportLadderNames>0</ReportLadderNames>
+	</Visualisations>
+
+    <IntroVideos>
+        <SkipVideos>0</SkipVideos>
+       
+        <!-- Available language resources are ENGLISH, JAPANESE, GERMAN, 
+			FRENCH, SPANISH, ITALIAN, KOREAN, TCHINESE, PORTUGESE -->
+        <ENGLISH>
+            <Videos>
+                       <VideoNoSkip>legal.xmv</VideoNoSkip>
+                       <Video>beth_logo.xmv</Video>
+                       <Video>hf_logo.xmv</Video>
+                       <Video>warning.xmv</Video>
+                       <Video>cocdcote_logo.xmv</Video>
+            </Videos>
+        </ENGLISH>
+        <FRENCH>
+            <Videos>
+                       <VideoNoSkip>legal_french.xmv</VideoNoSkip>
+                       <Video>beth_logo.xmv</Video>
+                       <Video>hf_logo.xmv</Video>
+                       <Video>warning_french.xmv</Video>
+                       <Video>cocdcote_logo_french.xmv</Video>
+            </Videos>
+        </FRENCH> 
+         <GERMAN>
+            <Videos>
+                       <VideoNoSkip>legal_german.xmv</VideoNoSkip>
+                       <Video>beth_logo.xmv</Video>
+                       <Video>hf_logo.xmv</Video>
+                       <Video>warning_german.xmv</Video>
+                       <Video>cocdcote_logo_german.xmv</Video>
+            </Videos>
+        </GERMAN>      
+    </IntroVideos>
+
+	<LoadingScreens>
+        	<LoadingScreen>
+	            <Level>01_HOUSE</Level>
+	            <TextureID>344</TextureID>
+	        </LoadingScreen>
+	</LoadingScreens>
+
+	<PlayerFalling>
+		<FallDistanceFatal>995.0</FallDistanceFatal>
+		<FallDistanceDamageHeavy>595.0</FallDistanceDamageHeavy>
+		<FallDistanceDamageLight>395.0</FallDistanceDamageLight>
+		<FallDistanceLandingHeavy>295.0</FallDistanceLandingHeavy>
+		<FallDistanceLandingLight>100.0</FallDistanceLandingLight>
+		<FallDamageHeavyPerLeg>0.1</FallDamageHeavyPerLeg>
+		<FallDamageLightPerLeg>0.05</FallDamageLightPerLeg>
+		<FallDamageLandingHeavyPerLeg>0.01</FallDamageLandingHeavyPerLeg>
+	</PlayerFalling>
+	
+	<WeaponAccuracy>	
+		<!-- NB. These have deliberately been set to zero since the deviation is now controlled by means of passive hand waveyness -->
+		<MaxDeviationShotgun>0.0</MaxDeviationShotgun>
+		<MaxDeviationRevolver>0.0</MaxDeviationRevolver>
+		<MaxDeviationSpringfield>0.0</MaxDeviationSpringfield>
+		<MaxDeviationThompson>0.0</MaxDeviationThompson>
+		<LightningGunProjectileSpeed>100000.0</LightningGunProjectileSpeed>
+
+		<!-- SHOTGUN MODIFIERS -->
+		<ShotgunRandomDeviationMax>0.2</ShotgunRandomDeviationMax>
+		<ShotgunProportionYDeviation>0.4</ShotgunProportionYDeviation>
+		<ShotgunAccurateCentrePick>0</ShotgunAccurateCentrePick>
+
+		<!-- SHOTGUN.  Used for reducing the damage done by the shotgun to the player from NPC's -->
+		<DamageModifierForShotgunAgainstPlayer>0.5</DamageModifierForShotgunAgainstPlayer>
+	</WeaponAccuracy>
+	
+	<PlayerArmsSteadiness>
+	
+		<!-- [WARNING]: Edit the following only on consultation with Chris or Gareth -->		
+
+		<!-- Cap on maximum deviation -->
+
+		<MaxDeviationAngle>3.5</MaxDeviationAngle>	<!-- 2.0 -->
+
+		<!-- <<<<< MATRIX 1: GENERAL STEADINESS MATRIX, using first IOT set >>>>> -->
+		
+			<!-- INFLUENCE 1: Pose of the players arms -->
+			<SteadinessAimed>1.0</SteadinessAimed>
+			<SteadinessNotAimed>0.8</SteadinessNotAimed>
+
+			<!-- + INFLUENCE 2: Stamina loss when holding out arms aiming -->
+			<StaminaSteadinessTargetLowAccuracy>0.3</StaminaSteadinessTargetLowAccuracy>
+			<StaminaSteadinessTargetHighAccuracy>0.8</StaminaSteadinessTargetHighAccuracy>  <!-- springfield -->
+			<StaminaSteadinessLossRate>0.007</StaminaSteadinessLossRate>
+			<StaminaSteadinessRecoveryRate>0.5</StaminaSteadinessRecoveryRate>   	<!-- def  0.5 -->	
+
+			<!-- INFLUENCE 3: Brief instability caused by firing a bullet -->
+			<FiringSteadinessDropMagnitude>0.5</FiringSteadinessDropMagnitude>	 <!-- def  0.25 -->	
+			<FiringSteadinessRecoveryRate>1.5</FiringSteadinessRecoveryRate>     <!-- def  0.22 -->	
+
+			<!-- Matrix 1: General Settings -->
+			<SteadinessRateOfChange>1.5</SteadinessRateOfChange>
+			<SteadinessFinalAngleMultiplier>4.0</SteadinessFinalAngleMultiplier>
+
+		<!-- <<<<< MATRIX 2: AUTOMATIC WEAPON FIRING MATRIX, using second IOT set >>>>> -->
+		
+			<!-- INFLUENCE 1: Holding fire on automatic weapon -->
+			<FiringStaminaSteadinessTarget>0.93</FiringStaminaSteadinessTarget>  <!-- def  0.93 -->	
+			<FiringStaminaLossRate>0.16</FiringStaminaLossRate>
+			<FiringStaminaRecoveryRate>0.28</FiringStaminaRecoveryRate>			<!-- def  0.28 -->	
+
+			<!-- Matrix 2: General Settings  (default 4.0) -->	
+			<FiringSteadinessFinalAngleMultiplier>2.0</FiringSteadinessFinalAngleMultiplier>
+		
+	</PlayerArmsSteadiness>
+
+	<Sanity>
+		<MifResetLevel>20.0</MifResetLevel>
+		<MaxMifBeforeCertainDeath>2</MaxMifBeforeCertainDeath>
+		<TicksAtZeroSanityBeforeMif>50</TicksAtZeroSanityBeforeMif>
+		<EffectRollsWhenHitZeroSanity>3</EffectRollsWhenHitZeroSanity>
+		<CriticalSanityThreshold>25</CriticalSanityThreshold>
+		<PercentageChanceIncreasePerFailedRoll>10.0</PercentageChanceIncreasePerFailedRoll>
+
+		<!-- CHRIS MODIFY ONLY.  Effects sanity recovery speed -->
+		<!-- A tick is 0.1 seconds -->
+		<SanityRecoveryPerTick>0.08</SanityRecoveryPerTick>		<!-- default previously 0.04 -->
+
+		<!-- Set to a level that just exceeds sanity buffer to ensure 1 effect roll -->
+		<MorphineSanityHit>21.0</MorphineSanityHit>
+
+		<!-- Multiplier to controller sensitivity when in panic -->
+		<MaxPanicControlSpeedMultiplier>1.7</MaxPanicControlSpeedMultiplier>
+	</Sanity>
+	
+	<GarethAi>
+		<!-- The multipliers are in addition to an automated 0.7 multiplier that is already -->
+		<!-- applied to the weapon ranges.  This additional multiplier is used to encourage -->
+		<!-- the npc's to come closed to the player when they are in offensive mode -->
+
+		<!-- DEFENSIVE mode waypoint selection -->
+		<WeaponRangeMultiplierDefensive>1.0</WeaponRangeMultiplierDefensive>    
+		<PenaltyOutOfWeaponRangeDefensive>50000.0</PenaltyOutOfWeaponRangeDefensive>
+		<!-- Offensive mode waypoint selection -->
+		<WeaponRangeMultiplierOffensive>0.25</WeaponRangeMultiplierOffensive>
+		<PenaltyOutOfWeaponRangeOffensive>50000.0</PenaltyOutOfWeaponRangeOffensive>
+	</GarethAi>
+	
+</DCoTESettings>

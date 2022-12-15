@@ -1,0 +1,71 @@
+#
+# ぬっころ (sakaki 2004/10/15 15:54:00)
+#
+# ※数字は、10進,16進のみサポート 100 -100 0x100 -0x100 とか
+# 区切りはスペース
+#
+# ALL項目で使用可能
+# ●ROM         ロムバージョン　                        DEVELOP/TEST/1ST/E3Media/E3Title/ALPHA/BETA/FINAL
+# ●DEBUGWHO    デバッグ誰                              Sakakibara/Naito/Meso/Nakazawa/Takeshima/Sato/Okada/Artist/Player/Sound/FontInstance
+# ●PREDVDLIST  あらかじめ用意されている                DVDLIST 使う1 使わない0
+# ●HEAPINFO    ヒープの情報をデフォルトで表示          する1 しない0
+# ●LOGFILE     ログをdiskImageに出力する（重い）       する1 しない0
+# ●LOGREPORT   ログを出力                              System/Memory/File/Resource/Gadget/Event/Player/Enemy/Nop
+# ●LANGUAGE    テキスト言語                            JAPANESE/ENGLISH/SPANISH
+# ●SPEECH      音声言語                                JAPANESE/ENGLISH/SPANISH
+# ●CHECKSIZE   読み込みサイズチェック                  する1 しない0
+#
+# Stage項目で使用可能
+# ●PLAYER      プレイヤ位置[7]:                        プレイヤ番号 XPOS YPOS ZPOS XANG YANG ZANG
+# ●STARTSPD    プレイヤ初速[4]:                        プレイヤ番号 XSPD YSPD ZSPD
+# ●STARTDEMO   デモ再生か？[1]:                        1/0
+# ●RANK_H      Heroランクスコア[5]:                    ランクAのスコア ランクBのスコア ランクCのスコア ランクDのスコア
+# ●RANK_D      Darkランクスコア[5]:                    ランクAのスコア ランクBのスコア ランクCのスコア ランクDのスコア
+# ●RANK_N      Normal/Bossランクスコア[5]:             ランクAのスコア ランクBのスコア ランクCのスコア ランクDのスコア
+#                                                       ボスのランクは秒数を入れてください（１分３０秒なら９０、ボスは必ずNormalから判定します）
+#
+# ●GOALEVENTPOS_H      Heroゴール演出位置[3]:          XPOS YPOS ZPOS
+# ●GOALEVENTPOS_D      Darkゴール演出位置[3]:          XPOS YPOS ZPOS
+# ●GOALEVENTPOS_N      Normal/Bossゴール演出位置[3]:   XPOS YPOS ZPOS
+# ●MISSIONCOUNT_H      Heroミッションカウンタ値[2]:    ミッション成功カウンタ値 ミッション失敗カウンタ値
+# ●MISSIONCOUNT_D      Darkミッションカウンタ値[2]:    ミッション成功カウンタ値 ミッション失敗カウンタ値
+#                                                       入力の仕方：
+#                                                       ・成功カウンタ値について
+#                                                         ミッションがターゲット破壊・起動系なら破壊・起動させる数を入力
+#                                                         ミッションがエネミー倒せ系ならエネミーを倒す数を入力
+#                                                         ミッションが制限時間系なら秒数を入力
+#                                                       ・失敗カウンタ値について
+#                                                         ミッション失敗がない場合は 0 を入力 (0にすると失敗判定を行わなくなります)
+#                                                         ミッション失敗がある場合は、
+#                                                           ターゲット破壊・逃したらダメ系は、ミッション失敗となるターゲット数を入力
+#                                                       ・ミッションがない場合/数とか関係ない場合(ゴールリング触るとか)
+#                                                         入力しなくてOK
+# ●MIPMAPK				ステージ中のMIPMAP K値の１０倍の値（ステージで一個限定、１０倍なのは、小数点が書けないから）
+# ●REGION				リージョンコード	NTSC/PAL60/PAL50
+# ●AREA				エリアコード		JP/US/EU
+#
+
+[ALL]
+ROM : FINAL
+PREDVDLIST : 0
+#DEBUGWHO : Player
+HEAPINFO : 0
+# LOGFILE : 0
+LOGREPORT : System    Off
+LOGREPORT : Memory    Off
+LOGREPORT : File      Off
+LOGREPORT : Resource  Off
+LOGREPORT : Gadget    Off
+LOGREPORT : Event     Off
+LOGREPORT : Player    Off
+LOGREPORT : Enemy     Off
+LOGREPORT : Nop       Off
+LANGUAGE : JAPANESE
+SPEECH : JAPANESE
+REGION : NTSC
+AREA : JP
+
+#各ステージパラメータは、nukkori.infに移動しました。
+#こちらのファイルは _（アンダーバーはついていません）
+#更新したら、_をとらなくても反映されるようにして欲しいという要望があったため
+#個人設定と、ステージ設定を分けました。(sakaki 2005/07/07 02:16:25)

@@ -1,0 +1,23 @@
+<Journal>
+
+	<!-- Jacks Personal Diary -->
+	<Category>
+		<ID>0</ID>
+		<CategoryName>4017</CategoryName>
+		<CategoryFile>Category0.xml</CategoryFile>
+	</Category>
+	
+	<!-- General Evidence -->
+	<Category>
+		<ID>1</ID>
+		<CategoryName>4018</CategoryName>
+		<CategoryFile>Category1.xml</CategoryFile>
+	</Category>
+	
+	<!-- Mythos Tomes and Manuscripts -->
+	<Category>
+		<ID>2</ID>
+		<CategoryName>4019</CategoryName>
+		<CategoryFile>Category2.xml</CategoryFile>
+	</Category>
+</Journal>

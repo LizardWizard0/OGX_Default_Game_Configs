@@ -1,0 +1,2 @@
+The presence of this file named REBOOT.TXT indicates that we should reboot the xbox
+on an assert - this is only supported on xbox dev kits in automation tests

@@ -1,0 +1,11 @@
+/*
+Pause .5
+LECLogoOn
+FadeUpAndWait .5
+Pause 3
+FadeDownAndWait .5
+LECLogoOff
+Pause .5
+PlayFlashFile start.swf
+*/
+PlayFlashFile LECLogo_domestic.swf

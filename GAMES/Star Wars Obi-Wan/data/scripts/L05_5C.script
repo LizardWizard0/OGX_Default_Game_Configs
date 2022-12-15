@@ -1,0 +1,567 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+SetDefaultSurface 08_13fnttop.sur
+
+loaddlg male3.dlg
+//LoadDLG asha.dlg
+//LoadDLG bad.dlg
+
+/////////////
+//  Music  //
+/////////////
+
+AddMusic m_suspense_04.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_11.wav Suspense
+AddMusic m_suspense_12.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+AddMusic m_suspense_14.wav Suspense
+AddMusic m_suspense_18.wav Suspense
+
+AddMusic m_tension_02.wav Tension 
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_07.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_13.wav Tension
+AddMusic m_tension_16.wav Tension
+AddMusic m_tension_18.wav Tension
+
+AddMusic m_tension_13.wav Battle
+AddMusic m_battle1.wav Battle
+AddMusic m_battle2.wav Battle
+AddMusic m_battle3.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_11.wav Battle
+AddMusic m_victory_03.wav Battle
+AddMusic m_victory_04.wav Battle
+
+AddBattleLoop  m_battle_09_lp.wav  m_battle_09_win.wav  m_battle_09_lose.wav
+AddBattleLoop  m_battle_12_lp.wav  m_battle_12_win.wav  m_battle_12_lose.wav
+AddBattleLoop  m_battle_13_lp.wav  m_battle_13_win.wav  m_battle_13_lose.wav
+
+SetMusicInterval Suspense 50 70
+SetMusicInterval Tension 18 40
+SetMusicInterval Battle 15 25
+
+/// GLOBAL VARS ///
+
+Actor Qui A_Qui-Gon_01
+Actor Queen A_Queen_Amadala_Royal_Outfit_01
+Actor SquadLeader A_SquadLeader_01
+
+actor SFdroid01 A_StarfighterDroid_01
+actor Cannon01 A_battledroid-cannon_01
+actor Cannon02 A_battledroid-cannon_02
+
+actor NabooGuard01 A_naboo-guard_01
+actor NabooGuard02 A_naboo-guard_02
+actor NabooGuard03 A_naboo-guard_03
+actor NabooGren01 A_naboo-grenade_01
+actor NabooGren02 A_naboo-grenade_02
+actor NabooGren03 A_naboo-grenade_03
+
+actor SFpilotFemale01 A_Naboo-StarfighterPilotFemale1_01
+actor SFpilotFemale02 A_Naboo-StarfighterPilotFemale1_02
+actor SFpilotMaleA_01 A_Naboo-StarfighterPilotMale1_01
+actor SFpilotMaleA_02 A_Naboo-StarfighterPilotMale1_02
+actor SFpilotMaleB_01 A_Naboo-StarfighterPilotMale2_01
+actor SFpilotMaleB_02 A_Naboo-StarfighterPilotMale2_02
+
+actor Security01 A_battledroid-security_01
+actor Security02 A_battledroid-security_02
+actor Security03 A_battledroid-security_03
+actor Security04 A_battledroid-security_04
+actor Security05 A_battledroid-security_05
+
+Int BeginMission 0
+Int MissionCompleted 0
+Int	SkipMission	0
+
+int putlevelinmotion 0
+int killswitch_SFdroid01 0
+int CryForHelp 0
+int AchillesHeel 0
+
+/// BEGIN FUNCTIONS ///
+
+function "DroidWarning"
+{
+    communicatoron
+    CommunicatorMessageAndWait "/Qui-Gon_702/Sensors indicate battledroid patrols are getting closer to our position."
+    communicatoroff
+}
+
+Function "Activate" (Actor Guy, Refpos StartSpot, Node GotoNode, Float PauseTime, Int ReturnControl)
+{   
+    Pause PauseTime
+    
+    Teleport Guy StartSpot
+	TakeControlOf Guy
+
+    Childscript "Activate Interrupted"
+    {
+         WaitUntilNear Guy Obi 5.0
+         ReturnControlTo Guy
+         EndFunction "Activate"
+    }
+  
+	RunToNodeAndWait Guy GotoNode
+
+    If (= ReturnControl 1)
+    {
+        ReturnControlTo Guy
+    }
+}	
+
+/// END FUNCTIONS ///
+
+/// BEGIN CUTSCENESES ///
+
+Script "Opening Cutscene"
+{
+    BeginCutScene
+    FadeUpAndWait
+    PreEndCutScene
+    Set BeginMission 1
+    StartMusicManager
+    FadeUp 0
+    EndCutScene
+
+    SetStartPosition 0
+}
+
+script "StartPosition01"
+{
+    waituntilenteredregion Obi RGN_Start01
+    setstartposition 1
+    save
+}
+
+Function "RunToSafety" (Actor Runner)
+{
+	TakeControlOf Runner
+	RunToNode Runner end_pilots
+}
+
+Script "Skip to closing"
+{
+   WaitUntilEqual SkipMission 1
+	Pause 3
+	Kill A_BaronDroid_01
+	Kill A_BaronDroid_02
+	Kill A_BaronDroid_03
+}	
+
+Script "Closing Cutscene"
+{
+    WaitUntilEqual MissionCompleted 1
+	DisableAudioFades
+	 FadeDownAndWait
+	 
+	Actor EndDoor A_05_6_door_01
+	 UnlockDoor EndDoor
+    
+	Actor Male1 A_Naboo-StarfighterPilotMale1_01
+	Actor Male2 A_Naboo-StarfighterPilotMale1_02
+	Actor Male3 A_Naboo-StarfighterPilotMale2_01
+	Actor Male4 A_Naboo-StarfighterPilotMale2_02
+	Actor Female1 A_Naboo-StarfighterPilotFemale1_01
+	Actor Female2 A_Naboo-StarfighterPilotFemale1_02
+    
+    Teleport Obi Obi-EndSpot01
+    Teleport Qui Qui-EndSpot01
+    Teleport Queen Queen-EndSpot01
+    Teleport SquadLeader Pilot-EndSpot01 
+	 
+	 Teleport Male1 pilot1
+	 Teleport Male2 pilot5
+	 Teleport Male3 pilot3
+	 Teleport Male4 pilot4
+	 Teleport Female1 pilot2
+	 Teleport Female2 pilot6
+	   
+	TakeControlOf Obi
+	UnequipWeapon Obi
+
+	BeginCutScene
+   CameraFixed cut_end_cam
+
+	FadeUp
+	EnableAudioFades
+
+    SaylineNonPositional SquadLeader "/male3_684/Great shot Obiwan.  That was one in a million!"
+	 
+	Call "RunToSafety" Male1
+	Call "RunToSafety" Male2 
+	Call "RunToSafety" Male3 
+	Call "RunToSafety" Male4 
+	Call "RunToSafety" Female1
+	Call "RunToSafety" Female2
+	
+	ChildScript
+	{
+		WaitUntilNear Male1 EndDoor 5
+		OpenDoor EndDoor
+		Pause 4
+		CloseDoor EndDoor
+	}
+
+    Sayline Obi "/Obi-Wan_685/Quickly, everyone into the hangar!"
+    SaylineNonPositional Qui "/Qui-Gon_686/We need to get those starfighters airborn. The Gungans have already begun to engage the droid army."
+    SaylineNonPositional Obi "/Obi-Wan_687/We'll cover you."
+    
+    FadeDownAndWait    
+	EndCutScene
+	FadeDown 0
+
+    NextLevel L05_6    
+}
+
+script "YouLose"
+{
+    child waituntilkilled SFpilotFemale01
+    child waituntilkilled SFpilotFemale02
+    child waituntilkilled SFpilotMaleA_01
+    child waituntilkilled SFpilotMaleA_02
+    child waituntilkilled SFpilotMaleB_01
+    child waituntilkilled SFpilotMaleB_02
+    waitforany    
+    
+    randomint PreachToMeQuiGon 1 3
+    
+    begincutscene
+    
+    camerafixed camera_youlose
+
+    communicatoron
+    CommunicatorMessageAndWait "/Qui-Gon_1172/Obi-Wan, you've failed!"
+    if (= PreachToMeQuiGon 1)
+    {
+        CommunicatorMessageAndWait "/Qui-Gon_1175/Your anger distracted you from focusing on the goal at hand. ." Qui-Gon.dlg
+    }    
+    if (= PreachToMeQuiGon 2)
+    {
+        CommunicatorMessageAndWait "/Qui-Gon_1176/Your fear clouded your thoughts."
+    }       
+    if (= PreachToMeQuiGon 3)
+    {
+        CommunicatorMessageAndWait "/Qui-Gon_1174/Obi-Wan, you needed to stay focused on the mission objectives. " 
+    }
+    communicatoroff
+    
+    fadedownandwait
+    endcutscene
+    
+    missionobjectivefailed 1
+    failmission
+}
+
+/*
+Script "Level Transition To L05_5B"
+{
+    WaitUntilEnteredRegion Obi L05_5B_Trig
+    TakeControlOf Obi
+    BeginCutscene
+    CameraTrack Transition01 Obi
+    RunToNodeAndWait Obi Transition01
+    FadeDownAndWait
+    EndCutscene
+    NextPart L05_5B
+}
+*/
+
+/// END CUTSCENESES ///
+
+/// BEGIN MAIN ///
+
+script "GreetingsObiWan"
+{
+    invincibilityon Qui
+    
+    waituntilnear obi Qui 15.0
+    
+    takecontrolof Qui
+    
+    lookat Qui obi
+    Sayline qui "/Qui-Gon_698/Obiwan, over here."
+    stopactions Qui
+
+    child Sayline qui "/Qui-Gon_699/Thank the Maker, you made it.  As you can see, the door to the main hangar is being heavily guarded by the Federation."
+    childscript "ShowObiHangar"
+    { 
+        runtonodeandwait Qui goto_qui_showhangar
+        turntonodeorientationandwait Qui goto_qui_showhangar
+        playgestureandwait Qui PointForward
+    }        
+    waitforall
+    
+    forcetarget SFdroid01 A_dummy_object_01
+    
+    walktonodeandwait Qui goto_qui_showpilots
+
+    child Sayline qui "/Qui-Gon_703/Obiwan, you go ahead with the pilots.  I will stay with the queen and protect the rear." PointForward
+    childscript "ShowObiPilots"
+    {
+        turntonodeorientationandwait Qui goto_qui_showpilots
+        playgestureandwait Qui PointForward
+    }
+    waitforall
+    
+    lookat Qui Obi
+    Sayline qui "/Qui-Gon_700/We will meet you near the Hangar.  Go.  Now."
+    stopactions Qui
+    returncontrolto Qui
+    
+    forcetargetoff SFdroid01
+    
+    set putlevelinmotion 1
+    
+    forcetarget Qui SFdroid01
+    Sayline qui "/Qui-Gon_704/You must hurry, Padawan.  The force will be with you, always."
+    waituntilkilled SFdroid01
+    forcetargetoff Qui
+
+    waituntilequal CryForHelp 1
+        
+    communicatoron 
+    communicatormessageandwait "/Qui-Gon_1132/Obi-Wan, I need your help over here!"
+    communicatoroff
+}
+
+script "SFdroid01_Behavior"
+{
+    invincibilityon SFdroid01
+    
+    child waituntilenteredregion obi RGN_AchillesHeel
+    child waituntilenteredregion obi RGN_Cannon02
+    waitforany
+    
+    clearaiboundary SFdroid01
+    invincibilityoff SFdroid01
+}
+
+function "ThrillKillIfInRegion" (actor Bonnie, actor Clyde)
+{
+    if (isinregion Bonnie RGN_AIboundary04)
+    {
+        forcetarget Clyde Bonnie
+        waituntilkilled Bonnie
+        forcetargetoff Clyde
+    }
+}
+
+script Cannon02_Behavior
+{
+    script "Cannon02Cycle"
+    {
+        forcetarget Cannon02 A_dummy_object_01
+        pauserandom 2.0 3.5
+        forcetarget Cannon02 A_dummy_object_02
+        pauserandom 2.0 3.5
+        forcetarget Cannon02 A_dummy_object_03
+        pauserandom 2.0 3.5
+        loop
+    }    
+    
+    waituntilenteredregion Obi RGN_AchillesHeel
+    endscript "Cannon02Cycle"
+    forcetargetoff Cannon02
+    
+    set AchillesHeel 1
+    
+    callandwait ThrillKillIfInRegion (NabooGren01, Cannon02)
+    callandwait ThrillKillIfInRegion (NabooGren02, Cannon02)
+    callandwait ThrillKillIfInRegion (NabooGren03, Cannon02)
+    callandwait ThrillKillIfInRegion (NabooGuard01, Cannon02)
+    callandwait ThrillKillIfInRegion (NabooGuard02, Cannon02)
+    callandwait ThrillKillIfInRegion (NabooGuard03, Cannon02)
+    callandwait ThrillKillIfInRegion (SFpilotFemale01, Cannon02)
+    callandwait ThrillKillIfInRegion (SFpilotFemale02, Cannon02)
+    callandwait ThrillKillIfInRegion (SFpilotMaleA_01, Cannon02)
+    callandwait ThrillKillIfInRegion (SFpilotMaleA_02, Cannon02)
+    callandwait ThrillKillIfInRegion (SFpilotMaleB_01, Cannon02)
+    callandwait ThrillKillIfInRegion (SFpilotMaleB_02, Cannon02)
+}
+
+script "NabooGren_Behavior"
+{
+    function "NabooGrenSwitch" (actor SupermanGren)
+    {
+        clearaiboundary SupermanGren
+        invincibilityon SupermanGren
+        waituntilequal AchillesHeel 1
+        invincibilityoff SupermanGren
+    }
+       
+    call NabooGrenSwitch (NabooGren01)
+    call NabooGrenSwitch (NabooGren02)
+    call NabooGrenSwitch (NabooGren03)
+}
+
+script "NabooGuard_Behavior"
+{
+    function "NabooGuardSwitch" (actor SupermanGuard)
+    {
+        clearaiboundary SupermanGuard
+        invincibilityon SupermanGuard
+        waituntilequal AchillesHeel 1
+        invincibilityoff SupermanGuard
+    }
+       
+    call NabooGuardSwitch (NabooGuard01)
+    call NabooGuardSwitch (NabooGuard02)
+    call NabooGuardSwitch (NabooGuard03)
+}
+
+script "FirstWaveAttack"
+{
+    function "FirstWaveSecurityFocus" (actor PunchingBag01, actor GoodGuy01)
+    {
+        invincibilityon PunchingBag01
+        forcetarget PunchingBag01 GoodGuy01
+        waituntilequal putlevelinmotion 1
+        invincibilityoff PunchingBag01
+        clearAIboundary PunchingBag01
+    }
+    
+    call FirstWaveSecurityFocus (Security01, NabooGren01)
+    call FirstWaveSecurityFocus (Security02, NabooGren02)
+    call FirstWaveSecurityFocus (Security03, NabooGren03)
+    call FirstWaveSecurityFocus (Security04, NabooGren01)
+    call FirstWaveSecurityFocus (Security05, NabooGren03)
+}
+
+script "SquadLeader_Behavior"
+{
+    waituntilnudgedby SquadLeader Obi
+    Sayline SquadLeader "/male3_700/We need your help to clear out their baracade before we can gain entrance."
+    Sayline SquadLeader "/male3_701/We've already lost our escort before you guys arrived trying to pass through the blockade.  We can't afford to loose anymore people."
+
+    Sayline SquadLeader "/male3_705/Here, take these ion grenades.  They may come in usefull.  It's all we have left."
+    addinventoryitem obi equipiongrenade.dsc
+    addinventoryitem obi equipiongrenade.dsc
+    addinventoryitem obi equipiongrenade.dsc
+    Sayline SquadLeader "/male3_706/We'll wait here until the path has been cleared or if you need more grenades."    
+    Sayline SquadLeader "/male3_707/Help us Obiwan Kenobi, you're our only hope."        
+    
+    childscript "ClueMeIn"
+    {
+        pause 15.0
+        waituntilnudgedby SquadLeader Obi
+        Sayline SquadLeader "/male3_711/Those Federation tanks are the biggest threat.  Perhaps you should try to take them out first, Obiwan."    
+    }
+    childscript "GrenadeSupply"
+    {
+        waituntilnudgedby SquadLeader Obi
+        Sayline SquadLeader "/male3_708/Here are some more ion grenades, Obiwan."
+        addinventoryitem obi equipiongrenade.dsc
+        addinventoryitem obi equipiongrenade.dsc
+        addinventoryitem obi equipiongrenade.dsc
+        pause 10.0
+        loop
+    }
+    waitforall
+}
+
+/// END MAIN ///
+
+////////////////////
+//Scripts         //
+////////////////////
+
+Script "Set Far Clip"
+{
+//    SetFarClip 325 0
+}
+
+Script "Set Default Surface Sound"
+{
+//    
+}
+
+Script "Set Pain Region Values"
+{
+//    SetPainRegion Turret_Pain_Rgn 9999.0
+}
+
+Script "Lock Hangar Doors"
+{
+    LockDoor A_05_6_door_01
+    LockDoor A_05_6_door_02
+    LockDoor A_05_6_door_03
+    LockDoor A_05_6_door_04
+    LockDoor A_05_6_door_05    
+}
+
+/////////////////////////////////////////////////////////////////////////
+//------------------------------ Ambient ------------------------------//
+/////////////////////////////////////////////////////////////////////////
+/*
+Script "Zone13-Show01"
+{
+    WaitUntilEnteredRegion Obi Z13-Show01
+}
+
+Script "Zone13-Show02"
+{
+    WaitUntilEnteredRegion Obi Z13-Show02
+}
+
+Script "Zone13-Show03"
+{
+    WaitUntilEnteredRegion Obi Z13-Show03
+}
+
+Script "Zone13-Show04"
+{
+    WaitUntilEnteredRegion Obi Z13-Show04
+}
+*/
+script "InvincibileForcefields"
+{
+    invincibilityon A_5-5_ff_generator_07
+    invincibilityon A_5-5_ff_generator_08
+    invincibilityon A_5-5_ff_generator_12
+}
+    
+/////////////////////////////////////////////////////////////////////////////////////
+//------------------------------ Specific Encounters ------------------------------//
+/////////////////////////////////////////////////////////////////////////////////////
+
+Script "Hangar Baracade"
+{
+    Actor Baron01            A_BaronDroid_01
+    Actor Baron02            A_BaronDroid_02
+    Actor Baron03            A_BaronDroid_03
+    
+    
+    Child WaitUntilKilled Baron01
+    Child WaitUntilKilled Baron02
+    Child WaitUntilKilled Baron03
+    WaitForAll
+    
+    RemoveActor A_5-5_fed_barricade_01
+    
+    Set MissionCompleted 1
+}
+
+/// GROUPING SCRIPTS ///
+
+function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+    save
+}
+
+/// EXPLORATION MARKER COUNT ///
+
+call PowerupRemoval (A_powerupexplorationmarker_04, 32)
+call PowerupRemoval (A_powerupexplorationmarker_05, 31)
+

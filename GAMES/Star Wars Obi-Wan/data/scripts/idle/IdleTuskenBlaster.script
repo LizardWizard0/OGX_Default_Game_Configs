@@ -1,0 +1,13 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+//PlayAudioCue me Idle
+AddGesture me Taunt 4
+AddGesture me None 4
+AddGesture me TurnHeadLeft 
+AddGesture me None 4
+AddGesture me TurnHeadRight 
+AddGesture me None 4
+WaitUntilFinishedGesture me
+
+
+

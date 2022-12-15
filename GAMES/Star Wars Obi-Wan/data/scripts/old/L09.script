@@ -1,0 +1,255 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+FadeUp
+
+// These flourishes will play the first time you enter the respective regions
+
+Script IntroFlourish
+{
+	WaitUntilEnteredRegion Obi RGN_001
+	PlayFlourish l09_m_intro.wav
+}
+
+Script TBOTFlourish
+{
+	WaitUntilEnteredRegion Obi	RGN_71_TBOT_Flourish
+	PlayFlourish m_battle3.wav
+}
+
+Script BattleFlourish
+{
+	WaitUntilEnteredRegion Obi RGN_80_flourish1
+	PlayFlourish l09_m_sighting1.wav
+}
+
+
+
+
+Actor QuiGon A_Qui_Gon_03
+Actor Officer A_Soldier_Officer_01
+Actor Guard A_Soldier_Guard_01
+
+Actor Sentry1 A_BAD_cannon_02
+Actor Sentry2 A_BAD_cannon_03
+
+
+
+// Qui-Gon and two Naboo soldiers are being attacked by several battle droids.
+// They are pinned behind the rocks, and Obi must save them.  When he kills all
+// the droids on the upper levels, two staps appear.  When the remaining
+// droid and the two staps are killed, QuiGon will have been saved.
+
+
+Script "Obi Saves Qui-Gon"
+{
+
+	WaitUntilEnteredRegion Obi RGN_080_script  // Triggers the battle
+	
+	ChildScript "Obi Ditches Qui-Gon"   // Obi should not try to leave the lawn area behind!
+	{
+		WaitUntilEnteredRegion ObiWan RGN_80_KillQui
+		Display("/09QuiGonDied/", 10.0)
+		Kill QuiGon
+		// End the level
+	}
+
+	
+	ChildScript "Obi Crosses Bridge"   // Blast Obi any time he crosses the bridge
+	{
+		WaitUntilEnteredRegion ObiWan RGN_80_kill3
+		ForceTarget Sentry1 ObiWan
+		ForceTarget Sentry2 ObiWan
+
+		WaitUntilExitedRegion ObiWan RGN_80_kill3
+		ForceTargetOff Sentry1
+		ForceTargetOff Sentry2
+
+		Loop
+	}
+
+
+	InvincibilityOn(QuiGon)
+	InvincibilityOn(Officer)
+	InvincibilityOn(Guard)
+	
+	TakeControlOf(QuiGon)
+	TakeControlOf(Officer)
+	TakeControlOf(Guard)
+
+	Crouch(QuiGon)
+	Crouch(Officer)
+	Crouch(Guard)
+
+	
+
+	// SET UP BATTLE
+	// See docs/L09_teams.doc for explanation of team assignments
+
+	SetTeam "A_BAD_infantry_25" 11
+	SetTeam "A_BAD_infantry_26" 11
+	SetTeam "A_BAD_infantry_27" 11
+	SetTeam "A_BAD_infantry_45" 12
+	SetTeam "A_BAD_cannon_01" 11
+	SetTeam "A_BAD_Grenadier_01" 11
+
+	SetTeam "A_09_rock1_02" 7
+	SetTeam "A_09_rock2_02" 7
+	SetTeam "A_09_rock2_03" 7
+	SetTeam "A_09_rock3_02" 7
+
+	// Keep the guys on the lawn a ways back from the rocks *** NOT WORKING WELL
+	SetAttackDistances "A_BAD_infantry_25" 17.0 17.0
+	SetAttackDistances "A_BAD_infantry_26" 14.0 14.0
+	SetAttackDistances "A_BAD_infantry_27" 17.0 17.0
+
+	ForceState "A_BAD_cannon_01" "Attack_Cannon"
+	
+	// *** GRENADIER ISN'T FIRING AT THE ROCK!
+	ForceTarget "A_BAD_Grenadier_01" "A_09_rock1_02"
+
+
+	ChildScript "Reaquire Targets Every Few Seconds"
+	{
+		// In a few seconds, the droids should reaquire their targets
+		PauseRandom 1 3
+		Event "Reaquire Targets"   // See L09.cpp
+		Loop
+	}
+
+
+	// SAVE QUI-GON!
+
+	// I'm taking advantage of the fact that if you call WaitUntilKilled on
+	// someone that's already dead, the script will continue automatically
+
+	WaitUntilKilled A_BAD_Grenadier_01
+	WaitUntilKilled A_BAD_cannon_01
+	WaitUntilKilled A_BAD_infantry_45
+
+	Actor Stap1
+	Actor Stap2
+
+	Child TriggerUberGenAndWait  A_09_UG_Stap    Stap1
+	Child TriggerUberGenAndWait  A_09_UG_Stap05  Stap2
+
+	WaitUntilKilled Stap1
+	WaitUntilKilled Stap2
+	WaitUntilKilled A_BAD_infantry_25
+	WaitUntilKilled A_BAD_infantry_26
+	WaitUntilKilled A_BAD_infantry_27
+		
+	PlayFlourish m_victory1.wav
+	EndScript "Obi Ditches Qui-Gon"  // Qui-Gon's saved, so Obi can go wherever he wants
+	EndScript "Reaquire Targets Every Few Seconds"
+
+	// NOTE: I don't want to end the script here because I still want the
+	// ObiCrossesBridge script to be running
+
+
+	// After Obi saves Qui-Gon and the 2 Naboo soldiers, they will come out
+	// from behind the rocks.  At that point, if Obi walks near Qui-Gon,
+	// he thanks Obi for saving him.  The Naboo officer says he knows of a 
+	// way into the palace that's across the bridge.  He runs for the bridge, and 
+	// Qui-Gon and the guard follow him.  They stop just before the bridge, and
+	// when Obi arrives, the officer says that they'll have to make a run for it. 
+	// The officer runs across and is gunned down.  Qui-Gon then tells Obi there 
+	// ain't no way he's crossing that bridge until Obi does something about those 
+	// gunners.  He and the guard duck near the wall and wait until the sentries die.
+
+
+	// If I make them look before they walk, they'll still be looking when they arrive
+	LookAt(QuiGon, ObiWan)
+	LookAt(Officer, ObiWan)
+	LookAt(Guard, ObiWan)
+
+	Child WalkToNodeAndWait(QuiGon, "QuiGonDestination1")
+	Child WalkToNodeAndWait(Officer, "OfficerDestination1")
+	Child WalkToNodeAndWait(Guard, "GuardDestination1")
+	WaitForAll
+
+	WaitUntilEnteredRegion(ObiWan, "RGN_80_Cutscene1")
+
+	SayLine(QuiGon, "/Qui-GonJinn_5/Thank you, Padawan.")
+	SayLine(Guard, "/Naboo_Officer_395/Thanks for the assist, Jedi...")
+	SayLine(QuiGon, "/Qui-GonJinn_1119.91/The federation have already secured the palace...")
+	SayLine(Officer, "/Naboo_Foot_Soldier_1119.92/I know a way in, follow me.")
+
+	Child RunToNodeAndWait(Officer, "OfficerDestination2")  
+	Pause (1.0f)
+	Child RunToNodeAndWait(QuiGon, "QuiGonDestination2")
+	Child RunToNodeAndWait(Guard, "GuardDestination2")
+	WaitForAll
+
+	WaitUntilEnteredRegion(ObiWan, "RGN_80_Cutscene2")
+	SayLine(Officer, "Naboo_Foot_Soldier_1119.93/...we'll have to make a run for it")
+
+	PauseScript "Obi Crosses Bridge"  // Don't fire at ObiWan for the time being
+	InvincibilityOff(Officer)
+	RunToNode(Officer, "OfficerDestination3")
+	WaitUntilEnteredRegion(Officer, "RGN_80_kill3")
+
+	ForceTarget Sentry1 Officer
+	ForceTarget Sentry2 Officer
+
+	WaitUntilKilled(Officer)
+	ForceTargetOff Sentry1
+	ForceTargetOff Sentry2
+
+	ResetScript "Obi Crosses Bridge"  // Start firing at ObiWan again
+
+	SayLine(QuiGon, "/Qui-GonJinn_698/Well, that didn’t work...")
+	SayLine(QuiGon, "/Qui-GonJinn_1119.96/Obi-Wan, you must find a way...")
+	SayLine(QuiGon, "/Qui-GonJinn_1119.97/I'll stay with the Gungan!...")
+
+	Child WalkToNodeAndWait(QuiGon, "QuiGonDestination2b")
+	Child WalkToNodeAndWait(Guard, "GuardDestination2b")
+	WaitForAll
+
+	Crouch(QuiGon)
+	Crouch(Guard)
+
+	ChildScript  // When Qui-Gon is nudged, he reminds Obi of his mission
+	{
+		SayLineWhenNudged(QuiGon, "/Qui-GonJinn_1119.96/Obi-Wan, you must find a way...")
+		Loop
+	}
+
+	WaitUntilKilled Sentry1
+	WaitUntilKilled Sentry2
+
+	BeginScript "Qui-Gon Crosses Bridge"
+}
+
+
+
+// When the sentries die, Qui-Gon and the guard cross the bridge.  While they are
+// crossing something comes out from behind them and starts shooting at them
+
+
+StoreScript "Qui-Gon Crosses Bridge"
+{
+	// A ship comes out behind them while they're crossing
+	ChildScript ShipAppears
+	{
+		WaitUntilEnteredRegion( QuiGon, "RGN_80_kill3" )  // Don't know the region yet
+		// Do something.
+	}
+
+	ChildScript
+	{
+		RunToNodeAndWait(QuiGon, "QuiGonDestination3")
+		Crouch(QuiGon)
+	}
+
+	ChildScript
+	{
+		RunToNodeAndWait(Guard, "GuardDestination3")
+		Crouch(Guard)
+	}
+
+	WaitForAll
+
+	// Do something
+}

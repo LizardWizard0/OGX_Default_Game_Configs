@@ -1,0 +1,63 @@
+[LevelInfo0]
+Title="Asbestos"
+
+[LevelSummary]
+Title="Asbestos"
+
+[ZoneInfo0]
+LocationName="Upper Generator Room"
+
+[ZoneInfo10]
+LocationName="Generator Hallway"
+
+[ZoneInfo11]
+LocationName="Super Health Room"
+
+[ZoneInfo12]
+LocationName="Shock Rifle Junction"
+
+[ZoneInfo13]
+LocationName="Super Health Room"
+
+[ZoneInfo14]
+LocationName="Lower Generator Room"
+
+[ZoneInfo15]
+LocationName="Super Health Room"
+
+[ZoneInfo16]
+LocationName="Generator Lift"
+
+[ZoneInfo17]
+LocationName="Upper Generator Room"
+
+[ZoneInfo18]
+LocationName="Lower Generator Hallway"
+
+[ZoneInfo19]
+LocationName="Generator Hallway"
+
+[ZoneInfo2]
+LocationName="Water Cooler Room"
+
+[ZoneInfo3]
+LocationName="Upper Generator Room"
+
+[ZoneInfo4]
+LocationName="Shock Rifle Junction"
+
+[ZoneInfo5]
+LocationName="Lower Generator Hallway"
+
+[ZoneInfo6]
+LocationName="Lower Generator Room"
+
+[ZoneInfo7]
+LocationName="Water Cooler Lift"
+
+[ZoneInfo8]
+LocationName="Shock Rifle Junction"
+
+[ZoneInfo9]
+LocationName="Water Cooler Room"
+

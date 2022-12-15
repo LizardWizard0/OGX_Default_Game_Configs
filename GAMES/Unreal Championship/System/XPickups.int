@@ -1,0 +1,21 @@
+[AdrenalinePickup]
+PickupMessage="Adrenaline."
+
+[AmmoPack]
+PickupMessage="You picked up an Ammo Pack +"
+
+[MiniHealthPack]
+PickupMessage="You picked up a Health Vial +"
+
+[ShieldPickup]
+PickupMessage="You picked up a Shield Pack +"
+
+[SuperShieldPack]
+PickupMessage="You picked up a Super Shield Pack +"
+
+[TournamentHealth]
+PickupMessage="You picked up a Health Pack +"
+
+[UDamagePickup]
+PickupMessage="Double Damage."
+

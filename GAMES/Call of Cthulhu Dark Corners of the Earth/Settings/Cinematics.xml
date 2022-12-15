@@ -1,0 +1,35 @@
+<Cinematics>
+
+	<!-- List of language cinematics for the special features section -->
+
+	<Cinematic>
+		<!-- Character Renders -->
+		<ID>6409</ID>
+		<File>CharacterRenders.xmv</File>
+	</Cinematic>
+
+	<Cinematic>
+		<!-- Background Renders -->
+		<ID>6411</ID>
+		<File>BackgroundRenders.xmv</File>
+	</Cinematic>
+
+	<Cinematic>
+		<!-- Concept Art -->
+		<ID>6408</ID>
+		<File>ConceptArt.xmv</File>
+	</Cinematic>
+
+	<Cinematic>
+		<!-- Craig Mullins Gallery -->
+		<ID>6412</ID>
+		<File>CraigMullins.xmv</File>
+	</Cinematic>
+
+	<Cinematic>
+		<!-- Early Concept Art -->
+		<ID>6410</ID>
+		<File>EarlyConceptArt.xmv</File>
+	</Cinematic>
+
+</Cinematics>

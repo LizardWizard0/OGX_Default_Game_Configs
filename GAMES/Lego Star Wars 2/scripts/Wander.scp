@@ -1,0 +1,7 @@
+state Base {
+	Conditions {
+	}
+	Actions {
+		FollowPath "WALK"
+	}
+}

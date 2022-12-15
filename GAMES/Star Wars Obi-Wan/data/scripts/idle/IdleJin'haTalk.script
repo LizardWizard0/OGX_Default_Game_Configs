@@ -1,0 +1,15 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+PauseRandom .01 1.5
+UnEquipWeapon me
+AddGesture me none 1
+AddGesture me pointleft
+AddGesture me pointforward
+AddGesture me palmupboth 1.5
+AddGesture me talk
+AddGesture me pointforward
+AddGesture me palmupright
+AddGesture me palmupleft
+AddGesture me talk
+WaitUntilFinishedGesture me

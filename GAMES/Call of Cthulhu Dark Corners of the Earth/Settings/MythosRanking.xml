@@ -1,0 +1,219 @@
+<MythosRanking>
+
+	<StatisticMythosRanking>
+
+		<StatisticName>6352</StatisticName>
+		<MaxSavesBeforePenalty>30</MaxSavesBeforePenalty>
+		<MaxSavesForBonusRank>5</MaxSavesForBonusRank>
+
+		<!-- Times are in hours -->
+		<!-- Maximum of 6 ranks, highest at the top -->
+		<!-- Only 5 ranks at the moment -->
+		<StatisticBands>
+
+			<Band>
+				<!-- Rank A -->
+				<DisplayName>6333</DisplayName>		
+				<UpperTimeLimit>3.5</UpperTimeLimit>
+			</Band>
+
+			<Band>
+				<!-- Rank B -->
+				<DisplayName>6332</DisplayName>		
+				<UpperTimeLimit>5.0</UpperTimeLimit>
+			</Band>
+
+			<Band>
+				<!-- Rank C -->
+				<DisplayName>6331</DisplayName>		
+				<UpperTimeLimit>10.0</UpperTimeLimit>
+			</Band>
+
+			<Band>
+				<!-- Rank D -->
+				<DisplayName>6330</DisplayName>		
+				<UpperTimeLimit>15.0</UpperTimeLimit>
+			</Band>
+
+			<Band>
+				<!-- Rank E -->
+				<DisplayName>6364</DisplayName>		
+				<UpperTimeLimit>20.0</UpperTimeLimit>
+			</Band>
+
+		</StatisticBands>
+
+	</StatisticMythosRanking>
+	
+	
+	<StatisticCompletionTime>
+		<StatisticName>6355</StatisticName>
+	</StatisticCompletionTime>
+	
+	
+	<StatisticNumberOfSaves>
+		<StatisticName>6349</StatisticName>
+	</StatisticNumberOfSaves>
+
+
+	<StatisticSanityLoss>
+
+		<StatisticName>6342</StatisticName>
+
+		<!-- Maximum of 4 bands, highest at the top -->
+		<StatisticBands>
+
+			<Band>
+				<!-- Disturbed -->
+				<DisplayName>6326</DisplayName>
+				<UpperLimit>2500.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Deranged -->
+				<DisplayName>6327</DisplayName>
+				<UpperLimit>3000.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Nut Job -->
+				<DisplayName>6328</DisplayName>
+				<UpperLimit>4000.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Clinically Insane -->
+				<DisplayName>6329</DisplayName>
+				<UpperLimit>5000.0</UpperLimit>
+			</Band>
+
+
+		</StatisticBands>
+
+	</StatisticSanityLoss>
+	
+	
+	<StatisticDrugUse>
+
+		<StatisticName>6356</StatisticName>
+
+		<!-- Maximum of 4 bands, highest at the top -->
+		<StatisticBands>
+
+			<Band>
+				<!-- Clean -->
+				<DisplayName>6357</DisplayName>
+				<UpperLimit>0.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Casual -->
+				<DisplayName>6358</DisplayName>
+				<UpperLimit>5.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Heavy -->
+				<DisplayName>6359</DisplayName>
+				<UpperLimit>15.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Addicted -->
+				<DisplayName>6360</DisplayName>
+				<UpperLimit>30.0</UpperLimit>
+			</Band>
+
+		</StatisticBands>
+	</StatisticDrugUse>
+
+
+	<StatisticAccuracy>
+		<StatisticName>6343</StatisticName>
+
+		<!-- BANDS NOT USED -->
+		<StatisticBands>
+
+			<Band>
+				<DisplayName>12</DisplayName>
+				<UpperLimit>200.0</UpperLimit>
+			</Band>
+
+		</StatisticBands>
+	</StatisticAccuracy>
+	
+	
+	<StatisticShotsFired>
+		<StatisticName>6344</StatisticName>
+	</StatisticShotsFired>
+
+	<StatisticHeadshots>
+		<StatisticName>6363</StatisticName>
+	</StatisticHeadshots>
+	
+	<StatisticShotsHit>
+		<StatisticName>6345</StatisticName>
+	</StatisticShotsHit>
+	
+	<StatisticFriendlyKills>
+		<StatisticName>6348</StatisticName>
+	</StatisticFriendlyKills>
+
+
+	<StatisticEnemyKills>
+		<StatisticName>6347</StatisticName>
+	</StatisticEnemyKills>
+
+
+	<StatisticBloodLoss>
+
+		<StatisticName>6341</StatisticName>
+
+		<!-- Maximum of 4 bands, highest at the top -->
+		<StatisticBands>
+
+			<Band>
+				<!-- None -->
+				<DisplayName>6334</DisplayName>
+				<UpperLimit>0.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Light -->
+				<DisplayName>6335</DisplayName>
+				<UpperLimit>10.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Medium -->
+				<DisplayName>6336</DisplayName>
+				<UpperLimit>25.0</UpperLimit>
+			</Band>
+
+			<Band>
+				<!-- Heavy -->
+				<DisplayName>6337</DisplayName>
+				<UpperLimit>50.0</UpperLimit>
+			</Band>
+
+		</StatisticBands>
+	</StatisticBloodLoss>
+
+
+	<StatisticQuestComplete>
+		<StatisticName>6353</StatisticName>
+		<!-- NEED TO MAKE SURE ALL THE INCREMENTS IN THE GAME ADD UP TO THIS TOTAL -->
+		<MaxMythosScore>193.0</MaxMythosScore>
+
+		<!-- BANDS NOT USED -->
+		<StatisticBands>
+			<Band>
+				<DisplayName>12</DisplayName>
+				<UpperLimit>40.0</UpperLimit>
+			</Band>
+		</StatisticBands>
+	</StatisticQuestComplete>
+
+
+
+</MythosRanking>

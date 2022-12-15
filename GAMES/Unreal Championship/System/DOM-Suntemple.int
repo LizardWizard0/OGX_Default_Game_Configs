@@ -1,0 +1,48 @@
+[LevelInfo0]
+Title="Sun Temple"
+
+[LevelSummary]
+Title="Sun Temple"
+
+[ZoneInfo0]
+LocationName="Outside"
+
+[ZoneInfo10]
+LocationName="Point 'B' Side Hallway"
+
+[ZoneInfo13]
+LocationName="Point 'A' Side Hallway"
+
+[ZoneInfo14]
+LocationName="Point 'A' Side Hallway"
+
+[ZoneInfo15]
+LocationName="Dom Point 'A'"
+
+[ZoneInfo18]
+LocationName="Point 'A' Courtyard"
+
+[ZoneInfo2]
+LocationName="Dom Point 'B'"
+
+[ZoneInfo27]
+LocationName="Point 'B' Courtyard"
+
+[ZoneInfo3]
+LocationName="T.A.G. Rifle Room"
+
+[ZoneInfo5]
+LocationName="Point 'B' Side Hallway"
+
+[ZoneInfo6]
+LocationName="Point 'B' Side Hallway"
+
+[ZoneInfo7]
+LocationName="Point 'A' Side Hallway"
+
+[ZoneInfo8]
+LocationName="Point 'A' Side Hallway"
+
+[ZoneInfo9]
+LocationName="Point 'B' Side Hallway"
+

@@ -1,0 +1,152 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+	
+MissionObjective 1 "/Mission22Objective1/Defeat Mace Windu."
+MissionTitle "/Mission22Title/Saber Arena"
+SetExplorationNum 1
+SetForceUsesNeeded 7
+SetTimeToBeat 60
+SetDefaultSurface 09_mz_mrbl_d.sur
+
+
+CreateActor powerupexplorationmarker.dsc bob pu
+
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav  m_saberArena_03_lose.wav
+
+actor jedi A_duelmacewindu_01			// SA_04 which is after SA_08
+
+// actor jedi A_dueltrainingrobot_01	// SA_01
+// actor jedi A_dueldepabilaba_01		// SA_05
+// actor jedi A_DuelSaeseeTiin_01		// SA_02
+// actor jedi A_DuelKiAdiMundi_01		// SA_06 which comes after SA_02
+// actor jedi A_DuelAdiGallia_01		// SA_07
+// actor jedi A_DuelPloKoon_01			// SA_03 which comes after SA_07
+// actor jedi A_DuelEethKoth_01			// SA_08 which is after SA_03
+
+// Be sure to set: unlimited_respawn 0
+
+DisableDeathMessages
+MakeResurrectable jedi
+
+Teleport jedi dude
+LoadDLG Qui-Gon.dlg
+
+
+script "Start_Cutscene" 1
+{
+	TakeControlOf jedi
+	UnEquipWeapon jedi
+
+	WaitForAll
+	
+	BeginCutScene
+	FadeUpAndWait
+
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_588/You have done well, Obi-Wan.  But many on the Council wonder if you really are ready for the trials.  Master Mace Windu has agreed to train with you.  Prove to him that you are ready." Qui-Gon.dlg
+	CommunicatorOff
+	WalkToNode jedi start_1
+	WaitUntilDoorOpen A_SA-Door_01
+	Pause 0.5
+	SayLineNonPositional jedi "/MaceWindu_589/ (slightly amused) Young Obi-Wan...(more serious) Let us begin..."
+
+	WaitUntilArrived jedi start_1	
+
+	Pause 1
+
+	PreEndCutScene
+	StopTalking jedi
+	Teleport jedi bogan1	
+	EndCutScene
+		FadeUp
+    LockDoor A_SA-Door_01
+	PlayMusic BattleLoop
+	EnemyHealthMeter jedi
+	EquipWeapon	jedi
+	Pause 0.5
+	ReturnControlTo jedi
+	ForceTarget jedi obi
+
+	RemoveGroup 1
+	Save
+}
+
+script "The_Fight"
+{
+	ConsoleCommand "r_maxshadows 2"
+	CastShadows jedi true
+
+
+	if (IsGroupRemoved 1)
+	{
+		BeginCutScene
+		FadeUp
+		TakeControlOf jedi
+		WalkToNode jedi start_1
+		WaitUntilArrived jedi start_1
+		PreEndCutScene
+		Teleport jedi bogan1	
+		EndCutScene
+		FadeUp
+		SetHitPointRatio obi 1	
+		
+		PlayMusic BattleLoop
+		EnemyHealthMeter jedi
+		EquipWeapon	jedi
+		Pause 0.5
+		ReturnControlTo jedi
+		ForceTarget jedi obi
+	}
+}
+
+script "Obi_Loses"
+{
+	ContinueWhenPlayerDies  // Make sure this script is not automatically ended when the player dies
+
+	WaitUntilKilled Obi
+	Pause 5
+		
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_1126/ Try again Padawan, Master Mace Windu forces you to use all your skills, and you will need them." Qui-Gon.dlg
+	CommunicatorOff
+
+	Pause 0 5
+
+	DisplayMessagePlayerDied
+}
+
+script "Obi_Wins"
+{
+	WaitUntilKilled jedi 
+	PlayMusic Victory
+	Pause 3
+	BeginCutScene
+	
+	LookAt obi jedi
+	Resurrect jedi
+	TakeControlOf jedi
+	ChildScript
+	{
+		PlayAnimationAndWait jedi human_deathfallback-getupslow_brace.anim 1.0 0.0
+		Follow jedi obi 2
+	}
+	
+	SayLineNonPositional jedi "/MaceWindu_590/ Well, Master Qui-Gon, you've trained quite a swordsman here.  A powerful Jedi indeed."
+	SayLineNonPositional Obi "/Obi-Wan_593/ Thank you Master Windu."
+      
+	CommunicatorOn
+	CommunicatorMessageAndWait "/Qui-Gon_594/ We are to return to Naboo?" Qui-Gon.dlg
+	CommunicatorOff
+	
+	SayLineNonPositional jedi "/MaceWindu_595/ Yes. You are to protect Queen Amidala until we discover the identity of your attacker.   May the Force be with you both." //MWCSx393
+
+	Pause 0 5
+	
+	SetTeam obi 0
+
+	Fadedownandwait
+	PreEndCutscene
+	FadeDown 0
+	
+	NextLevel L05_3a
+}

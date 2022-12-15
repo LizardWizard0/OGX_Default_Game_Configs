@@ -1,0 +1,90 @@
+[LevelInfo0]
+Title="Temple Of Anubis"
+
+[LevelSummary]
+Title="Temple Of Anubis"
+
+[ZoneInfo0]
+LocationName="Red Courtyard"
+
+[ZoneInfo1]
+LocationName="Blue Spawn Room"
+
+[ZoneInfo10]
+LocationName="Bomb Spawn Hall"
+
+[ZoneInfo11]
+LocationName="Bomb Spawn Hall"
+
+[ZoneInfo12]
+LocationName="Blue Courtyard Entrance"
+
+[ZoneInfo13]
+LocationName="Red Spawn Hall"
+
+[ZoneInfo14]
+LocationName="Red Court Yard"
+
+[ZoneInfo15]
+LocationName="Red Bomb Room"
+
+[ZoneInfo16]
+LocationName="Red Bomb Room"
+
+[ZoneInfo17]
+LocationName="Red Courtyard Entrance"
+
+[ZoneInfo18]
+LocationName="Blue Spawn Hall"
+
+[ZoneInfo2]
+LocationName="Blue Courtyard Entrance"
+
+[ZoneInfo20]
+LocationName="Red Spawn Room"
+
+[ZoneInfo21]
+LocationName="Red Spawn Room"
+
+[ZoneInfo24]
+LocationName="Blue Spawn Room"
+
+[ZoneInfo25]
+LocationName="Bomb Spawn Room"
+
+[ZoneInfo26]
+LocationName="Rocket Launcher Room"
+
+[ZoneInfo28]
+LocationName="Flak Cannon Room"
+
+[ZoneInfo29]
+LocationName="Red Antechamber"
+
+[ZoneInfo3]
+LocationName="Blue Spawn Hall"
+
+[ZoneInfo30]
+LocationName="Red Courtyard Entrance"
+
+[ZoneInfo31]
+LocationName="Blue Antechamber"
+
+[ZoneInfo4]
+LocationName="Blue Courtyard Entrance"
+
+[ZoneInfo5]
+LocationName="Blue Courtyard"
+
+[ZoneInfo6]
+LocationName="Red Spawn Hall"
+
+[ZoneInfo7]
+LocationName="Red Courtyard Entrance"
+
+[ZoneInfo8]
+LocationName="Blue Bomb Room"
+
+[ZoneInfo9]
+LocationName="Blue Bomb Room"
+

@@ -1,0 +1,54 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+/*
+// these are for when he is listening
+UnEquipWeapon me
+AddGesture me none 2
+AddGesture me palmupboth 1.5
+AddGesture me none 2
+AddGesture me think 4
+AddGesture me none 2
+AddGesture me scratchhead
+AddGesture me none 2
+AddGesture me shakehead
+*/
+
+// by himself
+// Dancon increasing the amount of time in none for the sake of the nemoidians
+AddGesture me TurnHeadLeft 
+AddGesture me TurnHeadRight 
+AddGesture me none 4
+AddGesture me TurnHeadLeft 
+AddGesture me TurnHeadRight 
+AddGesture me none 4
+AddGesture me TurnHeadLeft 
+AddGesture me TurnHeadRight 
+AddGesture me none 2
+//AddGesture me Shakehead // gun butt clips bad
+AddGesture me ScratchHead  // 20% 
+//AddGesture me PalmUpLeft // gun butt clips a little
+AddGesture me none 2
+
+
+/*
+/// talking parts ///
+UnEquipWeapon me
+AddGesture me none 2
+AddGesture me shakehead
+AddGesture me none 1
+AddGesture me talk
+AddGesture me palmupleft
+AddGesture me talk 4
+AddGesture me handsonhips 4
+AddGesture me none 1
+AddGesture me talk
+AddGesture me turnheadleft
+AddGesture me turnheadright
+AddGesture me talk 4
+*/
+
+WaitUntilFinishedGesture me
+
+

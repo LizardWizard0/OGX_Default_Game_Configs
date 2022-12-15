@@ -1,0 +1,58 @@
+state Base {
+	Conditions {
+		if HelpWithTriggers == 1 goto HelpWithTriggers
+		if GotOpponent == 1 goto GotOpponent
+	}
+	Actions {	
+		KeepWeaponOut "FALSE"
+		FollowPlayer "1"
+	}
+}
+
+state GotOpponent {
+	ReferenceScript {
+		Script=Jedi
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if CategoryIs "Jedi" == 1 and
+			if HelpWithTriggers == 0
+		}
+	}
+
+	ReferenceScript {
+		Script=Blaster
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if CategoryIs "Blaster" == 1 and
+			if HelpWithTriggers == 0
+		}
+	}
+
+	ReferenceScript {	//This is a fallback
+		Script=NoWeapon
+		Source=Global
+		ReturnState=Base
+		Conditions {
+			if HelpWithTriggers == 0
+		}
+	}
+
+	Conditions {
+		if HelpWithTriggers == 1 goto HelpWithTriggers
+		if GotOpponent == 0 goto Base
+	}
+	Actions {	
+		FollowPlayer "0.75"
+	}
+}
+
+state HelpWithTriggers {
+	Conditions {
+		if HelpWithTriggers == 0 goto Base
+	}
+	Actions {	
+		HelpWithTriggers
+	}
+}

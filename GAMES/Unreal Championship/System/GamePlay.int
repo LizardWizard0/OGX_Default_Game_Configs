@@ -1,0 +1,146 @@
+[ACTION_DestroyActor]
+ActionString="Destroy actor"
+
+[ACTION_FinishRotation]
+ActionString="Finish rotation"
+
+[ACTION_Freeze]
+ActionString="Freeze"
+
+[ACTION_SetPhysics]
+ActionString="change physics to "
+
+[ACTION_ShootTarget]
+ActionString="shoot target"
+
+[ACTION_SpawnActor]
+ActionString="Spawn actor"
+
+[ACTION_ThrowWeapon]
+ActionString="throw weapon"
+
+[Action_CHANGELEVEL]
+ActionString="Change level"
+
+[Action_CHANGESCRIPT]
+ActionString="Change script"
+
+[Action_CROUCH]
+ActionString="crouch"
+
+[Action_ConsoleCommand]
+ActionString="console command"
+
+[Action_DAMAGEINSTIGATOR]
+ActionString="Damage instigator"
+
+[Action_DESTROYPAWN]
+ActionString="destroy pawn"
+
+[Action_DISPLAYMESSAGE]
+ActionString="display message"
+
+[Action_ENDSECTION]
+ActionString="end section"
+
+[Action_FADEVIEW]
+ActionString="fade view"
+
+[Action_GOTOACTION]
+ActionString="go to action"
+
+[Action_IFCONDITION]
+ActionString="If condition"
+
+[Action_KILLINSTIGATOR]
+ActionString="Damage instigator"
+
+[Action_LEAVESEQUENCE]
+ActionString="leave sequence"
+
+[Action_MOVETOPLAYER]
+ActionString="Move to player"
+
+[Action_MOVETOPOINT]
+ActionString="Move to point"
+
+[Action_PLAYAMBIENTSOUND]
+ActionString="play ambient sound"
+
+[Action_PLAYANIM]
+ActionString="play animation"
+
+[Action_PLAYLOCALSOUND]
+ActionString="play sound"
+
+[Action_PLAYMUSIC]
+ActionString="play song"
+
+[Action_PLAYSOUND]
+ActionString="play sound"
+
+[Action_RUN]
+ActionString="Run"
+
+[Action_SETALERTNESS]
+ActionString="set alertness"
+
+[Action_SETVIEWTARGET]
+ActionString="set viewtarget"
+
+[Action_STOPANIMATION]
+ActionString="stop animation"
+
+[Action_TRIGGEREVENT]
+ActionString="trigger event"
+
+[Action_TURNTOWARDPLAYER]
+ActionString="Turn toward player"
+
+[Action_WAITFORANIMEND]
+ActionString="Wait for animend"
+
+[Action_WAITFOREVENT]
+ActionString="Wait for external event"
+
+[Action_WAITFORPLAYER]
+ActionString="Wait for player"
+
+[Action_WAITFORTIMER]
+ActionString="Wait for timer"
+
+[Action_WALK]
+ActionString="walk"
+
+[Burned]
+DeathString="%o was sauteed."
+
+[Corroded]
+DeathString="%o was dissolved by %k's."
+FemaleSuicide="%o dissolved in slime."
+MaleSuicide="%o dissolved in slime."
+
+[Counter]
+CountMessage="Only %i more to go..."
+CompleteMessage="Completed!"
+
+[Depressurized]
+DeathString="%o was depressurized by %k."
+FemaleSuicide="%o was depressurized."
+MaleSuicide="%o was depressurized."
+
+[Drowned]
+DeathString="%o forgot to come up for air."
+FemaleSuicide="%o forgot to come up for air."
+MaleSuicide="%o forgot to come up for air."
+
+[MessageTextureClient]
+HisMessage="his"
+HerMessage="her"
+
+[ScriptedAction]
+ActionString="unspecified action"
+
+[WaterVolume]
+LocationName="under water"
+

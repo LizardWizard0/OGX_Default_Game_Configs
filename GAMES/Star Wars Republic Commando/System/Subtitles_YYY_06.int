@@ -1,0 +1,561 @@
+
+[Subtitles_YYY_06]
+
+SubtitleSound[2928]="CA1Y6500"
+SubtitleText[2928]="Clone Advisor 1: Deltas, a separatist ship has just touched down on the top of this tree."
+
+SubtitleSound[2929]="CA1Y6501"
+SubtitleText[2929]="Clone Advisor 1: Get up there and destroy it."
+
+SubtitleSound[2930]="CA1Y6502"
+SubtitleText[2930]="Clone Advisor 1: Tarfful is requesting reinforcements; some of his Wookiees are pinned down in a ship's hangar straight ahead."
+
+SubtitleSound[2931]="CA1Y6503"
+SubtitleText[2931]="Clone Advisor 1: Provide support as needed, Delta Squad."
+
+SubtitleSound[2932]="D38Y6510"
+SubtitleText[2932]="Delta 38: Seems we got here just in time."
+
+SubtitleSound[2933]="D07Y6500"
+SubtitleText[2933]="Delta 07: What the fierfek was that?"
+
+SubtitleSound[2934]="D40Y6500"
+SubtitleText[2934]="Delta 40: What was that?"
+
+SubtitleSound[2935]="D62Y6500"
+SubtitleText[2935]="Delta 62: What the --?"
+
+SubtitleSound[2936]="CA1Y6504"
+SubtitleText[2936]="Clone Advisor 1: The wookiees are trapped on the other side of this door.  You know the drill.  Get in there, and take out the enemy."
+
+SubtitleSound[2937]="CA1Y6550"
+SubtitleText[2937]="Clone Advisor 1: The Wookiees are badly wounded.  "
+
+SubtitleSound[2938]="CA1Y6551"
+SubtitleText[2938]="Clone Advisor 1: You'll need to blow those droid dispensers before they can escape."
+
+SubtitleSound[2939]="D40Y6518"
+SubtitleText[2939]="Delta 40: Boss, we've lost a friendly. Wookiee down."
+
+SubtitleSound[2940]="CA1Y6552"
+SubtitleText[2940]="Clone Advisor 1: One Wookiee can still get that dropship off.  "
+
+SubtitleSound[2941]="D40Y6519"
+SubtitleText[2941]="Delta 40: Let's give him the chance, then."
+
+SubtitleSound[2942]="D38Y6514"
+SubtitleText[2942]="Delta 38: Negative, sir.  We couldn't save the second Wookiee."
+
+SubtitleSound[2943]="CA1Y6571"
+SubtitleText[2943]="Clone Advisor 1: Acceptable losses, Lead."
+
+SubtitleSound[2944]="CA1Y6505"
+SubtitleText[2944]="Clone Advisor 1: Secure the room, and give the wookiees cover to escape!"
+
+SubtitleSound[2945]="D07Y6512"
+SubtitleText[2945]="Delta 07: That's what we're trying to do!"
+
+SubtitleSound[2946]="CA1Y6506"
+SubtitleText[2946]="Clone Advisor 1: Nicely done as always, Deltas."
+
+SubtitleSound[2947]="CA1Y6507"
+SubtitleText[2947]="Clone Advisor 1: The main door appears to be damaged, Three-Eight; you'll have to use the service branch."
+
+SubtitleSound[2948]="D62Y6512"
+SubtitleText[2948]="Delta 62: Story of our lives…"
+
+SubtitleSound[2949]="CA1Y6508"
+SubtitleText[2949]="Clone Advisor 1: Effect rapid entry into the service branch by detonating one of the large fuel tanks."
+
+SubtitleSound[2950]="CA1Y6553"
+SubtitleText[2950]="Clone Advisor 1: The one on the right scans as empty."
+
+SubtitleSound[2951]="CA1Y6554"
+SubtitleText[2951]="Clone Advisor 1: That's your best bet. Over."
+
+SubtitleSound[2952]="D07Y6502"
+SubtitleText[2952]="Delta 07: I think we can handle that."
+
+SubtitleSound[2953]="D40Y6502"
+SubtitleText[2953]="Delta 40: Nice."
+
+SubtitleSound[2954]="CA1Y6509"
+SubtitleText[2954]="Clone Advisor 1: Roger that.  Keep it moving, squad"
+
+SubtitleSound[2955]="D38Y6500"
+SubtitleText[2955]="Delta 38: Tank destroyed."
+
+SubtitleSound[2956]="CA1Y6510"
+SubtitleText[2956]="Clone Advisor 1: The Separatist Cruiser has hooked into the tree's power grid."
+
+SubtitleSound[2957]="CA1Y6511"
+SubtitleText[2957]="Clone Advisor 1: It's drawing too much power for the defense turrets to come online."
+
+SubtitleSound[2958]="CA1Y6512"
+SubtitleText[2958]="Clone Advisor 1: Tarrful has informed us that there are some backup power generators in this service branch."
+
+SubtitleSound[2959]="CA1Y6513"
+SubtitleText[2959]="Clone Advisor 1: The Separatists have locked them down so you'll have to slice in to activate them."
+
+SubtitleSound[2960]="CA1Y6514"
+SubtitleText[2960]="Clone Advisor 1: The first one is a bit down this service branch.  Find it and bring it online, Deltas."
+
+SubtitleSound[2961]="D38Y6511"
+SubtitleText[2961]="Delta 38: There's the first backup generator."
+
+SubtitleSound[2962]="D40Y6527"
+SubtitleText[2962]="Delta 40: The lights just came on."
+
+SubtitleSound[2963]="CA1Y6558"
+SubtitleText[2963]="Clone Advisor 1: Confirmed:  Alpha Generator online."
+
+SubtitleSound[2964]="CA1Y6515"
+SubtitleText[2964]="Clone Advisor 1: Slice into it's controls and power it up."
+
+SubtitleSound[2965]="D07Y6503"
+SubtitleText[2965]="Delta 07: Does anyone else find this planet a little…strange?"
+
+SubtitleSound[2966]="D38Y6512"
+SubtitleText[2966]="Delta 38: One down."
+
+SubtitleSound[2967]="CA1Y6516"
+SubtitleText[2967]="Clone Advisor 1: The second generator shouldn't be far from your present location."
+
+SubtitleSound[2968]="CA1Y6517"
+SubtitleText[2968]="Clone Advisor 1: Find it."
+
+SubtitleSound[2969]="D38Y6501"
+SubtitleText[2969]="Delta 38: Second generator located."
+
+SubtitleSound[2970]="D40Y6528"
+SubtitleText[2970]="Delta 40: Lights up, sir."
+
+SubtitleSound[2971]="CA1Y6559"
+SubtitleText[2971]="Clone Advisor 1: Beta generator online.  "
+
+SubtitleSound[2972]="CA1Y6560"
+SubtitleText[2972]="Clone Advisor 1: Both generators now operational.  "
+
+SubtitleSound[2973]="D38Y6502"
+SubtitleText[2973]="Delta 38: Defense systems powering up. "
+
+SubtitleSound[2974]="CA1Y6518"
+SubtitleText[2974]="Clone Advisor 1: They should be completely online by the time you reach the top of the tree, Deltas."
+
+SubtitleSound[2975]="D07Y6504"
+SubtitleText[2975]="Delta 07: That's what I'm talking about.  It's a power generator, in the middle of a TREE.  Strange."
+
+SubtitleSound[2976]="D62Y6502"
+SubtitleText[2976]="Delta 62: Sev, when this is over, I'm gonna make sure you get some R&R."
+
+SubtitleSound[2977]="CA1Y6519"
+SubtitleText[2977]="Clone Advisor 1: Return to the main corridor, Delta."
+
+SubtitleSound[2978]="CA1Y6520"
+SubtitleText[2978]="Clone Advisor 1: Tarfful's forces have engaged the enemy in a hangar up ahead."
+
+SubtitleSound[2979]="CA1Y6521"
+SubtitleText[2979]="Clone Advisor 1: Proceed to the hangar and clear the way for them."
+
+SubtitleSound[2980]="D40Y6503"
+SubtitleText[2980]="Delta 40: Another hangar?"
+
+SubtitleSound[2981]="D62Y6503"
+SubtitleText[2981]="Delta 62: What can you say?  Wookiees like hangars."
+
+SubtitleSound[2982]="D07Y6501"
+SubtitleText[2982]="Delta 07: There's a wookiee down there - looks like he's calling us."
+
+SubtitleSound[2983]="D40Y6501"
+SubtitleText[2983]="Delta 40: Hey there's a wookiee down there - looks like he's calling us."
+
+SubtitleSound[2984]="D62Y6501"
+SubtitleText[2984]="Delta 62: Hey there's a wookiee down there - looks like he's calling us."
+
+SubtitleSound[2985]="CA1Y6522"
+SubtitleText[2985]="Clone Advisor 1: He says if you slice through that door you may be able to sidetrack an ambush."
+
+SubtitleSound[2986]="D62Y6504"
+SubtitleText[2986]="Delta 62: That'd be a nice change of pace."
+
+SubtitleSound[2987]="D07Y6516"
+SubtitleText[2987]="Delta 07: See?  Those droids are deactivated…  waiting for a cue that never came…"
+
+SubtitleSound[2988]="CA1Y6523"
+SubtitleText[2988]="Clone Advisor 1: Hurry, deltas, those wookiees need our help."
+
+SubtitleSound[2989]="D62Y6505"
+SubtitleText[2989]="Delta 62: Or, uh maybe not..."
+
+SubtitleSound[2990]="D07Y6505"
+SubtitleText[2990]="Delta 07: Those hairy freaks sure can fight. "
+
+SubtitleSound[2991]="D62Y6506"
+SubtitleText[2991]="Delta 62: Uh-oh."
+
+SubtitleSound[2992]="D40Y6504"
+SubtitleText[2992]="Delta 40: Separatist traitors!"
+
+SubtitleSound[2993]="D62Y6507"
+SubtitleText[2993]="Delta 62: Oh, good, these guys again."
+
+SubtitleSound[2994]="D40Y6505"
+SubtitleText[2994]="Delta 40: Make 'em work for it, Deltas!"
+
+SubtitleSound[2995]="CA1Y6524"
+SubtitleText[2995]="Clone Advisor 1: They're just a delaying tactic, Deltas! "
+
+SubtitleSound[2996]="D62Y6513"
+SubtitleText[2996]="Delta 62: And a damn good one, I might add!"
+
+SubtitleSound[2997]="D38Y6503"
+SubtitleText[2997]="Delta 38: Stay focused, deltas!  We need to get to the top and blow up that ship."
+
+SubtitleSound[2998]="D38Y6504"
+SubtitleText[2998]="Delta 38: We've made it to the top, sir!"
+
+SubtitleSound[2999]="D62Y6514"
+SubtitleText[2999]="Delta 62: Hey, I can see my birthing pod from up here!"
+
+SubtitleSound[3000]="CA1Y6525"
+SubtitleText[3000]="Clone Advisor 1: Well done, Deltas!  The Wookiee Defense systems are now online, and available to destroy the Separatist Cruiser."
+
+SubtitleSound[3001]="CA1Y6526"
+SubtitleText[3001]="Clone Advisor 1: In the upper levels of each of the four bays you'll find a Wookiee Dual Missile Turret."
+
+SubtitleSound[3002]="CA1Y6527"
+SubtitleText[3002]="Clone Advisor 1: Only with the combined firepower of all four Turrets do we have the slightest chance of taking down this juggernaught."
+
+SubtitleSound[3003]="D38Y6520"
+SubtitleText[3003]="Delta 38: Sev, this one is yours.  "
+
+SubtitleSound[3004]="CA1Y6564"
+SubtitleText[3004]="Clone Advisor 1: Sev, this one is yours.  "
+
+SubtitleSound[3005]="D07Y6506"
+SubtitleText[3005]="Delta 07: I'm on it."
+
+SubtitleSound[3006]="D38Y6521"
+SubtitleText[3006]="Delta 38: Fixer?"
+
+SubtitleSound[3007]="CA1Y6565"
+SubtitleText[3007]="Clone Advisor 1: Fixer?"
+
+SubtitleSound[3008]="D40Y6506"
+SubtitleText[3008]="Delta 40: I'll take this one, sir."
+
+SubtitleSound[3009]="D38Y6522"
+SubtitleText[3009]="Delta 38: Six-two, hop on."
+
+SubtitleSound[3010]="CA1Y6566"
+SubtitleText[3010]="Clone Advisor 1: Six-two, hop on."
+
+SubtitleSound[3011]="D62Y6508"
+SubtitleText[3011]="Delta 62: Six-Two mounting Missile Turret"
+
+SubtitleSound[3012]="CA1Y6528"
+SubtitleText[3012]="Clone Advisor 1: Three-Eight, get on that turbolaser and take out that ship."
+
+SubtitleSound[3013]="CA1Y6529"
+SubtitleText[3013]="Clone Advisor 1: Delta squad, concentrate turbolasers on target."
+
+SubtitleSound[3014]="D38Y6505"
+SubtitleText[3014]="Delta 38: Her shields are down, squad!  Keep it up!"
+
+SubtitleSound[3015]="CA1Y6530"
+SubtitleText[3015]="Clone Advisor 1: Scans indiccate her hull is weakening, delta squad.  "
+
+SubtitleSound[3016]="CA1Y6531"
+SubtitleText[3016]="Clone Advisor 1: We're coming in for a strafing run!"
+
+SubtitleSound[3017]="CA1Y6532"
+SubtitleText[3017]="Clone Advisor 1: Keep firing!"
+
+SubtitleSound[3018]="CA1Y6533"
+SubtitleText[3018]="Clone Advisor 1: Target acquired!"
+
+SubtitleSound[3019]="CA1Y6534"
+SubtitleText[3019]="Clone Advisor 1: Target locked!"
+
+SubtitleSound[3020]="CA1Y6535"
+SubtitleText[3020]="Clone Advisor 1: Missiles away!"
+
+SubtitleSound[3021]="D07Y6507"
+SubtitleText[3021]="Delta 07: Nothing like a little precision teamwork, Deltas."
+
+SubtitleSound[3022]="D62Y6509"
+SubtitleText[3022]="Delta 62: And that was nothing like a little precision teamwork."
+
+SubtitleSound[3023]="D40Y6507"
+SubtitleText[3023]="Delta 40: Lose the chatter, commandos.  What now, sir?"
+
+SubtitleSound[3024]="D38Y6506"
+SubtitleText[3024]="Delta 38: Awaiting further instructions, Forty."
+
+SubtitleSound[3025]="CA1Y6536"
+SubtitleText[3025]="Clone Advisor 1: Delta squad, regroup at Three-Eight's position for exfil."
+
+SubtitleSound[3026]="D07Y6508"
+SubtitleText[3026]="Delta 07: Thirty-Eight, I've run into a problem here."
+
+SubtitleSound[3027]="D07Y6509"
+SubtitleText[3027]="Delta 07: Multiple hostiles ahead."
+
+SubtitleSound[3028]="D07Y6510"
+SubtitleText[3028]="Delta 07: I can't get through!"
+
+SubtitleSound[3029]="D07Y6511"
+SubtitleText[3029]="Delta 07: They're (garble… cut)"
+
+SubtitleSound[3030]="D40Y6508"
+SubtitleText[3030]="Delta 40: Sev?"
+
+SubtitleSound[3031]="D38Y6507"
+SubtitleText[3031]="Delta 38: Hold your position, Sev, we're on our way."
+
+SubtitleSound[3032]="CA1Y6537"
+SubtitleText[3032]="Clone Advisor 1: Negative 38, we've lost his signal."
+
+SubtitleSound[3033]="D62Y6510"
+SubtitleText[3033]="Delta 62: Sir, we have to go back!"
+
+SubtitleSound[3034]="CA1Y6538"
+SubtitleText[3034]="Clone Advisor 1: Negative, delta squad, you're needed elsewhere. "
+
+SubtitleSound[3035]="D38Y6508"
+SubtitleText[3035]="Delta 38: We have our orders, commando!"
+
+SubtitleSound[3036]="D62Y6511"
+SubtitleText[3036]="Delta 62: Blast our orders!  Forty?"
+
+SubtitleSound[3037]="D40Y6509"
+SubtitleText[3037]="Delta 40: You… heard the man, Six-Two. We're needed elsewhere."
+
+SubtitleSound[3038]="D38Y6509"
+SubtitleText[3038]="Delta 38: We'll come back when there's time. Form up on my position…"
+
+SubtitleSound[3039]="CA1Y6542"
+SubtitleText[3039]="Clone Advisor 1: Tarfful and his men are on the way to the war room."
+
+SubtitleSound[3040]="CA1Y6543"
+SubtitleText[3040]="Clone Advisor 1: They'll provide Intel and tactical support from there."
+
+SubtitleSound[3041]="CA1Y6544"
+SubtitleText[3041]="Clone Advisor 1: He's left behind one Wookiee guide to help you."
+
+SubtitleSound[3042]="D62Y6515"
+SubtitleText[3042]="Delta 62: So much for our guide."
+
+SubtitleSound[3043]="D40Y6510"
+SubtitleText[3043]="Delta 40: Cut the chatter, Six-Two."
+
+SubtitleSound[3044]="CA1Y6545"
+SubtitleText[3044]="Clone Advisor 1: The Separatist presence is very heavy in the main citadel."
+
+SubtitleSound[3045]="CA1Y6546"
+SubtitleText[3045]="Clone Advisor 1: But there are a number of Wookiee resistance fighters in the area."
+
+SubtitleSound[3046]="CA1Y6547"
+SubtitleText[3046]="Clone Advisor 1: Take extra care with ordnance."
+
+SubtitleSound[3047]="CA1Y6548"
+SubtitleText[3047]="Clone Advisor 1: Wookiees don’t take kindly to friendly fire. "
+
+SubtitleSound[3048]="D62Y6516"
+SubtitleText[3048]="Delta 62: Who can blame 'em?"
+
+SubtitleSound[3049]="D40Y6511"
+SubtitleText[3049]="Delta 40: What's he on about?"
+
+SubtitleSound[3050]="D62Y6517"
+SubtitleText[3050]="Delta 62: Ouch.  That had to hurt."
+
+SubtitleSound[3051]="D38Y6513"
+SubtitleText[3051]="Delta 38: How'd they get that spider droid in here?"
+
+SubtitleSound[3052]="D40Y6512"
+SubtitleText[3052]="Delta 40: Must've shipped it in unassembled."
+
+SubtitleSound[3053]="D62Y6518"
+SubtitleText[3053]="Delta 62: Yeah, but who must've shipped it in unassembled?"
+
+SubtitleSound[3054]="D40Y6513"
+SubtitleText[3054]="Delta 40: Sir, those tanks might make good weapons positions when they blow."
+
+SubtitleSound[3055]="D40Y6514"
+SubtitleText[3055]="Delta 40: Blast!  Get that Wookiee out of the fire area!"
+
+SubtitleSound[3056]="D62Y6519"
+SubtitleText[3056]="Delta 62: Okay, YOU tell him to retreat, Fixer."
+
+SubtitleSound[3057]="D40Y6515"
+SubtitleText[3057]="Delta 40: Er… Negative on that.  "
+
+SubtitleSound[3058]="CA1Y6549"
+SubtitleText[3058]="Clone Advisor 1: Delta Squad - clear that promenade.  "
+
+SubtitleSound[3059]="D62Y6520"
+SubtitleText[3059]="Delta 62: Promenade, sir?"
+
+SubtitleSound[3060]="D40Y6516"
+SubtitleText[3060]="Delta 40: Shut it, Six-Two."
+
+SubtitleSound[3061]="D40Y6517"
+SubtitleText[3061]="Delta 40: Another spider droid!"
+
+SubtitleSound[3062]="D07Y6513"
+SubtitleText[3062]="Delta 07: This kind of armament is way beyond the scavengers around here.  It doesn't make sense."
+
+SubtitleSound[3063]="D62Y6521"
+SubtitleText[3063]="Delta 62: I see a lot of stuff doesn't make sense."
+
+SubtitleSound[3064]="D07Y6514"
+SubtitleText[3064]="Delta 07: Copy that."
+
+SubtitleSound[3065]="CA1Y6555"
+SubtitleText[3065]="Clone Advisor 1: You'll have to make your way through the nursery facilities of the citadel."
+
+SubtitleSound[3066]="D62Y6522"
+SubtitleText[3066]="Delta 62: Oh -- is that where they keep the baby Wookiees?"
+
+SubtitleSound[3067]="CA1Y6556"
+SubtitleText[3067]="Clone Advisor 1: Negative.  Baby wroshyr trees.  This is the Wookiees' garden."
+
+SubtitleSound[3068]="D62Y6523"
+SubtitleText[3068]="Delta 62: Well, the garden's got a pest problem: Trandoshans."
+
+SubtitleSound[3069]="D07Y6515"
+SubtitleText[3069]="Delta 07: You would prefer baby Wookiees?"
+
+SubtitleSound[3070]="D62Y6524"
+SubtitleText[3070]="Delta 62: Not really.  Too cute."
+
+SubtitleSound[3071]="D40Y6520"
+SubtitleText[3071]="Delta 40: Enemy in full retreat."
+
+SubtitleSound[3072]="D40Y6521"
+SubtitleText[3072]="Delta 40: You hear that, Boss?"
+
+SubtitleSound[3073]="D38Y6515"
+SubtitleText[3073]="Delta 38: Sounds like they're trying to get through the door."
+
+SubtitleSound[3074]="D40Y6522"
+SubtitleText[3074]="Delta 40: We could drop a grenade right into the middle of their party, sir."
+
+SubtitleSound[3075]="D38Y6516"
+SubtitleText[3075]="Delta 38: Excellent idea, Fixer."
+
+SubtitleSound[3076]="D40Y6523"
+SubtitleText[3076]="Delta 40: Pretty quiet, sir."
+
+SubtitleSound[3077]="D40Y6524"
+SubtitleText[3077]="Delta 40: They must be waiting for us."
+
+SubtitleSound[3078]="D62Y6525"
+SubtitleText[3078]="Delta 62: They won't wait long."
+
+SubtitleSound[3079]="D62Y6526"
+SubtitleText[3079]="Delta 62: Trandoshans aren't a species known for their patience."
+
+SubtitleSound[3080]="D38Y6517"
+SubtitleText[3080]="Delta 38: Worked like a charm"
+
+SubtitleSound[3081]="D62Y6527"
+SubtitleText[3081]="Delta 62: Uh-oh.  He's a big one!"
+
+SubtitleSound[3082]="D40Y6525"
+SubtitleText[3082]="Delta 40: Try and draw him back into the other room!"
+
+SubtitleSound[3083]="D40Y6526"
+SubtitleText[3083]="Delta 40: There are some good anti-armor positions in there."
+
+SubtitleSound[3084]="CA1Y6557"
+SubtitleText[3084]="Clone Advisor 1: Enemy behind you, Delta squad!"
+
+SubtitleSound[3085]="D62Y6528"
+SubtitleText[3085]="Delta 62: Someone was trying to stop something from coming through this hall, huh?"
+
+SubtitleSound[3086]="CA1Y6561"
+SubtitleText[3086]="Clone Advisor 1: Up and over, Deltas.  You need to keep moving."
+
+SubtitleSound[3087]="D07Y6517"
+SubtitleText[3087]="Delta 07: Damn!  I don't believe it!"
+
+SubtitleSound[3088]="D62Y6529"
+SubtitleText[3088]="Delta 62: What's wrong, Sev?"
+
+SubtitleSound[3089]="D07Y6518"
+SubtitleText[3089]="Delta 07: I lost count of my kills!  "
+
+SubtitleSound[3090]="CA1Y6539"
+SubtitleText[3090]="Clone Advisor 1: Deltas, there's a wookiee freight elevator ahead that you can use to express to the top of the tree."
+
+SubtitleSound[3091]="CA1Y6540"
+SubtitleText[3091]="Clone Advisor 1: The separatists have been using it to load this tree with droids."
+
+SubtitleSound[3092]="CA1Y6541"
+SubtitleText[3092]="Clone Advisor 1: Take control of the elevator shaft and use the lift to get up there pronto!"
+
+SubtitleSound[3093]="CA1Y6562"
+SubtitleText[3093]="Clone Advisor 1: Hurry, Deltas.  We need to stop this droid army."
+
+SubtitleSound[3094]="D38Y6518"
+SubtitleText[3094]="Delta 38: The elevator is clear, sir."
+
+SubtitleSound[3095]="CA1Y6563"
+SubtitleText[3095]="Clone Advisor 1: Get on it, then, Deltas."
+
+SubtitleSound[3096]="D62Y6530"
+SubtitleText[3096]="Delta 62: Um, why aren't we moving."
+
+SubtitleSound[3097]="D38Y6519"
+SubtitleText[3097]="Delta 38: Sev, the button."
+
+SubtitleSound[3098]="D07Y6519"
+SubtitleText[3098]="Delta 07: Oh!  Sorry, sir."
+
+SubtitleSound[3099]="D07Y6520"
+SubtitleText[3099]="Delta 07: Boss, I've got a problem here!"
+
+SubtitleSound[3100]="D38Y6523"
+SubtitleText[3100]="Delta 38: Sev, where are you?"
+
+SubtitleSound[3101]="D07Y6521"
+SubtitleText[3101]="Delta 07: Sector… multiple hostiles…  sir!"
+
+SubtitleSound[3102]="D40Y6529"
+SubtitleText[3102]="Delta 40: Lost his signal, Boss!"
+
+SubtitleSound[3103]="D38Y6524"
+SubtitleText[3103]="Delta 38: Well find it again, dammit!"
+
+SubtitleSound[3104]="D38Y6525"
+SubtitleText[3104]="Delta 38: Squad, regroup!  We're going after Sev!"
+
+SubtitleSound[3105]="CA1Y6567"
+SubtitleText[3105]="Clone Advisor 1: Negative negative, 38!   New orders came through from the Jedi Generals!  Clear the area!  Evac now!"
+
+SubtitleSound[3106]="D38Y6526"
+SubtitleText[3106]="Delta 38: I don't care if they came from Master Yoda himself!"
+
+SubtitleSound[3107]="CA1Y6568"
+SubtitleText[3107]="Clone Advisor 1: As a matter of fact, they DID, soldier.  Now get your squad out of there."
+
+SubtitleSound[3108]="D40Y6530"
+SubtitleText[3108]="Delta 40: He's right, Boss.  We gotta evac!"
+
+SubtitleSound[3109]="D38Y6527"
+SubtitleText[3109]="Delta 38: Sorry, Sev.  Deltas... move out."
+
+SubtitleSound[3110]="D38Y6528"
+SubtitleText[3110]="Delta 38: It's General Grievous, and it looks like he's bringing company!"
+
+SubtitleSound[3111]="D38Y6529"
+SubtitleText[3111]="Delta 38: Grievous is escaping, sir!"
+
+SubtitleSound[3112]="CA1Y6569"
+SubtitleText[3112]="Clone Advisor 1: I've lost the trace.  Blast. I'll inform the Wookiees."
+
+SubtitleSound[3113]="CA1Y6570"
+SubtitleText[3113]="Clone Advisor 1: There's nothing to be done now.  Disregard and focus on your primary."
+

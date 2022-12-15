@@ -1,0 +1,18 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+//PlayAudioCue me Idle
+AddGesture me PalmUpRight 4
+AddGesture me None 2
+WaitUntilFinishedGesture me
+//PlayAudioCue me Idle
+AddGesture me PalmUpLeft 4
+AddGesture me None 2
+WaitUntilFinishedGesture me
+//PlayAudioCue me Idle
+AddGesture me PalmUpRight 4
+AddGesture me HandsOnHips 4
+WaitUntilFinishedGesture me 
+
+
+

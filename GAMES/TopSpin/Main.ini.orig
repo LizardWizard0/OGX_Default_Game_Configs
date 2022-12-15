@@ -1,0 +1,21 @@
+[General]
+
+Thread = 1
+Random = 1
+
+BlockOnAssert = 1
+BlueScreen = 0
+RedScreen = 1
+CrashScreen = 1
+
+AllPlayersAvail = 1
+AllEnvsAvail = 1
+
+E3 = 1
+
+WadFirst = 1
+
+
+
+
+

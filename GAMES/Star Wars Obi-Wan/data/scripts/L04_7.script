@@ -1,0 +1,404 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+Script "Set Default Surface Sound"
+{
+    SetDefaultSurface 09_door_c.sur
+}
+
+
+/// medals stuff ///
+MissionTitle "/Mission21Title/Tusken Chief"
+MissionObjective 1 "/Mission21Objective1/Beat the Tusken Chief and rescue the Queen!"
+SetExplorationNum 2
+SetForceUsesNeeded 10
+SetTimeToBeat 1 45
+LoadDLG  QueenAmidala.dlg
+
+
+// Music//
+AddBattleLoop  m_battle_14_lp.wav  cut_4-7extro_m.wav  m_battle_14_lose.wav
+
+
+actor king A_tusken-king_01
+SetMissionCritical king 
+actor amad A_Queen_Amadala_Royal_Outfit_01
+SetTimeToBeat 1 25
+setexplorationnum 2
+addstate amad FollowPlayer
+
+        Actor endcs1 A_tusken-flaminggaffi_01 
+        Actor endcs2 A_tusken-flaminggaffi_02 
+        Actor endcs3 A_tusken-flaminggaffi_03 
+        Actor endcs4 A_tusken-flaminggaffi_04 
+        Actor endcs5 A_tusken-flaminggaffi_05 
+        Actor endcs6 A_tusken-flaminggaffi_06 
+        Actor endcs7 A_tusken-gaffi_09 
+        Actor endcs8 A_tusken-gaffi_10 
+        Actor endcs9 A_tusken-gaffi_11 
+        Actor endcs10 A_tusken-gaffi_12 
+
+function "PowerupRemoval" (actor ExplorationMarker, int ExplorationMarkerGroup)
+{
+    waituntilremoved ExplorationMarker
+    removegroup ExplorationMarkerGroup
+    save
+}
+
+
+/// EXPLORATION MARKER COUNT ///
+
+call PowerupRemoval (A_powerupexplorationmarker_01, 2)
+call PowerupRemoval (A_powerupexplorationmarker_02, 3)
+
+function "endcutdudes" (Actor dude)
+{
+LookAtAndWait dude Obi
+StopActions dude
+PlayGesture dude CapturedKneel 60
+}
+
+script "dirty_queen"
+{
+PlayGestureAndWait amad capturedkneel 10
+pause 1
+loop
+}
+
+script "waterpipe"
+{
+ChangeRegionHeight water -1 .1
+WaitUntilKilled A_05_6_nab_switch_01
+CreateParticleGen brokenpipewater.gen watergen watergenref
+pause 5
+ChangeRegionHeight water 1 90
+}
+
+
+
+Script "hail_2_the_king"
+{
+TakeControlOf king
+InvincibilityOn king
+SetTeam king 0
+TakeControlOf amad
+crouch king
+TakeControlOf A_Tusken-Gaffi_05 
+EquipWeapon  A_Tusken-Gaffi_05
+TakeControlOf A_Tusken-Gaffi_06 
+EquipWeapon  A_Tusken-Gaffi_06 
+TakeControlOf A_Tusken-Gaffi_07 
+EquipWeapon  A_Tusken-Gaffi_07 
+TakeControlOf A_Tusken-Gaffi_08
+EquipWeapon  A_Tusken-Gaffi_08
+FadeUp
+
+
+	script "cominatcha" 1
+	{
+	BeginCutScene
+	OpenDoor A_14_d_zimboarena_01 
+	CameraFixed firstshot
+            
+	PlayFlourish cut_4-7intro_m.wav
+	int exitedEarly 1
+            
+	pause 1
+	runtonode Obi end
+	//FadeUp//
+	WaitUntilNearNode Obi end 1
+	StopActions Obi
+	CameraFixed camdoor1
+	Teleport Obi outtun1
+	runtonode Obi p1
+	pause 3.5
+	TriggerUberGenAndWait A_z_ubergen_04 cam1
+	SetSplineSpeed cam1 3
+	CameraAttachedTrack cam1 Obi
+	pause 4
+	EquipWeapon obi
+	pause 4
+	CloseDoorAndWait A_14_d_zimboarena_01
+	WaitUntilEnteredRegion cam1 killcam
+	RemoveActor cam1
+	CameraFixed near1 //king//
+	PlaySound tusken_howl_echo.wav king
+	stand king
+	PlayGestureAndWait king PointForward 1
+	CameraOff
+	LockDoor A_14_d_zimboarena_01
+	Teleport  A_Tusken-Gaffi_07 tt7
+	Teleport A_Tusken-Gaffi_08 tt8
+	Set exitedEarly 0
+        
+	preendcutscene
+
+	if (= exitedEarly 1)
+	{
+		StopMusic  // Stop the intro cutscene music//
+	}
+
+	PlayMusicOverlap BattleLoop
+
+	Teleport A_Tusken-Gaffi_07 tt7
+	Teleport A_Tusken-Gaffi_08 tt8
+	Teleport Obi obit1
+	CloseDoor A_14_d_zimboarena_01
+	LockDoor A_14_d_zimboarena_01
+script "borninabarn"
+{
+    If isopening A_14_d_zimboarena_01
+    {
+    WaitUntilDoorOpen A_14_d_zimboarena_01
+    CloseDoorAndWait A_14_d_zimboarena_01
+    LockDoor A_14_d_zimboarena_01
+    }
+}
+
+
+	DisableAudioFades
+	FadeDown
+
+	EndCutScene
+        
+        
+	fadeup
+	EnableAudioFades
+
+	removegroup 1
+	setstartposition 1
+	save
+	}
+
+
+
+if (IsGroupRemoved 1)
+{
+	PlayMusic BattleLoop
+}
+else
+{
+	WaitForScriptToEnd "cominatcha"
+}
+
+LockDoor A_14_d_zimboarena_01
+ReturnControlTo A_Tusken-Gaffi_05 
+forcetarget A_Tusken-Gaffi_05 Obi
+ReturnControlTo A_Tusken-Gaffi_06 
+forcetarget A_Tusken-Gaffi_06 Obi
+ReturnControlTo A_Tusken-Gaffi_07 
+forcetarget A_Tusken-Gaffi_07 Obi
+ReturnControlTo A_Tusken-Gaffi_08 
+forcetarget A_Tusken-Gaffi_08 Obi
+
+waituntilkilled A_Tusken-Gaffi_05 
+waituntilkilled A_Tusken-Gaffi_06 
+waituntilkilled A_Tusken-Gaffi_07 
+waituntilkilled A_Tusken-Gaffi_08 
+pause 1
+
+PlaySoundAndWait tusken_echo1.wav king
+RunToNode king n1
+returncontrolto king
+InvincibilityOff king
+SetTeam king 9
+forcetarget king Obi
+EnemyHealthMeter king
+waituntilkilled king
+takecontrolof Obi
+StopActions Obi
+EndScript "dirty_queen"
+ExtinguishFire  Obi
+MissionObjectiveAchieved 1
+	
+/// extro cutscene ///
+	BeginCutScene
+        
+       PlayMusic Victory
+        pause 3
+        CameraFixed door1
+        UnlockDoor A_14_d_zimboarena_01
+	OpenDoor A_14_d_zimboarena_01
+
+        StopActions Obi
+        UnEquipWeapon Obi
+	Teleport amad amadend
+         // waituntilnear Obi amad 2 //
+         //Follow amad Obi .1 //
+        Teleport Obi obit2
+        TakeControlOf endcs1 
+        TakeControlOf endcs2 
+        TakeControlOf endcs3
+        TakeControlOf endcs4
+        TakeControlOf endcs5
+        TakeControlOf endcs6
+        TakeControlOf endcs7
+        TakeControlOf endcs8
+        TakeControlOf endcs9
+        TakeControlOf endcs10
+
+        Teleport endcs1 tel1
+        pause .1
+        Teleport endcs2 tel2
+        pause .1
+        Teleport endcs3 tel3
+        pause .1
+        Teleport endcs4 tel4
+        pause .1
+        Teleport endcs5 tel5
+        pause .1
+        Teleport endcs6 tel6
+        pause .1
+        Teleport endcs7 tel7
+        pause .1
+        Teleport endcs8 tel8
+        pause .1
+        Teleport endcs9 tel9
+        pause .1
+        Teleport endcs10 tel10
+        RemoveActor A_4-7_totem_01
+
+        script "worship_Obi"
+        {
+        Child Call "endcutdudes" endcs1 
+        Child Call "endcutdudes" endcs2 
+        Child Call "endcutdudes" endcs3 
+        Child Call "endcutdudes" endcs4 
+        Child Call "endcutdudes" endcs5 
+        Child Call "endcutdudes" endcs6 
+        Child Call "endcutdudes" endcs7 
+        Child Call "endcutdudes" endcs8 
+        Child Call "endcutdudes" endcs9
+        Child Call "endcutdudes" endcs10
+        WaitForAll
+        }
+       
+        WaitUntilDoorOpen A_14_d_zimboarena_01
+         pause 1
+        CameraTrack worship1 Obi
+
+        WalkToNode Obi end
+        Follow amad obi 2
+        SayLine Obi "/Obi-Wan_580/ I have defeated your war Chief! Allow me to return to my ship safely with the Queen."
+	sayline amad "/QueenAmidala_1423/ Naboo is indebted to you for your bravery."
+        Pause 1
+        WaitUntilNearNode Obi out 11
+	FadeDownandwait 2
+	EndCutScene
+        NextLevel cut_jc4
+}
+
+
+/*
+script "fan1"
+{
+takecontrolof A_Tusken-Gaffi_01
+    script "taunt1"
+    {
+    PlaySound tusken_howl1.wav A_Tusken-Gaffi_01
+    PlayGestureAndWait A_Tusken-Gaffi_01 Taunt
+    PauseRandom 4 7
+    loop
+    }
+    
+    script "exploration_marker1"
+    {
+    WaitUntilKilled A_Tusken-Gaffi_01
+    //CreateActor powerupexplorationmarker.dsc a explore1//
+    }
+    
+WaitUntilNear obi A_Tusken-Gaffi_01 2
+returncontrolto A_Tusken-Gaffi_01
+forcetarget A_Tusken-Gaffi_01 obi
+}
+
+script "fan2"
+{
+takecontrolof A_Tusken-Gaffi_02
+    script "taunt2"
+    {
+    PlaySound tusken_snort1.wav A_Tusken-Gaffi_02
+    PlayGestureAndWait A_Tusken-Gaffi_02 Taunt
+    PauseRandom 4 7
+    loop
+    }
+    
+    script "exploration_marker2"
+    {
+    WaitUntilKilled A_Tusken-Gaffi_02
+    //CreateActor powerupexplorationmarker.dsc s explore2//
+    }
+    
+WaitUntilNear obi A_Tusken-Gaffi_02 2
+returncontrolto A_Tusken-Gaffi_02
+forcetarget A_Tusken-Gaffi_02 obi
+}
+
+script "fan3"
+{
+takecontrolof A_Tusken-Gaffi_03
+    script "taun3t"
+    {    
+    PlaySound tusken_snorts_1.wav A_Tusken-Gaffi_03
+    PlayGestureAndWait A_Tusken-Gaffi_03 Taunt
+    PauseRandom 4 7
+    loop
+    }
+    
+    script "exploration_marker3"
+    {
+    WaitUntilKilled A_Tusken-Gaffi_03
+    //CreateActor powerupexplorationmarker.dsc  f explore3//
+    }
+    
+WaitUntilNear obi A_Tusken-Gaffi_03 2
+returncontrolto A_Tusken-Gaffi_03
+forcetarget A_Tusken-Gaffi_03 obi
+}
+
+script "fan4"
+{
+takecontrolof A_Tusken-Gaffi_04
+    script "taunt4"
+    {
+    PlaySound tusken_chirps.wav A_Tusken-Gaffi_04
+    PlayGestureAndWait A_Tusken-Gaffi_04 Taunt
+    PauseRandom 4 7
+    loop
+    }
+    
+    script "exploration_marker4"
+    {
+    WaitUntilKilled A_Tusken-Gaffi_04
+    //CreateActor powerupexplorationmarker.dsc g explore4//
+    }
+    
+WaitUntilNear obi A_Tusken-Gaffi_04 2
+returncontrolto A_Tusken-Gaffi_04
+forcetarget A_Tusken-Gaffi_04 obi
+}
+*/
+
+/*
+script "crowdnoise"
+{
+PauseRandom 2 5
+PlaySoundAndWait tusken_chirps.wav
+PauseRandom 2 5
+PlaySoundAndWait tusken_cry.wav
+PauseRandom 2 5
+PlaySoundAndWait tusken_fem_howl1.wav
+PauseRandom 2 5
+PlaySoundAndWait tusken_growl_2.wav
+PauseRandom 2 5
+PlaySoundAndWait Tusken_Howl_Fem1.wav
+PauseRandom 2 5
+PlaySoundAndWait tusken_snorts_1.wav
+PauseRandom 2 5
+PlaySoundAndWait tusken_taunt_01.wav
+loop
+}
+*/
+
+
+

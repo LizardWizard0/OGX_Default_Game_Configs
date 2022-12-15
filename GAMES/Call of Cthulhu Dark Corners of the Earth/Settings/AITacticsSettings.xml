@@ -1,0 +1,104 @@
+<!-- AI Tactical constants -->
+
+<!-- DO NOT ALTER THESE IF YOU ARE NOT SURE WHAT YOU ARE DOING,
+     THEY HAVE THE POTENTIAL TO DRASTICALLY ALTER THE GAMEPLAY -->
+
+<Tactics_Settings>
+
+	<!-- =================== ANIMATION RELATED =================== -->
+
+	<!-- When in hard coded attack mode, if an NPC is moving using advancing or advancing-aim states,
+	     and if the destination point is less than this distance away then the NPC will walk, otherwise it
+	     will run -->
+	<RunDistance>120.0</RunDistance>	 <!-- 500.0 Reduced so don't walk as much -->
+
+	<!-- If the target is within this distance of the attacker, the attacker will not use crouching aim -->
+	<!-- NB. The chance of an npc crouching at range can be modified using status values on each npc -->
+	<CrouchAimRange>1000.0</CrouchAimRange>
+
+	<!-- Shooting from the hip -->
+	<ShootFromHipRange>1000.0</ShootFromHipRange>	<!-- Defines the boundary between near and far -->
+	<ShootFromHipChance_Near>0.9</ShootFromHipChance_Near> <!-- 0.0 (never) to 1.0 (always) -->
+	<ShootFromHipChance_Far>0.2</ShootFromHipChance_Far> <!-- 0.0 (never) to 1.0 (always) -->
+
+
+	<!-- =================== MODE CHOOSING =================== -->
+	
+	<!-- These determine which mode the character chooses ie. attack or defense
+	     (see TacticalEquations design document)-->
+
+	<!-- Backup constants -->
+	<BackupThreshold>2.0</BackupThreshold>
+
+	<!-- Firing rate constants -->
+	<FireThreshold>5.0</FireThreshold>
+	<FireDecay>0.2</FireDecay>
+
+	<!-- Tactical equation coefficients - MUST SUM TO 1.0 -->
+	<HealthModifier>0.35</HealthModifier>
+	<BackupModifier>0.15</BackupModifier>
+	<FireRateModifier>0.5</FireRateModifier>
+
+
+	<!-- ================== QUICK DEFENSE ================ -->
+
+	<!-- Quick defense is used when a NPC wants to use defensive tactics but there is no cover nearby.
+		 Quick defense tries to move the NPC out of as many attacker's view cones as possible.
+		 The NPC will continue to shoot at its target (where possible) while it is moving.
+		 Upon reaching its quick defense destination, the NPC will not be able to use quick defense
+		 again until the specified delay has elapsed. -->
+
+	<!-- The radius (in cm) around the NPC within which cover points are considered to be nearby.
+		 If there are no cover points (attack obstruction nodes) within this range, quick defense
+		 will be used instead of full defensive mode. -->
+	<CoverRange>2000.0</CoverRange>
+
+	<!-- The radius (in cm) around the NPC to consider points from when choosing a quick defense point -->
+	<QuickDefenseRange>1500.0</QuickDefenseRange>
+
+	<!-- The time (in seconds) delay from a NPC arriving at a quick defense point before the NPC can use quick defense again -->
+	<QuickDefenseDelay>1.5</QuickDefenseDelay>	<!-- 1.5 -->
+
+
+	<!-- =================== SEARCHING =================== -->
+	
+	<!-- Global constants that affect NPC search behaviour -->
+	
+	<!-- The distance around an investigation point to patrol while investigating a sound -->
+	<InvestigateRange>800.0</InvestigateRange>
+	
+	
+	<!-- =================== VISION RANGE MODIFIERS =================== -->
+	
+	<!-- This boosts the npc's vision range during attack -->
+	<InViewLastTimeBias>1.8</InViewLastTimeBias>
+	
+	<!-- These next modifiers should add up to 1.0 to define -->
+	<!-- their combined impact on reducing vision range -->
+	<!-- Pose is now a direct modifier, Alertness is no longer used -->
+	<IlluminationModifier>0.5</IlluminationModifier>
+	<AlertnessModifier>0.0</AlertnessModifier>
+	<MovementSpeedModifier>0.5</MovementSpeedModifier>
+	<PoseModifier>0.0</PoseModifier>
+	
+	<!-- One of these two multipliers will be used depending on which part of the -->
+	<!-- player is visible in order to reduce the overall vision range -->
+	<SneakModeModifierHead>0.5</SneakModeModifierHead>
+	<SneakModeModifierBody>0.8</SneakModeModifierBody>
+
+	
+	<!-- =================== COMBAT MOVEMENT SETTINGS =================== -->
+	<!-- TurnAndRunRange - when a NPC is in combat and chooses a point to move to and that point is
+						   further away than TurnAndRunRange then the NPC stops pointing at its target
+						   and moves to the chosen point.  If the point is closer than TurnAndRunRange,
+						   the NPC moves to the point but continues to face its target.	-->
+	<TurnAndRunRange>500.0</TurnAndRunRange>	<!-- 2000.0 -->
+	
+	<!-- ReloadRange - the radius around an NPC to search for waypoints in the reload behaviour -->
+	<ReloadRange>1000.0</ReloadRange>			<!-- 1500.0 -->
+
+	<!-- ==================== LIGHT / HEAVY WOUNDING ==================== -->
+	<!-- HeavyDamage - determines the health loss required to cause a heavy wounded anim to be played.
+					   If health_loss < HeavyDamage then play light wounded, else play heavy wounded. -->
+	<HeavyDamage>30.0</HeavyDamage>
+</Tactics_Settings>

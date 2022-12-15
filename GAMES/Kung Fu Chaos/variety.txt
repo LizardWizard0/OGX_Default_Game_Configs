@@ -1,0 +1,1910 @@
+
+// Welcome to the variety file
+
+// commands are in the format - "Menu.Item=Value"
+
+// Control masks defined in character.h line 140
+	//"VarietyTemplate.PlayerControlMasks=256" 
+	//
+	//	ATTACKMASK		= 0x0001,
+	//	JUMPMASK		= 0x0002,
+	//	GRABMASK		= 0x0004,
+	//	TAUNTMASK		= 0x0008,
+	//	JUMPATTACKMASK	= 0x0010,
+	//	GRABATTACKMASK	= 0x0020,
+	//	WIDEMASK		= 0x0040,
+	//	SPRMASK			= 0x0080,
+	//	BLOCKMASK		= 0x0100,
+	//	NOBUTTONMASK	= 0x0200,
+	//	MOVEMASK		= 0x1000,
+
+// Different attack table: "CaptainTemplate.StringTable = KungfuDSAttackStrings_Captain"
+
+// Points for single moves: "StylePointsTemplate.MediumKOPoints1 = 10000"
+
+// Every KOKills: "VarietyTemplate.KOKills=true" 
+
+// Time limit: 
+
+	//"VarietyTemplate.HasShortLevelTime=true" 
+	//"VarietyTemplate.ShortLevelTime=30.0" 
+
+//Prevent block from being used in game masks defined in character.h line 140
+	//"VarietyTemplate.PlayerControlMasks=256" 
+
+	//Need to remove autoblock from controller configs
+	//"GameOptions.PadOneAutoBlockOn = false"
+	//"GameOptions.PadTwoAutoBlockOn = false"
+	//"GameOptions.PadThreeAutoBlockOn = false"
+	//"GameOptions.PadFourAutoBlockOn = false"
+
+
+// Give points for all ninja deaths
+	//"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+
+
+// GetHealthAsHit
+
+// Motion Blur
+//		"TestMenu.MotionBlur = 0.5"
+
+//	CVarietyTemplate VarietyTemplate
+//	{
+//		PlayerControlMasks (0)
+//		KOKills (false)
+//		HasShortLevelTime (false)
+//		ShortLevelTime (100.0)
+//		AllNinjaDeathsGivePoints (false)
+//		EnergyGain1 (0.0)
+//		EnergyGain2 (0.0)
+//		EnergyGain3 (0.0)
+//		EnergyGain4 (0.0)
+//		AttackDamageScalar1 (1.0)
+//		AttackDamageScalar2 (1.0)
+//		AttackDamageScalar3 (1.0)
+//		AttackDamageScalar4 (1.0)
+//		UseScoreTargets (true)
+//		ScTarOnlyForSinPla (false)
+//		GetHealthAsHit (false)
+//		UseTeamShadows (false)
+//		DropPrincess (true)
+//		NinjaDoubleSigPoints
+//	}
+// HudTemplate.
+//	SuppressTeamHud0 (false)
+//	SuppressTeamHud1 (false)
+//	SuppressTeamHud2 (false)
+//	SuppressTeamHud3 (false)
+
+// ===================================================================== KUNGFU CS 
+
+Objects
+{
+
+	//	---------------------------------------- OK
+	//	Mostly crates - slippery & no jump
+	//	----------------------------------------
+
+	CVarietyScript KungFuCSScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=65.0" 
+
+		"TestMenu.MotionBlur = 0.5"
+
+		"KungFuCSTemplate_Hard.ProbabilitySavee = 0.45"			//0.85"
+		"KungFuCSTemplate_Hard.ProbabilitySaveeDecrease = 100.0"	//0.1"
+		"KungFuCSTemplate_Hard.ProbabilitySaveeMinimum = 0.45"	//0.75"
+
+		"KungFuCSTemplate_Hard.Acceleration = 1000"
+		"KungFuCSTemplate_Hard.SlipperyFriction = 98"
+		"KungFuCSTemplate_Hard.PlayerMaxSpeed = 12"
+		"KungFuCSTemplate_Hard.BargeImpulse = 12"
+
+		"KungFuCSTemplate_Hard.StarOne = 2		//5"
+		"KungFuCSTemplate_Hard.StarTwo = 4		//10"
+		"KungFuCSTemplate_Hard.StarThree = 7	//20"
+		"KungFuCSTemplate_Hard.StarFour = 10	//30"
+		"KungFuCSTemplate_Hard.StarFive = 20	//40"
+
+		"GameOptions.GameSpeed = GAME_SPEED_VV_SLOW"
+
+		"TestMenu.VarietySlomo = true"
+
+		// drunken look
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"FilterDef1980.SepiaColourRed = 1.0"
+		"FilterDef1980.SepiaColourGreen = 0.4"
+		"FilterDef1980.SepiaColourBlue = 0.3"
+		"FilterDef1980.SepiaToNormal = 0.5"
+		"FilterDef1980.LensIntensity = 0.4"
+	}
+
+
+	//	---------------------------------------- 
+	//	Lots of Stuntmen and No Crates but FAST
+	//	----------------------------------------
+
+	CVarietyScript KungFuCSScriptThree
+	{
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=72.0" // was 68
+
+		"GameOptions.GameSpeed = GAME_SPEED_VV_FAST"
+
+		"KungFuCSTemplate_Hard.StartTimeBetweenDebris = 0.50"
+		"KungFuCSTemplate_Hard.MinTimeBetweenDebris = 0.50"
+
+		"KungFuCSTemplate_Hard.ProbabilitySavee = 100"
+		"KungFuCSTemplate_Hard.ProbabilitySaveeDecrease = 0.0"
+		"KungFuCSTemplate_Hard.ProbabilitySaveeMinimum = 100"
+
+		"KungFuCSTemplate_Hard.StarOne = 10"
+		"KungFuCSTemplate_Hard.StarTwo = 20"
+		"KungFuCSTemplate_Hard.StarThree = 30"
+		"KungFuCSTemplate_Hard.StarFour = 50"
+		"KungFuCSTemplate_Hard.StarFive = 85"
+
+		"KungFuCSTemplate_Hard.Acceleration = 4000"
+		"KungFuCSTemplate_Hard.SlipperyFriction = 80"//84"
+	
+		// bright hot filter
+
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"FilterDef1980.SepiaToNormal = 0.0"
+
+		"Fullscreen1980.Gamma = 1.5"
+		"Fullscreen1980.Brightness = 0.8"
+		"Fullscreen1980.Contrast = 1.5"
+	}
+
+	// ===================================================================== KUNGFU DS 
+
+	//	----------------------------------------
+	//	No attack + Quicker
+	//	----------------------------------------
+
+	CVarietyScript KungFuDSScriptTwo
+	{
+		"KungFuDSTemplate.SpeedKick = 0"			//2.0"
+		"KungFuDSTemplate.SpeedKickDuration = 0"	//1.0"
+
+		"KungFuDSTemplate.ProbabilityJump = 0.15"	//0.1"
+		"KungFuDSTemplate.ProbabilityHit = 0.10"	//0.2"
+
+		"KungFuDSTemplate.MaxPoleSpeed = 100"
+	
+		"KungFuDSTemplate.Accel0StartTime = 0.0"
+		"KungFuDSTemplate.Accel0 = 0.6"
+	
+		"KungFuDSTemplate.Accel1StartTime = 19.0"
+		"KungFuDSTemplate.Accel1 = -4.0"
+	
+		"KungFuDSTemplate.Accel2StartTime = 22.5"
+		"KungFuDSTemplate.Accel2 = -0.3"
+	
+		"KungFuDSTemplate.Accel3StartTime = 30.4"
+		"KungFuDSTemplate.Accel3 =  3.0"
+
+		"KungFuDSTemplate.Accel4StartTime = 35.0"
+		"KungFuDSTemplate.Accel4 =  0.45"
+	
+		"KungFuDSTemplate.Accel5StartTime = 40.0"
+		"KungFuDSTemplate.Accel5 = -5.0"
+	
+		"KungFuDSTemplate.Accel6StartTime = 43.0"
+		"KungFuDSTemplate.Accel6 = -0.60"
+	
+		"KungFuDSTemplate.Accel7StartTime = 48.0"
+		"KungFuDSTemplate.Accel7 =  8.0"
+	
+		"KungFuDSTemplate.Accel8StartTime = 50.5"
+		"KungFuDSTemplate.Accel8 = -5.0"
+	
+		"KungFuDSTemplate.Accel9StartTime = 54.0"
+		"KungFuDSTemplate.Accel9 = -0.3"
+	
+		"XuiTemplate.StringTable = KungfuDSAttackStrings_Xui"
+		"ChikiTemplate.StringTable = KungfuDSAttackStrings_Monkey"
+
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+	}
+
+	// ===================================================================== KUNGFU MF 
+
+	//-----------------------------------------
+	//	Have to taunt 5 times.  One sig kill to win.  
+	//-----------------------------------------
+		
+	CVarietyScript KungFuMFScriptOne
+	{
+		"StylePointsTemplate.MediumKOPoints1	= 0"
+		"StylePointsTemplate.MediumKOPoints2	= 0"
+		"StylePointsTemplate.MediumKOPoints3	= 0"
+		"StylePointsTemplate.SlowKOPoints1 = 0"
+		"StylePointsTemplate.SlowKOPoints2 = 0"
+		"StylePointsTemplate.SlowKOPoints3 = 0"
+		"StylePointsTemplate.TripKOPoints1 = 0"
+		"StylePointsTemplate.TripKOPoints2 = 0"
+		"StylePointsTemplate.TripKOPoints3 = 0"
+		"StylePointsTemplate.FastKOPoints1 = 0"
+		"StylePointsTemplate.FastKOPoints2 = 0"
+		"StylePointsTemplate.FastKOPoints3 = 0"
+		"StylePointsTemplate.WideAttackPoints1 = 0"		
+		"StylePointsTemplate.WideAttackPoints2 = 0"		
+		"StylePointsTemplate.WideAttackPoints3 = 0"	
+		"StylePointsTemplate.ThrownObjectKOPoints1 = 0"
+		"StylePointsTemplate.ThrownObjectKOPoints2 = 0"
+		"StylePointsTemplate.ThrownObjectKOPoints3 = 0"
+		"StylePointsTemplate.KickedOjectKOPoints1 = 0"
+		"StylePointsTemplate.KickedOjectKOPoints2 = 0"
+		"StylePointsTemplate.KickedOjectKOPoints3 = 0"
+		"StylePointsTemplate.JumpKickKOPoints1 = 0"
+		"StylePointsTemplate.JumpKickKOPoints2 = 0"
+		"StylePointsTemplate.JumpKickKOPoints3 = 0"
+		"StylePointsTemplate.SpecialKickKOPoints1 = 0"
+		"StylePointsTemplate.SpecialKickKOPoints2 = 0"
+		"StylePointsTemplate.SpecialKickKOPoints3 = 0"
+		"StylePointsTemplate.InsultPoints1 = 0"
+		"StylePointsTemplate.InsultPoints2 = 0"
+		"StylePointsTemplate.InsultPoints3 = 0"
+		"StylePointsTemplate.SignatureKOPoints = 1"
+		"StylePointsTemplate.SpikedKillPoints = 0"
+		"StylePointsTemplate.SquashedKillPoints = 0"
+		"StylePointsTemplate.OtherKillPoints = 0"
+		"StylePointsTemplate.DeathPointsLoss	= 0"
+		"StylePointsTemplate.DoubleWideBonus = 0"				
+		"StylePointsTemplate.TripleWideBonus = 0"				
+		"StylePointsTemplate.DoubleKOBonus = 0"
+		"StylePointsTemplate.TripleKOBonus = 0"
+		"StylePointsTemplate.DoubleKillBonus = 0"
+		"StylePointsTemplate.TripleKillBonus = 0"
+		"StylePointsTemplate.ConsecutiveKOBonus = 0"
+		"StylePointsTemplate.ConsecutiveKillsBonus = 0"
+		"StylePointsTemplate.CounterPoints = 0"				
+		"StylePointsTemplate.RecoverCounterPoints = 0"		
+		
+		"TestMenu.UseLongEnergyBar = true"
+		
+		"FireFlyTemplate.NumFlies = 5"
+		
+		"CharacterAITemplate_Hard.GetupRate = 0.01"
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 100.0"
+
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+	}
+
+
+	// ===================================================================== FOREST DS
+
+	//	----------------------------------------
+	//	No princess
+	//	----------------------------------------
+
+	CVarietyScript ForestDSScriptThree
+	{
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=90.0"//75.0" 
+
+		"VarietyTemplate.DropPrincess = false"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+	}
+
+	// ===================================================================== FOREST MF
+
+	//	----------------------------------------
+	//	Loadsa cannon ninjas
+	//	----------------------------------------
+
+	CVarietyScript ForestMFScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// only on bridge
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=55.0"//52.0" 
+
+		// lots of cannons!
+		"ForestTemplate.NumPlanksToSmash = 3"
+		"ForestTemplate.NumPlanksToMiss = 50"
+		"ForestTemplate.PlankSmashStartTime = 8"
+		"ForestTemplate.PlankSmashEndTime = 17"
+
+		// normal speed
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+	}
+
+
+	CVarietyScript ForestMFScriptThree
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// no super points
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+
+		// disable spawn effect 
+
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+		"VarietyTemplate.SpawnInNoEffects = true"
+
+
+		// make them invisible 
+
+		"TestMenu.Invisibility = distort"
+
+		"NinjaTemplate.InvisibleRender = true"
+		"BlackNinjaTemplate.InvisibleRender = true"
+
+		"FodderNinjaTemplate.InvisibleRender = true"
+		"MiddleNinjaTemplate.InvisibleRender = true"
+		"SuperNinjaTemplate.InvisibleRender = true"
+		"ThrowingNinjaTemplate.InvisibleRender = true"
+		"BlindNinjaTemplate.InvisibleRender = true"
+
+		// make all ninjas have the same points
+
+		"BlackNinjaTemplate.NinjaPoints = 1"
+		"FodderNinjaTemplate.NinjaPoints = 1"
+		"MiddleNinjaTemplate.NinjaPoints = 1"
+		"SuperNinjaTemplate.NinjaPoints = 1"
+		"ThrowingNinjaTemplate.NinjaPoints = 1"
+		"BlindNinjaTemplate.NinjaPoints = 1"
+
+		"NinjaTemplate.NinjaPoints = 100"
+		
+
+		// stop them from walking/running
+
+		"FastClanFreeMovement.Output0 = 0"
+		"FastClanFreeMovement.Output1 = 0.10"
+		"FastClanFreeMovement.Output2 = 0.10"
+		"FastClanFreeMovement.Output3 = 0.10"
+		"FastClanFreeMovement.Output4 = 0.10"
+		"FastClanFreeMovement.Output5 = 0.10"
+		
+		"FastClanFreeMovement.State0 = CStatePlayerStanding"
+		"FastClanFreeMovement.State1 = CStatePlayerStanding"
+		"FastClanFreeMovement.State2 = CStatePlayerStanding"
+		"FastClanFreeMovement.State3 = CStatePlayerStanding"
+		"FastClanFreeMovement.State4 = CStatePlayerStanding"
+		"FastClanFreeMovement.State5 = CStatePlayerStanding"
+
+		"ClanFreeMovement.Output0 = 0"
+		"ClanFreeMovement.Output1 = 0.10"
+		"ClanFreeMovement.Output2 = 0.10"
+		"ClanFreeMovement.Output3 = 0.10"
+		"ClanFreeMovement.Output4 = 0.10"
+		"ClanFreeMovement.Output5 = 0.10"
+		
+		"ClanFreeMovement.State0 = CStatePlayerStanding"
+		"ClanFreeMovement.State1 = CStatePlayerStanding"
+		"ClanFreeMovement.State2 = CStatePlayerStanding"
+		"ClanFreeMovement.State3 = CStatePlayerStanding"
+		"ClanFreeMovement.State4 = CStatePlayerStanding"
+		"ClanFreeMovement.State5 = CStatePlayerStanding"
+
+//		"ClanFreeMovement.Anim0 = wait"
+//		"ClanFreeMovement.Anim1 = wait"
+//		"ClanFreeMovement.Anim2 = wait"
+//		"ClanFreeMovement.Anim3 = wait"
+//		"ClanFreeMovement.Anim4 = wait"
+//		"ClanFreeMovement.Anim5 = wait"
+	}
+
+	// ===================================================================== ADVENTURE CS
+
+	//	----------------------------------------
+	//	Short level time, more vampires and fireballs
+	//	----------------------------------------
+
+	CVarietyScript AdventureCSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		//"GameOptions.GameSpeed = GAME_SPEED_FAST"
+
+		"AdventureCSTemplate_Hard.NumVamps = 0"
+		"AdventureCSTemplate_Hard.NumBulls = 0"
+		"AdventureCSTemplate_Hard.NumBullsRoaming = 0"
+
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=45.0"//43.0" 
+
+		"AdventureCSTemplate_Hard.PlayerSpeed = 100.0"
+	}
+
+	// ===================================================================== ADVENTURE DS
+
+	//	----------------------------------------
+	//	
+	//	----------------------------------------
+
+	CVarietyScript AdventureDSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// play for 3 minutes
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=135" 
+
+		// less blocking & fight together
+		"CharacterAICombatTemplate_Hard.ProbabilityBlock = 0.1"
+		"CharacterAIGoalTemplate_Hard.ProbabilityNotTargetInCombat = 0.0"
+
+		// get points for all ninja deaths
+		//"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+
+		// only test the scoring for the player
+		"HudTemplate.SuppressTeamHud1 = true"
+		"VarietyTemplate.ScTarOnlyForSinPla = true"
+
+		// get up slower
+		"StatePlayerKODTemplate.InputDelay = 5"
+
+		// no taunting or damage
+		"GameOptions.AllowTauntMoves = false"
+		"VarietyTemplate.AttackDamageScalar1 = 0"
+		"VarietyTemplate.AttackDamageScalar2 = 0"
+		"VarietyTemplate.AttackDamageScalar3 = 0"
+
+//		"SamuraiC3Medium.DamageTime = 1000"
+//		"SamuraiC4Medium.DamageTime = 1000"
+//		"SamuraiC3Fast.DamageTime = 1000"
+//		"SamuraiC4Fast.DamageTime = 1000"
+//		"SamuraiC1Slow.DamageTime = 1000"
+//		"SamuraiC3Slow.DamageTime = 1000"
+//		"SamuraiC4Slow.DamageTime = 1000"
+//		"SamuraiSpecialRunningKickAttack.DamageTime = 1000"
+//		"SamuraiTripAttack.DamageTime = 1000"
+
+	}
+
+	// ===================================================================== ADVENTURE MF 
+
+
+	//	----------------------------------------
+	//	Only two minutes
+	//	----------------------------------------
+
+	CVarietyScript AdventureMFScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// poisoned with 1 life
+
+		"VarietyTemplate.EnergyGain1 = -150"
+		"TestMenu.UseLongEnergyBar = true"
+
+		// Defeat two bosses with 2 lives & make sure you get points for all ninjas
+		"LamTemplate.NinjaLives = 1"
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+
+		// stop sigs adding double points
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+
+		// make super ninjas have half energy
+		"SuperNinjaTemplate.NinjaEnergy = 0.25"
+
+		// turn ninjas into poison cloud
+
+		"TestMenu.Invisibility = blobby"
+
+		"BlackNinjaTemplate.InvisibleRender = true"
+		"FodderNinjaTemplate.InvisibleRender = true"
+		"MiddleNinjaTemplate.InvisibleRender = true"
+		"SuperNinjaTemplate.InvisibleRender = true"
+		"ThrowingNinjaTemplate.InvisibleRender = true"
+		"BlindNinjaTemplate.InvisibleRender = true"
+
+
+		// make it all seem poisonous (blurry, time distort and green)
+	
+		"TestMenu.MotionBlur = 0.7"
+//		"TestMenu.VarietySlomo = true"
+
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"FilterDef1980.SepiaColourRed = 0.5"
+		"FilterDef1980.SepiaColourGreen = 0.7"
+		"FilterDef1980.SepiaColourBlue = 0.4"
+		"FilterDef1980.SepiaToNormal = 0.7"
+		"FilterDef1980.LensIntensity = 0.4"
+	}
+
+
+	// ===================================================================== TITANIC CS
+
+
+	// ===================================================================== Titanic DS
+
+	//	----------------------------------------
+	//	no attack & changed params
+	//	----------------------------------------
+
+	CVarietyScript TitanicDSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+
+		"TitanicDeletedSceneTemplate.Acceleration = 7500"
+		"TitanicDeletedSceneTemplate.AttackedCollideeShove = 2"		//	"TitanicDeletedSceneTemplate.AttackedCollideeShove = 0"
+		"TitanicDeletedSceneTemplate.AttackedColliderShove = 0"
+																	//	"TitanicDeletedSceneTemplate.BargeImpulse = 6"
+		"TitanicDeletedSceneTemplate.PlayerMaxSpeed = 12.5"
+		"TitanicDeletedSceneTemplate.PlayerReflectionScale = 1.0"	//	"TitanicDeletedSceneTemplate.PlayerReflectionScale = 1.5"
+		
+		// smash wall hard
+		"TitanicDeletedSceneTemplate.MinVelocityTowardsFaceForSmash = 10.0"
+
+		// 60 secs
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=75.0" 
+
+		// blue filter
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"FilterDef1980.SepiaColourRed = 0.2"
+		"FilterDef1980.SepiaColourGreen = 0.4"
+		"FilterDef1980.SepiaColourBlue = 1.0"
+		"FilterDef1980.SepiaToNormal = 0.3"
+		"FilterDef1980.LensIntensity = 0.5"
+
+		"Fullscreen1980.Gamma = 1.5"
+		"Fullscreen1980.Brightness = 0.8"
+		"Fullscreen1980.Contrast = 1.5"
+
+		// ice ninjas
+		"TestMenu.Invisibility = blobby"
+		"MiddleNinjaTemplate.InvisibleRender = true"
+
+		//	blobby
+		//	shadow
+		//	distort
+		//	xray
+		//	fogmesh
+	}
+
+
+	// ===================================================================== Titanic MF 
+
+	//	----------------------------------------
+	//	characters move quickly and 3 minutes
+	//	----------------------------------------
+
+	CVarietyScript ScifiMFScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// play to the end
+		"VarietyTemplate.UseScoreTargets = false"
+
+		// chops trips kill
+		"VarietyTemplate.TripKills = true"
+
+		"CharacterAICombatTemplate_Med.ProbGrabAttackCounter = 0.5"
+		
+		// matrix filter
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"FilterDef1980.SepiaColourRed = 0.3"
+		"FilterDef1980.SepiaColourGreen = 0.3"
+		"FilterDef1980.SepiaColourBlue = 1.0"
+		"FilterDef1980.SepiaToNormal = 0.3"
+		"FilterDef1980.LensIntensity = 0.6"
+
+		// kiss of death
+		//"MonkeyTripAttack.DamageTime = 1000"
+
+		// enemy has 1 point
+		"NinjaTemplate.NinjaPoints = 1"
+
+		// opponents move slower
+//		"XuiFreeMovement.Output4 = 0.5"
+//		"XuiFreeMovement.Output5 = 0.5"
+		
+		// you move quickly
+
+		"ChopFreeMovement.Output4 = 1.0"
+		"ChopFreeMovement.Output5 = 1.0"
+
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+	}
+
+	// ===================================================================== Dino CS 
+
+
+	//	---------------------------------------- OK
+	//	Low turtles, piranha oscillates quick, hit 10 times
+	//	----------------------------------------
+
+	CVarietyScript DinoCSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		"TestMenu.VarietySlomo = true"
+
+		"DinosaurCSTemplate_Hard.StartTimeBetweenTurtles = 4.0"
+		"DinosaurCSTemplate_Hard.TimeBetweenTurtlesSpeedUp = 0.1"
+		"DinosaurCSTemplate_Hard.MinTimeBetweenTurtles = 0"
+	
+		"DinosaurCSTemplate_Hard.StartPirahnaSpeed = 0.3"
+		"DinosaurCSTemplate_Hard.PirahnaSpeedSpeedUp = 0.2"
+		"DinosaurCSTemplate_Hard.MaxPirahnaSpeed = 4"
+
+		"DinosaurCSTemplate_Hard.StartOscilationSpeed = 3.0"	
+		"DinosaurCSTemplate_Hard.OscilationSpeedSpeedUp = 0.4"	
+		"DinosaurCSTemplate_Hard.MaxOscilationSpeed = 10"
+	
+		"DinosaurCSTemplate_Hard.MinPirahnaHeight = 0"
+		"DinosaurCSTemplate_Hard.PirahnaFallbackOnCollision = 100"
+		"DinosaurCSTemplate_Hard.ThrownTurtleVerticalSpeed = -30"//-23"
+
+		"DinosaurCSTemplate_Hard.StarOne = 1"
+		"DinosaurCSTemplate_Hard.StarTwo = 2"
+		"DinosaurCSTemplate_Hard.StarThree = 4"
+		"DinosaurCSTemplate_Hard.StarFour = 7"
+		"DinosaurCSTemplate_Hard.StarFive = 10"
+		
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+
+		// yellow fever?
+
+		"FilterDef1980.SepiaColourRed = 1.0"
+		"FilterDef1980.SepiaColourGreen = 0.7"
+		"FilterDef1980.SepiaColourBlue = 0.0"
+		"FilterDef1980.SepiaToNormal = 0.35"
+		"FilterDef1980.LensIntensity = 0.9"
+
+		"Fullscreen1980.Gamma = 1.3"
+		"Fullscreen1980.Brightness = 0.7"
+		"Fullscreen1980.Contrast = 1.5"
+
+
+	}
+
+	// ===================================================================== Dino DS 
+
+	//	----------------------------------------
+	//	Only slow attacks allowed
+	//	----------------------------------------
+
+	CVarietyScript DinoDSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// set all chracters to shotgun mode
+		
+		"LucyTemplate.StringTable = ShotgunModeAttackStrings_Lucy"
+
+		// enemy loves shooting
+		"CharacterAIGoalTemplate_Hard.ProbTargetSlowAttack = 1.0"
+		"CharacterAIGoalTemplate_Hard.ProbabilityNotTargetInCombat = 0.0"
+
+		// enemy can only walk
+		
+//		"LucyFreeMovement.Output0 = 1.2"
+//		"LucyFreeMovement.Output1 = 1.2"
+//		"LucyFreeMovement.Output2 = 1.2"
+//		"LucyFreeMovement.Output3 = 1.2"
+//		"LucyFreeMovement.Output4 = 1.2"
+//		"LucyFreeMovement.Output5 = 1.2"
+//
+//		"LucyFreeMovement.Anim3 = walk"
+//		"LucyFreeMovement.Anim4 = walk"
+//		"LucyFreeMovement.Anim5 = walk"
+
+		// enemy has less damage and larger recovery times
+		
+		"ShotgunModeLucyC4Slow.AttackRecovery = 40" // was commented out
+		"ShotgunModeLucyC4Slow.Hitflags = 65" // new line
+		"ShotgunModeLucyC4Slow.DamageTime = 5"
+
+		// make sure AI characters use slow attacks
+
+		"CharacterAICombatTemplate_Hard.ProbabilityStandSlow	= 1.0"		
+		"CharacterAICombatTemplate_Hard.ProbabilityMediumAttack = 0.0"	
+		"CharacterAICombatTemplate_Hard.ProbabilityFastAttack	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbabilitySlowAttack	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbabilityTripAttack	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbabilityWideAttack	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbabilityEndString	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbFastCounter			= 0.0"			
+
+		"CharacterAICombatTemplate_Hard.ProbStartsAttack		= 1.0"			
+
+		"CharacterAICombatTemplate_Hard.ProbMedAttackCounter	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbFastAttackCounter	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbSlowAttackCounter	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbGrabAttackCounter	= 0.0"	
+		"CharacterAICombatTemplate_Hard.ProbTauntCounter		= 0.0"			
+		"CharacterAICombatTemplate_Hard.ProbAttackRecCounter	= 0.0"		
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack	= 0.0"
+
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+	}
+
+
+	// ===================================================================== Dino MF 
+
+
+	//	----------------------------------------
+	//	
+	//	----------------------------------------
+
+	CVarietyScript DinoMFScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// make night
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"TestMenu.MotionBlur = 0.7"
+
+		"FilterDef1980.SepiaColourRed = 0.3"
+		"FilterDef1980.SepiaColourGreen = 0.4"
+		"FilterDef1980.SepiaColourBlue = 1.0"
+		"FilterDef1980.SepiaToNormal = 0.3"
+		"FilterDef1980.LensIntensity = 0.4"
+
+		"Fullscreen1980.Gamma = 1.5"
+		"Fullscreen1980.Brightness = 0.9"
+		"Fullscreen1980.Contrast = 1.5"
+
+
+		// make them ghostly
+
+		"TestMenu.Invisibility = shadow"
+		"BlackNinjaTemplate.InvisibleRender = true"
+		"FodderNinjaTemplate.InvisibleRender = true"
+		"MiddleNinjaTemplate.InvisibleRender = true"
+		"SuperNinjaTemplate.InvisibleRender = true"
+		"ThrowingNinjaTemplate.InvisibleRender = true"
+		"BlindNinjaTemplate.InvisibleRender = true"
+		
+
+		// who walk fast
+		"ClanFreeMovement.Output0 = 0"
+		"ClanFreeMovement.Output1 = 2.0"
+		"ClanFreeMovement.Output2 = 2.0"
+		"ClanFreeMovement.Output3 = 2.0"
+		"ClanFreeMovement.Output4 = 2.0"
+		"ClanFreeMovement.Output5 = 2.0"
+
+		"FastClanFreeMovement.Output0 = 0"
+		"FastClanFreeMovement.Output1 = 2.0"
+		"FastClanFreeMovement.Output2 = 2.0"
+		"FastClanFreeMovement.Output3 = 2.0"
+		"FastClanFreeMovement.Output4 = 2.0"
+		"FastClanFreeMovement.Output5 = 2.0"
+
+		"FastClanFreeMovement.State3 = CStatePlayerWalking"
+		"FastClanFreeMovement.State4 = CStatePlayerWalking"
+		"FastClanFreeMovement.State5 = CStatePlayerWalking"
+		"FastClanFreeMovement.Anim3 = walk"
+		"FastClanFreeMovement.Anim4 = walk"
+		"FastClanFreeMovement.Anim5 = walk"
+
+		// they don't taunt
+		"CharacterAICombatTemplate_Easy.ProbTauntWhileAttack = 0"
+		"CharacterAICombatTemplate_Med.ProbTauntWhileAttack = 0"
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 0"
+
+
+		// no double points for sigs
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+
+
+		// no points for ninjas 1 for monkeys
+
+		"BlackNinjaTemplate.NinjaPoints = 0"
+		"FodderNinjaTemplate.NinjaPoints = 0"
+		"MiddleNinjaTemplate.NinjaPoints = 0"
+		"SuperNinjaTemplate.NinjaPoints = 0"
+		"ThrowingNinjaTemplate.NinjaPoints = 0"
+		"BlindNinjaTemplate.NinjaPoints = 0"
+		"ChikiTemplate.NinjaPoints = 1"
+
+		
+		// points for all ninjas
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+
+		// only single lives for opponents
+		"ChikiTemplate.NinjaLives = 1"
+	}
+
+	//	----------------------------------------
+	//	sig kills only - must get 10
+	//	----------------------------------------
+
+	CVarietyScript TitanicMFScriptThree
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// play to a score   // the end
+		"VarietyTemplate.UseScoreTargets = true"   // false
+
+		//"TestMenu.UseLongEnergyBar = true"
+
+		// adjust enemy taunting rate
+		"CharacterAICombatTemplate_EasyS.ProbTauntWhileAttack = 10.0"
+
+		// give a little breathing space
+		//"CharacterAITemplate_HardS.ProbabilityTargetLockedOn = 1"
+		//"CharacterAITemplate_HardS.ProbabilityTargetNotLockedOn = 1"
+
+		// get up faster
+		"CharacterAITemplate_EasyS.GetupRate = 0.3"
+
+		// only test the scoring for the player
+		"HudTemplate.SuppressTeamHud1 = true"
+		"VarietyTemplate.ScTarOnlyForSinPla = true"
+
+		// only get points for signature kills
+		"StylePointsTemplate.MediumKOPoints1	= 0"
+		"StylePointsTemplate.MediumKOPoints2	= 0"
+		"StylePointsTemplate.MediumKOPoints3	= 0"
+		"StylePointsTemplate.SlowKOPoints1 = 0"
+		"StylePointsTemplate.SlowKOPoints2 = 0"
+		"StylePointsTemplate.SlowKOPoints3 = 0"
+		"StylePointsTemplate.TripKOPoints1 = 0"
+		"StylePointsTemplate.TripKOPoints2 = 0"
+		"StylePointsTemplate.TripKOPoints3 = 0"
+		"StylePointsTemplate.FastKOPoints1 = 0"
+		"StylePointsTemplate.FastKOPoints2 = 0"
+		"StylePointsTemplate.FastKOPoints3 = 0"
+		"StylePointsTemplate.WideAttackPoints1 = 0"		
+		"StylePointsTemplate.WideAttackPoints2 = 0"		
+		"StylePointsTemplate.WideAttackPoints3 = 0"	
+		"StylePointsTemplate.ThrownObjectKOPoints1 = 0"
+		"StylePointsTemplate.ThrownObjectKOPoints2 = 0"
+		"StylePointsTemplate.ThrownObjectKOPoints3 = 0"
+		"StylePointsTemplate.KickedOjectKOPoints1 = 0"
+		"StylePointsTemplate.KickedOjectKOPoints2 = 0"
+		"StylePointsTemplate.KickedOjectKOPoints3 = 0"
+		"StylePointsTemplate.JumpKickKOPoints1 = 0"
+		"StylePointsTemplate.JumpKickKOPoints2 = 0"
+		"StylePointsTemplate.JumpKickKOPoints3 = 0"
+		"StylePointsTemplate.SpecialKickKOPoints1 = 0"
+		"StylePointsTemplate.SpecialKickKOPoints2 = 0"
+		"StylePointsTemplate.SpecialKickKOPoints3 = 0"
+		"StylePointsTemplate.InsultPoints1 = 0"
+		"StylePointsTemplate.InsultPoints2 = 0"
+		"StylePointsTemplate.InsultPoints3 = 0"
+		"StylePointsTemplate.SignatureKOPoints = 0"
+		"StylePointsTemplate.SpikedKillPoints = 0"
+		"StylePointsTemplate.SquashedKillPoints = 0"
+		"StylePointsTemplate.OtherKillPoints = 0"
+		"StylePointsTemplate.DeathPointsLoss	= 0"
+		"StylePointsTemplate.DoubleWideBonus = 0"				
+		"StylePointsTemplate.TripleWideBonus = 0"				
+		"StylePointsTemplate.DoubleKOBonus = 0"
+		"StylePointsTemplate.TripleKOBonus = 0"
+		"StylePointsTemplate.DoubleKillBonus = 0"
+		"StylePointsTemplate.TripleKillBonus = 0"
+		"StylePointsTemplate.ConsecutiveKOBonus = 0"
+		"StylePointsTemplate.ConsecutiveKillsBonus = 0"
+		"StylePointsTemplate.CounterPoints = 0"			
+		"StylePointsTemplate.RecoverCounterPoints = 0"		
+	
+		"VarietyTemplate.TauntingIncreasesScore = true"
+	}
+
+	//	----------------------------------------
+	//	everyone is posined and vampires
+	//	----------------------------------------
+
+	CVarietyScript DinoMFScriptFour
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// you are poisoned
+		"VarietyTemplate.EnergyGain1 = -50"
+
+		// if you hit opponent you get lots of energy but don't kill him
+		"VarietyTemplate.GetHealthAsHit = true"
+		"VarietyTemplate.AttackDamageScalar1 = 0.5"
+
+		// if he hits you, he doesn't take off energy or gain energy
+		"VarietyTemplate.AttackDamageScalar2 = 0.0"
+	
+		// played slow & blurry
+		"GameOptions.GameSpeed = GAME_SPEED_VV_SLOW"
+		"TestMenu.MotionBlur = 0.5"
+
+	}
+
+	// ===================================================================== Scifi CS 
+
+
+	//	---------------------------------------- 
+	//	Played fast & in black & white
+	//	----------------------------------------
+
+	CVarietyScript ScifiCSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// give a little more time
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=95.0" 
+
+		// play very fast
+		"GameOptions.GameSpeed = GAME_SPEED_VV_FAST"
+		//"TestMenu.VarietySlomo = true"
+
+		// set game filter to black & white
+		
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_70S"
+		
+		"FilterDef1970.SepiaColourRed = 0.7"
+		"FilterDef1970.SepiaColourGreen = 0.5"
+		"FilterDef1970.SepiaColourBlue = 0.4"
+		"FilterDef1970.SepiaToNormal = 1.0"
+		"FilterDef1970.LensIntensity = 0.5"
+
+		"DustDef1970.NumGrains = 100"
+		"DustDef1970.ScaleRange = 70"
+		"DustDef1970.MaxEmit = 50"
+
+		"ScratchDef1970.CreateP = 0.11"
+
+		"FilterDef1970.SmallJumpP = 1.0"
+		"FilterDef1970.SmallJumpRange = 1.0"
+
+		"FilterDef1970.MidJumpP = 0.02"
+		"FilterDef1970.MidJumpRange = 8.0"
+		"FilterDef1970.MidLife = 10.0"
+
+		"FagBurnDef1970.Interval = 8.0"
+		"FagBurnDef1970.LocalInt = 5.0"
+
+		// play fast
+		"GameOptions.GameSpeed = GAME_SPEED_VV_FAST"
+
+		// catch aliens
+		"SciFiCSTemplate_Hard.AlienRunSpeed = 4.05"//4.1"
+	
+		"SciFiCSTemplate_Hard.StarOne = 1"
+		"SciFiCSTemplate_Hard.StarTwo = 2"
+		"SciFiCSTemplate_Hard.StarThree = 3"
+		"SciFiCSTemplate_Hard.StarFour = 4"
+		"SciFiCSTemplate_Hard.StarFive = 5"
+	
+	
+	}
+
+	// ===================================================================== Scifi DS 
+
+
+	//	----------------------------------------
+	//	Heavy & Slidy UFO
+	//	----------------------------------------
+
+	CVarietyScript ScifiDSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// moon ninja?
+		//"TestMenu.Invisibility = blobby"
+		//"NinjaTemplate.InvisibleRender = true"
+
+		//	blobby
+		//	shadow
+		//	distort
+		//	xray
+		//	fogmesh
+
+
+
+		// extend a little
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=100.0" 
+
+		//------ make all KO attacks knock higher
+
+		// Ninja
+
+		"NinjaC3Medium.KnockBackWhenHitZ = 3"
+		"NinjaC3Medium.KnockBackWhenHitY = 15"
+		
+		"NinjaC4Medium.KnockBackWhenHitZ = 3"
+		"NinjaC4Medium.KnockBackWhenHitY = 15"
+		
+		"NinjaC1Fast.KnockBackWhenHitZ = 3"
+		"NinjaC1Fast.KnockBackWhenHitY = 15"
+		
+		"NinjaC3Fast.KnockBackWhenHitZ = 3"
+		"NinjaC3Fast.KnockBackWhenHitY = 15"
+		
+		"NinjaC4Fast.KnockBackWhenHitZ = 3"
+		"NinjaC4Fast.KnockBackWhenHitY = 15"
+		
+		"NinjaC1Slow.KnockBackWhenHitZ = 3"
+		"NinjaC1Slow.KnockBackWhenHitY = 15"
+		
+		"NinjaC3Slow.KnockBackWhenHitZ = 3"
+		"NinjaC3Slow.KnockBackWhenHitY = 15"
+		
+		"NinjaC4Slow.KnockBackWhenHitZ = 3"
+		"NinjaC4Slow.KnockBackWhenHitY = 15"
+		
+		"NinjaC1Wide.KnockBackWhenHitZ = 3"
+		"NinjaC1Wide.KnockBackWhenHitY = 0"
+		
+		"NinjaC3Wide.KnockBackWhenHitZ = 3"
+		"NinjaC3Wide.KnockBackWhenHitY = 0"
+		
+		"NinjaSpecialRunningKickAttack.KnockBackWhenHitZ = 3"
+		"NinjaSpecialRunningKickAttack.KnockBackWhenHitY = 15"
+		
+		// lucy
+
+		"LucyC3Medium.KnockBackWhenHitZ = 3"
+		"LucyC3Medium.KnockBackWhenHitY = 15"
+		
+		"LucyC4Medium.KnockBackWhenHitZ = 3"
+		"LucyC4Medium.KnockBackWhenHitY = 15"
+		
+		"LucyC1Fast.KnockBackWhenHitZ = 3"
+		"LucyC1Fast.KnockBackWhenHitY = 15"
+		
+		"LucyC3Fast.KnockBackWhenHitZ = 3"
+		"LucyC3Fast.KnockBackWhenHitY = 15"
+		
+		"LucyC4Fast.KnockBackWhenHitZ = 3"
+		"LucyC4Fast.KnockBackWhenHitY = 15"
+		
+		"LucyC1Slow.KnockBackWhenHitZ = 3"
+		"LucyC1Slow.KnockBackWhenHitY = 15"
+		
+		"LucyC3Slow.KnockBackWhenHitZ = 3"
+		"LucyC3Slow.KnockBackWhenHitY = 15"
+		
+		"LucyC4Slow.KnockBackWhenHitZ = 3"
+		"LucyC4Slow.KnockBackWhenHitY = 15"
+		
+		"LucyC1Wide.KnockBackWhenHitZ = 3"
+		"LucyC1Wide.KnockBackWhenHitY = 0"
+		
+		"LucyC3Wide.KnockBackWhenHitZ = 3"
+		"LucyC3Wide.KnockBackWhenHitY = 0"
+		
+		"LucySpecialRunningKickAttack.KnockBackWhenHitZ = 3"
+		"LucySpecialRunningKickAttack.KnockBackWhenHitY = 15"
+		
+		
+		// clan
+
+		"ClanC3Medium.KnockBackWhenHitZ = 3"
+		"ClanC3Medium.KnockBackWhenHitY = 15"
+		
+		"ClanC4Medium.KnockBackWhenHitZ = 2"
+		"ClanC4Medium.KnockBackWhenHitY = 15"
+		
+		"ClanC1Fast.KnockBackWhenHitZ = 3"
+		"ClanC1Fast.KnockBackWhenHitY = 15"
+		
+		"ClanC3Fast.KnockBackWhenHitZ = 2"
+		"ClanC3Fast.KnockBackWhenHitY = 15"
+		
+		"ClanC4Fast.KnockBackWhenHitZ = 3"
+		"ClanC4Fast.KnockBackWhenHitY = 15"
+		
+		"ClanC1Slow.KnockBackWhenHitZ = 3"
+		"ClanC1Slow.KnockBackWhenHitY = 15"
+		
+		"ClanC3Slow.KnockBackWhenHitZ = 3"
+		"ClanC3Slow.KnockBackWhenHitY = 15"
+		
+		"ClanC4Slow.KnockBackWhenHitZ = 3"
+		"ClanC4Slow.KnockBackWhenHitY = 15"
+		
+		"ClanSpecialRunningKickAttack.KnockBackWhenHitZ = 3"
+		"ClanSpecialRunningKickAttack.KnockBackWhenHitY = 15"
+		
+
+		//------ make all non-KO attacks knock lower
+
+		// Ninja
+
+		"NinjaC1Medium.KnockBackWhenHitY = 0"
+		"NinjaC2Medium.KnockBackWhenHitY = 0"
+		
+		// Clan
+
+		"ClanC1Medium.KnockBackWhenHitY = 0"
+		"ClanC2Medium.KnockBackWhenHitY = 0"
+		
+
+		// make ufo feel heavy
+//		"SciFiDSTemplate.InverseInertialTensor = 0.5"
+//		"SciFiDSTemplate.MaxSpeed = 10"
+//		"SciFiDSTemplate.DampingFactor = 0.96"
+//		"SciFiDSTemplate.RestorativeFactor = 25"
+//		"SciFiDSTemplate.VelocityTolerance = 0.05"
+//		"SciFiDSTemplate.StressRequired = 30"
+	
+		// make extra slidy
+//		"DynamicsTemplate.MinSlideCosTheta = 0.99"
+//		"DynamicsTemplate.MinSlideMagnitude = 0.3"
+//		"DynamicsTemplate.MaxSlideMagnitude = 1.0"
+
+		// play slow
+		"GameOptions.GameSpeed = GAME_SPEED_V_SLOW"
+		
+		// reduce gravity
+		"DynamicsTemplate.Gravity = 30"
+
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+	
+		// no double points for sigs
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+	}
+
+	// ===================================================================== Scifi MF 
+
+
+	//	----------------------------------------
+	//	short + no taunting + characters attack simultaneously
+	//	----------------------------------------
+
+	CVarietyScript DojoDSScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// you have 2 minutes
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=120.0" 
+
+		// all attack together
+//		"CharacterAIGoalTemplate_Easy.ProbabilityNotTargetInCombat = 0.0"
+//		"CharacterAIGoalTemplate_Med.ProbabilityNotTargetInCombat = 0.0"
+//		"CharacterAIGoalTemplate_Hard.ProbabilityNotTargetInCombat = 0.0"
+
+		// enemy doesn't taunt
+		"CharacterAICombatTemplate_Easy.ProbTauntWhileAttack = 0.0"
+		"CharacterAICombatTemplate_Med.ProbTauntWhileAttack = 0.0"
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 0.0"
+
+		// get points for all ninja deaths
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+	
+		// no double points for sigs
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+
+		// captain has 10 points
+		"CaptainTemplate.NinjaPoints = 10"
+	
+		// get up rate for player is fast
+		"StatePlayerKODTemplate.InputDelay = 0"
+
+		// ai doesn't pickup & throw
+		"CharacterAITemplate_Easy.DontEverPickUp = true"
+		"CharacterAITemplate_Med.DontEverPickUp = true"
+		"CharacterAITemplate_Hard.DontEverPickUp = true"
+
+
+		// spin attack KO's them
+		"MonkeyC1Wide.Hitflags = 65"
+		"MonkeyC1Wide.KOFlag = true"
+		"MonkeyC1Wide.DamageTime = 5"
+		"MonkeyC1Wide.KnockBackWhenHitX = 0"
+		"MonkeyC1Wide.KnockBackWhenHitY = 0"
+		"MonkeyC1Wide.KnockBackWhenHitZ = 12"
+
+		"MonkeyC3Wide.Hitflags = 65"
+		"MonkeyC3Wide.KOFlag = true"
+		"MonkeyC3Wide.DamageTime = 5"
+		"MonkeyC3Wide.KnockBackWhenHitX = 0"
+		"MonkeyC3Wide.KnockBackWhenHitY = 0"
+		"MonkeyC3Wide.KnockBackWhenHitZ = 12"
+	}
+
+
+	// ===================================================================== Warehouse DS
+
+	//---------------------------------------
+	//	Cute killer Monkeys
+	//---------------------------------------
+
+	CVarietyScript BigEndDSScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// you have 2 minutes
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=120.0" 
+		
+		"SpankyTemplate.StringTable = SingleNoAttacks_Spanky"
+
+		"SpankyFreeMovement.Output0 = 0"
+		"SpankyFreeMovement.Output1 = 0.4"
+		"SpankyFreeMovement.Output2 = 0.4"
+		"SpankyFreeMovement.Output3 = 0.4"
+		"SpankyFreeMovement.Output4 = 0.4"
+		"SpankyFreeMovement.Output5 = 0.4"
+		
+		"SpankyFreeMovement.State0 = CStatePlayerStanding"
+		"SpankyFreeMovement.State1 = CStatePlayerWalking"
+		"SpankyFreeMovement.State2 = CStatePlayerWalking"
+		"SpankyFreeMovement.State3 = CStatePlayerWalking"
+		"SpankyFreeMovement.State4 = CStatePlayerWalking"
+		"SpankyFreeMovement.State5 = CStatePlayerWalking"
+
+		"SpankyFreeMovement.Anim0 = wait"
+		"SpankyFreeMovement.Anim1 = walk"
+		"SpankyFreeMovement.Anim2 = walk"
+		"SpankyFreeMovement.Anim3 = walk"
+		"SpankyFreeMovement.Anim4 = walk"
+		"SpankyFreeMovement.Anim5 = walk"
+
+//		"VarietyTemplate.UseScoreTargets = false"
+
+//		"GameOptions.AllowTauntMoves = false"
+
+//		"CharacterAICombatTemplate_Easy.ProbabilityBlock = 0"
+
+		"CharacterAITemplate_Easy.ProbabilityTargetLockedOn = 1.0"
+
+		"ChikiTemplate.StringTable = JustKissAttackStrings_Chiki"
+
+		"ChikiFreeMovement.Output0 = 1.2"
+		"ChikiFreeMovement.Output1 = 1.2"
+		"ChikiFreeMovement.Output2 = 1.2"
+		"ChikiFreeMovement.Output3 = 1.2"
+		"ChikiFreeMovement.Output4 = 1.2"
+		"ChikiFreeMovement.Output5 = 1.2"
+
+		"ChikiFreeMovement.Anim3 = walk"
+		"ChikiFreeMovement.Anim4 = walk"
+		"ChikiFreeMovement.Anim5 = walk"
+
+		"MonkeyTripAttack.DamageTime = 1000"
+
+		"CharacterAICombatTemplate_Easy.ProbabilityStandSlow = 0 "
+		"CharacterAICombatTemplate_Easy.ProbabilityMediumAttack = 0.1"
+		"CharacterAICombatTemplate_Easy.ProbabilityFastAttack = 0 "
+		"CharacterAICombatTemplate_Easy.ProbabilitySlowAttack = 0 "
+		"CharacterAICombatTemplate_Easy.ProbabilityTripAttack = 1"
+		"CharacterAICombatTemplate_Easy.ProbabilityWideAttack = 0 "
+		"CharacterAICombatTemplate_Easy.ProbabilityEndString = 0.0"//0.95"
+		"CharacterAICombatTemplate_Easy.ProbFastCounter = 0 "
+		"CharacterAICombatTemplate_Easy.ProbStartsAttack = 0.05"
+
+	}
+
+	// ===================================================================== Warehouse MF
+
+	//	----------------------------------------
+	//	You are all powerful but poisoned
+	//	----------------------------------------
+
+	CVarietyScript BigEndDSScriptThree
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// make xui ghostly
+		"TestMenu.Invisibility = fogmesh"
+		"XuiTemplate.InvisibleRender = true"
+
+		//	blobby
+		//	shadow
+		//	distort
+		//	xray
+		//	fogmesh
+
+
+		// 3 minutes
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=180.0" 
+
+		// make them get up quicker in cage
+		//"CharacterAITemplate_Med.GetupRate = 0.01"
+
+		// only get a point for Xui
+		"XuiTemplate.NinjaPoints = 0"
+		"LamTemplate.NinjaPoints = 1"
+
+		// Chop is aggressive
+
+		// AI does not do signatures
+		"CharacterAICombatTemplate_Med.ProbTauntWhileAttack = 0.0"
+		"CharacterAICombatTemplate_Med.ProbTauntWhileAttack = 0.0"
+
+		// Xui's are invinsible
+		"VarietyTemplate.EnergyGain2 = 200"
+		"VarietyTemplate.EnergyGain3 = 200"
+		"VarietyTemplate.EnergyGain4 = 0"
+
+		// use long energy bars
+		"TestMenu.UseLongEnergyBar = true"  
+
+		// AI doesn't pick up objects or do slow attacks from afar or jump kicks
+		"CharacterAITemplate_Med.DontEverPickUp = true"
+		"CharacterAIGoalTemplate_Med.ProbTargetSlowAttack = 0.0"
+		"CharacterAIGoalTemplate_Med.ProbJumpKickTarget = 0.0"
+
+		// Xui does not move nor attack
+		
+//		"XuiTemplate.StringTable= NoAttacks"
+
+		"XuiFreeMovement.Output0 = 0"
+		"XuiFreeMovement.Output1 = 0.4"
+		"XuiFreeMovement.Output2 = 0.4"
+		"XuiFreeMovement.Output3 = 0.4"
+		"XuiFreeMovement.Output4 = 0.4"
+		"XuiFreeMovement.Output5 = 0.4"
+		
+		"XuiFreeMovement.State0 = CStatePlayerStanding"
+		"XuiFreeMovement.State1 = CStatePlayerWalking"
+		"XuiFreeMovement.State2 = CStatePlayerWalking"
+		"XuiFreeMovement.State3 = CStatePlayerWalking"
+		"XuiFreeMovement.State4 = CStatePlayerWalking"
+		"XuiFreeMovement.State5 = CStatePlayerWalking"
+
+		"XuiFreeMovement.Anim0 = wait"
+		"XuiFreeMovement.Anim1 = walk"
+		"XuiFreeMovement.Anim2 = walk"
+		"XuiFreeMovement.Anim3 = walk"
+		"XuiFreeMovement.Anim4 = walk"
+		"XuiFreeMovement.Anim5 = walk"
+
+	}
+
+
+//===========================================================================Mystic
+	
+	//---------------------------
+	//	Super recoil fight
+	//--------------------------
+	
+	CVarietyScript MysticScriptOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// Samurai
+
+//		"VarietyTemplate.UseScoreTargets = false"
+
+		"SamuraiC3Medium.KnockBackWhenHitZ = 35"
+		"SamuraiC3Medium.KnockBackWhenHitY = 20"
+		"SamuraiC3Medium.Hitflags = 1"
+
+		"SamuraiC4Medium.KnockBackWhenHitZ = 35"
+		"SamuraiC4Medium.KnockBackWhenHitY = 20"
+		
+		"SamuraiC3Fast.KnockBackWhenHitZ = 35"
+		"SamuraiC3Fast.KnockBackWhenHitY = 20"
+		"SamuraiC3Fast.Hitflags = 1"
+		
+		"SamuraiC4Fast.KnockBackWhenHitZ = 35"
+		"SamuraiC4Fast.KnockBackWhenHitY = 20"
+		"SamuraiC4Fast.Hitflags = 1"
+		
+		"SamuraiC1Slow.KnockBackWhenHitZ = 35"
+		"SamuraiC1Slow.KnockBackWhenHitY = 20"
+		
+		"SamuraiC3Slow.KnockBackWhenHitZ = 35"
+		"SamuraiC3Slow.KnockBackWhenHitY = 20"
+		
+		"SamuraiC4Slow.KnockBackWhenHitZ = 35"
+		"SamuraiC4Slow.KnockBackWhenHitY = 20"
+		
+		"SamuraiSpecialRunningKickAttack.KnockBackWhenHitY = 20"
+		"SamuraiSpecialRunningKickAttack.KnockBackWhenHitZ = 40"
+		"SamuraiSpecialRunningKickAttack.Hitflags = 1"
+
+		// Lam
+
+		"LamC3Medium.KnockBackWhenHitZ = 35"
+		"LamC3Medium.KnockBackWhenHitY = 20"
+		"LamC3Medium.Hitflags = 1"
+		
+		"LamC4Medium.KnockBackWhenHitZ = 35"
+		"LamC4Medium.KnockBackWhenHitY = 20"
+		
+		"LamC3Fast.KnockBackWhenHitZ = 35"
+		"LamC3Fast.KnockBackWhenHitY = 20"
+		"LamC3Fast.Hitflags = 1"
+		
+		"LamC4Fast.KnockBackWhenHitZ = 35"
+		"LamC4Fast.KnockBackWhenHitY = 20"
+		"LamC4Fast.Hitflags = 1"
+		
+		"LamC1Slow.KnockBackWhenHitZ = 35"
+		"LamC1Slow.KnockBackWhenHitY = 20"
+		
+		"LamC3Slow.KnockBackWhenHitZ = 35"
+		"LamC3Slow.KnockBackWhenHitY = 20"
+		
+		"LamC4Slow.KnockBackWhenHitZ = 35"
+		"LamC4Slow.KnockBackWhenHitY = 20"
+		
+		"LamSpecialRunningKickAttack.KnockBackWhenHitY = 20"
+		"LamSpecialRunningKickAttack.KnockBackWhenHitZ = 40"
+		"LamSpecialRunningKickAttack.Hitflags = 1"
+		
+		"ObjectGlobalTemplate.PlayerFlightVelocity = 70"
+		"ObjectGlobalTemplate.PlayerKickVelocityY = 10"
+		"ObjectGlobalTemplate.PlayerKickVelocityZ = 50"
+
+		"GameOptions.GameSpeed = GAME_SPEED_SLOW"
+	}
+
+	//-----------------------------
+	//	Every hit KO's big style
+	//-----------------------------
+	CVarietyScript MysticScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// turn ninjas into ghosts
+		"BlackNinjaTemplate.InvisibleRender = true"
+		"FodderNinjaTemplate.InvisibleRender = true"
+		"TestMenu.Invisibility = shadow"
+		"VarietyTemplate.SpawnInNoEffects = true"
+
+		// make a little more aggressive
+		"FodderAICombatTemplate_Hard.ProbStartsAttack = 0.07"
+		"FodderAITemplate_Hard.ProbabilityTargetNotLockedOn = 0.3"
+
+		// stop them from picking you up
+		"FodderAITemplate_Hard.DontEverPickUp = true"
+
+		// who walk fast
+		"FastClanFreeMovement.Output0 = 0"
+		"FastClanFreeMovement.Output1 = 2.0"
+		"FastClanFreeMovement.Output2 = 2.0"
+		"FastClanFreeMovement.Output3 = 2.0"
+		"FastClanFreeMovement.Output4 = 2.0"
+		"FastClanFreeMovement.Output5 = 2.0"
+
+		"FastClanFreeMovement.State3 = CStatePlayerWalking"
+		"FastClanFreeMovement.State4 = CStatePlayerWalking"
+		"FastClanFreeMovement.State5 = CStatePlayerWalking"
+		"FastClanFreeMovement.Anim3 = walk"
+		"FastClanFreeMovement.Anim4 = walk"
+		"FastClanFreeMovement.Anim5 = walk"
+
+		"ClanFreeMovement.Output0 = 0"
+		"ClanFreeMovement.Output1 = 2.0"
+		"ClanFreeMovement.Output2 = 2.0"
+		"ClanFreeMovement.Output3 = 2.0"
+		"ClanFreeMovement.Output4 = 2.0"
+		"ClanFreeMovement.Output5 = 2.0"
+
+		// motion blur and blue
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		
+		"FilterDef1980.SepiaColourRed = 0.4"
+		"FilterDef1980.SepiaColourGreen = 0.4"
+		"FilterDef1980.SepiaColourBlue = 0.7"
+		"FilterDef1980.SepiaToNormal = 0.5"
+		"FilterDef1980.LensIntensity = 0.4"
+
+		// Ninja
+
+		"NinjaC3Medium.KnockBackWhenHitZ = 35"
+		"NinjaC3Medium.KnockBackWhenHitY = 20"
+		"NinjaC3Medium.Hitflags = 1"
+		
+		"NinjaC1Medium.KnockBackWhenHitZ = 35"
+		"NinjaC1Medium.KnockBackWhenHitY = 20"
+		"NinjaC1Medium.KOFlag = true"
+
+		"NinjaC2Medium.KnockBackWhenHitZ = 35"
+		"NinjaC2Medium.KnockBackWhenHitY = 20"
+		"NinjaC2Medium.KOFlag = true"
+
+		"NinjaC4Medium.KnockBackWhenHitZ = 35"
+		"NinjaC4Medium.KnockBackWhenHitY = 20"
+		
+		"NinjaC3Fast.KnockBackWhenHitZ = 35"
+		"NinjaC3Fast.KnockBackWhenHitY = 20"
+		"NinjaC3Fast.Hitflags = 1"
+
+		"NinjaC1Fast.KnockBackWhenHitZ = 35"
+		"NinjaC1Fast.KnockBackWhenHitY = 20"
+		"NinjaC1Fast.KOFlag = true"
+		"NinjaC1Fast.Hitflags = 1"
+
+		"NinjaC4Fast.KnockBackWhenHitZ = 35"
+		"NinjaC4Fast.KnockBackWhenHitY = 20"
+		"NinjaC4Fast.Hitflags = 1"
+		
+		"NinjaC1Slow.KnockBackWhenHitZ = 35"
+		"NinjaC1Slow.KnockBackWhenHitY = 20"
+		
+		"NinjaC3Slow.KnockBackWhenHitZ = 35"
+		"NinjaC3Slow.KnockBackWhenHitY = 20"
+		
+		"NinjaC4Slow.KnockBackWhenHitZ = 35"
+		"NinjaC4Slow.KnockBackWhenHitY = 20"
+		
+		"NinjaSpecialRunningKickAttack.KnockBackWhenHitY = 35"
+		"NinjaSpecialRunningKickAttack.KnockBackWhenHitZ = 0"
+		
+		"ObjectGlobalTemplate.PlayerFlightVelocity = 70"
+		"ObjectGlobalTemplate.PlayerKickVelocityY = 10"
+		"ObjectGlobalTemplate.PlayerKickVelocityZ = 50"
+
+		"VarietyTemplate.HasShortLevelTime = true"
+		"VarietyTemplate.ShortLevelTime = 95"
+
+		// no double points for sigs
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+	}
+
+	//---------------------------
+	//	2 vs Super being
+	//--------------------------
+	
+	CVarietyScript MysticScriptThree
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// sunset
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+	
+		"FilterDef1980.SepiaColourRed = 1.0"
+		"FilterDef1980.SepiaColourGreen = 0.2"
+		"FilterDef1980.SepiaColourBlue = 0.2"
+		"FilterDef1980.SepiaToNormal = 0.3"
+		"FilterDef1980.LensIntensity = 0.6"
+
+		// you have 3 minutes
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime = 195" 
+
+		// suppress captains scores
+		"HudTemplate.SuppressTeamHud1 = true"
+		"VarietyTemplate.ScTarOnlyForSinPla = true"
+
+		// Reduce effectiveness of Candy's runing attack
+		"SpankyRunningJumpKickAttack.DamageTime = 5"
+		"SpankyRunningJumpKickAttack.KnockBackWhenHitZ = 0"
+
+		// and aggressive
+		"CharacterAICombatTemplate_Hard.ProbStartsAttack = 0.5 //0.07"
+
+		// does not taunt much bcos leaves him open to attack  // and he taunts a lot
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 0.0"  // 2.0
+
+		// and he gets up quick
+		"CharacterAITemplate_Hard.GetupRate = 0.07"
+
+		// and his every hit KO's big
+
+		"CaptainC1Medium.KOFlag = true"
+		"CaptainC1Medium.KnockBackWhenHitZ = 35"
+		"CaptainC1Medium.KnockBackWhenHitY = 20"
+//		"CaptainC1Medium.UnblockableFlag = true"
+
+		"CaptainC2Medium.KOFlag = true"
+		"CaptainC2Medium.KnockBackWhenHitZ = 35"
+		"CaptainC2Medium.KnockBackWhenHitY = 20"
+//		"CaptainC2Medium.UnblockableFlag = true"
+
+		"CaptainC1Medium.KOFlag = true"
+		"CaptainC3Medium.KnockBackWhenHitZ = 35"
+		"CaptainC3Medium.KnockBackWhenHitY = 20"
+//		"CaptainC3Medium.UnblockableFlag = true"
+		"CaptainC3Medium.Hitflags = 1"
+	
+		"CaptainC4Medium.KnockBackWhenHitZ = 35"
+		"CaptainC4Medium.KnockBackWhenHitY = 20"
+		"CaptainC4Medium.KOFlag = true"
+//		"CaptainC4Medium.UnblockableFlag = true"
+		
+		"CaptainC1Fast.KOFlag = true"
+		"CaptainC1Fast.KnockBackWhenHitZ = 35"
+		"CaptainC1Fast.KnockBackWhenHitY = 20"
+//		"CaptainC1Fast.UnblockableFlag = true"
+		"CaptainC1Fast.Hitflags = 1"
+
+		"CaptainC3Fast.KnockBackWhenHitZ = 35"
+		"CaptainC3Fast.KnockBackWhenHitY = 20"
+//		"CaptainC3Fast.UnblockableFlag = true"
+		"CaptainC3Fast.Hitflags = 1"
+		
+		"CaptainC4Fast.KnockBackWhenHitZ = 35"
+		"CaptainC4Fast.KnockBackWhenHitY = 20"
+//		"CaptainC4Fast.UnblockableFlag = true"
+		"CaptainC4Fast.Hitflags = 1"
+		
+		"CaptainC1Slow.KnockBackWhenHitZ = 35"
+		"CaptainC1Slow.KnockBackWhenHitY = 20"
+		
+		"CaptainC3Slow.KnockBackWhenHitZ = 35"
+		"CaptainC3Slow.KnockBackWhenHitY = 20"
+		
+		"CaptainC4Slow.KnockBackWhenHitZ = 35"
+		"CaptainC4Slow.KnockBackWhenHitY = 20"
+		
+		"CaptainSpecialRunningKickAttack.KnockBackWhenHitY = 35"
+		"CaptainSpecialRunningKickAttack.KnockBackWhenHitZ = 0"
+//		"CaptainSpecialRunningKickAttack.UnblockableFlag = true"
+		"CaptainSpecialRunningKickAttack.Hitflags = 1"
+		
+		// and all his trips are powerful
+		"CaptainC1PreTripAttack.DamageTime = 200"
+		"CaptainC3PreTripAttack.DamageTime = 200"
+		"CaptainC4PreTripAttack.DamageTime = 200"
+
+	}
+
+	//---------------------------
+	//	Super being vs 2
+	//--------------------------
+	
+	CVarietyScript MysticScriptFour
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// sunset
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+	
+		"FilterDef1980.SepiaColourRed = 1.0"
+		"FilterDef1980.SepiaColourGreen = 0.2"
+		"FilterDef1980.SepiaColourBlue = 0.2"
+		"FilterDef1980.SepiaToNormal = 0.3"
+		"FilterDef1980.LensIntensity = 0.6"
+
+		// motion blur
+		"TestMenu.MotionBlur = 0.5"
+
+		// and aggressive
+		"CharacterAICombatTemplate_Hard.ProbStartsAttack = 0.2"
+
+		// enemy will not wait for each other
+		"CharacterAITemplate_Hard.ProbabilityTargetNotLockedOn = 0.9"
+
+		// and will not block
+		"CharacterAICombatTemplate_Hard.ProbabilityBlock = 0.0"
+
+		// and will try and counter everything
+		"CharacterAICombatTemplate_Hard.ProbMedAttackCounter = 1.0"
+		"CharacterAICombatTemplate_Hard.ProbFastAttackCounter = 1.0"
+		"CharacterAICombatTemplate_Hard.ProbSlowAttackCounter = 1.0"
+		"CharacterAICombatTemplate_Hard.ProbGrabAttackCounter = 1.0"
+		"CharacterAICombatTemplate_Hard.ProbTauntCounter = 1.0"
+		"CharacterAICombatTemplate_Hard.ProbAttackRecCounter = 1.0"
+
+		// and he taunts a lot
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 0"//10.0"
+		
+		// and he gets up quick
+		"CharacterAITemplate_Hard.GetupRate = 0.1"
+
+		
+		// and his every hit KO's big
+
+	//	"CaptainC1Medium.KOFlag = true"
+	//	"CaptainC1Medium.KnockBackWhenHitZ = 35"
+	//	"CaptainC1Medium.KnockBackWhenHitY = 20"
+		"CaptainC1Medium.UnblockableFlag = true"
+
+	//	"CaptainC2Medium.KOFlag = true"
+	//	"CaptainC2Medium.KnockBackWhenHitZ = 35"
+	//	"CaptainC2Medium.KnockBackWhenHitY = 20"
+		"CaptainC2Medium.UnblockableFlag = true"
+
+		"CaptainC3Medium.KnockBackWhenHitZ = 35"
+		"CaptainC3Medium.KnockBackWhenHitY = 20"
+		"CaptainC3Medium.UnblockableFlag = true"
+		"CaptainC3Medium.Hitflags = 1"
+		
+		"CaptainC4Medium.KnockBackWhenHitZ = 35"
+		"CaptainC4Medium.KnockBackWhenHitY = 20"
+		"CaptainC4Medium.KOFlag = true"
+		"CaptainC4Medium.UnblockableFlag = true"
+		
+	//	"CaptainC1Fast.KOFlag = true"
+	//	"CaptainC1Fast.KnockBackWhenHitZ = 35"
+	//	"CaptainC1Fast.KnockBackWhenHitY = 20"
+		"CaptainC1Fast.UnblockableFlag = true"
+	//	"CaptainC1Fast.Hitflags = 1"
+
+		"CaptainC3Fast.KnockBackWhenHitZ = 35"
+		"CaptainC3Fast.KnockBackWhenHitY = 20"
+		"CaptainC3Fast.UnblockableFlag = true"
+		"CaptainC3Fast.Hitflags = 1"
+		
+		"CaptainC4Fast.KnockBackWhenHitZ = 35"
+		"CaptainC4Fast.KnockBackWhenHitY = 20"
+		"CaptainC4Fast.UnblockableFlag = true"
+		"CaptainC4Fast.Hitflags = 1"
+		
+		"CaptainC1Slow.KnockBackWhenHitZ = 35"
+		"CaptainC1Slow.KnockBackWhenHitY = 20"
+		
+		"CaptainC3Slow.KnockBackWhenHitZ = 35"
+		"CaptainC3Slow.KnockBackWhenHitY = 20"
+		
+		"CaptainC4Slow.KnockBackWhenHitZ = 35"
+		"CaptainC4Slow.KnockBackWhenHitY = 20"
+		
+		"CaptainSpecialRunningKickAttack.KnockBackWhenHitY = 35"
+		"CaptainSpecialRunningKickAttack.KnockBackWhenHitZ = 0"
+		"CaptainSpecialRunningKickAttack.UnblockableFlag = true"
+		"CaptainSpecialRunningKickAttack.Hitflags = 1"
+		
+		// and all his trips are powerful
+		"CaptainC1PreTripAttack.DamageTime = 200"
+		"CaptainC3PreTripAttack.DamageTime = 200"
+		"CaptainC4PreTripAttack.DamageTime = 200"
+
+	}
+
+	CVarietyScript KungFuMFScriptTwo
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// 50's mode
+//		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_50S"
+
+		// motion blur & time dilation
+//		"TestMenu.MotionBlur = 0.5"
+//		"TestMenu.VarietySlomo = true"
+
+		// get points for all ninjas
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+		
+		// no double points for sigs
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+
+		// you can only damage with signature moves
+		"VarietyTemplate.AttackDamageScalar1 = 0"
+
+		// one point for lam
+		"LamTemplate.NinjaPoints = 1"
+		
+		// get up quicker
+		"CharacterAITemplate_Easy.GetupRate = 0.01"
+		"CharacterAITemplate_Med.GetupRate = 0.01"
+		"CharacterAITemplate_Hard.GetupRate = 0.01"
+		
+		// taunt more
+		"CharacterAICombatTemplate_Easy.ProbTauntWhileAttack = 100.0"
+		"CharacterAICombatTemplate_Med.ProbTauntWhileAttack = 100.0"
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 100.0"
+
+		// ghost Lam
+		"TestMenu.Invisibility = xray"
+		"LamTemplate.InvisibleRender = true"
+
+		//	blobby
+		//	shadow
+		//	distort
+		//	xray
+		//	fogmesh
+	}
+
+	//=====================================================================New Variety Games
+
+	//-----------------------------
+	//	Poisoned Duel, hitting adds health. // canned
+	//-----------------------------
+	
+	CVarietyScript WarehouseScriptNewOne
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		"VarietyTemplate.EnergyGain1 = -100"
+		"VarietyTemplate.EnergyGain2 = -100"
+
+		"VarietyTemplate.GetHealthAsHit = true"
+
+		"GameOptions.AllowTauntMoves = false"
+
+		"TestMenu.UseLongEnergyBar = true"    //can't use bcos only I have long energy bar.
+
+		"WarehouseTemplate.AngLives = 1"
+		"CharacterGlobalTemplate.PlayerNinjaDeletedLives = 1"
+	
+	}
+
+	CVarietyScript WarehouseScriptNewThree
+	{
+		// set variety options
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_80S"
+		"GameOptions.GameSpeed = GAME_SPEED_NORMAL"
+
+		// set cinefilm filter
+		"GameOptions.KungFuFilmSimulator = FILM_EFFECT_50S"
+		
+	//	"FilterDef1970.SepiaColourRed = 1.0"
+	//	"FilterDef1970.SepiaColourGreen = 1.0"
+	//	"FilterDef1970.SepiaColourBlue = 1.0"
+	//	"FilterDef1970.SepiaToNormal = 0.4"
+	//	"FilterDef1970.LensIntensity = 0.2"
+
+	//	"GameOptions.GameSpeed = GAME_SPEED_V_FAST"
+
+		// you have 3 minutes
+		"VarietyTemplate.HasShortLevelTime=true" 
+		"VarietyTemplate.ShortLevelTime=180" 
+
+		// don't show lives
+		"HudTemplate.SuppressTeamHud0 = true"
+		"HudTemplate.NCPlayerPosY = 1000"
+
+		// no taunting
+		"GameOptions.AllowTauntMoves = false"		
+
+		// no double points for sigs
+		"VarietyTemplate.NinjaDoubleSigPoints = false"
+
+		// get points for all ninjas
+		"VarietyTemplate.AllNinjaDeathsGivePoints = true"
+
+		// 1 point per Ninja
+		"NinjaTemplate.NinjaPoints = 1"
+
+		// they do not taunt
+		"CharacterAICombatTemplate_Med.ProbTauntWhileAttack = 0.0"
+		"CharacterAICombatTemplate_Easy.ProbTauntWhileAttack = 0.0"
+		"CharacterAICombatTemplate_Hard.ProbTauntWhileAttack = 0.0"
+		
+		"CharacterAITemplate_Hard.ProbabilityTargetNotLockedOn = 0.0"
+		"CharacterAITemplate_Med.ProbabilityTargetNotLockedOn = 0.0"
+		"CharacterAITemplate_Easy.ProbabilityTargetNotLockedOn = 0.0"
+	}
+
+}
+

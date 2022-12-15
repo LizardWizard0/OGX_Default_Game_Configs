@@ -1,0 +1,13 @@
+AddBattleLoop  m_saberArena_02_lp.wav  m_saberArena_02_end.wav		m_obi_death.wav
+AddBattleLoop  m_saberArena_03_lp.wav  m_saberArena_03_end.wav		m_obi_death.wav
+AddBattleLoop  m_battle_05_lp.wav		m_battle_05_win.wav			m_obi_death.wav
+AddBattleLoop  m_battle_09_lp.wav		m_battle_09_win.wav			m_obi_death.wav
+AddBattleLoop  m_battle_12_lp.wav		m_battle_12_win.wav			m_obi_death.wav
+AddBattleLoop  m_battle_13_lp.wav		m_battle_13_win.wav			m_obi_death.wav
+AddBattleLoop  m_battle_14_lp.wav		m_battle_14_win.wav			m_obi_death.wav
+AddBattleLoop  m_battle_15_lp.wav		m_battle_15_lose.wav			m_obi_death.wav
+
+FadeUpAndWait 1
+DisembodiedVoiceNoSubtitles announcer.dlg /Announcer_1513/  // Round 1
+Pause 1.5
+PlayMusic BattleLoop

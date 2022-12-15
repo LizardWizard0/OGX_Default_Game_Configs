@@ -1,0 +1,78 @@
+[LevelInfo0]
+Title="Compressed"
+
+[LevelSummary]
+Title="Compressed"
+
+[Volume0]
+LocationName="Upper Shield Hallway"
+
+[ZoneInfo0]
+LocationName="Upper Hallways"
+
+[ZoneInfo1]
+LocationName="Compressor Room 1"
+
+[ZoneInfo10]
+LocationName="Compressor Room 2"
+
+[ZoneInfo11]
+LocationName="Flak Cannon Hallway"
+
+[ZoneInfo12]
+LocationName="Flak Cannon Hallway"
+
+[ZoneInfo13]
+LocationName="Link Gun Hallway"
+
+[ZoneInfo14]
+LocationName="Link Gun Hallway"
+
+[ZoneInfo15]
+LocationName="Lower Shield Hallway"
+
+[ZoneInfo16]
+LocationName="Lower Shield Hallway"
+
+[ZoneInfo17]
+LocationName="Lower Shield Hallway"
+
+[ZoneInfo18]
+LocationName="Lower Shield Hallway"
+
+[ZoneInfo19]
+LocationName="Upper Hallways"
+
+[ZoneInfo2]
+LocationName="Compressor Room 1"
+
+[ZoneInfo20]
+LocationName="Flak Cannon Lift"
+
+[ZoneInfo21]
+LocationName="Upper Shield Hallway"
+
+[ZoneInfo23]
+LocationName="Upper Shield Hallway"
+
+[ZoneInfo3]
+LocationName="Upper Hallways"
+
+[ZoneInfo4]
+LocationName="Upper Hallways"
+
+[ZoneInfo5]
+LocationName="Upper Hallways"
+
+[ZoneInfo6]
+LocationName="Lower Shield Hallway"
+
+[ZoneInfo7]
+LocationName="Upper Hallways"
+
+[ZoneInfo8]
+LocationName="Link Gun Lift"
+
+[ZoneInfo9]
+LocationName="Compressor Room 2"
+

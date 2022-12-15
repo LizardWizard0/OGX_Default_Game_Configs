@@ -1,0 +1,184 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+/////////////
+//  Music  //
+/////////////
+
+SetDefaultSurface 02g_4grate_03.sur
+
+AddMusic m_suspense1.wav Suspense
+AddMusic m_suspense_03.wav Suspense
+AddMusic m_suspense_05.wav Suspense
+AddMusic m_suspense_07.wav Suspense
+AddMusic m_suspense_09.wav Suspense
+AddMusic m_suspense_10.wav Suspense
+AddMusic m_suspense_13.wav Suspense
+
+AddMusic m_tension_03.wav Tension
+AddMusic m_tension_04.wav Tension
+AddMusic m_tension_05.wav Tension
+AddMusic m_tension_09.wav Tension
+AddMusic m_tension_11.wav Tension
+AddMusic m_tension_12.wav Tension
+AddMusic m_tension_14.wav Tension
+
+AddMusic m_battle1.wav Battle
+AddMusic m_battle4.wav Battle
+AddMusic m_battle_07.wav Battle
+AddMusic m_battle_08.wav Battle
+AddMusic m_battle_10.wav Battle
+AddMusic m_battle_11.wav Battle
+
+SetMusicInterval Suspense 30 50
+SetMusicInterval Tension 20 40
+SetMusicInterval Battle 15 25
+
+FadeUp
+
+StartMusicManager //j. white added 7.18.01
+
+Int x 0
+
+/*
+   TakeControlOf A_trandoshan-concussion_01
+Script "Concussion Rifle Test"
+{
+   SayLine Obi "Obi-Wan : Yes Master! I'm on my way."	
+     
+
+   SayLine Obi "Qui-Gon: Super!"
+   FireAt A_trandoshan-concussion_01 A_gungan-jarjar_01 0.1
+		pause 5.0
+		crouch A_trandoshan-concussion_01
+		pause 0.5
+		stand A_trandoshan-concussion_01
+   FireAt A_trandoshan-concussion_01 A_gungan-jarjar_01 0.1
+   //ReturnControlTo A_trandoshan-concussion_01
+   pause 5.0
+   Loop
+}
+*/
+Script "JarJar"
+{
+   WaitUntilDamaged A_gungan-jarjar_01
+   HealHitPoints Obi 1000
+   Loop
+}
+
+
+
+////////////////////////
+//  Opening Cutscene  //
+////////////////////////
+
+Script "Opening Cutscene"
+{
+   BeginCutScene
+   MoveCamera ref_openCamera1
+   Pause 3.0
+   MoveCameraAndWait ref_openCamera2 
+   Pause 3.0
+   EndCutScene
+}
+
+//Region_Warehouse Back yard
+
+Script "Open Warehouse Shipping"
+{
+   SayLine Obi "Qui-Gon: (over communicator) Black Heth Warehouse!" 
+   SayLine Obi "Qui-Gon: (over communicator) They're receiving some heavy crates. Find out what are in the crates and contact me."
+   SayLine Obi "Obi-Wan : Yes Master! I'm on my way."
+}
+
+Script "Open the First Door"
+{
+   WaitUntilEqual TotalKilledByObi 1   
+   MoveElevatorToFloorAndWait A_1-5_bigdoor_01 1
+   Pause 20.0
+   MoveElevatorToFloorAndWait A_1-5_bigdoor_01 0
+}
+
+   WaitUntilEqual TotalKilledByObi 1
+   BeginScript "Smart elevator"
+
+////////////////////////
+//  Elevator Script   //
+////////////////////////
+
+StoreScript "Smart elevator"
+{
+   If (IsInRegion Obi Region_1stFloor)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_03 1
+      MoveElevatorToFloorAndWait A_1-5_elevator_02 1
+   }
+   If (IsInRegion Obi Region_2ndShooting)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_03 0
+   }
+   If (IsInRegion Obi Region_2ndMicky)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_02 0
+   }
+   If (IsInRegion Obi Region_ele03_high)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_03 1
+	Pause 3.0
+   }
+   If (IsInRegion Obi Region_ele03_low)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_03 0
+	Pause 3.0
+   }
+   If (IsInRegion Obi Region_ele02_high)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_02 1
+	Pause 3.0
+   }
+   If (IsInRegion Obi Region_ele02_low)
+   {
+      MoveElevatorToFloorAndWait A_1-5_elevator_02 0
+	Pause 3.0
+   }
+   Loop
+}
+
+////////////////////////
+//  Ending Cutscene   //
+////////////////////////
+
+Script "Ending Cutscene"
+{
+   WaitUntilEqual TotalKilledByObi 2000
+   BeginCutScene
+   MoveCamera ref_endCamera1
+   MoveCameraAndWait ref_endCamera2 10.0
+   Pause 2.0
+   FadeDown 
+   EndCutScene
+}
+
+//Region_Jinha Ship
+
+
+
+Script "Temp. SayLine"
+{
+   WaitUntilEqual TotalKilledByObi 1000
+
+   SayLine Obi "Obi-Wan: Master, Black Heth have recieved Concussion Rifle." // CutScene played
+   SayLine Obi "Qui-Gon: Concussion Riffle?!" // CutScene played
+   SayLine Obi "Qui-Gon: Great job, Obi!" // CutScene played
+   SayLine Obi "Qui-Gon: Super!"
+   SayLine Obi "Qui-Gon: Way to go!"
+   SayLine Obi "Qui-Gon: Obi!"
+   SayLine Obi "Qui-Gon: (over communicator) Remember! Obi, You must find out what are the Black Heth receiving." //remaind line
+}
+
+Script "End of the Game"
+{
+   WaitUntilEqual TotalKilledByObi 10
+   FadeDownAndWait
+   NextLevel L01_8
+}

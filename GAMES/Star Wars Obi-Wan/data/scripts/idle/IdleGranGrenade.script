@@ -1,0 +1,12 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+AddGesture me ShakeHead 2
+AddGesture me Taunt 8
+AddGesture me TurnHeadRight 4
+AddGesture me none 4
+ 
+
+WaitUntilFinishedGesture me
+
+

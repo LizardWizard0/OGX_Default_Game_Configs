@@ -1,0 +1,421 @@
+[LevelLoadingInfo]
+
+MapName[0]="GEO_01A"
+LoadingMenuClass[0]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[0]="GUIContent.GEO_01"
+LoadingTitle[0]="EXTREME PREJUDICE"
+LoadingText[0]="GEONOSIAN CHIEF LIEUTENANT SUN FAC MUST BE ELIMINATED.  DELTA SQUAD HAS BEEN INSERTED SEPARATELY INTO THE WAR-TORN GLADIATORIAL ARENA AND POINTS BEYOND.  THEY MUST RENDEZVOUS AND EFFECT SUN FAC’S REMOVAL -- BY ANY MEANS NECESSARY."
+LoadingShowHints[0]=1
+
+MapName[1]="GEO_01B"
+LoadingMenuClass[1]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[1]="INTO THE HIVE"
+LoadingShowHints[1]=1
+
+MapName[2]="GEO_01C"
+LoadingMenuClass[2]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[2]="THE STRENGTH OF BROTHERS"
+LoadingShowHints[2]=1
+
+MapName[3]="GEO_03A"
+LoadingMenuClass[3]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[3]="GUIContent.GEO_02"
+LoadingTitle[3]="INFILTRATE THE DROID FOUNDRY"
+LoadingText[3]="THE SEPARATISTS HAVE HIDDEN THEIR FACTORIES DEEP WITHIN THE BOWELS OF THE PLANET.  DELTA SQUAD MUST PENETRATE THE INNER LAIR OF THE GEONOSIANS AND LOCATE THE MAIN DROID CONSTRUCTION FACILITY."
+LoadingShowHints[3]=1
+
+MapName[4]="GEO_03C"
+LoadingMenuClass[4]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[4]="THE HEART OF THE MACHINE"
+LoadingShowHints[4]=1
+
+MapName[5]="GEO_03D"
+LoadingMenuClass[5]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[5]="GUIContent.GEO_03"
+LoadingTitle[5]="DESTROY THE FACTORY"
+LoadingText[5]="DELTA SQUAD HAS IMPROVISED AN ENTRY AND PENETRATED THE FOUNDRY.  BUT COMPLETING ITS MISSION WILL NOT BE EASY.  SEVERAL VITAL COMPONENTS MUST BE IDENTIFIED AND DESTROYED IN ORDER TO CRIPPLE THE DROID PRODUCTION LINE."
+LoadingShowHints[5]=1
+
+MapName[6]="GEO_04A"
+LoadingMenuClass[6]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[6]="GUIContent.GEO_04"
+LoadingTitle[6]="ADVANCE TO THE CORE SHIP"
+LoadingText[6]="NOW THAT THE FOUNDRIES ARE OFFLINE, DELTA SQUAD MUST PROCEED THROUGH HOSTILE TERRITORY AND GAIN ENTRY TO A NEARBY SEPARATIST VESSEL.  SOMEWHERE ABOARD ARE THE LAUNCH CODES FOR THE ENTIRE CORE SHIP FLEET."
+LoadingShowHints[6]=1
+
+MapName[7]="GEO_04B"
+LoadingMenuClass[7]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[7]="CANYONS OF DEATH"
+LoadingShowHints[7]=1
+
+MapName[8]="GEO_04C"
+LoadingMenuClass[8]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[8]="TO OWN THE SKIES"
+LoadingShowHints[8]=1
+
+MapName[9]="GEO_04D"
+LoadingMenuClass[9]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[9]="TERRITORY"
+LoadingShowHints[9]=1
+
+MapName[10]="GEO_05A"
+LoadingMenuClass[10]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[10]="GUIContent.GEO_05"
+LoadingTitle[10]="INFILTRATION OF THE CORE SHIP"
+LoadingText[10]="DELTA SQUAD HAS ACCOMPLISHED THE REPUBLIC’S FIRST BREACH OF AN ENEMY CAPITAL SHIP.  BUT THE BATTLE IS NOT OVER.  A HORDE OF MERCILESS BATTLE DROIDS LIES DORMANT, READY TO BE AWAKENED BY A HEEDLESS COMMANDO..."
+LoadingShowHints[10]=1
+
+MapName[11]="GEO_05B"
+LoadingMenuClass[11]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[11]="WAKING THE GIANT"
+LoadingShowHints[11]=1
+
+MapName[12]="GEO_05C"
+LoadingMenuClass[12]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[12]="BELLY OF THE BEAST"
+LoadingShowHints[12]=1
+
+	
+MapName[13]="RAS_01A"
+LoadingMenuClass[13]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[13]="GUIContent.RAS_01"
+LoadingTitle[13]="GHOST SHIP RECON"
+LoadingText[13]="COMMANDOS WORK AS A TEAM, BUT THEY ARE JUST AS DEADLY AND EFFICIENT ALONE.  TO COVER THE VAST STARSHIP, DELTA SQUAD HAS SPLIT UP.  THEIR BEST HOPE IS TO MOVE FAST AND SILENT THROUGH THE VESSEL, AND RECOVER THEIR OBJECTIVES."
+LoadingShowHints[13]=1
+
+MapName[14]="RAS_01B"
+LoadingMenuClass[14]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[14]="DELTA DOWN"
+LoadingShowHints[14]=1
+
+MapName[15]="RAS_01C"
+LoadingMenuClass[15]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[15]="UNWELCOME VISITORS"
+LoadingShowHints[15]=1
+
+MapName[16]="RAS_02A"
+LoadingMenuClass[16]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[16]="GUIContent.RAS_02"
+LoadingTitle[16]="RESCUE THE SQUAD"
+LoadingText[16]=""NO PLAN SURVIVES CONTACT WITH THE ENEMY."  DELTA SQUAD FACES ITS MOST DIFFICULT HOUR.  SEPARATED AND WOUNDED, THE SQUAD MUST RENDEZVOUS AND MOUNT A COUNTER-ATTACK… OR PERISH ABOARD THE GHOST SHIP."
+LoadingShowHints[16]=1
+
+MapName[17]="RAS_02B"
+LoadingMenuClass[17]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[17]="ALONE"
+LoadingShowHints[17]=1
+
+MapName[18]="RAS_02C"
+LoadingMenuClass[18]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[18]="TROIKA"
+LoadingShowHints[18]=1
+
+MapName[19]="RAS_02D"
+LoadingMenuClass[19]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[19]="JAILBREAK"
+LoadingShowHints[19]=1
+
+MapName[20]="RAS_02E"
+LoadingMenuClass[20]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[20]="TACTICAL SUPREMACY"
+LoadingShowHints[20]=1
+
+MapName[21]="RAS_03A"
+LoadingMenuClass[21]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[21]="GUIContent.RAS_03"
+LoadingTitle[21]="ATTACK OF THE CLONES"
+LoadingText[21]="NOW AT FULL STRENGTH, THE SQUAD TURNS ITS ATTENTION TO THE TRANDOSHAN THREAT.  THE DELTAS MUST FIND AND DESTROY THE ENEMY DROP SHIP AND STOP THE INVASION AT ITS SOURCE."
+LoadingShowHints[21]=1
+
+MapName[22]="RAS_03B"
+LoadingMenuClass[22]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[22]="LOCKDOWN"
+LoadingShowHints[22]=1
+
+MapName[23]="RAS_03C"
+LoadingMenuClass[23]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[23]="THE WRATH OF THE REPUBLIC"
+LoadingShowHints[23]=1
+
+MapName[24]="RAS_04A"
+LoadingMenuClass[24]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[24]="GUIContent.RAS_04"
+LoadingTitle[24]="SAVING THE SHIP"
+LoadingText[24]="THE BATTLE HAS WIDENED.  THE SEPARATISTS ARE COMING, INTENT ON CLAIMING THEIR PRIZE.  CAN FOUR COMMANDOS HOLD THE LINE AGAINST AN UNENDING FLEET OF WAR DROIDS?  THE REPUBLIC IS COUNTING ON DELTA SQUAD."
+LoadingShowHints[24]=1
+
+MapName[25]="RAS_04B"
+LoadingMenuClass[25]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[25]="HOLDING THE LINE"
+LoadingShowHints[25]=1
+
+MapName[26]="RAS_04C"
+LoadingMenuClass[26]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[26]="OVERWHELMING ODDS"
+LoadingShowHints[26]=1
+
+MapName[27]="RAS_04D"
+LoadingMenuClass[27]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[27]="DEUS EX MACHINA"
+LoadingShowHints[27]=1
+
+
+
+MapName[28]="YYY_01B"
+LoadingMenuClass[28]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[28]="GUIContent.YYY_01"
+LoadingTitle[28]="THE RESCUE OF TARFFUL"
+LoadingText[28]="THIS IS THE MISSION THE REPUBLIC COMMANDOS WERE BRED FOR:  QUICK, COVERT, AND DANGEROUS.  THEIR UNLIKELY ALLIES ARE THE FEARSOME WOOKIEE WARRIORS, AND THEIR OBJECTIVE, THE CAPTURED LEADER TARFFUL."
+LoadingShowHints[28]=1
+
+MapName[29]="YYY_01C"
+LoadingMenuClass[29]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[29]="HARD CONTACT"
+LoadingShowHints[29]=1
+
+MapName[30]="YYY_01D"
+LoadingMenuClass[30]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[30]="FROM THE SHADOWS"
+LoadingShowHints[30]=1
+
+MapName[31]="YYY_01E"
+LoadingMenuClass[31]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[31]="THE BODYGUARDS"
+LoadingShowHints[31]=1
+
+MapName[32]="YYY_35A"
+LoadingMenuClass[32]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[32]="GUIContent.YYY_02"
+LoadingTitle[32]="OBLITERATE THE OUTPOST"
+LoadingText[32]="THE SEPARATIST PRESENCE IS NOW UNDENIABLE. THEIR BASE AND SUPPLY OPERATIONS MUST BE DECIMATED BEFORE FURTHER ANTI-SEPARATIST ACTIVITY CAN BEGIN.  THE DELTAS ARE NOW HEADED AFTER THEIR NEXT HIGH-VALUE TARGET..."
+LoadingShowHints[32]=1
+
+MapName[33]="YYY_35B"
+LoadingMenuClass[33]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[33]="AIM FOR THE HEART"
+LoadingShowHints[33]=1
+
+MapName[34]="YYY_35C"
+LoadingMenuClass[34]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[34]="CRITICAL STRIKE"
+LoadingShowHints[34]=1
+
+MapName[35]="YYY_04A"
+LoadingMenuClass[35]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[35]="GUIContent.YYY_03"
+LoadingTitle[35]="THE BRIDGE AT KACHIRHO"
+LoadingText[35]="THE TIDE OF BATTLE NOW TURNS ON ONE CRUCIAL LINK.  THE BRIDGE AT KACHIRHO IS THE ARTERY OF THE SEPARATIST SUPPLY LINE.  FIGHT TO THE MIDWAY POINT AND DESTROY IT TO CHOKE FURTHER SEPARATIST ADVANCE."
+LoadingShowHints[35]=1
+
+MapName[36]="YYY_04B"
+LoadingMenuClass[36]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[36]="FRONTLINE"
+LoadingShowHints[36]=1
+
+MapName[37]="YYY_04C"
+LoadingMenuClass[37]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[37]="THE GAUNTLET"
+LoadingShowHints[37]=1
+
+MapName[38]="YYY_04E"
+LoadingMenuClass[38]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[38]="DETOUR"
+LoadingShowHints[38]=1
+
+MapName[39]="YYY_04F"
+LoadingMenuClass[39]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[39]="A BRIDGE TOO FAR"
+LoadingShowHints[39]=1
+
+MapName[40]="YYY_05A"
+LoadingMenuClass[40]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[40]="GUIContent.YYY_04"
+LoadingTitle[40]="THE WOOKIEE RESISTANCE"
+LoadingText[40]="THE CONFLICT HAS ESCALATED.  IF THE WOOKIEES HAVE ANY HOPE OF REPELLING THE HOSTILE INVADERS, IT LIES WITH THE BRAVE WARRIOR TARFFUL.  DELTA SQUAD MUST ENSURE HE UNITES HIS FORCES AGAINST THE SEPARATIST THREAT."
+LoadingShowHints[40]=1
+
+MapName[41]="YYY_05B"
+LoadingMenuClass[41]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[41]="BEHIND ENEMY LINES"
+LoadingShowHints[41]=1
+
+MapName[42]="YYY_05C"
+LoadingMenuClass[42]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[42]="V.I.W."
+LoadingShowHints[42]=1
+
+MapName[43]="YYY_05D"
+LoadingMenuClass[43]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[43]="SAVING AMMO"
+LoadingShowHints[43]=1
+
+MapName[44]="YYY_05E"
+LoadingMenuClass[44]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[44]="LIVE ORDNANCE"
+LoadingShowHints[44]=1
+
+MapName[45]="YYY_05F"
+LoadingMenuClass[45]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[45]="FATE OF THE RESISTANCE"
+LoadingShowHints[45]=1
+
+MapName[46]="YYY_06A"
+LoadingMenuClass[46]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[46]="GUIContent.YYY_05"
+LoadingTitle[46]="SEARCH AND DESTROY"
+LoadingText[46]="A MAJOR CONFRONTATION WITH SEPARATIST FORCES IS NOW INEVITABLE.  THE TWO FACTIONS ARE ADVANCING ON ONE ANOTHER, PREPARING FOR AN ALL-OUT BATTLE."
+LoadingShowHints[46]=1
+
+MapName[47]="YYY_06B"
+LoadingMenuClass[47]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[47]="HEART OF THE CITADEL"
+LoadingShowHints[47]=1
+
+MapName[48]="YYY_06C"
+LoadingMenuClass[48]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[48]="MOVING UPSTREAM"
+LoadingShowHints[48]=1
+
+MapName[49]="YYY_06D"
+LoadingMenuClass[49]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[49]="GUIContent.YYY_06"
+LoadingTitle[49]="THE FINAL STRIKE"
+LoadingText[49]="A SEPARATIST DROP SHIP THREATENS ALL OF DELTA’S GAINS, DELIVERING WAVES OF TROOPS INTO THE WOOKIEE CITY.  IT’S UP TO FOUR BRAVE COMMANDOS TO REACH THE VESSEL -- AND SHOOT IT OUT OF THE SKY."
+LoadingShowHints[49]=1
+
+MapName[50]="PRO"
+LoadingMenuClass[50]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[50]="THE BEGINNING"
+LoadingShowHints[50]=0
+
+MapName[51]="GEO_01Briefing"
+LoadingMenuClass[51]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[51]="THE CLONE WARS"
+LoadingShowHints[51]=1
+
+MapName[52]="RAS_01Briefing"
+LoadingMenuClass[52]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[52]="THE RAS PROSECUTOR"
+LoadingShowHints[52]=1
+
+MapName[53]="YYY_01Briefing"
+LoadingMenuClass[53]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[53]="THE SLAVERS OF KASHYYYK"
+LoadingShowHints[53]=1
+
+MapName[54]="Epilogue"
+LoadingMenuClass[54]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[54]="EPILOGUE: THE BATTLE OF KASHYYYK BEGINS..."
+LoadingShowHints[54]=1
+
+MapName[55]="YYY07Briefing"
+LoadingMenuClass[55]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[55]="THE FINAL STRIKE"
+LoadingShowHints[55]=1
+
+MapName[56]="GEO_05B_Demo"
+LoadingMenuClass[56]="XInterfaceCTMenus.CTLoadingInfo"
+LoadingPic[56]="GUIContent.GEO_05"
+LoadingTitle[56]="WAKING THE GIANT"
+LoadingText[56]="DELTA SQUAD HAS ACCOMPLISHED THE REPUBLIC’S FIRST BREACH OF AN ENEMY CAPITAL SHIP.  BUT THE BATTLE IS NOT OVER.  IN THE MIDST OF A FULLY ALERTED DROID DEFENSE FORCE, DELTA LEAD MUST RENDEZVOUS WITH HIS SQUAD AND PUSH THROUGH TO THE BRIDGE OF THE CORE SHIP."
+LoadingShowHints[56]=1
+
+MapName[57]="DM_Canyon"
+LoadingMenuClass[57]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[57]="GUNSHIP"
+LoadingShowHints[57]=0
+
+MapName[58]="DM_POWSmall"
+LoadingMenuClass[58]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[58]="DEPOT"
+LoadingShowHints[58]=0
+
+MapName[59]="DM_ZeroG"
+LoadingMenuClass[59]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[59]="ARENA G9"
+LoadingShowHints[59]=0
+
+MapName[60]="CTF_ZeroG"
+LoadingMenuClass[60]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[60]="ARENA G9"
+LoadingShowHints[60]=0
+
+MapName[61]="CTF_HangingGarden"
+LoadingMenuClass[61]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[61]="GARDEN"
+LoadingShowHints[61]=0
+
+MapName[62]="DM_HangingGarden"
+LoadingMenuClass[62]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[62]="GARDEN"
+LoadingShowHints[62]=0
+
+MapName[63]="DM_POW"
+LoadingMenuClass[63]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[63]="GARRISON"
+LoadingShowHints[63]=0
+
+MapName[64]="CTF_POW"
+LoadingMenuClass[64]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[64]="GARRISON"
+LoadingShowHints[64]=0
+
+MapName[65]="DM_Underpass"
+LoadingMenuClass[65]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[65]="KACHIRHO"
+LoadingShowHints[65]=0
+
+MapName[66]="CTF_Underpass"
+LoadingMenuClass[66]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[66]="KACHIRHO"
+LoadingShowHints[66]=0
+
+MapName[67]="DM_Detention"
+LoadingMenuClass[67]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[67]="LOCKDOWN"
+LoadingShowHints[67]=0
+
+MapName[68]="CTF_Detention"
+LoadingMenuClass[68]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[68]="LOCKDOWN"
+LoadingShowHints[68]=0
+
+MapName[69]="DM_Siege"
+LoadingMenuClass[69]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[69]="ARENA A17"
+LoadingShowHints[69]=0
+
+MapName[70]="CTF_Siege"
+LoadingMenuClass[70]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[70]="ARENA A17"
+LoadingShowHints[70]=0
+
+MapName[71]="DM_Engine"
+LoadingMenuClass[71]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[71]="ENGINE"
+LoadingShowHints[71]=0
+
+MapName[72]="CTF_Engine"
+LoadingMenuClass[72]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[72]="ENGINE"
+LoadingShowHints[72]=0
+
+MapName[73]="DM_Trando"
+LoadingMenuClass[73]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[73]="GHOSTSHIP"
+LoadingShowHints[73]=0
+
+MapName[74]="CTF_Trando"
+LoadingMenuClass[74]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[74]="GHOSTSHIP"
+LoadingShowHints[74]=0
+
+MapName[75]="DM_Hangar"
+LoadingMenuClass[75]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[75]="HANGAR"
+LoadingShowHints[75]=0
+
+MapName[76]="CTF_Hangar"
+LoadingMenuClass[76]="XInterfaceCTMenus.CTLoading"
+LoadingTitle[76]="HANGAR"
+LoadingShowHints[76]=0

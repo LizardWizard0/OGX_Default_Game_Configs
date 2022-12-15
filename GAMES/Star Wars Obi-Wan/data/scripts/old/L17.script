@@ -1,0 +1,63 @@
+Copyright (c) 2000, LucasArts Entertainment Company LLC
+VERSION 0.1
+
+
+Actor JarJar A_Jar_Jar_02
+Actor Padme A_Padme_Battle_01
+Actor BossNass A_Boss_Nass_01
+Actor Quigon A_Qui_Gon_01
+
+FadeUp
+
+Script BossNassDialog
+{
+	WaitUntilEnteredRegion ObiWan trig_nass_dialogue
+	
+	SayLine JarJar "/JarJarBinks_2332/Hello boy-o's!  Mesa back AGAIN!" 
+	SayLine Padme "/PadmeHandmaiden_2345/Your Honor.."
+	SayLine BossNass "/BossNass_2346/Whosa dis?"
+	SayLine Padme "/QueenAmidala_2342/I am Queen Amidala of the Naboo. I come before you in peace."
+	SayLine Padme "/QueenAmidala_2344/We wish to form an alliance"
+	SayLine BossNass "/BossNass_2343/Yousa bringen da Mackineeks Yousa all bombad."
+	SayLine Padme "/PadmeQueen_2347/I am Queen Amidala. This is my decoy my loyal bodyguard.  she kneels) Although we do not always agree Your Honor our two societies have always lived in peace until now. I ask you to help us.. no I BEG you to help us. We are your humble servants... our fate is in your hands."
+	SayLine BossNass "/BossNass_2348/Yousa no tinken yousa be greater den da Gungans.  Mesa like dis. Maybe wesa bein' friends."
+	SayLine BossNass "/BossNass_2349/Wesa ready to do our part with the Naboo to chase da mackineeks far far away..."
+	SayLine Padme "/PadmeQueen_2350/Obi-Wan, Qui-Gon, we shall attempt to take back the palace while the Gungans provide a distraction."
+	SayLine Quigon "/Qui-GonJinn_2351/How do we get there?"
+	SayLine Padme "/PadmeQueen_2352/I know a secret way.  It could be dangerous"
+}
+
+
+
+Script TrigGungansDie
+{
+	Actor Droid	  A_BAD_Sniper_Jungle_01
+	Actor Gungan1 A_Gungan_Soldier_01
+	Actor Gungan2 A_Gungan_Soldier_02
+	Actor Gungan3 A_Gungan_Soldier_03
+	
+	TakeControlOf Gungan1
+	TakeControlOf Gungan2
+	TakeControlOf Gungan3
+	
+	Crouch Gungan1
+	Crouch Gungan2
+	Crouch Gungan3
+	
+	ChildScript 
+	{
+		WaitUntilKilled Droid
+		EndScript TrigGungansDie
+	}
+
+	ChildScript
+	{
+		PauseRandom 1 3
+		Event "Reset Target For Droid"
+		Loop
+	}
+	
+	WaitUntilEnteredRegion ObiWan trig_gungans_die
+	Event "Make Gungans Vulnerable"
+	WaitUntilKilled Droid
+}

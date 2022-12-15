@@ -1,0 +1,677 @@
+<SoundData>
+		
+	<!-- ============================== TESTOPOLIS ============================== -->
+	<Testopolis>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	</Testopolis>
+	<!-- ============================== MISC01_CITY_OF_DREAMS_01 ============================== -->
+	<MISC01_CITY_OF_DREAMS_01>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</MISC01_CITY_OF_DREAMS_01>
+	<!-- ============================== MISC01_CITY_OF_DREAMS_02 ============================== -->
+	<MISC01_CITY_OF_DREAMS_02>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</MISC01_CITY_OF_DREAMS_02>
+
+	<!-- ============================== MISC01_CITY_OF_DREAMS_03 ============================== -->
+	<MISC01_CITY_OF_DREAMS_03>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</MISC01_CITY_OF_DREAMS_03>
+
+	<!-- ============================== MISC03_ASYLUM_CUTSCENE ============================== -->
+	<MISC03_ASYLUM_CUTSCENE>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</MISC03_ASYLUM_CUTSCENE>
+
+	<!-- ============================== MISC02_JACKS_OFFICE_CUTSCENE ============================== -->
+	<MISC02_JACKS_OFFICE_CUTSCENE>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</MISC02_JACKS_OFFICE_CUTSCENE>
+	<!-- ============================== 01_HOUSE ============================== -->
+	<01_House>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</01_House>
+	
+
+	<!-- ============================== 02_STREETS_ONE ============================== -->
+	<02_Streets_One>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</02_Streets_One>
+	
+	
+	<!-- ============================== 02_STREETS_TWO ============================== -->
+	<03_Streets_Two>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+
+		</OverlayNode>
+	
+	</03_Streets_Two>
+
+
+	<!-- ============================== 03_STREETS_TWO_SEWERS ============================== -->
+	<03_Streets_Two_Sewers>
+	
+		<BaseMusic>
+			<SoundCue>Main2</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo2</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild2</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy2</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+
+		</OverlayNode>
+	
+	</03_Streets_Two_Sewers>
+
+
+	<!-- ============================== 04_JAIL_BREAK ============================== -->
+	<04_Jail_Break>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+
+		</OverlayNode>
+	
+	</04_Jail_Break>
+
+
+	<!-- ============================== 05_STREETS_THREE ============================== -->
+	<05_STREETS_THREE>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+
+		</OverlayNode>
+	
+	</05_STREETS_THREE>
+
+
+	<!-- ============================== 06_REFINERY ============================== -->
+	<06_REFINERY>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+
+		</OverlayNode>
+	
+	</06_REFINERY>
+	
+
+	<!-- ============================== 07_ESOTERIC_ORDER ============================== -->
+	<07_ESOTERIC_ORDER>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</07_ESOTERIC_ORDER>
+	
+
+	<!-- ============================== 08_BOAT ============================== -->
+	<08_Boat>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</08_Boat>
+
+
+	<!-- ============================== 09_REEF ============================== -->
+	<09_Reef>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</09_Reef>
+
+
+	<!-- ============================== 10_AIR_FILLED_TUNNELS ============================== -->
+	<10_AIR_FILLED_TUNNELS>
+	
+		<BaseMusic>
+			<SoundCue>Main</SoundCue>
+			<Volume>0.0</Volume>
+			<FadeTime>1.0</FadeTime>
+			<CrossFade>1.0</CrossFade>
+			<Loops>0</Loops>
+		</BaseMusic>
+	
+		<OverlayNode>
+				<OverlayNode1>
+					<SoundCue>Tempo</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode1>
+
+				<OverlayNode2>
+					<SoundCue>Mild</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode2>
+
+				<OverlayNode3>
+					<SoundCue>Heavy</SoundCue>
+					<Volume>0.0</Volume>
+					<FadeTime>1.0</FadeTime>
+					<CrossFade>1.0</CrossFade>
+					<Loops>0</Loops>
+				</OverlayNode3>
+		</OverlayNode>
+	
+	</10_AIR_FILLED_TUNNELS>
+	
+</SoundData>

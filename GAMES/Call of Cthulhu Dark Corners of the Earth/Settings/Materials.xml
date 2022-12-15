@@ -1,0 +1,496 @@
+<Materials>
+
+	<!-- Describes all materials in the game -->
+
+	<!-- The density property determines the velocity reduction of a projectile hitting a material.
+		 A density of 1.0 stops the projectile outright, whereas a density of 0.0 causes no velocity
+		 reduction at all.  -->
+
+	<Material>
+		<ID>0</ID>
+		<Name>NULL</Name>
+		<RGB>0,0,0</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>-1</HitEffectType>
+		<OccludesTorchBeam>0</OccludesTorchBeam>
+		<SoundOcclusion>1.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>1</ID>
+		<Name>Hard Wood</Name>
+		<RGB>255,239,220</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>363</DecalType>
+		<HitEffectType>10</HitEffectType>
+		<FootstepSoundCueLeft>29</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>143</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>117</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>190</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>188</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>189</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.3</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>2</ID>
+		<Name>Soft Wood</Name>
+		<RGB>255,210,163</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.3</Density>
+		<DecalType>363</DecalType>
+		<HitEffectType>10</HitEffectType>
+		<FootstepSoundCueLeft>29</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>143</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>117</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>190</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>188</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>189</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>3</ID>
+		<Name>Thick Metal</Name>
+		<RGB>255,187,110</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>361</DecalType>
+		<HitEffectType>1</HitEffectType>
+		<FootstepSoundCueLeft>27</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>141</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>114</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>191</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>176</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>177</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.3</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>4</ID>
+		<Name>Thin Metal</Name>
+		<RGB>255,126,0</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>361</DecalType>
+		<HitEffectType>1</HitEffectType>
+		<FootstepSoundCueLeft>27</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>141</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>114</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>191</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>176</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>177</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>5</ID>
+		<Name>Wire Mesh</Name>
+		<RGB>255,0,100</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>1</HitEffectType>
+		<FootstepSoundCueLeft>27</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>141</FootstepSoundCueRight>
+		<MeleeImpactSoundCue>191</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>176</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>177</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>0</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>6</ID>
+		<Name>Brick Rock</Name>
+		<RGB>255,0,194</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>362</DecalType>
+		<HitEffectType>2</HitEffectType>
+		<FootstepSoundCueLeft>25</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>139</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>116</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>23</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>166</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>167</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.4</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>7</ID>
+		<Name>Thin Cloth</Name>
+		<RGB>255,51,255</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.01</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>-1</HitEffectType>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>8</ID>
+		<Name>Dense Cloth</Name>
+		<RGB>216,80,255</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.2</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>-1</HitEffectType>
+		<FootstepSoundCueLeft>138</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>28</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>111</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>192</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>164</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>165</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>9</ID>
+		<Name>Ice</Name>
+		<RGB>163,80,255</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.3</Density>
+		<DecalType>360</DecalType>
+		<HitEffectType>5</HitEffectType>
+		<FootstepSoundCueLeft>146</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>147</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>115</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>193</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>174</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>175</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>10</ID>
+		<Name>Snow</Name>
+		<RGB>42,174,255</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.01</Density>
+		<DecalType>360</DecalType>
+		<HitEffectType>5</HitEffectType>
+		<FootstepSoundCueLeft>26</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>142</FootstepSoundCueRight>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>11</ID>
+		<Name>Grass</Name>
+		<RGB>0,214,255</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.01</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>10</HitEffectType>
+		<FootstepSoundCueLeft>144</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>145</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>115</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>194</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>178</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>179</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.3</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>12</ID>
+		<Name>Mud</Name>
+		<RGB>25,218,223</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>361</DecalType>
+		<HitEffectType>10</HitEffectType>
+		<FootstepSoundCueLeft>144</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>145</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>115</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>194</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>178</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>179</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.3</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>13</ID>
+		<Name>Carpet</Name>
+		<RGB>0,232,190</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>86</DecalType>
+		<HitEffectType>-1</HitEffectType>
+		<FootstepSoundCueLeft>138</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>28</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>111</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>192</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>164</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>165</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.3</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>14</ID>
+		<Name>Shallow Water</Name>
+		<RGB>0,238,78</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>-1</HitEffectType>
+		<FootstepSoundCueLeft>148</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>149</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>119</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>195</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>186</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>187</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>0</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>15</ID>
+		<Name>Deep Water</Name>
+		<RGB>192,255,53</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>4</HitEffectType>
+		<FootstepSoundCueLeft>148</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>149</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>119</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>195</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>186</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>187</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>16</ID>
+		<Name>UnbreakableGlass</Name>
+		<RGB>255,255,23</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>359</DecalType>
+		<HitEffectType>5</HitEffectType>
+		<FootstepSoundCueLeft>150</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>151</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>118</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>196</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>170</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>171</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>0</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>17</ID>
+		<Name>Seaweed</Name>
+		<RGB>255,231,93</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.01</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>2</HitEffectType>
+		<FootstepSoundCueLeft>154</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>155</FootstepSoundCueRight>
+		<HitGroundSoundCueLight>180</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>181</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>18</ID>
+		<Name>ShogothSlime</Name>
+		<RGB>240,255,240</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.2</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>7</HitEffectType>
+		<FootstepSoundCueLeft>156</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>157</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>112</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>198</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>182</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>183</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>19</ID>
+		<Name>PhysicsOnly</Name>
+		<RGB>79,137,159</RGB>
+		<PlayerCollision>1</PlayerCollision>
+		<Density>0.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>-1</HitEffectType>
+		<OccludesTorchBeam>0</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>
+
+	<Material>
+		<ID>20</ID>
+		<Name>Flesh</Name>
+		<RGB>185,0,0</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>0.3</Density>
+		<DecalType>86</DecalType>
+		<HitEffectType>8</HitEffectType>
+		<FootstepSoundCueLeft>152</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>153</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>112</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>199</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>168</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>169</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>		
+
+
+<!-- Default material for all dynamic objects. Please do not change the name -->
+	<Material>
+		<ID>21</ID>
+		<Name>DefaultDynamic</Name>
+		<RGB>0,0,1</RGB>
+		<PlayerCollision>1</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>0</HitEffectType>
+		<FootstepSoundCueLeft>25</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>139</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>116</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>23</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>166</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>167</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+<!-- Default material for all NPCs. Please do not change the name -->
+	<Material>
+		<ID>22</ID>
+		<Name>NPC</Name>
+		<RGB>0,0,2</RGB>
+		<PlayerCollision>1</PlayerCollision>
+		<Density>0.1</Density> <!-- This should always be < 1.0 -->
+		<DecalType>-1</DecalType>
+		<HitEffectType>8</HitEffectType>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+
+<!-- Default material for the human player. Please do not change the name -->
+	<Material>
+		<ID>23</ID>
+		<Name>HumanPlayer</Name>
+		<RGB>0,0,3</RGB>
+		<PlayerCollision>1</PlayerCollision>
+		<Density>0.3</Density> <!-- This should always be < 1.0 -->
+		<DecalType>-1</DecalType>
+		<HitEffectType>8</HitEffectType>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.0</SoundOcclusion>
+	</Material>	
+	
+    	<Material>
+       		<ID>24</ID>
+	       	<Name>LOW_FRICTION</Name>
+	        <RGB>20,20,20</RGB>
+	       	<PlayerCollision>1</PlayerCollision>
+	        <Density>1.0</Density>
+	        <DecalType>-1</DecalType>
+	        <HitEffectType>-1</HitEffectType>
+	        <OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>
+
+
+<!-- Special stairs section.  So that decals can be prevented on these surfaces -->
+	<Material>
+		<ID>25</ID>
+		<Name>Wood Stairs</Name>
+		<RGB>180,161,127</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>10</HitEffectType>
+		<FootstepSoundCueLeft>29</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>143</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>117</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>190</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>188</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>189</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>26</ID>
+		<Name>Metal Stairs</Name>
+		<RGB>127,160,166</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>1</HitEffectType>
+		<FootstepSoundCueLeft>27</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>141</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>114</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>191</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>176</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>177</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+	<Material>
+		<ID>27</ID>
+		<Name>Carpet Stairs</Name>
+		<RGB>176,127,180</RGB>
+		<PlayerCollision>0</PlayerCollision>
+		<Density>1.0</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>10</HitEffectType>
+		<FootstepSoundCueLeft>138</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>28</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>111</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>192</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>164</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>165</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>1</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+<!-- END Special stairs section. -->
+
+	<Material>
+		<ID>28</ID>
+		<Name>Glass</Name>
+		<RGB>3,67,204</RGB>
+		<PlayerCollision>1</PlayerCollision>
+		<Density>0.1</Density>
+		<DecalType>-1</DecalType>
+		<HitEffectType>5</HitEffectType>
+		<FootstepSoundCueLeft>150</FootstepSoundCueLeft>
+		<FootstepSoundCueRight>151</FootstepSoundCueRight>
+		<ProjectileImpactSoundCue>118</ProjectileImpactSoundCue>
+		<MeleeImpactSoundCue>196</MeleeImpactSoundCue>
+		<HitGroundSoundCueLight>170</HitGroundSoundCueLight>
+		<HitGroundSoundCueHeavy>171</HitGroundSoundCueHeavy>
+		<OccludesTorchBeam>0</OccludesTorchBeam>
+		<SoundOcclusion>0.2</SoundOcclusion>
+	</Material>	
+
+</Materials>
