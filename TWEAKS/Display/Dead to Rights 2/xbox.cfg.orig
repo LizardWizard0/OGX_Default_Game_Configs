@@ -1,0 +1,41 @@
+################################################################
+# Plateform specific variables
+################################################################
+
+################################################################
+# VIDEO SETUP
+################################################################
+
+SetBkInt32 MODE_WIDTH 640
+SetBkInt32 MODE_HEIGHT 480
+SetBkInt32 MODE_COLOR_DEPTH 32
+SetBkInt32 MODE_Z_DEPTH 32
+SetBkBool FULLSCREEN TRUE
+SetBkBool INTERLACED TRUE
+SetBkInt32 MODE_REFRESH_RATE 60
+
+SetBkInt32 VERBOSE_MODE 0
+
+SetBkInt32 ASPECT_WIDTH 4
+SetBkInt32 ASPECT_HEIGHT 3
+
+SetBkBool  DYNAMIC_FX_TEXTURE	FALSE
+
+# active la possibilité de faire de l'édition temps-réel avec Maya
+SetBkBool REAL_TIME_EDIT FALSE
+
+#set le debut du filename des ressources qui ne seront pas dans le pack (stream sont à la racine si on a un PAK
+#mais sinon elles sont sur le reseau
+SetBkString NOTPACKED_RESOURCE_PATH	S:\DTR2\data\%T%
+SetBkString SCRIPTS_PATH		S:\DTR2\scripts
+SetBkString CODE_SCENARIQUE_PATH	..\code_scenarique
+SetBkString DEFAULT_LANGUAGE		usa
+
+# autorise ou pas les fichiers log python des npcs en debug
+SetBkBool NPC_DEBUG_LOG FALSE
+
+# this bool tells wether it's the tgs version or not
+SetBkBool IS_TGS_VERSION FALSE
+
+# Défini la vitesse d'éxécution des cinématiques. 1.0 = vitesse normale, 2.0 = 2 * plus rapide...
+SetBkReal CINEMATIC_SPEED 1.0

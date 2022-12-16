@@ -1,0 +1,200 @@
+enabled,identifier,category,message,priority,icon,color,glow,msg_color,sound,pointbase,multbase,falloff,snap,ollie,fakey_ollie,air,grab,floater,barrel,bottom_turn,top_turn,cutback,fakey,length,pt0,comments (no commas!),end_column
+1,snap_offlip_360_bs,snap,Off The Lip 360,10,0x41,0XC3E2FF,0x0A7ADB,0XC3E2FF,,500,2,,4,4,4,4,4,4,4,4,4,4,4,58,,,end_column
+1,snap_offlip_360_fs,snap,Off The Lip 360,10,0x41,0xC3E2FF,0x0A7ADB,0xC3E2FF,,500,2,,4,4,4,4,4,4,4,4,4,4,4,58,,,end_column
+1,snap_offlip_180_bs,snap,Off The Lip 180,10,0x41,0x004C96,0x5FBFEA,0x004C96,,250,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,38,,always ends fakey,end_column
+1,snap_offlip_180_fs,snap,Off The Lip 180,10,0x41,0x004C96,0x5FBFEA,0x004C96,,250,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,38,,always ends fakey,end_column
+1,snap_offlip_bs,snap,Backside Off The Lip,10,0x41,0x002E5C,0xB4E4F9,0x002E5C,,125,1,,3,3,3,3,3,3,3,3,3,3,3,33,,,end_column
+1,snap_offlip_fs,snap,Frontside Off The Lip,10,0x41,0x002E5C,0xB4E4F9,0x002E5C,,125,1,,3,3,3,3,3,3,3,3,3,3,3,33,,,end_column
+1,snap_offlip_rocknroll_bs,snap,Rock n' Roll,10,0x42,0xE3EBF4,0x3464EE,0xE3EBF4,,175,1,,3,3,3,3,3,3,3,3,3,3,3,33,,always ends fakey,end_column
+1,snap_offlip_rocknroll_fs,snap,Rock n' Roll,10,0x42,0xE3EBF4,0x3464EE,0xE3EBF4,,175,1,,3,3,3,3,3,3,3,3,3,3,3,33,,always ends fakey,end_column
+1,snap_offlip_reversal_bs,snap,Reversal,10,0x41,0x192386,0xB2B6DD,0x192386,,200,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,snap_offlip_reversal_fs,snap,Reversal,10,0x41,0x192386,0xB2B6DD,0x192386,,200,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,snap_loose_360_bs,snap,360 Fins-Out,10,0x41,0xCCAED8,0x7B0699,0xCCAED8,,400,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,49,,,end_column
+1,snap_loose_360_fs,snap,360 Fins-Out,10,0x41,0xCCAED8,0x7B0699,0xCCAED8,,400,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,49,,,end_column
+1,snap_loose_180_bs,snap,180 Fins-Out,10,0x41,0x8D4C9E,0x34193E,0x8D4C9E,,200,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,snap_loose_180_fs,snap,180 Fins-Out,10,0x41,0x8D4C9E,0x34193E,0x8D4C9E,,200,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,snap_loose_bs,snap,Snapturn Fins-Out,10,0x41,0x330644,0xE3BDED,0x330644,,100,1,combo,3,3,3,3,3,3,3,3,3,3,3,36,,,end_column
+1,snap_loose_fs,snap,Snapturn Fins-Out,10,0x41,0x330644,0xE3BDED,0x330644,,100,1,combo,3,3,3,3,3,3,3,3,3,3,3,36,,,end_column
+1,snap_loose_reversal_bs,snap,Reversal,10,0x41,0x8104B3,0xD3C4D7,0x8104B3,,250,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,snap_loose_reversal_fs,snap,Reversal,10,0x41,0x8104B3,0xD3C4D7,0x8104B3,,250,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,snap_slide_180_bs,snap,180 Tailslide,10,0x41,0x8D4C9E,0x34193E,0x8D4C9E,,125,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,snap_slide_180_fs,snap,180 Tailside,10,0x41,0x8D4C9E,0x34193E,0x8D4C9E,,125,1.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,snap_slide_bs,snap,Backside Tailslide,10,0x41,0x330644,0xE3BDED,0x330644,,50,1,combo,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,46,,,end_column
+1,snap_slide_fs,snap,Frontside Tailslide,10,0x41,0x330644,0xE3BDED,0x330644,,50,1,combo,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,46,,,end_column
+1,snap_underlip_bs,snap,Under The Lip,10,0x44,0x242440,0xC4D5D7,0x242440,,100,1,combo,3,3,3,3,3,3,3,3,3,3,3,26,,should end barrel,end_column
+1,snap_underlip_fs,snap,Under The Lip,10,0x44,0x242440,0xC4D5D7,0x242440,,100,1,combo,3,3,3,3,3,3,3,3,3,3,3,26,,should end barrel,end_column
+1,snap_snap_bs,snap,Snapturn,10,0x44,0x330644,0xE3BDED,0x330644,,25,1,combo,0,0,0,0,0,0,0,0,0,0,0,,,ends combo?,end_column
+1,snap_snap_fs,snap,Snapturn,10,0x44,0x330644,0xE3BDED,0x330644,,25,1,combo,0,0,0,0,0,0,0,0,0,0,0,,,ends combo?,end_column
+1,rh_snap_offlip_360_bs,snap,ROUNDHOUSE Off The Lip 360,10,0x51,0XC3E2FF,0x0A7ADB,0XC3E2FF,,1000,2.5,,4,4,4,4,4,4,4,4,4,4,4,58,,,end_column
+1,rh_snap_offlip_360_fs,snap,ROUNDHOUSE Off The Lip 360,10,0x52,0xC3E2FF,0x0A7ADB,0xC3E2FF,,1000,2.5,,4,4,4,4,4,4,4,4,4,4,4,58,,,end_column
+1,rh_snap_offlip_180_bs,snap,ROUNDHOUSE Off The Lip 180,10,0x53,0x004C96,0x5FBFEA,0x004C96,,500,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,38,,always ends fakey,end_column
+1,rh_snap_offlip_180_fs,snap,ROUNDHOUSE Off The Lip 180,10,0x54,0x004C96,0x5FBFEA,0x004C96,,500,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,38,,always ends fakey,end_column
+1,rh_snap_offlip_bs,snap,ROUNDHOUSE Backside Off The Lip,10,0x55,0x002E5C,0xB4E4F9,0x002E5C,,250,1.5,,3,3,3,3,3,3,3,3,3,3,3,33,,,end_column
+1,rh_snap_offlip_fs,snap,ROUNDHOUSE Frontside Off The Lip,10,0x56,0x002E5C,0xB4E4F9,0x002E5C,,250,1.5,,3,3,3,3,3,3,3,3,3,3,3,33,,,end_column
+1,rh_snap_offlip_rocknroll_bs,snap,ROUNDHOUSE Rock n' Roll,10,0x57,0xE3EBF4,0x3464EE,0xE3EBF4,,350,1.5,,3,3,3,3,3,3,3,3,3,3,3,33,,always ends fakey,end_column
+1,rh_snap_offlip_rocknroll_fs,snap,ROUNDHOUSE Rock n' Roll,10,0x58,0xE3EBF4,0x3464EE,0xE3EBF4,,350,1.5,,3,3,3,3,3,3,3,3,3,3,3,33,,always ends fakey,end_column
+1,rh_snap_offlip_reversal_bs,snap,ROUNDHOUSE Reversal,10,0x59,0x192386,0xB2B6DD,0x192386,,400,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,rh_snap_offlip_reversal_fs,snap,ROUNDHOUSE Reversal,10,0x60,0x192386,0xB2B6DD,0x192386,,400,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,rh_snap_loose_360_bs,snap,ROUNDHOUSE 360 Fins-Out,10,0x61,0xCCAED8,0x7B0699,0xCCAED8,,800,2.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,49,,,end_column
+1,rh_snap_loose_360_fs,snap,ROUNDHOUSE 360 Fins-Out,10,0x62,0xCCAED8,0x7B0699,0xCCAED8,,800,2.5,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,49,,,end_column
+1,rh_snap_loose_180_bs,snap,ROUNDHOUSE 180 Fins-Out,10,0x63,0x8D4C9E,0x34193E,0x8D4C9E,,400,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,rh_snap_loose_180_fs,snap,ROUNDHOUSE 180 Fins-Out,10,0x64,0x8D4C9E,0x34193E,0x8D4C9E,,400,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,rh_snap_loose_bs,snap,ROUNDHOUSE Snapturn Fins-Out,10,0x65,0x330644,0xE3BDED,0x330644,,200,1.5,combo,3,3,3,3,3,3,3,3,3,3,3,36,,,end_column
+1,rh_snap_loose_fs,snap,ROUNDHOUSE Snapturn Fins-Out,10,0x66,0x330644,0xE3BDED,0x330644,,200,1.5,combo,3,3,3,3,3,3,3,3,3,3,3,36,,,end_column
+1,rh_snap_loose_reversal_bs,snap,ROUNDHOUSE Reversal,10,0x67,0x8104B3,0xD3C4D7,0x8104B3,,500,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,rh_snap_loose_reversal_fs,snap,ROUNDHOUSE Reversal,10,0x68,0x8104B3,0xD3C4D7,0x8104B3,,500,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,45,,,end_column
+1,rh_snap_slide_180_bs,snap,ROUNDHOUSE 180 Tailslide,10,0x69,0x8D4C9E,0x34193E,0x8D4C9E,,250,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,rh_snap_slide_180_fs,snap,ROUNDHOUSE 180 Tailside,10,0x70,0x8D4C9E,0x34193E,0x8D4C9E,,250,2,,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,41,,always ends fakey,end_column
+1,rh_snap_slide_bs,snap,ROUNDHOUSE Backside Tailslide,10,0x71,0x330644,0xE3BDED,0x330644,,100,1.5,combo,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,46,,,end_column
+1,rh_snap_slide_fs,snap,ROUNDHOUSE Frontside Tailslide,10,0x72,0x330644,0xE3BDED,0x330644,,100,1.5,combo,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,46,,,end_column
+1,rh_snap_underlip_bs,snap,ROUNDHOUSE Under The Lip,10,0x73,0x242440,0xC4D5D7,0x242440,,200,1.5,combo,3,3,3,3,3,3,3,3,3,3,3,26,,should end barrel,end_column
+1,rh_snap_underlip_fs,snap,ROUNDHOUSE Under The Lip,10,0x74,0x242440,0xC4D5D7,0x242440,,200,1.5,combo,3,3,3,3,3,3,3,3,3,3,3,26,,should end barrel,end_column
+1,rh_snap_snap_bs,snap,ROUNDHOUSE Snapturn,10,0x75,0x330644,0xE3BDED,0x330644,,50,1.5,combo,0,0,0,0,0,0,0,0,0,0,0,,,ends combo?,end_column
+1,rh_snap_snap_fs,snap,ROUNDHOUSE Snapturn,10,0x76,0x330644,0xE3BDED,0x330644,,50,1.5,combo,0,0,0,0,0,0,0,0,0,0,0,,,ends combo?,end_column
+1,ollie_900,ollie,Ollie,10,0x45,0xE0ADAD,0xBD0C12,0xE0ADAD,,1000,3.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,ollie_720,ollie,Ollie,10,0x45,0xEB3838,0x760307,0xEB3838,,750,3,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,ollie_540,ollie,Ollie,10,0x45,0xC86464,0x430A0C,0xC86464,,500,2.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,ollie_360,ollie,Ollie,10,0x45,0x0C0C0C,0xDC2C34,0x0C0C0C,,250,2,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,ollie_180,ollie,Ollie,10,0x45,0x500319,0xF3B3B6,0x500319,,100,1,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,ollie,ollie,Ollie,10,0x45,0x28020D,0xEDD9DA,0x28020D,,10,0,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,shuvit,ollie,Shuvit 360,10,0x46,0x5C0A02,0xEB9A8D,0x5C0A02,,250,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,kick_flip,ollie,Kickflip,10,0x48,0x470F04,0xF6BFB6,0x470F04,,100,1,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,heel_flip,ollie,Heelflip,10,0x49,0x4E2421,0xF1AE9C,0x4E2421,,100,1,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,fakey_ollie_900,fakey_ollie,Fakey Ollie,10,0x45,0xBBE0C4,0x0B3C04,0xBBE0C4,,1000,3.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,fakey_ollie_720,fakey_ollie,Fakey Ollie,10,0x45,0x76F295,0x111F0F,0x76F295,,800,3,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,fakey_ollie_540,fakey_ollie,Fakey Ollie,10,0x45,0x29BE4E,0x0D4106,0x29BE4E,,600,2.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,fakey_ollie_360,fakey_ollie,Fakey Ollie,10,0x45,0x252926,0x1ECE06,0x252926,,400,2,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,fakey_ollie_180,fakey_ollie,Fakey Ollie,10,0x45,0x90F782,0x033D0D,0x90F782,,200,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,fakey_ollie,fakey_ollie,Fakey Ollie,10,0x45,0x021D07,0xB5E1AF,0x021D07,,20,0,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,fakey_shuvit,fakey_ollie,Fakey Shuvit 360,10,0x46,0x0B3D18,0xC1D2C1,0x0B3D18,,500,1,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,fakey_kick_flip,fakey_ollie,Fakey Kickflip,10,0x48,0x22502E,0xC1D2C1,0x22502E,,200,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,fakey_heel_flip,fakey_ollie,Fakey Heelflip,10,0x49,0x2B4432,0xC1D2C1,0x2B4432,,200,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,air_900_bs,air,Air,10,0x4a,0xF3D647,0x2F2A0A,0xF3D647,,1750,3.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_900_fs,air,Air,10,0x4a,0xF3D647,0x2F2A0A,0xF3D647,,1750,3.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_720_bs,air,Air,10,0x4a,0xF0E8C0,0x6E662E,0xF0E8C0,,1500,3,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_720_fs,air,Air,10,0x4a,0xF0E8C0,0x6E662E,0xF0E8C0,,1500,3,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_540_bs,air,Air,10,0x4a,0xCBD596,0x616F00,0xCBD596,,1250,2.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_540_fs,air,Air,10,0x4a,0xCBD596,0x616F00,0xCBD596,,1250,2.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_360_bs,air,Air,10,0x4a,0x5F5337,0xD0E924,0x5F5337,,1000,2,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_360_fs,air,Air,10,0x4a,0x5F5337,0xD0E924,0x5F5337,,1000,2,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_180_bs,air,Air,10,0x4a,0x453102,0xE6F0A1,0x453102,,500,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,air_180_fs,air,Air,10,0x4a,0x453102,0xE6F0A1,0x453102,,500,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,air_bs,air,Air,10,0x4a,0x221904,0xE2E7C0,0x221904,,100,0,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,air_fs,air,Air,10,0x4a,0x221904,0xE2E7C0,0x221904,,100,0,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_900_bs,air,Alleyoop,10,0x45,0xFF0EFF,0xCAB5C7,0xFF0EFF,,2000,3.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_900_fs,air,Alleyoop,10,0x45,0xFF0EFF,0xCAB5C7,0xFF0EFF,,2000,3.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_720_bs,air,Alleyoop,10,0x45,0xF0DAF0,0x33052D,0xF0DAF0,,1750,3,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_720_fs,air,Alleyoop,10,0x45,0xF0DAF0,0x33052D,0xF0DAF0,,1750,3,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_540_bs,air,Alleyoop,10,0x45,0xE0ABE0,0x4F2249,0xE0ABE0,,1500,2.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_540_fs,air,Alleyoop,10,0x45,0xE0ABE0,0x4F2249,0xE0ABE0,,1500,2.5,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_360_bs,air,Alleyoop,10,0x45,0x1A161A,0xBB1DA5,0x1A161A,,1250,2,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_360_fs,air,Alleyoop,10,0x45,0x1A161A,0xBB1DA5,0x1A161A,,1250,2,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_180_bs,air,Alleyoop,10,0x45,0x48024F,0xF87CE7,0x48024F,,625,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,alleyoop_180_fs,air,Alleyoop,10,0x45,0x48024F,0xF87CE7,0x48024F,,625,1,,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey,end_column
+1,alleyoop_bs,air,Alleyoop,10,0x45,0x2D0331,0xFCDFF8,0x2D0331,,125,0,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,alleyoop_fs,air,Alleyoop,10,0x45,0x2D0331,0xFCDFF8,0x2D0331,,125,0,,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,grab_2hand_bs,grab,Two Handed,8,0x4b,0xF1EAC7,0xE88510,0xF1EAC7,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,BOTH two hands; one each rail,end_column
+1,grab_2hand_fs,grab,Two Handed,8,0x4b,0xF1EAC7,0xE88510,0xF1EAC7,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,BOTH two hands; one each rail,end_column
+1,grab_method_bs,grab,Method,8,0x4c,0xF2ED9E,0x748108,0xF2ED9E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_method_fs,grab,Method,8,0x4c,0xF2ED9E,0x748108,0xF2ED9E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_pneumatic,grab,Pneumatic,8,0x59,0xCADBBA,0xDE8B1F,0xCADBBA,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; heelside rail,end_column
+1,grab_stale_fs,grab,Stalefish,8,0x4d,0xBBE6FD,0x4581EF,0xBBE6FD,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; heelside rail,end_column
+1,grab_indy_nosebone,grab,Indy Nosebone,8,0x4e,0xBBE6FD,0x4581EF,0xBBE6FD,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; toeside rail,end_column
+1,grab_fs_nosebone,grab,Nosebone,8,0x4e,0xBBE6FD,0x4581EF,0xBBE6FD,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; toeside rail,end_column
+1,grab_mute,grab,Mute,8,0x4f,0xBBE6FD,0x4581EF,0xBBE6FD,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT frond hand; toeside rail,end_column
+1,grab_slob,grab,Slob,8,0x5a,0xBBE6FD,0x4581EF,0xBBE6FD,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT frond hand; toeside rail,end_column
+1,grab_tail,grab,Tailgrab,8,0x50,0xBBE6FD,0x4581EF,0xBBE6FD,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand,end_column
+1,grab_stiffy_bs,grab,Stiffy,8,0x30,0x04262E,0xDE8B1F,0x04262E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; toeside rail,end_column
+1,grab_stiffy_fs,grab,Stiffy,8,0x30,0x04262E,0xDE8B1F,0x04262E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; toeside rail,end_column
+1,grab_japan_bs,grab,Japan,8,0x57,0x04262E,0xDE8B1F,0x04262E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_japan_fs,grab,Japan,8,0x57,0x04262E,0xDE8B1F,0x04262E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_lien,grab,Lien,8,0x58,0x04262E,0xDE8B1F,0x04262E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_melloncollie,grab,Melloncollie,8,0x78,0x04262E,0xDE8B1F,0x04262E,,250,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,roast_beef_bs,grab,Roastbeef,8,0x61,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT front/back hand; heelside rail; grab between legs,end_column
+1,roast_beef_fs,grab,Roastbeef,8,0x61,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT front/back hand; heelside rail; grab between legs,end_column
+1,grab_rocket,grab,Rocket,8,0x52,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,BOTH two hands; one each rail; feet together,end_column
+1,grab_frigid,grab,Frigid,8,0x73,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail; front foot off toeside,end_column
+1,grab_frigid_lien,grab,Frigid Lien,8,0x62,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail; front foot off toeside,end_column
+1,grab_benihana_bs,grab,Benihana,8,0x54,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; toeside rail; back foot off toeside,end_column
+1,grab_benihana_fs,grab,Benihana,8,0x54,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; toeside rail; back foot off toeside,end_column
+1,grab_cancan_bs,grab,Can-Can,8,0x55,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,BOTH two hands; heelside/toeside rail; both feet off toeside/heelside,end_column
+1,grab_cancan_fs,grab,Can-Can,8,0x55,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,BOTH two hands; heelside/toeside rail; both feet off toeside/heelside,end_column
+1,grab_crossbone_bs,grab,Crossbone,8,0x56,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_indy_1foot,grab,Indy One-Foot,8,0x63,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; toeside rail; front foot off heelside,end_column
+1,grab_fs_1foot,grab,One-Foot,8,0x64,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,LEFT back hand; toeside rail; front foot off heelside,end_column
+1,grab_fast_plant,grab,Fastplant,8,0x65,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,RIGHT front hand; heelside rail,end_column
+1,grab_judo_bs,grab,Judo,8,0x53,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,grab_judo_fs,grab,Judo,8,0x53,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,grab_1foot_mute,grab,One-Foot Mute,8,0x66,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,grab_1foot_slob,grab,One-Foot Slob,8,0x66,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,grab_slob_bone,grab,Slob Bone,8,0x58,0x04262E,0xDE8B1F,0x04262E,,500,1,session,2,2,2,2,2,2,2,2,,2,2,,,,end_column
+1,barrel_roll,air,Barney Roll,12,0x32,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,rodeo,air,Rodeo,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey; no control,end_column
+1,air_540,air,Alleyoop 540,12,0x34,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,always ends fakey; no control,end_column
+1,sex_change,air,Sex Change,12,0x34,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,spin control; no hold control,end_column
+1,air_varial,air,Varial 360,12,0x6a,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,spin control; no hold control,end_column
+1,frontflip,air,Frontflip,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,backflip,air,Backflip,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,heelklicker,air,Heel Clicker,12,0x36,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,hold control; spin control,end_column
+1,christ_air,air,Christ Air,12,0x37,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,hold control; spin control,end_column
+1,superman,air,Superman,12,0x38,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,hold control; no spin control,end_column
+1,air_walk,air,Air Walk,12,0x39,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,hold control; spin control,end_column
+1,finger_flip,air,Finger Flip,12,0x6b,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,spin control; no hold control,end_column
+1,back_scratcher,air,Back Scratcher,12,0x6c,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,hold control; spin control,end_column
+1,body_varial,air,Body Varial,12,0x35,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,spin control; no hold control,end_column
+1,helicopter,air,Christ Varial,12,0x6d,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,spin control; no hold control,end_column
+1,nothing_air,air,Nothing Air,12,0x6e,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,hold control; no spin control,end_column
+1,revert,air,Kickflip Underflip,12,0x48,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,spin control; no hold control,end_column
+1,screw_driver,air,Screwdriver,12,0x67,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,indy_flip,air,Backflip Nosebone,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,judo_flip,air,One-foot Backflip,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,look_back,air,Look-back,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,rocket_flip,air,Rocket Flip,12,0x33,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,slob_flip,air,Slob Flip,12,0x68,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,stale_flip,air,Stale Flip,12,0x69,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,stiff_flip,air,Stiffy Flip,12,0x30,0xC13AF9,0x1B1248,0xC13AF9,,2000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,under_flip,air,Impossible,12,0x6f,0xC13AF9,0x1B1248,0xC13AF9,,1000,1,session,2,2,2,2,2,2,2,2,,2,2,,,no control,end_column
+1,floater,floater,Floater,6,0x43,0xF4F87F,0x754705,0xF4F87F,,100,1,,2,2,2,2,2,2,2,2,,2,2,20,1,,end_column
+1,crooked,floater,Crooked Floater,6,0x43,0xF4F87F,0x754705,0xF4F87F,,200,1,,2,2,2,2,2,2,2,2,,2,2,19,1,,end_column
+1,boardslide,floater,Boardslide,6,0x43,0xF4F87F,0x754705,0xF4F87F,,200,1,,2,2,2,2,2,2,2,2,,2,2,19,1,,end_column
+1,fakey_floater,floater,SPECIAL Fakey Floater,6,0x43,0x754705,0xF4F87F,0x754705,,500,1,,2,2,2,2,2,2,2,2,,2,2,19,1,can end fakey or normal,end_column
+1,darkslide,floater,SPECIAL Darkslide,12,0x43,0x754705,0xF4F87F,0x754705,,500,1,session,2,2,2,2,2,2,2,2,,2,2,19,0.7,,end_column
+1,judo_floater,floater,SPECIAL Frigid Floater,12,0x43,0x754705,0xF4F87F,0x754705,,500,1,session,2,2,2,2,2,2,2,2,,2,2,19,1,,end_column
+1,kickflip_floater,floater,SPECIAL Kickflip to Fakey Floater,12,0x43,0x754705,0xF4F87F,0x754705,,500,1,session,2,2,2,2,2,2,2,2,,2,2,19,0.68,,end_column
+1,layback_floater,floater,SPECIAL Slob Slide,12,0x43,0x754705,0xF4F87F,0x754705,,500,1,session,2,2,2,2,2,2,2,2,,2,2,19,0.88,,end_column
+1,shuvit_floater,floater,SPECIAL Shuvit to Fakey Floater,12,0x43,0x754705,0xF4F87F,0x754705,,500,1,session,2,2,2,2,2,2,2,2,,2,2,19,0.68,,end_column
+1,bluntslide,floater,SPECIAL Bluntslide,12,0x43,0x754705,0xF4F87F,0x754705,,500,1,session,2,2,2,2,2,2,2,2,,2,2,19,0.73,,end_column
+1,bottom_turn,bottom_turn,Bottom Turn,2,0x70,0x003C1F,0xEFE288,0x003C1F,,50,0,never,3,3,3,3,3,3,3,3,3,3,3,,,points are high because will almost always be scored at 10%,end_column
+0,top_turn,top_turn,Top Turn,2,0x70,0x413205,0x95EB25,0x413205,,10,0,never,,,,,,,,,,,,,,,end_column
+1,cutback,cutback,Cutback,2,0x70,0x054132,0xC4EBAF,0x054132,,20,0,never,3,3,3,3,3,3,3,3,3,3,3,,,cutback + any turn modifies turn,end_column
+1,fakey,fakey,Fakey,4,0x71,0x003C1F,0x74A2A7,0x003C1F,,100,0,,2,2,2,2,2,2,2,2,2,2,2,,,fakey usually ends combo?,end_column
+1,barrel,barrel,Barrel,4,0x72,0x003C1F,0x74A2A7,0x003C1F,,100,1,,3,3,3,3,3,3,3,3,3,3,3,,,extra points for depth,end_column
+1,takeoff,null,Drop-In,6,0x72,0xffffff,0xF69017,0xac6753,,100,1,,2,2,2,2,2,2,2,2,2,2,2,,,,end_column
+1,takeoff_perfect,null,Perfect Drop-In,6,0x72,0xffffff,0xD6DF3F,0xffffff,,200,1,,3,3,3,3,3,3,3,3,3,3,3,,,,end_column
+1,takeoff_barrel,null,Sick Drop-In,6,0x72,0xffffff,0x57E61F,0xFBB96B,,150,1,,2,2,2,2,2,2,2,2,2,2,2,,,,end_column
+1,takeoff_late,null,Late Drop-In,6,0x72,0xffffff,0x1FE6D1,0xB2E3AD,,50,1,,2,2,2,2,2,2,2,2,2,2,2,,,,end_column
+1,takeoff_early,null,Got up early,6,0x72,0xffffff,0x1F36E6,0x2E0B1F,,50,0,,,,,,,,,,,,,,,,end_column
+1,takeoff_snake,null,Snaked the Wave,6,0x73,0xffffff,0xE61FE4,0xffffff,,0,0,,,,,,,,,,,,,,,,end_column
+0,stack_air,null,stack_air,14,0xcd,0xffffff,0xD67F18,0xffffff,,0,0,,,,,,,,,,,,,,,spin frontside/backside air -> spin grab air; grab -> grab to grab,end_column
+0,stack_roundhouse,null,stack_roundhouse,14,0x51,0xffffff,0xD67F18,0xffffff,,500,1,,0,3,,,,,3,5,,4,2.5,,,roundhouse turn,end_column
+1,photo,null,Photo,16,0x74,0xffffff,0xD67F18,0xffffff,,1000,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,shoot_pier,null,Shoot the Pier,16,0x75,0xffffff,0xD67F18,0xffffff,,100,2,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_banner,null,Jump the Banner,16,0x76,0xffffff,0xD67F18,0xffffff,,1000,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,shoot_rocks,null,Shoot the Rocks,16,0x76,0xffffff,0xD67F18,0xffffff,,200,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,avoid_sealife,null,Avoid the Sealife,16,0x77,0xffffff,0xD67F18,0xffffff,,200,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,shoot_bunkers,null,Shoot the Bunkers,16,0x76,0xffffff,0xD67F18,0xffffff,,200,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,hit_bird,null,Scare the SeaBird,16,0x78,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,hit_net,null,Freed a Dolphin,16,0x79,0xffffff,0xD67F18,0xffffff,,200,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,hit_jelly,null,Hit a Jellyfish,16,0x7a,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,spray_boat,null,Spray the Boatmen,16,0x29,0xffffff,0xD67F18,0xffffff,,200,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,spray_bird,null,Spray the Bird,16,0x78,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_turtle,null,Jump the Sea Turtle,16,0x77,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_bunker,null,Jump the Bunker,16,0x76,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_cowhead,null,Jump the Cow Head,16,0x28,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_canoe,null,Jump the Canoe,16,0x29,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_boat,null,Jump the Boat,16,0x29,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_croc,null,Jump the Crocodile,16,0x2a,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_reef,null,Jump the Exposed Reef,16,0x76,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,jump_rock,null,Jump the Exposed Rock,16,0x76,0xffffff,0xD67F18,0xffffff,,500,1,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+1,badkarma,null,Bad Karma,16,0xcd,0xffffff,0xD67F18,0xffffff,,1000,0.5,,,,,,,,,,,,,,,null so shouldn't be looked at for connects,end_column
+0,end_row,null,end_row,0,0xcd,0,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,end_row,end_column

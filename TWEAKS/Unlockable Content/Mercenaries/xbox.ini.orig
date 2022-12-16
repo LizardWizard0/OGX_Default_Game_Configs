@@ -1,0 +1,77 @@
+; This file should only contain Xbox-only settings.
+
+// mipbias is for Xbox only
+mipbias -0.88
+
+
+; The Xbox version should only unlock Han Solo
+;UnlockSpecialCharacter1 true
+
+; The base ducking level controls the range of volume settings.
+BaseDuckingLevel 6000.0
+
+; specular cubem for normal mapping
+specularcubemap specular_cubemap
+
+[Humans]
+
+// Format is: max distance, update frequency in vblanks, interpolation(0=off,1=on)
+// distance < 0 is for humans outside view frustum.
+// Must be in ascending order of distance.
+// No more than 4 distance levels allowed, not including distance < 0 entry.
+//
+// dbond 2004-06-29:
+// Update frequency < 1 is not allowed.  It used to indicate that animations
+// should be frozen, but that's now done through Sam's AI/physics/animation
+// LOD system.
+// end dbond 2004-06-29
+
+// Low quality updates.
+// Animations with no significant movement, e.g. idles.
+AnimUpdateLow		-1		30	0
+AnimUpdateLow		10		2	0
+AnimUpdateLow		15		4	0
+AnimUpdateLow		60		6	0
+AnimUpdateLow		1000	30	0
+
+// Medium quality updates.
+// Animations with limited movement, e.g. firing.
+AnimUpdateMedium	-1		30	0
+AnimUpdateMedium	10		2	0
+AnimUpdateLow		15		4	0
+AnimUpdateMedium	60		6	0
+AnimUpdateMedium	1000	15	0
+
+// High quality updates.
+// Anything with significant movement, e.g. walking/running, reloading, fidgets.
+AnimUpdateHigh		-1		30	0
+AnimUpdateHigh		30		1	1
+AnimUpdateHigh		50		2	0
+AnimUpdateHigh		100		4	0
+AnimUpdateHigh		1000	15	0
+
+// Updates for actors (probably civilians) who are "lending" their pose to
+// other actors.
+AnimUpdateLender	-1		2	0
+AnimUpdateLender	1000	2	0
+
+[FrontEndCanvas]
+PressStartNudgeX	-2
+PressStartY			360
+
+// Offset from menu item text pos to center of "X"/"A" button.
+MenuButtonOffsetX	-22
+MenuButtonOffsetY	-7
+
+IconAgentPosX		-40
+IconAgentPosY		-90
+IconCrosshairPosX	-43
+IconCrosshairPosY	-50
+IconGlobalPosX		-40
+IconGlobalPosY		-130
+
+BioWinX 			95
+BioWinY				36
+BioWinWidth 		450
+BioFontSizeX 		1.0
+BioFontSizeY 		0.9

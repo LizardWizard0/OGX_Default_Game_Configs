@@ -1,0 +1,23 @@
+[General]
+
+MovieCount = 4
+
+[Movie00]
+Name=d:\Media\Videos\Microsoft.xmv
+Skipable = 1
+FrameCount = -1
+
+[Movie01]
+Name=d:\Media\Videos\Pam.xmv
+Skipable = 1
+FrameCount = -1
+
+[Movie02]
+Name=d:\Media\Videos\XSN.xmv
+Skipable = 1
+FrameCount = -1
+
+[Movie03]
+Name=d:\Media\Videos\AttractMode.xmv
+Skipable = 1
+FrameCount = -1

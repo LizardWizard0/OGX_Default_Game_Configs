@@ -1,7 +1,0 @@
-[HoverPlatPickup]
-PickupMessage="You have taken the suspension platform."
-
-[RunOver]
-DeathString="%o became another road casualty thanks to %k."
-FemaleSuicide = "% or she was overwhelmed."
-MaleSuicide="%o was run over."

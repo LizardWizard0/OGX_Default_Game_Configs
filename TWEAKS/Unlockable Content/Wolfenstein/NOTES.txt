@@ -1,0 +1,6 @@
+Setting has not been tested
+
+defaultconfig.cfg changed from 
+seta cl_unlockedWolf3D "0"
+to
+seta cl_unlockedWolf3D "1"

@@ -1,0 +1,310 @@
+//// main states ////
+surf
+surf_a
+surf_b
+surf_c
+surf_d
+surf_e
+surf_f
+surf_g
+surf_h
+
+surf2prone
+prone2surf
+prone
+prone2sit
+sit2prone
+sit
+
+// these aren't stereo, _bs actually means switch stance
+surf2prone_a_bs 
+surf2prone_a_fs
+surf2prone_b_bs
+surf2prone_b_fs
+
+relaxed
+paddle2relaxed
+relaxed2paddle
+swim2prone
+swim
+
+rebalance
+stand_cancel
+
+//// paddles ////
+paddle_m
+paddle_b_m
+paddle_c_m
+paddle_d_m
+paddle_h
+paddle_b_h
+paddle_c_h
+paddle_d_h
+paddle_turn_ls, paddle_turn_rs
+
+stall_prone
+prone2stall
+stall2prone
+
+prone2duckdive
+duckdive
+duckdive2prone
+
+//// tuck/crouch ////
+//tuck
+crouch
+surf2tuck
+//tuck2surf
+surf2crouch
+//crouch2surf
+//tuck2crouch
+//crouch2tuck
+
+tuck_loose_bs, tuck_loose_fs
+surf2tuck_loose_bs, surf2tuck_loose_fs
+tuck2surf_loose_bs, tuck2surf_loose_fs
+
+tuck_loose_stall_bs, tuck_loose_stall_fs
+
+tuck_mid_bs, tuck_mid_fs
+surf2tuck_mid_bs, surf2tuck_mid_fs
+tuck2surf_mid_bs, tuck2surf_mid_fs
+
+tuck_mid_stall_bs, tuck_mid_stall_fs
+
+tuck_tight_bs, tuck_tight_fs
+surf2tuck_tight_bs, surf2tuck_tight_fs
+tuck2surf_tight_bs, tuck2surf_tight_fs
+
+tuck_tight_stall_bs, tuck_tight_stall_fs
+
+tuck_layback_bs
+
+//// surf stahls ////
+//hand_stall_bs, hand_stall_fs
+tail_stall_bs, tail_stall_fs
+
+//// turns ////
+//turn_f
+//turn_b
+//turn_fl, turn_fr
+turn_l, turn_r
+//turn_bl, turn_br
+turn_hard_l, turn_hard_r
+
+//pump_bs, pump_fs
+
+//// snaps ////
+snap_bs, snap_fs
+snap_layback_bs, snap_layback_fs
+180snapturn_bs, 180snapturn_fs
+360snapturn_bs, 360snapturn_fs
+
+snap_fail_bs, snap_fail_fs
+
+reversal_bs, reversal_fs
+
+under_thelip_bs, under_thelip_fs
+
+
+//// offlips ////
+off_lip_bs, off_lip_fs
+180off_lip_bs, 180off_lip_fs
+360off_lip_bs, 360off_lip_fs
+
+offtheliprock_n_roll_bs, offtheliprock_n_roll_fs
+
+//// jump ////
+//jump
+//air
+//land
+//surf2air
+
+//air_land_fakey
+
+//// ollie ////
+ollie
+kick_flip
+heel_flip
+shuvit
+
+//// grabs ////
+grab_1foot_mute
+grab_1foot_slob
+grab_2hand_bs, grab_2hand_fs
+grab_benihana_bs, grab_benihana_fs
+grab_cancan_bs
+grab_crossbone_bs
+grab_fast_plant
+grab_frigid
+grab_frigid_lien
+grab_fs_1foot
+grab_fs_nosebone
+grab_indy_1foot
+grab_indy_nosebone
+grab_japan_bs, grab_japan_fs
+grab_judo_bs, grab_judo_fs
+grab_lien
+grab_melloncollie
+grab_method_bs, grab_method_fs
+grab_mute
+grab_pneumatic
+grab_rocket
+grab_slob
+grab_slob_bone
+grab_stale_fs
+grab_stiffy_bs, grab_stiffy_fs
+grab_tail
+roast_beef_bs, roast_beef_fs
+
+// REMOVED!
+//, grab_cancan_fs
+// grab_stale_bs, grab_stale_fs
+// grab_indy_bs, grab_indy_fs
+// grab_mute_bs, grab_mute_fs
+// grab_crossbone_bs, grab_crossbone_fs
+// grab_lien_bs, grab_lien_fs
+// grab_madonna_bs, grab_madonna_fs
+// grab_slob_bs, grab_slob_fs
+// grab_crouching_tiger
+
+//// floaters ////
+float_bs, float_fs
+float_bs_b, float_fs_b
+float_bs_f, float_fs_f
+float2surf_bs, float2surf_fs
+surf2float_bs, surf2float_fs
+
+board_float_bs, board_float_fs
+board_float_bs_b, board_float_fs_b
+board_float_bs_f, board_float_fs_f
+board_float2surf_bs, board_float2surf_fs
+board_surf2float_bs, board_surf2float_fs
+
+crooked_float_bs, crooked_float_fs
+crooked_float_bs_b, crooked_float_fs_b
+crooked_float_bs_f, crooked_float_fs_f
+crooked_float2surf_bs, crooked_float2surf_fs
+crooked_surf2float_bs, crooked_surf2float_fs
+
+dark_float_bs, dark_float_fs
+dark_float_bs_b, dark_float_fs_b
+dark_float_bs_f, dark_float_fs_f
+dark_float2surf_bs, dark_float2surf_fs
+dark_surf2float_bs, dark_surf2float_fs
+
+judo_float_bs, judo_float_fs
+judo_float_bs_b, judo_float_fs_b
+judo_float_bs_f, judo_float_fs_f
+judo_float2surf_bs, judo_float2surf_fs
+judo_surf2float_bs, judo_surf2float_fs
+
+kickflip_fakey_bs, kickflip_fakey_fs
+kickflip_fakey_bs_b, kickflip_fakey_fs_b
+kickflip_fakey_bs_f, kickflip_fakey_fs_f
+kickflip_fakey2surf_bs, kickflip_fakey2surf_fs
+kickflip_surf2fakey_bs, kickflip_surf2fakey_fs
+
+layback_float_bs, layback_float_fs
+layback_float_bs_b, layback_float_fs_b
+layback_float_bs_f, layback_float_fs_f
+layback_float2surf_bs, layback_float2surf_fs
+layback_surf2float_bs, layback_surf2float_fs
+
+shuvit_float_bs, shuvit_float_fs
+shuvit_float_bs_b, shuvit_float_fs_b
+shuvit_float_bs_f, shuvit_float_fs_f
+shuvit_float2surf_bs, shuvit_float2surf_fs
+shuvit_surf2float_bs, shuvit_surf2float_fs
+
+blunt_slide_bs, blunt_slide_fs
+blunt_slide_bs_b, blunt_slide_fs_b
+blunt_slide_bs_f, blunt_slide_fs_f
+blunt_slide2surf_bs, blunt_slide2surf_fs
+blunt_surf2slide_bs, blunt_surf2slide_fs
+
+fakey_float_bs, fakey_float_fs
+fakey_float_bs_b, fakey_float_fs_b
+fakey_float_bs_f, fakey_float_fs_f
+fakey_float2surf_bs, fakey_float2surf_fs
+fakey_surf2float_bs, fakey_surf2float_fs
+
+//fakey_float2fakey_bs, fakey_float2fakey_fs
+
+//// fakey ////
+fakey
+fakey2surf_l, fakey2surf_r
+fakey_fall
+
+fakey_ollie_fs
+fakey_kickflip_fs
+fakey_heelflip_fs
+fakey_shuvit_fs
+
+//fakey_ollie_bs
+//fakey_kickflip_bs
+//fakey_heelflip_bs
+//fakey_shuvit_bs
+
+//// special spins ////
+air_christ_bs, air_christ_fs
+air_finger_flip_bs, air_finger_flip_fs
+air_superman_fs
+air_varial_360
+air_walk_bs, air_walk_fs
+back_scratcher
+christ_varial
+heelklicker
+impossible
+kickflip_underflip
+nothing_air
+screw_driver
+sex_change
+
+//// special flips ////
+1foot_backflip
+back_flip
+backflip_nosebone
+barneyroll_bs, barneyroll_fs
+body_varial
+bs_alleyoop_540, fs_alleyoop_540
+frontflip_fs
+look_back
+rocket_flip
+rodeo_fs
+slob_flip
+stale_flip_bs, stale_flip_fs
+stiffy_flip
+
+// REMOVED!
+// 540_bs, 540_fs
+// air_varial
+// barrelrol_bs, barrelrol_fs
+// helicopter
+// indy_flip
+// judo_flip
+// revert
+// stiff_flip
+// under_flip	
+
+//// wipeouts ////
+crash_surf_a
+crash_hacked_bs, crash_surf_b
+crash_high_b
+crash_high_f
+crash_high_l, crash_high_r
+crash_low_b
+crash_low_f
+crash_low_l, crash_low_r
+
+//// misc ////
+attack01
+cancel
+//dry_land
+
+
+
+
+
+
+

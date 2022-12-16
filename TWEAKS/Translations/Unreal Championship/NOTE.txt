@@ -1,0 +1,3 @@
+Contains one new file, "XVehicles.int", which is an English translation of a file that was not available.
+However, it doesn't do anything since the game doesn't have vehicles. 
+	It looks like the devs just forgot to remove the file for the other languages so I added the english one back for fun :)

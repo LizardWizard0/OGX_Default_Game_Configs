@@ -35,6 +35,9 @@ But here are some examples of what is possible:
 Content Layout
 -------------
 
+"Plaintext file info.xls"
+	Description: A tracking file that has high level info about what type of configurations are available for each game.  The list is not complete and may be missing items that could be configured.
+
 \GAMES\Game Name\
 	Description: Contains cleartext files of interest from the game disks. Nested folder structures represent actual file paths.
 		Modification of these files requires the use of a modified console.
@@ -46,7 +49,5 @@ Content Layout
 			**Some files can run from memory card while others must be installed to the HDD
 
 \TWEAKS\
-	Description: Will contain various catagories of tweaks for various games
-
-\TWEAKS\Networking\
-	Description: Contains list of modifications intended to increase network performance.
+	Description: Will contain various catagories of tweaks for various games.
+		Directory contains subdirectories of various types of tweaks.  Further details inside TWEAKS dir.

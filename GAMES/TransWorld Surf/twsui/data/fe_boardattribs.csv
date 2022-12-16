@@ -1,0 +1,229 @@
+BOARD NUMBER,BOARD TYPE,WAVE SIZE,DESCRIPTION,SPEED,AIRS,HANDLING,BALANCE,PADDLING SPEED,TEXTURE
+0,Fish,Small,F1 / Pinched / Medium,0.05,0.05,0.3,0.1,0,0
+0,Fish,Medium,F1 / Pinched / Medium,-0.15,-0.15,0.05,-0.2,-0.3,0
+0,Fish,Large,F1 / Pinched / Medium,-0.4,-0.3,-0.05,-0.25,-0.4,0
+0,Short (Small),Small,F1 / Pinched / Medium,0.1,0,0.15,0.05,-0.2,0
+0,Short (Small),Medium,F1 / Pinched / Medium,0.15,0.1,0.3,0.1,-0.2,0
+0,Short (Small),Large,F1 / Pinched / Medium,-0.1,-0.15,0.1,-0.15,-0.3,0
+0,Short (Large),Small,F1 / Pinched / Medium,-0.1,-0.2,0,-0.05,-0.2,0
+0,Short (Large),Medium,F1 / Pinched / Medium,0.15,0.15,0.2,0.15,-0.15,0
+0,Short (Large),Large,F1 / Pinched / Medium,0,0.15,0.15,0,-0.25,0
+0,Gun,Small,F1 / Pinched / Medium,-0.2,-0.45,-0.05,-0.15,-0.25,0
+0,Gun,Medium,F1 / Pinched / Medium,-0.25,-0.3,0.05,-0.05,-0.15,0
+0,Gun,Large,F1 / Pinched / Medium,0.15,0.05,0.3,0.15,-0.05,0
+1,Fish,Small,F2 / Pinched / Medium,0.15,0.15,0.2,0.15,-0.1,0
+1,Fish,Medium,F2 / Pinched / Medium,-0.15,-0.15,-0.05,-0.15,-0.3,0
+1,Fish,Large,F2 / Pinched / Medium,-0.4,-0.3,-0.15,-0.2,-0.4,0
+1,Short (Small),Small,F2 / Pinched / Medium,0.1,0,0.05,0.1,-0.2,0
+1,Short (Small),Medium,F2 / Pinched / Medium,0.15,0.1,0.2,0.15,-0.2,0
+1,Short (Small),Large,F2 / Pinched / Medium,-0.1,-0.15,0,-0.1,-0.3,0
+1,Short (Large),Small,F2 / Pinched / Medium,-0.1,-0.2,-0.1,0,-0.2,0
+1,Short (Large),Medium,F2 / Pinched / Medium,0.15,0.15,0.1,0.2,-0.15,0
+1,Short (Large),Large,F2 / Pinched / Medium,0,0.15,0.05,0.05,-0.25,0
+1,Gun,Small,F2 / Pinched / Medium,-0.2,-0.45,-0.15,-0.1,-0.25,0
+1,Gun,Medium,F2 / Pinched / Medium,-0.15,-0.3,-0.15,0,-0.15,0
+1,Gun,Large,F2 / Pinched / Medium,0.15,0.05,0.2,0.2,-0.05,0
+2,Fish,Small,F3 / Pinched / Medium,0.15,0.15,0.15,0.25,-0.1,0
+2,Fish,Medium,F3 / Pinched / Medium,-0.15,-0.15,-0.1,-0.05,-0.3,0
+2,Fish,Large,F3 / Pinched / Medium,-0.4,-0.3,-0.2,-0.1,-0.4,0
+2,Short (Small),Small,F3 / Pinched / Medium,0.1,0,0,0.2,-0.2,0
+2,Short (Small),Medium,F3 / Pinched / Medium,0.15,0.1,0.15,0.25,-0.2,0
+2,Short (Small),Large,F3 / Pinched / Medium,-0.1,-0.15,-0.05,0,-0.3,0
+2,Short (Large),Small,F3 / Pinched / Medium,-0.1,-0.2,-0.15,0.1,-0.2,0
+2,Short (Large),Medium,F3 / Pinched / Medium,0.15,0.15,0.05,0.3,-0.15,0
+2,Short (Large),Large,F3 / Pinched / Medium,0,0.15,0,0.15,-0.25,0
+2,Gun,Small,F3 / Pinched / Medium,-0.2,-0.45,-0.2,0,-0.25,0
+2,Gun,Medium,F3 / Pinched / Medium,-0.15,-0.3,-0.1,0.1,-0.15,0
+2,Gun,Large,F3 / Pinched / Medium,0.15,0.05,0.15,0.3,-0.05,0
+3,Fish,Small,F1 / Pinched / Wide,0.25,0.1,0.25,0.2,0,0
+3,Fish,Medium,F1 / Pinched / Wide,-0.05,-0.2,0,-0.1,-0.2,0
+3,Fish,Large,F1 / Pinched / Wide,-0.3,-0.35,-0.1,-0.15,-0.3,0
+3,Short (Small),Small,F1 / Pinched / Wide,0.2,-0.05,0.1,0.15,-0.1,0
+3,Short (Small),Medium,F1 / Pinched / Wide,0.25,0.05,0.25,0.2,-0.1,0
+3,Short (Small),Large,F1 / Pinched / Wide,0,-0.2,0.05,-0.05,-0.2,0
+3,Short (Large),Small,F1 / Pinched / Wide,0,-0.25,-0.05,0.05,-0.1,0
+3,Short (Large),Medium,F1 / Pinched / Wide,0.25,0.1,0.15,0.25,-0.05,0
+3,Short (Large),Large,F1 / Pinched / Wide,0.1,0.1,0.1,0.1,-0.15,0
+3,Gun,Small,F1 / Pinched / Wide,-0.1,-0.5,-0.1,-0.05,-0.15,0
+3,Gun,Medium,F1 / Pinched / Wide,-0.05,-0.35,0,0.05,-0.05,0
+3,Gun,Large,F1 / Pinched / Wide,0.25,0,0.25,0.25,0.05,0
+4,Fish,Small,F2 / Pinched / Wide,0.25,0.1,0.15,0.25,0,0
+4,Fish,Medium,F2 / Pinched / Wide,-0.05,-0.2,-0.1,-0.05,-0.2,0
+4,Fish,Large,F2 / Pinched / Wide,-0.3,-0.35,-0.2,-0.1,-0.3,0
+4,Short (Small),Small,F2 / Pinched / Wide,0.2,-0.05,0,0.2,-0.1,0
+4,Short (Small),Medium,F2 / Pinched / Wide,0.25,0.05,0.15,0.25,-0.1,0
+4,Short (Small),Large,F2 / Pinched / Wide,0,-0.2,-0.05,0,-0.2,0
+4,Short (Large),Small,F2 / Pinched / Wide,0.1,-0.25,-0.15,0.1,-0.1,0
+4,Short (Large),Medium,F2 / Pinched / Wide,0.25,0.1,0.05,0.3,-0.05,0
+4,Short (Large),Large,F2 / Pinched / Wide,0.1,0.1,0,0.15,-0.15,0
+4,Gun,Small,F2 / Pinched / Wide,-0.1,-0.5,-0.2,0,-0.15,0
+4,Gun,Medium,F2 / Pinched / Wide,-0.05,-0.35,-0.1,0.1,-0.05,0
+4,Gun,Large,F2 / Pinched / Wide,0.25,0,0.15,0.3,0.05,0
+5,Fish,Small,F2 / Pinched / Thin,0.1,0.25,0.3,0.1,-0.15,0
+5,Fish,Medium,F2 / Pinched / Thin,-0.2,-0.05,0.05,-0.2,-0.35,0
+5,Fish,Large,F2 / Pinched / Thin,-0.45,-0.2,-0.05,-0.25,-0.45,0
+5,Short (Small),Small,F2 / Pinched / Thin,0.05,0.1,0.15,0.05,-0.25,0
+5,Short (Small),Medium,F2 / Pinched / Thin,0.1,0.2,0.3,0.1,-0.25,0
+5,Short (Small),Large,F2 / Pinched / Thin,-0.15,-0.05,0.1,-0.15,-0.35,0
+5,Short (Large),Small,F2 / Pinched / Thin,-0.15,-0.1,0,-0.05,-0.25,0
+5,Short (Large),Medium,F2 / Pinched / Thin,0.1,0.25,0.2,0.15,-0.2,0
+5,Short (Large),Large,F2 / Pinched / Thin,-0.05,-0.25,-0.15,0.1,-0.3,0
+5,Gun,Small,F2 / Pinched / Thin,-0.25,-0.35,-0.05,-0.15,-0.3,0
+5,Gun,Medium,F2 / Pinched / Thin,-0.2,-0.2,0.05,-0.05,-0.2,0
+5,Gun,Large,F2 / Pinched / Thin,0.1,0.15,0.3,0.15,-0.1,0
+6,Fish,Small,F3 / Pinched / Thin,0.2,0.35,0.35,0.3,-0.05,1
+6,Fish,Medium,F3 / Pinched / Thin,-0.1,0.05,0.1,0,-0.25,1
+6,Fish,Large,F3 / Pinched / Thin,-0.35,-0.1,0,-0.05,-0.35,1
+6,Short (Small),Small,F3 / Pinched / Thin,0.15,0.2,0.2,0.25,-0.15,1
+6,Short (Small),Medium,F3 / Pinched / Thin,0.2,0.3,0.35,0.3,-0.15,1
+6,Short (Small),Large,F3 / Pinched / Thin,-0.05,0.05,0.15,0.05,-0.25,1
+6,Short (Large),Small,F3 / Pinched / Thin,-0.05,0,0.05,0.15,-0.15,1
+6,Short (Large),Medium,F3 / Pinched / Thin,0.2,0.35,0.25,0.35,-0.2,1
+6,Short (Large),Large,F3 / Pinched / Thin,0.05,0.35,0.2,0.2,-0.2,1
+6,Gun,Small,F3 / Pinched / Thin,-0.15,-0.25,0,0.05,-0.25,1
+6,Gun,Medium,F3 / Pinched / Thin,-0.1,-0.1,0.1,0.15,-0.1,1
+6,Gun,Large,F3 / Pinched / Thin,0.2,0.25,0.35,0.35,0,1
+7,Fish,Small,F1 / Full / Medium,0.4,0.4,0.25,0.05,0.15,1
+7,Fish,Medium,F1 / Full / Medium,0.1,0.1,0,-0.25,0.05,1
+7,Fish,Large,F1 / Full / Medium,-0.15,-0.05,-0.1,-0.3,-0.15,1
+7,Short (Small),Small,F1 / Full / Medium,0.35,0.25,0.1,0,0.05,1
+7,Short (Small),Medium,F1 / Full / Medium,0.4,0.35,0.25,0.05,0.05,1
+7,Short (Small),Large,F1 / Full / Medium,0.15,0.1,0.05,-0.02,-0.05,1
+7,Short (Large),Small,F1 / Full / Medium,0.15,0.05,-0.05,-0.1,0.05,1
+7,Short (Large),Medium,F1 / Full / Medium,0.4,0.4,0.15,0.1,0.1,1
+7,Short (Large),Large,F1 / Full / Medium,0.25,0.4,0.1,0.05,0.1,1
+7,Gun,Small,F1 / Full / Medium,0.05,-0.2,-0.1,-0.2,0,1
+7,Gun,Medium,F1 / Full / Medium,0.1,-0.05,0,-0.05,0.1,1
+7,Gun,Large,F1 / Full / Medium,0.4,0.3,0.25,0.1,0.2,1
+8,Fish,Small,F2 / Full / Medium,0.4,0.4,0.15,0.1,0.15,1
+8,Fish,Medium,F2 / Full / Medium,0.1,0.1,-0.1,-0.2,-0.05,1
+8,Fish,Large,F2 / Full / Medium,-0.15,-0.05,-0.2,-0.25,-0.15,1
+8,Short (Small),Small,F2 / Full / Medium,0.35,0.25,0,0.05,0.05,1
+8,Short (Small),Medium,F2 / Full / Medium,0.4,0.35,0.15,0.1,0.05,1
+8,Short (Small),Large,F2 / Full / Medium,0.15,0.1,-0.05,-0.15,-0.05,1
+8,Short (Large),Small,F2 / Full / Medium,0.15,0.05,-0.15,-0.05,0.05,1
+8,Short (Large),Medium,F2 / Full / Medium,0.4,0.4,0.05,0.15,0.1,1
+8,Short (Large),Large,F2 / Full / Medium,0.25,0.4,0,0,0,1
+8,Gun,Small,F2 / Full / Medium,0.05,-0.2,-0.2,-0.15,0,1
+8,Gun,Medium,F2 / Full / Medium,0.1,-0.05,-0.1,-0.05,0.1,1
+8,Gun,Large,F2 / Full / Medium,0.4,0.3,0.15,0.15,0.2,1
+9,Fish,Small,F3 / Full / Medium,0.4,0.4,0.1,0.2,0.15,1
+9,Fish,Medium,F3 / Full / Medium,0.1,0.1,-0.15,-0.1,-0.05,1
+9,Fish,Large,F3 / Full / Medium,-0.15,-0.05,-0.25,-0.15,-0.15,1
+9,Short (Small),Small,F3 / Full / Medium,0.35,0.25,-0.05,0.15,0.05,1
+9,Short (Small),Medium,F3 / Full / Medium,0.4,0.35,0.1,0.2,0.05,1
+9,Short (Small),Large,F3 / Full / Medium,0.15,0.1,-0.1,-0.05,-0.05,1
+9,Short (Large),Small,F3 / Full / Medium,0.15,0.05,-0.2,0.05,0.05,1
+9,Short (Large),Medium,F3 / Full / Medium,0.4,0.4,0,0.25,0.1,1
+9,Short (Large),Large,F3 / Full / Medium,0.25,0.4,-0.05,0.1,0,1
+9,Gun,Small,F3 / Full / Medium,0.05,-0.2,-0.25,-0.05,0,1
+9,Gun,Medium,F3 / Full / Medium,0.1,-0.05,-0.15,0.05,0.1,1
+9,Gun,Large,F3 / Full / Medium,0.4,0.3,0.1,0.25,0.2,1
+10,Fish,Small,F3 / Pinched / Wide,0.35,0.2,0.2,0.45,0.1,1
+10,Fish,Medium,F3 / Pinched / Wide,0.05,-0.1,-0.05,0.15,-0.1,1
+10,Fish,Large,F3 / Pinched / Wide,-0.2,-0.25,-0.15,0.1,-0.2,1
+10,Short (Small),Small,F3 / Pinched / Wide,0.3,0.05,0.05,0.4,0,1
+10,Short (Small),Medium,F3 / Pinched / Wide,0.35,0.15,0.2,0.45,0,1
+10,Short (Small),Large,F3 / Pinched / Wide,0.1,-0.1,0,0.2,-0.1,1
+10,Short (Large),Small,F3 / Pinched / Wide,0.1,-0.15,-0.1,0.3,0,1
+10,Short (Large),Medium,F3 / Pinched / Wide,0.35,0.2,0.1,0.5,0.05,1
+10,Short (Large),Large,F3 / Pinched / Wide,0.2,0.2,0.05,0.35,-0.05,1
+10,Gun,Small,F3 / Pinched / Wide,0,-0.4,-0.15,0.2,-0.05,1
+10,Gun,Medium,F3 / Pinched / Wide,0.05,-0.25,-0.05,0.3,0.05,1
+10,Gun,Large,F3 / Pinched / Wide,0.35,0.1,0.2,0.5,0.15,1
+11,Fish,Small,F1 / Pinched / Thin,0.2,0.35,0.5,0.15,-0.05,1
+11,Fish,Medium,F1 / Pinched / Thin,-0.1,0.05,0.2,-0.15,-0.25,1
+11,Fish,Large,F1 / Pinched / Thin,-0.35,-0.1,0.15,-0.2,-0.35,1
+11,Short (Small),Small,F1 / Pinched / Thin,0.15,0.2,0.35,0.1,-0.15,1
+11,Short (Small),Medium,F1 / Pinched / Thin,0.2,0.3,0.5,0.15,-0.15,1
+11,Short (Small),Large,F1 / Pinched / Thin,-0.05,0.05,0.3,-0.1,-0.15,1
+11,Short (Large),Small,F1 / Pinched / Thin,-0.05,0,0.2,0,-0.15,1
+11,Short (Large),Medium,F1 / Pinched / Thin,0.2,0.35,0.4,0.2,-0.1,1
+11,Short (Large),Large,F1 / Pinched / Thin,0.05,0.35,0.35,0.05,-0.2,1
+11,Gun,Small,F1 / Pinched / Thin,-0.15,-0.25,0.15,-0.1,-0.2,1
+11,Gun,Medium,F1 / Pinched / Thin,-0.1,-0.1,0.25,0,-0.1,1
+11,Gun,Large,F1 / Pinched / Thin,0.2,0.25,0.5,0.2,0,1
+12,Fish,Small,F1 / Full / Thin,0.35,0.5,0.35,0.1,0.1,2
+12,Fish,Medium,F1 / Full / Thin,0.05,0.2,0.1,-0.2,-0.1,2
+12,Fish,Large,F1 / Full / Thin,-0.2,0.05,0,-0.25,-0.2,2
+12,Short (Small),Small,F1 / Full / Thin,0.3,0.35,0.2,0.05,0,2
+12,Short (Small),Medium,F1 / Full / Thin,0.35,0.45,0.35,0,0,2
+12,Short (Small),Large,F1 / Full / Thin,0.1,0.2,0.15,-0.15,-0.1,2
+12,Short (Large),Small,F1 / Full / Thin,0.1,0.15,0.05,-0.05,0,2
+12,Short (Large),Medium,F1 / Full / Thin,0.35,0.5,0.25,0.15,0.15,2
+12,Short (Large),Large,F1 / Full / Thin,0.2,0.5,0.2,0,-0.05,2
+12,Gun,Small,F1 / Full / Thin,0,-0.01,0,-0.15,-0.05,2
+12,Gun,Medium,F1 / Full / Thin,0.05,0.05,0.1,-0.05,0.05,2
+12,Gun,Large,F1 / Full / Thin,0.35,0.4,0.35,0.15,0.15,2
+13,Fish,Small,F2 / Full / Thin,0.35,0.5,0.25,0.15,0.1,2
+13,Fish,Medium,F2 / Full / Thin,0.05,0.2,0,-0.15,-0.1,2
+13,Fish,Large,F2 / Full / Thin,-0.2,0.05,-0.1,-0.2,-0.2,2
+13,Short (Small),Small,F2 / Full / Thin,0.3,0.35,0.1,0.1,0.1,2
+13,Short (Small),Medium,F2 / Full / Thin,0.35,0.45,0.25,0.15,0,2
+13,Short (Small),Large,F2 / Full / Thin,0.1,0.2,0.05,-0.1,-0.1,2
+13,Short (Large),Small,F2 / Full / Thin,0.1,0.15,-0.05,0,0,2
+13,Short (Large),Medium,F2 / Full / Thin,0.35,0.5,0.15,0.1,0.05,2
+13,Short (Large),Large,F2 / Full / Thin,0.2,0.5,0.1,0.05,0.05,2
+13,Gun,Small,F2 / Full / Thin,0,-0.1,-0.1,-0.1,-0.05,2
+13,Gun,Medium,F2 / Full / Thin,0.05,0.05,0,0,0.05,2
+13,Gun,Large,F2 / Full / Thin,0.35,0.4,0.25,0.2,0.15,2
+14,Fish,Small,F3 / Full / Thin,0.35,0.5,0.2,0.25,0.1,2
+14,Fish,Medium,F3 / Full / Thin,0.05,0.2,-0.05,-0.05,-0.1,2
+14,Fish,Large,F3 / Full / Thin,-0.2,0.05,-0.15,-0.1,-0.1,2
+14,Short (Small),Small,F3 / Full / Thin,0.3,0.35,0.15,0.1,0,2
+14,Short (Small),Medium,F3 / Full / Thin,0.35,0.45,0.2,0.25,0,2
+14,Short (Small),Large,F3 / Full / Thin,0.1,0.2,0,0,0,2
+14,Short (Large),Small,F3 / Full / Thin,0.1,0.15,0,0,0,2
+14,Short (Large),Medium,F3 / Full / Thin,0.35,0.5,0.2,0.2,0.05,2
+14,Short (Large),Large,F3 / Full / Thin,0.2,0.5,0.05,0.15,-0.05,2
+14,Gun,Small,F3 / Full / Thin,0,-0.1,-0.05,-0.1,-0.05,2
+14,Gun,Medium,F3 / Full / Thin,0.05,0.05,0.05,0,0.05,2
+14,Gun,Large,F3 / Full / Thin,0.35,0.4,0.3,0.2,0.15,2
+15,Fish,Small,F1 / Full / Wide,0.5,0.35,0.2,0.25,0.25,2
+15,Fish,Medium,F1 / Full / Wide,0.2,0.05,-0.05,-0.05,0.05,2
+15,Fish,Large,F1 / Full / Wide,-0.05,0,-0.15,-0.1,-0.05,2
+15,Short (Small),Small,F1 / Full / Wide,0.45,0.2,0.15,0.1,0.15,2
+15,Short (Small),Medium,F1 / Full / Wide,0.5,0.3,0.2,0.25,0.15,2
+15,Short (Small),Large,F1 / Full / Wide,0.25,0.05,0,0,0.05,2
+15,Short (Large),Small,F1 / Full / Wide,0.25,0,0,0,0.15,2
+15,Short (Large),Medium,F1 / Full / Wide,0.5,0.35,0.2,0.2,0.2,2
+15,Short (Large),Large,F1 / Full / Wide,0.35,0.35,0.05,0.15,0.1,2
+15,Gun,Small,F1 / Full / Wide,0.15,-0.15,-0.15,-0.1,0.1,2
+15,Gun,Medium,F1 / Full / Wide,0.2,0,-0.05,0,0.2,2
+15,Gun,Large,F1 / Full / Wide,0.5,0.25,0.3,0.2,0.3,2
+16,Fish,Small,F2 / Full / Wide,0.5,0.35,0.2,0.2,0.25,2
+16,Fish,Medium,F2 / Full / Wide,0.2,0.15,-0.05,-0.1,0.05,2
+16,Fish,Large,F2 / Full / Wide,-0.05,-0.1,-0.15,-0.15,-0.05,2
+16,Short (Small),Small,F2 / Full / Wide,0.45,0.2,0.05,0.15,0.15,2
+16,Short (Small),Medium,F2 / Full / Wide,0.5,0.3,0.2,0.2,0.15,2
+16,Short (Small),Large,F2 / Full / Wide,0.25,0.05,0,-0.05,0.05,2
+16,Short (Large),Small,F2 / Full / Wide,0.25,0,-0.1,0.05,0.15,2
+16,Short (Large),Medium,F2 / Full / Wide,0.5,0.35,0.1,0.25,0.2,2
+16,Short (Large),Large,F2 / Full / Wide,0.35,0.35,0.05,0.1,0.1,2
+16,Gun,Small,F2 / Full / Wide,0.15,-0.15,-0.25,-0.05,0.1,2
+16,Gun,Medium,F2 / Full / Wide,0.2,0,-0.15,0.05,0.1,2
+16,Gun,Large,F2 / Full / Wide,0.5,0.25,0.2,0.25,0.3,2
+17,Fish,Small,F3 / Full / Wide,0.5,0.35,0.15,0.3,0.25,2
+17,Fish,Medium,F3 / Full / Wide,0.2,0.05,-0.1,0,0.05,2
+17,Fish,Large,F3 / Full / Wide,-0.05,-0.1,-0.2,-0.05,-0.05,2
+17,Short (Small),Small,F3 / Full / Wide,0.45,0.2,0,0.25,0.15,2
+17,Short (Small),Medium,F3 / Full / Wide,0.5,0.3,0.15,0.3,0.15,2
+17,Short (Small),Large,F3 / Full / Wide,0.25,0.05,-0.05,0.05,0.05,2
+17,Short (Large),Small,F3 / Full / Wide,0.25,0,-0.15,0.15,0.15,2
+17,Short (Large),Medium,F3 / Full / Wide,0.5,0.35,0.05,0.35,0.2,2
+17,Short (Large),Large,F3 / Full / Wide,0.35,0.35,0,0.2,0.1,2
+17,Gun,Small,F3 / Full / Wide,0.15,-0.25,-2,0.05,0.1,2
+17,Gun,Medium,F3 / Full / Wide,0.2,-0.1,-0.1,0.15,0.2,2
+17,Gun,Large,F3 / Full / Wide,0.5,0.25,0.15,0.35,0.3,2
+18,Fish,Small,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Fish,Medium,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Fish,Large,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Short (Small),Small,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Short (Small),Medium,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Short (Small),Large,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Short (Large),Small,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Short (Large),Medium,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Short (Large),Large,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Gun,Small,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Gun,Medium,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
+18,Gun,Large,F9 / Full / Wide,0.5,0.5,0.5,0.5,0.5,3
